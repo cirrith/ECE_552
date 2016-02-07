@@ -1,0 +1,316 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/userspace/r/rbambrough
+T_opt
+!s110 1454552110
+VLaJLf3<L0jE3Z8eaAnAm<2
+04 15 4 work fulladder_bench fast 0
+=1-a0d3c107f60a-56b2b42d-7a695-5ad6
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.4;61
+R0
+vclkrst
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 d1=HFa9@5T7JH2L8mb3gE1
+IFcoKThXZV;o_eZEF_ZZWd1
+Z2 d/userspace/r/rbambrough/Stupid
+w1454471303
+8/userspace/r/rbambrough/Stupid/clkrst.v
+F/userspace/r/rbambrough/Stupid/clkrst.v
+L0 12
+Z3 OL;L;10.4;61
+!s108 1454552088.279085
+!s107 /userspace/r/rbambrough/Stupid/clkrst.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/clkrst.v|
+!i113 0
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vdff
+Z5 !s110 1454552088
+!i10b 1
+!s100 ocZMMJaQcW@V^7b`LBG;g2
+IizYemI@_Sh]K@jUF>b>Uc0
+R1
+R2
+w1454471299
+8/userspace/r/rbambrough/Stupid/dff.v
+F/userspace/r/rbambrough/Stupid/dff.v
+L0 6
+R3
+r1
+!s85 0
+31
+!s108 1454552088.357679
+!s107 /userspace/r/rbambrough/Stupid/dff.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/dff.v|
+!i113 0
+R4
+vFA
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 cV3CLG5m`1VQA3XmaMKlg0
+I63XN_1=eST`J=k56O^ofM2
+R2
+w1454474793
+8/userspace/r/rbambrough/Stupid/FA.v
+F/userspace/r/rbambrough/Stupid/FA.v
+L0 1
+R3
+!s108 1454552088.410838
+!s107 /userspace/r/rbambrough/Stupid/FA.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/FA.v|
+!i113 0
+R4
+n@f@a
+vFA_2
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 cJ?CZkJ4TRZW9z[^_M5cK3
+Ioo9CHmn3`IUjFlR=JZm?S1
+R2
+w1454546426
+8/userspace/r/rbambrough/Stupid/FA_2.v
+F/userspace/r/rbambrough/Stupid/FA_2.v
+L0 1
+R3
+!s108 1454552088.970757
+!s107 /userspace/r/rbambrough/Stupid/FA_2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/FA_2.v|
+!i113 0
+R4
+n@f@a_2
+vFA_2_bench
+!s110 1454552089
+!i10b 1
+!s100 JY]32nUf84;fGm72U=RgC2
+IY`BNzVmCf^?04?3^^>MMZ2
+R1
+R2
+w1454548965
+8/userspace/r/rbambrough/Stupid/FA_2_bench.v
+F/userspace/r/rbambrough/Stupid/FA_2_bench.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1454552089.027526
+!s107 /userspace/r/rbambrough/Stupid/FA_2_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/FA_2_bench.v|
+!i113 0
+R4
+n@f@a_2_bench
+vFA_bench
+R5
+!i10b 1
+!s100 `4H[Z3F:B40Ujk^fe;?YB1
+IfAc;jD>7_E^zMRZdI@LWe2
+R1
+R2
+w1454474707
+8/userspace/r/rbambrough/Stupid/FA_bench.v
+F/userspace/r/rbambrough/Stupid/FA_bench.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1454552088.463665
+!s107 /userspace/r/rbambrough/Stupid/FA_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/FA_bench.v|
+!i113 0
+R4
+n@f@a_bench
+vfulladder16
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 85jQ?[eRYcoTk:R[:>G]R1
+I6kN9j`Ud7H8T0bdCR[V5>3
+R2
+w1454552085
+8/userspace/r/rbambrough/Stupid/fulladder16.v
+F/userspace/r/rbambrough/Stupid/fulladder16.v
+L0 1
+R3
+!s108 1454552089.083911
+!s107 /userspace/r/rbambrough/Stupid/fulladder16.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/fulladder16.v|
+!i113 0
+R4
+vfulladder_bench
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 ?WfOFOAg@jY4WZOT0NQOS2
+IX246WAbhC1g[gK0Sgmf>z1
+R2
+w1361292979
+8/userspace/r/rbambrough/Stupid/fulladder_bench.v
+F/userspace/r/rbambrough/Stupid/fulladder_bench.v
+L0 1
+R3
+!s108 1454552088.525145
+!s107 /userspace/r/rbambrough/Stupid/fulladder_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/fulladder_bench.v|
+!i113 0
+R4
+vnand2
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 ISa?1STS90[eV_=8949@R1
+IHjD<ZgD_ZBY[5WnG95Afa0
+R2
+w1454471274
+8/userspace/r/rbambrough/Stupid/nand2.v
+F/userspace/r/rbambrough/Stupid/nand2.v
+L0 1
+R3
+!s108 1454552088.579108
+!s107 /userspace/r/rbambrough/Stupid/nand2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/nand2.v|
+!i113 0
+R4
+vnand3
+R5
+!i10b 1
+!s100 X]l_HU63HoW?Sd`4hMCZT2
+I_aJkzi^h:ZR@jZ5X@`CoL3
+R1
+R2
+w1454471277
+8/userspace/r/rbambrough/Stupid/nand3.v
+F/userspace/r/rbambrough/Stupid/nand3.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1454552088.639985
+!s107 /userspace/r/rbambrough/Stupid/nand3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/nand3.v|
+!i113 0
+R4
+vnor2
+R5
+!i10b 1
+!s100 SNK[jK6955=m0Zbh6gQU`3
+I<VO0^DMaZ6_MNdd9FAD>J1
+R1
+R2
+w1454471281
+8/userspace/r/rbambrough/Stupid/nor2.v
+F/userspace/r/rbambrough/Stupid/nor2.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1454552088.697012
+!s107 /userspace/r/rbambrough/Stupid/nor2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/nor2.v|
+!i113 0
+R4
+vnor3
+R5
+!i10b 1
+!s100 E``DB^3@2B4;z1V:=z=LE0
+IZIoQf3QN:h^IFQGZfKdoo3
+R1
+R2
+w1454471284
+8/userspace/r/rbambrough/Stupid/nor3.v
+F/userspace/r/rbambrough/Stupid/nor3.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1454552088.750937
+!s107 /userspace/r/rbambrough/Stupid/nor3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/nor3.v|
+!i113 0
+R4
+vnot1
+R5
+!i10b 1
+!s100 KWFGS]d0`N730YhRHI;lF1
+IWl>gmH23W=5[?fVaA]PEV1
+R1
+R2
+w1454471288
+8/userspace/r/rbambrough/Stupid/not1.v
+F/userspace/r/rbambrough/Stupid/not1.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1454552088.807338
+!s107 /userspace/r/rbambrough/Stupid/not1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/not1.v|
+!i113 0
+R4
+vxor2
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 W?hW=HIbcg2CO8WWP?3lj1
+ICj`>6PNnYz2LJ[]=S>8]^0
+R2
+w1454471293
+8/userspace/r/rbambrough/Stupid/xor2.v
+F/userspace/r/rbambrough/Stupid/xor2.v
+L0 1
+R3
+!s108 1454552088.861604
+!s107 /userspace/r/rbambrough/Stupid/xor2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/xor2.v|
+!i113 0
+R4
+vxor3
+R5
+!i10b 1
+!s100 ^m3LI@GI`OB<lWUWmm]G23
+IjYX@V5=27db>2@kM;PSP11
+R1
+R2
+w1454471296
+8/userspace/r/rbambrough/Stupid/xor3.v
+F/userspace/r/rbambrough/Stupid/xor3.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1454552088.919812
+!s107 /userspace/r/rbambrough/Stupid/xor3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/xor3.v|
+!i113 0
+R4

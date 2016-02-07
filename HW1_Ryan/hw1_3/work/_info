@@ -1,0 +1,326 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/userspace/r/rbambrough/Stupid/hw1_2
+vclkrst
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 d1=HFa9@5T7JH2L8mb3gE1
+IBo7;_o>DzSL>nFgJZREQ_3
+Z1 d/userspace/r/rbambrough/Stupid/hw1_3
+w1454553110
+8/userspace/r/rbambrough/Stupid/hw1_3/clkrst.v
+F/userspace/r/rbambrough/Stupid/hw1_3/clkrst.v
+L0 12
+Z2 OL;L;10.4;61
+!s108 1454569992.578499
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/clkrst.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/clkrst.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vdff
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 ocZMMJaQcW@V^7b`LBG;g2
+IS<41^WnhiM2eRRJ:Hi7F^0
+R1
+w1454553107
+8/userspace/r/rbambrough/Stupid/hw1_3/dff.v
+F/userspace/r/rbambrough/Stupid/hw1_3/dff.v
+L0 6
+R2
+!s108 1454569992.641090
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/dff.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/dff.v|
+!i113 0
+R3
+vdff_test
+Z4 !s110 1454569993
+!i10b 1
+!s100 UUoh=PYQ=:T84>1eV`_Hi0
+IT<RZm`8I9gmz?L4cn0aIP3
+R0
+R1
+w1454569874
+8/userspace/r/rbambrough/Stupid/hw1_3/dff_test.v
+F/userspace/r/rbambrough/Stupid/hw1_3/dff_test.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1454569993.313983
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/dff_test.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/dff_test.v|
+!i113 0
+R3
+vnand2
+Z5 !s110 1454569992
+!i10b 1
+!s100 ISa?1STS90[eV_=8949@R1
+I[_d70n?>F5J<LKVU?YPbI1
+R0
+R1
+w1454553086
+8/userspace/r/rbambrough/Stupid/hw1_3/nand2.v
+F/userspace/r/rbambrough/Stupid/hw1_3/nand2.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1454569992.690394
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/nand2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/nand2.v|
+!i113 0
+R3
+vnand3
+R5
+!i10b 1
+!s100 X]l_HU63HoW?Sd`4hMCZT2
+I>:VEX<V9kEbij=hAZGizV0
+R0
+R1
+w1454553088
+8/userspace/r/rbambrough/Stupid/hw1_3/nand3.v
+F/userspace/r/rbambrough/Stupid/hw1_3/nand3.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1454569992.738317
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/nand3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/nand3.v|
+!i113 0
+R3
+vnor2
+R5
+!i10b 1
+!s100 SNK[jK6955=m0Zbh6gQU`3
+IRIG:W;W@P?;;8c__Q6fz[3
+R0
+R1
+w1454553091
+8/userspace/r/rbambrough/Stupid/hw1_3/nor2.v
+F/userspace/r/rbambrough/Stupid/hw1_3/nor2.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1454569992.785485
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/nor2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/nor2.v|
+!i113 0
+R3
+vnor3
+R5
+!i10b 1
+!s100 E``DB^3@2B4;z1V:=z=LE0
+IWQOf5ANaGZfzgHGR]0Ill0
+R0
+R1
+w1454553093
+8/userspace/r/rbambrough/Stupid/hw1_3/nor3.v
+F/userspace/r/rbambrough/Stupid/hw1_3/nor3.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1454569992.833269
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/nor3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/nor3.v|
+!i113 0
+R3
+vnot1
+R5
+!i10b 1
+!s100 KWFGS]d0`N730YhRHI;lF1
+IO1N]3AUgMQeI7K;fC1dGh1
+R0
+R1
+w1454553099
+8/userspace/r/rbambrough/Stupid/hw1_3/not1.v
+F/userspace/r/rbambrough/Stupid/hw1_3/not1.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1454569992.881000
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/not1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/not1.v|
+!i113 0
+R3
+vseqdec_28_bench
+R5
+!i10b 1
+!s100 J[HN7hO^on^ij_C<kNM6V1
+I?@V_;[`gkg=cmZ1;UFT4<3
+R0
+R1
+w1361293101
+8/userspace/r/rbambrough/Stupid/hw1_3/seqdec_28_bench.v
+F/userspace/r/rbambrough/Stupid/hw1_3/seqdec_28_bench.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1454569992.928791
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/seqdec_28_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/seqdec_28_bench.v|
+!i113 0
+R3
+vseqdec_42
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 hK9Pn9Nz9>S0U_D92873m3
+IT62Fk[Jm=hZe?G1G5]>V;0
+R1
+w1454569985
+8/userspace/r/rbambrough/Stupid/hw1_3/seqdec_42.v
+F/userspace/r/rbambrough/Stupid/hw1_3/seqdec_42.v
+L0 1
+R2
+!s108 1454569993.265722
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/seqdec_42.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/seqdec_42.v|
+!i113 0
+R3
+vseqdec_42_bench
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 RDS1ae^>g=CgV@9mj?<1;3
+I4M_?S[[`ZZBHz<YXe41TA0
+R1
+w1361293170
+8/userspace/r/rbambrough/Stupid/hw1_3/seqdec_42_bench.v
+F/userspace/r/rbambrough/Stupid/hw1_3/seqdec_42_bench.v
+L0 1
+R2
+!s108 1454569992.977061
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/seqdec_42_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/seqdec_42_bench.v|
+!i113 0
+R3
+vseqdec_53_bench
+R4
+!i10b 1
+!s100 2o@JomfTK6^4;XWi?1;Gl0
+INLHJ0AnDJhU3Feba0h7DZ2
+R0
+R1
+w1361293126
+8/userspace/r/rbambrough/Stupid/hw1_3/seqdec_53_bench.v
+F/userspace/r/rbambrough/Stupid/hw1_3/seqdec_53_bench.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1454569993.024975
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/seqdec_53_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/seqdec_53_bench.v|
+!i113 0
+R3
+vseqdec_85_bench
+R4
+!i10b 1
+!s100 Sh?P1kUI415:hKIDiFmBQ0
+IiORL`NF@OG=YgNWC27<]E1
+R0
+R1
+w1361293206
+8/userspace/r/rbambrough/Stupid/hw1_3/seqdec_85_bench.v
+F/userspace/r/rbambrough/Stupid/hw1_3/seqdec_85_bench.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1454569993.074150
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/seqdec_85_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/seqdec_85_bench.v|
+!i113 0
+R3
+vseqdec_97_bench
+R4
+!i10b 1
+!s100 h:gGaeF[1mojR3d=RkJ<D3
+IXm_^NH;nmPzM0D]EWco2h0
+R0
+R1
+w1361293146
+8/userspace/r/rbambrough/Stupid/hw1_3/seqdec_97_bench.v
+F/userspace/r/rbambrough/Stupid/hw1_3/seqdec_97_bench.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1454569993.123168
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/seqdec_97_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/seqdec_97_bench.v|
+!i113 0
+R3
+vxor2
+R4
+!i10b 1
+!s100 W?hW=HIbcg2CO8WWP?3lj1
+IGZKch0eCcjkek=2i8P2jk3
+R0
+R1
+w1454553101
+8/userspace/r/rbambrough/Stupid/hw1_3/xor2.v
+F/userspace/r/rbambrough/Stupid/hw1_3/xor2.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1454569993.171738
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/xor2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/xor2.v|
+!i113 0
+R3
+vxor3
+R4
+!i10b 1
+!s100 ^m3LI@GI`OB<lWUWmm]G23
+IPE5V`JnF8fDe`3@SKzjTj1
+R0
+R1
+w1454553105
+8/userspace/r/rbambrough/Stupid/hw1_3/xor3.v
+F/userspace/r/rbambrough/Stupid/hw1_3/xor3.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1454569993.218687
+!s107 /userspace/r/rbambrough/Stupid/hw1_3/xor3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/Stupid/hw1_3/xor3.v|
+!i113 0
+R3

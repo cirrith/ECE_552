@@ -1,0 +1,113 @@
+/userspace/r/rbambrough/Stupid/hw1_3/seqdec_42_bench.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/seqdec_42_bench.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module seqdec_42_bench
+
+Top level modules:
+	seqdec_42_bench
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/xor2.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/xor2.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module xor2
+
+Top level modules:
+	xor2
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/clkrst.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/clkrst.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/seqdec_97_bench.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/seqdec_97_bench.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module seqdec_97_bench
+
+Top level modules:
+	seqdec_97_bench
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/xor3.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/xor3.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module xor3
+
+Top level modules:
+	xor3
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/seqdec_28_bench.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/seqdec_28_bench.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module seqdec_28_bench
+
+Top level modules:
+	seqdec_28_bench
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/seqdec_85_bench.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/seqdec_85_bench.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module seqdec_85_bench
+
+Top level modules:
+	seqdec_85_bench
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/nor2.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/nor2.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module nor2
+
+Top level modules:
+	nor2
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/seqdec_42.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/seqdec_42.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module seqdec_42
+
+Top level modules:
+	seqdec_42
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/nor3.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/nor3.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module nor3
+
+Top level modules:
+	nor3
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/not1.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/not1.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module not1
+
+Top level modules:
+	not1
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/nand2.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/nand2.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module nand2
+
+Top level modules:
+	nand2
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/seqdec_53_bench.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/seqdec_53_bench.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module seqdec_53_bench
+
+Top level modules:
+	seqdec_53_bench
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/nand3.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/nand3.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module nand3
+
+Top level modules:
+	nand3
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/dff_test.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/dff_test.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module dff_test
+
+Top level modules:
+	dff_test
+
+} {} {}} /userspace/r/rbambrough/Stupid/hw1_3/dff.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/hw1_3/dff.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}}

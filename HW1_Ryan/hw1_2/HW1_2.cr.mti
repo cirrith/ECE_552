@@ -1,0 +1,106 @@
+/userspace/r/rbambrough/Stupid/fulladder_bench.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/fulladder_bench.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module fulladder_bench
+
+Top level modules:
+	fulladder_bench
+
+} {} {}} /userspace/r/rbambrough/Stupid/clkrst.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/clkrst.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} /userspace/r/rbambrough/Stupid/nand2.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/nand2.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module nand2
+
+Top level modules:
+	nand2
+
+} {} {}} /userspace/r/rbambrough/Stupid/xor2.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/xor2.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module xor2
+
+Top level modules:
+	xor2
+
+} {} {}} /userspace/r/rbambrough/Stupid/nand3.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/nand3.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module nand3
+
+Top level modules:
+	nand3
+
+} {} {}} /userspace/r/rbambrough/Stupid/xor3.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/xor3.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module xor3
+
+Top level modules:
+	xor3
+
+} {} {}} /userspace/r/rbambrough/Stupid/FA_bench.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/FA_bench.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module FA_bench
+
+Top level modules:
+	FA_bench
+
+} {} {}} /userspace/r/rbambrough/Stupid/FA_2.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/FA_2.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module FA_2
+
+Top level modules:
+	FA_2
+
+} {} {}} /userspace/r/rbambrough/Stupid/dff.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/dff.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}} /userspace/r/rbambrough/Stupid/nor2.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/nor2.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module nor2
+
+Top level modules:
+	nor2
+
+} {} {}} /userspace/r/rbambrough/Stupid/nor3.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/nor3.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module nor3
+
+Top level modules:
+	nor3
+
+} {} {}} /userspace/r/rbambrough/Stupid/not1.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/not1.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module not1
+
+Top level modules:
+	not1
+
+} {} {}} /userspace/r/rbambrough/Stupid/fulladder16.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/fulladder16.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module fulladder16
+
+Top level modules:
+	fulladder16
+
+} {} {}} /userspace/r/rbambrough/Stupid/FA_2_bench.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/FA_2_bench.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module FA_2_bench
+
+Top level modules:
+	FA_2_bench
+
+} {} {}} /userspace/r/rbambrough/Stupid/FA.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/Stupid/FA.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module FA
+
+Top level modules:
+	FA
+
+} {} {}}
