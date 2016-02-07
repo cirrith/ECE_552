@@ -5,9 +5,26 @@ module shifter (In, Cnt, Op, Out);
    input [1:0]  Op;
    output [15:0] Out;
 
-   /*
-   Your code goes here
-   */
+   always@(Op) 
+	begin
+
+	if (Op == 2'b00) //Rotate Left
+	   begin
+		
+	   end
+	else if (Op == 2'b01) //Shift Left
+	   begin
+
+	   end
+	else if (Op == 2'b10) //Shift Right Arithmetic
+	   begin
+
+	   end
+	else if (Op == 2'b11) //Shift Right Logical
+	   begin
+
+	   end
+	end
    
 endmodule
 
