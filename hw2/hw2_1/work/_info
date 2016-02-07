@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/userspace/r/rbambrough/ECE_552/hw2/hw2_1
+vclkrst
+Z1 !s110 1454875435
+!i10b 1
+!s100 c^DJe8Tm9AS?OSo>b>@Xo1
+I6o;ToXlN3ID11nahjB4UB1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1454710153
+8/userspace/r/rbambrough/ECE_552/hw2/hw2_1/clkrst.v
+F/userspace/r/rbambrough/ECE_552/hw2/hw2_1/clkrst.v
+L0 12
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1454875435.017695
+!s107 /userspace/r/rbambrough/ECE_552/hw2/hw2_1/clkrst.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/ECE_552/hw2/hw2_1/clkrst.v|
+!i113 0
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vshifter
+R1
+!i10b 1
+!s100 z77nnKE=`c2VMfZEFAI652
+I:ggO<ChnYTKb>@MVZ@LWP0
+R2
+R0
+w1454534838
+8/userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter.v
+F/userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1454875435.104129
+!s107 /userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter.v|
+!i113 0
+R4
+vshifter_hier
+R1
+!i10b 1
+!s100 `Jn88BVHFG0bQDCTKPYQ=3
+I?ii0A>QZ42N9C]0T`J]hS3
+R2
+R0
+w1454534861
+8/userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter_hier.v
+F/userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter_hier.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1454875435.150299
+!s107 /userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter_hier.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter_hier.v|
+!i113 0
+R4
+vshifter_hier_bench
+R1
+!i10b 1
+!s100 5jV7beJ8cNH1FC0UF7N`k1
+I`?5iZeRkTL[10O7e6ZNT[2
+R2
+R0
+w1454710418
+8/userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter_hier_bench.v
+F/userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter_hier_bench.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1454875435.199064
+!s107 /userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter_hier_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter_hier_bench.v|
+!i113 0
+R4

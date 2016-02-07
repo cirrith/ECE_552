@@ -1,0 +1,22 @@
+/userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter_hier_bench.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter_hier_bench.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module shifter_hier_bench
+
+Top level modules:
+	shifter_hier_bench
+
+} {} {}} /userspace/r/rbambrough/ECE_552/hw2/hw2_1/clkrst.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/clkrst.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} /userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter_hier.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/shifter_hier.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module shifter_hier
+
+Top level modules:
+	shifter_hier
+
+} {} {}}
