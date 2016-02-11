@@ -1,30 +1,35 @@
 module shifter (In, Cnt, Op, Out);
    
-   input [15:0] In;
-   input [3:0]  Cnt;
-   input [1:0]  Op;
-   output [15:0] Out;
+input [15:0] In;
+input [3:0]  Cnt;
+input [1:0]  Op;
+output [15:0] Out;
 
-   always@(Op) 
-	begin
+/*
+Your code goes here
+*/
+// Declare wires
+wire [15:0] zero, one, two, three;
 
-	if (Op == 2'b00) //Rotate Left
-	   begin
-		
-	   end
-	else if (Op == 2'b01) //Shift Left
-	   begin
-
-	   end
-	else if (Op == 2'b10) //Shift Right Arithmetic
-	   begin
-
-	   end
-	else if (Op == 2'b11) //Shift Right Logical
-	   begin
-
-	   end
-	end
+// Need other modules for hierarchy:
+  	// Rotate left module
+  	// Shift left module
+  	// Shift right arithmetic module
+  	// Shift right logical
    
-endmodule
+// Need 16 bit, 4-1 mux for the final
+  	// 4_1_mux
 
+
+// Mux for the opcode
+	// Each operation has built in shift amount
+
+RotL rotate_left(.In(In), .Amt(Cnt), .Out(zero));
+ShL  shift_left(.In(In), .Amt(Cnt), .Out(one));
+ShRA shift_right_arithmetic(.In(In), .Amt(Cnt), .Out(two));
+ShRL shift_right_logical(.In(In), .Amt(Cnt), .Out(three));
+
+mux4_1 final_choice(.A(zero), .B(one), .C(two), .D(three), .Sel(Op), .Out(Out));
+
+
+endmodule
