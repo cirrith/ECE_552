@@ -14,7 +14,7 @@ wire [15:0] trans;
 mux4 up_sel0  (.in0(in[12]), .in1(0),      .in2(in[4]),  .in3(in[4]),  .s(op), .out(trans[0])); //Corner Case
 mux4 up_sel1  (.in0(in[13]), .in1(0),      .in2(in[5]),  .in3(in[5]),  .s(op), .out(trans[1])); //Corner Case
 mux4 up_sel2  (.in0(in[14]), .in1(0),      .in2(in[6]),  .in3(in[6]),  .s(op), .out(trans[2])); //Corner Case
-mux4 up_sel3  (.in0(in[15]), .in1(0]),     .in2(in[7]),  .in3(in[7]),  .s(op), .out(trans[3])); //Corner Case
+mux4 up_sel3  (.in0(in[15]), .in1(0),     .in2(in[7]),  .in3(in[7]),  .s(op), .out(trans[3])); //Corner Case
 mux4 up_sel4  (.in0(in[0]),  .in1(in[0]),  .in2(in[8]),  .in3(in[8]),  .s(op), .out(trans[4]));
 mux4 up_sel5  (.in0(in[1]),  .in1(in[1]),  .in2(in[9]),  .in3(in[9]),  .s(op), .out(trans[5]));
 mux4 up_sel6  (.in0(in[2]),  .in1(in[2]),  .in2(in[10]), .in3(in[10]), .s(op), .out(trans[6]));

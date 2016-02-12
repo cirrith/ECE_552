@@ -1,9 +1,9 @@
-/userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/mux4.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/mux4.v
+/userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shift8.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shift8.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
--- Compiling module mux4
+-- Compiling module shift8
 
 Top level modules:
-	mux4
+	shift8
 
 } {} {}} /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shift4.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shift4.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
@@ -12,12 +12,12 @@ Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
 Top level modules:
 	shift4
 
-} {} {}} /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shift8.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shift8.v
+} {} {}} /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/mux4.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/mux4.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
--- Compiling module shift8
+-- Compiling module mux4
 
 Top level modules:
-	shift8
+	mux4
 
 } {} {}} /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/clkrst.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/clkrst.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
@@ -40,6 +40,13 @@ Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
 Top level modules:
 	shift1
 
+} {} {}} /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shift2.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shift2.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module shift2
+
+Top level modules:
+	shift2
+
 } {} {}} /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shifter_hier.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shifter_hier.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
 -- Compiling module shifter_hier
@@ -54,12 +61,12 @@ Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
 Top level modules:
 	mux2
 
-} {} {}} /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shift2.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shift2.v
+} {} {}} {/userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/module shift_tb.v} {1 {vlog -work work -vopt -stats=none {/userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/module shift_tb.v}
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
--- Compiling module shift2
+-- Compiling module shift_tb
 
 Top level modules:
-	shift2
+	shift_tb
 
 } {} {}} /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shifter.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/ECE_552/hw2/hw2_1/New/shifter.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
