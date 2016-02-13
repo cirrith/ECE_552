@@ -1,0 +1,64 @@
+I:/ECE_552/hw2/hw2_2/cla_FA.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/cla_FA.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module cla_FA
+
+Top level modules:
+	cla_FA
+
+} {} {}} I:/ECE_552/hw2/hw2_2/alu.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/alu.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} I:/ECE_552/hw2/hw2_2/And.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/And.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module And
+
+Top level modules:
+	And
+
+} {} {}} I:/ECE_552/hw2/hw2_2/clkrst.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/clkrst.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} I:/ECE_552/hw2/hw2_2/alu_hier_bench.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/alu_hier_bench.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module alu_hier_bench
+
+Top level modules:
+	alu_hier_bench
+
+} {} {}} I:/ECE_552/hw2/hw2_2/cla_4b.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/cla_4b.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module cla_4b
+
+Top level modules:
+	cla_4b
+
+} {} {}} I:/ECE_552/hw2/hw2_2/Xor.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/Xor.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module Xor
+
+Top level modules:
+	Xor
+
+} {} {}} I:/ECE_552/hw2/hw2_2/Or.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/Or.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module Or
+
+Top level modules:
+	Or
+
+} {} {}} I:/ECE_552/hw2/hw2_2/alu_hier.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/alu_hier.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module alu_hier
+
+Top level modules:
+	alu_hier
+
+} {} {}}

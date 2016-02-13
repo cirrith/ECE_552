@@ -22,7 +22,7 @@ w1454710153
 FI:/ECE_552/hw2/hw2_1/New/clkrst.v
 L0 12
 Z2 OE;L;10.3c;59
-!s108 1455321801.334000
+!s108 1455387729.991000
 !s107 I:/ECE_552/hw2/hw2_1/New/clkrst.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ECE_552/hw2/hw2_1/New/clkrst.v|
 !i113 0
@@ -41,7 +41,7 @@ w1455234293
 FI:/ECE_552/hw2/hw2_1/New/mux2.v
 L0 5
 R2
-!s108 1455321801.811000
+!s108 1455387731.177000
 !s107 I:/ECE_552/hw2/hw2_1/New/mux2.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ECE_552/hw2/hw2_1/New/mux2.v|
 !i113 0
@@ -60,7 +60,7 @@ w1455234223
 FI:/ECE_552/hw2/hw2_1/New/mux4.v
 L0 5
 R2
-!s108 1455321802.048000
+!s108 1455387731.454000
 !s107 I:/ECE_552/hw2/hw2_1/New/mux4.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ECE_552/hw2/hw2_1/New/mux4.v|
 !i113 0
@@ -79,7 +79,7 @@ w1455309793
 FI:/ECE_552/hw2/hw2_1/New/shift1.v
 L0 5
 R2
-!s108 1455321802.286000
+!s108 1455387731.733000
 !s107 I:/ECE_552/hw2/hw2_1/New/shift1.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ECE_552/hw2/hw2_1/New/shift1.v|
 !i113 0
@@ -98,7 +98,7 @@ w1455321770
 FI:/ECE_552/hw2/hw2_1/New/shift2.v
 L0 5
 R2
-!s108 1455321802.534000
+!s108 1455387732.165000
 !s107 I:/ECE_552/hw2/hw2_1/New/shift2.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ECE_552/hw2/hw2_1/New/shift2.v|
 !i113 0
@@ -117,7 +117,7 @@ w1455321796
 FI:/ECE_552/hw2/hw2_1/New/shift4.v
 L0 5
 R2
-!s108 1455321802.779000
+!s108 1455387732.413000
 !s107 I:/ECE_552/hw2/hw2_1/New/shift4.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ECE_552/hw2/hw2_1/New/shift4.v|
 !i113 0
@@ -136,29 +136,29 @@ w1455321728
 FI:/ECE_552/hw2/hw2_1/New/shift8.v
 L0 5
 R2
-!s108 1455321803.013000
+!s108 1455387732.717000
 !s107 I:/ECE_552/hw2/hw2_1/New/shift8.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ECE_552/hw2/hw2_1/New/shift8.v|
 !i113 0
 R3
 vshift_tb
-!s110 1455321801
+!s110 1455387730
 !i10b 1
 !s100 IQf;`zzSlfea[g17fdERI1
-I3lBeH`zzB]4gZ?12jcV8;1
+I=eV_m>421G:^XilYmBd?D1
 R0
 R1
 w1455321141
-8I:\ECE_552\hw2\hw2_1\New\module shift_tb.v
-FI:\ECE_552\hw2\hw2_1\New\module shift_tb.v
+8I:/ECE_552/hw2/hw2_1/New/module shift_tb.v
+FI:/ECE_552/hw2/hw2_1/New/module shift_tb.v
 L0 1
 R2
 r1
 !s85 0
 31
-!s108 1455321801.567000
-!s107 I:\ECE_552\hw2\hw2_1\New\module shift_tb.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:\ECE_552\hw2\hw2_1\New\module shift_tb.v|
+!s108 1455387730.874000
+!s107 I:/ECE_552/hw2/hw2_1/New/module shift_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ECE_552/hw2/hw2_1/New/module shift_tb.v|
 !i113 0
 R3
 vshifter
@@ -175,7 +175,7 @@ w1455321745
 FI:/ECE_552/hw2/hw2_1/New/shifter.v
 L0 1
 R2
-!s108 1455321803.346000
+!s108 1455387732.979000
 !s107 I:/ECE_552/hw2/hw2_1/New/shifter.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ECE_552/hw2/hw2_1/New/shifter.v|
 !i113 0
@@ -194,7 +194,7 @@ w1454534861
 FI:/ECE_552/hw2/hw2_1/New/shifter_hier.v
 L0 1
 R2
-!s108 1455321803.636000
+!s108 1455387733.256000
 !s107 I:/ECE_552/hw2/hw2_1/New/shifter_hier.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ECE_552/hw2/hw2_1/New/shifter_hier.v|
 !i113 0
@@ -213,7 +213,7 @@ w1454710418
 FI:/ECE_552/hw2/hw2_1/New/shifter_hier_bench.v
 L0 1
 R2
-!s108 1455321801.040000
+!s108 1455387733.498000
 !s107 I:/ECE_552/hw2/hw2_1/New/shifter_hier_bench.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ECE_552/hw2/hw2_1/New/shifter_hier_bench.v|
 !i113 0
