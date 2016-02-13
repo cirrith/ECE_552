@@ -15,9 +15,9 @@ output G;
 wire [3:0] prop;
 wire [3:0] gen;
 
-wire c1;
-wire c2;
-wire c3;
+wire C1;
+wire C2;
+wire C3;
 
 //TODO: CHECK THESE
 assign C1 = gen[0] | prop[0]&Cin;

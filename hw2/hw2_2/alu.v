@@ -33,7 +33,7 @@ wire ovfl;
 assign A_out = invA ? ~A : A; //Invert before Operation
 assign B_out = invB ? ~B : B;
 
-shifter Shifter_mod (.In(A_out), .Cnt(B[3:0]), .Op(Op[1:0]), .Out(Shifter_out)); //OP 000 - 011
+shifter Shifter_mod (.In(A_out), .Cnt(B_out[3:0]), .Op(Op[1:0]), .Out(Shifter_out)); //OP 000 - 011
 
 cla cla_mod (.A(A_out), .B(B_out), .Cin(Cin), .Si(sign), .Out(Add_out), .Ofl(ovfl)); //OP 100
 

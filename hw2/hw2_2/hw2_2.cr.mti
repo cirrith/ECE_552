@@ -1,9 +1,58 @@
-I:/ECE_552/hw2/hw2_2/cla_FA.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/cla_FA.v
+{I:/ECE_552/hw2/hw2_2/Problem 1/shift4.v} {1 {vlog -work work -vopt -stats=none {I:/ECE_552/hw2/hw2_2/Problem 1/shift4.v}
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module cla_FA
+-- Compiling module shift4
 
 Top level modules:
-	cla_FA
+	shift4
+
+} {} {}} I:/ECE_552/hw2/hw2_2/clkrst.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/clkrst.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} {I:/ECE_552/hw2/hw2_2/Problem 1/mux2.v} {1 {vlog -work work -vopt -stats=none {I:/ECE_552/hw2/hw2_2/Problem 1/mux2.v}
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module mux2
+
+Top level modules:
+	mux2
+
+} {} {}} {I:/ECE_552/hw2/hw2_2/Problem 1/shifter.v} {1 {vlog -work work -vopt -stats=none {I:/ECE_552/hw2/hw2_2/Problem 1/shifter.v}
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} {I:/ECE_552/hw2/hw2_2/Problem 1/shift8.v} {1 {vlog -work work -vopt -stats=none {I:/ECE_552/hw2/hw2_2/Problem 1/shift8.v}
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module shift8
+
+Top level modules:
+	shift8
+
+} {} {}} {I:/ECE_552/hw2/hw2_2/Problem 1/mux4.v} {1 {vlog -work work -vopt -stats=none {I:/ECE_552/hw2/hw2_2/Problem 1/mux4.v}
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module mux4
+
+Top level modules:
+	mux4
+
+} {} {}} I:/ECE_552/hw2/hw2_2/alu_hier.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/alu_hier.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module alu_hier
+
+Top level modules:
+	alu_hier
+
+} {} {}} I:/ECE_552/hw2/hw2_2/Xor.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/Xor.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module Xor
+
+Top level modules:
+	Xor
 
 } {} {}} I:/ECE_552/hw2/hw2_2/alu.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/alu.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -19,12 +68,26 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	And
 
-} {} {}} I:/ECE_552/hw2/hw2_2/clkrst.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/clkrst.v
+} {} {}} I:/ECE_552/hw2/hw2_2/cla_4b.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/cla_4b.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module clkrst
+-- Compiling module cla_4b
 
 Top level modules:
-	clkrst
+	cla_4b
+
+} {} {}} I:/ECE_552/hw2/hw2_2/cla_FA.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/cla_FA.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module cla_FA
+
+Top level modules:
+	cla_FA
+
+} {} {}} {I:/ECE_552/hw2/hw2_2/Problem 1/shift1.v} {1 {vlog -work work -vopt -stats=none {I:/ECE_552/hw2/hw2_2/Problem 1/shift1.v}
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module shift1
+
+Top level modules:
+	shift1
 
 } {} {}} I:/ECE_552/hw2/hw2_2/alu_hier_bench.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/alu_hier_bench.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -33,19 +96,12 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	alu_hier_bench
 
-} {} {}} I:/ECE_552/hw2/hw2_2/cla_4b.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/cla_4b.v
+} {} {}} {I:/ECE_552/hw2/hw2_2/Problem 1/shift2.v} {1 {vlog -work work -vopt -stats=none {I:/ECE_552/hw2/hw2_2/Problem 1/shift2.v}
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module cla_4b
+-- Compiling module shift2
 
 Top level modules:
-	cla_4b
-
-} {} {}} I:/ECE_552/hw2/hw2_2/Xor.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/Xor.v
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module Xor
-
-Top level modules:
-	Xor
+	shift2
 
 } {} {}} I:/ECE_552/hw2/hw2_2/Or.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/Or.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -53,12 +109,5 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 
 Top level modules:
 	Or
-
-} {} {}} I:/ECE_552/hw2/hw2_2/alu_hier.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/alu_hier.v
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module alu_hier
-
-Top level modules:
-	alu_hier
 
 } {} {}}

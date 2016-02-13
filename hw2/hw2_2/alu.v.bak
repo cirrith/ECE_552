@@ -30,22 +30,20 @@ wire ovfl;
 
 /*LOGIC*/
 
+assign A_out = invA ? ~A : A; //Invert before Operation
+assign B_out = invB ? ~B : B;
+
 shifter Shifter_mod (.In(A_out), .Cnt(B[3:0]), .Op(Op[1:0]), .Out(Shifter_out)); //OP 000 - 011
 
-cla cla_mod (.A(A_out), .B(B_out), .Cin(Cin), .Si(sign), .Out(Add_out), .Ofl(ovfl));
+cla cla_mod (.A(A_out), .B(B_out), .Cin(Cin), .Si(sign), .Out(Add_out), .Ofl(ovfl)); //OP 100
 
 Or Or_mod   (.A(A_out), .B(B_out), .Out(Or_out)); //OP 101
 Xor Xor_mod (.A(A_out), .B(B_out), .Out(Xor_out)); //OP 110
 And And_mod (.A(A_out), .B(B_out), .Out(And_out)); //OP 111
 
-assign A_out = invA ? ~A : A; //Invert before Operation
-assign B_out = invB ? ~B : B;
-
-
-
 assign Ofl = ovfl;//If adder gave Ofl 
 
-assign Z = |Out; //Check if zero 
+assign Z = ~(|Out); //Check if zero 
 
 assign oper = Op[1] ? (Op[0] ? And_out : Xor_out) : (Op[0] ? Or_out : Add_out); //Mux lower 2 bits for operations
 

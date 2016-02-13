@@ -31,6 +31,6 @@ cla_FA FA_mod3(.A(A[3]), .B(B[3]), .Cin(C3),  .S(S[3]), .P(prop[3]), .G(gen[3]))
 
 //TODO: CHECK THESE
 assign P = &prop;
-assign G = gen[2] | prop[2]&gen[1] | prop[2]&prop[1]&gen[0];
+assign G = gen[3] | prop[3]&gen[2] | prop[3]&prop[2]&gen[1] | prop[3]&prop[2]&prop[1]&gen[0];
 
 endmodule 
