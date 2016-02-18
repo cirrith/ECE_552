@@ -40,6 +40,13 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	mux4
 
+} {} {}} I:/ECE_552/hw2/hw2_2/cla.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/cla.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module cla
+
+Top level modules:
+	cla
+
 } {} {}} I:/ECE_552/hw2/hw2_2/alu_hier.v {1 {vlog -work work -vopt -stats=none I:/ECE_552/hw2/hw2_2/alu_hier.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module alu_hier
