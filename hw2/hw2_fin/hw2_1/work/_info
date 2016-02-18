@@ -1,0 +1,200 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dI:/College/ECE_552/hw2/hw2_1/New
+vclkrst
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
+!i10b 1
+!s100 FaE?]096mYL`Ane;nz9[^2
+I=ENQ8_>]JijR2B_kg<9mH2
+Z1 dI:/College/ECE_552/hw2_fin/hw2_1
+w1454710153
+8I:/College/ECE_552/hw2_fin/hw2_1/clkrst.v
+FI:/College/ECE_552/hw2_fin/hw2_1/clkrst.v
+L0 12
+Z2 OE;L;10.3c;59
+!s108 1455674447.687000
+!s107 I:/College/ECE_552/hw2_fin/hw2_1/clkrst.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_1/clkrst.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vmux2
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 I4Y_l>IT7;@93>8]4G5RK0
+IlGL]TT`]gKzR_no?YcO0]2
+R1
+w1455234293
+8I:/College/ECE_552/hw2_fin/hw2_1/mux2.v
+FI:/College/ECE_552/hw2_fin/hw2_1/mux2.v
+L0 5
+R2
+!s108 1455674447.983000
+!s107 I:/College/ECE_552/hw2_fin/hw2_1/mux2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_1/mux2.v|
+!i113 0
+R3
+vmux4
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 @[_khCCjX`2hmd9V^mnjN2
+Iga;5[=4;WLX3`jZB>a3gK2
+R1
+w1455234223
+8I:/College/ECE_552/hw2_fin/hw2_1/mux4.v
+FI:/College/ECE_552/hw2_fin/hw2_1/mux4.v
+L0 5
+R2
+!s108 1455674448.217000
+!s107 I:/College/ECE_552/hw2_fin/hw2_1/mux4.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_1/mux4.v|
+!i113 0
+R3
+vshift1
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 QnMd8R:cjk;9g24czflcc3
+IFg:6EiZ81FXBB>N1OTHIj3
+R1
+w1455309793
+8I:/College/ECE_552/hw2_fin/hw2_1/shift1.v
+FI:/College/ECE_552/hw2_fin/hw2_1/shift1.v
+L0 5
+R2
+!s108 1455674448.483000
+!s107 I:/College/ECE_552/hw2_fin/hw2_1/shift1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_1/shift1.v|
+!i113 0
+R3
+vshift2
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 8W08jY84F3KJN5j8G5:=k1
+I4jFZ^SM^QKd1oPJ7k;X630
+R1
+w1455321770
+8I:/College/ECE_552/hw2_fin/hw2_1/shift2.v
+FI:/College/ECE_552/hw2_fin/hw2_1/shift2.v
+L0 5
+R2
+!s108 1455674448.699000
+!s107 I:/College/ECE_552/hw2_fin/hw2_1/shift2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_1/shift2.v|
+!i113 0
+R3
+vshift4
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 KKRN:2VJKSFH1XknVmCon0
+IaWmQ<K5?PRc:5=?H<23c50
+R1
+w1455321796
+8I:/College/ECE_552/hw2_fin/hw2_1/shift4.v
+FI:/College/ECE_552/hw2_fin/hw2_1/shift4.v
+L0 5
+R2
+!s108 1455674449.032000
+!s107 I:/College/ECE_552/hw2_fin/hw2_1/shift4.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_1/shift4.v|
+!i113 0
+R3
+vshift8
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 F2ZARRMhNWEC9heYg:36^0
+ITd4VCK1EFaS[Jjc7STALe0
+R1
+w1455321728
+8I:/College/ECE_552/hw2_fin/hw2_1/shift8.v
+FI:/College/ECE_552/hw2_fin/hw2_1/shift8.v
+L0 5
+R2
+!s108 1455674449.328000
+!s107 I:/College/ECE_552/hw2_fin/hw2_1/shift8.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_1/shift8.v|
+!i113 0
+R3
+vshifter
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 c^VDomHN9<zScf9N303Xo2
+Iagl@OH1]@m5kBD`Hn=bjP0
+R1
+w1455321745
+8I:/College/ECE_552/hw2_fin/hw2_1/shifter.v
+FI:/College/ECE_552/hw2_fin/hw2_1/shifter.v
+L0 1
+R2
+!s108 1455674449.609000
+!s107 I:/College/ECE_552/hw2_fin/hw2_1/shifter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_1/shifter.v|
+!i113 0
+R3
+vshifter_hier
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 `Jn88BVHFG0bQDCTKPYQ=3
+Iz>aXf4AH6NnLna=EzP2YT2
+R1
+w1454534861
+8I:/College/ECE_552/hw2_fin/hw2_1/shifter_hier.v
+FI:/College/ECE_552/hw2_fin/hw2_1/shifter_hier.v
+L0 1
+R2
+!s108 1455674449.906000
+!s107 I:/College/ECE_552/hw2_fin/hw2_1/shifter_hier.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_1/shifter_hier.v|
+!i113 0
+R3
+vshifter_hier_bench
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 M`[WGKz9;hSYoH`O<9IZQ3
+IP<Cd]@l^[4iGg1k9L75N12
+R1
+w1454710418
+8I:/College/ECE_552/hw2_fin/hw2_1/shifter_hier_bench.v
+FI:/College/ECE_552/hw2_fin/hw2_1/shifter_hier_bench.v
+L0 1
+R2
+!s108 1455674447.437000
+!s107 I:/College/ECE_552/hw2_fin/hw2_1/shifter_hier_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_1/shifter_hier_bench.v|
+!i113 0
+R3

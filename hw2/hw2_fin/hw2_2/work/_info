@@ -1,0 +1,337 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dI:/College/ECE_552/hw2_fin/hw2_1
+valu
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
+!i10b 1
+!s100 dkK>CV^hJ_G]kQ6DQ>kBY1
+IYZiYIaa1DHX91_f;Pi=lO2
+Z1 dI:/College/ECE_552/hw2_fin/hw2_2
+w1455405265
+8I:/College/ECE_552/hw2_fin/hw2_2/alu.v
+FI:/College/ECE_552/hw2_fin/hw2_2/alu.v
+L0 1
+Z2 OE;L;10.3c;59
+!s108 1455674791.220000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/alu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/alu.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+valu_hier
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 gV`E]ezJodGUG;X:EGliW0
+IOK@V;Bf=1jHoz3a>7^k9?2
+R1
+w1454534882
+8I:/College/ECE_552/hw2_fin/hw2_2/alu_hier.v
+FI:/College/ECE_552/hw2_fin/hw2_2/alu_hier.v
+L0 1
+R2
+!s108 1455674791.470000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/alu_hier.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/alu_hier.v|
+!i113 0
+R3
+valu_hier_bench
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 13zmAD7kWRiC6KgZdYVl52
+IU4Af=T=>EA^G?gbM@c`n21
+R1
+w1454710673
+8I:/College/ECE_552/hw2_fin/hw2_2/alu_hier_bench.v
+FI:/College/ECE_552/hw2_fin/hw2_2/alu_hier_bench.v
+L0 1
+R2
+!s108 1455674791.751000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/alu_hier_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/alu_hier_bench.v|
+!i113 0
+R3
+vAnd
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 Ea:hXJd[_RP6oNgSmS<3j0
+I2c<beozGAWT1mU=`9G3CJ1
+R1
+w1455395318
+8I:/College/ECE_552/hw2_fin/hw2_2/And.v
+FI:/College/ECE_552/hw2_fin/hw2_2/And.v
+L0 4
+R2
+!s108 1455674792.016000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/And.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/And.v|
+!i113 0
+R3
+n@and
+vcla
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 f54?B0Yb1]TAggD0B`T9^3
+I0Ma>T>=Coo>0zFhBM5lc:0
+R1
+w1455407466
+8I:/College/ECE_552/hw2_fin/hw2_2/cla.v
+FI:/College/ECE_552/hw2_fin/hw2_2/cla.v
+L0 4
+R2
+!s108 1455674792.359000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/cla.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/cla.v|
+!i113 0
+R3
+vcla_4b
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 k261`aiFk:iCUzC@20h_e2
+I7M@_OTzlQOhRE?ezCGj>n2
+R1
+w1455406624
+8I:/College/ECE_552/hw2_fin/hw2_2/cla_4b.v
+FI:/College/ECE_552/hw2_fin/hw2_2/cla_4b.v
+L0 5
+R2
+!s108 1455674792.609000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/cla_4b.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/cla_4b.v|
+!i113 0
+R3
+vcla_FA
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 ID6zooFHAJEA2V2:I_ffR0
+ICG03keZe55KW1TUiKO]LD0
+R1
+w1455401490
+8I:/College/ECE_552/hw2_fin/hw2_2/cla_FA.v
+FI:/College/ECE_552/hw2_fin/hw2_2/cla_FA.v
+L0 5
+R2
+!s108 1455674792.889000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/cla_FA.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/cla_FA.v|
+!i113 0
+R3
+ncla_@f@a
+vclkrst
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 FaE?]096mYL`Ane;nz9[^2
+I9`CBLNJPEWngX>OKCf>cH2
+R1
+w1454710828
+8I:/College/ECE_552/hw2_fin/hw2_2/clkrst.v
+FI:/College/ECE_552/hw2_fin/hw2_2/clkrst.v
+L0 12
+R2
+!s108 1455674793.155000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/clkrst.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/clkrst.v|
+!i113 0
+R3
+vmux2
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 I4Y_l>IT7;@93>8]4G5RK0
+I>nbFe1<V=AMeUaG@hG9`<3
+R1
+w1455234293
+8I:/College/ECE_552/hw2_fin/hw2_2/mux2.v
+FI:/College/ECE_552/hw2_fin/hw2_2/mux2.v
+L0 5
+R2
+!s108 1455674793.420000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/mux2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/mux2.v|
+!i113 0
+R3
+vmux4
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 @[_khCCjX`2hmd9V^mnjN2
+ICXWKC2z]U5kT;UXEVfZVl1
+R1
+w1455234223
+8I:/College/ECE_552/hw2_fin/hw2_2/mux4.v
+FI:/College/ECE_552/hw2_fin/hw2_2/mux4.v
+L0 5
+R2
+!s108 1455674793.685000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/mux4.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/mux4.v|
+!i113 0
+R3
+vOr
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 a9a7Vl2NVT<8eg5obcadj3
+I;:8IiSO6z_aS6R[0R`M7d3
+R1
+w1455395325
+8I:/College/ECE_552/hw2_fin/hw2_2/Or.v
+FI:/College/ECE_552/hw2_fin/hw2_2/Or.v
+L0 4
+R2
+!s108 1455674793.950000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/Or.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/Or.v|
+!i113 0
+R3
+n@or
+vshift1
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 QnMd8R:cjk;9g24czflcc3
+ILlRIPOd9eA;JFEAC0m8K]1
+R1
+w1455309793
+8I:/College/ECE_552/hw2_fin/hw2_2/shift1.v
+FI:/College/ECE_552/hw2_fin/hw2_2/shift1.v
+L0 5
+R2
+!s108 1455674794.262000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/shift1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/shift1.v|
+!i113 0
+R3
+vshift2
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 8W08jY84F3KJN5j8G5:=k1
+IK8DcRD?P2P@CNzc[I0[SE3
+R1
+w1455321770
+8I:/College/ECE_552/hw2_fin/hw2_2/shift2.v
+FI:/College/ECE_552/hw2_fin/hw2_2/shift2.v
+L0 5
+R2
+!s108 1455674794.527000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/shift2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/shift2.v|
+!i113 0
+R3
+vshift4
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 KKRN:2VJKSFH1XknVmCon0
+Ih=39]FRmb<P=L0D8^XiJ<3
+R1
+w1455321796
+8I:/College/ECE_552/hw2_fin/hw2_2/shift4.v
+FI:/College/ECE_552/hw2_fin/hw2_2/shift4.v
+L0 5
+R2
+!s108 1455674794.793000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/shift4.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/shift4.v|
+!i113 0
+R3
+vshift8
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 F2ZARRMhNWEC9heYg:36^0
+IJK=<Dz6ZmSbOCUO8]6kiB0
+R1
+w1455321728
+8I:/College/ECE_552/hw2_fin/hw2_2/shift8.v
+FI:/College/ECE_552/hw2_fin/hw2_2/shift8.v
+L0 5
+R2
+!s108 1455674795.120000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/shift8.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/shift8.v|
+!i113 0
+R3
+vshifter
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 c^VDomHN9<zScf9N303Xo2
+I0<f9S;[A0Jdh>2bD_8>jd1
+R1
+w1455321745
+8I:/College/ECE_552/hw2_fin/hw2_2/shifter.v
+FI:/College/ECE_552/hw2_fin/hw2_2/shifter.v
+L0 1
+R2
+!s108 1455674795.370000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/shifter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/shifter.v|
+!i113 0
+R3
+vXor
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 EUH@=0LQ5>3j4h1RKZ1oU3
+Ik>JN<nS<OjKLcQ_JbOAKF1
+R1
+w1455395072
+8I:/College/ECE_552/hw2_fin/hw2_2/Xor.v
+FI:/College/ECE_552/hw2_fin/hw2_2/Xor.v
+L0 4
+R2
+!s108 1455674790.969000
+!s107 I:/College/ECE_552/hw2_fin/hw2_2/Xor.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw2_fin/hw2_2/Xor.v|
+!i113 0
+R3
+n@xor

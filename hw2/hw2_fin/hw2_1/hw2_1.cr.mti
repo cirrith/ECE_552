@@ -1,0 +1,71 @@
+I:/College/ECE_552/hw2_fin/hw2_1/shifter.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw2_fin/hw2_1/shifter.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} I:/College/ECE_552/hw2_fin/hw2_1/shift8.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw2_fin/hw2_1/shift8.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module shift8
+
+Top level modules:
+	shift8
+
+} {} {}} I:/College/ECE_552/hw2_fin/hw2_1/shift4.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw2_fin/hw2_1/shift4.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module shift4
+
+Top level modules:
+	shift4
+
+} {} {}} I:/College/ECE_552/hw2_fin/hw2_1/mux4.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw2_fin/hw2_1/mux4.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module mux4
+
+Top level modules:
+	mux4
+
+} {} {}} I:/College/ECE_552/hw2_fin/hw2_1/shift1.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw2_fin/hw2_1/shift1.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module shift1
+
+Top level modules:
+	shift1
+
+} {} {}} I:/College/ECE_552/hw2_fin/hw2_1/clkrst.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw2_fin/hw2_1/clkrst.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} I:/College/ECE_552/hw2_fin/hw2_1/shifter_hier_bench.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw2_fin/hw2_1/shifter_hier_bench.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module shifter_hier_bench
+
+Top level modules:
+	shifter_hier_bench
+
+} {} {}} I:/College/ECE_552/hw2_fin/hw2_1/shifter_hier.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw2_fin/hw2_1/shifter_hier.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module shifter_hier
+
+Top level modules:
+	shifter_hier
+
+} {} {}} I:/College/ECE_552/hw2_fin/hw2_1/shift2.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw2_fin/hw2_1/shift2.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module shift2
+
+Top level modules:
+	shift2
+
+} {} {}} I:/College/ECE_552/hw2_fin/hw2_1/mux2.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw2_fin/hw2_1/mux2.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module mux2
+
+Top level modules:
+	mux2
+
+} {} {}}
