@@ -8,3 +8,99 @@ z2
 !i10f 100
 cModel Technology
 dI:/College/ECE_552/hw3/hw3_1
+vclkrst
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
+!i10b 1
+!s100 No[XWID:QhgHKS8<I68UH0
+I>E<9FNB;Fn=X0;ELUEm^R0
+Z1 dI:/College/ECE_552/hw3/hw3_2
+w1455471296
+8I:/College/ECE_552/hw3/hw3_2/clkrst.v
+FI:/College/ECE_552/hw3/hw3_2/clkrst.v
+L0 12
+Z2 OE;L;10.3c;59
+!s108 1455916612.653000
+!s107 I:/College/ECE_552/hw3/hw3_2/clkrst.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw3/hw3_2/clkrst.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vdff
+!s110 1455916612
+!i10b 1
+!s100 :P9B=6RNJiggGnSQ@zSPl0
+IAVoo^k=^ij7W22MJ:SE^^2
+R0
+R1
+w1455471302
+8I:/College/ECE_552/hw3/hw3_2/dff.v
+FI:/College/ECE_552/hw3/hw3_2/dff.v
+L0 6
+R2
+r1
+!s85 0
+31
+!s108 1455916612.930000
+!s107 I:/College/ECE_552/hw3/hw3_2/dff.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw3/hw3_2/dff.v|
+!i113 0
+R3
+vsc
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 4X?_MO:PXO6G<?2jSZ5K_1
+I::6`T9K8h1IQP4XLbQ?f`3
+R1
+w1455916607
+8I:/College/ECE_552/hw3/hw3_2/sc.v
+FI:/College/ECE_552/hw3/hw3_2/sc.v
+L0 5
+R2
+!s108 1455916613.253000
+!s107 I:/College/ECE_552/hw3/hw3_2/sc.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw3/hw3_2/sc.v|
+!i113 0
+R3
+vsc_bench
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 ?L^[Y`JjUXlPmbF9S@7KJ2
+IIDRG8BTMOe[>_F4SkTV500
+R1
+w1455513395
+8I:/College/ECE_552/hw3/hw3_2/sc_bench.v
+FI:/College/ECE_552/hw3/hw3_2/sc_bench.v
+L0 5
+R2
+!s108 1455916613.508000
+!s107 I:/College/ECE_552/hw3/hw3_2/sc_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw3/hw3_2/sc_bench.v|
+!i113 0
+R3
+vsc_hier
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 OHgEZ<YPd`6Dl>VXMe;B=1
+Iz[SkVB6S1_aJSSf^C_cK;3
+R1
+w1455472468
+8I:/College/ECE_552/hw3/hw3_2/sc_hier.v
+FI:/College/ECE_552/hw3/hw3_2/sc_hier.v
+L0 7
+R2
+!s108 1455916612.408000
+!s107 I:/College/ECE_552/hw3/hw3_2/sc_hier.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw3/hw3_2/sc_hier.v|
+!i113 0
+R3

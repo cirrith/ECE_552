@@ -1,0 +1,638 @@
+$date
+	Fri Feb 19 15:17:00 2016
+$end
+$version
+	ModelSim Version 10.3c
+$end
+$timescale
+	1ns
+$end
+
+$scope module sc_bench $end
+$var reg 1 ! ctr_rst $end
+$var wire 1 " out [2] $end
+$var wire 1 # out [1] $end
+$var wire 1 $ out [0] $end
+$var wire 1 % err $end
+$var wire 1 & clk $end
+$var wire 1 ' rst $end
+$var reg 4 ( random_gen [3:0] $end
+$var reg 3 ) expected_out [2:0] $end
+$var reg 1 * fail $end
+
+$scope module DUT $end
+$var wire 1 + ctr_rst $end
+$var wire 1 " out [2] $end
+$var wire 1 # out [1] $end
+$var wire 1 $ out [0] $end
+$var wire 1 , err $end
+$var wire 1 - clk $end
+$var wire 1 . rst $end
+
+$scope module clk_generator $end
+$var reg 1 / clk $end
+$var reg 1 0 rst $end
+$var wire 1 , err $end
+$var integer 32 1 cycle_count $end
+$upscope $end
+
+$scope module sc0 $end
+$var wire 1 - clk $end
+$var wire 1 . rst $end
+$var wire 1 + ctr_rst $end
+$var wire 1 " out [2] $end
+$var wire 1 # out [1] $end
+$var wire 1 $ out [0] $end
+$var wire 1 , err $end
+$var reg 3 2 state [2:0] $end
+$var reg 1 3 error $end
+$upscope $end
+$upscope $end
+$var wire 1 " out [2] $end
+$var wire 1 # out [1] $end
+$var wire 1 $ out [0] $end
+$var wire 1 % err $end
+$var wire 1 & clk $end
+$var wire 1 ' rst $end
+
+$scope module DUT $end
+$var wire 1 + ctr_rst $end
+$var wire 1 " out [2] $end
+$var wire 1 # out [1] $end
+$var wire 1 $ out [0] $end
+$var wire 1 , err $end
+$var wire 1 - clk $end
+$var wire 1 . rst $end
+
+$scope module clk_generator $end
+$var wire 1 , err $end
+$upscope $end
+
+$scope module sc0 $end
+$var wire 1 - clk $end
+$var wire 1 . rst $end
+$var wire 1 + ctr_rst $end
+$var wire 1 " out [2] $end
+$var wire 1 # out [1] $end
+$var wire 1 $ out [0] $end
+$var wire 1 , err $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 (
+b0 )
+0*
+1/
+10
+b0 2
+x3
+b1 1
+0$
+0#
+0"
+z%
+1&
+1'
+x,
+1-
+1.
+0+
+$end
+#50
+0/
+0&
+0-
+#100
+1/
+1&
+1-
+b1111 (
+b10 1
+#150
+0/
+0&
+0-
+#200
+1/
+1&
+1-
+b11 1
+#201
+00
+0.
+0'
+#250
+0/
+0&
+0-
+#300
+1/
+1&
+1-
+b100 1
+b1 2
+03
+b1 )
+1$
+0,
+#350
+0/
+0&
+0-
+#400
+1/
+1&
+1-
+b1 (
+1!
+b101 1
+1+
+b10 2
+b10 )
+0$
+1#
+#450
+0/
+0&
+0-
+#500
+1/
+1&
+1-
+b110 1
+b0 2
+b0 )
+0#
+#550
+0/
+0&
+0-
+#600
+1/
+1&
+1-
+b1111 (
+0!
+b111 1
+0+
+#650
+0/
+0&
+0-
+#700
+1/
+1&
+1-
+b0 (
+b1000 1
+b1 2
+b1 )
+1$
+#750
+0/
+0&
+0-
+#800
+1/
+1&
+1-
+b1 (
+1!
+b1001 1
+1+
+b10 2
+b10 )
+0$
+1#
+#850
+0/
+0&
+0-
+#900
+1/
+1&
+1-
+b1010 1
+b0 2
+b0 )
+0#
+#950
+0/
+0&
+0-
+#1000
+1/
+1&
+1-
+b0 (
+0!
+b1011 1
+0+
+#1050
+0/
+0&
+0-
+#1100
+1/
+1&
+1-
+b1 (
+1!
+b1100 1
+1+
+b1 2
+b1 )
+1$
+#1150
+0/
+0&
+0-
+#1200
+1/
+1&
+1-
+b1101 1
+b0 2
+b0 )
+0$
+#1250
+0/
+0&
+0-
+#1300
+1/
+1&
+1-
+b0 (
+0!
+b1110 1
+0+
+#1350
+0/
+0&
+0-
+#1400
+1/
+1&
+1-
+b1 (
+1!
+b1111 1
+1+
+b1 2
+b1 )
+1$
+#1450
+0/
+0&
+0-
+#1500
+1/
+1&
+1-
+b0 (
+0!
+b10000 1
+0+
+b0 2
+b0 )
+0$
+#1550
+0/
+0&
+0-
+#1600
+1/
+1&
+1-
+b1111 (
+b10001 1
+b1 2
+b1 )
+1$
+#1650
+0/
+0&
+0-
+#1700
+1/
+1&
+1-
+b0 (
+b10010 1
+b10 2
+b10 )
+0$
+1#
+#1750
+0/
+0&
+0-
+#1800
+1/
+1&
+1-
+b1 (
+1!
+b10011 1
+1+
+b11 2
+b11 )
+1$
+#1850
+0/
+0&
+0-
+#1900
+1/
+1&
+1-
+b1111 (
+0!
+b10100 1
+0+
+b0 2
+b0 )
+0$
+0#
+#1950
+0/
+0&
+0-
+#2000
+1/
+1&
+1-
+b0 (
+b10101 1
+b1 2
+b1 )
+1$
+#2050
+0/
+0&
+0-
+#2100
+1/
+1&
+1-
+b1 (
+1!
+b10110 1
+1+
+b10 2
+b10 )
+0$
+1#
+#2150
+0/
+0&
+0-
+#2200
+1/
+1&
+1-
+b0 (
+0!
+b10111 1
+0+
+b0 2
+b0 )
+0#
+#2250
+0/
+0&
+0-
+#2300
+1/
+1&
+1-
+b11000 1
+b1 2
+b1 )
+1$
+#2350
+0/
+0&
+0-
+#2400
+1/
+1&
+1-
+b11001 1
+b10 2
+b10 )
+0$
+1#
+#2450
+0/
+0&
+0-
+#2500
+1/
+1&
+1-
+b1111 (
+b11010 1
+b11 2
+b11 )
+1$
+#2550
+0/
+0&
+0-
+#2600
+1/
+1&
+1-
+b0 (
+b11011 1
+b100 2
+b100 )
+0$
+0#
+1"
+#2650
+0/
+0&
+0-
+#2700
+1/
+1&
+1-
+b1111 (
+b11100 1
+b101 2
+b101 )
+1$
+#2750
+0/
+0&
+0-
+#2800
+1/
+1&
+1-
+b11101 1
+#2850
+0/
+0&
+0-
+#2900
+1/
+1&
+1-
+b11110 1
+#2950
+0/
+0&
+0-
+#3000
+1/
+1&
+1-
+b11111 1
+#3050
+0/
+0&
+0-
+#3100
+1/
+1&
+1-
+b0 (
+b100000 1
+#3150
+0/
+0&
+0-
+#3200
+1/
+1&
+1-
+b100001 1
+#3250
+0/
+0&
+0-
+#3300
+1/
+1&
+1-
+b100010 1
+#3350
+0/
+0&
+0-
+#3400
+1/
+1&
+1-
+b100011 1
+#3450
+0/
+0&
+0-
+#3500
+1/
+1&
+1-
+b1111 (
+b100100 1
+#3550
+0/
+0&
+0-
+#3600
+1/
+1&
+1-
+b0 (
+b100101 1
+#3650
+0/
+0&
+0-
+#3700
+1/
+1&
+1-
+b1111 (
+b100110 1
+#3750
+0/
+0&
+0-
+#3800
+1/
+1&
+1-
+b100111 1
+#3850
+0/
+0&
+0-
+#3900
+1/
+1&
+1-
+b101000 1
+#3950
+0/
+0&
+0-
+#4000
+1/
+1&
+1-
+b1 (
+1!
+b101001 1
+1+
+#4050
+0/
+0&
+0-
+#4100
+1/
+1&
+1-
+b1111 (
+0!
+b101010 1
+0+
+b0 2
+b0 )
+0$
+0"
+#4150
+0/
+0&
+0-
+#4200
+1/
+1&
+1-
+b0 (
+b101011 1
+b1 2
+b1 )
+1$
+#4250
+0/
+0&
+0-
+#4300
+1/
+1&
+1-
+b101100 1
+b10 2
+b10 )
+0$
+1#
+#435
