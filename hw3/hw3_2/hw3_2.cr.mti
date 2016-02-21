@@ -1,4 +1,11 @@
-I:/College/ECE_552/hw3/hw3_2/clkrst.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_2/clkrst.v
+I:/College/ECE_552/hw3/hw3_2/sc.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_2/sc.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module sc
+
+Top level modules:
+	sc
+
+} {} {}} I:/College/ECE_552/hw3/hw3_2/clkrst.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_2/clkrst.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module clkrst
 
