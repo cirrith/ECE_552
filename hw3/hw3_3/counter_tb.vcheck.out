@@ -1,0 +1,10 @@
+Line 16: Bad keyword initial
+Line 17: begin without always/case
+Line 20: Bad keyword negedge
+Line 21: Bad keyword negedge
+Line 23: Bad keyword negedge
+Line 26: Bad keyword negedge
+Line 36: Bad keyword initial
+Line 39: Expected '@' after 'always'
+Line 39: Always without case(x)
+End of file /u/b/a/bambrough/private/ECE_552/hw3/hw3_3/counter_tb.v. Hash = 1254411167
