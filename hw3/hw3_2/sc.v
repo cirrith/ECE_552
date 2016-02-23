@@ -23,23 +23,23 @@ module sc( clk, rst, ctr_rst, out, err);
    always@(clk) begin	
 	case ({rst,state})
 		0: begin
-				nxtstate <= !ctr_rst ? (state + 1) : 0;
+				nxtstate <= !ctr_rst ? 3'b001 : 0;
 				error <= 0;
 			end
 		1: begin
-				nxtstate <= !ctr_rst ? (state + 1) : 0;
+				nxtstate <= !ctr_rst ? 3'b010 : 0;
 				error <= 0;
 			end
 		2: begin
-				nxtstate <= !ctr_rst ? (state + 1) : 0;
+				nxtstate <= !ctr_rst ? 3'b011 : 0;
 				error <= 0;
 			end
 		3: begin
-				nxtstate <= !ctr_rst ? (state + 1) : 0;
+				nxtstate <= !ctr_rst ? 3'b100 : 0;
 				error <= 0;
 			end
 		4: begin
-				nxtstate <= !ctr_rst ? (state + 1) : 0;
+				nxtstate <= !ctr_rst ? 3'b101 : 0;
 				error <= 0;
 			end
 		5: begin

@@ -9,50 +9,53 @@ module sc( clk, rst, ctr_rst, out, err);
    output [2:0] out;
    output err;
 
-   reg [2:0] state = 0;
-
    reg error;
+   reg [2:0] nxtstate;
    
-   assign out = state;
+   wire [2:0] state;
+   
+   dff dffreg [2:0] (.q(state), .d(nxtstate), .clk(clk), .rst(rst));
    
    assign err = error;
    
-   always@( posedge clk) begin
+   assign out = state;
+   
+   always@(clk) begin	
 	case ({rst,state})
 		0: begin
-				state <= !ctr_rst ? (state + 1) : 0;
+				nxtstate <= !ctr_rst ? 3'b001 : 0;
 				error <= 0;
 			end
 		1: begin
-				state <= !ctr_rst ? (state + 1) : 0;
+				nxtstate <= !ctr_rst ? 3'b010 : 0;
 				error <= 0;
 			end
 		2: begin
-				state <= !ctr_rst ? (state + 1) : 0;
+				nxtstate <= !ctr_rst ? 3'b011 : 0;
 				error <= 0;
 			end
 		3: begin
-				state <= !ctr_rst ? (state + 1) : 0;
+				nxtstate <= !ctr_rst ? 3'b100 : 0;
 				error <= 0;
 			end
 		4: begin
-				state <= !ctr_rst ? (state + 1) : 0;
+				nxtstate <= !ctr_rst ? 3'b101 : 0;
 				error <= 0;
 			end
 		5: begin
-				state <= !ctr_rst ? state : 0;
+				nxtstate <= !ctr_rst ? state : 0;
 				error <= 0;
 			end
 		6: begin
 			error <= 1;
-			$display ("Entered Wrong State");
+			$display ("Entered Wrong nxtstate");
 			end
 		7: begin 
 			error <= 1;
-			$display ("Entered Wrong State");
+			$display ("Entered Wrong nxtstate");
 			end
 		default: begin
-			state <= 0;
+			nxtstate <= 0;
 		end
 	endcase
 	end
