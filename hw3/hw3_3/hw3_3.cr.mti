@@ -33,6 +33,20 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	clkrst
 
+} {} {}} I:/College/ECE_552/hw3/hw3_3/counter.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_3/counter.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} I:/College/ECE_552/hw3/hw3_3/fifo.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_3/fifo.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module fifo
+
+Top level modules:
+	fifo
+
 } {} {}} I:/College/ECE_552/hw3/hw3_3/dff.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_3/dff.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module dff

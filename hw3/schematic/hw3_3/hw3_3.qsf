@@ -50,3 +50,4 @@ set_global_assignment -name BDF_FILE ../hw3_2/hw3_2.bdf
 set_global_assignment -name BDF_FILE ../hw3_2/mux21.bdf
 set_global_assignment -name BDF_FILE reg.bdf
 set_global_assignment -name BDF_FILE fifo.bdf
+set_global_assignment -name BDF_FILE ../hw3_2/counter.bdf
