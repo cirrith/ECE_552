@@ -1,9 +1,9 @@
-I:/College/ECE_552/hw3/hw3_1/rf_bench.v {1 {vlog -work work -vopt -stats=none {I:\College\ECE_552\hw3\hw3_1\rf_bench.v}
+I:/College/ECE_552/hw3/hw3_1/rf_hier.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_1/rf_hier.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module rf_bench
+-- Compiling module rf_hier
 
 Top level modules:
-	rf_bench
+	rf_hier
 
 } {} {}} I:/College/ECE_552/hw3/hw3_1/clkrst.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_1/clkrst.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -12,19 +12,12 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	clkrst
 
-} {} {}} I:/College/ECE_552/hw3/hw3_1/rf_hier.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_1/rf_hier.v
+} {} {}} I:/College/ECE_552/hw3/hw3_1/rf_bench.v {1 {vlog -work work -vopt -stats=none {I:\College\ECE_552\hw3\hw3_1\rf_bench.v}
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module rf_hier
+-- Compiling module rf_bench
 
 Top level modules:
-	rf_hier
-
-} {} {}} I:/College/ECE_552/hw3/hw3_1/rf.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_1/rf.v
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module rf
-
-Top level modules:
-	rf
+	rf_bench
 
 } {} {}} I:/College/ECE_552/hw3/hw3_1/dff.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_1/dff.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -32,6 +25,13 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 
 Top level modules:
 	dff
+
+} {} {}} I:/College/ECE_552/hw3/hw3_1/rf.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_1/rf.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module rf
+
+Top level modules:
+	rf
 
 } {} {}} I:/College/ECE_552/hw3/hw3_1/register.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/hw3_1/register.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
