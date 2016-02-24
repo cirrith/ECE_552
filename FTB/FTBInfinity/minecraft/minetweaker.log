@@ -1,0 +1,384 @@
+ERROR: system: Crop is already defined in that package
+ERROR: system: AutoSpawner is already defined in that package
+INFO: MineTweaker: Building registry
+INFO: MineTweaker: Sucessfully built item registry
+INFO: Adding command minetweaker
+INFO: Adding minetweaker command tooltips
+INFO: Adding minetweaker command entities
+INFO: Adding minetweaker command appeng
+INFO: Adding minetweaker command lexiconCategories
+INFO: Adding minetweaker command lexiconPages
+INFO: Adding minetweaker command botaniaBrews
+INFO: Adding minetweaker command lexiconKnowledgeTypes
+INFO: Adding minetweaker command botaniaOrechid
+INFO: Adding minetweaker command botania
+INFO: Adding minetweaker command chiselGroups
+INFO: Adding minetweaker command chiselVariations
+INFO: Adding minetweaker command railcraft
+INFO: Adding minetweaker command materials
+INFO: Adding minetweaker command tconstruct
+INFO: Adding minetweaker command research
+INFO: Adding minetweaker command aspectList
+INFO: Adding minetweaker command thermalexpansion
+INFO: Adding minetweaker command mfr
+INFO: Removing minetweaker command mfr
+INFO: Removing minetweaker command thermalexpansion
+INFO: Removing minetweaker command aspectList
+INFO: Removing minetweaker command research
+INFO: Removing minetweaker command tconstruct
+INFO: Removing minetweaker command materials
+INFO: Removing minetweaker command railcraft
+INFO: Removing minetweaker command chiselVariations
+INFO: Removing minetweaker command chiselGroups
+INFO: Removing minetweaker command botania
+INFO: Removing minetweaker command botaniaOrechid
+INFO: Removing minetweaker command lexiconKnowledgeTypes
+INFO: Removing minetweaker command botaniaBrews
+INFO: Removing minetweaker command lexiconPages
+INFO: Removing minetweaker command lexiconCategories
+INFO: Removing minetweaker command appeng
+INFO: Removing minetweaker command entities
+INFO: Removing minetweaker command tooltips
+INFO: Removing command minetweaker
+INFO: Adding command minetweaker
+INFO: Adding minetweaker command tooltips
+INFO: Adding minetweaker command entities
+INFO: Adding minetweaker command appeng
+INFO: Adding minetweaker command lexiconCategories
+INFO: Adding minetweaker command lexiconPages
+INFO: Adding minetweaker command botaniaBrews
+INFO: Adding minetweaker command lexiconKnowledgeTypes
+INFO: Adding minetweaker command botaniaOrechid
+INFO: Adding minetweaker command botania
+INFO: Adding minetweaker command chiselGroups
+INFO: Adding minetweaker command chiselVariations
+INFO: Adding minetweaker command railcraft
+INFO: Adding minetweaker command materials
+INFO: Adding minetweaker command tconstruct
+INFO: Adding minetweaker command research
+INFO: Adding minetweaker command aspectList
+INFO: Adding minetweaker command thermalexpansion
+INFO: Adding minetweaker command mfr
+INFO: Initializing 'InfinityPackWideChanges.zs'...
+INFO: Removing Flesh from ore dictionary entry blockMeatRaw
+INFO: Removing 1 recipes
+INFO: Adding recipe for Wired Modem
+INFO: Removing 1 recipes
+INFO: Adding recipe for Basic Belt Base
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Adding recipe for Gold Trowel
+INFO: Adding recipe for Diamond Trowel
+INFO: Adding recipe for Stone Trowel
+INFO: Adding recipe for Iron Trowel
+INFO: Adding recipe for Wooden Trowel
+INFO: Adding recipe for Sanguine Scientiem
+INFO: Initialized 'InfinityPackWideChanges.zs'
+INFO: Removing recipe for Sanguine Scientiem
+INFO: Removing recipe for Wooden Trowel
+INFO: Removing recipe for Iron Trowel
+INFO: Removing recipe for Stone Trowel
+INFO: Removing recipe for Diamond Trowel
+INFO: Removing recipe for Gold Trowel
+INFO: Restoring 1 recipes
+INFO: Restoring 1 recipes
+INFO: Restoring 1 recipes
+INFO: Restoring 1 recipes
+INFO: Restoring 1 recipes
+INFO: Removing recipe for Basic Belt Base
+INFO: Restoring 1 recipes
+INFO: Removing recipe for Wired Modem
+INFO: Restoring 1 recipes
+INFO: Restoring Flesh to ore dictionary entry blockMeatRaw
+INFO: Removing minetweaker command mfr
+INFO: Removing minetweaker command thermalexpansion
+INFO: Removing minetweaker command aspectList
+INFO: Removing minetweaker command research
+INFO: Removing minetweaker command tconstruct
+INFO: Removing minetweaker command materials
+INFO: Removing minetweaker command railcraft
+INFO: Removing minetweaker command chiselVariations
+INFO: Removing minetweaker command chiselGroups
+INFO: Removing minetweaker command botania
+INFO: Removing minetweaker command botaniaOrechid
+INFO: Removing minetweaker command lexiconKnowledgeTypes
+INFO: Removing minetweaker command botaniaBrews
+INFO: Removing minetweaker command lexiconPages
+INFO: Removing minetweaker command lexiconCategories
+INFO: Removing minetweaker command appeng
+INFO: Removing minetweaker command entities
+INFO: Removing minetweaker command tooltips
+INFO: Removing command minetweaker
+INFO: Adding command minetweaker
+INFO: Adding minetweaker command tooltips
+INFO: Adding minetweaker command entities
+INFO: Adding minetweaker command appeng
+INFO: Adding minetweaker command lexiconCategories
+INFO: Adding minetweaker command lexiconPages
+INFO: Adding minetweaker command botaniaBrews
+INFO: Adding minetweaker command lexiconKnowledgeTypes
+INFO: Adding minetweaker command botaniaOrechid
+INFO: Adding minetweaker command botania
+INFO: Adding minetweaker command chiselGroups
+INFO: Adding minetweaker command chiselVariations
+INFO: Adding minetweaker command railcraft
+INFO: Adding minetweaker command materials
+INFO: Adding minetweaker command tconstruct
+INFO: Adding minetweaker command research
+INFO: Adding minetweaker command aspectList
+INFO: Adding minetweaker command thermalexpansion
+INFO: Adding minetweaker command mfr
+INFO: Initializing 'InfinityPackWideChanges.zs'...
+INFO: Removing Flesh from ore dictionary entry blockMeatRaw
+INFO: Removing 1 recipes
+INFO: Adding recipe for Wired Modem
+INFO: Removing 1 recipes
+INFO: Adding recipe for Basic Belt Base
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Adding recipe for Gold Trowel
+INFO: Adding recipe for Diamond Trowel
+INFO: Adding recipe for Stone Trowel
+INFO: Adding recipe for Iron Trowel
+INFO: Adding recipe for Wooden Trowel
+INFO: Adding recipe for Sanguine Scientiem
+INFO: Initialized 'InfinityPackWideChanges.zs'
+INFO: Adding minetweaker command tooltips
+INFO: Adding minetweaker command entities
+INFO: Adding minetweaker command appeng
+INFO: Adding minetweaker command lexiconCategories
+INFO: Adding minetweaker command lexiconPages
+INFO: Adding minetweaker command botaniaBrews
+INFO: Adding minetweaker command lexiconKnowledgeTypes
+INFO: Adding minetweaker command botaniaOrechid
+INFO: Adding minetweaker command botania
+INFO: Adding minetweaker command chiselGroups
+INFO: Adding minetweaker command chiselVariations
+INFO: Adding minetweaker command railcraft
+INFO: Adding minetweaker command materials
+INFO: Adding minetweaker command tconstruct
+INFO: Adding minetweaker command research
+INFO: Adding minetweaker command aspectList
+INFO: Adding minetweaker command thermalexpansion
+INFO: Removing minetweaker command thermalexpansion
+INFO: Removing minetweaker command aspectList
+INFO: Removing minetweaker command research
+INFO: Removing minetweaker command tconstruct
+INFO: Removing minetweaker command materials
+INFO: Removing minetweaker command railcraft
+INFO: Removing minetweaker command chiselVariations
+INFO: Removing minetweaker command chiselGroups
+INFO: Removing minetweaker command botania
+INFO: Removing minetweaker command botaniaOrechid
+INFO: Removing minetweaker command lexiconKnowledgeTypes
+INFO: Removing minetweaker command botaniaBrews
+INFO: Removing minetweaker command lexiconPages
+INFO: Removing minetweaker command lexiconCategories
+INFO: Removing minetweaker command appeng
+INFO: Removing minetweaker command entities
+INFO: Removing minetweaker command tooltips
+INFO: Removing recipe for Sanguine Scientiem
+INFO: Removing recipe for Wooden Trowel
+INFO: Removing recipe for Iron Trowel
+INFO: Removing recipe for Stone Trowel
+INFO: Removing recipe for Diamond Trowel
+INFO: Removing recipe for Gold Trowel
+INFO: Restoring 1 recipes
+INFO: Restoring 1 recipes
+INFO: Restoring 1 recipes
+INFO: Restoring 1 recipes
+INFO: Restoring 1 recipes
+INFO: Removing recipe for Basic Belt Base
+INFO: Restoring 1 recipes
+INFO: Removing recipe for Wired Modem
+INFO: Restoring 1 recipes
+INFO: Restoring Flesh to ore dictionary entry blockMeatRaw
+INFO: Removing minetweaker command mfr
+INFO: Removing minetweaker command thermalexpansion
+INFO: Removing minetweaker command aspectList
+INFO: Removing minetweaker command research
+INFO: Removing minetweaker command tconstruct
+INFO: Removing minetweaker command materials
+INFO: Removing minetweaker command railcraft
+INFO: Removing minetweaker command chiselVariations
+INFO: Removing minetweaker command chiselGroups
+INFO: Removing minetweaker command botania
+INFO: Removing minetweaker command botaniaOrechid
+INFO: Removing minetweaker command lexiconKnowledgeTypes
+INFO: Removing minetweaker command botaniaBrews
+INFO: Removing minetweaker command lexiconPages
+INFO: Removing minetweaker command lexiconCategories
+INFO: Removing minetweaker command appeng
+INFO: Removing minetweaker command entities
+INFO: Removing minetweaker command tooltips
+INFO: Removing command minetweaker
+INFO: Adding command minetweaker
+INFO: Adding minetweaker command tooltips
+INFO: Adding minetweaker command entities
+INFO: Adding minetweaker command appeng
+INFO: Adding minetweaker command lexiconCategories
+INFO: Adding minetweaker command lexiconPages
+INFO: Adding minetweaker command botaniaBrews
+INFO: Adding minetweaker command lexiconKnowledgeTypes
+INFO: Adding minetweaker command botaniaOrechid
+INFO: Adding minetweaker command botania
+INFO: Adding minetweaker command chiselGroups
+INFO: Adding minetweaker command chiselVariations
+INFO: Adding minetweaker command railcraft
+INFO: Adding minetweaker command materials
+INFO: Adding minetweaker command tconstruct
+INFO: Adding minetweaker command research
+INFO: Adding minetweaker command aspectList
+INFO: Adding minetweaker command thermalexpansion
+INFO: Adding minetweaker command mfr
+INFO: Removing minetweaker command mfr
+INFO: Removing minetweaker command thermalexpansion
+INFO: Removing minetweaker command aspectList
+INFO: Removing minetweaker command research
+INFO: Removing minetweaker command tconstruct
+INFO: Removing minetweaker command materials
+INFO: Removing minetweaker command railcraft
+INFO: Removing minetweaker command chiselVariations
+INFO: Removing minetweaker command chiselGroups
+INFO: Removing minetweaker command botania
+INFO: Removing minetweaker command botaniaOrechid
+INFO: Removing minetweaker command lexiconKnowledgeTypes
+INFO: Removing minetweaker command botaniaBrews
+INFO: Removing minetweaker command lexiconPages
+INFO: Removing minetweaker command lexiconCategories
+INFO: Removing minetweaker command appeng
+INFO: Removing minetweaker command entities
+INFO: Removing minetweaker command tooltips
+INFO: Removing command minetweaker
+INFO: Adding command minetweaker
+INFO: Adding minetweaker command tooltips
+INFO: Adding minetweaker command entities
+INFO: Adding minetweaker command appeng
+INFO: Adding minetweaker command lexiconCategories
+INFO: Adding minetweaker command lexiconPages
+INFO: Adding minetweaker command botaniaBrews
+INFO: Adding minetweaker command lexiconKnowledgeTypes
+INFO: Adding minetweaker command botaniaOrechid
+INFO: Adding minetweaker command botania
+INFO: Adding minetweaker command chiselGroups
+INFO: Adding minetweaker command chiselVariations
+INFO: Adding minetweaker command railcraft
+INFO: Adding minetweaker command materials
+INFO: Adding minetweaker command tconstruct
+INFO: Adding minetweaker command research
+INFO: Adding minetweaker command aspectList
+INFO: Adding minetweaker command thermalexpansion
+INFO: Adding minetweaker command mfr
+INFO: Initializing 'InfinityPackWideChanges.zs'...
+INFO: Removing Flesh from ore dictionary entry blockMeatRaw
+INFO: Removing 1 recipes
+INFO: Adding recipe for Wired Modem
+INFO: Removing 1 recipes
+INFO: Adding recipe for Basic Belt Base
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Adding recipe for Gold Trowel
+INFO: Adding recipe for Diamond Trowel
+INFO: Adding recipe for Stone Trowel
+INFO: Adding recipe for Iron Trowel
+INFO: Adding recipe for Wooden Trowel
+INFO: Adding recipe for Sanguine Scientiem
+INFO: Initialized 'InfinityPackWideChanges.zs'
+INFO: Removing recipe for Sanguine Scientiem
+INFO: Removing recipe for Wooden Trowel
+INFO: Removing recipe for Iron Trowel
+INFO: Removing recipe for Stone Trowel
+INFO: Removing recipe for Diamond Trowel
+INFO: Removing recipe for Gold Trowel
+INFO: Restoring 1 recipes
+INFO: Restoring 1 recipes
+INFO: Restoring 1 recipes
+INFO: Restoring 1 recipes
+INFO: Restoring 1 recipes
+INFO: Removing recipe for Basic Belt Base
+INFO: Restoring 1 recipes
+INFO: Removing recipe for Wired Modem
+INFO: Restoring 1 recipes
+INFO: Restoring Flesh to ore dictionary entry blockMeatRaw
+INFO: Removing minetweaker command mfr
+INFO: Removing minetweaker command thermalexpansion
+INFO: Removing minetweaker command aspectList
+INFO: Removing minetweaker command research
+INFO: Removing minetweaker command tconstruct
+INFO: Removing minetweaker command materials
+INFO: Removing minetweaker command railcraft
+INFO: Removing minetweaker command chiselVariations
+INFO: Removing minetweaker command chiselGroups
+INFO: Removing minetweaker command botania
+INFO: Removing minetweaker command botaniaOrechid
+INFO: Removing minetweaker command lexiconKnowledgeTypes
+INFO: Removing minetweaker command botaniaBrews
+INFO: Removing minetweaker command lexiconPages
+INFO: Removing minetweaker command lexiconCategories
+INFO: Removing minetweaker command appeng
+INFO: Removing minetweaker command entities
+INFO: Removing minetweaker command tooltips
+INFO: Removing command minetweaker
+INFO: Adding command minetweaker
+INFO: Adding minetweaker command tooltips
+INFO: Adding minetweaker command entities
+INFO: Adding minetweaker command appeng
+INFO: Adding minetweaker command lexiconCategories
+INFO: Adding minetweaker command lexiconPages
+INFO: Adding minetweaker command botaniaBrews
+INFO: Adding minetweaker command lexiconKnowledgeTypes
+INFO: Adding minetweaker command botaniaOrechid
+INFO: Adding minetweaker command botania
+INFO: Adding minetweaker command chiselGroups
+INFO: Adding minetweaker command chiselVariations
+INFO: Adding minetweaker command railcraft
+INFO: Adding minetweaker command materials
+INFO: Adding minetweaker command tconstruct
+INFO: Adding minetweaker command research
+INFO: Adding minetweaker command aspectList
+INFO: Adding minetweaker command thermalexpansion
+INFO: Adding minetweaker command mfr
+INFO: Initializing 'InfinityPackWideChanges.zs'...
+INFO: Removing Flesh from ore dictionary entry blockMeatRaw
+INFO: Removing 1 recipes
+INFO: Adding recipe for Wired Modem
+INFO: Removing 1 recipes
+INFO: Adding recipe for Basic Belt Base
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Removing 1 recipes
+INFO: Adding recipe for Gold Trowel
+INFO: Adding recipe for Diamond Trowel
+INFO: Adding recipe for Stone Trowel
+INFO: Adding recipe for Iron Trowel
+INFO: Adding recipe for Wooden Trowel
+INFO: Adding recipe for Sanguine Scientiem
+INFO: Initialized 'InfinityPackWideChanges.zs'
+INFO: Adding minetweaker command tooltips
+INFO: Adding minetweaker command entities
+INFO: Adding minetweaker command appeng
+INFO: Adding minetweaker command lexiconCategories
+INFO: Adding minetweaker command lexiconPages
+INFO: Adding minetweaker command botaniaBrews
+INFO: Adding minetweaker command lexiconKnowledgeTypes
+INFO: Adding minetweaker command botaniaOrechid
+INFO: Adding minetweaker command botania
+INFO: Adding minetweaker command chiselGroups
+INFO: Adding minetweaker command chiselVariations
+INFO: Adding minetweaker command railcraft
+INFO: Adding minetweaker command materials
+INFO: Adding minetweaker command tconstruct
+INFO: Adding minetweaker command research
+INFO: Adding minetweaker command aspectList
+INFO: Adding minetweaker command thermalexpansion

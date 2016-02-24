@@ -1,0 +1,82 @@
+[00:04:16] [Server thread/WARN]: Fetching addPacket for removed entity
+[00:09:49] [Server thread/INFO]: [ColdCirrith: Set own game mode to Creative Mode]
+[00:09:49] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[00:10:02] [Server thread/INFO]: [ColdCirrith: Set own game mode to Survival Mode]
+[00:10:02] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[00:11:21] [Server thread/INFO]: [ColdCirrith: Set own game mode to Creative Mode]
+[00:11:21] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[00:11:27] [Server thread/INFO]: [ColdCirrith: Set own game mode to Survival Mode]
+[00:11:27] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[00:20:47] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2096ms behind, skipping 41 tick(s)
+[00:35:47] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2467ms behind, skipping 49 tick(s)
+[00:44:58] [Server thread/INFO]: ColdCirrith was slain by Cave Spider
+[00:44:58] [Client thread/INFO]: [CHAT] ColdCirrith was slain by Cave Spider
+[00:45:19] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:mob.witch.idle
+[00:46:18] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3125ms behind, skipping 62 tick(s)
+[00:47:56] [Server thread/INFO]: ColdCirrith was shot by TeakAutumn
+[00:47:56] [Client thread/INFO]: [CHAT] ColdCirrith was shot by TeakAutumn
+[00:48:17] [Server thread/INFO]: TeakAutumn fell from a high place
+[00:48:17] [Client thread/INFO]: [CHAT] TeakAutumn fell from a high place
+[00:50:49] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2521ms behind, skipping 50 tick(s)
+[00:55:20] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2941ms behind, skipping 58 tick(s)
+[01:05:50] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2468ms behind, skipping 49 tick(s)
+[01:10:41] [Server thread/INFO]: TeakAutumn has just earned the achievement [Librarian]
+[01:10:41] [Client thread/INFO]: [CHAT] TeakAutumn has just earned the achievement [Librarian]
+[01:20:50] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2105ms behind, skipping 42 tick(s)
+[01:37:02] [Server thread/INFO]: TeakAutumn fell from a high place
+[01:37:02] [Client thread/INFO]: [CHAT] TeakAutumn fell from a high place
+[01:40:15] [Server thread/INFO]: Stopping server
+[01:40:15] [Server thread/INFO]: Saving players
+[01:40:15] [Server thread/INFO]: Saving worlds
+[01:40:15] [Server thread/INFO]: Saving chunks for level 'Tenton'/Overworld
+[01:40:15] [Server thread/INFO]: Saving chunks for level 'Tenton'/Nether
+[01:40:16] [Server thread/INFO]: Saving chunks for level 'Tenton'/The End
+[01:40:16] [Server thread/INFO]: Saving chunks for level 'Tenton'/Twilight Forest
+[01:40:16] [Server thread/INFO]: Saving chunks for level 'Tenton'/Underdark
+[01:40:16] [Server thread/INFO]: Saving chunks for level 'Tenton'/Dungeon
+[01:40:16] [Server thread/INFO]: Saving chunks for level 'Tenton'/Spirit World
+[01:40:16] [Server thread/INFO]: Saving chunks for level 'Tenton'/Torment
+[01:40:16] [Server thread/INFO]: Saving chunks for level 'Tenton'/Mirror
+[01:40:16] [Server thread/INFO]: Saving chunks for level 'Tenton'/Bedrock
+[01:40:16] [Server thread/INFO]: Saving chunks for level 'Tenton'/The Outer Lands
+[01:40:16] [Server thread/INFO]: Saving chunks for level 'Tenton'/The Last Millenium
+[01:40:30] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[01:40:30] [Server thread/INFO]: Generating keypair
+[01:40:33] [Server thread/INFO]: Preparing start region for level 0
+[01:40:34] [Server thread/INFO]: Preparing spawn area: 36%
+[01:40:35] [Server thread/INFO]: Preparing spawn area: 38%
+[01:40:36] [Server thread/INFO]: Preparing spawn area: 83%
+[01:40:42] [Server thread/INFO]: Changing view distance to 4, from 10
+[01:40:43] [Server thread/INFO]: ColdCirrith[local:E:6c63bc6a] logged in with entity id 630380 at (-62.08549673449863, 90.5, -60.713117735715755)
+[01:40:43] [Server thread/INFO]: ColdCirrith joined the game
+[01:40:46] [Server thread/INFO]: Saving and pausing game...
+[01:40:46] [Client thread/INFO]: [CHAT] Welcome to the server!
+[01:40:46] [Server thread/INFO]: Saving chunks for level 'Tenton'/Overworld
+[01:40:47] [Server thread/INFO]: Saving chunks for level 'Tenton'/Nether
+[01:40:47] [Server thread/INFO]: Saving chunks for level 'Tenton'/The End
+[01:40:47] [Server thread/INFO]: Saving chunks for level 'Tenton'/Twilight Forest
+[01:40:47] [Server thread/INFO]: Saving chunks for level 'Tenton'/Underdark
+[01:40:47] [Server thread/INFO]: Saving chunks for level 'Tenton'/Dungeon
+[01:40:47] [Server thread/INFO]: Saving chunks for level 'Tenton'/Spirit World
+[01:40:47] [Server thread/INFO]: Saving chunks for level 'Tenton'/Torment
+[01:40:47] [Server thread/INFO]: Saving chunks for level 'Tenton'/Mirror
+[01:40:47] [Server thread/INFO]: Saving chunks for level 'Tenton'/Bedrock
+[01:40:47] [Server thread/INFO]: Saving chunks for level 'Tenton'/The Outer Lands
+[01:40:47] [Server thread/INFO]: Saving chunks for level 'Tenton'/The Last Millenium
+[01:40:48] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4992ms behind, skipping 99 tick(s)
+[01:40:48] [Server thread/INFO]: Stopping server
+[01:40:48] [Server thread/INFO]: Saving players
+[01:40:48] [Server thread/INFO]: Saving worlds
+[01:40:48] [Server thread/INFO]: Saving chunks for level 'Tenton'/Overworld
+[01:40:49] [Server thread/INFO]: Saving chunks for level 'Tenton'/Nether
+[01:40:49] [Server thread/INFO]: Saving chunks for level 'Tenton'/The End
+[01:40:49] [Server thread/INFO]: Saving chunks for level 'Tenton'/Twilight Forest
+[01:40:49] [Server thread/INFO]: Saving chunks for level 'Tenton'/Underdark
+[01:40:49] [Server thread/INFO]: Saving chunks for level 'Tenton'/Dungeon
+[01:40:49] [Server thread/INFO]: Saving chunks for level 'Tenton'/Spirit World
+[01:40:49] [Server thread/INFO]: Saving chunks for level 'Tenton'/Torment
+[01:40:49] [Server thread/INFO]: Saving chunks for level 'Tenton'/Mirror
+[01:40:49] [Server thread/INFO]: Saving chunks for level 'Tenton'/Bedrock
+[01:40:49] [Server thread/INFO]: Saving chunks for level 'Tenton'/The Outer Lands
+[01:40:49] [Server thread/INFO]: Saving chunks for level 'Tenton'/The Last Millenium
+[01:40:53] [Client thread/INFO]: Stopping!
