@@ -44,3 +44,17 @@ set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:57:06  FEBRUARY 23, 2
 set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE FASTEST
+set_global_assignment -name BDF_FILE Processor.bdf
+set_global_assignment -name BDF_FILE Register_File.bdf
+set_global_assignment -name BDF_FILE ALU.bdf
+set_global_assignment -name BDF_FILE Memory.bdf
+set_global_assignment -name BDF_FILE PR_Control.bdf
+set_global_assignment -name BDF_FILE Instruction_Memory.bdf
+set_global_assignment -name BDF_FILE PC.bdf
+set_global_assignment -name BDF_FILE ALU_Control.bdf
+set_global_assignment -name BDF_FILE "2-1_Mux_32.bdf"
+set_global_assignment -name BDF_FILE PC_Inc.bdf
+set_global_assignment -name BDF_FILE Shift_2.bdf
+set_global_assignment -name BDF_FILE Adder.bdf
+set_global_assignment -name BDF_FILE Sign_Ext.bdf
+set_global_assignment -name BDF_FILE "4-1_Mux.bdf"
