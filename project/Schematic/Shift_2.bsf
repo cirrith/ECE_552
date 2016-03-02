@@ -26,15 +26,15 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "Shf_In[31:0]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
-		(text "Shf_In[31:0]" (rect 21 27 89 41)(font "Arial" (font_size 8)))
+		(text "Shf_In[15:0]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "Shf_In[15:0]" (rect 21 27 89 41)(font "Arial" (font_size 8)))
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port
 		(pt 200 32)
 		(output)
-		(text "Shf_Out[31:0]" (rect 0 0 79 14)(font "Arial" (font_size 8)))
-		(text "Shf_Out[31:0]" (rect 100 27 179 41)(font "Arial" (font_size 8)))
+		(text "Shf_Out[15:0]" (rect 0 0 79 14)(font "Arial" (font_size 8)))
+		(text "Shf_Out[15:0]" (rect 100 27 179 41)(font "Arial" (font_size 8)))
 		(line (pt 200 32)(pt 184 32)(line_width 1))
 	)
 	(drawing

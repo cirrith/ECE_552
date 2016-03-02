@@ -26,15 +26,15 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "Address[31:0]" (rect 0 0 81 14)(font "Arial" (font_size 8)))
-		(text "Address[31:0]" (rect 21 27 102 41)(font "Arial" (font_size 8)))
+		(text "Address[15:0]" (rect 0 0 81 14)(font "Arial" (font_size 8)))
+		(text "Address[15:0]" (rect 21 27 102 41)(font "Arial" (font_size 8)))
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "Data[31:0]" (rect 0 0 57 14)(font "Arial" (font_size 8)))
-		(text "Data[31:0]" (rect 21 43 78 57)(font "Arial" (font_size 8)))
+		(text "Data[15:0]" (rect 0 0 57 14)(font "Arial" (font_size 8)))
+		(text "Data[15:0]" (rect 21 43 78 57)(font "Arial" (font_size 8)))
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
@@ -54,8 +54,8 @@ applicable agreement for further details.
 	(port
 		(pt 232 32)
 		(output)
-		(text "Read_Data[31:0]" (rect 0 0 94 14)(font "Arial" (font_size 8)))
-		(text "Read_Data[31:0]" (rect 117 27 211 41)(font "Arial" (font_size 8)))
+		(text "Read_Data[15:0]" (rect 0 0 94 14)(font "Arial" (font_size 8)))
+		(text "Read_Data[15:0]" (rect 117 27 211 41)(font "Arial" (font_size 8)))
 		(line (pt 232 32)(pt 216 32)(line_width 1))
 	)
 	(drawing

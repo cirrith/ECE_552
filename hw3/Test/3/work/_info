@@ -1,0 +1,143 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dI:/College/ECE_552/hw3/Test/2
+vclkrst
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
+!i10b 1
+!s100 No[XWID:QhgHKS8<I68UH0
+ILO5iZOG<Nl`;ZWVoV?To`0
+Z1 dI:/College/ECE_552/hw3/Test/3
+w1455473880
+8I:/College/ECE_552/hw3/Test/3/clkrst.v
+FI:/College/ECE_552/hw3/Test/3/clkrst.v
+L0 12
+Z2 OE;L;10.3c;59
+!s108 1456803518.756000
+!s107 I:/College/ECE_552/hw3/Test/3/clkrst.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw3/Test/3/clkrst.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vcounter
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 3nV9l`EZIo?_oOkY5eY4J2
+I^[inTa9<I4CGQ1jdzN7O93
+R1
+w1456090157
+8I:/College/ECE_552/hw3/Test/3/counter.v
+FI:/College/ECE_552/hw3/Test/3/counter.v
+L0 1
+R2
+!s108 1456803519.016000
+!s107 I:/College/ECE_552/hw3/Test/3/counter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw3/Test/3/counter.v|
+!i113 0
+R3
+vdff
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 :P9B=6RNJiggGnSQ@zSPl0
+ISC4l[J1BFeMzgWP:z7ZEo0
+R1
+w1455473885
+8I:/College/ECE_552/hw3/Test/3/dff.v
+FI:/College/ECE_552/hw3/Test/3/dff.v
+L0 6
+R2
+!s108 1456803519.286000
+!s107 I:/College/ECE_552/hw3/Test/3/dff.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw3/Test/3/dff.v|
+!i113 0
+R3
+vfifo
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 ]ib[I5e3[aPbD:om]X_fB2
+I]4<WWTXNR8D`9>53HA<ZK3
+R1
+w1456090214
+8I:/College/ECE_552/hw3/Test/3/fifo.v
+FI:/College/ECE_552/hw3/Test/3/fifo.v
+L0 4
+R2
+!s108 1456803519.546000
+!s107 I:/College/ECE_552/hw3/Test/3/fifo.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw3/Test/3/fifo.v|
+!i113 0
+R3
+vfifo_bench
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 R@Y?>mVg6El0eP9j?e0Pb2
+IK3mHFa[6zQ=BeiileP`?R2
+R1
+w1455668629
+8I:/College/ECE_552/hw3/Test/3/fifo_bench.v
+FI:/College/ECE_552/hw3/Test/3/fifo_bench.v
+L0 1
+R2
+!s108 1456803519.806000
+!s107 I:/College/ECE_552/hw3/Test/3/fifo_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw3/Test/3/fifo_bench.v|
+!i113 0
+R3
+vfifo_hier
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 lUb555o>:cnb@cfiYiQMk0
+IISo9@lPTXVfeT=353S@Nk1
+R1
+w1455667793
+8I:/College/ECE_552/hw3/Test/3/fifo_hier.v
+FI:/College/ECE_552/hw3/Test/3/fifo_hier.v
+L0 7
+R2
+!s108 1456803520.066000
+!s107 I:/College/ECE_552/hw3/Test/3/fifo_hier.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw3/Test/3/fifo_hier.v|
+!i113 0
+R3
+vregister
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 jDe]T=:dcH^F@4hJQ^Lo`1
+I=@N9m4ckfc1hX<S5;<g9G1
+R1
+w1455836704
+8I:/College/ECE_552/hw3/Test/3/register.v
+FI:/College/ECE_552/hw3/Test/3/register.v
+L0 14
+R2
+!s108 1456803518.506000
+!s107 I:/College/ECE_552/hw3/Test/3/register.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw3/Test/3/register.v|
+!i113 0
+R3

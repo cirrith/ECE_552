@@ -47,8 +47,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "Write_Data[31:0]" (rect 0 0 94 14)(font "Arial" (font_size 8)))
-		(text "Write_Data[31:0]" (rect 21 75 115 89)(font "Arial" (font_size 8)))
+		(text "Write_Data[15:0]" (rect 0 0 94 14)(font "Arial" (font_size 8)))
+		(text "Write_Data[15:0]" (rect 21 75 115 89)(font "Arial" (font_size 8)))
 		(line (pt 0 80)(pt 16 80)(line_width 1))
 	)
 	(port
@@ -61,15 +61,15 @@ applicable agreement for further details.
 	(port
 		(pt 256 32)
 		(output)
-		(text "Read_1_Data[31:0]" (rect 0 0 108 14)(font "Arial" (font_size 8)))
-		(text "Read_1_Data[31:0]" (rect 127 27 235 41)(font "Arial" (font_size 8)))
+		(text "Read_1_Data[15:0]" (rect 0 0 108 14)(font "Arial" (font_size 8)))
+		(text "Read_1_Data[15:0]" (rect 127 27 235 41)(font "Arial" (font_size 8)))
 		(line (pt 256 32)(pt 240 32)(line_width 1))
 	)
 	(port
 		(pt 256 48)
 		(output)
-		(text "Read_2_Data[31:0]" (rect 0 0 108 14)(font "Arial" (font_size 8)))
-		(text "Read_2_Data[31:0]" (rect 127 43 235 57)(font "Arial" (font_size 8)))
+		(text "Read_2_Data[15:0]" (rect 0 0 108 14)(font "Arial" (font_size 8)))
+		(text "Read_2_Data[15:0]" (rect 127 43 235 57)(font "Arial" (font_size 8)))
 		(line (pt 256 48)(pt 240 48)(line_width 1))
 	)
 	(drawing

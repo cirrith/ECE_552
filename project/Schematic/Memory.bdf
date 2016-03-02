@@ -56,7 +56,7 @@ applicable agreement for further details.
 	(input)
 	(rect 136 112 304 128)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "Address[31:0]" (rect 5 0 73 12)(font "Arial" ))
+	(text "Address[15:0]" (rect 5 0 73 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
@@ -72,7 +72,7 @@ applicable agreement for further details.
 	(input)
 	(rect 136 136 304 152)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "Data[31:0]" (rect 5 0 56 12)(font "Arial" ))
+	(text "Data[15:0]" (rect 5 0 56 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
@@ -88,7 +88,7 @@ applicable agreement for further details.
 	(output)
 	(rect 336 112 514 128)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "Read_Data[31:0]" (rect 90 0 173 12)(font "Arial" ))
+	(text "Read_Data[15:0]" (rect 90 0 173 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8)(line_width 1))

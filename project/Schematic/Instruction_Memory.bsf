@@ -26,15 +26,15 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "Address[31:0]" (rect 0 0 81 14)(font "Arial" (font_size 8)))
-		(text "Address[31:0]" (rect 21 27 102 41)(font "Arial" (font_size 8)))
+		(text "Address[15:0]" (rect 0 0 81 14)(font "Arial" (font_size 8)))
+		(text "Address[15:0]" (rect 21 27 102 41)(font "Arial" (font_size 8)))
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port
 		(pt 224 32)
 		(output)
-		(text "Instruction[31:0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
-		(text "Instruction[31:0]" (rect 113 27 203 41)(font "Arial" (font_size 8)))
+		(text "Instruction[15:0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "Instruction[15:0]" (rect 113 27 203 41)(font "Arial" (font_size 8)))
 		(line (pt 224 32)(pt 208 32)(line_width 1))
 	)
 	(drawing

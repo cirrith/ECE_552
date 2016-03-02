@@ -26,15 +26,15 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "PC_In[31:0]" (rect 0 0 63 14)(font "Arial" (font_size 8)))
-		(text "PC_In[31:0]" (rect 21 27 84 41)(font "Arial" (font_size 8)))
+		(text "PC_In[15:0]" (rect 0 0 63 14)(font "Arial" (font_size 8)))
+		(text "PC_In[15:0]" (rect 21 27 84 41)(font "Arial" (font_size 8)))
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port
 		(pt 192 32)
 		(output)
-		(text "PC_Out[31:0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
-		(text "PC_Out[31:0]" (rect 97 27 171 41)(font "Arial" (font_size 8)))
+		(text "PC_Out[15:0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "PC_Out[15:0]" (rect 97 27 171 41)(font "Arial" (font_size 8)))
 		(line (pt 192 32)(pt 176 32)(line_width 1))
 	)
 	(drawing

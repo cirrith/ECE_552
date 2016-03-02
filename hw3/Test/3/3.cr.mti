@@ -1,0 +1,50 @@
+I:/College/ECE_552/hw3/Test/3/fifo_hier.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/Test/3/fifo_hier.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module fifo_hier
+
+Top level modules:
+	fifo_hier
+
+} {} {}} I:/College/ECE_552/hw3/Test/3/fifo_bench.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/Test/3/fifo_bench.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module fifo_bench
+
+Top level modules:
+	fifo_bench
+
+} {} {}} I:/College/ECE_552/hw3/Test/3/clkrst.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/Test/3/clkrst.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} I:/College/ECE_552/hw3/Test/3/fifo.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/Test/3/fifo.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module fifo
+
+Top level modules:
+	fifo
+
+} {} {}} I:/College/ECE_552/hw3/Test/3/dff.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/Test/3/dff.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}} I:/College/ECE_552/hw3/Test/3/counter.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/Test/3/counter.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} I:/College/ECE_552/hw3/Test/3/register.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw3/Test/3/register.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}}

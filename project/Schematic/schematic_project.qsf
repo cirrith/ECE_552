@@ -52,9 +52,13 @@ set_global_assignment -name BDF_FILE PR_Control.bdf
 set_global_assignment -name BDF_FILE Instruction_Memory.bdf
 set_global_assignment -name BDF_FILE PC.bdf
 set_global_assignment -name BDF_FILE ALU_Control.bdf
-set_global_assignment -name BDF_FILE "2-1_Mux_32.bdf"
 set_global_assignment -name BDF_FILE PC_Inc.bdf
 set_global_assignment -name BDF_FILE Shift_2.bdf
 set_global_assignment -name BDF_FILE Adder.bdf
 set_global_assignment -name BDF_FILE Sign_Ext.bdf
 set_global_assignment -name BDF_FILE "4-1_Mux.bdf"
+set_global_assignment -name BDF_FILE "2-1_Mux_16.bdf"
+set_global_assignment -name BDF_FILE "Sign_Ext(5-16).bdf"
+set_global_assignment -name BDF_FILE "2-1_Mux_3.bdf"
+set_global_assignment -name BDF_FILE "4-1_Mux_16.bdf"
+set_global_assignment -name BDF_FILE "Processor(2).bdf"
