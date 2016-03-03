@@ -62,3 +62,7 @@ set_global_assignment -name BDF_FILE "Sign_Ext(5-16).bdf"
 set_global_assignment -name BDF_FILE "2-1_Mux_3.bdf"
 set_global_assignment -name BDF_FILE "4-1_Mux_16.bdf"
 set_global_assignment -name BDF_FILE "Processor(2).bdf"
+set_global_assignment -name BDF_FILE "Sign_Ext(8-16).bdf"
+set_global_assignment -name BDF_FILE "Sign_Ext(11-16).bdf"
+set_global_assignment -name BDF_FILE Flipper.bdf
+set_global_assignment -name BDF_FILE Shift_Or.bdf
