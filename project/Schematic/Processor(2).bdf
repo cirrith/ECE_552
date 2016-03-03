@@ -337,7 +337,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1872 456 2104 584)
+	(rect 1728 384 1960 512)
 	(text "Memory" (rect 5 0 49 14)(font "Arial" (font_size 8)))
 	(text "inst8" (rect 8 112 31 124)(font "Arial" ))
 	(port
@@ -377,28 +377,6 @@ applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 216 112)(line_width 1))
-	)
-)
-(symbol
-	(rect 552 624 688 720)
-	(text "Sign_Ext(5-16)" (rect 5 0 89 14)(font "Arial" (font_size 8)))
-	(text "inst9" (rect 8 80 31 92)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "in[4:0]" (rect 0 0 34 14)(font "Arial" (font_size 8)))
-		(text "in[4:0]" (rect 21 27 55 41)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 1))
-	)
-	(port
-		(pt 136 32)
-		(output)
-		(text "out[15:0]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
-		(text "out[15:0]" (rect 66 27 115 41)(font "Arial" (font_size 8)))
-		(line (pt 136 32)(pt 120 32)(line_width 1))
-	)
-	(drawing
-		(rectangle (rect 16 16 120 80)(line_width 1))
 	)
 )
 (symbol
@@ -510,7 +488,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 2392 552 2536 680)
+	(rect 2168 408 2312 536)
 	(text "4-1_Mux_16" (rect 5 0 75 14)(font "Arial" (font_size 8)))
 	(text "inst14" (rect 8 112 37 124)(font "Arial" ))
 	(port
@@ -610,7 +588,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1848 680 1992 776)
+	(rect 1840 576 1984 672)
 	(text "2-1_Mux_16" (rect 5 0 75 14)(font "Arial" (font_size 8)))
 	(text "inst16" (rect 8 80 37 92)(font "Arial" ))
 	(port
@@ -803,6 +781,28 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 128 112)(line_width 1))
 	)
 )
+(symbol
+	(rect 584 600 720 696)
+	(text "Sign_Ext(5-16)" (rect 5 0 89 14)(font "Arial" (font_size 8)))
+	(text "inst9" (rect 8 80 31 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "in[4:0]" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "in[4:0]" (rect 21 27 55 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "out[15:0]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "out[15:0]" (rect 66 27 115 41)(font "Arial" (font_size 8)))
+		(line (pt 136 32)(pt 120 32)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 80)(line_width 1))
+	)
+)
 (connector
 	(pt 192 432)
 	(pt 272 432)
@@ -858,21 +858,31 @@ applicable agreement for further details.
 	(pt 1552 608)
 	(bus)
 )
-(text "ALU" (rect 2352 624 2376 638)(font "Arial" (font_size 8)))
-(text "MEM" (rect 2352 608 2377 622)(font "Arial" (font_size 8)))
+(connector
+	(pt 496 432)
+	(pt 512 432)
+	(bus)
+)
+(connector
+	(pt 512 432)
+	(pt 512 184)
+	(bus)
+)
+(text "ALU" (rect 2128 480 2152 494)(font "Arial" (font_size 8)))
+(text "MEM" (rect 2128 464 2153 478)(font "Arial" (font_size 8)))
 (text "FLIP" (rect 2056 672 2079 686)(font "Arial" (font_size 8)))
 (text "COM" (rect 2056 704 2083 718)(font "Arial" (font_size 8)))
 (text "R2D" (rect 1336 680 1359 694)(font "Arial" (font_size 8)))
 (text "SE" (rect 1160 680 1175 694)(font "Arial" (font_size 8)))
 (text "ZE" (rect 1160 664 1175 678)(font "Arial" (font_size 8)))
-(text "PC + 2" (rect 2352 592 2388 606)(font "Arial" (font_size 8)))
-(text "EXT" (rect 2352 576 2374 590)(font "Arial" (font_size 8)))
+(text "PC + 2" (rect 2128 448 2164 462)(font "Arial" (font_size 8)))
+(text "EXT" (rect 2128 432 2150 446)(font "Arial" (font_size 8)))
 (text "SE" (rect 2064 720 2079 734)(font "Arial" (font_size 8)))
 (text "BLA" (rect 2056 688 2080 702)(font "Arial" (font_size 8)))
 (text "EXT" (rect 2248 680 2270 694)(font "Arial" (font_size 8)))
-(text "001" (rect 1824 704 1845 718)(font "Arial" (font_size 8)))
-(text "000" (rect 1824 720 1845 734)(font "Arial" (font_size 8)))
-(text "COM" (rect 2000 704 2027 718)(font "Arial" (font_size 8)))
+(text "001" (rect 1816 600 1837 614)(font "Arial" (font_size 8)))
+(text "000" (rect 1816 616 1837 630)(font "Arial" (font_size 8)))
+(text "COM" (rect 1992 600 2019 614)(font "Arial" (font_size 8)))
 (text "NXT" (rect -240 440 -217 454)(font "Arial" (font_size 8)))
 (text "EPC" (rect -240 424 -218 438)(font "Arial" (font_size 8)))
 (text "PCN" (rect 1200 -56 1223 -42)(font "Arial" (font_size 8)))

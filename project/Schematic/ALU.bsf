@@ -45,6 +45,13 @@ applicable agreement for further details.
 		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
+		(pt 0 80)
+		(input)
+		(text "IR_Format" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "IR_Format" (rect 21 75 77 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
 		(pt 200 32)
 		(output)
 		(text "CF" (rect 0 0 15 14)(font "Arial" (font_size 8)))

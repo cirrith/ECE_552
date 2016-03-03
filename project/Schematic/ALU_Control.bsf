@@ -26,15 +26,15 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "OP_Code[1:0]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
-		(text "OP_Code[1:0]" (rect 21 27 98 41)(font "Arial" (font_size 8)))
+		(text "ALU_OP[4:0]" (rect 0 0 73 14)(font "Arial" (font_size 8)))
+		(text "ALU_OP[4:0]" (rect 21 27 94 41)(font "Arial" (font_size 8)))
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "ALU_OP[1:0]" (rect 0 0 73 14)(font "Arial" (font_size 8)))
-		(text "ALU_OP[1:0]" (rect 21 43 94 57)(font "Arial" (font_size 8)))
+		(text "OP_Code[1:0]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "OP_Code[1:0]" (rect 21 43 98 57)(font "Arial" (font_size 8)))
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
@@ -43,6 +43,13 @@ applicable agreement for further details.
 		(text "OP_Code[2:0]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
 		(text "OP_Code[2:0]" (rect 110 27 187 41)(font "Arial" (font_size 8)))
 		(line (pt 208 32)(pt 192 32)(line_width 1))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "IR_Format" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "IR_Format" (rect 131 43 187 57)(font "Arial" (font_size 8)))
+		(line (pt 208 48)(pt 192 48)(line_width 1))
 	)
 	(drawing
 		(rectangle (rect 16 16 192 80)(line_width 1))
