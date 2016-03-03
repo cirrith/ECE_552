@@ -2192,11 +2192,6 @@ applicable agreement for further details.
 )
 (connector
 	(pt -792 16)
-	(pt 744 16)
-	(bus)
-)
-(connector
-	(pt -792 16)
 	(pt -792 56)
 	(bus)
 )
@@ -2257,6 +2252,26 @@ applicable agreement for further details.
 	(pt 1968 992)
 	(bus)
 )
+(connector
+	(pt 432 16)
+	(pt 432 1104)
+	(bus)
+)
+(connector
+	(pt -792 16)
+	(pt 432 16)
+	(bus)
+)
+(connector
+	(pt 432 16)
+	(pt 744 16)
+	(bus)
+)
+(connector
+	(pt 432 1104)
+	(pt 1352 1104)
+	(bus)
+)
 (junction (pt 1512 344))
 (junction (pt 1760 576))
 (junction (pt 1464 536))
@@ -2283,6 +2298,7 @@ applicable agreement for further details.
 (junction (pt 448 728))
 (junction (pt 448 304))
 (junction (pt 1968 592))
+(junction (pt 432 16))
 (text "Write_Register Logic" (rect 528 344 663 359)(font "Arial" (color 255 0 0)(font_size 9)))
 (text "Processor_Control" (rect 528 40 650 55)(font "Arial" (color 0 0 255)(font_size 9)))
 (text "Extender_Module" (rect 608 544 720 559)(font "Arial" (color 128 128 0)(font_size 9)))
@@ -2301,4 +2317,4 @@ applicable agreement for further details.
 (rectangle (rect 168 256 424 384)(color 0 128 0)(line_width 2))
 (rectangle (rect 1192 280 1496 440)(color 0 255 0)(line_width 2))
 (rectangle (rect 1192 456 1776 776)(color 166 202 240)(line_width 2))
-(rectangle (rect -848 -96 192 384)(color 192 220 192)(line_width 2))
+(rectangle (rect -936 -96 152 384)(color 192 220 192)(line_width 2))

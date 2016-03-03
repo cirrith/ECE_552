@@ -66,3 +66,6 @@ set_global_assignment -name BDF_FILE "Sign_Ext(8-16).bdf"
 set_global_assignment -name BDF_FILE "Sign_Ext(11-16).bdf"
 set_global_assignment -name BDF_FILE Flipper.bdf
 set_global_assignment -name BDF_FILE Shift_Or.bdf
+set_global_assignment -name BDF_FILE Compare_Block.bdf
+set_global_assignment -name BDF_FILE Branch_Logic.bdf
+set_global_assignment -name BDF_FILE PC_Sel.bdf
