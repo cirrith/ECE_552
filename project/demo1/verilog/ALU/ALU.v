@@ -27,34 +27,81 @@ module ALU (A, B, OP_Code, Result, CF, ZF, SF);
 
 input [15:0] A;
 input [15:0] B;
-input [2:0]  OP_Code;
+input [3:0]  OP_Code;
 
 output [15:0] Result;
 output CF;
 output ZF;
 output SF;
 
+wire [15:0] Shifter;
+
+reg [15:0] case_out;
+
 always @ (OP_Code, A, B) begin
 	case(OP_Code)
-		7: begin //Shift Right Logical
+		0: begin //Add
+			
 		end
 		
-		6: begin //Rotate Right 
+		1: begin //Subtract
+		
 		end
 		
-		5: begin //Shift Left Logical 
-		end
+		2: begin //XOR 
 		
-		4: begin //Rotate Left 
 		end
 		
 		3: begin //ANDN
+		
 		end
 		
-		2: begin //XOR
+		4: begin //Rotate Left
+		
 		end
 		
-		1: begin //
+		5: begin //Shift Left
+		
 		end
 		
-		0: begin
+		6: begin //Rotate Right
+		
+		end
+		
+		7: begin //Shift Right
+		
+		end
+		
+		8: begin //Equal
+		
+		end
+		
+		9: begin //Less Than
+		
+		end
+		
+		10: begin //Less Than Equal
+		
+		end
+		
+		11: begin //Carry Out
+		
+		end
+		
+		12: begin //FLip
+		
+		end
+		
+		13: begin //B pass through
+		
+		end
+		
+		14: begin //Move Bottom
+		
+		end
+		
+	endcase
+	
+end
+
+endmodule
