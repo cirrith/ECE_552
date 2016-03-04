@@ -1,0 +1,297 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ProgramData/App-V/2191B702-5279-4048-91BA-BCF8F2A20B49/21710E5E-1DEB-4C76-9578-9609978C17F5/Root/examples
+vALU
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
+!i10b 1
+!s100 Z^UU2@71KS@hgT7m>W^AN3
+I5RUETh^68VYEdR<Q3`4C10
+Z1 dI:/College/ECE_552/project/demo1/verilog/ALU/Testing
+w1457131949
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU.v
+L0 32
+Z2 OE;L;10.3c;59
+!s108 1457133051.652000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@a@l@u
+vALU_ANDN
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 RbY?Xg9om3G8mKOe=eaK]0
+Ih^bQzOH3lMC^^Y21_Ge3[1
+R1
+w1457060470
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_ANDN.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_ANDN.v
+Z4 L0 10
+R2
+!s108 1457133051.920000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_ANDN.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_ANDN.v|
+!i113 0
+R3
+n@a@l@u_@a@n@d@n
+vALU_Bit4_CLA
+Z5 !s110 1457133052
+!i10b 1
+!s100 dZ[]BRkKlj0;>4^CaNYLV3
+I_i^eLK3@;0FYQE>bV^d9C3
+R0
+R1
+w1457060060
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Bit4_CLA.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Bit4_CLA.v
+L0 14
+R2
+r1
+!s85 0
+31
+!s108 1457133052.187000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Bit4_CLA.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Bit4_CLA.v|
+!i113 0
+R3
+n@a@l@u_@bit4_@c@l@a
+vALU_CLA
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 :IP6XG3>e7QHbgnNMB?=50
+I2AoCV:0UUCZJnN7zdUhIF2
+R1
+w1457060059
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA.v
+L0 12
+R2
+!s108 1457133052.484000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA.v|
+!i113 0
+R3
+n@a@l@u_@c@l@a
+vALU_CLA_FA
+R5
+!i10b 1
+!s100 9Gi;zVjA4g1RiUVkC5<;`3
+Ii0LeQKMmIQf6SeW7`USm@0
+R0
+R1
+w1457060058
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA_FA.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA_FA.v
+L0 13
+R2
+r1
+!s85 0
+31
+!s108 1457133052.786000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA_FA.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA_FA.v|
+!i113 0
+R3
+n@a@l@u_@c@l@a_@f@a
+vALU_Shifter
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 ]08L]`5n:T:;gDNb?iXID0
+I95B5OfTd7Umn>5oBhAXFl0
+R1
+w1457054636
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter.v
+L0 17
+R2
+!s108 1457133053.101000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter.v|
+!i113 0
+R3
+n@a@l@u_@shifter
+vALU_Shifter_1
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 SkTH[G_Q:KFNlX0DKmGnZ2
+I`E6YmEU0KcaHeFeiiO8d23
+R1
+w1457054642
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_1.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_1.v
+L0 8
+R2
+!s108 1457133053.385000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_1.v|
+!i113 0
+R3
+n@a@l@u_@shifter_1
+vALU_Shifter_2
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 <JoD^l2MDTzehHQ_FLE5<1
+Izcj_ee>[zgZAD4GEZ9hjC2
+R1
+w1457054649
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_2.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_2.v
+L0 8
+R2
+!s108 1457133053.665000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_2.v|
+!i113 0
+R3
+n@a@l@u_@shifter_2
+vALU_Shifter_4
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 ;ZGWa?Q7MGGGMCzUXUFU60
+IeXDiVTDW@[666:d`JLA2]3
+R1
+w1457054655
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_4.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_4.v
+L0 8
+R2
+!s108 1457133053.959000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_4.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_4.v|
+!i113 0
+R3
+n@a@l@u_@shifter_4
+vALU_Shifter_8
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 cV9l_g1>hz[j[jRbKGJm62
+IFN[E^1VJTT<WcMmGkHhaR0
+R1
+w1457054662
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_8.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_8.v
+L0 8
+R2
+!s108 1457133054.222000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_8.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_8.v|
+!i113 0
+R3
+n@a@l@u_@shifter_8
+vALU_tb
+DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 Sj]F7FLgEmGLamddj?4jT1
+I;zfUB??BLYLl<1Thc;Tlc0
+!s105 ALU_tb_sv_unit
+S1
+R1
+w1457132222
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_tb.sv
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_tb.sv
+L0 1
+R2
+!s108 1457133054.489000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_tb.sv|
+!i113 0
+o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@a@l@u_tb
+vALU_XOR
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 hG<`P=dz5HRj_OOb];SAN2
+Io[P08io]g@JhCPCbJ8EA60
+R1
+w1457060463
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_XOR.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_XOR.v
+R4
+R2
+!s108 1457133054.787000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_XOR.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_XOR.v|
+!i113 0
+R3
+n@a@l@u_@x@o@r
+vBit1_Mux2_1
+!s110 1457133055
+!i10b 1
+!s100 ?oBk]b2UE17l=X_G9kXH62
+IDINa:_k[@l@ZXlaN>b4PF2
+R0
+R1
+w1457132698
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/Bit1_Mux2_1.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/Bit1_Mux2_1.v
+L0 4
+R2
+r1
+!s85 0
+31
+!s108 1457133055.083000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/Bit1_Mux2_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/Bit1_Mux2_1.v|
+!i113 0
+R3
+n@bit1_@mux2_1
+vBit1_Mux4_1
+!s110 1457133051
+!i10b 1
+!s100 aF0:cJN3jMeN@;mCK3h3`1
+I^UHXd=j=UX:`lh18bh9Ko0
+R0
+R1
+w1457132721
+8I:/College/ECE_552/project/demo1/verilog/ALU/Testing/Bit1Mux4_1.v
+FI:/College/ECE_552/project/demo1/verilog/ALU/Testing/Bit1Mux4_1.v
+L0 4
+R2
+r1
+!s85 0
+31
+!s108 1457133051.365000
+!s107 I:/College/ECE_552/project/demo1/verilog/ALU/Testing/Bit1Mux4_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/demo1/verilog/ALU/Testing/Bit1Mux4_1.v|
+!i113 0
+R3
+n@bit1_@mux4_1

@@ -1,0 +1,99 @@
+I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_4.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_4.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_Shifter_4
+
+Top level modules:
+	ALU_Shifter_4
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_ANDN.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_ANDN.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_ANDN
+
+Top level modules:
+	ALU_ANDN
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Bit4_CLA.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Bit4_CLA.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_Bit4_CLA
+
+Top level modules:
+	ALU_Bit4_CLA
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_8.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_8.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_Shifter_8
+
+Top level modules:
+	ALU_Shifter_8
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/Bit1Mux4_1.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/Bit1Mux4_1.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module Bit1_Mux4_1
+
+Top level modules:
+	Bit1_Mux4_1
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_Shifter
+
+Top level modules:
+	ALU_Shifter
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_CLA
+
+Top level modules:
+	ALU_CLA
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_XOR.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_XOR.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_XOR
+
+Top level modules:
+	ALU_XOR
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_tb.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_tb
+
+Top level modules:
+	ALU_tb
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/Bit1_Mux2_1.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/Bit1_Mux2_1.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module Bit1_Mux2_1
+
+Top level modules:
+	Bit1_Mux2_1
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_1.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_1.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_Shifter_1
+
+Top level modules:
+	ALU_Shifter_1
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_2.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_2.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_Shifter_2
+
+Top level modules:
+	ALU_Shifter_2
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA_FA.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA_FA.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_CLA_FA
+
+Top level modules:
+	ALU_CLA_FA
+
+} {} {}}
