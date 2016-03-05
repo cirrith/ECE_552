@@ -1,0 +1,26 @@
+ 
+****************************************
+Report : hierarchy
+Design : fifo
+Version: B-2008.09-SP3
+Date   : Sat Mar  5 14:37:58 2016
+****************************************
+
+Information: This design contains unmapped logic. (RPT-7)
+
+fifo
+    GTECH_BUF                            gtech
+    GTECH_NOT                            gtech
+    counter
+        GTECH_AND2                       gtech
+        GTECH_NOT                        gtech
+        GTECH_OR2                        gtech
+        dff
+            GTECH_BUF                    gtech
+            GTECH_NOT                    gtech
+    register_Data_Width64
+        GTECH_BUF                        gtech
+        GTECH_NOT                        gtech
+        dff
+            ...
+1
