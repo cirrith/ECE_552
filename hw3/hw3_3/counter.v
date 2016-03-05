@@ -14,7 +14,7 @@ output datavalid;
 wire [4:0] d;
 wire [4:0] q;
 
-dff St0 (.q(q[0]), .d(d[0]), .clk(clk), .rst(0));
+dff St0 (.q(q[0]), .d(d[0]), .clk(clk), .rst(1'b0));
 dff St1 (.q(q[1]), .d(d[1]), .clk(clk), .rst(rst));
 dff St2 (.q(q[2]), .d(d[2]), .clk(clk), .rst(rst));
 dff St3 (.q(q[3]), .d(d[3]), .clk(clk), .rst(rst));
