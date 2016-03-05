@@ -1,0 +1,73 @@
+m255
+cModel Technology
+d/afs/cs.wisc.edu/u/b/a/bambrough/private/ECE_552/hw4/hw4_1
+vclkrst
+I8fzdDdHGFgK4C?2g2<MPV3
+VK>2=mbfl0iJWOIS>jZz]C0
+w1457205496
+Fclkrst.v
+L0 12
+OE;L;5.8b;17
+r1
+31
+o+define+RANDSEED=3 -work __work
+vdff
+IDX1IR`Dk[;SUJ;F<;6i_G1
+V;GC@fJC4l9bF1doI@Q2XK3
+w1457205496
+Fdff.v
+L0 6
+OE;L;5.8b;17
+r1
+31
+o+define+RANDSEED=3 -work __work
+vregister
+IzICdn4_iknF4>9@zzYf>X1
+Vn90HlWDdC[1z^d^E50X2F1
+w1457205496
+Fregister.v
+L0 14
+OE;L;5.8b;17
+r1
+31
+o+define+RANDSEED=3 -work __work
+vrf
+IV4ddOKPYkAl?1Y>LmALUl3
+VJeiN`;f9RUX;iMz8k==^a0
+w1457205496
+Frf.v
+L0 4
+OE;L;5.8b;17
+r1
+31
+o+define+RANDSEED=3 -work __work
+vrf_bypass
+IR@8Wc?hI:A1FgAO9:?FWa3
+V=1a@AdX4Dm8oNJ56M7inQ2
+w1457205496
+Frf_bypass.v
+L0 4
+OE;L;5.8b;17
+r1
+31
+o+define+RANDSEED=3 -work __work
+vrf_bypass_hier
+In_65Mc4aYIK:@o]CVN:T[0
+VdB<lo0KnHVijQH[TXon5V2
+w1457205496
+Frf_bypass_hier.v
+L0 7
+OE;L;5.8b;17
+r1
+31
+o+define+RANDSEED=3 -work __work
+vrf_bypass_hier_bench
+Ili=Mk^06VA`=Mb63C1egz0
+VlK`cEmSl3PECXdD7Rh7:V3
+w1457205496
+Frf_bypass_hier_bench.v
+L0 5
+OE;L;5.8b;17
+r1
+31
+o+define+RANDSEED=3 -work __work

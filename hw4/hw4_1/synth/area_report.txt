@@ -1,0 +1,24 @@
+ 
+****************************************
+Report : area
+Design : rf_bypass
+Version: B-2008.09-SP3
+Date   : Sat Mar  5 13:53:28 2016
+****************************************
+
+Library(s) Used:
+
+    gscl45nm (File: /u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db)
+
+Number of ports:               61
+Number of nets:               208
+Number of cells:              148
+Number of references:          10
+
+Combinational area:       3058.428033
+Noncombinational area:    1021.196777
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          4079.624810
+Total area:                 undefined
+1

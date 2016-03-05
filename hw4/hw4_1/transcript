@@ -1,0 +1,1254 @@
+# vsim -lib __work -c rf_bypass_hier_bench 
+# //  ModelSim SE 5.8b Jan 01 2004 Linux 2.6.32-573.7.1.el6.x86_64
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2004
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading __work.rf_bypass_hier_bench
+# Loading __work.rf_bypass_hier
+# Loading __work.clkrst
+# Loading __work.rf_bypass
+# Loading __work.rf
+# Loading __work.register
+# Loading __work.dff
+run -all
+# Simulation 1000 cycles
+# Cycle:    0 R1 Sel: 4 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 1 R2 Data:     0 Expected R2 data:     0 W Sel: 3 W Data: 54793 W Enable: 1
+# Cycle:    1 R1 Sel: 5 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 5 R2 Data:     0 Expected R2 data:     0 W Sel: 1 W Data: 21010 W Enable: 1
+# Cycle:    2 R1 Sel: 6 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 5 R2 Data:     0 Expected R2 data:     0 W Sel: 4 W Data: 22509 W Enable: 1
+# Cycle:    3 R1 Sel: 6 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 5 R2 Data: 53930 Expected R2 data: 53930 W Sel: 5 W Data: 53930 W Enable: 1
+# FYI: Read/write of same port in cycle    3
+# Cycle:    4 R1 Sel: 2 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 7 R2 Data:     0 Expected R2 data:     0 W Sel: 6 W Data: 27122 W Enable: 0
+# Cycle:    5 R1 Sel: 5 R1 Data: 10429 Expected R1 Data: 10429 R2 Sel: 4 R2 Data: 22509 Expected R2 data: 22509 W Sel: 5 W Data: 10429 W Enable: 1
+# FYI: Read/write of same port in cycle    5
+# Cycle:    6 R1 Sel: 3 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 2 R2 Data:     0 Expected R2 data:     0 W Sel: 0 W Data:  8832 W Enable: 0
+# Cycle:    7 R1 Sel: 5 R1 Data: 47123 Expected R1 Data: 47123 R2 Sel: 6 R2 Data:     0 Expected R2 data:     0 W Sel: 5 W Data: 47123 W Enable: 1
+# FYI: Read/write of same port in cycle    7
+# Cycle:    8 R1 Sel: 3 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 5 R2 Data: 47123 Expected R2 data: 47123 W Sel: 6 W Data: 18946 W Enable: 1
+# Cycle:    9 R1 Sel: 7 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 3 R2 Data:     0 Expected R2 data:     0 W Sel: 2 W Data: 25866 W Enable: 0
+# Cycle:   10 R1 Sel: 2 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 2 R2 Data:     0 Expected R2 data:     0 W Sel: 0 W Data: 45889 W Enable: 0
+# FYI: Both read ports are same in cycle   10
+# Cycle:   11 R1 Sel: 1 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 3 R2 Data:     0 Expected R2 data:     0 W Sel: 6 W Data: 26038 W Enable: 0
+# Cycle:   12 R1 Sel: 4 R1 Data: 22509 Expected R1 Data: 22509 R2 Sel: 2 R2 Data:     0 Expected R2 data:     0 W Sel: 1 W Data: 39435 W Enable: 1
+# Cycle:   13 R1 Sel: 7 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 3 R2 Data:     0 Expected R2 data:     0 W Sel: 6 W Data: 13114 W Enable: 1
+# Cycle:   14 R1 Sel: 1 R1 Data: 39435 Expected R1 Data: 39435 R2 Sel: 1 R2 Data: 39435 Expected R2 data: 39435 W Sel: 4 W Data:  1890 W Enable: 1
+# FYI: Both read ports are same in cycle   14
+# Cycle:   15 R1 Sel: 7 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 0 R2 Data:     0 Expected R2 data:     0 W Sel: 7 W Data: 24759 W Enable: 0
+# Cycle:   16 R1 Sel: 3 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 1 R2 Data: 39435 Expected R2 data: 39435 W Sel: 0 W Data: 12873 W Enable: 1
+# Cycle:   17 R1 Sel: 1 R1 Data: 39435 Expected R1 Data: 39435 R2 Sel: 6 R2 Data: 13114 Expected R2 data: 13114 W Sel: 2 W Data: 32524 W Enable: 0
+# Cycle:   18 R1 Sel: 7 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 5 R2 Data: 47123 Expected R2 data: 47123 W Sel: 6 W Data: 56082 W Enable: 1
+# Cycle:   19 R1 Sel: 1 R1 Data: 39435 Expected R1 Data: 39435 R2 Sel: 7 R2 Data:     0 Expected R2 data:     0 W Sel: 5 W Data: 63187 W Enable: 0
+# Cycle:   20 R1 Sel: 3 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 1 R2 Data: 39435 Expected R2 data: 39435 W Sel: 2 W Data: 44607 W Enable: 0
+# Cycle:   21 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 2 W Data: 62108 W Enable: 0
+# FYI: Both read ports are same in cycle   21
+# Cycle:   22 R1 Sel: 3 R1 Data: 43055 Expected R1 Data: 43055 R2 Sel: 3 R2 Data: 43055 Expected R2 data: 43055 W Sel: 3 W Data: 43055 W Enable: 1
+# FYI: Both read ports are same in cycle   22
+# FYI: Read/write of same port in cycle   22
+# Cycle:   23 R1 Sel: 4 R1 Data:  1890 Expected R1 Data:  1890 R2 Sel: 7 R2 Data:     0 Expected R2 data:     0 W Sel: 6 W Data: 14027 W Enable: 0
+# Cycle:   24 R1 Sel: 1 R1 Data: 39435 Expected R1 Data: 39435 R2 Sel: 5 R2 Data: 27866 Expected R2 data: 27866 W Sel: 5 W Data: 27866 W Enable: 1
+# FYI: Read/write of same port in cycle   24
+# Cycle:   25 R1 Sel: 7 R1 Data:     0 Expected R1 Data:     0 R2 Sel: 1 R2 Data: 39435 Expected R2 data: 39435 W Sel: 0 W Data: 65348 W Enable: 0
+# Cycle:   26 R1 Sel: 3 R1 Data: 43055 Expected R1 Data: 43055 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 2 W Data: 44508 W Enable: 1
+# Cycle:   27 R1 Sel: 3 R1 Data: 43055 Expected R1 Data: 43055 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 7 W Data: 59726 W Enable: 0
+# Cycle:   28 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 0 R2 Data: 12873 Expected R2 data: 12873 W Sel: 0 W Data: 34681 W Enable: 0
+# Cycle:   29 R1 Sel: 3 R1 Data: 51801 Expected R1 Data: 51801 R2 Sel: 4 R2 Data:  1890 Expected R2 data:  1890 W Sel: 3 W Data: 51801 W Enable: 1
+# FYI: Read/write of same port in cycle   29
+# Cycle:   30 R1 Sel: 1 R1 Data: 39435 Expected R1 Data: 39435 R2 Sel: 5 R2 Data: 27866 Expected R2 data: 27866 W Sel: 2 W Data: 57974 W Enable: 0
+# Cycle:   31 R1 Sel: 5 R1 Data: 27866 Expected R1 Data: 27866 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 7 W Data: 39684 W Enable: 1
+# Cycle:   32 R1 Sel: 4 R1 Data:  1890 Expected R1 Data:  1890 R2 Sel: 0 R2 Data: 12873 Expected R2 data: 12873 W Sel: 5 W Data: 55592 W Enable: 1
+# Cycle:   33 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 0 R2 Data: 12873 Expected R2 data: 12873 W Sel: 5 W Data: 17692 W Enable: 1
+# Cycle:   34 R1 Sel: 4 R1 Data:  1890 Expected R1 Data:  1890 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 5 W Data:  2266 W Enable: 0
+# Cycle:   35 R1 Sel: 0 R1 Data: 12873 Expected R1 Data: 12873 R2 Sel: 3 R2 Data: 51801 Expected R2 data: 51801 W Sel: 6 W Data: 39354 W Enable: 0
+# Cycle:   36 R1 Sel: 5 R1 Data: 17692 Expected R1 Data: 17692 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 7 W Data:   185 W Enable: 0
+# Cycle:   37 R1 Sel: 0 R1 Data: 12873 Expected R1 Data: 12873 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 5 W Data:  6838 W Enable: 0
+# Cycle:   38 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 0 R2 Data: 12873 Expected R2 data: 12873 W Sel: 3 W Data: 39806 W Enable: 1
+# Cycle:   39 R1 Sel: 1 R1 Data: 39435 Expected R1 Data: 39435 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 7 W Data: 61025 W Enable: 1
+# Cycle:   40 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 0 R2 Data: 12873 Expected R2 data: 12873 W Sel: 5 W Data: 23029 W Enable: 1
+# Cycle:   41 R1 Sel: 1 R1 Data: 39435 Expected R1 Data: 39435 R2 Sel: 5 R2 Data: 23029 Expected R2 data: 23029 W Sel: 3 W Data: 46232 W Enable: 1
+# Cycle:   42 R1 Sel: 4 R1 Data:  1890 Expected R1 Data:  1890 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 0 W Data: 53582 W Enable: 1
+# Cycle:   43 R1 Sel: 1 R1 Data: 39435 Expected R1 Data: 39435 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 7 W Data: 26342 W Enable: 0
+# Cycle:   44 R1 Sel: 2 R1 Data: 44508 Expected R1 Data: 44508 R2 Sel: 5 R2 Data: 23029 Expected R2 data: 23029 W Sel: 0 W Data: 65438 W Enable: 1
+# Cycle:   45 R1 Sel: 0 R1 Data: 65438 Expected R1 Data: 65438 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 3 W Data: 16659 W Enable: 1
+# Cycle:   46 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 1 W Data: 43972 W Enable: 0
+# Cycle:   47 R1 Sel: 4 R1 Data:  1890 Expected R1 Data:  1890 R2 Sel: 7 R2 Data: 61025 Expected R2 data: 61025 W Sel: 2 W Data: 36998 W Enable: 0
+# Cycle:   48 R1 Sel: 2 R1 Data: 44508 Expected R1 Data: 44508 R2 Sel: 5 R2 Data: 23029 Expected R2 data: 23029 W Sel: 4 W Data: 52612 W Enable: 0
+# Cycle:   49 R1 Sel: 1 R1 Data: 39435 Expected R1 Data: 39435 R2 Sel: 1 R2 Data: 39435 Expected R2 data: 39435 W Sel: 3 W Data: 43406 W Enable: 1
+# FYI: Both read ports are same in cycle   49
+# Cycle:   50 R1 Sel: 7 R1 Data: 61025 Expected R1 Data: 61025 R2 Sel: 1 R2 Data: 39435 Expected R2 data: 39435 W Sel: 5 W Data: 58678 W Enable: 1
+# Cycle:   51 R1 Sel: 3 R1 Data: 43406 Expected R1 Data: 43406 R2 Sel: 0 R2 Data: 65438 Expected R2 data: 65438 W Sel: 3 W Data: 46254 W Enable: 0
+# Cycle:   52 R1 Sel: 0 R1 Data: 65438 Expected R1 Data: 65438 R2 Sel: 5 R2 Data: 58678 Expected R2 data: 58678 W Sel: 2 W Data: 24395 W Enable: 0
+# Cycle:   53 R1 Sel: 5 R1 Data: 58678 Expected R1 Data: 58678 R2 Sel: 4 R2 Data:  1890 Expected R2 data:  1890 W Sel: 1 W Data: 40216 W Enable: 0
+# Cycle:   54 R1 Sel: 1 R1 Data: 39435 Expected R1 Data: 39435 R2 Sel: 3 R2 Data: 43406 Expected R2 data: 43406 W Sel: 3 W Data: 63960 W Enable: 0
+# Cycle:   55 R1 Sel: 3 R1 Data: 43406 Expected R1 Data: 43406 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 3 W Data: 57860 W Enable: 0
+# Cycle:   56 R1 Sel: 2 R1 Data: 44508 Expected R1 Data: 44508 R2 Sel: 0 R2 Data: 65438 Expected R2 data: 65438 W Sel: 5 W Data:  4665 W Enable: 1
+# Cycle:   57 R1 Sel: 3 R1 Data: 43406 Expected R1 Data: 43406 R2 Sel: 1 R2 Data: 39435 Expected R2 data: 39435 W Sel: 7 W Data: 34248 W Enable: 1
+# Cycle:   58 R1 Sel: 7 R1 Data: 34248 Expected R1 Data: 34248 R2 Sel: 4 R2 Data:  1890 Expected R2 data:  1890 W Sel: 6 W Data:  9048 W Enable: 0
+# Cycle:   59 R1 Sel: 2 R1 Data: 44508 Expected R1 Data: 44508 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 5 W Data: 58033 W Enable: 1
+# Cycle:   60 R1 Sel: 3 R1 Data: 43406 Expected R1 Data: 43406 R2 Sel: 5 R2 Data: 58033 Expected R2 data: 58033 W Sel: 7 W Data:   941 W Enable: 0
+# Cycle:   61 R1 Sel: 7 R1 Data: 34248 Expected R1 Data: 34248 R2 Sel: 7 R2 Data: 34248 Expected R2 data: 34248 W Sel: 1 W Data: 37049 W Enable: 1
+# FYI: Both read ports are same in cycle   61
+# Cycle:   62 R1 Sel: 1 R1 Data: 37049 Expected R1 Data: 37049 R2 Sel: 1 R2 Data: 37049 Expected R2 data: 37049 W Sel: 2 W Data: 24225 W Enable: 0
+# FYI: Both read ports are same in cycle   62
+# Cycle:   63 R1 Sel: 5 R1 Data: 58033 Expected R1 Data: 58033 R2 Sel: 3 R2 Data: 43406 Expected R2 data: 43406 W Sel: 2 W Data: 17020 W Enable: 0
+# Cycle:   64 R1 Sel: 0 R1 Data: 65438 Expected R1 Data: 65438 R2 Sel: 7 R2 Data: 34248 Expected R2 data: 34248 W Sel: 0 W Data:  3462 W Enable: 0
+# Cycle:   65 R1 Sel: 0 R1 Data: 65438 Expected R1 Data: 65438 R2 Sel: 0 R2 Data: 65438 Expected R2 data: 65438 W Sel: 5 W Data: 43510 W Enable: 0
+# FYI: Both read ports are same in cycle   65
+# Cycle:   66 R1 Sel: 4 R1 Data:  1890 Expected R1 Data:  1890 R2 Sel: 1 R2 Data: 37049 Expected R2 data: 37049 W Sel: 4 W Data: 27312 W Enable: 0
+# Cycle:   67 R1 Sel: 2 R1 Data: 44508 Expected R1 Data: 44508 R2 Sel: 5 R2 Data: 58033 Expected R2 data: 58033 W Sel: 7 W Data: 20193 W Enable: 1
+# Cycle:   68 R1 Sel: 1 R1 Data: 52005 Expected R1 Data: 52005 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 1 W Data: 52005 W Enable: 1
+# FYI: Read/write of same port in cycle   68
+# Cycle:   69 R1 Sel: 2 R1 Data: 44508 Expected R1 Data: 44508 R2 Sel: 7 R2 Data: 20193 Expected R2 data: 20193 W Sel: 4 W Data: 31532 W Enable: 1
+# Cycle:   70 R1 Sel: 3 R1 Data: 43406 Expected R1 Data: 43406 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 6 W Data: 49911 W Enable: 0
+# Cycle:   71 R1 Sel: 5 R1 Data: 58033 Expected R1 Data: 58033 R2 Sel: 0 R2 Data: 65438 Expected R2 data: 65438 W Sel: 2 W Data:  4768 W Enable: 0
+# Cycle:   72 R1 Sel: 5 R1 Data: 58033 Expected R1 Data: 58033 R2 Sel: 5 R2 Data: 58033 Expected R2 data: 58033 W Sel: 1 W Data: 39243 W Enable: 0
+# FYI: Both read ports are same in cycle   72
+# Cycle:   73 R1 Sel: 5 R1 Data: 58033 Expected R1 Data: 58033 R2 Sel: 3 R2 Data: 29583 Expected R2 data: 29583 W Sel: 3 W Data: 29583 W Enable: 1
+# FYI: Read/write of same port in cycle   73
+# Cycle:   74 R1 Sel: 5 R1 Data: 58033 Expected R1 Data: 58033 R2 Sel: 1 R2 Data: 52005 Expected R2 data: 52005 W Sel: 5 W Data: 40772 W Enable: 0
+# Cycle:   75 R1 Sel: 5 R1 Data: 58033 Expected R1 Data: 58033 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 5 W Data: 23544 W Enable: 0
+# Cycle:   76 R1 Sel: 4 R1 Data: 31532 Expected R1 Data: 31532 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 0 W Data: 37516 W Enable: 1
+# Cycle:   77 R1 Sel: 2 R1 Data: 44508 Expected R1 Data: 44508 R2 Sel: 4 R2 Data: 31532 Expected R2 data: 31532 W Sel: 4 W Data: 48298 W Enable: 0
+# Cycle:   78 R1 Sel: 2 R1 Data: 44508 Expected R1 Data: 44508 R2 Sel: 3 R2 Data: 29583 Expected R2 data: 29583 W Sel: 5 W Data: 65190 W Enable: 0
+# Cycle:   79 R1 Sel: 2 R1 Data: 44508 Expected R1 Data: 44508 R2 Sel: 1 R2 Data: 52005 Expected R2 data: 52005 W Sel: 5 W Data: 45076 W Enable: 1
+# Cycle:   80 R1 Sel: 4 R1 Data: 31532 Expected R1 Data: 31532 R2 Sel: 7 R2 Data: 20193 Expected R2 data: 20193 W Sel: 1 W Data: 38790 W Enable: 0
+# Cycle:   81 R1 Sel: 0 R1 Data: 37516 Expected R1 Data: 37516 R2 Sel: 4 R2 Data: 31532 Expected R2 data: 31532 W Sel: 7 W Data: 17804 W Enable: 0
+# Cycle:   82 R1 Sel: 1 R1 Data: 52005 Expected R1 Data: 52005 R2 Sel: 0 R2 Data: 37516 Expected R2 data: 37516 W Sel: 3 W Data: 40523 W Enable: 0
+# Cycle:   83 R1 Sel: 3 R1 Data: 29583 Expected R1 Data: 29583 R2 Sel: 4 R2 Data: 31532 Expected R2 data: 31532 W Sel: 1 W Data: 26057 W Enable: 1
+# Cycle:   84 R1 Sel: 4 R1 Data: 31532 Expected R1 Data: 31532 R2 Sel: 7 R2 Data: 20193 Expected R2 data: 20193 W Sel: 0 W Data: 16797 W Enable: 0
+# Cycle:   85 R1 Sel: 1 R1 Data: 26057 Expected R1 Data: 26057 R2 Sel: 1 R2 Data: 26057 Expected R2 data: 26057 W Sel: 4 W Data: 46880 W Enable: 1
+# FYI: Both read ports are same in cycle   85
+# Cycle:   86 R1 Sel: 3 R1 Data: 29583 Expected R1 Data: 29583 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 5 W Data: 63688 W Enable: 0
+# Cycle:   87 R1 Sel: 4 R1 Data: 46880 Expected R1 Data: 46880 R2 Sel: 3 R2 Data: 29583 Expected R2 data: 29583 W Sel: 2 W Data: 32569 W Enable: 0
+# Cycle:   88 R1 Sel: 1 R1 Data: 26057 Expected R1 Data: 26057 R2 Sel: 0 R2 Data: 37516 Expected R2 data: 37516 W Sel: 7 W Data: 60014 W Enable: 1
+# Cycle:   89 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 3 R2 Data: 29583 Expected R2 data: 29583 W Sel: 7 W Data: 31744 W Enable: 1
+# Cycle:   90 R1 Sel: 4 R1 Data: 46880 Expected R1 Data: 46880 R2 Sel: 1 R2 Data: 26057 Expected R2 data: 26057 W Sel: 7 W Data: 18885 W Enable: 0
+# Cycle:   91 R1 Sel: 1 R1 Data: 26057 Expected R1 Data: 26057 R2 Sel: 1 R2 Data: 26057 Expected R2 data: 26057 W Sel: 2 W Data: 52599 W Enable: 0
+# FYI: Both read ports are same in cycle   91
+# Cycle:   92 R1 Sel: 3 R1 Data: 29583 Expected R1 Data: 29583 R2 Sel: 4 R2 Data: 46880 Expected R2 data: 46880 W Sel: 7 W Data: 45496 W Enable: 0
+# Cycle:   93 R1 Sel: 0 R1 Data: 37516 Expected R1 Data: 37516 R2 Sel: 7 R2 Data: 31744 Expected R2 data: 31744 W Sel: 4 W Data: 51125 W Enable: 1
+# Cycle:   94 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 1 R2 Data: 35723 Expected R2 data: 35723 W Sel: 1 W Data: 35723 W Enable: 1
+# FYI: Read/write of same port in cycle   94
+# Cycle:   95 R1 Sel: 0 R1 Data: 56005 Expected R1 Data: 56005 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 0 W Data: 56005 W Enable: 1
+# FYI: Read/write of same port in cycle   95
+# Cycle:   96 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 7 R2 Data: 31744 Expected R2 data: 31744 W Sel: 0 W Data: 28393 W Enable: 0
+# Cycle:   97 R1 Sel: 7 R1 Data: 31744 Expected R1 Data: 31744 R2 Sel: 1 R2 Data: 35723 Expected R2 data: 35723 W Sel: 6 W Data: 31893 W Enable: 0
+# Cycle:   98 R1 Sel: 5 R1 Data: 45076 Expected R1 Data: 45076 R2 Sel: 0 R2 Data: 56005 Expected R2 data: 56005 W Sel: 1 W Data: 32100 W Enable: 1
+# Cycle:   99 R1 Sel: 7 R1 Data: 31744 Expected R1 Data: 31744 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 5 W Data: 62849 W Enable: 0
+# Cycle:  100 R1 Sel: 0 R1 Data: 56005 Expected R1 Data: 56005 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 1 W Data: 49935 W Enable: 1
+# Cycle:  101 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 1 W Data: 19772 W Enable: 1
+# Cycle:  102 R1 Sel: 3 R1 Data: 29583 Expected R1 Data: 29583 R2 Sel: 7 R2 Data: 31744 Expected R2 data: 31744 W Sel: 1 W Data: 39754 W Enable: 1
+# Cycle:  103 R1 Sel: 3 R1 Data: 29583 Expected R1 Data: 29583 R2 Sel: 5 R2 Data: 45076 Expected R2 data: 45076 W Sel: 7 W Data: 10065 W Enable: 1
+# Cycle:  104 R1 Sel: 2 R1 Data: 44508 Expected R1 Data: 44508 R2 Sel: 1 R2 Data: 39754 Expected R2 data: 39754 W Sel: 4 W Data:  1890 W Enable: 0
+# Cycle:  105 R1 Sel: 5 R1 Data: 41957 Expected R1 Data: 41957 R2 Sel: 1 R2 Data: 39754 Expected R2 data: 39754 W Sel: 5 W Data: 41957 W Enable: 1
+# FYI: Read/write of same port in cycle  105
+# Cycle:  106 R1 Sel: 1 R1 Data: 39754 Expected R1 Data: 39754 R2 Sel: 7 R2 Data: 10065 Expected R2 data: 10065 W Sel: 5 W Data:  7387 W Enable: 0
+# Cycle:  107 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 2 W Data: 15805 W Enable: 0
+# Cycle:  108 R1 Sel: 0 R1 Data: 56005 Expected R1 Data: 56005 R2 Sel: 3 R2 Data: 29583 Expected R2 data: 29583 W Sel: 0 W Data: 22565 W Enable: 0
+# Cycle:  109 R1 Sel: 4 R1 Data: 51125 Expected R1 Data: 51125 R2 Sel: 3 R2 Data: 29583 Expected R2 data: 29583 W Sel: 0 W Data: 43897 W Enable: 1
+# Cycle:  110 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 3 R2 Data: 29583 Expected R2 data: 29583 W Sel: 6 W Data:   780 W Enable: 0
+# Cycle:  111 R1 Sel: 1 R1 Data: 39754 Expected R1 Data: 39754 R2 Sel: 1 R2 Data: 39754 Expected R2 data: 39754 W Sel: 4 W Data: 49331 W Enable: 1
+# FYI: Both read ports are same in cycle  111
+# Cycle:  112 R1 Sel: 4 R1 Data: 49331 Expected R1 Data: 49331 R2 Sel: 1 R2 Data: 39754 Expected R2 data: 39754 W Sel: 5 W Data: 37634 W Enable: 1
+# Cycle:  113 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 0 W Data: 20920 W Enable: 1
+# Cycle:  114 R1 Sel: 7 R1 Data: 10065 Expected R1 Data: 10065 R2 Sel: 0 R2 Data: 20920 Expected R2 data: 20920 W Sel: 5 W Data:  2448 W Enable: 0
+# Cycle:  115 R1 Sel: 3 R1 Data: 29583 Expected R1 Data: 29583 R2 Sel: 0 R2 Data: 20920 Expected R2 data: 20920 W Sel: 5 W Data:   805 W Enable: 0
+# Cycle:  116 R1 Sel: 5 R1 Data: 37634 Expected R1 Data: 37634 R2 Sel: 1 R2 Data: 39754 Expected R2 data: 39754 W Sel: 0 W Data: 20924 W Enable: 0
+# Cycle:  117 R1 Sel: 0 R1 Data: 20920 Expected R1 Data: 20920 R2 Sel: 1 R2 Data: 39754 Expected R2 data: 39754 W Sel: 5 W Data: 16205 W Enable: 1
+# Cycle:  118 R1 Sel: 5 R1 Data: 16205 Expected R1 Data: 16205 R2 Sel: 4 R2 Data: 49331 Expected R2 data: 49331 W Sel: 4 W Data: 42602 W Enable: 0
+# Cycle:  119 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 7 W Data:  2886 W Enable: 1
+# Cycle:  120 R1 Sel: 5 R1 Data: 16205 Expected R1 Data: 16205 R2 Sel: 7 R2 Data:  2886 Expected R2 data:  2886 W Sel: 3 W Data: 61765 W Enable: 1
+# Cycle:  121 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 0 R2 Data: 20920 Expected R2 data: 20920 W Sel: 0 W Data: 58398 W Enable: 0
+# Cycle:  122 R1 Sel: 4 R1 Data: 49331 Expected R1 Data: 49331 R2 Sel: 1 R2 Data: 39754 Expected R2 data: 39754 W Sel: 0 W Data:  8107 W Enable: 1
+# Cycle:  123 R1 Sel: 0 R1 Data:  8107 Expected R1 Data:  8107 R2 Sel: 5 R2 Data: 16205 Expected R2 data: 16205 W Sel: 3 W Data: 42893 W Enable: 0
+# Cycle:  124 R1 Sel: 4 R1 Data: 49331 Expected R1 Data: 49331 R2 Sel: 4 R2 Data: 49331 Expected R2 data: 49331 W Sel: 5 W Data: 36121 W Enable: 0
+# FYI: Both read ports are same in cycle  124
+# Cycle:  125 R1 Sel: 3 R1 Data: 61765 Expected R1 Data: 61765 R2 Sel: 0 R2 Data:  8107 Expected R2 data:  8107 W Sel: 4 W Data: 27588 W Enable: 0
+# Cycle:  126 R1 Sel: 2 R1 Data: 44508 Expected R1 Data: 44508 R2 Sel: 0 R2 Data:  8107 Expected R2 data:  8107 W Sel: 2 W Data: 26309 W Enable: 0
+# Cycle:  127 R1 Sel: 3 R1 Data: 61765 Expected R1 Data: 61765 R2 Sel: 2 R2 Data: 44508 Expected R2 data: 44508 W Sel: 1 W Data: 25356 W Enable: 1
+# Cycle:  128 R1 Sel: 3 R1 Data: 61765 Expected R1 Data: 61765 R2 Sel: 0 R2 Data:  8107 Expected R2 data:  8107 W Sel: 1 W Data:  1010 W Enable: 1
+# Cycle:  129 R1 Sel: 3 R1 Data: 61765 Expected R1 Data: 61765 R2 Sel: 5 R2 Data: 49512 Expected R2 data: 49512 W Sel: 5 W Data: 49512 W Enable: 1
+# FYI: Read/write of same port in cycle  129
+# Cycle:  130 R1 Sel: 3 R1 Data: 61765 Expected R1 Data: 61765 R2 Sel: 3 R2 Data: 61765 Expected R2 data: 61765 W Sel: 5 W Data: 16000 W Enable: 0
+# FYI: Both read ports are same in cycle  130
+# Cycle:  131 R1 Sel: 4 R1 Data: 49331 Expected R1 Data: 49331 R2 Sel: 7 R2 Data:  2886 Expected R2 data:  2886 W Sel: 2 W Data: 35638 W Enable: 1
+# Cycle:  132 R1 Sel: 4 R1 Data: 49331 Expected R1 Data: 49331 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 0 W Data: 60586 W Enable: 0
+# Cycle:  133 R1 Sel: 4 R1 Data: 49331 Expected R1 Data: 49331 R2 Sel: 1 R2 Data:  1010 Expected R2 data:  1010 W Sel: 4 W Data: 36859 W Enable: 0
+# Cycle:  134 R1 Sel: 7 R1 Data:  2886 Expected R1 Data:  2886 R2 Sel: 1 R2 Data:  1010 Expected R2 data:  1010 W Sel: 5 W Data:  8683 W Enable: 1
+# Cycle:  135 R1 Sel: 7 R1 Data:  2886 Expected R1 Data:  2886 R2 Sel: 7 R2 Data:  2886 Expected R2 data:  2886 W Sel: 3 W Data: 10928 W Enable: 0
+# FYI: Both read ports are same in cycle  135
+# Cycle:  136 R1 Sel: 2 R1 Data: 35638 Expected R1 Data: 35638 R2 Sel: 2 R2 Data: 35638 Expected R2 data: 35638 W Sel: 7 W Data: 42865 W Enable: 0
+# FYI: Both read ports are same in cycle  136
+# Cycle:  137 R1 Sel: 1 R1 Data:  1010 Expected R1 Data:  1010 R2 Sel: 5 R2 Data:  8683 Expected R2 data:  8683 W Sel: 4 W Data: 17157 W Enable: 0
+# Cycle:  138 R1 Sel: 4 R1 Data: 49331 Expected R1 Data: 49331 R2 Sel: 2 R2 Data: 35638 Expected R2 data: 35638 W Sel: 7 W Data: 19045 W Enable: 1
+# Cycle:  139 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 5 R2 Data:  8683 Expected R2 data:  8683 W Sel: 0 W Data:  3646 W Enable: 0
+# Cycle:  140 R1 Sel: 0 R1 Data: 19730 Expected R1 Data: 19730 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 0 W Data: 19730 W Enable: 1
+# FYI: Read/write of same port in cycle  140
+# Cycle:  141 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 3 W Data:  2547 W Enable: 1
+# FYI: Both read ports are same in cycle  141
+# Cycle:  142 R1 Sel: 7 R1 Data: 19045 Expected R1 Data: 19045 R2 Sel: 7 R2 Data: 19045 Expected R2 data: 19045 W Sel: 2 W Data: 46612 W Enable: 0
+# FYI: Both read ports are same in cycle  142
+# Cycle:  143 R1 Sel: 4 R1 Data: 49331 Expected R1 Data: 49331 R2 Sel: 3 R2 Data:  2547 Expected R2 data:  2547 W Sel: 4 W Data: 49771 W Enable: 0
+# Cycle:  144 R1 Sel: 5 R1 Data:  8683 Expected R1 Data:  8683 R2 Sel: 1 R2 Data: 48517 Expected R2 data: 48517 W Sel: 1 W Data: 48517 W Enable: 1
+# FYI: Read/write of same port in cycle  144
+# Cycle:  145 R1 Sel: 0 R1 Data: 19730 Expected R1 Data: 19730 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 7 W Data: 52028 W Enable: 0
+# Cycle:  146 R1 Sel: 3 R1 Data:  2547 Expected R1 Data:  2547 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 0 W Data:  9180 W Enable: 0
+# Cycle:  147 R1 Sel: 0 R1 Data: 19730 Expected R1 Data: 19730 R2 Sel: 3 R2 Data:  2547 Expected R2 data:  2547 W Sel: 1 W Data: 37368 W Enable: 1
+# Cycle:  148 R1 Sel: 0 R1 Data: 19730 Expected R1 Data: 19730 R2 Sel: 7 R2 Data: 19045 Expected R2 data: 19045 W Sel: 2 W Data: 37511 W Enable: 1
+# Cycle:  149 R1 Sel: 0 R1 Data: 19730 Expected R1 Data: 19730 R2 Sel: 3 R2 Data:  2547 Expected R2 data:  2547 W Sel: 2 W Data: 14385 W Enable: 0
+# Cycle:  150 R1 Sel: 5 R1 Data:  8683 Expected R1 Data:  8683 R2 Sel: 5 R2 Data:  8683 Expected R2 data:  8683 W Sel: 4 W Data:  1856 W Enable: 0
+# FYI: Both read ports are same in cycle  150
+# Cycle:  151 R1 Sel: 0 R1 Data: 19730 Expected R1 Data: 19730 R2 Sel: 3 R2 Data:  2547 Expected R2 data:  2547 W Sel: 5 W Data: 34499 W Enable: 0
+# Cycle:  152 R1 Sel: 0 R1 Data: 19730 Expected R1 Data: 19730 R2 Sel: 7 R2 Data: 19045 Expected R2 data: 19045 W Sel: 3 W Data:  9823 W Enable: 1
+# Cycle:  153 R1 Sel: 0 R1 Data: 19730 Expected R1 Data: 19730 R2 Sel: 2 R2 Data: 37511 Expected R2 data: 37511 W Sel: 7 W Data: 48585 W Enable: 0
+# Cycle:  154 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 7 R2 Data: 19045 Expected R2 data: 19045 W Sel: 3 W Data: 42020 W Enable: 0
+# Cycle:  155 R1 Sel: 5 R1 Data:  8683 Expected R1 Data:  8683 R2 Sel: 5 R2 Data:  8683 Expected R2 data:  8683 W Sel: 0 W Data: 29210 W Enable: 0
+# FYI: Both read ports are same in cycle  155
+# Cycle:  156 R1 Sel: 0 R1 Data: 19730 Expected R1 Data: 19730 R2 Sel: 0 R2 Data: 19730 Expected R2 data: 19730 W Sel: 4 W Data: 39587 W Enable: 1
+# FYI: Both read ports are same in cycle  156
+# Cycle:  157 R1 Sel: 2 R1 Data: 37511 Expected R1 Data: 37511 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 3 W Data: 32852 W Enable: 0
+# Cycle:  158 R1 Sel: 0 R1 Data: 19730 Expected R1 Data: 19730 R2 Sel: 7 R2 Data: 19045 Expected R2 data: 19045 W Sel: 5 W Data: 62456 W Enable: 1
+# Cycle:  159 R1 Sel: 3 R1 Data:  9823 Expected R1 Data:  9823 R2 Sel: 3 R2 Data:  9823 Expected R2 data:  9823 W Sel: 0 W Data: 56629 W Enable: 1
+# FYI: Both read ports are same in cycle  159
+# Cycle:  160 R1 Sel: 7 R1 Data: 19045 Expected R1 Data: 19045 R2 Sel: 0 R2 Data: 56629 Expected R2 data: 56629 W Sel: 5 W Data: 50200 W Enable: 0
+# Cycle:  161 R1 Sel: 1 R1 Data: 37368 Expected R1 Data: 37368 R2 Sel: 1 R2 Data: 37368 Expected R2 data: 37368 W Sel: 7 W Data: 29525 W Enable: 1
+# FYI: Both read ports are same in cycle  161
+# Cycle:  162 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 3 R2 Data:  9823 Expected R2 data:  9823 W Sel: 1 W Data: 45352 W Enable: 0
+# Cycle:  163 R1 Sel: 5 R1 Data: 62456 Expected R1 Data: 62456 R2 Sel: 3 R2 Data:  9823 Expected R2 data:  9823 W Sel: 4 W Data:  5076 W Enable: 0
+# Cycle:  164 R1 Sel: 6 R1 Data: 56082 Expected R1 Data: 56082 R2 Sel: 7 R2 Data: 29525 Expected R2 data: 29525 W Sel: 0 W Data: 17539 W Enable: 0
+# Cycle:  165 R1 Sel: 7 R1 Data: 29525 Expected R1 Data: 29525 R2 Sel: 5 R2 Data: 15991 Expected R2 data: 15991 W Sel: 5 W Data: 15991 W Enable: 1
+# FYI: Read/write of same port in cycle  165
+# Cycle:  166 R1 Sel: 0 R1 Data: 22892 Expected R1 Data: 22892 R2 Sel: 6 R2 Data: 56082 Expected R2 data: 56082 W Sel: 0 W Data: 22892 W Enable: 1
+# FYI: Read/write of same port in cycle  166
+# Cycle:  167 R1 Sel: 4 R1 Data: 39587 Expected R1 Data: 39587 R2 Sel: 4 R2 Data: 39587 Expected R2 data: 39587 W Sel: 6 W Data:  7855 W Enable: 1
+# FYI: Both read ports are same in cycle  167
+# Cycle:  168 R1 Sel: 2 R1 Data: 37511 Expected R1 Data: 37511 R2 Sel: 6 R2 Data:  7855 Expected R2 data:  7855 W Sel: 2 W Data: 29829 W Enable: 0
+# Cycle:  169 R1 Sel: 2 R1 Data: 20947 Expected R1 Data: 20947 R2 Sel: 2 R2 Data: 20947 Expected R2 data: 20947 W Sel: 2 W Data: 20947 W Enable: 1
+# FYI: Both read ports are same in cycle  169
+# FYI: Read/write of same port in cycle  169
+# Cycle:  170 R1 Sel: 3 R1 Data:  9823 Expected R1 Data:  9823 R2 Sel: 2 R2 Data: 20947 Expected R2 data: 20947 W Sel: 1 W Data: 10444 W Enable: 0
+# Cycle:  171 R1 Sel: 1 R1 Data: 37368 Expected R1 Data: 37368 R2 Sel: 3 R2 Data:  9823 Expected R2 data:  9823 W Sel: 1 W Data: 53439 W Enable: 0
+# Cycle:  172 R1 Sel: 1 R1 Data: 29524 Expected R1 Data: 29524 R2 Sel: 6 R2 Data:  7855 Expected R2 data:  7855 W Sel: 1 W Data: 29524 W Enable: 1
+# FYI: Read/write of same port in cycle  172
+# Cycle:  173 R1 Sel: 7 R1 Data: 29525 Expected R1 Data: 29525 R2 Sel: 4 R2 Data: 39587 Expected R2 data: 39587 W Sel: 3 W Data: 54659 W Enable: 1
+# Cycle:  174 R1 Sel: 5 R1 Data: 15991 Expected R1 Data: 15991 R2 Sel: 7 R2 Data: 29525 Expected R2 data: 29525 W Sel: 6 W Data:  6897 W Enable: 1
+# Cycle:  175 R1 Sel: 4 R1 Data: 39587 Expected R1 Data: 39587 R2 Sel: 2 R2 Data: 20947 Expected R2 data: 20947 W Sel: 3 W Data: 46076 W Enable: 0
+# Cycle:  176 R1 Sel: 7 R1 Data: 29525 Expected R1 Data: 29525 R2 Sel: 2 R2 Data: 20947 Expected R2 data: 20947 W Sel: 2 W Data:  6515 W Enable: 0
+# Cycle:  177 R1 Sel: 6 R1 Data:  6897 Expected R1 Data:  6897 R2 Sel: 4 R2 Data: 39587 Expected R2 data: 39587 W Sel: 2 W Data: 47035 W Enable: 0
+# Cycle:  178 R1 Sel: 7 R1 Data: 29525 Expected R1 Data: 29525 R2 Sel: 0 R2 Data: 22892 Expected R2 data: 22892 W Sel: 0 W Data: 60831 W Enable: 0
+# Cycle:  179 R1 Sel: 5 R1 Data: 15991 Expected R1 Data: 15991 R2 Sel: 3 R2 Data: 54659 Expected R2 data: 54659 W Sel: 4 W Data:  4020 W Enable: 1
+# Cycle:  180 R1 Sel: 3 R1 Data:   821 Expected R1 Data:   821 R2 Sel: 4 R2 Data:  4020 Expected R2 data:  4020 W Sel: 3 W Data:   821 W Enable: 1
+# FYI: Read/write of same port in cycle  180
+# Cycle:  181 R1 Sel: 7 R1 Data: 29525 Expected R1 Data: 29525 R2 Sel: 4 R2 Data:  4020 Expected R2 data:  4020 W Sel: 4 W Data: 41557 W Enable: 0
+# Cycle:  182 R1 Sel: 7 R1 Data: 29525 Expected R1 Data: 29525 R2 Sel: 1 R2 Data:  5860 Expected R2 data:  5860 W Sel: 1 W Data:  5860 W Enable: 1
+# FYI: Read/write of same port in cycle  182
+# Cycle:  183 R1 Sel: 2 R1 Data: 20947 Expected R1 Data: 20947 R2 Sel: 5 R2 Data: 15991 Expected R2 data: 15991 W Sel: 5 W Data: 62463 W Enable: 0
+# Cycle:  184 R1 Sel: 3 R1 Data:   821 Expected R1 Data:   821 R2 Sel: 2 R2 Data: 20947 Expected R2 data: 20947 W Sel: 6 W Data: 36663 W Enable: 0
+# Cycle:  185 R1 Sel: 0 R1 Data: 22892 Expected R1 Data: 22892 R2 Sel: 2 R2 Data: 20947 Expected R2 data: 20947 W Sel: 4 W Data:   546 W Enable: 0
+# Cycle:  186 R1 Sel: 2 R1 Data: 20947 Expected R1 Data: 20947 R2 Sel: 6 R2 Data:  6897 Expected R2 data:  6897 W Sel: 3 W Data: 56041 W Enable: 1
+# Cycle:  187 R1 Sel: 6 R1 Data:  6897 Expected R1 Data:  6897 R2 Sel: 6 R2 Data:  6897 Expected R2 data:  6897 W Sel: 5 W Data: 11644 W Enable: 1
+# FYI: Both read ports are same in cycle  187
+# Cycle:  188 R1 Sel: 2 R1 Data: 20947 Expected R1 Data: 20947 R2 Sel: 7 R2 Data: 29525 Expected R2 data: 29525 W Sel: 1 W Data: 54915 W Enable: 0
+# Cycle:  189 R1 Sel: 2 R1 Data: 20947 Expected R1 Data: 20947 R2 Sel: 5 R2 Data: 11644 Expected R2 data: 11644 W Sel: 4 W Data:  1997 W Enable: 0
+# Cycle:  190 R1 Sel: 4 R1 Data: 12003 Expected R1 Data: 12003 R2 Sel: 2 R2 Data: 20947 Expected R2 data: 20947 W Sel: 4 W Data: 12003 W Enable: 1
+# FYI: Read/write of same port in cycle  190
+# Cycle:  191 R1 Sel: 5 R1 Data: 11644 Expected R1 Data: 11644 R2 Sel: 4 R2 Data: 17885 Expected R2 data: 17885 W Sel: 4 W Data: 17885 W Enable: 1
+# FYI: Read/write of same port in cycle  191
+# Cycle:  192 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 0 R2 Data: 22892 Expected R2 data: 22892 W Sel: 7 W Data: 47531 W Enable: 1
+# FYI: Read/write of same port in cycle  192
+# Cycle:  193 R1 Sel: 3 R1 Data: 56041 Expected R1 Data: 56041 R2 Sel: 4 R2 Data: 17885 Expected R2 data: 17885 W Sel: 6 W Data: 38843 W Enable: 1
+# Cycle:  194 R1 Sel: 2 R1 Data: 20947 Expected R1 Data: 20947 R2 Sel: 2 R2 Data: 20947 Expected R2 data: 20947 W Sel: 6 W Data: 53784 W Enable: 1
+# FYI: Both read ports are same in cycle  194
+# Cycle:  195 R1 Sel: 6 R1 Data: 35174 Expected R1 Data: 35174 R2 Sel: 5 R2 Data: 11644 Expected R2 data: 11644 W Sel: 6 W Data: 35174 W Enable: 1
+# FYI: Read/write of same port in cycle  195
+# Cycle:  196 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 5 R2 Data: 11644 Expected R2 data: 11644 W Sel: 4 W Data: 52603 W Enable: 1
+# Cycle:  197 R1 Sel: 1 R1 Data:  5860 Expected R1 Data:  5860 R2 Sel: 1 R2 Data:  5860 Expected R2 data:  5860 W Sel: 2 W Data: 25012 W Enable: 1
+# FYI: Both read ports are same in cycle  197
+# Cycle:  198 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 5 R2 Data: 11644 Expected R2 data: 11644 W Sel: 3 W Data: 16752 W Enable: 1
+# Cycle:  199 R1 Sel: 4 R1 Data: 52603 Expected R1 Data: 52603 R2 Sel: 0 R2 Data: 22892 Expected R2 data: 22892 W Sel: 6 W Data:  1273 W Enable: 0
+# Cycle:  200 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 1 R2 Data:  5860 Expected R2 data:  5860 W Sel: 0 W Data: 30084 W Enable: 1
+# Cycle:  201 R1 Sel: 0 R1 Data: 30084 Expected R1 Data: 30084 R2 Sel: 6 R2 Data: 35174 Expected R2 data: 35174 W Sel: 1 W Data: 53420 W Enable: 1
+# Cycle:  202 R1 Sel: 1 R1 Data: 53420 Expected R1 Data: 53420 R2 Sel: 5 R2 Data: 11644 Expected R2 data: 11644 W Sel: 3 W Data: 46993 W Enable: 0
+# Cycle:  203 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 6 R2 Data: 33719 Expected R2 data: 33719 W Sel: 6 W Data: 33719 W Enable: 1
+# FYI: Read/write of same port in cycle  203
+# Cycle:  204 R1 Sel: 4 R1 Data: 52603 Expected R1 Data: 52603 R2 Sel: 7 R2 Data: 47531 Expected R2 data: 47531 W Sel: 3 W Data: 50756 W Enable: 0
+# Cycle:  205 R1 Sel: 1 R1 Data: 53420 Expected R1 Data: 53420 R2 Sel: 6 R2 Data: 33719 Expected R2 data: 33719 W Sel: 6 W Data:  4749 W Enable: 0
+# Cycle:  206 R1 Sel: 0 R1 Data: 12016 Expected R1 Data: 12016 R2 Sel: 7 R2 Data: 47531 Expected R2 data: 47531 W Sel: 0 W Data: 12016 W Enable: 1
+# FYI: Read/write of same port in cycle  206
+# Cycle:  207 R1 Sel: 1 R1 Data: 53420 Expected R1 Data: 53420 R2 Sel: 3 R2 Data: 16752 Expected R2 data: 16752 W Sel: 5 W Data: 37599 W Enable: 0
+# Cycle:  208 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 7 R2 Data: 47531 Expected R2 data: 47531 W Sel: 1 W Data: 41478 W Enable: 0
+# FYI: Both read ports are same in cycle  208
+# Cycle:  209 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 5 R2 Data: 11644 Expected R2 data: 11644 W Sel: 3 W Data:  4941 W Enable: 1
+# Cycle:  210 R1 Sel: 6 R1 Data: 33719 Expected R1 Data: 33719 R2 Sel: 1 R2 Data: 25824 Expected R2 data: 25824 W Sel: 1 W Data: 25824 W Enable: 1
+# FYI: Read/write of same port in cycle  210
+# Cycle:  211 R1 Sel: 1 R1 Data: 25824 Expected R1 Data: 25824 R2 Sel: 7 R2 Data: 47531 Expected R2 data: 47531 W Sel: 5 W Data: 32254 W Enable: 1
+# Cycle:  212 R1 Sel: 3 R1 Data:  4941 Expected R1 Data:  4941 R2 Sel: 1 R2 Data: 25824 Expected R2 data: 25824 W Sel: 2 W Data: 42326 W Enable: 0
+# Cycle:  213 R1 Sel: 1 R1 Data: 25824 Expected R1 Data: 25824 R2 Sel: 3 R2 Data:  4941 Expected R2 data:  4941 W Sel: 0 W Data: 31290 W Enable: 0
+# Cycle:  214 R1 Sel: 1 R1 Data: 25824 Expected R1 Data: 25824 R2 Sel: 5 R2 Data: 32254 Expected R2 data: 32254 W Sel: 6 W Data: 54793 W Enable: 0
+# Cycle:  215 R1 Sel: 3 R1 Data:  4941 Expected R1 Data:  4941 R2 Sel: 2 R2 Data: 25012 Expected R2 data: 25012 W Sel: 4 W Data: 20736 W Enable: 0
+# Cycle:  216 R1 Sel: 4 R1 Data: 52603 Expected R1 Data: 52603 R2 Sel: 0 R2 Data: 12016 Expected R2 data: 12016 W Sel: 1 W Data:  9501 W Enable: 0
+# Cycle:  217 R1 Sel: 2 R1 Data: 25012 Expected R1 Data: 25012 R2 Sel: 0 R2 Data: 12016 Expected R2 data: 12016 W Sel: 4 W Data: 48064 W Enable: 1
+# Cycle:  218 R1 Sel: 1 R1 Data: 25824 Expected R1 Data: 25824 R2 Sel: 1 R2 Data: 25824 Expected R2 data: 25824 W Sel: 3 W Data: 48709 W Enable: 0
+# FYI: Both read ports are same in cycle  218
+# Cycle:  219 R1 Sel: 0 R1 Data: 12016 Expected R1 Data: 12016 R2 Sel: 4 R2 Data: 48064 Expected R2 data: 48064 W Sel: 1 W Data: 55112 W Enable: 1
+# Cycle:  220 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 3 R2 Data:  4941 Expected R2 data:  4941 W Sel: 0 W Data: 16959 W Enable: 0
+# Cycle:  221 R1 Sel: 6 R1 Data: 33719 Expected R1 Data: 33719 R2 Sel: 1 R2 Data: 55112 Expected R2 data: 55112 W Sel: 6 W Data: 64398 W Enable: 0
+# Cycle:  222 R1 Sel: 1 R1 Data:  7007 Expected R1 Data:  7007 R2 Sel: 2 R2 Data: 25012 Expected R2 data: 25012 W Sel: 1 W Data:  7007 W Enable: 1
+# FYI: Read/write of same port in cycle  222
+# Cycle:  223 R1 Sel: 5 R1 Data: 32254 Expected R1 Data: 32254 R2 Sel: 4 R2 Data: 48064 Expected R2 data: 48064 W Sel: 6 W Data: 40024 W Enable: 1
+# Cycle:  224 R1 Sel: 3 R1 Data:  4941 Expected R1 Data:  4941 R2 Sel: 7 R2 Data: 47531 Expected R2 data: 47531 W Sel: 4 W Data: 56276 W Enable: 0
+# Cycle:  225 R1 Sel: 4 R1 Data: 48064 Expected R1 Data: 48064 R2 Sel: 6 R2 Data: 40024 Expected R2 data: 40024 W Sel: 1 W Data: 10863 W Enable: 1
+# Cycle:  226 R1 Sel: 6 R1 Data: 40024 Expected R1 Data: 40024 R2 Sel: 2 R2 Data: 25012 Expected R2 data: 25012 W Sel: 3 W Data: 42402 W Enable: 0
+# Cycle:  227 R1 Sel: 3 R1 Data: 60977 Expected R1 Data: 60977 R2 Sel: 0 R2 Data: 12016 Expected R2 data: 12016 W Sel: 3 W Data: 60977 W Enable: 1
+# FYI: Read/write of same port in cycle  227
+# Cycle:  228 R1 Sel: 1 R1 Data: 10863 Expected R1 Data: 10863 R2 Sel: 6 R2 Data: 40024 Expected R2 data: 40024 W Sel: 5 W Data: 34509 W Enable: 0
+# Cycle:  229 R1 Sel: 2 R1 Data: 25012 Expected R1 Data: 25012 R2 Sel: 7 R2 Data: 47531 Expected R2 data: 47531 W Sel: 4 W Data: 62128 W Enable: 0
+# Cycle:  230 R1 Sel: 5 R1 Data: 32254 Expected R1 Data: 32254 R2 Sel: 6 R2 Data: 40024 Expected R2 data: 40024 W Sel: 5 W Data: 55480 W Enable: 0
+# Cycle:  231 R1 Sel: 5 R1 Data: 32254 Expected R1 Data: 32254 R2 Sel: 1 R2 Data: 10863 Expected R2 data: 10863 W Sel: 4 W Data: 55537 W Enable: 1
+# Cycle:  232 R1 Sel: 4 R1 Data: 55537 Expected R1 Data: 55537 R2 Sel: 3 R2 Data: 60977 Expected R2 data: 60977 W Sel: 1 W Data: 41773 W Enable: 0
+# Cycle:  233 R1 Sel: 4 R1 Data: 55537 Expected R1 Data: 55537 R2 Sel: 6 R2 Data: 40024 Expected R2 data: 40024 W Sel: 4 W Data: 49508 W Enable: 0
+# Cycle:  234 R1 Sel: 2 R1 Data: 25012 Expected R1 Data: 25012 R2 Sel: 3 R2 Data: 62669 Expected R2 data: 62669 W Sel: 3 W Data: 62669 W Enable: 1
+# FYI: Read/write of same port in cycle  234
+# Cycle:  235 R1 Sel: 3 R1 Data: 62669 Expected R1 Data: 62669 R2 Sel: 5 R2 Data: 32254 Expected R2 data: 32254 W Sel: 2 W Data:  9433 W Enable: 0
+# Cycle:  236 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 5 R2 Data: 32254 Expected R2 data: 32254 W Sel: 6 W Data: 19603 W Enable: 1
+# Cycle:  237 R1 Sel: 1 R1 Data: 10863 Expected R1 Data: 10863 R2 Sel: 4 R2 Data: 55537 Expected R2 data: 55537 W Sel: 0 W Data: 49259 W Enable: 1
+# Cycle:  238 R1 Sel: 5 R1 Data: 32254 Expected R1 Data: 32254 R2 Sel: 7 R2 Data: 47531 Expected R2 data: 47531 W Sel: 7 W Data: 62326 W Enable: 0
+# Cycle:  239 R1 Sel: 5 R1 Data: 32254 Expected R1 Data: 32254 R2 Sel: 7 R2 Data: 47531 Expected R2 data: 47531 W Sel: 6 W Data: 25414 W Enable: 0
+# Cycle:  240 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 4 R2 Data: 55537 Expected R2 data: 55537 W Sel: 4 W Data: 24404 W Enable: 0
+# Cycle:  241 R1 Sel: 0 R1 Data: 49259 Expected R1 Data: 49259 R2 Sel: 5 R2 Data: 32254 Expected R2 data: 32254 W Sel: 2 W Data: 56454 W Enable: 0
+# Cycle:  242 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 0 R2 Data: 49259 Expected R2 data: 49259 W Sel: 1 W Data: 36671 W Enable: 0
+# Cycle:  243 R1 Sel: 5 R1 Data: 32254 Expected R1 Data: 32254 R2 Sel: 6 R2 Data: 19603 Expected R2 data: 19603 W Sel: 6 W Data: 56504 W Enable: 0
+# Cycle:  244 R1 Sel: 5 R1 Data: 32254 Expected R1 Data: 32254 R2 Sel: 1 R2 Data: 10863 Expected R2 data: 10863 W Sel: 5 W Data: 29903 W Enable: 0
+# Cycle:  245 R1 Sel: 6 R1 Data: 19603 Expected R1 Data: 19603 R2 Sel: 5 R2 Data: 32254 Expected R2 data: 32254 W Sel: 1 W Data: 50266 W Enable: 1
+# Cycle:  246 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 4 R2 Data: 55537 Expected R2 data: 55537 W Sel: 7 W Data: 18041 W Enable: 0
+# Cycle:  247 R1 Sel: 1 R1 Data: 50266 Expected R1 Data: 50266 R2 Sel: 5 R2 Data: 32254 Expected R2 data: 32254 W Sel: 3 W Data: 40325 W Enable: 0
+# Cycle:  248 R1 Sel: 6 R1 Data: 19603 Expected R1 Data: 19603 R2 Sel: 4 R2 Data: 55537 Expected R2 data: 55537 W Sel: 1 W Data: 60733 W Enable: 1
+# Cycle:  249 R1 Sel: 4 R1 Data: 55537 Expected R1 Data: 55537 R2 Sel: 5 R2 Data: 32254 Expected R2 data: 32254 W Sel: 6 W Data: 58036 W Enable: 1
+# Cycle:  250 R1 Sel: 1 R1 Data: 60733 Expected R1 Data: 60733 R2 Sel: 4 R2 Data: 55537 Expected R2 data: 55537 W Sel: 5 W Data: 21790 W Enable: 0
+# Cycle:  251 R1 Sel: 3 R1 Data: 62669 Expected R1 Data: 62669 R2 Sel: 4 R2 Data: 55537 Expected R2 data: 55537 W Sel: 1 W Data: 28747 W Enable: 0
+# Cycle:  252 R1 Sel: 1 R1 Data: 60733 Expected R1 Data: 60733 R2 Sel: 3 R2 Data: 62669 Expected R2 data: 62669 W Sel: 4 W Data: 57523 W Enable: 0
+# Cycle:  253 R1 Sel: 2 R1 Data: 25012 Expected R1 Data: 25012 R2 Sel: 5 R2 Data: 32254 Expected R2 data: 32254 W Sel: 4 W Data: 25070 W Enable: 1
+# Cycle:  254 R1 Sel: 0 R1 Data: 49259 Expected R1 Data: 49259 R2 Sel: 2 R2 Data: 25012 Expected R2 data: 25012 W Sel: 6 W Data: 46941 W Enable: 0
+# Cycle:  255 R1 Sel: 3 R1 Data: 62669 Expected R1 Data: 62669 R2 Sel: 3 R2 Data: 62669 Expected R2 data: 62669 W Sel: 0 W Data: 58548 W Enable: 0
+# FYI: Both read ports are same in cycle  255
+# Cycle:  256 R1 Sel: 1 R1 Data: 60733 Expected R1 Data: 60733 R2 Sel: 5 R2 Data: 11410 Expected R2 data: 11410 W Sel: 5 W Data: 11410 W Enable: 1
+# FYI: Read/write of same port in cycle  256
+# Cycle:  257 R1 Sel: 6 R1 Data: 58036 Expected R1 Data: 58036 R2 Sel: 5 R2 Data: 11410 Expected R2 data: 11410 W Sel: 3 W Data: 11712 W Enable: 1
+# Cycle:  258 R1 Sel: 1 R1 Data: 60733 Expected R1 Data: 60733 R2 Sel: 2 R2 Data: 25012 Expected R2 data: 25012 W Sel: 3 W Data: 10163 W Enable: 0
+# Cycle:  259 R1 Sel: 1 R1 Data: 60733 Expected R1 Data: 60733 R2 Sel: 4 R2 Data: 25070 Expected R2 data: 25070 W Sel: 0 W Data: 17583 W Enable: 0
+# Cycle:  260 R1 Sel: 5 R1 Data: 11410 Expected R1 Data: 11410 R2 Sel: 1 R2 Data: 60733 Expected R2 data: 60733 W Sel: 7 W Data: 28173 W Enable: 0
+# Cycle:  261 R1 Sel: 4 R1 Data: 25070 Expected R1 Data: 25070 R2 Sel: 7 R2 Data: 47531 Expected R2 data: 47531 W Sel: 1 W Data: 62047 W Enable: 0
+# Cycle:  262 R1 Sel: 2 R1 Data: 25012 Expected R1 Data: 25012 R2 Sel: 3 R2 Data: 11712 Expected R2 data: 11712 W Sel: 6 W Data:  8473 W Enable: 1
+# Cycle:  263 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 5 R2 Data: 11410 Expected R2 data: 11410 W Sel: 4 W Data: 40369 W Enable: 1
+# Cycle:  264 R1 Sel: 6 R1 Data:  8473 Expected R1 Data:  8473 R2 Sel: 0 R2 Data: 49259 Expected R2 data: 49259 W Sel: 7 W Data:    20 W Enable: 0
+# Cycle:  265 R1 Sel: 6 R1 Data:  8473 Expected R1 Data:  8473 R2 Sel: 7 R2 Data: 47531 Expected R2 data: 47531 W Sel: 5 W Data:  8006 W Enable: 0
+# Cycle:  266 R1 Sel: 2 R1 Data: 25012 Expected R1 Data: 25012 R2 Sel: 4 R2 Data: 40369 Expected R2 data: 40369 W Sel: 0 W Data: 58163 W Enable: 0
+# Cycle:  267 R1 Sel: 0 R1 Data: 49259 Expected R1 Data: 49259 R2 Sel: 1 R2 Data: 60733 Expected R2 data: 60733 W Sel: 6 W Data: 47375 W Enable: 1
+# Cycle:  268 R1 Sel: 3 R1 Data: 11712 Expected R1 Data: 11712 R2 Sel: 6 R2 Data: 47375 Expected R2 data: 47375 W Sel: 2 W Data:    74 W Enable: 1
+# Cycle:  269 R1 Sel: 0 R1 Data: 56689 Expected R1 Data: 56689 R2 Sel: 5 R2 Data: 11410 Expected R2 data: 11410 W Sel: 0 W Data: 56689 W Enable: 1
+# FYI: Read/write of same port in cycle  269
+# Cycle:  270 R1 Sel: 4 R1 Data: 40369 Expected R1 Data: 40369 R2 Sel: 5 R2 Data: 11410 Expected R2 data: 11410 W Sel: 7 W Data: 26622 W Enable: 0
+# Cycle:  271 R1 Sel: 1 R1 Data: 60733 Expected R1 Data: 60733 R2 Sel: 3 R2 Data: 11712 Expected R2 data: 11712 W Sel: 5 W Data:  8728 W Enable: 1
+# Cycle:  272 R1 Sel: 0 R1 Data: 56689 Expected R1 Data: 56689 R2 Sel: 5 R2 Data:  8728 Expected R2 data:  8728 W Sel: 3 W Data: 18504 W Enable: 0
+# Cycle:  273 R1 Sel: 2 R1 Data:    74 Expected R1 Data:    74 R2 Sel: 7 R2 Data: 47531 Expected R2 data: 47531 W Sel: 0 W Data:  6256 W Enable: 0
+# Cycle:  274 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 2 R2 Data:    74 Expected R2 data:    74 W Sel: 4 W Data: 27122 W Enable: 0
+# Cycle:  275 R1 Sel: 0 R1 Data: 56689 Expected R1 Data: 56689 R2 Sel: 6 R2 Data: 47375 Expected R2 data: 47375 W Sel: 5 W Data: 11256 W Enable: 1
+# Cycle:  276 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 0 R2 Data: 56689 Expected R2 data: 56689 W Sel: 1 W Data: 30176 W Enable: 0
+# Cycle:  277 R1 Sel: 1 R1 Data: 60733 Expected R1 Data: 60733 R2 Sel: 1 R2 Data: 60733 Expected R2 data: 60733 W Sel: 3 W Data: 32549 W Enable: 1
+# FYI: Both read ports are same in cycle  277
+# Cycle:  278 R1 Sel: 6 R1 Data: 47375 Expected R1 Data: 47375 R2 Sel: 4 R2 Data: 40369 Expected R2 data: 40369 W Sel: 0 W Data: 26390 W Enable: 0
+# Cycle:  279 R1 Sel: 5 R1 Data: 11256 Expected R1 Data: 11256 R2 Sel: 5 R2 Data: 11256 Expected R2 data: 11256 W Sel: 7 W Data: 55557 W Enable: 0
+# FYI: Both read ports are same in cycle  279
+# Cycle:  280 R1 Sel: 0 R1 Data: 56689 Expected R1 Data: 56689 R2 Sel: 0 R2 Data: 56689 Expected R2 data: 56689 W Sel: 3 W Data: 58007 W Enable: 1
+# FYI: Both read ports are same in cycle  280
+# Cycle:  281 R1 Sel: 2 R1 Data:    74 Expected R1 Data:    74 R2 Sel: 3 R2 Data: 58007 Expected R2 data: 58007 W Sel: 1 W Data: 30854 W Enable: 0
+# Cycle:  282 R1 Sel: 4 R1 Data: 40369 Expected R1 Data: 40369 R2 Sel: 2 R2 Data:    74 Expected R2 data:    74 W Sel: 4 W Data: 39666 W Enable: 0
+# Cycle:  283 R1 Sel: 4 R1 Data: 64140 Expected R1 Data: 64140 R2 Sel: 2 R2 Data:    74 Expected R2 data:    74 W Sel: 4 W Data: 64140 W Enable: 1
+# FYI: Read/write of same port in cycle  283
+# Cycle:  284 R1 Sel: 5 R1 Data: 11256 Expected R1 Data: 11256 R2 Sel: 1 R2 Data: 60733 Expected R2 data: 60733 W Sel: 3 W Data: 44053 W Enable: 0
+# Cycle:  285 R1 Sel: 2 R1 Data:    74 Expected R1 Data:    74 R2 Sel: 5 R2 Data: 11256 Expected R2 data: 11256 W Sel: 6 W Data: 13885 W Enable: 1
+# Cycle:  286 R1 Sel: 6 R1 Data: 13885 Expected R1 Data: 13885 R2 Sel: 3 R2 Data: 58007 Expected R2 data: 58007 W Sel: 4 W Data:   740 W Enable: 0
+# Cycle:  287 R1 Sel: 2 R1 Data:    74 Expected R1 Data:    74 R2 Sel: 1 R2 Data: 60733 Expected R2 data: 60733 W Sel: 3 W Data:  7605 W Enable: 0
+# Cycle:  288 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 1 R2 Data: 60733 Expected R2 data: 60733 W Sel: 7 W Data: 45246 W Enable: 0
+# Cycle:  289 R1 Sel: 4 R1 Data: 64140 Expected R1 Data: 64140 R2 Sel: 0 R2 Data: 56689 Expected R2 data: 56689 W Sel: 1 W Data: 41075 W Enable: 0
+# Cycle:  290 R1 Sel: 6 R1 Data: 13885 Expected R1 Data: 13885 R2 Sel: 5 R2 Data: 22989 Expected R2 data: 22989 W Sel: 5 W Data: 22989 W Enable: 1
+# FYI: Read/write of same port in cycle  290
+# Cycle:  291 R1 Sel: 3 R1 Data: 58007 Expected R1 Data: 58007 R2 Sel: 6 R2 Data: 13885 Expected R2 data: 13885 W Sel: 2 W Data: 35734 W Enable: 1
+# Cycle:  292 R1 Sel: 5 R1 Data: 22989 Expected R1 Data: 22989 R2 Sel: 4 R2 Data: 64140 Expected R2 data: 64140 W Sel: 2 W Data: 35109 W Enable: 1
+# Cycle:  293 R1 Sel: 3 R1 Data: 58007 Expected R1 Data: 58007 R2 Sel: 5 R2 Data: 22989 Expected R2 data: 22989 W Sel: 1 W Data: 26032 W Enable: 0
+# Cycle:  294 R1 Sel: 0 R1 Data: 56689 Expected R1 Data: 56689 R2 Sel: 2 R2 Data: 35109 Expected R2 data: 35109 W Sel: 5 W Data:  6530 W Enable: 0
+# Cycle:  295 R1 Sel: 7 R1 Data: 47531 Expected R1 Data: 47531 R2 Sel: 1 R2 Data: 60733 Expected R2 data: 60733 W Sel: 0 W Data: 20492 W Enable: 0
+# Cycle:  296 R1 Sel: 1 R1 Data: 60733 Expected R1 Data: 60733 R2 Sel: 7 R2 Data: 47531 Expected R2 data: 47531 W Sel: 3 W Data: 37032 W Enable: 0
+# Cycle:  297 R1 Sel: 1 R1 Data: 60733 Expected R1 Data: 60733 R2 Sel: 5 R2 Data: 22989 Expected R2 data: 22989 W Sel: 7 W Data: 61208 W Enable: 1
+# Cycle:  298 R1 Sel: 5 R1 Data: 22989 Expected R1 Data: 22989 R2 Sel: 6 R2 Data: 13885 Expected R2 data: 13885 W Sel: 1 W Data: 32779 W Enable: 1
+# Cycle:  299 R1 Sel: 7 R1 Data: 61208 Expected R1 Data: 61208 R2 Sel: 2 R2 Data: 35109 Expected R2 data: 35109 W Sel: 5 W Data: 14971 W Enable: 1
+# Cycle:  300 R1 Sel: 7 R1 Data: 59082 Expected R1 Data: 59082 R2 Sel: 5 R2 Data: 14971 Expected R2 data: 14971 W Sel: 7 W Data: 59082 W Enable: 1
+# FYI: Read/write of same port in cycle  300
+# Cycle:  301 R1 Sel: 5 R1 Data: 14971 Expected R1 Data: 14971 R2 Sel: 2 R2 Data: 27371 Expected R2 data: 27371 W Sel: 2 W Data: 27371 W Enable: 1
+# FYI: Read/write of same port in cycle  301
+# Cycle:  302 R1 Sel: 3 R1 Data: 58007 Expected R1 Data: 58007 R2 Sel: 6 R2 Data: 13885 Expected R2 data: 13885 W Sel: 6 W Data: 35357 W Enable: 0
+# Cycle:  303 R1 Sel: 6 R1 Data: 54007 Expected R1 Data: 54007 R2 Sel: 2 R2 Data: 27371 Expected R2 data: 27371 W Sel: 6 W Data: 54007 W Enable: 1
+# FYI: Read/write of same port in cycle  303
+# Cycle:  304 R1 Sel: 6 R1 Data: 54007 Expected R1 Data: 54007 R2 Sel: 5 R2 Data: 14971 Expected R2 data: 14971 W Sel: 4 W Data: 25767 W Enable: 0
+# Cycle:  305 R1 Sel: 1 R1 Data: 32779 Expected R1 Data: 32779 R2 Sel: 6 R2 Data: 54007 Expected R2 data: 54007 W Sel: 5 W Data: 50317 W Enable: 1
+# Cycle:  306 R1 Sel: 7 R1 Data: 59082 Expected R1 Data: 59082 R2 Sel: 4 R2 Data: 64140 Expected R2 data: 64140 W Sel: 7 W Data: 62411 W Enable: 0
+# Cycle:  307 R1 Sel: 3 R1 Data: 58007 Expected R1 Data: 58007 R2 Sel: 4 R2 Data: 64140 Expected R2 data: 64140 W Sel: 3 W Data: 26639 W Enable: 0
+# Cycle:  308 R1 Sel: 7 R1 Data: 59082 Expected R1 Data: 59082 R2 Sel: 7 R2 Data: 59082 Expected R2 data: 59082 W Sel: 6 W Data: 42784 W Enable: 1
+# FYI: Both read ports are same in cycle  308
+# Cycle:  309 R1 Sel: 2 R1 Data: 27371 Expected R1 Data: 27371 R2 Sel: 4 R2 Data: 64140 Expected R2 data: 64140 W Sel: 0 W Data: 42756 W Enable: 1
+# Cycle:  310 R1 Sel: 3 R1 Data: 58007 Expected R1 Data: 58007 R2 Sel: 7 R2 Data: 59082 Expected R2 data: 59082 W Sel: 4 W Data: 14300 W Enable: 1
+# Cycle:  311 R1 Sel: 4 R1 Data: 14300 Expected R1 Data: 14300 R2 Sel: 6 R2 Data: 42784 Expected R2 data: 42784 W Sel: 1 W Data:  1198 W Enable: 0
+# Cycle:  312 R1 Sel: 2 R1 Data: 27371 Expected R1 Data: 27371 R2 Sel: 5 R2 Data: 50317 Expected R2 data: 50317 W Sel: 4 W Data:  2566 W Enable: 0
+# Cycle:  313 R1 Sel: 1 R1 Data: 32779 Expected R1 Data: 32779 R2 Sel: 2 R2 Data: 27371 Expected R2 data: 27371 W Sel: 3 W Data: 32823 W Enable: 1
+# Cycle:  314 R1 Sel: 1 R1 Data: 32779 Expected R1 Data: 32779 R2 Sel: 6 R2 Data: 42784 Expected R2 data: 42784 W Sel: 3 W Data: 37334 W Enable: 1
+# Cycle:  315 R1 Sel: 2 R1 Data: 27371 Expected R1 Data: 27371 R2 Sel: 3 R2 Data: 37334 Expected R2 data: 37334 W Sel: 0 W Data: 30024 W Enable: 1
+# Cycle:  316 R1 Sel: 4 R1 Data: 14300 Expected R1 Data: 14300 R2 Sel: 5 R2 Data: 50317 Expected R2 data: 50317 W Sel: 1 W Data: 44017 W Enable: 1
+# Cycle:  317 R1 Sel: 1 R1 Data: 44017 Expected R1 Data: 44017 R2 Sel: 7 R2 Data: 59082 Expected R2 data: 59082 W Sel: 7 W Data: 31426 W Enable: 0
+# Cycle:  318 R1 Sel: 5 R1 Data: 50317 Expected R1 Data: 50317 R2 Sel: 0 R2 Data: 30024 Expected R2 data: 30024 W Sel: 6 W Data: 65047 W Enable: 1
+# Cycle:  319 R1 Sel: 7 R1 Data: 59082 Expected R1 Data: 59082 R2 Sel: 5 R2 Data: 50317 Expected R2 data: 50317 W Sel: 7 W Data: 18136 W Enable: 0
+# Cycle:  320 R1 Sel: 3 R1 Data: 37334 Expected R1 Data: 37334 R2 Sel: 4 R2 Data: 25094 Expected R2 data: 25094 W Sel: 4 W Data: 25094 W Enable: 1
+# FYI: Read/write of same port in cycle  320
+# Cycle:  321 R1 Sel: 1 R1 Data: 44017 Expected R1 Data: 44017 R2 Sel: 7 R2 Data: 59082 Expected R2 data: 59082 W Sel: 7 W Data: 34248 W Enable: 0
+# Cycle:  322 R1 Sel: 6 R1 Data: 65047 Expected R1 Data: 65047 R2 Sel: 3 R2 Data: 37334 Expected R2 data: 37334 W Sel: 2 W Data: 15117 W Enable: 0
+# Cycle:  323 R1 Sel: 7 R1 Data: 59082 Expected R1 Data: 59082 R2 Sel: 0 R2 Data: 30024 Expected R2 data: 30024 W Sel: 2 W Data: 49615 W Enable: 0
+# Cycle:  324 R1 Sel: 1 R1 Data: 53337 Expected R1 Data: 53337 R2 Sel: 7 R2 Data: 59082 Expected R2 data: 59082 W Sel: 1 W Data: 53337 W Enable: 1
+# FYI: Read/write of same port in cycle  324
+# Cycle:  325 R1 Sel: 6 R1 Data: 65047 Expected R1 Data: 65047 R2 Sel: 3 R2 Data: 37334 Expected R2 data: 37334 W Sel: 4 W Data: 18310 W Enable: 1
+# Cycle:  326 R1 Sel: 0 R1 Data: 30024 Expected R1 Data: 30024 R2 Sel: 4 R2 Data: 18310 Expected R2 data: 18310 W Sel: 3 W Data: 49657 W Enable: 0
+# Cycle:  327 R1 Sel: 0 R1 Data: 30024 Expected R1 Data: 30024 R2 Sel: 2 R2 Data: 27371 Expected R2 data: 27371 W Sel: 4 W Data: 62605 W Enable: 1
+# Cycle:  328 R1 Sel: 3 R1 Data: 37334 Expected R1 Data: 37334 R2 Sel: 4 R2 Data: 62605 Expected R2 data: 62605 W Sel: 5 W Data: 20271 W Enable: 0
+# Cycle:  329 R1 Sel: 3 R1 Data: 37334 Expected R1 Data: 37334 R2 Sel: 7 R2 Data: 59082 Expected R2 data: 59082 W Sel: 4 W Data: 12053 W Enable: 0
+# Cycle:  330 R1 Sel: 7 R1 Data: 59082 Expected R1 Data: 59082 R2 Sel: 1 R2 Data: 53337 Expected R2 data: 53337 W Sel: 3 W Data: 53046 W Enable: 0
+# Cycle:  331 R1 Sel: 3 R1 Data: 37334 Expected R1 Data: 37334 R2 Sel: 1 R2 Data: 53337 Expected R2 data: 53337 W Sel: 1 W Data: 44149 W Enable: 0
+# Cycle:  332 R1 Sel: 2 R1 Data: 27371 Expected R1 Data: 27371 R2 Sel: 0 R2 Data: 30024 Expected R2 data: 30024 W Sel: 5 W Data: 64203 W Enable: 1
+# Cycle:  333 R1 Sel: 1 R1 Data: 53337 Expected R1 Data: 53337 R2 Sel: 3 R2 Data: 37334 Expected R2 data: 37334 W Sel: 4 W Data: 26906 W Enable: 0
+# Cycle:  334 R1 Sel: 2 R1 Data: 24448 Expected R1 Data: 24448 R2 Sel: 1 R2 Data: 53337 Expected R2 data: 53337 W Sel: 2 W Data: 24448 W Enable: 1
+# FYI: Read/write of same port in cycle  334
+# Cycle:  335 R1 Sel: 6 R1 Data: 65047 Expected R1 Data: 65047 R2 Sel: 0 R2 Data: 30024 Expected R2 data: 30024 W Sel: 5 W Data: 29755 W Enable: 0
+# Cycle:  336 R1 Sel: 3 R1 Data: 37334 Expected R1 Data: 37334 R2 Sel: 0 R2 Data: 44811 Expected R2 data: 44811 W Sel: 0 W Data: 44811 W Enable: 1
+# FYI: Read/write of same port in cycle  336
+# Cycle:  337 R1 Sel: 6 R1 Data: 65047 Expected R1 Data: 65047 R2 Sel: 4 R2 Data: 62605 Expected R2 data: 62605 W Sel: 2 W Data: 57558 W Enable: 0
+# Cycle:  338 R1 Sel: 0 R1 Data: 44811 Expected R1 Data: 44811 R2 Sel: 3 R2 Data: 37334 Expected R2 data: 37334 W Sel: 7 W Data: 11566 W Enable: 0
+# Cycle:  339 R1 Sel: 6 R1 Data: 65047 Expected R1 Data: 65047 R2 Sel: 1 R2 Data: 53337 Expected R2 data: 53337 W Sel: 0 W Data: 38788 W Enable: 1
+# Cycle:  340 R1 Sel: 1 R1 Data: 53337 Expected R1 Data: 53337 R2 Sel: 2 R2 Data: 24448 Expected R2 data: 24448 W Sel: 1 W Data:  1918 W Enable: 0
+# Cycle:  341 R1 Sel: 6 R1 Data: 65047 Expected R1 Data: 65047 R2 Sel: 4 R2 Data: 62605 Expected R2 data: 62605 W Sel: 4 W Data: 16473 W Enable: 0
+# Cycle:  342 R1 Sel: 4 R1 Data: 62605 Expected R1 Data: 62605 R2 Sel: 2 R2 Data: 24448 Expected R2 data: 24448 W Sel: 7 W Data: 47068 W Enable: 1
+# Cycle:  343 R1 Sel: 0 R1 Data: 38788 Expected R1 Data: 38788 R2 Sel: 7 R2 Data: 47068 Expected R2 data: 47068 W Sel: 6 W Data:  8551 W Enable: 0
+# Cycle:  344 R1 Sel: 6 R1 Data: 65047 Expected R1 Data: 65047 R2 Sel: 4 R2 Data: 62605 Expected R2 data: 62605 W Sel: 2 W Data: 24636 W Enable: 0
+# Cycle:  345 R1 Sel: 5 R1 Data: 64203 Expected R1 Data: 64203 R2 Sel: 3 R2 Data: 37334 Expected R2 data: 37334 W Sel: 2 W Data: 63550 W Enable: 1
+# Cycle:  346 R1 Sel: 7 R1 Data: 47068 Expected R1 Data: 47068 R2 Sel: 3 R2 Data: 37334 Expected R2 data: 37334 W Sel: 4 W Data: 13943 W Enable: 0
+# Cycle:  347 R1 Sel: 2 R1 Data: 57589 Expected R1 Data: 57589 R2 Sel: 2 R2 Data: 57589 Expected R2 data: 57589 W Sel: 2 W Data: 57589 W Enable: 1
+# FYI: Both read ports are same in cycle  347
+# FYI: Read/write of same port in cycle  347
+# Cycle:  348 R1 Sel: 4 R1 Data: 62605 Expected R1 Data: 62605 R2 Sel: 1 R2 Data: 55085 Expected R2 data: 55085 W Sel: 1 W Data: 55085 W Enable: 1
+# FYI: Read/write of same port in cycle  348
+# Cycle:  349 R1 Sel: 3 R1 Data: 37334 Expected R1 Data: 37334 R2 Sel: 4 R2 Data: 62605 Expected R2 data: 62605 W Sel: 0 W Data: 12475 W Enable: 1
+# Cycle:  350 R1 Sel: 7 R1 Data: 47068 Expected R1 Data: 47068 R2 Sel: 3 R2 Data: 37334 Expected R2 data: 37334 W Sel: 4 W Data: 43820 W Enable: 1
+# Cycle:  351 R1 Sel: 1 R1 Data: 55085 Expected R1 Data: 55085 R2 Sel: 6 R2 Data: 65047 Expected R2 data: 65047 W Sel: 5 W Data: 24145 W Enable: 0
+# Cycle:  352 R1 Sel: 4 R1 Data: 43820 Expected R1 Data: 43820 R2 Sel: 5 R2 Data: 64203 Expected R2 data: 64203 W Sel: 0 W Data: 18163 W Enable: 0
+# Cycle:  353 R1 Sel: 7 R1 Data: 47068 Expected R1 Data: 47068 R2 Sel: 0 R2 Data: 12475 Expected R2 data: 12475 W Sel: 2 W Data: 55155 W Enable: 1
+# Cycle:  354 R1 Sel: 5 R1 Data: 64203 Expected R1 Data: 64203 R2 Sel: 6 R2 Data: 65047 Expected R2 data: 65047 W Sel: 3 W Data: 52261 W Enable: 1
+# Cycle:  355 R1 Sel: 7 R1 Data: 47068 Expected R1 Data: 47068 R2 Sel: 3 R2 Data: 52261 Expected R2 data: 52261 W Sel: 7 W Data: 59519 W Enable: 0
+# Cycle:  356 R1 Sel: 5 R1 Data: 64203 Expected R1 Data: 64203 R2 Sel: 7 R2 Data: 19011 Expected R2 data: 19011 W Sel: 7 W Data: 19011 W Enable: 1
+# FYI: Read/write of same port in cycle  356
+# Cycle:  357 R1 Sel: 0 R1 Data: 12475 Expected R1 Data: 12475 R2 Sel: 1 R2 Data: 38593 Expected R2 data: 38593 W Sel: 1 W Data: 38593 W Enable: 1
+# FYI: Read/write of same port in cycle  357
+# Cycle:  358 R1 Sel: 2 R1 Data: 55155 Expected R1 Data: 55155 R2 Sel: 2 R2 Data: 55155 Expected R2 data: 55155 W Sel: 7 W Data:  6557 W Enable: 0
+# FYI: Both read ports are same in cycle  358
+# Cycle:  359 R1 Sel: 5 R1 Data: 64203 Expected R1 Data: 64203 R2 Sel: 7 R2 Data: 19011 Expected R2 data: 19011 W Sel: 1 W Data: 35702 W Enable: 0
+# Cycle:  360 R1 Sel: 7 R1 Data: 19011 Expected R1 Data: 19011 R2 Sel: 6 R2 Data: 65047 Expected R2 data: 65047 W Sel: 0 W Data: 16327 W Enable: 0
+# Cycle:  361 R1 Sel: 6 R1 Data: 65047 Expected R1 Data: 65047 R2 Sel: 0 R2 Data: 12475 Expected R2 data: 12475 W Sel: 6 W Data: 57074 W Enable: 0
+# Cycle:  362 R1 Sel: 4 R1 Data: 43820 Expected R1 Data: 43820 R2 Sel: 3 R2 Data: 52261 Expected R2 data: 52261 W Sel: 6 W Data: 52527 W Enable: 1
+# Cycle:  363 R1 Sel: 6 R1 Data: 52527 Expected R1 Data: 52527 R2 Sel: 6 R2 Data: 52527 Expected R2 data: 52527 W Sel: 3 W Data:  3983 W Enable: 1
+# FYI: Both read ports are same in cycle  363
+# Cycle:  364 R1 Sel: 3 R1 Data:  3983 Expected R1 Data:  3983 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 6 W Data: 15968 W Enable: 1
+# Cycle:  365 R1 Sel: 3 R1 Data:  3983 Expected R1 Data:  3983 R2 Sel: 7 R2 Data: 19011 Expected R2 data: 19011 W Sel: 4 W Data: 54588 W Enable: 0
+# Cycle:  366 R1 Sel: 7 R1 Data: 19011 Expected R1 Data: 19011 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 0 W Data: 58347 W Enable: 1
+# Cycle:  367 R1 Sel: 1 R1 Data: 38593 Expected R1 Data: 38593 R2 Sel: 0 R2 Data: 58347 Expected R2 data: 58347 W Sel: 1 W Data:  1269 W Enable: 0
+# Cycle:  368 R1 Sel: 1 R1 Data: 38593 Expected R1 Data: 38593 R2 Sel: 3 R2 Data:  3983 Expected R2 data:  3983 W Sel: 4 W Data: 10474 W Enable: 0
+# Cycle:  369 R1 Sel: 6 R1 Data: 15968 Expected R1 Data: 15968 R2 Sel: 5 R2 Data: 64203 Expected R2 data: 64203 W Sel: 6 W Data: 27584 W Enable: 0
+# Cycle:  370 R1 Sel: 4 R1 Data: 43820 Expected R1 Data: 43820 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 0 W Data:  5662 W Enable: 1
+# FYI: Both read ports are same in cycle  370
+# Cycle:  371 R1 Sel: 1 R1 Data: 38593 Expected R1 Data: 38593 R2 Sel: 1 R2 Data: 38593 Expected R2 data: 38593 W Sel: 3 W Data: 46358 W Enable: 1
+# FYI: Both read ports are same in cycle  371
+# Cycle:  372 R1 Sel: 4 R1 Data: 43820 Expected R1 Data: 43820 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 0 W Data: 38977 W Enable: 0
+# FYI: Both read ports are same in cycle  372
+# Cycle:  373 R1 Sel: 2 R1 Data: 55155 Expected R1 Data: 55155 R2 Sel: 0 R2 Data:  5662 Expected R2 data:  5662 W Sel: 3 W Data: 19326 W Enable: 0
+# Cycle:  374 R1 Sel: 4 R1 Data: 43820 Expected R1 Data: 43820 R2 Sel: 2 R2 Data: 55155 Expected R2 data: 55155 W Sel: 5 W Data: 59201 W Enable: 1
+# Cycle:  375 R1 Sel: 5 R1 Data: 59201 Expected R1 Data: 59201 R2 Sel: 3 R2 Data: 46358 Expected R2 data: 46358 W Sel: 7 W Data: 12239 W Enable: 1
+# Cycle:  376 R1 Sel: 3 R1 Data: 46358 Expected R1 Data: 46358 R2 Sel: 0 R2 Data:  5662 Expected R2 data:  5662 W Sel: 2 W Data: 59843 W Enable: 0
+# Cycle:  377 R1 Sel: 3 R1 Data: 46358 Expected R1 Data: 46358 R2 Sel: 7 R2 Data: 12239 Expected R2 data: 12239 W Sel: 4 W Data: 56971 W Enable: 0
+# Cycle:  378 R1 Sel: 7 R1 Data: 12239 Expected R1 Data: 12239 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 3 W Data: 35868 W Enable: 0
+# Cycle:  379 R1 Sel: 4 R1 Data: 43820 Expected R1 Data: 43820 R2 Sel: 6 R2 Data: 15968 Expected R2 data: 15968 W Sel: 0 W Data: 15168 W Enable: 1
+# Cycle:  380 R1 Sel: 7 R1 Data: 12239 Expected R1 Data: 12239 R2 Sel: 3 R2 Data: 46358 Expected R2 data: 46358 W Sel: 0 W Data: 13316 W Enable: 1
+# Cycle:  381 R1 Sel: 4 R1 Data: 43820 Expected R1 Data: 43820 R2 Sel: 3 R2 Data: 46358 Expected R2 data: 46358 W Sel: 3 W Data: 22113 W Enable: 0
+# Cycle:  382 R1 Sel: 1 R1 Data: 38593 Expected R1 Data: 38593 R2 Sel: 6 R2 Data: 15968 Expected R2 data: 15968 W Sel: 0 W Data:  1652 W Enable: 0
+# Cycle:  383 R1 Sel: 4 R1 Data: 43820 Expected R1 Data: 43820 R2 Sel: 3 R2 Data: 46358 Expected R2 data: 46358 W Sel: 7 W Data: 26381 W Enable: 1
+# Cycle:  384 R1 Sel: 1 R1 Data: 38593 Expected R1 Data: 38593 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 5 W Data: 22758 W Enable: 1
+# Cycle:  385 R1 Sel: 1 R1 Data: 38593 Expected R1 Data: 38593 R2 Sel: 2 R2 Data: 55155 Expected R2 data: 55155 W Sel: 6 W Data: 39844 W Enable: 0
+# Cycle:  386 R1 Sel: 2 R1 Data: 55155 Expected R1 Data: 55155 R2 Sel: 6 R2 Data: 15968 Expected R2 data: 15968 W Sel: 1 W Data:  3937 W Enable: 0
+# Cycle:  387 R1 Sel: 1 R1 Data: 38593 Expected R1 Data: 38593 R2 Sel: 2 R2 Data: 55155 Expected R2 data: 55155 W Sel: 3 W Data: 65282 W Enable: 0
+# Cycle:  388 R1 Sel: 0 R1 Data: 13316 Expected R1 Data: 13316 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 6 W Data: 62422 W Enable: 0
+# Cycle:  389 R1 Sel: 2 R1 Data: 55155 Expected R1 Data: 55155 R2 Sel: 3 R2 Data: 46358 Expected R2 data: 46358 W Sel: 7 W Data: 22579 W Enable: 1
+# Cycle:  390 R1 Sel: 0 R1 Data: 13316 Expected R1 Data: 13316 R2 Sel: 3 R2 Data: 46358 Expected R2 data: 46358 W Sel: 0 W Data:  8356 W Enable: 0
+# Cycle:  391 R1 Sel: 2 R1 Data: 55155 Expected R1 Data: 55155 R2 Sel: 3 R2 Data: 46358 Expected R2 data: 46358 W Sel: 5 W Data:  3778 W Enable: 0
+# Cycle:  392 R1 Sel: 2 R1 Data: 55155 Expected R1 Data: 55155 R2 Sel: 3 R2 Data: 46358 Expected R2 data: 46358 W Sel: 4 W Data: 23653 W Enable: 0
+# Cycle:  393 R1 Sel: 3 R1 Data: 46358 Expected R1 Data: 46358 R2 Sel: 5 R2 Data: 22758 Expected R2 data: 22758 W Sel: 1 W Data: 64986 W Enable: 0
+# Cycle:  394 R1 Sel: 7 R1 Data: 22579 Expected R1 Data: 22579 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 1 W Data: 31494 W Enable: 0
+# Cycle:  395 R1 Sel: 1 R1 Data: 38593 Expected R1 Data: 38593 R2 Sel: 2 R2 Data: 55155 Expected R2 data: 55155 W Sel: 5 W Data: 24980 W Enable: 0
+# Cycle:  396 R1 Sel: 3 R1 Data: 46358 Expected R1 Data: 46358 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 0 W Data: 46320 W Enable: 0
+# Cycle:  397 R1 Sel: 2 R1 Data: 55155 Expected R1 Data: 55155 R2 Sel: 6 R2 Data: 15968 Expected R2 data: 15968 W Sel: 7 W Data: 45953 W Enable: 0
+# Cycle:  398 R1 Sel: 2 R1 Data: 55155 Expected R1 Data: 55155 R2 Sel: 6 R2 Data: 15968 Expected R2 data: 15968 W Sel: 7 W Data:  5947 W Enable: 1
+# Cycle:  399 R1 Sel: 1 R1 Data: 38593 Expected R1 Data: 38593 R2 Sel: 5 R2 Data: 22758 Expected R2 data: 22758 W Sel: 5 W Data: 34029 W Enable: 0
+# Cycle:  400 R1 Sel: 2 R1 Data: 55155 Expected R1 Data: 55155 R2 Sel: 7 R2 Data:  5947 Expected R2 data:  5947 W Sel: 1 W Data: 54414 W Enable: 1
+# Cycle:  401 R1 Sel: 1 R1 Data: 54414 Expected R1 Data: 54414 R2 Sel: 3 R2 Data: 26162 Expected R2 data: 26162 W Sel: 3 W Data: 26162 W Enable: 1
+# FYI: Read/write of same port in cycle  401
+# Cycle:  402 R1 Sel: 7 R1 Data:  5947 Expected R1 Data:  5947 R2 Sel: 5 R2 Data: 22758 Expected R2 data: 22758 W Sel: 7 W Data: 45104 W Enable: 0
+# Cycle:  403 R1 Sel: 4 R1 Data: 43820 Expected R1 Data: 43820 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 5 W Data: 50111 W Enable: 1
+# FYI: Both read ports are same in cycle  403
+# Cycle:  404 R1 Sel: 4 R1 Data: 43820 Expected R1 Data: 43820 R2 Sel: 6 R2 Data: 15968 Expected R2 data: 15968 W Sel: 2 W Data: 22791 W Enable: 0
+# Cycle:  405 R1 Sel: 5 R1 Data: 50111 Expected R1 Data: 50111 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 0 W Data: 50370 W Enable: 0
+# Cycle:  406 R1 Sel: 1 R1 Data: 54414 Expected R1 Data: 54414 R2 Sel: 2 R2 Data: 55155 Expected R2 data: 55155 W Sel: 1 W Data: 51022 W Enable: 0
+# Cycle:  407 R1 Sel: 5 R1 Data: 50111 Expected R1 Data: 50111 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 0 W Data: 10812 W Enable: 0
+# Cycle:  408 R1 Sel: 3 R1 Data: 26162 Expected R1 Data: 26162 R2 Sel: 2 R2 Data: 55155 Expected R2 data: 55155 W Sel: 1 W Data: 40701 W Enable: 0
+# Cycle:  409 R1 Sel: 1 R1 Data: 54414 Expected R1 Data: 54414 R2 Sel: 7 R2 Data:  5947 Expected R2 data:  5947 W Sel: 1 W Data: 13959 W Enable: 0
+# Cycle:  410 R1 Sel: 1 R1 Data: 54414 Expected R1 Data: 54414 R2 Sel: 5 R2 Data: 50111 Expected R2 data: 50111 W Sel: 2 W Data: 37536 W Enable: 0
+# Cycle:  411 R1 Sel: 4 R1 Data: 43820 Expected R1 Data: 43820 R2 Sel: 1 R2 Data: 34063 Expected R2 data: 34063 W Sel: 1 W Data: 34063 W Enable: 1
+# FYI: Read/write of same port in cycle  411
+# Cycle:  412 R1 Sel: 1 R1 Data: 34063 Expected R1 Data: 34063 R2 Sel: 6 R2 Data: 15968 Expected R2 data: 15968 W Sel: 2 W Data: 49165 W Enable: 1
+# Cycle:  413 R1 Sel: 0 R1 Data: 13316 Expected R1 Data: 13316 R2 Sel: 5 R2 Data: 50111 Expected R2 data: 50111 W Sel: 0 W Data: 60130 W Enable: 0
+# Cycle:  414 R1 Sel: 5 R1 Data: 50111 Expected R1 Data: 50111 R2 Sel: 3 R2 Data: 26162 Expected R2 data: 26162 W Sel: 5 W Data:  4696 W Enable: 0
+# Cycle:  415 R1 Sel: 5 R1 Data: 50111 Expected R1 Data: 50111 R2 Sel: 5 R2 Data: 50111 Expected R2 data: 50111 W Sel: 5 W Data: 24241 W Enable: 0
+# FYI: Both read ports are same in cycle  415
+# Cycle:  416 R1 Sel: 0 R1 Data: 39957 Expected R1 Data: 39957 R2 Sel: 0 R2 Data: 39957 Expected R2 data: 39957 W Sel: 0 W Data: 39957 W Enable: 1
+# FYI: Both read ports are same in cycle  416
+# FYI: Read/write of same port in cycle  416
+# Cycle:  417 R1 Sel: 2 R1 Data: 49165 Expected R1 Data: 49165 R2 Sel: 4 R2 Data: 43820 Expected R2 data: 43820 W Sel: 0 W Data: 52993 W Enable: 1
+# Cycle:  418 R1 Sel: 2 R1 Data: 49165 Expected R1 Data: 49165 R2 Sel: 6 R2 Data: 15968 Expected R2 data: 15968 W Sel: 4 W Data:   165 W Enable: 1
+# Cycle:  419 R1 Sel: 0 R1 Data: 52993 Expected R1 Data: 52993 R2 Sel: 0 R2 Data: 52993 Expected R2 data: 52993 W Sel: 3 W Data:  1259 W Enable: 1
+# FYI: Both read ports are same in cycle  419
+# Cycle:  420 R1 Sel: 5 R1 Data: 50111 Expected R1 Data: 50111 R2 Sel: 4 R2 Data:   165 Expected R2 data:   165 W Sel: 7 W Data: 51805 W Enable: 1
+# Cycle:  421 R1 Sel: 6 R1 Data: 15968 Expected R1 Data: 15968 R2 Sel: 2 R2 Data: 49165 Expected R2 data: 49165 W Sel: 6 W Data: 35500 W Enable: 0
+# Cycle:  422 R1 Sel: 2 R1 Data: 49165 Expected R1 Data: 49165 R2 Sel: 7 R2 Data: 51805 Expected R2 data: 51805 W Sel: 6 W Data: 55388 W Enable: 0
+# Cycle:  423 R1 Sel: 0 R1 Data: 33316 Expected R1 Data: 33316 R2 Sel: 5 R2 Data: 50111 Expected R2 data: 50111 W Sel: 0 W Data: 33316 W Enable: 1
+# FYI: Read/write of same port in cycle  423
+# Cycle:  424 R1 Sel: 0 R1 Data: 33316 Expected R1 Data: 33316 R2 Sel: 7 R2 Data: 51805 Expected R2 data: 51805 W Sel: 2 W Data: 44248 W Enable: 1
+# Cycle:  425 R1 Sel: 2 R1 Data: 44248 Expected R1 Data: 44248 R2 Sel: 4 R2 Data:   165 Expected R2 data:   165 W Sel: 6 W Data: 35954 W Enable: 1
+# Cycle:  426 R1 Sel: 6 R1 Data: 35954 Expected R1 Data: 35954 R2 Sel: 3 R2 Data:  1259 Expected R2 data:  1259 W Sel: 2 W Data: 55398 W Enable: 1
+# Cycle:  427 R1 Sel: 0 R1 Data: 33316 Expected R1 Data: 33316 R2 Sel: 6 R2 Data: 35954 Expected R2 data: 35954 W Sel: 1 W Data: 42373 W Enable: 1
+# Cycle:  428 R1 Sel: 0 R1 Data: 33316 Expected R1 Data: 33316 R2 Sel: 6 R2 Data: 35954 Expected R2 data: 35954 W Sel: 5 W Data: 22845 W Enable: 1
+# Cycle:  429 R1 Sel: 6 R1 Data: 35954 Expected R1 Data: 35954 R2 Sel: 1 R2 Data: 42373 Expected R2 data: 42373 W Sel: 3 W Data:   279 W Enable: 1
+# Cycle:  430 R1 Sel: 2 R1 Data: 55398 Expected R1 Data: 55398 R2 Sel: 4 R2 Data: 64356 Expected R2 data: 64356 W Sel: 4 W Data: 64356 W Enable: 1
+# FYI: Read/write of same port in cycle  430
+# Cycle:  431 R1 Sel: 7 R1 Data: 62628 Expected R1 Data: 62628 R2 Sel: 3 R2 Data:   279 Expected R2 data:   279 W Sel: 7 W Data: 62628 W Enable: 1
+# FYI: Read/write of same port in cycle  431
+# Cycle:  432 R1 Sel: 2 R1 Data: 55398 Expected R1 Data: 55398 R2 Sel: 2 R2 Data: 55398 Expected R2 data: 55398 W Sel: 6 W Data: 44828 W Enable: 0
+# FYI: Both read ports are same in cycle  432
+# Cycle:  433 R1 Sel: 5 R1 Data: 22845 Expected R1 Data: 22845 R2 Sel: 2 R2 Data: 55398 Expected R2 data: 55398 W Sel: 0 W Data: 54160 W Enable: 0
+# Cycle:  434 R1 Sel: 0 R1 Data: 33316 Expected R1 Data: 33316 R2 Sel: 2 R2 Data: 55398 Expected R2 data: 55398 W Sel: 0 W Data: 64148 W Enable: 0
+# Cycle:  435 R1 Sel: 0 R1 Data: 33316 Expected R1 Data: 33316 R2 Sel: 0 R2 Data: 33316 Expected R2 data: 33316 W Sel: 5 W Data: 49836 W Enable: 0
+# FYI: Both read ports are same in cycle  435
+# Cycle:  436 R1 Sel: 0 R1 Data: 33316 Expected R1 Data: 33316 R2 Sel: 4 R2 Data: 64356 Expected R2 data: 64356 W Sel: 6 W Data: 19400 W Enable: 1
+# Cycle:  437 R1 Sel: 3 R1 Data:   279 Expected R1 Data:   279 R2 Sel: 0 R2 Data: 33316 Expected R2 data: 33316 W Sel: 7 W Data: 44144 W Enable: 1
+# Cycle:  438 R1 Sel: 0 R1 Data: 33316 Expected R1 Data: 33316 R2 Sel: 7 R2 Data: 44144 Expected R2 data: 44144 W Sel: 0 W Data: 22108 W Enable: 0
+# Cycle:  439 R1 Sel: 6 R1 Data: 19400 Expected R1 Data: 19400 R2 Sel: 1 R2 Data: 42373 Expected R2 data: 42373 W Sel: 4 W Data:  5821 W Enable: 1
+# Cycle:  440 R1 Sel: 5 R1 Data: 22845 Expected R1 Data: 22845 R2 Sel: 5 R2 Data: 22845 Expected R2 data: 22845 W Sel: 3 W Data: 33827 W Enable: 0
+# FYI: Both read ports are same in cycle  440
+# Cycle:  441 R1 Sel: 2 R1 Data: 55398 Expected R1 Data: 55398 R2 Sel: 4 R2 Data:  5821 Expected R2 data:  5821 W Sel: 7 W Data: 65298 W Enable: 0
+# Cycle:  442 R1 Sel: 5 R1 Data: 22845 Expected R1 Data: 22845 R2 Sel: 1 R2 Data: 42373 Expected R2 data: 42373 W Sel: 3 W Data: 18555 W Enable: 1
+# Cycle:  443 R1 Sel: 2 R1 Data: 55398 Expected R1 Data: 55398 R2 Sel: 0 R2 Data: 33316 Expected R2 data: 33316 W Sel: 2 W Data: 48768 W Enable: 0
+# Cycle:  444 R1 Sel: 6 R1 Data: 19400 Expected R1 Data: 19400 R2 Sel: 3 R2 Data: 18555 Expected R2 data: 18555 W Sel: 3 W Data: 32308 W Enable: 0
+# Cycle:  445 R1 Sel: 1 R1 Data: 42373 Expected R1 Data: 42373 R2 Sel: 0 R2 Data: 33316 Expected R2 data: 33316 W Sel: 1 W Data: 61541 W Enable: 0
+# Cycle:  446 R1 Sel: 6 R1 Data: 19400 Expected R1 Data: 19400 R2 Sel: 5 R2 Data: 22845 Expected R2 data: 22845 W Sel: 3 W Data: 53080 W Enable: 1
+# Cycle:  447 R1 Sel: 2 R1 Data: 55398 Expected R1 Data: 55398 R2 Sel: 2 R2 Data: 55398 Expected R2 data: 55398 W Sel: 0 W Data: 18330 W Enable: 0
+# FYI: Both read ports are same in cycle  447
+# Cycle:  448 R1 Sel: 7 R1 Data: 44144 Expected R1 Data: 44144 R2 Sel: 0 R2 Data: 33316 Expected R2 data: 33316 W Sel: 2 W Data:  3986 W Enable: 0
+# Cycle:  449 R1 Sel: 5 R1 Data: 22845 Expected R1 Data: 22845 R2 Sel: 5 R2 Data: 22845 Expected R2 data: 22845 W Sel: 3 W Data: 28840 W Enable: 0
+# FYI: Both read ports are same in cycle  449
+# Cycle:  450 R1 Sel: 4 R1 Data:  5821 Expected R1 Data:  5821 R2 Sel: 6 R2 Data: 19400 Expected R2 data: 19400 W Sel: 5 W Data: 41836 W Enable: 0
+# Cycle:  451 R1 Sel: 1 R1 Data: 42373 Expected R1 Data: 42373 R2 Sel: 0 R2 Data: 33316 Expected R2 data: 33316 W Sel: 2 W Data: 64007 W Enable: 0
+# Cycle:  452 R1 Sel: 5 R1 Data: 22845 Expected R1 Data: 22845 R2 Sel: 6 R2 Data: 19400 Expected R2 data: 19400 W Sel: 6 W Data: 54651 W Enable: 0
+# Cycle:  453 R1 Sel: 6 R1 Data: 19400 Expected R1 Data: 19400 R2 Sel: 7 R2 Data: 44144 Expected R2 data: 44144 W Sel: 5 W Data: 11503 W Enable: 0
+# Cycle:  454 R1 Sel: 1 R1 Data: 42373 Expected R1 Data: 42373 R2 Sel: 0 R2 Data: 33316 Expected R2 data: 33316 W Sel: 2 W Data: 16685 W Enable: 1
+# Cycle:  455 R1 Sel: 5 R1 Data: 22845 Expected R1 Data: 22845 R2 Sel: 3 R2 Data: 53080 Expected R2 data: 53080 W Sel: 7 W Data: 59142 W Enable: 0
+# Cycle:  456 R1 Sel: 6 R1 Data: 19400 Expected R1 Data: 19400 R2 Sel: 1 R2 Data: 42373 Expected R2 data: 42373 W Sel: 5 W Data: 10950 W Enable: 1
+# Cycle:  457 R1 Sel: 4 R1 Data:  5821 Expected R1 Data:  5821 R2 Sel: 2 R2 Data: 16685 Expected R2 data: 16685 W Sel: 0 W Data: 36054 W Enable: 1
+# Cycle:  458 R1 Sel: 3 R1 Data: 53080 Expected R1 Data: 53080 R2 Sel: 0 R2 Data: 59279 Expected R2 data: 59279 W Sel: 0 W Data: 59279 W Enable: 1
+# FYI: Read/write of same port in cycle  458
+# Cycle:  459 R1 Sel: 5 R1 Data: 10950 Expected R1 Data: 10950 R2 Sel: 0 R2 Data: 59279 Expected R2 data: 59279 W Sel: 2 W Data: 55196 W Enable: 0
+# Cycle:  460 R1 Sel: 2 R1 Data: 16685 Expected R1 Data: 16685 R2 Sel: 7 R2 Data: 44144 Expected R2 data: 44144 W Sel: 4 W Data: 12127 W Enable: 1
+# Cycle:  461 R1 Sel: 7 R1 Data: 44144 Expected R1 Data: 44144 R2 Sel: 7 R2 Data: 44144 Expected R2 data: 44144 W Sel: 4 W Data: 48160 W Enable: 1
+# FYI: Both read ports are same in cycle  461
+# Cycle:  462 R1 Sel: 5 R1 Data: 10950 Expected R1 Data: 10950 R2 Sel: 4 R2 Data: 48160 Expected R2 data: 48160 W Sel: 4 W Data: 36466 W Enable: 0
+# Cycle:  463 R1 Sel: 4 R1 Data: 48160 Expected R1 Data: 48160 R2 Sel: 6 R2 Data: 19400 Expected R2 data: 19400 W Sel: 4 W Data: 21843 W Enable: 0
+# Cycle:  464 R1 Sel: 2 R1 Data: 16685 Expected R1 Data: 16685 R2 Sel: 7 R2 Data: 44144 Expected R2 data: 44144 W Sel: 1 W Data: 47761 W Enable: 1
+# Cycle:  465 R1 Sel: 1 R1 Data: 47761 Expected R1 Data: 47761 R2 Sel: 5 R2 Data: 10950 Expected R2 data: 10950 W Sel: 7 W Data: 44469 W Enable: 1
+# Cycle:  466 R1 Sel: 3 R1 Data: 53080 Expected R1 Data: 53080 R2 Sel: 1 R2 Data: 62482 Expected R2 data: 62482 W Sel: 1 W Data: 62482 W Enable: 1
+# FYI: Read/write of same port in cycle  466
+# Cycle:  467 R1 Sel: 5 R1 Data: 10950 Expected R1 Data: 10950 R2 Sel: 4 R2 Data: 48160 Expected R2 data: 48160 W Sel: 4 W Data: 45382 W Enable: 0
+# Cycle:  468 R1 Sel: 4 R1 Data: 48160 Expected R1 Data: 48160 R2 Sel: 0 R2 Data: 27346 Expected R2 data: 27346 W Sel: 0 W Data: 27346 W Enable: 1
+# FYI: Read/write of same port in cycle  468
+# Cycle:  469 R1 Sel: 3 R1 Data:  1737 Expected R1 Data:  1737 R2 Sel: 0 R2 Data: 27346 Expected R2 data: 27346 W Sel: 3 W Data:  1737 W Enable: 1
+# FYI: Read/write of same port in cycle  469
+# Cycle:  470 R1 Sel: 6 R1 Data: 19400 Expected R1 Data: 19400 R2 Sel: 5 R2 Data: 10950 Expected R2 data: 10950 W Sel: 4 W Data: 38879 W Enable: 0
+# Cycle:  471 R1 Sel: 6 R1 Data: 19400 Expected R1 Data: 19400 R2 Sel: 6 R2 Data: 19400 Expected R2 data: 19400 W Sel: 5 W Data: 62233 W Enable: 1
+# FYI: Both read ports are same in cycle  471
+# Cycle:  472 R1 Sel: 2 R1 Data: 16685 Expected R1 Data: 16685 R2 Sel: 0 R2 Data: 27346 Expected R2 data: 27346 W Sel: 7 W Data: 40264 W Enable: 1
+# Cycle:  473 R1 Sel: 3 R1 Data:  1737 Expected R1 Data:  1737 R2 Sel: 7 R2 Data: 40264 Expected R2 data: 40264 W Sel: 4 W Data: 13444 W Enable: 0
+# Cycle:  474 R1 Sel: 2 R1 Data: 16685 Expected R1 Data: 16685 R2 Sel: 2 R2 Data: 16685 Expected R2 data: 16685 W Sel: 1 W Data: 44729 W Enable: 1
+# FYI: Both read ports are same in cycle  474
+# Cycle:  475 R1 Sel: 4 R1 Data: 48160 Expected R1 Data: 48160 R2 Sel: 0 R2 Data: 27346 Expected R2 data: 27346 W Sel: 1 W Data: 59625 W Enable: 0
+# Cycle:  476 R1 Sel: 0 R1 Data: 27346 Expected R1 Data: 27346 R2 Sel: 1 R2 Data: 44729 Expected R2 data: 44729 W Sel: 7 W Data: 27326 W Enable: 1
+# Cycle:  477 R1 Sel: 4 R1 Data: 48160 Expected R1 Data: 48160 R2 Sel: 7 R2 Data: 27326 Expected R2 data: 27326 W Sel: 0 W Data: 26122 W Enable: 1
+# Cycle:  478 R1 Sel: 6 R1 Data: 19400 Expected R1 Data: 19400 R2 Sel: 6 R2 Data: 19400 Expected R2 data: 19400 W Sel: 5 W Data: 14861 W Enable: 1
+# FYI: Both read ports are same in cycle  478
+# Cycle:  479 R1 Sel: 0 R1 Data: 26122 Expected R1 Data: 26122 R2 Sel: 3 R2 Data:  1737 Expected R2 data:  1737 W Sel: 1 W Data:  7899 W Enable: 0
+# Cycle:  480 R1 Sel: 5 R1 Data: 14861 Expected R1 Data: 14861 R2 Sel: 6 R2 Data: 19400 Expected R2 data: 19400 W Sel: 0 W Data: 45379 W Enable: 0
+# Cycle:  481 R1 Sel: 3 R1 Data:  1737 Expected R1 Data:  1737 R2 Sel: 3 R2 Data:  1737 Expected R2 data:  1737 W Sel: 5 W Data: 33838 W Enable: 1
+# FYI: Both read ports are same in cycle  481
+# Cycle:  482 R1 Sel: 5 R1 Data: 33838 Expected R1 Data: 33838 R2 Sel: 0 R2 Data: 26122 Expected R2 data: 26122 W Sel: 4 W Data: 62153 W Enable: 0
+# Cycle:  483 R1 Sel: 0 R1 Data: 26122 Expected R1 Data: 26122 R2 Sel: 3 R2 Data:  1737 Expected R2 data:  1737 W Sel: 5 W Data: 57432 W Enable: 1
+# Cycle:  484 R1 Sel: 1 R1 Data: 44729 Expected R1 Data: 44729 R2 Sel: 1 R2 Data: 44729 Expected R2 data: 44729 W Sel: 3 W Data:  3371 W Enable: 0
+# FYI: Both read ports are same in cycle  484
+# Cycle:  485 R1 Sel: 3 R1 Data:  1737 Expected R1 Data:  1737 R2 Sel: 6 R2 Data: 19400 Expected R2 data: 19400 W Sel: 4 W Data: 15803 W Enable: 1
+# Cycle:  486 R1 Sel: 7 R1 Data: 27326 Expected R1 Data: 27326 R2 Sel: 4 R2 Data: 15803 Expected R2 data: 15803 W Sel: 2 W Data: 22676 W Enable: 1
+# Cycle:  487 R1 Sel: 2 R1 Data: 22676 Expected R1 Data: 22676 R2 Sel: 1 R2 Data: 44729 Expected R2 data: 44729 W Sel: 3 W Data: 14987 W Enable: 1
+# Cycle:  488 R1 Sel: 0 R1 Data: 26122 Expected R1 Data: 26122 R2 Sel: 7 R2 Data: 27326 Expected R2 data: 27326 W Sel: 4 W Data: 56237 W Enable: 0
+# Cycle:  489 R1 Sel: 2 R1 Data: 22676 Expected R1 Data: 22676 R2 Sel: 3 R2 Data: 14987 Expected R2 data: 14987 W Sel: 1 W Data: 64155 W Enable: 1
+# Cycle:  490 R1 Sel: 2 R1 Data: 22676 Expected R1 Data: 22676 R2 Sel: 1 R2 Data: 41819 Expected R2 data: 41819 W Sel: 1 W Data: 41819 W Enable: 1
+# FYI: Read/write of same port in cycle  490
+# Cycle:  491 R1 Sel: 1 R1 Data: 63818 Expected R1 Data: 63818 R2 Sel: 3 R2 Data: 14987 Expected R2 data: 14987 W Sel: 1 W Data: 63818 W Enable: 1
+# FYI: Read/write of same port in cycle  491
+# Cycle:  492 R1 Sel: 1 R1 Data: 63818 Expected R1 Data: 63818 R2 Sel: 2 R2 Data: 22676 Expected R2 data: 22676 W Sel: 5 W Data: 13000 W Enable: 1
+# Cycle:  493 R1 Sel: 5 R1 Data: 13000 Expected R1 Data: 13000 R2 Sel: 0 R2 Data: 26122 Expected R2 data: 26122 W Sel: 1 W Data: 60343 W Enable: 1
+# Cycle:  494 R1 Sel: 2 R1 Data: 22676 Expected R1 Data: 22676 R2 Sel: 6 R2 Data: 53386 Expected R2 data: 53386 W Sel: 6 W Data: 53386 W Enable: 1
+# FYI: Read/write of same port in cycle  494
+# Cycle:  495 R1 Sel: 1 R1 Data: 60343 Expected R1 Data: 60343 R2 Sel: 0 R2 Data: 26122 Expected R2 data: 26122 W Sel: 0 W Data: 42730 W Enable: 0
+# Cycle:  496 R1 Sel: 6 R1 Data: 53386 Expected R1 Data: 53386 R2 Sel: 1 R2 Data: 60343 Expected R2 data: 60343 W Sel: 3 W Data: 62911 W Enable: 0
+# Cycle:  497 R1 Sel: 3 R1 Data: 14987 Expected R1 Data: 14987 R2 Sel: 6 R2 Data: 53386 Expected R2 data: 53386 W Sel: 0 W Data: 63729 W Enable: 1
+# Cycle:  498 R1 Sel: 2 R1 Data: 22676 Expected R1 Data: 22676 R2 Sel: 7 R2 Data: 27326 Expected R2 data: 27326 W Sel: 5 W Data: 40713 W Enable: 1
+# Cycle:  499 R1 Sel: 3 R1 Data: 14987 Expected R1 Data: 14987 R2 Sel: 5 R2 Data: 40713 Expected R2 data: 40713 W Sel: 2 W Data: 36653 W Enable: 1
+# Cycle:  500 R1 Sel: 6 R1 Data: 53386 Expected R1 Data: 53386 R2 Sel: 5 R2 Data: 40713 Expected R2 data: 40713 W Sel: 7 W Data: 48333 W Enable: 1
+# Cycle:  501 R1 Sel: 2 R1 Data: 36653 Expected R1 Data: 36653 R2 Sel: 4 R2 Data: 15803 Expected R2 data: 15803 W Sel: 7 W Data: 53253 W Enable: 1
+# Cycle:  502 R1 Sel: 0 R1 Data: 63729 Expected R1 Data: 63729 R2 Sel: 1 R2 Data: 60343 Expected R2 data: 60343 W Sel: 2 W Data: 34400 W Enable: 0
+# Cycle:  503 R1 Sel: 6 R1 Data: 53386 Expected R1 Data: 53386 R2 Sel: 3 R2 Data: 14987 Expected R2 data: 14987 W Sel: 7 W Data: 48846 W Enable: 1
+# Cycle:  504 R1 Sel: 2 R1 Data: 57941 Expected R1 Data: 57941 R2 Sel: 7 R2 Data: 48846 Expected R2 data: 48846 W Sel: 2 W Data: 57941 W Enable: 1
+# FYI: Read/write of same port in cycle  504
+# Cycle:  505 R1 Sel: 1 R1 Data: 60343 Expected R1 Data: 60343 R2 Sel: 1 R2 Data: 60343 Expected R2 data: 60343 W Sel: 6 W Data: 56494 W Enable: 1
+# FYI: Both read ports are same in cycle  505
+# Cycle:  506 R1 Sel: 1 R1 Data: 60343 Expected R1 Data: 60343 R2 Sel: 5 R2 Data: 40713 Expected R2 data: 40713 W Sel: 7 W Data: 50431 W Enable: 0
+# Cycle:  507 R1 Sel: 7 R1 Data: 48846 Expected R1 Data: 48846 R2 Sel: 5 R2 Data: 40713 Expected R2 data: 40713 W Sel: 4 W Data:  1239 W Enable: 0
+# Cycle:  508 R1 Sel: 3 R1 Data: 14987 Expected R1 Data: 14987 R2 Sel: 1 R2 Data: 60343 Expected R2 data: 60343 W Sel: 3 W Data: 34632 W Enable: 0
+# Cycle:  509 R1 Sel: 4 R1 Data: 15803 Expected R1 Data: 15803 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 6 W Data: 19944 W Enable: 1
+# FYI: Read/write of same port in cycle  509
+# Cycle:  510 R1 Sel: 2 R1 Data: 57941 Expected R1 Data: 57941 R2 Sel: 0 R2 Data: 63729 Expected R2 data: 63729 W Sel: 4 W Data: 21799 W Enable: 1
+# Cycle:  511 R1 Sel: 3 R1 Data: 14987 Expected R1 Data: 14987 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 2 W Data: 59459 W Enable: 1
+# Cycle:  512 R1 Sel: 1 R1 Data: 60343 Expected R1 Data: 60343 R2 Sel: 0 R2 Data: 63729 Expected R2 data: 63729 W Sel: 5 W Data: 34281 W Enable: 0
+# Cycle:  513 R1 Sel: 1 R1 Data: 60343 Expected R1 Data: 60343 R2 Sel: 7 R2 Data: 48846 Expected R2 data: 48846 W Sel: 2 W Data:  2466 W Enable: 1
+# Cycle:  514 R1 Sel: 3 R1 Data: 62823 Expected R1 Data: 62823 R2 Sel: 4 R2 Data: 21799 Expected R2 data: 21799 W Sel: 3 W Data: 62823 W Enable: 1
+# FYI: Read/write of same port in cycle  514
+# Cycle:  515 R1 Sel: 0 R1 Data: 63729 Expected R1 Data: 63729 R2 Sel: 4 R2 Data: 21799 Expected R2 data: 21799 W Sel: 7 W Data: 47130 W Enable: 1
+# Cycle:  516 R1 Sel: 2 R1 Data:  2466 Expected R1 Data:  2466 R2 Sel: 3 R2 Data: 62823 Expected R2 data: 62823 W Sel: 2 W Data: 30657 W Enable: 0
+# Cycle:  517 R1 Sel: 0 R1 Data: 63729 Expected R1 Data: 63729 R2 Sel: 0 R2 Data: 63729 Expected R2 data: 63729 W Sel: 2 W Data: 49092 W Enable: 0
+# FYI: Both read ports are same in cycle  517
+# Cycle:  518 R1 Sel: 4 R1 Data: 21799 Expected R1 Data: 21799 R2 Sel: 5 R2 Data: 40713 Expected R2 data: 40713 W Sel: 7 W Data:  8488 W Enable: 1
+# Cycle:  519 R1 Sel: 3 R1 Data: 62823 Expected R1 Data: 62823 R2 Sel: 5 R2 Data: 40713 Expected R2 data: 40713 W Sel: 2 W Data: 32654 W Enable: 0
+# Cycle:  520 R1 Sel: 3 R1 Data: 62823 Expected R1 Data: 62823 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 1 W Data: 47330 W Enable: 0
+# Cycle:  521 R1 Sel: 3 R1 Data: 62823 Expected R1 Data: 62823 R2 Sel: 4 R2 Data: 56012 Expected R2 data: 56012 W Sel: 4 W Data: 56012 W Enable: 1
+# FYI: Read/write of same port in cycle  521
+# Cycle:  522 R1 Sel: 0 R1 Data: 63729 Expected R1 Data: 63729 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 5 W Data:  4411 W Enable: 1
+# Cycle:  523 R1 Sel: 7 R1 Data:  8488 Expected R1 Data:  8488 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 0 W Data:  2873 W Enable: 0
+# Cycle:  524 R1 Sel: 3 R1 Data: 62823 Expected R1 Data: 62823 R2 Sel: 5 R2 Data:  4411 Expected R2 data:  4411 W Sel: 1 W Data: 26688 W Enable: 0
+# Cycle:  525 R1 Sel: 7 R1 Data:  8488 Expected R1 Data:  8488 R2 Sel: 4 R2 Data: 56012 Expected R2 data: 56012 W Sel: 6 W Data: 35311 W Enable: 0
+# Cycle:  526 R1 Sel: 0 R1 Data: 63729 Expected R1 Data: 63729 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 7 W Data: 50664 W Enable: 0
+# Cycle:  527 R1 Sel: 0 R1 Data: 58899 Expected R1 Data: 58899 R2 Sel: 5 R2 Data:  4411 Expected R2 data:  4411 W Sel: 0 W Data: 58899 W Enable: 1
+# FYI: Read/write of same port in cycle  527
+# Cycle:  528 R1 Sel: 6 R1 Data: 19944 Expected R1 Data: 19944 R2 Sel: 5 R2 Data:  4411 Expected R2 data:  4411 W Sel: 1 W Data: 24658 W Enable: 0
+# Cycle:  529 R1 Sel: 3 R1 Data: 62823 Expected R1 Data: 62823 R2 Sel: 0 R2 Data: 58899 Expected R2 data: 58899 W Sel: 2 W Data: 46095 W Enable: 0
+# Cycle:  530 R1 Sel: 6 R1 Data: 19944 Expected R1 Data: 19944 R2 Sel: 2 R2 Data:  2466 Expected R2 data:  2466 W Sel: 3 W Data: 63857 W Enable: 1
+# Cycle:  531 R1 Sel: 1 R1 Data: 60343 Expected R1 Data: 60343 R2 Sel: 3 R2 Data: 63857 Expected R2 data: 63857 W Sel: 5 W Data: 23608 W Enable: 0
+# Cycle:  532 R1 Sel: 4 R1 Data: 56012 Expected R1 Data: 56012 R2 Sel: 5 R2 Data:  4411 Expected R2 data:  4411 W Sel: 2 W Data: 15543 W Enable: 1
+# Cycle:  533 R1 Sel: 7 R1 Data:  2134 Expected R1 Data:  2134 R2 Sel: 0 R2 Data: 58899 Expected R2 data: 58899 W Sel: 7 W Data:  2134 W Enable: 1
+# FYI: Read/write of same port in cycle  533
+# Cycle:  534 R1 Sel: 2 R1 Data: 15543 Expected R1 Data: 15543 R2 Sel: 5 R2 Data: 10115 Expected R2 data: 10115 W Sel: 5 W Data: 10115 W Enable: 1
+# FYI: Read/write of same port in cycle  534
+# Cycle:  535 R1 Sel: 5 R1 Data: 10115 Expected R1 Data: 10115 R2 Sel: 2 R2 Data: 15543 Expected R2 data: 15543 W Sel: 4 W Data: 32020 W Enable: 0
+# Cycle:  536 R1 Sel: 6 R1 Data: 19944 Expected R1 Data: 19944 R2 Sel: 3 R2 Data: 63857 Expected R2 data: 63857 W Sel: 0 W Data: 23309 W Enable: 1
+# Cycle:  537 R1 Sel: 0 R1 Data: 23309 Expected R1 Data: 23309 R2 Sel: 3 R2 Data: 63857 Expected R2 data: 63857 W Sel: 4 W Data: 62679 W Enable: 0
+# Cycle:  538 R1 Sel: 1 R1 Data: 60343 Expected R1 Data: 60343 R2 Sel: 4 R2 Data: 56012 Expected R2 data: 56012 W Sel: 0 W Data: 35724 W Enable: 1
+# Cycle:  539 R1 Sel: 2 R1 Data: 15543 Expected R1 Data: 15543 R2 Sel: 5 R2 Data: 10115 Expected R2 data: 10115 W Sel: 1 W Data:  3600 W Enable: 1
+# Cycle:  540 R1 Sel: 2 R1 Data: 15543 Expected R1 Data: 15543 R2 Sel: 4 R2 Data: 56012 Expected R2 data: 56012 W Sel: 3 W Data: 54470 W Enable: 0
+# Cycle:  541 R1 Sel: 6 R1 Data: 19944 Expected R1 Data: 19944 R2 Sel: 1 R2 Data:  3600 Expected R2 data:  3600 W Sel: 4 W Data: 41229 W Enable: 1
+# Cycle:  542 R1 Sel: 3 R1 Data: 63857 Expected R1 Data: 63857 R2 Sel: 4 R2 Data: 41229 Expected R2 data: 41229 W Sel: 2 W Data:  8559 W Enable: 0
+# Cycle:  543 R1 Sel: 2 R1 Data: 15543 Expected R1 Data: 15543 R2 Sel: 2 R2 Data: 15543 Expected R2 data: 15543 W Sel: 2 W Data: 41045 W Enable: 0
+# FYI: Both read ports are same in cycle  543
+# Cycle:  544 R1 Sel: 0 R1 Data: 35724 Expected R1 Data: 35724 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 3 W Data: 34587 W Enable: 1
+# Cycle:  545 R1 Sel: 0 R1 Data: 35724 Expected R1 Data: 35724 R2 Sel: 7 R2 Data: 64395 Expected R2 data: 64395 W Sel: 7 W Data: 64395 W Enable: 1
+# FYI: Read/write of same port in cycle  545
+# Cycle:  546 R1 Sel: 5 R1 Data: 10115 Expected R1 Data: 10115 R2 Sel: 4 R2 Data: 41229 Expected R2 data: 41229 W Sel: 2 W Data: 42891 W Enable: 0
+# Cycle:  547 R1 Sel: 7 R1 Data: 64395 Expected R1 Data: 64395 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 4 W Data: 32706 W Enable: 1
+# Cycle:  548 R1 Sel: 3 R1 Data: 34587 Expected R1 Data: 34587 R2 Sel: 3 R2 Data: 34587 Expected R2 data: 34587 W Sel: 4 W Data:  4070 W Enable: 1
+# FYI: Both read ports are same in cycle  548
+# Cycle:  549 R1 Sel: 5 R1 Data: 10115 Expected R1 Data: 10115 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 7 W Data: 45496 W Enable: 1
+# Cycle:  550 R1 Sel: 1 R1 Data:  3600 Expected R1 Data:  3600 R2 Sel: 2 R2 Data: 15543 Expected R2 data: 15543 W Sel: 7 W Data: 39064 W Enable: 0
+# Cycle:  551 R1 Sel: 3 R1 Data: 46242 Expected R1 Data: 46242 R2 Sel: 5 R2 Data: 10115 Expected R2 data: 10115 W Sel: 3 W Data: 46242 W Enable: 1
+# FYI: Read/write of same port in cycle  551
+# Cycle:  552 R1 Sel: 2 R1 Data: 15543 Expected R1 Data: 15543 R2 Sel: 3 R2 Data: 46242 Expected R2 data: 46242 W Sel: 5 W Data: 51091 W Enable: 1
+# Cycle:  553 R1 Sel: 2 R1 Data: 15543 Expected R1 Data: 15543 R2 Sel: 3 R2 Data: 11245 Expected R2 data: 11245 W Sel: 3 W Data: 11245 W Enable: 1
+# FYI: Read/write of same port in cycle  553
+# Cycle:  554 R1 Sel: 1 R1 Data:  3600 Expected R1 Data:  3600 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 2 W Data: 12089 W Enable: 0
+# Cycle:  555 R1 Sel: 0 R1 Data: 35724 Expected R1 Data: 35724 R2 Sel: 2 R2 Data: 15543 Expected R2 data: 15543 W Sel: 1 W Data:  3403 W Enable: 1
+# Cycle:  556 R1 Sel: 1 R1 Data:  3403 Expected R1 Data:  3403 R2 Sel: 5 R2 Data: 51091 Expected R2 data: 51091 W Sel: 7 W Data: 52712 W Enable: 0
+# Cycle:  557 R1 Sel: 5 R1 Data: 51091 Expected R1 Data: 51091 R2 Sel: 3 R2 Data: 11245 Expected R2 data: 11245 W Sel: 2 W Data: 38868 W Enable: 0
+# Cycle:  558 R1 Sel: 6 R1 Data: 19944 Expected R1 Data: 19944 R2 Sel: 4 R2 Data:  4070 Expected R2 data:  4070 W Sel: 5 W Data: 26849 W Enable: 1
+# Cycle:  559 R1 Sel: 1 R1 Data:  3403 Expected R1 Data:  3403 R2 Sel: 1 R2 Data:  3403 Expected R2 data:  3403 W Sel: 2 W Data:  5678 W Enable: 1
+# FYI: Both read ports are same in cycle  559
+# Cycle:  560 R1 Sel: 7 R1 Data: 45496 Expected R1 Data: 45496 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 4 W Data: 64208 W Enable: 1
+# Cycle:  561 R1 Sel: 6 R1 Data: 19944 Expected R1 Data: 19944 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 0 W Data: 56914 W Enable: 1
+# FYI: Both read ports are same in cycle  561
+# Cycle:  562 R1 Sel: 0 R1 Data: 56914 Expected R1 Data: 56914 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 5 W Data:   728 W Enable: 1
+# Cycle:  563 R1 Sel: 1 R1 Data:  3403 Expected R1 Data:  3403 R2 Sel: 3 R2 Data: 11245 Expected R2 data: 11245 W Sel: 7 W Data:  6775 W Enable: 0
+# Cycle:  564 R1 Sel: 2 R1 Data:  5678 Expected R1 Data:  5678 R2 Sel: 4 R2 Data: 64208 Expected R2 data: 64208 W Sel: 7 W Data: 60903 W Enable: 1
+# Cycle:  565 R1 Sel: 6 R1 Data: 19944 Expected R1 Data: 19944 R2 Sel: 3 R2 Data: 11245 Expected R2 data: 11245 W Sel: 6 W Data: 46054 W Enable: 0
+# Cycle:  566 R1 Sel: 3 R1 Data: 11245 Expected R1 Data: 11245 R2 Sel: 7 R2 Data: 60903 Expected R2 data: 60903 W Sel: 1 W Data: 30209 W Enable: 1
+# Cycle:  567 R1 Sel: 2 R1 Data:  5678 Expected R1 Data:  5678 R2 Sel: 4 R2 Data: 64208 Expected R2 data: 64208 W Sel: 0 W Data: 10456 W Enable: 1
+# Cycle:  568 R1 Sel: 6 R1 Data: 19944 Expected R1 Data: 19944 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 7 W Data:   266 W Enable: 1
+# FYI: Both read ports are same in cycle  568
+# Cycle:  569 R1 Sel: 6 R1 Data: 19944 Expected R1 Data: 19944 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 5 W Data: 31680 W Enable: 1
+# FYI: Both read ports are same in cycle  569
+# Cycle:  570 R1 Sel: 3 R1 Data: 11245 Expected R1 Data: 11245 R2 Sel: 2 R2 Data:  5678 Expected R2 data:  5678 W Sel: 6 W Data:   308 W Enable: 0
+# Cycle:  571 R1 Sel: 3 R1 Data: 11245 Expected R1 Data: 11245 R2 Sel: 2 R2 Data:  5678 Expected R2 data:  5678 W Sel: 6 W Data:  2449 W Enable: 0
+# Cycle:  572 R1 Sel: 2 R1 Data:  5678 Expected R1 Data:  5678 R2 Sel: 3 R2 Data: 11245 Expected R2 data: 11245 W Sel: 3 W Data: 20871 W Enable: 0
+# Cycle:  573 R1 Sel: 5 R1 Data: 31680 Expected R1 Data: 31680 R2 Sel: 5 R2 Data: 31680 Expected R2 data: 31680 W Sel: 4 W Data: 26498 W Enable: 0
+# FYI: Both read ports are same in cycle  573
+# Cycle:  574 R1 Sel: 4 R1 Data: 64208 Expected R1 Data: 64208 R2 Sel: 6 R2 Data: 19944 Expected R2 data: 19944 W Sel: 1 W Data: 40388 W Enable: 1
+# Cycle:  575 R1 Sel: 0 R1 Data: 10456 Expected R1 Data: 10456 R2 Sel: 0 R2 Data: 10456 Expected R2 data: 10456 W Sel: 3 W Data: 18510 W Enable: 0
+# FYI: Both read ports are same in cycle  575
+# Cycle:  576 R1 Sel: 1 R1 Data: 40388 Expected R1 Data: 40388 R2 Sel: 0 R2 Data: 10456 Expected R2 data: 10456 W Sel: 6 W Data: 47946 W Enable: 0
+# Cycle:  577 R1 Sel: 3 R1 Data: 11245 Expected R1 Data: 11245 R2 Sel: 1 R2 Data: 40388 Expected R2 data: 40388 W Sel: 7 W Data: 24295 W Enable: 0
+# Cycle:  578 R1 Sel: 7 R1 Data:   266 Expected R1 Data:   266 R2 Sel: 1 R2 Data: 40388 Expected R2 data: 40388 W Sel: 2 W Data:  2320 W Enable: 1
+# Cycle:  579 R1 Sel: 0 R1 Data: 13818 Expected R1 Data: 13818 R2 Sel: 3 R2 Data: 11245 Expected R2 data: 11245 W Sel: 0 W Data: 13818 W Enable: 1
+# FYI: Read/write of same port in cycle  579
+# Cycle:  580 R1 Sel: 4 R1 Data: 64208 Expected R1 Data: 64208 R2 Sel: 0 R2 Data: 13818 Expected R2 data: 13818 W Sel: 5 W Data: 55453 W Enable: 1
+# Cycle:  581 R1 Sel: 5 R1 Data: 55453 Expected R1 Data: 55453 R2 Sel: 4 R2 Data: 64208 Expected R2 data: 64208 W Sel: 2 W Data:  4155 W Enable: 0
+# Cycle:  582 R1 Sel: 7 R1 Data:   266 Expected R1 Data:   266 R2 Sel: 4 R2 Data: 64208 Expected R2 data: 64208 W Sel: 3 W Data: 49577 W Enable: 0
+# Cycle:  583 R1 Sel: 6 R1 Data: 19944 Expected R1 Data: 19944 R2 Sel: 5 R2 Data: 55453 Expected R2 data: 55453 W Sel: 4 W Data: 55313 W Enable: 0
+# Cycle:  584 R1 Sel: 3 R1 Data: 11245 Expected R1 Data: 11245 R2 Sel: 5 R2 Data: 55453 Expected R2 data: 55453 W Sel: 2 W Data:  1735 W Enable: 0
+# Cycle:  585 R1 Sel: 6 R1 Data: 19944 Expected R1 Data: 19944 R2 Sel: 4 R2 Data: 64208 Expected R2 data: 64208 W Sel: 1 W Data: 59899 W Enable: 0
+# Cycle:  586 R1 Sel: 0 R1 Data: 13818 Expected R1 Data: 13818 R2 Sel: 7 R2 Data:   266 Expected R2 data:   266 W Sel: 6 W Data: 65015 W Enable: 1
+# Cycle:  587 R1 Sel: 0 R1 Data: 13818 Expected R1 Data: 13818 R2 Sel: 7 R2 Data:   266 Expected R2 data:   266 W Sel: 6 W Data:   153 W Enable: 0
+# Cycle:  588 R1 Sel: 1 R1 Data: 24890 Expected R1 Data: 24890 R2 Sel: 6 R2 Data: 65015 Expected R2 data: 65015 W Sel: 1 W Data: 24890 W Enable: 1
+# FYI: Read/write of same port in cycle  588
+# Cycle:  589 R1 Sel: 7 R1 Data:   266 Expected R1 Data:   266 R2 Sel: 6 R2 Data: 65015 Expected R2 data: 65015 W Sel: 1 W Data:  4968 W Enable: 0
+# Cycle:  590 R1 Sel: 4 R1 Data: 64208 Expected R1 Data: 64208 R2 Sel: 5 R2 Data: 48609 Expected R2 data: 48609 W Sel: 5 W Data: 48609 W Enable: 1
+# FYI: Read/write of same port in cycle  590
+# Cycle:  591 R1 Sel: 7 R1 Data:   266 Expected R1 Data:   266 R2 Sel: 7 R2 Data:   266 Expected R2 data:   266 W Sel: 3 W Data: 14163 W Enable: 0
+# FYI: Both read ports are same in cycle  591
+# Cycle:  592 R1 Sel: 2 R1 Data: 50323 Expected R1 Data: 50323 R2 Sel: 7 R2 Data:   266 Expected R2 data:   266 W Sel: 2 W Data: 50323 W Enable: 1
+# FYI: Read/write of same port in cycle  592
+# Cycle:  593 R1 Sel: 4 R1 Data: 64208 Expected R1 Data: 64208 R2 Sel: 4 R2 Data: 64208 Expected R2 data: 64208 W Sel: 0 W Data: 31604 W Enable: 1
+# FYI: Both read ports are same in cycle  593
+# Cycle:  594 R1 Sel: 4 R1 Data: 64208 Expected R1 Data: 64208 R2 Sel: 0 R2 Data: 31604 Expected R2 data: 31604 W Sel: 2 W Data: 48231 W Enable: 1
+# Cycle:  595 R1 Sel: 3 R1 Data: 11245 Expected R1 Data: 11245 R2 Sel: 5 R2 Data: 48609 Expected R2 data: 48609 W Sel: 7 W Data: 51761 W Enable: 1
+# Cycle:  596 R1 Sel: 7 R1 Data: 51761 Expected R1 Data: 51761 R2 Sel: 5 R2 Data: 48609 Expected R2 data: 48609 W Sel: 3 W Data: 52749 W Enable: 1
+# Cycle:  597 R1 Sel: 5 R1 Data: 48609 Expected R1 Data: 48609 R2 Sel: 3 R2 Data: 52749 Expected R2 data: 52749 W Sel: 0 W Data: 52436 W Enable: 0
+# Cycle:  598 R1 Sel: 5 R1 Data: 48609 Expected R1 Data: 48609 R2 Sel: 3 R2 Data: 52749 Expected R2 data: 52749 W Sel: 2 W Data: 30637 W Enable: 1
+# Cycle:  599 R1 Sel: 3 R1 Data: 52749 Expected R1 Data: 52749 R2 Sel: 2 R2 Data: 30637 Expected R2 data: 30637 W Sel: 5 W Data: 50370 W Enable: 0
+# Cycle:  600 R1 Sel: 3 R1 Data: 52749 Expected R1 Data: 52749 R2 Sel: 0 R2 Data: 31604 Expected R2 data: 31604 W Sel: 4 W Data: 55740 W Enable: 0
+# Cycle:  601 R1 Sel: 7 R1 Data: 29601 Expected R1 Data: 29601 R2 Sel: 2 R2 Data: 30637 Expected R2 data: 30637 W Sel: 7 W Data: 29601 W Enable: 1
+# FYI: Read/write of same port in cycle  601
+# Cycle:  602 R1 Sel: 6 R1 Data: 65015 Expected R1 Data: 65015 R2 Sel: 3 R2 Data: 52749 Expected R2 data: 52749 W Sel: 4 W Data: 10085 W Enable: 0
+# Cycle:  603 R1 Sel: 0 R1 Data: 31604 Expected R1 Data: 31604 R2 Sel: 1 R2 Data: 62353 Expected R2 data: 62353 W Sel: 1 W Data: 62353 W Enable: 1
+# FYI: Read/write of same port in cycle  603
+# Cycle:  604 R1 Sel: 5 R1 Data: 48609 Expected R1 Data: 48609 R2 Sel: 7 R2 Data: 29601 Expected R2 data: 29601 W Sel: 6 W Data: 65326 W Enable: 1
+# Cycle:  605 R1 Sel: 4 R1 Data: 64208 Expected R1 Data: 64208 R2 Sel: 4 R2 Data: 64208 Expected R2 data: 64208 W Sel: 0 W Data: 40005 W Enable: 0
+# FYI: Both read ports are same in cycle  605
+# Cycle:  606 R1 Sel: 1 R1 Data: 62353 Expected R1 Data: 62353 R2 Sel: 0 R2 Data: 31604 Expected R2 data: 31604 W Sel: 2 W Data: 51488 W Enable: 0
+# Cycle:  607 R1 Sel: 5 R1 Data: 48609 Expected R1 Data: 48609 R2 Sel: 7 R2 Data: 29601 Expected R2 data: 29601 W Sel: 6 W Data: 57380 W Enable: 0
+# Cycle:  608 R1 Sel: 2 R1 Data: 30637 Expected R1 Data: 30637 R2 Sel: 6 R2 Data: 65326 Expected R2 data: 65326 W Sel: 1 W Data:  7614 W Enable: 0
+# Cycle:  609 R1 Sel: 6 R1 Data: 65326 Expected R1 Data: 65326 R2 Sel: 5 R2 Data: 48609 Expected R2 data: 48609 W Sel: 7 W Data: 13099 W Enable: 0
+# Cycle:  610 R1 Sel: 1 R1 Data: 62353 Expected R1 Data: 62353 R2 Sel: 4 R2 Data: 64208 Expected R2 data: 64208 W Sel: 3 W Data:  7017 W Enable: 0
+# Cycle:  611 R1 Sel: 0 R1 Data: 31604 Expected R1 Data: 31604 R2 Sel: 5 R2 Data: 48609 Expected R2 data: 48609 W Sel: 0 W Data: 56231 W Enable: 0
+# Cycle:  612 R1 Sel: 0 R1 Data: 31604 Expected R1 Data: 31604 R2 Sel: 0 R2 Data: 31604 Expected R2 data: 31604 W Sel: 5 W Data: 53571 W Enable: 0
+# FYI: Both read ports are same in cycle  612
+# Cycle:  613 R1 Sel: 1 R1 Data: 62353 Expected R1 Data: 62353 R2 Sel: 2 R2 Data: 30637 Expected R2 data: 30637 W Sel: 2 W Data: 58347 W Enable: 0
+# Cycle:  614 R1 Sel: 0 R1 Data: 31604 Expected R1 Data: 31604 R2 Sel: 3 R2 Data: 52749 Expected R2 data: 52749 W Sel: 3 W Data: 38970 W Enable: 0
+# Cycle:  615 R1 Sel: 6 R1 Data: 60893 Expected R1 Data: 60893 R2 Sel: 4 R2 Data: 64208 Expected R2 data: 64208 W Sel: 6 W Data: 60893 W Enable: 1
+# FYI: Read/write of same port in cycle  615
+# Cycle:  616 R1 Sel: 2 R1 Data: 30637 Expected R1 Data: 30637 R2 Sel: 1 R2 Data: 62353 Expected R2 data: 62353 W Sel: 1 W Data: 30043 W Enable: 0
+# Cycle:  617 R1 Sel: 1 R1 Data: 62353 Expected R1 Data: 62353 R2 Sel: 3 R2 Data: 52749 Expected R2 data: 52749 W Sel: 0 W Data:  6251 W Enable: 0
+# Cycle:  618 R1 Sel: 1 R1 Data: 62353 Expected R1 Data: 62353 R2 Sel: 2 R2 Data: 30637 Expected R2 data: 30637 W Sel: 0 W Data: 31405 W Enable: 1
+# Cycle:  619 R1 Sel: 1 R1 Data: 58230 Expected R1 Data: 58230 R2 Sel: 6 R2 Data: 60893 Expected R2 data: 60893 W Sel: 1 W Data: 58230 W Enable: 1
+# FYI: Read/write of same port in cycle  619
+# Cycle:  620 R1 Sel: 4 R1 Data: 64208 Expected R1 Data: 64208 R2 Sel: 4 R2 Data: 64208 Expected R2 data: 64208 W Sel: 6 W Data:  9990 W Enable: 1
+# FYI: Both read ports are same in cycle  620
+# Cycle:  621 R1 Sel: 4 R1 Data: 64208 Expected R1 Data: 64208 R2 Sel: 3 R2 Data: 52749 Expected R2 data: 52749 W Sel: 1 W Data:   424 W Enable: 1
+# Cycle:  622 R1 Sel: 7 R1 Data: 29601 Expected R1 Data: 29601 R2 Sel: 7 R2 Data: 29601 Expected R2 data: 29601 W Sel: 5 W Data: 49516 W Enable: 0
+# FYI: Both read ports are same in cycle  622
+# Cycle:  623 R1 Sel: 1 R1 Data:   424 Expected R1 Data:   424 R2 Sel: 3 R2 Data: 52749 Expected R2 data: 52749 W Sel: 7 W Data: 18004 W Enable: 1
+# Cycle:  624 R1 Sel: 2 R1 Data: 30637 Expected R1 Data: 30637 R2 Sel: 5 R2 Data: 48609 Expected R2 data: 48609 W Sel: 3 W Data: 49615 W Enable: 1
+# Cycle:  625 R1 Sel: 3 R1 Data: 34726 Expected R1 Data: 34726 R2 Sel: 4 R2 Data: 64208 Expected R2 data: 64208 W Sel: 3 W Data: 34726 W Enable: 1
+# FYI: Read/write of same port in cycle  625
+# Cycle:  626 R1 Sel: 4 R1 Data: 64208 Expected R1 Data: 64208 R2 Sel: 6 R2 Data:  9949 Expected R2 data:  9949 W Sel: 6 W Data:  9949 W Enable: 1
+# FYI: Read/write of same port in cycle  626
+# Cycle:  627 R1 Sel: 6 R1 Data:  9949 Expected R1 Data:  9949 R2 Sel: 6 R2 Data:  9949 Expected R2 data:  9949 W Sel: 5 W Data: 27111 W Enable: 1
+# FYI: Both read ports are same in cycle  627
+# Cycle:  628 R1 Sel: 7 R1 Data: 18004 Expected R1 Data: 18004 R2 Sel: 0 R2 Data: 31405 Expected R2 data: 31405 W Sel: 5 W Data: 57135 W Enable: 0
+# Cycle:  629 R1 Sel: 2 R1 Data: 30637 Expected R1 Data: 30637 R2 Sel: 6 R2 Data:  9949 Expected R2 data:  9949 W Sel: 0 W Data: 21819 W Enable: 1
+# Cycle:  630 R1 Sel: 7 R1 Data: 18004 Expected R1 Data: 18004 R2 Sel: 4 R2 Data: 64208 Expected R2 data: 64208 W Sel: 2 W Data:  9585 W Enable: 0
+# Cycle:  631 R1 Sel: 1 R1 Data:   424 Expected R1 Data:   424 R2 Sel: 7 R2 Data: 18004 Expected R2 data: 18004 W Sel: 7 W Data: 20784 W Enable: 0
+# Cycle:  632 R1 Sel: 6 R1 Data:  9949 Expected R1 Data:  9949 R2 Sel: 5 R2 Data: 27111 Expected R2 data: 27111 W Sel: 4 W Data: 56943 W Enable: 0
+# Cycle:  633 R1 Sel: 0 R1 Data: 55850 Expected R1 Data: 55850 R2 Sel: 1 R2 Data:   424 Expected R2 data:   424 W Sel: 0 W Data: 55850 W Enable: 1
+# FYI: Read/write of same port in cycle  633
+# Cycle:  634 R1 Sel: 3 R1 Data: 34726 Expected R1 Data: 34726 R2 Sel: 2 R2 Data: 30637 Expected R2 data: 30637 W Sel: 5 W Data: 64549 W Enable: 1
+# Cycle:  635 R1 Sel: 0 R1 Data: 55850 Expected R1 Data: 55850 R2 Sel: 0 R2 Data: 55850 Expected R2 data: 55850 W Sel: 1 W Data: 52604 W Enable: 1
+# FYI: Both read ports are same in cycle  635
+# Cycle:  636 R1 Sel: 6 R1 Data:  9949 Expected R1 Data:  9949 R2 Sel: 0 R2 Data: 55850 Expected R2 data: 55850 W Sel: 3 W Data: 55993 W Enable: 0
+# Cycle:  637 R1 Sel: 7 R1 Data: 18004 Expected R1 Data: 18004 R2 Sel: 3 R2 Data: 34726 Expected R2 data: 34726 W Sel: 0 W Data: 16718 W Enable: 1
+# Cycle:  638 R1 Sel: 5 R1 Data: 64549 Expected R1 Data: 64549 R2 Sel: 3 R2 Data: 34726 Expected R2 data: 34726 W Sel: 7 W Data: 42130 W Enable: 0
+# Cycle:  639 R1 Sel: 4 R1 Data: 64208 Expected R1 Data: 64208 R2 Sel: 6 R2 Data:  9949 Expected R2 data:  9949 W Sel: 4 W Data: 26754 W Enable: 0
+# Cycle:  640 R1 Sel: 3 R1 Data: 34726 Expected R1 Data: 34726 R2 Sel: 6 R2 Data:  9949 Expected R2 data:  9949 W Sel: 7 W Data: 45207 W Enable: 0
+# Cycle:  641 R1 Sel: 1 R1 Data: 52604 Expected R1 Data: 52604 R2 Sel: 1 R2 Data: 52604 Expected R2 data: 52604 W Sel: 4 W Data: 30278 W Enable: 1
+# FYI: Both read ports are same in cycle  641
+# Cycle:  642 R1 Sel: 0 R1 Data: 16718 Expected R1 Data: 16718 R2 Sel: 7 R2 Data: 18004 Expected R2 data: 18004 W Sel: 6 W Data: 56738 W Enable: 0
+# Cycle:  643 R1 Sel: 2 R1 Data: 30637 Expected R1 Data: 30637 R2 Sel: 6 R2 Data:  9949 Expected R2 data:  9949 W Sel: 7 W Data: 29155 W Enable: 1
+# Cycle:  644 R1 Sel: 7 R1 Data: 64393 Expected R1 Data: 64393 R2 Sel: 2 R2 Data: 30637 Expected R2 data: 30637 W Sel: 7 W Data: 64393 W Enable: 1
+# FYI: Read/write of same port in cycle  644
+# Cycle:  645 R1 Sel: 3 R1 Data: 34726 Expected R1 Data: 34726 R2 Sel: 2 R2 Data: 30637 Expected R2 data: 30637 W Sel: 7 W Data:  9566 W Enable: 1
+# Cycle:  646 R1 Sel: 3 R1 Data: 34726 Expected R1 Data: 34726 R2 Sel: 6 R2 Data:  8003 Expected R2 data:  8003 W Sel: 6 W Data:  8003 W Enable: 1
+# FYI: Read/write of same port in cycle  646
+# Cycle:  647 R1 Sel: 6 R1 Data:  8003 Expected R1 Data:  8003 R2 Sel: 7 R2 Data:  9566 Expected R2 data:  9566 W Sel: 6 W Data: 61890 W Enable: 0
+# Cycle:  648 R1 Sel: 4 R1 Data: 30278 Expected R1 Data: 30278 R2 Sel: 5 R2 Data: 64549 Expected R2 data: 64549 W Sel: 2 W Data:  5125 W Enable: 0
+# Cycle:  649 R1 Sel: 3 R1 Data: 34726 Expected R1 Data: 34726 R2 Sel: 7 R2 Data:  9566 Expected R2 data:  9566 W Sel: 2 W Data: 47143 W Enable: 1
+# Cycle:  650 R1 Sel: 1 R1 Data: 52604 Expected R1 Data: 52604 R2 Sel: 6 R2 Data:  8003 Expected R2 data:  8003 W Sel: 0 W Data: 43309 W Enable: 0
+# Cycle:  651 R1 Sel: 4 R1 Data: 30278 Expected R1 Data: 30278 R2 Sel: 0 R2 Data: 16718 Expected R2 data: 16718 W Sel: 3 W Data: 46442 W Enable: 1
+# Cycle:  652 R1 Sel: 0 R1 Data: 16718 Expected R1 Data: 16718 R2 Sel: 5 R2 Data: 64549 Expected R2 data: 64549 W Sel: 6 W Data:  7029 W Enable: 0
+# Cycle:  653 R1 Sel: 5 R1 Data: 64549 Expected R1 Data: 64549 R2 Sel: 3 R2 Data: 46442 Expected R2 data: 46442 W Sel: 0 W Data: 24198 W Enable: 0
+# Cycle:  654 R1 Sel: 0 R1 Data: 16718 Expected R1 Data: 16718 R2 Sel: 2 R2 Data: 47143 Expected R2 data: 47143 W Sel: 3 W Data: 29728 W Enable: 1
+# Cycle:  655 R1 Sel: 2 R1 Data: 47143 Expected R1 Data: 47143 R2 Sel: 7 R2 Data:  9566 Expected R2 data:  9566 W Sel: 3 W Data: 18616 W Enable: 1
+# Cycle:  656 R1 Sel: 1 R1 Data: 52604 Expected R1 Data: 52604 R2 Sel: 2 R2 Data: 47143 Expected R2 data: 47143 W Sel: 6 W Data: 60305 W Enable: 0
+# Cycle:  657 R1 Sel: 2 R1 Data: 47143 Expected R1 Data: 47143 R2 Sel: 1 R2 Data: 52604 Expected R2 data: 52604 W Sel: 3 W Data:   403 W Enable: 1
+# Cycle:  658 R1 Sel: 0 R1 Data: 16718 Expected R1 Data: 16718 R2 Sel: 5 R2 Data: 16529 Expected R2 data: 16529 W Sel: 5 W Data: 16529 W Enable: 1
+# FYI: Read/write of same port in cycle  658
+# Cycle:  659 R1 Sel: 3 R1 Data:   403 Expected R1 Data:   403 R2 Sel: 5 R2 Data: 16529 Expected R2 data: 16529 W Sel: 1 W Data: 63056 W Enable: 1
+# Cycle:  660 R1 Sel: 1 R1 Data: 63056 Expected R1 Data: 63056 R2 Sel: 3 R2 Data:   403 Expected R2 data:   403 W Sel: 4 W Data:  8621 W Enable: 1
+# Cycle:  661 R1 Sel: 3 R1 Data:   403 Expected R1 Data:   403 R2 Sel: 1 R2 Data: 63056 Expected R2 data: 63056 W Sel: 2 W Data: 20268 W Enable: 0
+# Cycle:  662 R1 Sel: 6 R1 Data:  8003 Expected R1 Data:  8003 R2 Sel: 0 R2 Data: 16718 Expected R2 data: 16718 W Sel: 7 W Data: 34129 W Enable: 0
+# Cycle:  663 R1 Sel: 1 R1 Data: 63056 Expected R1 Data: 63056 R2 Sel: 3 R2 Data:   403 Expected R2 data:   403 W Sel: 7 W Data: 52281 W Enable: 1
+# Cycle:  664 R1 Sel: 5 R1 Data: 16529 Expected R1 Data: 16529 R2 Sel: 6 R2 Data:  8003 Expected R2 data:  8003 W Sel: 5 W Data:  5188 W Enable: 0
+# Cycle:  665 R1 Sel: 5 R1 Data: 16529 Expected R1 Data: 16529 R2 Sel: 3 R2 Data:   403 Expected R2 data:   403 W Sel: 6 W Data: 45699 W Enable: 1
+# Cycle:  666 R1 Sel: 1 R1 Data: 63056 Expected R1 Data: 63056 R2 Sel: 2 R2 Data: 47143 Expected R2 data: 47143 W Sel: 3 W Data: 33296 W Enable: 0
+# Cycle:  667 R1 Sel: 1 R1 Data: 39418 Expected R1 Data: 39418 R2 Sel: 2 R2 Data: 47143 Expected R2 data: 47143 W Sel: 1 W Data: 39418 W Enable: 1
+# FYI: Read/write of same port in cycle  667
+# Cycle:  668 R1 Sel: 3 R1 Data:   403 Expected R1 Data:   403 R2 Sel: 6 R2 Data: 45699 Expected R2 data: 45699 W Sel: 3 W Data: 59517 W Enable: 0
+# Cycle:  669 R1 Sel: 2 R1 Data: 47143 Expected R1 Data: 47143 R2 Sel: 6 R2 Data: 45699 Expected R2 data: 45699 W Sel: 7 W Data: 22412 W Enable: 0
+# Cycle:  670 R1 Sel: 2 R1 Data: 47143 Expected R1 Data: 47143 R2 Sel: 2 R2 Data: 47143 Expected R2 data: 47143 W Sel: 1 W Data: 12612 W Enable: 1
+# FYI: Both read ports are same in cycle  670
+# Cycle:  671 R1 Sel: 3 R1 Data:   403 Expected R1 Data:   403 R2 Sel: 5 R2 Data: 16529 Expected R2 data: 16529 W Sel: 6 W Data: 58061 W Enable: 1
+# Cycle:  672 R1 Sel: 1 R1 Data: 12612 Expected R1 Data: 12612 R2 Sel: 2 R2 Data: 47143 Expected R2 data: 47143 W Sel: 4 W Data: 29387 W Enable: 0
+# Cycle:  673 R1 Sel: 2 R1 Data: 47143 Expected R1 Data: 47143 R2 Sel: 5 R2 Data: 16529 Expected R2 data: 16529 W Sel: 2 W Data: 10398 W Enable: 0
+# Cycle:  674 R1 Sel: 2 R1 Data: 47143 Expected R1 Data: 47143 R2 Sel: 2 R2 Data: 47143 Expected R2 data: 47143 W Sel: 4 W Data: 20061 W Enable: 1
+# FYI: Both read ports are same in cycle  674
+# Cycle:  675 R1 Sel: 4 R1 Data: 20061 Expected R1 Data: 20061 R2 Sel: 3 R2 Data:   403 Expected R2 data:   403 W Sel: 0 W Data: 63492 W Enable: 0
+# Cycle:  676 R1 Sel: 3 R1 Data:   403 Expected R1 Data:   403 R2 Sel: 5 R2 Data: 16529 Expected R2 data: 16529 W Sel: 5 W Data: 21371 W Enable: 0
+# Cycle:  677 R1 Sel: 5 R1 Data: 16529 Expected R1 Data: 16529 R2 Sel: 7 R2 Data: 52281 Expected R2 data: 52281 W Sel: 0 W Data: 54559 W Enable: 1
+# Cycle:  678 R1 Sel: 2 R1 Data: 47143 Expected R1 Data: 47143 R2 Sel: 7 R2 Data: 52281 Expected R2 data: 52281 W Sel: 4 W Data: 22224 W Enable: 0
+# Cycle:  679 R1 Sel: 3 R1 Data:   403 Expected R1 Data:   403 R2 Sel: 3 R2 Data:   403 Expected R2 data:   403 W Sel: 4 W Data: 58675 W Enable: 0
+# FYI: Both read ports are same in cycle  679
+# Cycle:  680 R1 Sel: 4 R1 Data: 20061 Expected R1 Data: 20061 R2 Sel: 7 R2 Data: 58195 Expected R2 data: 58195 W Sel: 7 W Data: 58195 W Enable: 1
+# FYI: Read/write of same port in cycle  680
+# Cycle:  681 R1 Sel: 4 R1 Data: 20061 Expected R1 Data: 20061 R2 Sel: 4 R2 Data: 20061 Expected R2 data: 20061 W Sel: 3 W Data: 51093 W Enable: 1
+# FYI: Both read ports are same in cycle  681
+# Cycle:  682 R1 Sel: 3 R1 Data: 51093 Expected R1 Data: 51093 R2 Sel: 1 R2 Data: 12612 Expected R2 data: 12612 W Sel: 3 W Data: 34785 W Enable: 0
+# Cycle:  683 R1 Sel: 3 R1 Data: 51093 Expected R1 Data: 51093 R2 Sel: 4 R2 Data: 20061 Expected R2 data: 20061 W Sel: 0 W Data: 30520 W Enable: 1
+# Cycle:  684 R1 Sel: 5 R1 Data: 16529 Expected R1 Data: 16529 R2 Sel: 6 R2 Data: 58061 Expected R2 data: 58061 W Sel: 2 W Data: 16393 W Enable: 1
+# Cycle:  685 R1 Sel: 0 R1 Data: 30520 Expected R1 Data: 30520 R2 Sel: 6 R2 Data: 58061 Expected R2 data: 58061 W Sel: 3 W Data: 10989 W Enable: 1
+# Cycle:  686 R1 Sel: 4 R1 Data: 20061 Expected R1 Data: 20061 R2 Sel: 2 R2 Data: 16393 Expected R2 data: 16393 W Sel: 4 W Data: 55472 W Enable: 0
+# Cycle:  687 R1 Sel: 2 R1 Data: 16393 Expected R1 Data: 16393 R2 Sel: 0 R2 Data: 30520 Expected R2 data: 30520 W Sel: 4 W Data: 14529 W Enable: 1
+# Cycle:  688 R1 Sel: 1 R1 Data: 12612 Expected R1 Data: 12612 R2 Sel: 3 R2 Data: 10989 Expected R2 data: 10989 W Sel: 2 W Data: 18365 W Enable: 1
+# Cycle:  689 R1 Sel: 0 R1 Data: 30520 Expected R1 Data: 30520 R2 Sel: 5 R2 Data: 16529 Expected R2 data: 16529 W Sel: 7 W Data: 60510 W Enable: 0
+# Cycle:  690 R1 Sel: 3 R1 Data: 10989 Expected R1 Data: 10989 R2 Sel: 3 R2 Data: 10989 Expected R2 data: 10989 W Sel: 4 W Data:  2930 W Enable: 1
+# FYI: Both read ports are same in cycle  690
+# Cycle:  691 R1 Sel: 2 R1 Data: 18365 Expected R1 Data: 18365 R2 Sel: 1 R2 Data: 12612 Expected R2 data: 12612 W Sel: 4 W Data: 29787 W Enable: 1
+# Cycle:  692 R1 Sel: 1 R1 Data: 12612 Expected R1 Data: 12612 R2 Sel: 6 R2 Data: 58061 Expected R2 data: 58061 W Sel: 5 W Data: 36924 W Enable: 1
+# Cycle:  693 R1 Sel: 5 R1 Data: 36924 Expected R1 Data: 36924 R2 Sel: 2 R2 Data: 18365 Expected R2 data: 18365 W Sel: 1 W Data: 47280 W Enable: 1
+# Cycle:  694 R1 Sel: 6 R1 Data: 58061 Expected R1 Data: 58061 R2 Sel: 2 R2 Data: 18365 Expected R2 data: 18365 W Sel: 4 W Data: 37989 W Enable: 1
+# Cycle:  695 R1 Sel: 5 R1 Data: 36924 Expected R1 Data: 36924 R2 Sel: 0 R2 Data: 30520 Expected R2 data: 30520 W Sel: 2 W Data: 14763 W Enable: 0
+# Cycle:  696 R1 Sel: 3 R1 Data: 10989 Expected R1 Data: 10989 R2 Sel: 3 R2 Data: 10989 Expected R2 data: 10989 W Sel: 3 W Data: 31797 W Enable: 0
+# FYI: Both read ports are same in cycle  696
+# Cycle:  697 R1 Sel: 3 R1 Data: 10989 Expected R1 Data: 10989 R2 Sel: 2 R2 Data: 18365 Expected R2 data: 18365 W Sel: 1 W Data: 63821 W Enable: 0
+# Cycle:  698 R1 Sel: 0 R1 Data: 30520 Expected R1 Data: 30520 R2 Sel: 6 R2 Data: 58061 Expected R2 data: 58061 W Sel: 1 W Data: 47197 W Enable: 0
+# Cycle:  699 R1 Sel: 0 R1 Data: 30520 Expected R1 Data: 30520 R2 Sel: 4 R2 Data: 37989 Expected R2 data: 37989 W Sel: 2 W Data: 21222 W Enable: 1
+# Cycle:  700 R1 Sel: 4 R1 Data: 37989 Expected R1 Data: 37989 R2 Sel: 3 R2 Data: 10989 Expected R2 data: 10989 W Sel: 5 W Data:  9254 W Enable: 0
+# Cycle:  701 R1 Sel: 1 R1 Data: 47280 Expected R1 Data: 47280 R2 Sel: 1 R2 Data: 47280 Expected R2 data: 47280 W Sel: 5 W Data: 56549 W Enable: 1
+# FYI: Both read ports are same in cycle  701
+# Cycle:  702 R1 Sel: 4 R1 Data: 37989 Expected R1 Data: 37989 R2 Sel: 7 R2 Data: 58195 Expected R2 data: 58195 W Sel: 3 W Data: 27766 W Enable: 0
+# Cycle:  703 R1 Sel: 6 R1 Data: 58061 Expected R1 Data: 58061 R2 Sel: 3 R2 Data: 10989 Expected R2 data: 10989 W Sel: 4 W Data: 19234 W Enable: 1
+# Cycle:  704 R1 Sel: 3 R1 Data: 26156 Expected R1 Data: 26156 R2 Sel: 0 R2 Data: 30520 Expected R2 data: 30520 W Sel: 3 W Data: 26156 W Enable: 1
+# FYI: Read/write of same port in cycle  704
+# Cycle:  705 R1 Sel: 1 R1 Data: 47280 Expected R1 Data: 47280 R2 Sel: 7 R2 Data: 58195 Expected R2 data: 58195 W Sel: 6 W Data: 19729 W Enable: 0
+# Cycle:  706 R1 Sel: 5 R1 Data: 56549 Expected R1 Data: 56549 R2 Sel: 7 R2 Data: 58195 Expected R2 data: 58195 W Sel: 5 W Data: 29143 W Enable: 0
+# Cycle:  707 R1 Sel: 0 R1 Data: 30520 Expected R1 Data: 30520 R2 Sel: 3 R2 Data: 26156 Expected R2 data: 26156 W Sel: 1 W Data: 28564 W Enable: 0
+# Cycle:  708 R1 Sel: 5 R1 Data: 56549 Expected R1 Data: 56549 R2 Sel: 7 R2 Data: 58195 Expected R2 data: 58195 W Sel: 2 W Data: 56188 W Enable: 0
+# Cycle:  709 R1 Sel: 7 R1 Data: 58195 Expected R1 Data: 58195 R2 Sel: 3 R2 Data: 26156 Expected R2 data: 26156 W Sel: 5 W Data: 63414 W Enable: 0
+# Cycle:  710 R1 Sel: 6 R1 Data: 58061 Expected R1 Data: 58061 R2 Sel: 5 R2 Data: 56549 Expected R2 data: 56549 W Sel: 4 W Data: 15881 W Enable: 1
+# Cycle:  711 R1 Sel: 7 R1 Data: 58195 Expected R1 Data: 58195 R2 Sel: 6 R2 Data: 52057 Expected R2 data: 52057 W Sel: 6 W Data: 52057 W Enable: 1
+# FYI: Read/write of same port in cycle  711
+# Cycle:  712 R1 Sel: 7 R1 Data: 58195 Expected R1 Data: 58195 R2 Sel: 3 R2 Data: 26156 Expected R2 data: 26156 W Sel: 2 W Data: 58284 W Enable: 0
+# Cycle:  713 R1 Sel: 6 R1 Data: 52057 Expected R1 Data: 52057 R2 Sel: 7 R2 Data: 58195 Expected R2 data: 58195 W Sel: 3 W Data: 18064 W Enable: 0
+# Cycle:  714 R1 Sel: 3 R1 Data: 26156 Expected R1 Data: 26156 R2 Sel: 3 R2 Data: 26156 Expected R2 data: 26156 W Sel: 1 W Data:  5578 W Enable: 0
+# FYI: Both read ports are same in cycle  714
+# Cycle:  715 R1 Sel: 2 R1 Data: 21222 Expected R1 Data: 21222 R2 Sel: 3 R2 Data: 26156 Expected R2 data: 26156 W Sel: 0 W Data: 10457 W Enable: 0
+# Cycle:  716 R1 Sel: 2 R1 Data: 38297 Expected R1 Data: 38297 R2 Sel: 2 R2 Data: 38297 Expected R2 data: 38297 W Sel: 2 W Data: 38297 W Enable: 1
+# FYI: Both read ports are same in cycle  716
+# FYI: Read/write of same port in cycle  716
+# Cycle:  717 R1 Sel: 5 R1 Data: 56549 Expected R1 Data: 56549 R2 Sel: 4 R2 Data: 15881 Expected R2 data: 15881 W Sel: 7 W Data: 26817 W Enable: 0
+# Cycle:  718 R1 Sel: 4 R1 Data: 15881 Expected R1 Data: 15881 R2 Sel: 7 R2 Data: 60905 Expected R2 data: 60905 W Sel: 7 W Data: 60905 W Enable: 1
+# FYI: Read/write of same port in cycle  718
+# Cycle:  719 R1 Sel: 3 R1 Data: 26156 Expected R1 Data: 26156 R2 Sel: 1 R2 Data: 47280 Expected R2 data: 47280 W Sel: 0 W Data:  6504 W Enable: 1
+# Cycle:  720 R1 Sel: 6 R1 Data: 52057 Expected R1 Data: 52057 R2 Sel: 4 R2 Data: 15881 Expected R2 data: 15881 W Sel: 6 W Data: 53518 W Enable: 0
+# Cycle:  721 R1 Sel: 3 R1 Data: 26156 Expected R1 Data: 26156 R2 Sel: 5 R2 Data: 56549 Expected R2 data: 56549 W Sel: 7 W Data: 18847 W Enable: 1
+# Cycle:  722 R1 Sel: 7 R1 Data: 18847 Expected R1 Data: 18847 R2 Sel: 4 R2 Data: 15881 Expected R2 data: 15881 W Sel: 7 W Data: 33545 W Enable: 0
+# Cycle:  723 R1 Sel: 3 R1 Data: 26156 Expected R1 Data: 26156 R2 Sel: 7 R2 Data: 18847 Expected R2 data: 18847 W Sel: 4 W Data: 58161 W Enable: 1
+# Cycle:  724 R1 Sel: 6 R1 Data: 52057 Expected R1 Data: 52057 R2 Sel: 5 R2 Data: 56549 Expected R2 data: 56549 W Sel: 6 W Data: 13292 W Enable: 0
+# Cycle:  725 R1 Sel: 7 R1 Data: 18847 Expected R1 Data: 18847 R2 Sel: 1 R2 Data: 47280 Expected R2 data: 47280 W Sel: 0 W Data: 37320 W Enable: 1
+# Cycle:  726 R1 Sel: 5 R1 Data: 56549 Expected R1 Data: 56549 R2 Sel: 6 R2 Data: 52057 Expected R2 data: 52057 W Sel: 3 W Data: 21730 W Enable: 0
+# Cycle:  727 R1 Sel: 2 R1 Data: 38670 Expected R1 Data: 38670 R2 Sel: 0 R2 Data: 37320 Expected R2 data: 37320 W Sel: 2 W Data: 38670 W Enable: 1
+# FYI: Read/write of same port in cycle  727
+# Cycle:  728 R1 Sel: 7 R1 Data: 18847 Expected R1 Data: 18847 R2 Sel: 0 R2 Data: 37320 Expected R2 data: 37320 W Sel: 4 W Data:  4885 W Enable: 1
+# Cycle:  729 R1 Sel: 7 R1 Data: 18847 Expected R1 Data: 18847 R2 Sel: 6 R2 Data: 52057 Expected R2 data: 52057 W Sel: 6 W Data: 45215 W Enable: 0
+# Cycle:  730 R1 Sel: 0 R1 Data: 37320 Expected R1 Data: 37320 R2 Sel: 1 R2 Data: 47280 Expected R2 data: 47280 W Sel: 2 W Data: 40153 W Enable: 0
+# Cycle:  731 R1 Sel: 4 R1 Data:  4885 Expected R1 Data:  4885 R2 Sel: 2 R2 Data: 38670 Expected R2 data: 38670 W Sel: 0 W Data: 64856 W Enable: 1
+# Cycle:  732 R1 Sel: 0 R1 Data: 64856 Expected R1 Data: 64856 R2 Sel: 0 R2 Data: 64856 Expected R2 data: 64856 W Sel: 3 W Data: 37050 W Enable: 1
+# FYI: Both read ports are same in cycle  732
+# Cycle:  733 R1 Sel: 7 R1 Data: 18847 Expected R1 Data: 18847 R2 Sel: 0 R2 Data: 64856 Expected R2 data: 64856 W Sel: 4 W Data: 53306 W Enable: 0
+# Cycle:  734 R1 Sel: 5 R1 Data: 56549 Expected R1 Data: 56549 R2 Sel: 5 R2 Data: 56549 Expected R2 data: 56549 W Sel: 5 W Data: 22911 W Enable: 0
+# FYI: Both read ports are same in cycle  734
+# Cycle:  735 R1 Sel: 4 R1 Data:  4885 Expected R1 Data:  4885 R2 Sel: 7 R2 Data: 18847 Expected R2 data: 18847 W Sel: 0 W Data: 41558 W Enable: 0
+# Cycle:  736 R1 Sel: 7 R1 Data: 18847 Expected R1 Data: 18847 R2 Sel: 0 R2 Data: 64856 Expected R2 data: 64856 W Sel: 6 W Data: 35170 W Enable: 0
+# Cycle:  737 R1 Sel: 1 R1 Data: 47280 Expected R1 Data: 47280 R2 Sel: 7 R2 Data: 18847 Expected R2 data: 18847 W Sel: 4 W Data: 57590 W Enable: 1
+# Cycle:  738 R1 Sel: 6 R1 Data: 52057 Expected R1 Data: 52057 R2 Sel: 7 R2 Data: 18847 Expected R2 data: 18847 W Sel: 3 W Data: 17379 W Enable: 0
+# Cycle:  739 R1 Sel: 4 R1 Data: 57590 Expected R1 Data: 57590 R2 Sel: 3 R2 Data: 37050 Expected R2 data: 37050 W Sel: 5 W Data: 54360 W Enable: 1
+# Cycle:  740 R1 Sel: 7 R1 Data: 18847 Expected R1 Data: 18847 R2 Sel: 0 R2 Data: 37958 Expected R2 data: 37958 W Sel: 0 W Data: 37958 W Enable: 1
+# FYI: Read/write of same port in cycle  740
+# Cycle:  741 R1 Sel: 5 R1 Data: 54360 Expected R1 Data: 54360 R2 Sel: 7 R2 Data: 18847 Expected R2 data: 18847 W Sel: 6 W Data: 35229 W Enable: 0
+# Cycle:  742 R1 Sel: 0 R1 Data: 37958 Expected R1 Data: 37958 R2 Sel: 1 R2 Data: 47280 Expected R2 data: 47280 W Sel: 6 W Data: 55083 W Enable: 1
+# Cycle:  743 R1 Sel: 5 R1 Data: 54360 Expected R1 Data: 54360 R2 Sel: 5 R2 Data: 54360 Expected R2 data: 54360 W Sel: 5 W Data: 40728 W Enable: 0
+# FYI: Both read ports are same in cycle  743
+# Cycle:  744 R1 Sel: 2 R1 Data: 38670 Expected R1 Data: 38670 R2 Sel: 1 R2 Data: 47280 Expected R2 data: 47280 W Sel: 3 W Data:  4428 W Enable: 1
+# Cycle:  745 R1 Sel: 1 R1 Data: 47280 Expected R1 Data: 47280 R2 Sel: 5 R2 Data: 54360 Expected R2 data: 54360 W Sel: 7 W Data: 13934 W Enable: 0
+# Cycle:  746 R1 Sel: 5 R1 Data: 54360 Expected R1 Data: 54360 R2 Sel: 3 R2 Data:  4428 Expected R2 data:  4428 W Sel: 0 W Data: 21122 W Enable: 1
+# Cycle:  747 R1 Sel: 2 R1 Data: 38670 Expected R1 Data: 38670 R2 Sel: 5 R2 Data: 54360 Expected R2 data: 54360 W Sel: 6 W Data: 52095 W Enable: 0
+# Cycle:  748 R1 Sel: 0 R1 Data: 21122 Expected R1 Data: 21122 R2 Sel: 7 R2 Data: 18847 Expected R2 data: 18847 W Sel: 6 W Data:  6743 W Enable: 0
+# Cycle:  749 R1 Sel: 4 R1 Data: 57590 Expected R1 Data: 57590 R2 Sel: 4 R2 Data: 57590 Expected R2 data: 57590 W Sel: 2 W Data:  5852 W Enable: 1
+# FYI: Both read ports are same in cycle  749
+# Cycle:  750 R1 Sel: 5 R1 Data: 54360 Expected R1 Data: 54360 R2 Sel: 5 R2 Data: 54360 Expected R2 data: 54360 W Sel: 0 W Data: 45231 W Enable: 0
+# FYI: Both read ports are same in cycle  750
+# Cycle:  751 R1 Sel: 6 R1 Data: 55083 Expected R1 Data: 55083 R2 Sel: 4 R2 Data: 57590 Expected R2 data: 57590 W Sel: 2 W Data: 59484 W Enable: 1
+# Cycle:  752 R1 Sel: 1 R1 Data: 47280 Expected R1 Data: 47280 R2 Sel: 0 R2 Data: 21122 Expected R2 data: 21122 W Sel: 1 W Data: 36120 W Enable: 0
+# Cycle:  753 R1 Sel: 2 R1 Data: 59484 Expected R1 Data: 59484 R2 Sel: 3 R2 Data:  4428 Expected R2 data:  4428 W Sel: 5 W Data:  4971 W Enable: 0
+# Cycle:  754 R1 Sel: 6 R1 Data: 55083 Expected R1 Data: 55083 R2 Sel: 5 R2 Data: 44149 Expected R2 data: 44149 W Sel: 5 W Data: 44149 W Enable: 1
+# FYI: Read/write of same port in cycle  754
+# Cycle:  755 R1 Sel: 7 R1 Data: 18847 Expected R1 Data: 18847 R2 Sel: 7 R2 Data: 18847 Expected R2 data: 18847 W Sel: 2 W Data: 16945 W Enable: 0
+# FYI: Both read ports are same in cycle  755
+# Cycle:  756 R1 Sel: 4 R1 Data: 57590 Expected R1 Data: 57590 R2 Sel: 3 R2 Data:  4428 Expected R2 data:  4428 W Sel: 7 W Data:   549 W Enable: 0
+# Cycle:  757 R1 Sel: 5 R1 Data: 44149 Expected R1 Data: 44149 R2 Sel: 1 R2 Data: 47280 Expected R2 data: 47280 W Sel: 4 W Data: 55917 W Enable: 1
+# Cycle:  758 R1 Sel: 6 R1 Data: 55083 Expected R1 Data: 55083 R2 Sel: 1 R2 Data: 47280 Expected R2 data: 47280 W Sel: 2 W Data: 50193 W Enable: 1
+# Cycle:  759 R1 Sel: 0 R1 Data: 21122 Expected R1 Data: 21122 R2 Sel: 3 R2 Data:  4428 Expected R2 data:  4428 W Sel: 2 W Data: 58272 W Enable: 0
+# Cycle:  760 R1 Sel: 2 R1 Data: 50193 Expected R1 Data: 50193 R2 Sel: 6 R2 Data: 55083 Expected R2 data: 55083 W Sel: 5 W Data: 56204 W Enable: 1
+# Cycle:  761 R1 Sel: 5 R1 Data: 55306 Expected R1 Data: 55306 R2 Sel: 1 R2 Data: 47280 Expected R2 data: 47280 W Sel: 5 W Data: 55306 W Enable: 1
+# FYI: Read/write of same port in cycle  761
+# Cycle:  762 R1 Sel: 1 R1 Data: 47280 Expected R1 Data: 47280 R2 Sel: 7 R2 Data: 18847 Expected R2 data: 18847 W Sel: 0 W Data: 13289 W Enable: 0
+# Cycle:  763 R1 Sel: 4 R1 Data: 55917 Expected R1 Data: 55917 R2 Sel: 1 R2 Data: 47280 Expected R2 data: 47280 W Sel: 2 W Data: 38812 W Enable: 1
+# Cycle:  764 R1 Sel: 7 R1 Data: 18847 Expected R1 Data: 18847 R2 Sel: 4 R2 Data: 55917 Expected R2 data: 55917 W Sel: 2 W Data: 11925 W Enable: 1
+# Cycle:  765 R1 Sel: 0 R1 Data: 21122 Expected R1 Data: 21122 R2 Sel: 6 R2 Data: 55083 Expected R2 data: 55083 W Sel: 6 W Data: 14177 W Enable: 0
+# Cycle:  766 R1 Sel: 0 R1 Data: 21122 Expected R1 Data: 21122 R2 Sel: 4 R2 Data: 55917 Expected R2 data: 55917 W Sel: 3 W Data: 62929 W Enable: 1
+# Cycle:  767 R1 Sel: 2 R1 Data: 60405 Expected R1 Data: 60405 R2 Sel: 1 R2 Data: 47280 Expected R2 data: 47280 W Sel: 2 W Data: 60405 W Enable: 1
+# FYI: Read/write of same port in cycle  767
+# Cycle:  768 R1 Sel: 3 R1 Data: 62929 Expected R1 Data: 62929 R2 Sel: 2 R2 Data: 56300 Expected R2 data: 56300 W Sel: 2 W Data: 56300 W Enable: 1
+# FYI: Read/write of same port in cycle  768
+# Cycle:  769 R1 Sel: 7 R1 Data: 18847 Expected R1 Data: 18847 R2 Sel: 3 R2 Data: 62929 Expected R2 data: 62929 W Sel: 0 W Data: 57883 W Enable: 0
+# Cycle:  770 R1 Sel: 5 R1 Data: 50668 Expected R1 Data: 50668 R2 Sel: 3 R2 Data: 62929 Expected R2 data: 62929 W Sel: 5 W Data: 50668 W Enable: 1
+# FYI: Read/write of same port in cycle  770
+# Cycle:  771 R1 Sel: 4 R1 Data: 55917 Expected R1 Data: 55917 R2 Sel: 5 R2 Data: 50668 Expected R2 data: 50668 W Sel: 7 W Data: 10826 W Enable: 0
+# Cycle:  772 R1 Sel: 2 R1 Data: 56300 Expected R1 Data: 56300 R2 Sel: 5 R2 Data: 50668 Expected R2 data: 50668 W Sel: 1 W Data: 31980 W Enable: 0
+# Cycle:  773 R1 Sel: 7 R1 Data: 18847 Expected R1 Data: 18847 R2 Sel: 6 R2 Data: 55083 Expected R2 data: 55083 W Sel: 1 W Data: 35148 W Enable: 0
+# Cycle:  774 R1 Sel: 1 R1 Data: 47280 Expected R1 Data: 47280 R2 Sel: 2 R2 Data:  8079 Expected R2 data:  8079 W Sel: 2 W Data:  8079 W Enable: 1
+# FYI: Read/write of same port in cycle  774
+# Cycle:  775 R1 Sel: 0 R1 Data: 21122 Expected R1 Data: 21122 R2 Sel: 5 R2 Data: 25354 Expected R2 data: 25354 W Sel: 5 W Data: 25354 W Enable: 1
+# FYI: Read/write of same port in cycle  775
+# Cycle:  776 R1 Sel: 1 R1 Data: 47280 Expected R1 Data: 47280 R2 Sel: 5 R2 Data: 25354 Expected R2 data: 25354 W Sel: 3 W Data: 28235 W Enable: 1
+# Cycle:  777 R1 Sel: 6 R1 Data: 55083 Expected R1 Data: 55083 R2 Sel: 3 R2 Data: 28235 Expected R2 data: 28235 W Sel: 0 W Data: 38393 W Enable: 0
+# Cycle:  778 R1 Sel: 5 R1 Data: 25354 Expected R1 Data: 25354 R2 Sel: 0 R2 Data: 21122 Expected R2 data: 21122 W Sel: 6 W Data: 16441 W Enable: 1
+# Cycle:  779 R1 Sel: 5 R1 Data: 25354 Expected R1 Data: 25354 R2 Sel: 3 R2 Data: 28235 Expected R2 data: 28235 W Sel: 3 W Data: 24467 W Enable: 0
+# Cycle:  780 R1 Sel: 4 R1 Data: 55917 Expected R1 Data: 55917 R2 Sel: 0 R2 Data: 21122 Expected R2 data: 21122 W Sel: 6 W Data: 53197 W Enable: 1
+# Cycle:  781 R1 Sel: 6 R1 Data: 53197 Expected R1 Data: 53197 R2 Sel: 7 R2 Data: 18847 Expected R2 data: 18847 W Sel: 1 W Data: 13074 W Enable: 1
+# Cycle:  782 R1 Sel: 6 R1 Data: 53197 Expected R1 Data: 53197 R2 Sel: 5 R2 Data: 25354 Expected R2 data: 25354 W Sel: 6 W Data:  9727 W Enable: 0
+# Cycle:  783 R1 Sel: 3 R1 Data: 28235 Expected R1 Data: 28235 R2 Sel: 7 R2 Data: 18847 Expected R2 data: 18847 W Sel: 1 W Data: 43015 W Enable: 0
+# Cycle:  784 R1 Sel: 5 R1 Data: 25354 Expected R1 Data: 25354 R2 Sel: 2 R2 Data:  8079 Expected R2 data:  8079 W Sel: 3 W Data: 30279 W Enable: 1
+# Cycle:  785 R1 Sel: 4 R1 Data: 55917 Expected R1 Data: 55917 R2 Sel: 1 R2 Data: 13074 Expected R2 data: 13074 W Sel: 0 W Data: 20042 W Enable: 0
+# Cycle:  786 R1 Sel: 1 R1 Data: 13074 Expected R1 Data: 13074 R2 Sel: 4 R2 Data: 55917 Expected R2 data: 55917 W Sel: 0 W Data: 34412 W Enable: 1
+# Cycle:  787 R1 Sel: 5 R1 Data: 25354 Expected R1 Data: 25354 R2 Sel: 7 R2 Data: 18847 Expected R2 data: 18847 W Sel: 6 W Data: 37107 W Enable: 0
+# Cycle:  788 R1 Sel: 0 R1 Data: 34412 Expected R1 Data: 34412 R2 Sel: 2 R2 Data:  8079 Expected R2 data:  8079 W Sel: 4 W Data:   676 W Enable: 1
+# Cycle:  789 R1 Sel: 6 R1 Data: 38032 Expected R1 Data: 38032 R2 Sel: 2 R2 Data:  8079 Expected R2 data:  8079 W Sel: 6 W Data: 38032 W Enable: 1
+# FYI: Read/write of same port in cycle  789
+# Cycle:  790 R1 Sel: 0 R1 Data: 34412 Expected R1 Data: 34412 R2 Sel: 6 R2 Data: 38032 Expected R2 data: 38032 W Sel: 4 W Data: 58452 W Enable: 1
+# Cycle:  791 R1 Sel: 5 R1 Data: 25354 Expected R1 Data: 25354 R2 Sel: 4 R2 Data: 58452 Expected R2 data: 58452 W Sel: 6 W Data:  7767 W Enable: 1
+# Cycle:  792 R1 Sel: 4 R1 Data: 58452 Expected R1 Data: 58452 R2 Sel: 6 R2 Data:  7767 Expected R2 data:  7767 W Sel: 3 W Data: 53277 W Enable: 0
+# Cycle:  793 R1 Sel: 2 R1 Data:  8079 Expected R1 Data:  8079 R2 Sel: 3 R2 Data: 30279 Expected R2 data: 30279 W Sel: 3 W Data: 28310 W Enable: 0
+# Cycle:  794 R1 Sel: 3 R1 Data: 30279 Expected R1 Data: 30279 R2 Sel: 3 R2 Data: 30279 Expected R2 data: 30279 W Sel: 7 W Data: 30858 W Enable: 1
+# FYI: Both read ports are same in cycle  794
+# Cycle:  795 R1 Sel: 5 R1 Data:  8505 Expected R1 Data:  8505 R2 Sel: 5 R2 Data:  8505 Expected R2 data:  8505 W Sel: 5 W Data:  8505 W Enable: 1
+# FYI: Both read ports are same in cycle  795
+# FYI: Read/write of same port in cycle  795
+# Cycle:  796 R1 Sel: 7 R1 Data: 64365 Expected R1 Data: 64365 R2 Sel: 1 R2 Data: 13074 Expected R2 data: 13074 W Sel: 7 W Data: 64365 W Enable: 1
+# FYI: Read/write of same port in cycle  796
+# Cycle:  797 R1 Sel: 7 R1 Data: 64365 Expected R1 Data: 64365 R2 Sel: 0 R2 Data: 34412 Expected R2 data: 34412 W Sel: 4 W Data:  3369 W Enable: 1
+# Cycle:  798 R1 Sel: 0 R1 Data: 34412 Expected R1 Data: 34412 R2 Sel: 1 R2 Data: 13074 Expected R2 data: 13074 W Sel: 4 W Data: 16629 W Enable: 0
+# Cycle:  799 R1 Sel: 4 R1 Data:  3369 Expected R1 Data:  3369 R2 Sel: 1 R2 Data: 13074 Expected R2 data: 13074 W Sel: 4 W Data:  8772 W Enable: 0
+# Cycle:  800 R1 Sel: 7 R1 Data: 64365 Expected R1 Data: 64365 R2 Sel: 6 R2 Data:  7767 Expected R2 data:  7767 W Sel: 0 W Data: 24098 W Enable: 0
+# Cycle:  801 R1 Sel: 3 R1 Data: 30279 Expected R1 Data: 30279 R2 Sel: 3 R2 Data: 30279 Expected R2 data: 30279 W Sel: 6 W Data: 22213 W Enable: 0
+# FYI: Both read ports are same in cycle  801
+# Cycle:  802 R1 Sel: 6 R1 Data:  7767 Expected R1 Data:  7767 R2 Sel: 4 R2 Data:  3369 Expected R2 data:  3369 W Sel: 5 W Data: 63221 W Enable: 1
+# Cycle:  803 R1 Sel: 3 R1 Data: 30279 Expected R1 Data: 30279 R2 Sel: 2 R2 Data:  8079 Expected R2 data:  8079 W Sel: 5 W Data: 29087 W Enable: 1
+# Cycle:  804 R1 Sel: 0 R1 Data: 34412 Expected R1 Data: 34412 R2 Sel: 6 R2 Data:  7767 Expected R2 data:  7767 W Sel: 6 W Data: 38618 W Enable: 0
+# Cycle:  805 R1 Sel: 0 R1 Data: 34412 Expected R1 Data: 34412 R2 Sel: 1 R2 Data: 13074 Expected R2 data: 13074 W Sel: 6 W Data: 64303 W Enable: 0
+# Cycle:  806 R1 Sel: 1 R1 Data: 13074 Expected R1 Data: 13074 R2 Sel: 1 R2 Data: 13074 Expected R2 data: 13074 W Sel: 0 W Data:  6049 W Enable: 0
+# FYI: Both read ports are same in cycle  806
+# Cycle:  807 R1 Sel: 4 R1 Data:  3369 Expected R1 Data:  3369 R2 Sel: 5 R2 Data: 29087 Expected R2 data: 29087 W Sel: 0 W Data:  6018 W Enable: 0
+# Cycle:  808 R1 Sel: 1 R1 Data: 13074 Expected R1 Data: 13074 R2 Sel: 6 R2 Data:  7767 Expected R2 data:  7767 W Sel: 4 W Data: 65173 W Enable: 1
+# Cycle:  809 R1 Sel: 5 R1 Data: 29087 Expected R1 Data: 29087 R2 Sel: 5 R2 Data: 29087 Expected R2 data: 29087 W Sel: 0 W Data: 25974 W Enable: 0
+# FYI: Both read ports are same in cycle  809
+# Cycle:  810 R1 Sel: 0 R1 Data: 34412 Expected R1 Data: 34412 R2 Sel: 1 R2 Data: 13074 Expected R2 data: 13074 W Sel: 3 W Data: 57274 W Enable: 1
+# Cycle:  811 R1 Sel: 5 R1 Data: 29087 Expected R1 Data: 29087 R2 Sel: 6 R2 Data:  7767 Expected R2 data:  7767 W Sel: 2 W Data: 57528 W Enable: 0
+# Cycle:  812 R1 Sel: 0 R1 Data: 34412 Expected R1 Data: 34412 R2 Sel: 4 R2 Data: 65173 Expected R2 data: 65173 W Sel: 2 W Data: 46298 W Enable: 1
+# Cycle:  813 R1 Sel: 0 R1 Data: 34412 Expected R1 Data: 34412 R2 Sel: 5 R2 Data: 29087 Expected R2 data: 29087 W Sel: 2 W Data: 49198 W Enable: 1
+# Cycle:  814 R1 Sel: 0 R1 Data: 34412 Expected R1 Data: 34412 R2 Sel: 3 R2 Data: 57274 Expected R2 data: 57274 W Sel: 6 W Data: 18670 W Enable: 0
+# Cycle:  815 R1 Sel: 5 R1 Data: 29087 Expected R1 Data: 29087 R2 Sel: 3 R2 Data: 57274 Expected R2 data: 57274 W Sel: 0 W Data: 22922 W Enable: 1
+# Cycle:  816 R1 Sel: 5 R1 Data: 29087 Expected R1 Data: 29087 R2 Sel: 7 R2 Data: 64365 Expected R2 data: 64365 W Sel: 3 W Data: 37856 W Enable: 1
+# Cycle:  817 R1 Sel: 7 R1 Data: 64365 Expected R1 Data: 64365 R2 Sel: 3 R2 Data: 37856 Expected R2 data: 37856 W Sel: 2 W Data: 64319 W Enable: 1
+# Cycle:  818 R1 Sel: 4 R1 Data: 65173 Expected R1 Data: 65173 R2 Sel: 6 R2 Data:  7767 Expected R2 data:  7767 W Sel: 7 W Data:  4415 W Enable: 0
+# Cycle:  819 R1 Sel: 6 R1 Data:  7767 Expected R1 Data:  7767 R2 Sel: 5 R2 Data: 29087 Expected R2 data: 29087 W Sel: 0 W Data: 53062 W Enable: 1
+# Cycle:  820 R1 Sel: 2 R1 Data: 64319 Expected R1 Data: 64319 R2 Sel: 4 R2 Data: 65173 Expected R2 data: 65173 W Sel: 4 W Data: 13697 W Enable: 0
+# Cycle:  821 R1 Sel: 7 R1 Data: 64365 Expected R1 Data: 64365 R2 Sel: 2 R2 Data: 64319 Expected R2 data: 64319 W Sel: 4 W Data: 48156 W Enable: 1
+# Cycle:  822 R1 Sel: 7 R1 Data: 64365 Expected R1 Data: 64365 R2 Sel: 3 R2 Data: 46374 Expected R2 data: 46374 W Sel: 3 W Data: 46374 W Enable: 1
+# FYI: Read/write of same port in cycle  822
+# Cycle:  823 R1 Sel: 3 R1 Data: 46374 Expected R1 Data: 46374 R2 Sel: 4 R2 Data: 48156 Expected R2 data: 48156 W Sel: 7 W Data: 19426 W Enable: 0
+# Cycle:  824 R1 Sel: 6 R1 Data:  7767 Expected R1 Data:  7767 R2 Sel: 2 R2 Data: 64319 Expected R2 data: 64319 W Sel: 4 W Data: 63779 W Enable: 1
+# Cycle:  825 R1 Sel: 3 R1 Data: 46374 Expected R1 Data: 46374 R2 Sel: 5 R2 Data: 29087 Expected R2 data: 29087 W Sel: 6 W Data: 30404 W Enable: 1
+# Cycle:  826 R1 Sel: 6 R1 Data: 30404 Expected R1 Data: 30404 R2 Sel: 0 R2 Data: 28243 Expected R2 data: 28243 W Sel: 0 W Data: 28243 W Enable: 1
+# FYI: Read/write of same port in cycle  826
+# Cycle:  827 R1 Sel: 5 R1 Data: 29087 Expected R1 Data: 29087 R2 Sel: 2 R2 Data: 64319 Expected R2 data: 64319 W Sel: 0 W Data: 39660 W Enable: 0
+# Cycle:  828 R1 Sel: 2 R1 Data: 64319 Expected R1 Data: 64319 R2 Sel: 7 R2 Data: 64365 Expected R2 data: 64365 W Sel: 5 W Data: 63566 W Enable: 1
+# Cycle:  829 R1 Sel: 1 R1 Data: 13074 Expected R1 Data: 13074 R2 Sel: 1 R2 Data: 13074 Expected R2 data: 13074 W Sel: 7 W Data: 20826 W Enable: 0
+# FYI: Both read ports are same in cycle  829
+# Cycle:  830 R1 Sel: 0 R1 Data: 28243 Expected R1 Data: 28243 R2 Sel: 4 R2 Data: 15497 Expected R2 data: 15497 W Sel: 4 W Data: 15497 W Enable: 1
+# FYI: Read/write of same port in cycle  830
+# Cycle:  831 R1 Sel: 0 R1 Data: 28243 Expected R1 Data: 28243 R2 Sel: 5 R2 Data: 63566 Expected R2 data: 63566 W Sel: 6 W Data: 19521 W Enable: 0
+# Cycle:  832 R1 Sel: 1 R1 Data: 13074 Expected R1 Data: 13074 R2 Sel: 3 R2 Data: 46374 Expected R2 data: 46374 W Sel: 5 W Data:  4404 W Enable: 1
+# Cycle:  833 R1 Sel: 1 R1 Data: 13074 Expected R1 Data: 13074 R2 Sel: 4 R2 Data: 15497 Expected R2 data: 15497 W Sel: 5 W Data: 15283 W Enable: 0
+# Cycle:  834 R1 Sel: 0 R1 Data: 28243 Expected R1 Data: 28243 R2 Sel: 4 R2 Data: 15497 Expected R2 data: 15497 W Sel: 3 W Data: 55707 W Enable: 0
+# Cycle:  835 R1 Sel: 6 R1 Data: 30404 Expected R1 Data: 30404 R2 Sel: 6 R2 Data: 30404 Expected R2 data: 30404 W Sel: 1 W Data: 42690 W Enable: 1
+# FYI: Both read ports are same in cycle  835
+# Cycle:  836 R1 Sel: 2 R1 Data: 64319 Expected R1 Data: 64319 R2 Sel: 1 R2 Data: 42690 Expected R2 data: 42690 W Sel: 3 W Data: 57298 W Enable: 1
+# Cycle:  837 R1 Sel: 0 R1 Data: 28243 Expected R1 Data: 28243 R2 Sel: 2 R2 Data: 64319 Expected R2 data: 64319 W Sel: 5 W Data: 56747 W Enable: 1
+# Cycle:  838 R1 Sel: 2 R1 Data: 64319 Expected R1 Data: 64319 R2 Sel: 6 R2 Data: 30404 Expected R2 data: 30404 W Sel: 7 W Data: 48872 W Enable: 0
+# Cycle:  839 R1 Sel: 4 R1 Data: 15497 Expected R1 Data: 15497 R2 Sel: 0 R2 Data: 28243 Expected R2 data: 28243 W Sel: 2 W Data: 47755 W Enable: 0
+# Cycle:  840 R1 Sel: 6 R1 Data: 30404 Expected R1 Data: 30404 R2 Sel: 0 R2 Data: 48626 Expected R2 data: 48626 W Sel: 0 W Data: 48626 W Enable: 1
+# FYI: Read/write of same port in cycle  840
+# Cycle:  841 R1 Sel: 7 R1 Data: 64365 Expected R1 Data: 64365 R2 Sel: 1 R2 Data: 42690 Expected R2 data: 42690 W Sel: 3 W Data: 42146 W Enable: 1
+# Cycle:  842 R1 Sel: 0 R1 Data: 48626 Expected R1 Data: 48626 R2 Sel: 6 R2 Data: 30404 Expected R2 data: 30404 W Sel: 5 W Data: 11366 W Enable: 1
+# Cycle:  843 R1 Sel: 5 R1 Data: 21446 Expected R1 Data: 21446 R2 Sel: 6 R2 Data: 30404 Expected R2 data: 30404 W Sel: 5 W Data: 21446 W Enable: 1
+# FYI: Read/write of same port in cycle  843
+# Cycle:  844 R1 Sel: 2 R1 Data: 64319 Expected R1 Data: 64319 R2 Sel: 7 R2 Data: 64365 Expected R2 data: 64365 W Sel: 3 W Data: 51640 W Enable: 0
+# Cycle:  845 R1 Sel: 4 R1 Data: 15497 Expected R1 Data: 15497 R2 Sel: 5 R2 Data: 21446 Expected R2 data: 21446 W Sel: 2 W Data: 49140 W Enable: 1
+# Cycle:  846 R1 Sel: 0 R1 Data: 48626 Expected R1 Data: 48626 R2 Sel: 6 R2 Data: 30404 Expected R2 data: 30404 W Sel: 6 W Data:  7335 W Enable: 0
+# Cycle:  847 R1 Sel: 5 R1 Data: 64189 Expected R1 Data: 64189 R2 Sel: 6 R2 Data: 30404 Expected R2 data: 30404 W Sel: 5 W Data: 64189 W Enable: 1
+# FYI: Read/write of same port in cycle  847
+# Cycle:  848 R1 Sel: 2 R1 Data: 49140 Expected R1 Data: 49140 R2 Sel: 3 R2 Data: 42146 Expected R2 data: 42146 W Sel: 0 W Data: 56829 W Enable: 0
+# Cycle:  849 R1 Sel: 2 R1 Data:  6084 Expected R1 Data:  6084 R2 Sel: 4 R2 Data: 15497 Expected R2 data: 15497 W Sel: 2 W Data:  6084 W Enable: 1
+# FYI: Read/write of same port in cycle  849
+# Cycle:  850 R1 Sel: 7 R1 Data: 64365 Expected R1 Data: 64365 R2 Sel: 0 R2 Data: 48626 Expected R2 data: 48626 W Sel: 5 W Data: 19157 W Enable: 1
+# Cycle:  851 R1 Sel: 2 R1 Data:  6084 Expected R1 Data:  6084 R2 Sel: 0 R2 Data: 48626 Expected R2 data: 48626 W Sel: 7 W Data: 64818 W Enable: 1
+# Cycle:  852 R1 Sel: 5 R1 Data: 19157 Expected R1 Data: 19157 R2 Sel: 5 R2 Data: 19157 Expected R2 data: 19157 W Sel: 6 W Data: 38187 W Enable: 1
+# FYI: Both read ports are same in cycle  852
+# Cycle:  853 R1 Sel: 6 R1 Data: 38187 Expected R1 Data: 38187 R2 Sel: 5 R2 Data: 19157 Expected R2 data: 19157 W Sel: 7 W Data: 22256 W Enable: 0
+# Cycle:  854 R1 Sel: 0 R1 Data: 48626 Expected R1 Data: 48626 R2 Sel: 3 R2 Data: 42146 Expected R2 data: 42146 W Sel: 5 W Data: 13594 W Enable: 0
+# Cycle:  855 R1 Sel: 6 R1 Data: 38187 Expected R1 Data: 38187 R2 Sel: 3 R2 Data: 42146 Expected R2 data: 42146 W Sel: 1 W Data: 26281 W Enable: 0
+# Cycle:  856 R1 Sel: 1 R1 Data: 42690 Expected R1 Data: 42690 R2 Sel: 5 R2 Data: 19157 Expected R2 data: 19157 W Sel: 4 W Data: 20174 W Enable: 0
+# Cycle:  857 R1 Sel: 5 R1 Data: 19157 Expected R1 Data: 19157 R2 Sel: 0 R2 Data: 48626 Expected R2 data: 48626 W Sel: 7 W Data: 61066 W Enable: 0
+# Cycle:  858 R1 Sel: 2 R1 Data:  6084 Expected R1 Data:  6084 R2 Sel: 1 R2 Data: 42690 Expected R2 data: 42690 W Sel: 7 W Data:  5488 W Enable: 1
+# Cycle:  859 R1 Sel: 4 R1 Data: 15497 Expected R1 Data: 15497 R2 Sel: 6 R2 Data: 38187 Expected R2 data: 38187 W Sel: 1 W Data:  1707 W Enable: 0
+# Cycle:  860 R1 Sel: 4 R1 Data: 15497 Expected R1 Data: 15497 R2 Sel: 7 R2 Data:  5488 Expected R2 data:  5488 W Sel: 0 W Data:  9629 W Enable: 1
+# Cycle:  861 R1 Sel: 1 R1 Data: 42690 Expected R1 Data: 42690 R2 Sel: 6 R2 Data: 38187 Expected R2 data: 38187 W Sel: 1 W Data:  1715 W Enable: 0
+# Cycle:  862 R1 Sel: 4 R1 Data: 15497 Expected R1 Data: 15497 R2 Sel: 0 R2 Data:  9629 Expected R2 data:  9629 W Sel: 4 W Data: 59464 W Enable: 0
+# Cycle:  863 R1 Sel: 3 R1 Data: 42146 Expected R1 Data: 42146 R2 Sel: 6 R2 Data: 38187 Expected R2 data: 38187 W Sel: 2 W Data: 26014 W Enable: 1
+# Cycle:  864 R1 Sel: 7 R1 Data:  5488 Expected R1 Data:  5488 R2 Sel: 1 R2 Data: 42690 Expected R2 data: 42690 W Sel: 4 W Data: 62762 W Enable: 1
+# Cycle:  865 R1 Sel: 3 R1 Data: 42146 Expected R1 Data: 42146 R2 Sel: 7 R2 Data:  5488 Expected R2 data:  5488 W Sel: 6 W Data: 35868 W Enable: 0
+# Cycle:  866 R1 Sel: 1 R1 Data: 42690 Expected R1 Data: 42690 R2 Sel: 3 R2 Data: 42146 Expected R2 data: 42146 W Sel: 0 W Data: 27153 W Enable: 0
+# Cycle:  867 R1 Sel: 1 R1 Data: 42690 Expected R1 Data: 42690 R2 Sel: 3 R2 Data: 42146 Expected R2 data: 42146 W Sel: 7 W Data: 52823 W Enable: 0
+# Cycle:  868 R1 Sel: 1 R1 Data: 42690 Expected R1 Data: 42690 R2 Sel: 5 R2 Data: 19157 Expected R2 data: 19157 W Sel: 1 W Data: 23023 W Enable: 0
+# Cycle:  869 R1 Sel: 3 R1 Data: 42146 Expected R1 Data: 42146 R2 Sel: 4 R2 Data: 62762 Expected R2 data: 62762 W Sel: 4 W Data: 11549 W Enable: 0
+# Cycle:  870 R1 Sel: 5 R1 Data: 19157 Expected R1 Data: 19157 R2 Sel: 2 R2 Data: 26014 Expected R2 data: 26014 W Sel: 7 W Data:  5635 W Enable: 0
+# Cycle:  871 R1 Sel: 3 R1 Data: 42146 Expected R1 Data: 42146 R2 Sel: 6 R2 Data: 38187 Expected R2 data: 38187 W Sel: 4 W Data: 20967 W Enable: 0
+# Cycle:  872 R1 Sel: 4 R1 Data: 62762 Expected R1 Data: 62762 R2 Sel: 2 R2 Data: 26014 Expected R2 data: 26014 W Sel: 6 W Data: 44542 W Enable: 1
+# Cycle:  873 R1 Sel: 5 R1 Data: 19157 Expected R1 Data: 19157 R2 Sel: 4 R2 Data: 62762 Expected R2 data: 62762 W Sel: 2 W Data: 21680 W Enable: 1
+# Cycle:  874 R1 Sel: 2 R1 Data: 21680 Expected R1 Data: 21680 R2 Sel: 6 R2 Data: 44542 Expected R2 data: 44542 W Sel: 3 W Data: 10806 W Enable: 1
+# Cycle:  875 R1 Sel: 7 R1 Data:  5488 Expected R1 Data:  5488 R2 Sel: 2 R2 Data: 21680 Expected R2 data: 21680 W Sel: 4 W Data: 46288 W Enable: 0
+# Cycle:  876 R1 Sel: 1 R1 Data: 42690 Expected R1 Data: 42690 R2 Sel: 5 R2 Data: 19157 Expected R2 data: 19157 W Sel: 0 W Data:  3576 W Enable: 1
+# Cycle:  877 R1 Sel: 1 R1 Data: 42690 Expected R1 Data: 42690 R2 Sel: 0 R2 Data:  3576 Expected R2 data:  3576 W Sel: 6 W Data: 11038 W Enable: 1
+# Cycle:  878 R1 Sel: 5 R1 Data: 19157 Expected R1 Data: 19157 R2 Sel: 4 R2 Data: 62762 Expected R2 data: 62762 W Sel: 3 W Data: 41071 W Enable: 1
+# Cycle:  879 R1 Sel: 2 R1 Data: 21680 Expected R1 Data: 21680 R2 Sel: 1 R2 Data: 42690 Expected R2 data: 42690 W Sel: 6 W Data: 35376 W Enable: 0
+# Cycle:  880 R1 Sel: 0 R1 Data:  3576 Expected R1 Data:  3576 R2 Sel: 0 R2 Data:  3576 Expected R2 data:  3576 W Sel: 1 W Data: 22420 W Enable: 1
+# FYI: Both read ports are same in cycle  880
+# Cycle:  881 R1 Sel: 4 R1 Data: 62762 Expected R1 Data: 62762 R2 Sel: 7 R2 Data:  5488 Expected R2 data:  5488 W Sel: 1 W Data: 41419 W Enable: 0
+# Cycle:  882 R1 Sel: 4 R1 Data: 62762 Expected R1 Data: 62762 R2 Sel: 7 R2 Data: 13485 Expected R2 data: 13485 W Sel: 7 W Data: 13485 W Enable: 1
+# FYI: Read/write of same port in cycle  882
+# Cycle:  883 R1 Sel: 1 R1 Data: 22420 Expected R1 Data: 22420 R2 Sel: 5 R2 Data: 19157 Expected R2 data: 19157 W Sel: 4 W Data:  6903 W Enable: 1
+# Cycle:  884 R1 Sel: 7 R1 Data: 13485 Expected R1 Data: 13485 R2 Sel: 0 R2 Data:  9832 Expected R2 data:  9832 W Sel: 0 W Data:  9832 W Enable: 1
+# FYI: Read/write of same port in cycle  884
+# Cycle:  885 R1 Sel: 0 R1 Data:  9832 Expected R1 Data:  9832 R2 Sel: 3 R2 Data: 41071 Expected R2 data: 41071 W Sel: 5 W Data: 24806 W Enable: 1
+# Cycle:  886 R1 Sel: 0 R1 Data:  9832 Expected R1 Data:  9832 R2 Sel: 2 R2 Data: 21680 Expected R2 data: 21680 W Sel: 5 W Data: 26074 W Enable: 1
+# Cycle:  887 R1 Sel: 7 R1 Data: 13485 Expected R1 Data: 13485 R2 Sel: 5 R2 Data: 26074 Expected R2 data: 26074 W Sel: 6 W Data: 29897 W Enable: 0
+# Cycle:  888 R1 Sel: 4 R1 Data:  6903 Expected R1 Data:  6903 R2 Sel: 6 R2 Data: 11038 Expected R2 data: 11038 W Sel: 1 W Data: 55080 W Enable: 0
+# Cycle:  889 R1 Sel: 4 R1 Data:  6903 Expected R1 Data:  6903 R2 Sel: 6 R2 Data: 11038 Expected R2 data: 11038 W Sel: 2 W Data: 54619 W Enable: 1
+# Cycle:  890 R1 Sel: 7 R1 Data: 13485 Expected R1 Data: 13485 R2 Sel: 1 R2 Data: 22420 Expected R2 data: 22420 W Sel: 5 W Data: 27303 W Enable: 1
+# Cycle:  891 R1 Sel: 6 R1 Data: 11038 Expected R1 Data: 11038 R2 Sel: 4 R2 Data:  6903 Expected R2 data:  6903 W Sel: 4 W Data: 24995 W Enable: 0
+# Cycle:  892 R1 Sel: 1 R1 Data: 22420 Expected R1 Data: 22420 R2 Sel: 1 R2 Data: 22420 Expected R2 data: 22420 W Sel: 6 W Data: 33559 W Enable: 1
+# FYI: Both read ports are same in cycle  892
+# Cycle:  893 R1 Sel: 3 R1 Data: 11499 Expected R1 Data: 11499 R2 Sel: 3 R2 Data: 11499 Expected R2 data: 11499 W Sel: 3 W Data: 11499 W Enable: 1
+# FYI: Both read ports are same in cycle  893
+# FYI: Read/write of same port in cycle  893
+# Cycle:  894 R1 Sel: 5 R1 Data: 17408 Expected R1 Data: 17408 R2 Sel: 0 R2 Data:  9832 Expected R2 data:  9832 W Sel: 5 W Data: 17408 W Enable: 1
+# FYI: Read/write of same port in cycle  894
+# Cycle:  895 R1 Sel: 2 R1 Data: 54619 Expected R1 Data: 54619 R2 Sel: 2 R2 Data: 54619 Expected R2 data: 54619 W Sel: 0 W Data: 27850 W Enable: 1
+# FYI: Both read ports are same in cycle  895
+# Cycle:  896 R1 Sel: 7 R1 Data:  1764 Expected R1 Data:  1764 R2 Sel: 0 R2 Data: 27850 Expected R2 data: 27850 W Sel: 7 W Data:  1764 W Enable: 1
+# FYI: Read/write of same port in cycle  896
+# Cycle:  897 R1 Sel: 4 R1 Data:  6903 Expected R1 Data:  6903 R2 Sel: 2 R2 Data: 54619 Expected R2 data: 54619 W Sel: 0 W Data: 20909 W Enable: 1
+# Cycle:  898 R1 Sel: 6 R1 Data: 33559 Expected R1 Data: 33559 R2 Sel: 4 R2 Data:  6903 Expected R2 data:  6903 W Sel: 5 W Data: 44065 W Enable: 1
+# Cycle:  899 R1 Sel: 0 R1 Data: 20909 Expected R1 Data: 20909 R2 Sel: 3 R2 Data: 11499 Expected R2 data: 11499 W Sel: 5 W Data: 58682 W Enable: 0
+# Cycle:  900 R1 Sel: 0 R1 Data: 20909 Expected R1 Data: 20909 R2 Sel: 1 R2 Data: 22420 Expected R2 data: 22420 W Sel: 3 W Data:   421 W Enable: 1
+# Cycle:  901 R1 Sel: 0 R1 Data: 20909 Expected R1 Data: 20909 R2 Sel: 7 R2 Data:  1764 Expected R2 data:  1764 W Sel: 4 W Data: 61403 W Enable: 1
+# Cycle:  902 R1 Sel: 1 R1 Data: 22420 Expected R1 Data: 22420 R2 Sel: 4 R2 Data: 61403 Expected R2 data: 61403 W Sel: 7 W Data:  7848 W Enable: 1
+# Cycle:  903 R1 Sel: 5 R1 Data: 44065 Expected R1 Data: 44065 R2 Sel: 3 R2 Data:   421 Expected R2 data:   421 W Sel: 5 W Data: 54545 W Enable: 0
+# Cycle:  904 R1 Sel: 7 R1 Data:  7848 Expected R1 Data:  7848 R2 Sel: 1 R2 Data: 22420 Expected R2 data: 22420 W Sel: 1 W Data: 51760 W Enable: 0
+# Cycle:  905 R1 Sel: 0 R1 Data: 20909 Expected R1 Data: 20909 R2 Sel: 2 R2 Data: 54619 Expected R2 data: 54619 W Sel: 1 W Data: 29261 W Enable: 0
+# Cycle:  906 R1 Sel: 1 R1 Data: 22420 Expected R1 Data: 22420 R2 Sel: 7 R2 Data:  7848 Expected R2 data:  7848 W Sel: 3 W Data: 55739 W Enable: 1
+# Cycle:  907 R1 Sel: 5 R1 Data: 44065 Expected R1 Data: 44065 R2 Sel: 5 R2 Data: 44065 Expected R2 data: 44065 W Sel: 3 W Data:  1824 W Enable: 1
+# FYI: Both read ports are same in cycle  907
+# Cycle:  908 R1 Sel: 6 R1 Data: 33559 Expected R1 Data: 33559 R2 Sel: 2 R2 Data: 54619 Expected R2 data: 54619 W Sel: 3 W Data: 33410 W Enable: 1
+# Cycle:  909 R1 Sel: 6 R1 Data: 33559 Expected R1 Data: 33559 R2 Sel: 5 R2 Data: 44065 Expected R2 data: 44065 W Sel: 5 W Data:  2400 W Enable: 0
+# Cycle:  910 R1 Sel: 7 R1 Data:  7848 Expected R1 Data:  7848 R2 Sel: 3 R2 Data: 33410 Expected R2 data: 33410 W Sel: 4 W Data: 54690 W Enable: 1
+# Cycle:  911 R1 Sel: 0 R1 Data: 20909 Expected R1 Data: 20909 R2 Sel: 0 R2 Data: 20909 Expected R2 data: 20909 W Sel: 6 W Data:  2861 W Enable: 0
+# FYI: Both read ports are same in cycle  911
+# Cycle:  912 R1 Sel: 0 R1 Data: 20909 Expected R1 Data: 20909 R2 Sel: 2 R2 Data: 54619 Expected R2 data: 54619 W Sel: 6 W Data:   623 W Enable: 0
+# Cycle:  913 R1 Sel: 4 R1 Data: 54690 Expected R1 Data: 54690 R2 Sel: 6 R2 Data: 33559 Expected R2 data: 33559 W Sel: 7 W Data: 40383 W Enable: 1
+# Cycle:  914 R1 Sel: 6 R1 Data: 33559 Expected R1 Data: 33559 R2 Sel: 1 R2 Data: 22420 Expected R2 data: 22420 W Sel: 2 W Data: 53215 W Enable: 1
+# Cycle:  915 R1 Sel: 3 R1 Data: 33410 Expected R1 Data: 33410 R2 Sel: 5 R2 Data: 44065 Expected R2 data: 44065 W Sel: 7 W Data: 10508 W Enable: 0
+# Cycle:  916 R1 Sel: 6 R1 Data: 33559 Expected R1 Data: 33559 R2 Sel: 6 R2 Data: 33559 Expected R2 data: 33559 W Sel: 7 W Data: 58969 W Enable: 1
+# FYI: Both read ports are same in cycle  916
+# Cycle:  917 R1 Sel: 3 R1 Data: 33410 Expected R1 Data: 33410 R2 Sel: 1 R2 Data: 22420 Expected R2 data: 22420 W Sel: 7 W Data: 56271 W Enable: 1
+# Cycle:  918 R1 Sel: 4 R1 Data: 54690 Expected R1 Data: 54690 R2 Sel: 5 R2 Data: 44065 Expected R2 data: 44065 W Sel: 6 W Data: 17448 W Enable: 1
+# Cycle:  919 R1 Sel: 5 R1 Data: 44065 Expected R1 Data: 44065 R2 Sel: 1 R2 Data: 22420 Expected R2 data: 22420 W Sel: 3 W Data: 28698 W Enable: 0
+# Cycle:  920 R1 Sel: 0 R1 Data: 20909 Expected R1 Data: 20909 R2 Sel: 1 R2 Data: 22420 Expected R2 data: 22420 W Sel: 0 W Data: 35861 W Enable: 0
+# Cycle:  921 R1 Sel: 4 R1 Data: 54690 Expected R1 Data: 54690 R2 Sel: 6 R2 Data: 11293 Expected R2 data: 11293 W Sel: 6 W Data: 11293 W Enable: 1
+# FYI: Read/write of same port in cycle  921
+# Cycle:  922 R1 Sel: 5 R1 Data: 44065 Expected R1 Data: 44065 R2 Sel: 4 R2 Data: 54690 Expected R2 data: 54690 W Sel: 7 W Data: 29013 W Enable: 0
+# Cycle:  923 R1 Sel: 2 R1 Data: 53215 Expected R1 Data: 53215 R2 Sel: 1 R2 Data: 22420 Expected R2 data: 22420 W Sel: 1 W Data: 43578 W Enable: 0
+# Cycle:  924 R1 Sel: 3 R1 Data: 33410 Expected R1 Data: 33410 R2 Sel: 7 R2 Data: 56271 Expected R2 data: 56271 W Sel: 1 W Data:  4050 W Enable: 1
+# Cycle:  925 R1 Sel: 2 R1 Data: 53215 Expected R1 Data: 53215 R2 Sel: 2 R2 Data: 53215 Expected R2 data: 53215 W Sel: 0 W Data: 49329 W Enable: 1
+# FYI: Both read ports are same in cycle  925
+# Cycle:  926 R1 Sel: 7 R1 Data: 56271 Expected R1 Data: 56271 R2 Sel: 4 R2 Data: 54690 Expected R2 data: 54690 W Sel: 1 W Data: 20892 W Enable: 0
+# Cycle:  927 R1 Sel: 2 R1 Data: 53215 Expected R1 Data: 53215 R2 Sel: 2 R2 Data: 53215 Expected R2 data: 53215 W Sel: 1 W Data: 25832 W Enable: 0
+# FYI: Both read ports are same in cycle  927
+# Cycle:  928 R1 Sel: 0 R1 Data: 49329 Expected R1 Data: 49329 R2 Sel: 7 R2 Data: 56271 Expected R2 data: 56271 W Sel: 3 W Data: 18970 W Enable: 0
+# Cycle:  929 R1 Sel: 7 R1 Data: 56271 Expected R1 Data: 56271 R2 Sel: 4 R2 Data: 54690 Expected R2 data: 54690 W Sel: 7 W Data: 33932 W Enable: 0
+# Cycle:  930 R1 Sel: 5 R1 Data: 44065 Expected R1 Data: 44065 R2 Sel: 6 R2 Data: 11293 Expected R2 data: 11293 W Sel: 2 W Data: 40752 W Enable: 0
+# Cycle:  931 R1 Sel: 0 R1 Data: 49329 Expected R1 Data: 49329 R2 Sel: 1 R2 Data:  4050 Expected R2 data:  4050 W Sel: 5 W Data: 60030 W Enable: 1
+# Cycle:  932 R1 Sel: 6 R1 Data: 11293 Expected R1 Data: 11293 R2 Sel: 2 R2 Data: 53215 Expected R2 data: 53215 W Sel: 3 W Data: 55741 W Enable: 0
+# Cycle:  933 R1 Sel: 3 R1 Data: 33410 Expected R1 Data: 33410 R2 Sel: 7 R2 Data: 56271 Expected R2 data: 56271 W Sel: 4 W Data:  8242 W Enable: 1
+# Cycle:  934 R1 Sel: 2 R1 Data: 53215 Expected R1 Data: 53215 R2 Sel: 5 R2 Data: 60030 Expected R2 data: 60030 W Sel: 0 W Data: 55206 W Enable: 1
+# Cycle:  935 R1 Sel: 3 R1 Data: 33410 Expected R1 Data: 33410 R2 Sel: 5 R2 Data: 60030 Expected R2 data: 60030 W Sel: 2 W Data: 18748 W Enable: 0
+# Cycle:  936 R1 Sel: 6 R1 Data: 11293 Expected R1 Data: 11293 R2 Sel: 4 R2 Data:  8242 Expected R2 data:  8242 W Sel: 1 W Data:  7126 W Enable: 1
+# Cycle:  937 R1 Sel: 0 R1 Data: 55206 Expected R1 Data: 55206 R2 Sel: 1 R2 Data:  7126 Expected R2 data:  7126 W Sel: 0 W Data:   924 W Enable: 0
+# Cycle:  938 R1 Sel: 3 R1 Data: 33410 Expected R1 Data: 33410 R2 Sel: 2 R2 Data: 53215 Expected R2 data: 53215 W Sel: 5 W Data: 13856 W Enable: 1
+# Cycle:  939 R1 Sel: 1 R1 Data:  7126 Expected R1 Data:  7126 R2 Sel: 6 R2 Data: 11293 Expected R2 data: 11293 W Sel: 4 W Data: 19254 W Enable: 1
+# Cycle:  940 R1 Sel: 7 R1 Data: 56271 Expected R1 Data: 56271 R2 Sel: 5 R2 Data: 13856 Expected R2 data: 13856 W Sel: 2 W Data: 10136 W Enable: 0
+# Cycle:  941 R1 Sel: 4 R1 Data: 19254 Expected R1 Data: 19254 R2 Sel: 4 R2 Data: 19254 Expected R2 data: 19254 W Sel: 3 W Data: 22373 W Enable: 1
+# FYI: Both read ports are same in cycle  941
+# Cycle:  942 R1 Sel: 5 R1 Data: 13856 Expected R1 Data: 13856 R2 Sel: 2 R2 Data: 53215 Expected R2 data: 53215 W Sel: 6 W Data: 47542 W Enable: 0
+# Cycle:  943 R1 Sel: 7 R1 Data: 56271 Expected R1 Data: 56271 R2 Sel: 0 R2 Data: 55206 Expected R2 data: 55206 W Sel: 2 W Data: 31668 W Enable: 1
+# Cycle:  944 R1 Sel: 5 R1 Data: 56628 Expected R1 Data: 56628 R2 Sel: 6 R2 Data: 11293 Expected R2 data: 11293 W Sel: 5 W Data: 56628 W Enable: 1
+# FYI: Read/write of same port in cycle  944
+# Cycle:  945 R1 Sel: 7 R1 Data: 56271 Expected R1 Data: 56271 R2 Sel: 4 R2 Data: 19254 Expected R2 data: 19254 W Sel: 5 W Data:  2178 W Enable: 0
+# Cycle:  946 R1 Sel: 7 R1 Data: 56271 Expected R1 Data: 56271 R2 Sel: 2 R2 Data: 31668 Expected R2 data: 31668 W Sel: 3 W Data:  6426 W Enable: 1
+# Cycle:  947 R1 Sel: 1 R1 Data:  7126 Expected R1 Data:  7126 R2 Sel: 4 R2 Data: 19254 Expected R2 data: 19254 W Sel: 7 W Data: 10274 W Enable: 1
+# Cycle:  948 R1 Sel: 7 R1 Data: 10274 Expected R1 Data: 10274 R2 Sel: 3 R2 Data:  6426 Expected R2 data:  6426 W Sel: 1 W Data: 55410 W Enable: 0
+# Cycle:  949 R1 Sel: 6 R1 Data: 11293 Expected R1 Data: 11293 R2 Sel: 5 R2 Data: 56628 Expected R2 data: 56628 W Sel: 2 W Data: 50036 W Enable: 1
+# Cycle:  950 R1 Sel: 1 R1 Data:  7126 Expected R1 Data:  7126 R2 Sel: 0 R2 Data: 55206 Expected R2 data: 55206 W Sel: 4 W Data: 54751 W Enable: 1
+# Cycle:  951 R1 Sel: 7 R1 Data: 10274 Expected R1 Data: 10274 R2 Sel: 2 R2 Data: 50036 Expected R2 data: 50036 W Sel: 1 W Data: 23594 W Enable: 0
+# Cycle:  952 R1 Sel: 5 R1 Data: 56628 Expected R1 Data: 56628 R2 Sel: 6 R2 Data: 11293 Expected R2 data: 11293 W Sel: 6 W Data: 29517 W Enable: 0
+# Cycle:  953 R1 Sel: 4 R1 Data: 54751 Expected R1 Data: 54751 R2 Sel: 2 R2 Data: 50036 Expected R2 data: 50036 W Sel: 2 W Data: 62769 W Enable: 0
+# Cycle:  954 R1 Sel: 3 R1 Data:  6426 Expected R1 Data:  6426 R2 Sel: 5 R2 Data: 56628 Expected R2 data: 56628 W Sel: 6 W Data: 10096 W Enable: 0
+# Cycle:  955 R1 Sel: 7 R1 Data: 10274 Expected R1 Data: 10274 R2 Sel: 1 R2 Data:  7126 Expected R2 data:  7126 W Sel: 6 W Data: 58382 W Enable: 1
+# Cycle:  956 R1 Sel: 7 R1 Data: 10274 Expected R1 Data: 10274 R2 Sel: 2 R2 Data: 50036 Expected R2 data: 50036 W Sel: 7 W Data: 52282 W Enable: 0
+# Cycle:  957 R1 Sel: 2 R1 Data: 50036 Expected R1 Data: 50036 R2 Sel: 1 R2 Data:  7126 Expected R2 data:  7126 W Sel: 7 W Data: 51117 W Enable: 1
+# Cycle:  958 R1 Sel: 6 R1 Data: 58382 Expected R1 Data: 58382 R2 Sel: 1 R2 Data:  7126 Expected R2 data:  7126 W Sel: 2 W Data:  3355 W Enable: 1
+# Cycle:  959 R1 Sel: 1 R1 Data:  7126 Expected R1 Data:  7126 R2 Sel: 4 R2 Data: 54751 Expected R2 data: 54751 W Sel: 6 W Data: 19926 W Enable: 0
+# Cycle:  960 R1 Sel: 0 R1 Data: 55206 Expected R1 Data: 55206 R2 Sel: 6 R2 Data: 58382 Expected R2 data: 58382 W Sel: 1 W Data: 48476 W Enable: 0
+# Cycle:  961 R1 Sel: 7 R1 Data: 10072 Expected R1 Data: 10072 R2 Sel: 4 R2 Data: 54751 Expected R2 data: 54751 W Sel: 7 W Data: 10072 W Enable: 1
+# FYI: Read/write of same port in cycle  961
+# Cycle:  962 R1 Sel: 5 R1 Data: 56628 Expected R1 Data: 56628 R2 Sel: 4 R2 Data: 54751 Expected R2 data: 54751 W Sel: 7 W Data: 16441 W Enable: 1
+# Cycle:  963 R1 Sel: 4 R1 Data: 54751 Expected R1 Data: 54751 R2 Sel: 0 R2 Data: 55206 Expected R2 data: 55206 W Sel: 3 W Data: 57711 W Enable: 1
+# Cycle:  964 R1 Sel: 7 R1 Data: 16441 Expected R1 Data: 16441 R2 Sel: 1 R2 Data:  7126 Expected R2 data:  7126 W Sel: 3 W Data: 58204 W Enable: 0
+# Cycle:  965 R1 Sel: 5 R1 Data: 56628 Expected R1 Data: 56628 R2 Sel: 5 R2 Data: 56628 Expected R2 data: 56628 W Sel: 3 W Data: 49767 W Enable: 0
+# FYI: Both read ports are same in cycle  965
+# Cycle:  966 R1 Sel: 7 R1 Data: 16441 Expected R1 Data: 16441 R2 Sel: 4 R2 Data: 54751 Expected R2 data: 54751 W Sel: 0 W Data: 16099 W Enable: 0
+# Cycle:  967 R1 Sel: 3 R1 Data: 57711 Expected R1 Data: 57711 R2 Sel: 1 R2 Data:  7126 Expected R2 data:  7126 W Sel: 4 W Data: 44370 W Enable: 1
+# Cycle:  968 R1 Sel: 2 R1 Data:  3355 Expected R1 Data:  3355 R2 Sel: 7 R2 Data: 16441 Expected R2 data: 16441 W Sel: 0 W Data: 38933 W Enable: 1
+# Cycle:  969 R1 Sel: 5 R1 Data: 56628 Expected R1 Data: 56628 R2 Sel: 6 R2 Data: 58382 Expected R2 data: 58382 W Sel: 4 W Data:   571 W Enable: 1
+# Cycle:  970 R1 Sel: 2 R1 Data:  3355 Expected R1 Data:  3355 R2 Sel: 5 R2 Data: 56628 Expected R2 data: 56628 W Sel: 6 W Data: 17701 W Enable: 0
+# Cycle:  971 R1 Sel: 6 R1 Data: 58382 Expected R1 Data: 58382 R2 Sel: 5 R2 Data: 56628 Expected R2 data: 56628 W Sel: 0 W Data: 31950 W Enable: 0
+# Cycle:  972 R1 Sel: 4 R1 Data:   571 Expected R1 Data:   571 R2 Sel: 1 R2 Data:  7126 Expected R2 data:  7126 W Sel: 7 W Data: 64722 W Enable: 1
+# Cycle:  973 R1 Sel: 2 R1 Data:  3355 Expected R1 Data:  3355 R2 Sel: 6 R2 Data: 58382 Expected R2 data: 58382 W Sel: 6 W Data:  4815 W Enable: 0
+# Cycle:  974 R1 Sel: 5 R1 Data: 56628 Expected R1 Data: 56628 R2 Sel: 6 R2 Data: 58382 Expected R2 data: 58382 W Sel: 7 W Data: 19510 W Enable: 0
+# Cycle:  975 R1 Sel: 7 R1 Data: 64722 Expected R1 Data: 64722 R2 Sel: 3 R2 Data: 57711 Expected R2 data: 57711 W Sel: 1 W Data: 55934 W Enable: 0
+# Cycle:  976 R1 Sel: 2 R1 Data:  3355 Expected R1 Data:  3355 R2 Sel: 6 R2 Data: 58382 Expected R2 data: 58382 W Sel: 6 W Data: 59741 W Enable: 0
+# Cycle:  977 R1 Sel: 6 R1 Data: 58382 Expected R1 Data: 58382 R2 Sel: 6 R2 Data: 58382 Expected R2 data: 58382 W Sel: 3 W Data: 58221 W Enable: 0
+# FYI: Both read ports are same in cycle  977
+# Cycle:  978 R1 Sel: 0 R1 Data: 38933 Expected R1 Data: 38933 R2 Sel: 1 R2 Data:  7126 Expected R2 data:  7126 W Sel: 6 W Data:  4774 W Enable: 0
+# Cycle:  979 R1 Sel: 3 R1 Data: 57711 Expected R1 Data: 57711 R2 Sel: 2 R2 Data:  3355 Expected R2 data:  3355 W Sel: 4 W Data:  5919 W Enable: 0
+# Cycle:  980 R1 Sel: 0 R1 Data: 38933 Expected R1 Data: 38933 R2 Sel: 1 R2 Data:  7126 Expected R2 data:  7126 W Sel: 6 W Data: 63621 W Enable: 1
+# Cycle:  981 R1 Sel: 5 R1 Data: 56628 Expected R1 Data: 56628 R2 Sel: 5 R2 Data: 56628 Expected R2 data: 56628 W Sel: 1 W Data:  7576 W Enable: 1
+# FYI: Both read ports are same in cycle  981
+# Cycle:  982 R1 Sel: 4 R1 Data:   571 Expected R1 Data:   571 R2 Sel: 7 R2 Data: 64722 Expected R2 data: 64722 W Sel: 4 W Data:  5618 W Enable: 0
+# Cycle:  983 R1 Sel: 5 R1 Data: 56628 Expected R1 Data: 56628 R2 Sel: 0 R2 Data: 38933 Expected R2 data: 38933 W Sel: 4 W Data: 14399 W Enable: 0
+# Cycle:  984 R1 Sel: 4 R1 Data:   571 Expected R1 Data:   571 R2 Sel: 1 R2 Data:  7576 Expected R2 data:  7576 W Sel: 0 W Data: 35427 W Enable: 0
+# Cycle:  985 R1 Sel: 6 R1 Data: 63621 Expected R1 Data: 63621 R2 Sel: 4 R2 Data: 10864 Expected R2 data: 10864 W Sel: 4 W Data: 10864 W Enable: 1
+# FYI: Read/write of same port in cycle  985
+# Cycle:  986 R1 Sel: 2 R1 Data:  3355 Expected R1 Data:  3355 R2 Sel: 6 R2 Data: 63621 Expected R2 data: 63621 W Sel: 6 W Data: 36229 W Enable: 0
+# Cycle:  987 R1 Sel: 2 R1 Data:  3355 Expected R1 Data:  3355 R2 Sel: 1 R2 Data:  7576 Expected R2 data:  7576 W Sel: 7 W Data:  4085 W Enable: 0
+# Cycle:  988 R1 Sel: 7 R1 Data: 64722 Expected R1 Data: 64722 R2 Sel: 0 R2 Data: 38933 Expected R2 data: 38933 W Sel: 3 W Data: 47123 W Enable: 1
+# Cycle:  989 R1 Sel: 6 R1 Data: 63621 Expected R1 Data: 63621 R2 Sel: 3 R2 Data: 47123 Expected R2 data: 47123 W Sel: 3 W Data: 15485 W Enable: 0
+# Cycle:  990 R1 Sel: 3 R1 Data: 47123 Expected R1 Data: 47123 R2 Sel: 7 R2 Data: 64722 Expected R2 data: 64722 W Sel: 1 W Data: 30869 W Enable: 1
+# Cycle:  991 R1 Sel: 4 R1 Data: 10864 Expected R1 Data: 10864 R2 Sel: 0 R2 Data: 38933 Expected R2 data: 38933 W Sel: 1 W Data:  9256 W Enable: 1
+# Cycle:  992 R1 Sel: 7 R1 Data: 64722 Expected R1 Data: 64722 R2 Sel: 5 R2 Data: 56628 Expected R2 data: 56628 W Sel: 6 W Data: 24082 W Enable: 1
+# Cycle:  993 R1 Sel: 6 R1 Data: 24082 Expected R1 Data: 24082 R2 Sel: 1 R2 Data:  9256 Expected R2 data:  9256 W Sel: 4 W Data: 15144 W Enable: 0
+# Cycle:  994 R1 Sel: 4 R1 Data: 10864 Expected R1 Data: 10864 R2 Sel: 6 R2 Data: 24082 Expected R2 data: 24082 W Sel: 7 W Data: 37328 W Enable: 0
+# Cycle:  995 R1 Sel: 1 R1 Data:  9256 Expected R1 Data:  9256 R2 Sel: 0 R2 Data: 38933 Expected R2 data: 38933 W Sel: 4 W Data: 51088 W Enable: 1
+# Cycle:  996 R1 Sel: 3 R1 Data: 47123 Expected R1 Data: 47123 R2 Sel: 3 R2 Data: 47123 Expected R2 data: 47123 W Sel: 4 W Data:  7164 W Enable: 1
+# FYI: Both read ports are same in cycle  996
+# Cycle:  997 R1 Sel: 7 R1 Data: 64722 Expected R1 Data: 64722 R2 Sel: 2 R2 Data:  3355 Expected R2 data:  3355 W Sel: 1 W Data: 53942 W Enable: 0
+# Cycle:  998 R1 Sel: 1 R1 Data:  9256 Expected R1 Data:  9256 R2 Sel: 3 R2 Data: 47123 Expected R2 data: 47123 W Sel: 1 W Data: 22366 W Enable: 0
+# Cycle:  999 R1 Sel: 6 R1 Data: 24082 Expected R1 Data: 24082 R2 Sel: 5 R2 Data: 56628 Expected R2 data: 56628 W Sel: 0 W Data:   503 W Enable: 0
+# Cycle: 1000 R1 Sel: 2 R1 Data:  3355 Expected R1 Data:  3355 R2 Sel: 1 R2 Data:  9256 Expected R2 data:  9256 W Sel: 6 W Data: 18924 W Enable: 0
+# 
+# TEST PASSED
+# 
+# Break at rf_bypass_hier_bench.v line 122
+# Stopped at rf_bypass_hier_bench.v line 122 
+# 
+# <EOF> 
