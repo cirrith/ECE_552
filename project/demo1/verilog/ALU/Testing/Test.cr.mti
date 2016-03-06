@@ -82,18 +82,18 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	ALU_Shifter_1
 
-} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_2.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_2.v
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module ALU_Shifter_2
-
-Top level modules:
-	ALU_Shifter_2
-
 } {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA_FA.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_CLA_FA.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module ALU_CLA_FA
 
 Top level modules:
 	ALU_CLA_FA
+
+} {} {}} I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_2.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo1/verilog/ALU/Testing/ALU_Shifter_2.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_Shifter_2
+
+Top level modules:
+	ALU_Shifter_2
 
 } {} {}}

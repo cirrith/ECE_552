@@ -23,6 +23,6 @@ module PC (clk, rst, New_PC, Write, Curr_PC);
 
 	assign Curr_PC = q;
 
-	assign PC = Write ? New_PC : Curr_PC;
+	assign d = Write ? New_PC : Curr_PC;
 
 endmodule

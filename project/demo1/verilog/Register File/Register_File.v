@@ -16,6 +16,9 @@
 /				 read2data - Data from the 2nd selected register
 				 err - ???
 ********************************************************************************************************/
+
+//TODO: BYPASS??
+
 module Register_File (read1data, read2data, err, clk, rst, read1regsel, read2regsel, writeregsel, writedata, write);
 
 	parameter width = 16;
@@ -34,14 +37,14 @@ module Register_File (read1data, read2data, err, clk, rst, read1regsel, read2reg
 	wire [7:0] wri;
 	wire [15:0] regOut [0:7];
 	
-	assign wri[0] = (writeregsel == 0) & write;
-	assign wri[1] = (writeregsel == 1) & write;
-	assign wri[2] = (writeregsel == 2) & write;
-	assign wri[3] = (writeregsel == 3) & write;
-	assign wri[4] = (writeregsel == 4) & write;
-	assign wri[5] = (writeregsel == 5) & write;
-	assign wri[6] = (writeregsel == 6) & write;
-	assign wri[7] = (writeregsel == 7) & write;
+	assign wri[0] = (writeregsel == 3'h0) & write;
+	assign wri[1] = (writeregsel == 3'h1) & write;
+	assign wri[2] = (writeregsel == 3'h2) & write;
+	assign wri[3] = (writeregsel == 3'h3) & write;
+	assign wri[4] = (writeregsel == 3'h4) & write;
+	assign wri[5] = (writeregsel == 3'h5) & write;
+	assign wri[6] = (writeregsel == 3'h6) & write;
+	assign wri[7] = (writeregsel == 3'h7) & write;
    
 	Register Reg0(.clk(clk), .rst(rst), .write(wri[0]), .wdata(writedata), .rdata(regOut[0]));
 	Register Reg1(.clk(clk), .rst(rst), .write(wri[1]), .wdata(writedata), .rdata(regOut[1]));
