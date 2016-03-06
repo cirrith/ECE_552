@@ -1,0 +1,6 @@
+Things on the TODO List:
+
+Extender Module
+Next PC logic
+Branch Logic
+Processor Control
