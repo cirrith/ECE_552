@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////////////////////////////////
+////	3-bit 2->1 Mux														////
+////	works																////
+////////////////////////////////////////////////////////////////////////////////
+
+module Bits3_Mux2_1(A, B, Sel, Out);
+
+
+	// Declare inputs and outputs
+	input Sel;
+	input [2:0] A, B;
+	output [2:0] Out;
+	
+	
+	// Instantiate required logic
+	assign Out = Sel ? B : A;
+
+
+endmodule

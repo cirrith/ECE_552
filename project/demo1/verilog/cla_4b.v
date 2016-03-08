@@ -1,5 +1,6 @@
 /****************************
 purpose: Given two 4-bit vectors add them and generate the Propagate, Generate, and Sum signals
+works: yes
 ****************************/
 
 module cla_4b (A, B, Cin, S, P, G);

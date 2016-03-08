@@ -1,5 +1,6 @@
 /****************************
 purpose: Given two 1-bit vectors add them and generate the Propagate, Generate, and Sum signals
+works: yes
 ****************************/
 
 module cla_FA (A, B, Cin, S, P, G);

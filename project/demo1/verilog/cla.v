@@ -1,5 +1,6 @@
 /****************************
 purpose: Given two 16-bit vectors and a carry in bit perform a carry look ahead addition
+works: yes
 ****************************/
 module cla (A, B, Cin, Si, Out, Ofl);
 input [15:0] A;

@@ -1,0 +1,18 @@
+////////////////////////////////////////////////////////////////////////////////
+////	Bits5_Ext															////
+////	works																////
+////////////////////////////////////////////////////////////////////////////////
+
+module Bits5_Ext(In, Sign, Out);
+
+// Declare all inputs and outputs
+	input Sign;
+	input [4:0] In;
+	output [15:0] Out;
+	
+
+// Instantiate required logic
+	assign Out = {{11{In[4]}}, In[4:0]};
+
+	
+endmodule
