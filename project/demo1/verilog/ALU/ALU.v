@@ -19,7 +19,7 @@
 /				1100: Flip					| A[bit 15-i] for i=0..15
 /				1101: Pass Through			| B
 /				1110: SLBI | Move Bottom	| (A << 8) | B
-/				1111: NOT USED
+/				1111: PC + 2 CHECK
 /
 /		INPUTS: A[15:0] - First Operand
 /				B[15:0] - Second Operand
@@ -29,11 +29,12 @@
 /				 LT - Less Than
 /				 ZF - Zero Flag
 ********************************************************************************************************/
-module ALU (A, B, OP_Code, Result, LT, ZF);
+module ALU (A, B, OP_Code, Result, LT, ZF, PC);
 
 input [15:0] A;
 input [15:0] B;
 input [3:0] OP_Code;
+input [15:0] PC;
 
 output [15:0] Result;
 output LT;
@@ -141,6 +142,9 @@ always @ (OP_Code, A, B) begin
 		
 		14: begin //Move Bottom
 			case_out = {A[7:0], B[7:0]};
+		end
+		15: begin //PC + 2
+			case_out = PC;
 		end
 	endcase
 	
