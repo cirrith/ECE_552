@@ -129,16 +129,16 @@ always @ (OP_Code) begin
 			Write_Reg_Sel = 0;
 		end
         5'b00001: begin //NOP
-			PC_Write = 0;
-			PC_Code = 0;
-			Comp_Code = 0;
-			Write_Back_Sel = 0;
-			Mem_Write = 0;
-			Mem_Read = 0;
-			ALU_OP = 0;
-			ALU_Src = 0;
-			Reg_Write = 0;
-			Write_Reg_Sel = 0;
+			//PC_Write = 0;
+			//PC_Code = 0;
+			//Comp_Code = 0;
+			//Write_Back_Sel = 0;
+			//Mem_Write = 0;
+			//Mem_Read = 0;
+			//ALU_OP = 0;
+			//ALU_Src = 0;
+			//Reg_Write = 0;
+			//Write_Reg_Sel = 0;
 		end
 		5'b01000: begin //ADDI
 			PC_Write = 1;

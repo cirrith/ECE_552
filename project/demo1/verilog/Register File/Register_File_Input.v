@@ -22,6 +22,8 @@ output [2:0] Write_Reg; //Destination to be written to
 
 reg [2:0] case_out;
 
+assign Write_Reg = case_out;
+
 always @ (Poss_Des, Des_Sel) begin
 	case(Des_Sel)
 		2'h0: begin
