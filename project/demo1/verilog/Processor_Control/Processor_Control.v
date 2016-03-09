@@ -264,7 +264,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 2;
+			//Write_Back_Sel = 0;
 			Mem_Write = 1;
 			//Mem_Read = 0;
 			ALU_OP = 0;
@@ -288,7 +288,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 1;
+			Write_Back_Sel = 0;
 			//Mem_Write = 0;
 			//Mem_Read = 0;
 			ALU_OP = 0;
@@ -300,7 +300,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 1;
+			Write_Back_Sel = 0;
 			//Mem_Write = 0;
 			//Mem_Read = 0;
 			ALU_OP = 1;
@@ -312,7 +312,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 1;
+			Write_Back_Sel = 0;
 			//Mem_Write = 0;
 			//Mem_Read = 0;
 			ALU_OP = 2;
@@ -324,7 +324,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 1;
+			Write_Back_Sel = 0;
 			//Mem_Write = 0;
 			//Mem_Read = 0;
 			ALU_OP = 3;
@@ -336,7 +336,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 1;
+			Write_Back_Sel = 0;
 			//Mem_Write = 0;
 			//Mem_Read = 0;
 			ALU_OP = 4;
@@ -348,7 +348,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 1;
+			Write_Back_Sel = 0;
 			//Mem_Write = 0;
 			//Mem_Read = 0;
 			ALU_OP = 5;
@@ -360,7 +360,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 1;
+			Write_Back_Sel = 0;
 			//Mem_Write = 0;
 			//Mem_Read = 0;
 			ALU_OP = 6;
@@ -372,7 +372,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 1;
+			Write_Back_Sel = 0;
 			//Mem_Write = 0;
 			//Mem_Read = 0;
 			ALU_OP = 7;
@@ -384,7 +384,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 1;
+			Write_Back_Sel = 0;
 			//Mem_Write = 0;
 			//Mem_Read = 0;
 			ALU_OP = 8;
@@ -396,7 +396,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 1;
+			Write_Back_Sel = 0;
 			//Mem_Write = 0;
 			//Mem_Read = 0;
 			ALU_OP = 9;
@@ -408,7 +408,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 1;
+			Write_Back_Sel = 0;
 			//Mem_Write = 0;
 			//Mem_Read = 0;
 			ALU_OP = 10;
@@ -420,7 +420,7 @@ always @ (OP_Code) begin
 			PC_Write = 1;
 			//PC_Code = 0;
 			//Comp_Code = 0;
-			Write_Back_Sel = 1;
+			Write_Back_Sel = 0;
 			//Mem_Write = 0;
 			//Mem_Read = 0;
 			ALU_OP =11;
@@ -576,29 +576,6 @@ always @ (OP_Code) begin
 end
 
 endmodule
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		
