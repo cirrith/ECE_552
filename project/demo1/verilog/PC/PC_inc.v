@@ -7,7 +7,7 @@
 /
 /		OUTPUTS: Inc_PC - Program Counter + 2
 ********************************************************************************************************/
-module PC_inc(Curr_PC, Inc_PC);
+module PC_inc (Curr_PC, Inc_PC);
 
 	input [15:0] Curr_PC;
 

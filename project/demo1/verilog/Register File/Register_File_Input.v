@@ -9,14 +9,14 @@
 /					10 - Rs [10:8]
 /					11 - R7
 /					
-/				Des_Sel - Input from Processor Control, which one is passed through
+/				Write_Back_Sel - Input from Processor Control, which one is passed through
 /
 /		OUTPUTS: Write_Reg - Register to be written to
 ********************************************************************************************************/
-module Register_File_Input(Poss_Des, Des_Sel, Write_Reg);
+module Register_File_Input (Poss_Des, Write_Back_Sel, Write_Reg);
 
 input [8:0] Poss_Des; 
-input [1:0] Des_Sel; //Destination select
+input [1:0] Write_Back_Sel; //Destination select
 
 output [2:0] Write_Reg; //Destination to be written to
 
@@ -24,8 +24,8 @@ reg [2:0] case_out;
 
 assign Write_Reg = case_out;
 
-always @ (Poss_Des, Des_Sel) begin
-	case(Des_Sel)
+always @ (Poss_Des, Write_Back_Sel) begin
+	case(Write_Back_Sel)
 		2'h0: begin
 			case_out = Poss_Des[7:5];
 		end

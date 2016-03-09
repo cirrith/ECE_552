@@ -19,7 +19,7 @@
 
 //TODO: BYPASS??
 
-module Register_File (read1data, read2data, err, clk, rst, read1regsel, read2regsel, writeregsel, writedata, write);
+module Register_File ( clk, rst, read1data, read2data, err, read1regsel, read2regsel, writeregsel, writedata, write);
 
 	parameter width = 16;
 	
