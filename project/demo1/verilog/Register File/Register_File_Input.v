@@ -4,9 +4,9 @@
 /
 /
 /		INPUTS: Poss_Des - Possible Destination encoded in instruction
-/					00 - 4:2
-/					01 - 7:5
-/					10 - 10:8
+/					00 - Rd (Immediate) [7:5]
+/					01 - Rd (Register) [4:2]
+/					10 - Rs [10:8]
 /					11 - R7
 /					
 /				Des_Sel - Input from Processor Control, which one is passed through
@@ -27,11 +27,11 @@ assign Write_Reg = case_out;
 always @ (Poss_Des, Des_Sel) begin
 	case(Des_Sel)
 		2'h0: begin
-			case_out = Poss_Des[4:2];
+			case_out = Poss_Des[7:5];
 		end
 		
 		2'h1: begin
-			case_out = Poss_Des[7:5];
+			case_out = Poss_Des[4:2];
 		end
 		
 		2'h2: begin

@@ -10,7 +10,7 @@
 /				 P - Propagate 
 /				 G - Generate
 ********************************************************************************************************/
-module ALU_CLA_FA (A, B, Cin, S, P, G);
+module CLA_FA (A, B, Cin, S, P, G);
 
 input A;
 input B;

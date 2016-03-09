@@ -29,12 +29,12 @@
 /				 LT - Less Than
 /				 ZF - Zero Flag
 ********************************************************************************************************/
-module ALU (A, B, OP_Code, Result, LT, ZF, PC);
+module ALU (A, B, OP_Code, Result, LT, ZF, PC2);
 
 input [15:0] A;
 input [15:0] B;
 input [3:0] OP_Code;
-input [15:0] PC;
+input [15:0] PC2;
 
 output [15:0] Result;
 output LT;
@@ -144,7 +144,7 @@ always @ (OP_Code, A, B) begin
 			case_out = {A[7:0], B[7:0]};
 		end
 		15: begin //PC + 2
-			case_out = PC;
+			case_out = PC2;
 		end
 	endcase
 	

@@ -1,6 +1,6 @@
 Things on the TODO List:
 
-Extender Module
+Extender Module(Zero extend into alu)
 Next PC logic
 Branch Logic
 Processor Control
