@@ -41,6 +41,7 @@ module ALU (A, B, ALU_OP_Code, PC2, Result, LT, ZF);
 	output ZF;
 
 	reg [15:0] case_out;
+	reg [15:0] a_i;
 	reg [15:0] b_i;
 	reg c_i;
 	reg lt;
@@ -57,7 +58,7 @@ module ALU (A, B, ALU_OP_Code, PC2, Result, LT, ZF);
 
 	ALU_Shifter Shifter(.In(A), .Cnt(B[3:0]), .Op(ALU_OP_Code[1:0]), .Out(shift_out));
 
-	ALU_CLA CLA(.A(A), .B(b_i), .Ci(c_i), .S(cla_out), .Co(c_o));
+	ALU_CLA CLA(.A(a_i), .B(b_i), .Ci(c_i), .S(cla_out), .Co(c_o));
 
 	assign ZF = Result == 0;
 	assign LT = lt;
@@ -66,6 +67,7 @@ module ALU (A, B, ALU_OP_Code, PC2, Result, LT, ZF);
 
 	always @ (ALU_OP_Code, A, B) begin
 		c_i = 0;
+		a_i = 0;
 		b_i = 0;
 		case_out = 16'h0000;
 		
@@ -74,13 +76,15 @@ module ALU (A, B, ALU_OP_Code, PC2, Result, LT, ZF);
 		case(ALU_OP_Code)
 			0: begin //Add
 				c_i = 0;
+				a_i = A;
 				b_i = B;
 				case_out = cla_out;
 			end
 			
 			1: begin //Subtract
 				c_i = 1;
-				b_i = ~B;
+				a_i = B;
+				b_i = ~A;
 				case_out = cla_out;
 			end
 			
@@ -114,6 +118,7 @@ module ALU (A, B, ALU_OP_Code, PC2, Result, LT, ZF);
 			
 			9: begin //Less Than
 				c_i = 1;
+				a_i = A;
 				b_i = ~B;
 				case_out = A[15] == B[15] ? {15'h000, Result[15]} : (A[15] == 1 ? 16'h0001 : 16'h0000);
 				lt = 1;
@@ -121,6 +126,7 @@ module ALU (A, B, ALU_OP_Code, PC2, Result, LT, ZF);
 			
 			10: begin //Less Than Equal
 				c_i = 1;
+				a_i = A;
 				b_i = B;
 				case_out = A == B ? 16'h0001 : (A[15] == B[15] ? {15'h000, Result[15]} : (A[15] == 1 ? 16'h0001 : 16'h0000));
 				lt = A[15] == B[15] ? Result[15] : (A[15] == 1 ? 1 : 0);
@@ -128,6 +134,7 @@ module ALU (A, B, ALU_OP_Code, PC2, Result, LT, ZF);
 			
 			11: begin //Carry Out
 				c_i = 0;
+				a_i = A;
 				b_i = B;
 				case_out = c_o ? 16'h0001 : 16'h0000;
 			end
