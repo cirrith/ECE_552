@@ -23,17 +23,17 @@
 /
 /		INPUTS: A[15:0] - First Operand
 /				B[15:0] - Second Operand
-/				ALU_OP_Code[2:0] - Denotes which operation
+/				OP_Code[2:0] - Denotes which operation
 /
 /		OUTPUTS: Result[15:0] - Result of Operation
 /				 LT - Less Than
 /				 ZF - Zero Flag
 ********************************************************************************************************/
-module ALU (A, B, ALU_OP_Code, PC2, Result, LT, ZF);
+module ALU (A, B, OP_Code, PC2, Result, LT, ZF);
 
 	input [15:0] A;
 	input [15:0] B;
-	input [3:0] ALU_OP_Code;
+	input [3:0] OP_Code;
 	input [15:0] PC2;
 
 	output [15:0] Result;
@@ -41,8 +41,8 @@ module ALU (A, B, ALU_OP_Code, PC2, Result, LT, ZF);
 	output ZF;
 
 	reg [15:0] case_out;
-	reg [15:0] a_i;
-	reg [15:0] b_i;
+	reg [15:0] a_i;	//Be able to switch what A is ==
+	reg [15:0] b_i;	//Be able to switch what B is ==
 	reg c_i;
 	reg lt;
 
@@ -56,7 +56,7 @@ module ALU (A, B, ALU_OP_Code, PC2, Result, LT, ZF);
 	ALU_XOR Xor(.A(A), .B(B), .Out(xor_out));
 	ALU_ANDN Andn(.A(A), .B(B), .Out(andn_out));
 
-	ALU_Shifter Shifter(.In(A), .Cnt(B[3:0]), .Op(ALU_OP_Code[1:0]), .Out(shift_out));
+	ALU_Shifter Shifter(.In(A), .Cnt(B[3:0]), .Op(OP_Code[1:0]), .Out(shift_out));
 
 	ALU_CLA CLA(.A(a_i), .B(b_i), .Ci(c_i), .S(cla_out), .Co(c_o));
 
@@ -65,92 +65,93 @@ module ALU (A, B, ALU_OP_Code, PC2, Result, LT, ZF);
 
 	assign Result = case_out;
 
-	always @ (ALU_OP_Code, A, B) begin
-		c_i = 0;
-		a_i = 0;
-		b_i = 0;
+	always @ (OP_Code, A, B) begin
+		c_i = 1'b0;
+		a_i = 1'b0;
+		b_i = 1'b0;
 		case_out = 16'h0000;
 		
-		lt = 0;
+		lt = 1'b0;
 		
-		case(ALU_OP_Code)
-			0: begin //Add
-				c_i = 0;
+		case(OP_Code)
+			4'b0000: begin //Add
+				c_i = 1'b0;
 				a_i = A;
 				b_i = B;
 				case_out = cla_out;
 			end
 			
-			1: begin //Subtract
-				c_i = 1;
+			4'b0001: begin //Subtract
+				c_i = 1'b1;
 				a_i = B;
 				b_i = ~A;
 				case_out = cla_out;
 			end
 			
-			2: begin //XOR 
+			4'b0010: begin //XOR 
 				case_out = xor_out;
 			end
 			
-			3: begin //ANDN
+			4'b0011: begin //ANDN
 				case_out = andn_out;
 			end
 			
-			4: begin //Rotate Left
+			4'b0100: begin //Rotate Left
 				case_out = shift_out;
 			end
 			
-			5: begin //Shift Left
+			4'b0101: begin //Shift Left
 				case_out = shift_out;
 			end
 			
-			6: begin //Rotate Right
+			4'b0110: begin //Rotate Right
 				case_out = shift_out;
 			end
 			
-			7: begin //Shift Right
+			4'b0111: begin //Shift Right
 				case_out = shift_out;
 			end
 			
-			8: begin //Equal
+			4'b1000: begin //Equal
 				case_out = A == B ? 16'h0001 : 16'h0000;
 			end
 			
-			9: begin //Less Than
-				c_i = 1;
+			4'b1001: begin //Less Than
+				c_i = 1'b1;
 				a_i = A;
 				b_i = ~B;
 				case_out = A[15] == B[15] ? {15'h000, Result[15]} : (A[15] == 1 ? 16'h0001 : 16'h0000);
 				lt = 1;
 			end
 			
-			10: begin //Less Than Equal
-				c_i = 1;
+			4'b1010: begin //Less Than Equal
+				c_i = 1'b1;
 				a_i = A;
 				b_i = B;
 				case_out = A == B ? 16'h0001 : (A[15] == B[15] ? {15'h000, Result[15]} : (A[15] == 1 ? 16'h0001 : 16'h0000));
 				lt = A[15] == B[15] ? Result[15] : (A[15] == 1 ? 1 : 0);
 			end
 			
-			11: begin //Carry Out
-				c_i = 0;
+			4'b1011: begin //Carry Out
+				c_i = 1'b0;
 				a_i = A;
 				b_i = B;
 				case_out = c_o ? 16'h0001 : 16'h0000;
 			end
 			
-			12: begin //FLip
+			4'b1100: begin //FLip
 				case_out = {A[0], A[1], A[2], A[3], A[4], A[5], A[6], A[7], A[8], A[9], A[10], A[11], A[12], A[13], A[14], A[15]};
 			end
 			
-			13: begin //B pass through
+			4'b1101: begin //B pass through
 				case_out = B;
 			end
 			
-			14: begin //Move Bottom
+			4'b1110: begin //Move Bottom
 				case_out = {A[7:0], B[7:0]};
 			end
-			15: begin //PC + 2
+			
+			4'b1111: begin //PC + 2
 				case_out = PC2;
 			end
 		endcase

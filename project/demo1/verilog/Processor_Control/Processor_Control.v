@@ -46,23 +46,24 @@
 /
 /		OUTPUTS: Write_Reg - Register to be written to
 ********************************************************************************************************/
-module Processor_Control (OP_Code, OP_Min, PC_Write, PC_Code, Comp_Code, Write_Back_Sel, Mem_Write, Mem_Read, ALU_OP_Code, ALU_B_Src, Reg_Write, Write_Reg_Sel, Imm_Sign, createDump);
+module Processor_Control (OP_Code, OP_Min, PC_Write, PC_Code, Comp_Code, Write_Back_Sel, Mem_Write, Mem_Read, ALU_OP_Code, ALU_B_Src, Reg_Write, Write_Reg_Sel, Imm_Sign, createDump, halted);
 
 input [4:0] OP_Code;
 input [1:0] OP_Min;
 
 output PC_Write;
-output [2:0] PC_Code; 			//Determine
+output [2:0] PC_Code;
 output [1:0] Comp_Code;
-output Write_Back_Sel; 			//Determine
+output Write_Back_Sel;
 output Mem_Write;
 output Mem_Read;
-output [3:0] ALU_OP_Code; 			//Determine
-output ALU_B_Src;					//Determine
+output [3:0] ALU_OP_Code;
+output ALU_B_Src;
 output Reg_Write;
-output [1:0] Write_Reg_Sel;		//Confirm
+output [1:0] Write_Reg_Sel;
 output createDump;
 output Imm_Sign;
+output halted;
 
 always @ (OP_Code) begin
 	PC_Write = 0;
@@ -76,6 +77,8 @@ always @ (OP_Code) begin
 	Reg_Write = 0;
 	Write_Reg_Sel = 0;
 	Imm_Sign = 0;
+	createDump = 0;
+	halted = 0;
 	
 	PC_Code = 0; //PC + 2
 	PC_Code = 1; //Branch (PC + 2 + I)
@@ -135,6 +138,8 @@ always @ (OP_Code) begin
 			//Reg_Write = 0;
 			//Write_Reg_Sel = 0;
 			//Imm_Sign = 0;
+			createDump =1;
+			halted = 1;
 		end
         5'b00001: begin //NOP
 			//PC_Write = 0;

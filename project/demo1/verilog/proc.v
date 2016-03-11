@@ -8,6 +8,7 @@ module proc (err, clk, rst);
 
 	output err;
 	
+	//Implement enable for memory??
 
 ////////ALU
 	wire [3:0] ALU_OP_Code;
@@ -49,11 +50,14 @@ module proc (err, clk, rst);
 	wire Write_Back_Sel;
 	wire createDump;
 	wire Imm_Sign;
+	wire halted;
 	wire err;
 	
-	assign B_in = ALU_B_Src ? (Imm_Sign ? Imm5Z : Imm5S) : read2data;
+	assign B_in = ALU_B_Src ? (Imm_Sign ? Imm5Z : Imm5S) : read2data; //Mux for ALU input
 	
-	Processor_Control processor_control(.OP_Code(Instruction[4:0]), .OP_Min(Instruction[1:0]), .PC_Write(PC_Write), .PC_Code(PC_Code), .Comp_Code(Comp_Code), .Write_Back_Sel(Write_Back_Sel), .Mem_Write(Mem_Write), .Mem_Read(Mem_Read), .ALU_OP_Code(ALU_OP_Code), .ALU_B_Src(ALU_B_Src), .Reg_Write(Reg_Write), .Write_Reg_Sel(Write_Reg_Sel), .Imm_Sign(Imm_Sign) .createdump(createDump));
+	assign writeback = Write_Back_Sel ? memory_out : ALU_Result;
+	
+	Processor_Control processor_control(.OP_Code(Instruction[4:0]), .OP_Min(Instruction[1:0]), .PC_Write(PC_Write), .PC_Code(PC_Code), .Comp_Code(Comp_Code), .Write_Back_Sel(Write_Back_Sel), .Mem_Write(Mem_Write), .Mem_Read(Mem_Read), .ALU_OP_Code(ALU_OP_Code), .ALU_B_Src(ALU_B_Src), .Reg_Write(Reg_Write), .Write_Reg_Sel(Write_Reg_Sel), .Imm_Sign(Imm_Sign) .createdump(createDump), .halted(halted));
 	
 	PC_Logic pc_logic(.PC_Code(PC_Code), .Comp_Code(Comp_Code), .Curr_PC(Curr_PC), .EQ(EQ), .LT(LT), .Rs(read1data), .Im8(Imm8S), .Dis(Dis11), .PC2(PC2), .Nxt_PC(Nxt_PC));
 	
@@ -67,7 +71,7 @@ module proc (err, clk, rst);
 	
 	Register_File register_file(.clk(clk), .rst(rst), .read1data(read1data), .read2data(read2data), .err(err), .read1regsel(Instruction[10:8]), .read2regsel(Instruction[7:5]), .writeregsel(Write_Reg), .writedata(writeback), .write(Reg_Write));
 	
-	ALU alu(.A(read1data), .B(B_in), .ALU_OP_Code(ALU_OP_Code), .PC2(PC2), .Result(ALU_Result), .LT(LT), .ZF(ZF));
+	ALU alu(.A(read1data), .B(B_in), .OP_Code(ALU_OP_Code), .PC2(PC2), .Result(ALU_Result), .LT(LT), .ZF(ZF));
 	
 	memory2c data_memory(.data_out(memory_out), .data_in(read2data), .addr(ALU_Result), .enable(Mem_Read), .wr(Mem_Write), .createdump(createDump), .clk(clk), .rst(rst));
  

@@ -4,6 +4,10 @@
 /			the correct next PC
 /
 /		INPUTS: PC_Code[2:0] - Control code from the processor controller
+					000 - PC = Pc + 2
+					001 - PC = If compare PC + 2 + Imm8
+					010 - PC = Rs + Imm8
+					011 - PC = PC + 2 + Diplacement
 /				Comp_Code[1:0] - Compare code for which conditions signify a branch
 /				Curr_PC[15:0] - Current PC
 /				EQ - Equal flag from ALU
