@@ -22,4 +22,4 @@ module Extender (Extend, Imm5S, Imm5Z, Imm8S, Dis11);
 	Bits5_ZExt(.In(Extend[4:0]), .Out(Imm5Z));
 	Bits8_SExt(.In(Extend[7:0]), .Out(Imm8S));
 	Bits11_SExt(.In(Extend[10:0]), .Out(Dis11));
-end
+endmodule 

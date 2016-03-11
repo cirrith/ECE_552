@@ -51,19 +51,19 @@ module Processor_Control (OP_Code, OP_Min, PC_Write, PC_Code, Comp_Code, Write_B
 input [4:0] OP_Code;
 input [1:0] OP_Min;
 
-output PC_Write;
-output [2:0] PC_Code;
-output [1:0] Comp_Code;
-output Write_Back_Sel;
-output Mem_Write;
-output Mem_Read;
-output [3:0] ALU_OP_Code;
-output ALU_B_Src;
-output Reg_Write;
-output [1:0] Write_Reg_Sel;
-output createDump;
-output Imm_Sign;
-output halted;
+output reg PC_Write;
+output reg [2:0] PC_Code;
+output reg [1:0] Comp_Code;
+output reg Write_Back_Sel;
+output reg Mem_Write;
+output reg Mem_Read;
+output reg [3:0] ALU_OP_Code;
+output reg ALU_B_Src;
+output reg Reg_Write;
+output reg [1:0] Write_Reg_Sel;
+output reg createDump;
+output reg Imm_Sign;
+output reg halted;
 
 always @ (OP_Code) begin
 	PC_Write = 0;
@@ -80,6 +80,7 @@ always @ (OP_Code) begin
 	createDump = 0;
 	halted = 0;
 	
+	/*
 	PC_Code = 0; //PC + 2
 	PC_Code = 1; //Branch (PC + 2 + I)
 	PC_Code = 2; //JumpI (RS + I)
@@ -124,6 +125,7 @@ always @ (OP_Code) begin
 	
 	Imm_Sign = 0; //Sign Extend
 	Imm_Sign = 1; //Zero Extend
+	*/
 	
 	case(OP_Code)
 		5'b00000: begin //HALT !!!!!!!

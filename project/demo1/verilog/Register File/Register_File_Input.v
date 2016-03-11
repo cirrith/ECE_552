@@ -27,15 +27,15 @@ assign Write_Reg = case_out;
 always @ (Poss_Des, Write_Back_Sel) begin
 	case(Write_Back_Sel)
 		2'h0: begin
-			case_out = Poss_Des[7:5];
+			case_out = Poss_Des[5:3];
 		end
 		
 		2'h1: begin
-			case_out = Poss_Des[4:2];
+			case_out = Poss_Des[2:0];
 		end
 		
 		2'h2: begin
-			case_out = Poss_Des[10:8];
+			case_out = Poss_Des[8:6];
 		end
 		
 		3'h3: begin
