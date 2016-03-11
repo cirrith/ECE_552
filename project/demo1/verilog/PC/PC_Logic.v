@@ -40,7 +40,9 @@ reg [15:0] B_in;
 reg branch;
 wire [15:0] result;
 
-CLA adder(.A(A_in), .B(B_in), .Ci(1'0), .S(result), .Co());
+reg [15:0] case_out;
+
+CLA adder(.A(A_in), .B(B_in), .Ci(1'b0), .S(result), .Co());
 PC_inc pc2(.Curr_PC(Curr_PC), .Inc_PC(PC2));
 
 assign Nxt_PC = case_out;
@@ -53,10 +55,10 @@ always @ (PC_Code, PC2, Im8, Dis, Rs) begin
 		3'b001: begin
 			case(Comp_Code) //Compare the conditnal codes
 				2'b00: begin //Equal
-					branch = ZF ? 1'b1 : 1'b0;
+					branch = EQ ? 1'b1 : 1'b0;
 				end
 				2'b01: begin //!Equal
-					branch = ZF ? 1'b0 : 1'b1;
+					branch = ~EQ ? 1'b1 : 1'b0;
 				end
 				2'b10: begin //Less Than
 					branch = LT ? 1'b1 : 1'b0;

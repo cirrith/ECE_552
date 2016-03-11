@@ -10,7 +10,10 @@
 /		OUTPUTS: Curr_PC - PC that is currently stored
 ********************************************************************************************************/
 module PC (clk, rst, New_PC, Write, Curr_PC);
-
+	
+	input clk;
+	input rst;
+	
 	input [15:0] New_PC;
 	input Write;
 
