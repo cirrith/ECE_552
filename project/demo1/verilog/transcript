@@ -1,3 +1,0 @@
-# vsim -lib __work -c proc_heir_bench 
-# ** Error: (vsim-3170) Could not find '__work.proc_heir_bench'.
-# Error loading design
