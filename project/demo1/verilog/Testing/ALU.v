@@ -58,7 +58,7 @@ module ALU (A, B, OP_Code, PC2, Result, LT, EQ);
 
 	ALU_Shifter Shifter(.In(A), .Cnt(B[3:0]), .Op(OP_Code[1:0]), .Out(shift_out));
 
-	ALU_CLA CLA(.A(a_i), .B(b_i), .Cin(c_i), .S(cla_out), .Cout(c_o));
+	ALU_CLA CLA(.A(a_i), .B(b_i), .Ci(c_i), .S(cla_out), .Cout(c_o));
 
 	assign EQ = Result == 16'h0000;
 	assign LT = lt;
@@ -67,8 +67,8 @@ module ALU (A, B, OP_Code, PC2, Result, LT, EQ);
 
 	always @ (OP_Code, A, B) begin
 		c_i = 1'b0;
-		a_i = 1'b0;
-		b_i = 1'b0;
+		a_i = 15'h0000;
+		b_i = 15'h0000;
 		case_out = 16'h0000;
 		
 		lt = 1'b0;

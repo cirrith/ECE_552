@@ -1,4 +1,3 @@
-<<<<<<< HEAD
           // Original test: ./ziliang/hw4/problem6/add_0.asm
           // Author: ziliang
           // Test source code follows
@@ -16,13 +15,3 @@
 000c d994 add r5, r1, r4	//expected r5 = 499 or x01f3
 000e dd30 add r4, r5, r1	//expected r4 = 599 or x0257
 0010 0000 halt
-=======
-          // Original test: ./benson/hw4/problem6/andni_0.asm
-          // Author: benson
-          // Test source code follows
-          
-          
-0000 c100 lbi r1, 0
-0002 5940 andni r2, r1, 0
-0004 0000 halt
->>>>>>> 2e640e2555e217a06b6c352cc5c5f6091e568d2d
