@@ -4,17 +4,17 @@
 /
 /		INPUTS: A - First Operand
 /				B - Second Operand
-/				Cin - Carry in
+/				Ci - Carry in
 /
 /		OUTPUTS: S - Sum of Adddition
 /				 P - Propagate 
 /				 G - Generate
 ********************************************************************************************************/
-module CLA_FA (A, B, Cin, S, P, G);
+module CLA_FA (A, B, Ci, S, P, G);
 
 input A;
 input B;
-input Cin;
+input Ci;
 
 output P;
 output G;
@@ -23,6 +23,6 @@ output S;
 xor Prop (P, A, B);
 and Gen (G, A, B);
 
-xor Sum (S, A, B, Cin);
+xor Sum (S, A, B, Ci);
 
 endmodule

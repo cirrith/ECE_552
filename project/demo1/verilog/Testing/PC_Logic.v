@@ -64,7 +64,7 @@ always @ (PC_Code, PC2, Im8, Dis, Rs) begin
 					branch = LT ? 1'b1 : 1'b0;
 				end
 				2'b11: begin //Greater than or equal
-					branch = LT ? 1'b0 : 1'b1;
+					branch = ~LT ? 1'b1 : 1'b0;
 				end
 			endcase
 			A_in = PC2;

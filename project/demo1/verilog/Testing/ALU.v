@@ -27,9 +27,9 @@
 /
 /		OUTPUTS: Result[15:0] - Result of Operation
 /				 LT - Less Than
-/				 ZF - Zero Flag
+/				 EQ - Zero Flag
 ********************************************************************************************************/
-module ALU (A, B, OP_Code, PC2, Result, LT, ZF);
+module ALU (A, B, OP_Code, PC2, Result, LT, EQ);
 
 	input [15:0] A;
 	input [15:0] B;
@@ -38,7 +38,7 @@ module ALU (A, B, OP_Code, PC2, Result, LT, ZF);
 
 	output [15:0] Result;
 	output LT;
-	output ZF;
+	output EQ;
 
 	reg [15:0] case_out;
 	reg [15:0] a_i;	//Be able to switch what A is ==
@@ -60,7 +60,7 @@ module ALU (A, B, OP_Code, PC2, Result, LT, ZF);
 
 	ALU_CLA CLA(.A(a_i), .B(b_i), .Ci(c_i), .S(cla_out), .Co(c_o));
 
-	assign ZF = Result == 0;
+	assign EQ = Result == 16'h0000;
 	assign LT = lt;
 
 	assign Result = case_out;
@@ -120,8 +120,8 @@ module ALU (A, B, OP_Code, PC2, Result, LT, ZF);
 				c_i = 1'b1;
 				a_i = A;
 				b_i = ~B;
-				case_out = A[15] == B[15] ? {15'h000, Result[15]} : (A[15] == 1 ? 16'h0001 : 16'h0000);
-				lt = 1;
+				case_out = A[15] == B[15] ? {15'h000, Result[15]} : (A[15] == 1'b1 ? 16'h0001 : 16'h0000);
+				lt = A[15] == B[15] ? Result[15] : (A[15] == 1'b1 ? 1'b1 : 1'b0);
 			end
 			
 			4'b1010: begin //Less Than Equal
@@ -129,7 +129,7 @@ module ALU (A, B, OP_Code, PC2, Result, LT, ZF);
 				a_i = A;
 				b_i = B;
 				case_out = A == B ? 16'h0001 : (A[15] == B[15] ? {15'h000, Result[15]} : (A[15] == 1 ? 16'h0001 : 16'h0000));
-				lt = A[15] == B[15] ? Result[15] : (A[15] == 1 ? 1 : 0);
+				lt = A[15] == B[15] ? Result[15] : (A[15] == 1'b1 ? 1'b1 : 1'b0);
 			end
 			
 			4'b1011: begin //Carry Out

@@ -1,5 +1,5 @@
 /********************************************************************************************************
-/		MODULE: ALU_Bit16_CLA - 16 bit Carry Look-ahead Adder
+/		MODULE: CLA - 16 bit Carry Look-ahead Adder
 /		PURPOSE: Given two 16 bit inputs and a carry in, creates 16 bit sum and carry out
 /
 /		INPUTS: A[15:0] - First Operand

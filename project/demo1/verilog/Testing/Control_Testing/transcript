@@ -1,0 +1,3 @@
+# vsim -lib __work -c proc_hier_bench 
+# ** Error: (vsim-3170) Could not find '__work.proc_hier_bench'.
+# Error loading design

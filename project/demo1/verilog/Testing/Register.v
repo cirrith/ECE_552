@@ -11,7 +11,7 @@
 /
 /		OUTPUTS: rdata[Data_Width-1:0] - Data that is currently being stored
 ********************************************************************************************************/
-module register (clk, rst, write, wdata, rdata);
+module Register (clk, rst, write, wdata, rdata);
 
 parameter Data_Width = 16;
 
