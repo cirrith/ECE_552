@@ -42,7 +42,7 @@ wire [15:0] result;
 
 reg [15:0] case_out;
 
-CLA adder(.A(A_in), .B(B_in), .Ci(1'b0), .S(result), .Co());
+CLA adder(.A(A_in), .B(B_in), .Cin(1'b0), .S(result), .Cout());
 PC_inc pc2(.Curr_PC(Curr_PC), .Inc_PC(PC2));
 
 assign Nxt_PC = case_out;
@@ -86,6 +86,7 @@ always @ (PC_Code, PC2, Im8, Dis, Rs) begin
 		end
 		
 		default: begin
+			$display("%b", PC_Code);
 			$display("Entered a bad PC_Code");
 			$stop;
 		end

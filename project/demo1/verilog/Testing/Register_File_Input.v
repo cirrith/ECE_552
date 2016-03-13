@@ -16,7 +16,7 @@
 module Register_File_Input (Poss_Des, Write_Back_Sel, Write_Reg);
 
 input [8:0] Poss_Des; 
-input [1:0] Write_Back_Sel; //Destination select
+input Write_Back_Sel; //Destination select
 
 output [2:0] Write_Reg; //Destination to be written to
 
