@@ -11,10 +11,10 @@ entity processor_control is
         mem_write       : out    vl_logic;
         mem_read        : out    vl_logic;
         alu_op_code     : out    vl_logic_vector(3 downto 0);
-        alu_b_src       : out    vl_logic;
+        alu_b_src       : out    vl_logic_vector(1 downto 0);
         reg_write       : out    vl_logic;
         write_reg_sel   : out    vl_logic_vector(1 downto 0);
-        imm_sign        : out    vl_logic;
+        pass_thr_sel    : out    vl_logic;
         createdump      : out    vl_logic;
         halted          : out    vl_logic
     );

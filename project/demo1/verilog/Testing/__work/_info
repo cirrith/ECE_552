@@ -2,9 +2,9 @@ m255
 cModel Technology
 d/afs/cs.wisc.edu/u/b/a/bambrough/private/ECE_552/project/demo1/verilog/Testing
 vALU
-I8bmI89c`;kCG]Z]>VUd2P3
-V9:>A6W84YVnP>8?M3Z^mb2
-w1457898786
+I>kn4]W6]FKNc::e=:GXAZ0
+V0FV1816H?JOiKVfF>@6oj1
+w1457905708
 FALU.v
 L0 32
 OE;L;5.8b;17
@@ -122,6 +122,17 @@ r1
 31
 o+define+RANDSEED=3 -work __work
 n@a@l@u_@x@o@r
+vBit16_Mux4_1
+IgA@NbWbOLcX4A?:523N[63
+Vd>P23h`OJOf3^8f0FZjO[0
+w1457902046
+FBit16_Mux4_1.v
+L0 13
+OE;L;5.8b;17
+r1
+31
+o+define+RANDSEED=3 -work __work
+n@bit16_@mux4_1
 vBit1_Mux2_1
 I?6XjlUal2SAljebkKE@Dz2
 V[5j4>K_4hcP;?ibcbmkbc1
@@ -134,27 +145,16 @@ r1
 o+define+RANDSEED=3 -work __work
 n@bit1_@mux2_1
 vBit1_Mux4_1
-Id>>?M@?SDWd53mEPiDE]70
+IaF=i4g?MzG?_U7RB6gFF[1
 VIm<Tdad3[hPOCZQTdGRF>2
-w1457813167
+w1457901698
 FBit1_Mux4_1.v
-L0 4
+L0 13
 OE;L;5.8b;17
 r1
 31
 o+define+RANDSEED=3 -work __work
 n@bit1_@mux4_1
-vBit1Mux2_1
-In6=McDMVd^EgcO^mD6L^m0
-V:bz[G@eSPePZDXn@NfM602
-w1457894679
-FBit1Mux2_1.v
-L0 4
-OE;L;5.8b;17
-r1
-31
-o+define+RANDSEED=3 -work __work
-n@bit1@mux2_1
 vBit4_CLA
 IjGOEb3KgFS:HeP_F[AHm;1
 VF>FK[JZ8Z1eAjc>P6``JY1
@@ -200,9 +200,9 @@ r1
 o+define+RANDSEED=3 -work __work
 n@bits5_@z@ext
 vBits8_SExt
-ILzjRd;IW_]_d^c]FSJ?PE1
+IK_GaRaQ<4jeik@lI9m^Ko2
 VbTgSfHIfFAiKiZlf8MFPN1
-w1457813167
+w1457899647
 FBit8_SExt.v
 L0 9
 OE;L;5.8b;17
@@ -326,9 +326,9 @@ r1
 o+define+RANDSEED=3 -work __work
 n@p@c_inc
 vPC_Logic
-I_o^LA7>J5B_]AfFgFBLkP1
+IVo_g=iKma@U=PWBZ4N[i43
 VGJD7YRQ;[PZS>0gki`^Nk1
-w1457898532
+w1457908935
 FPC_Logic.v
 L0 24
 OE;L;5.8b;17
@@ -337,9 +337,9 @@ r1
 o+define+RANDSEED=3 -work __work
 n@p@c_@logic
 vproc
-IMXG<kUnYm0z1bQ`?hMTAD1
+Ii8N4MTmkGSKnaQj68ZUPW1
 V=0;ejS?XJkcI=??BQI5CA0
-w1457898479
+w1457910926
 Fproc.v
 L0 4
 OE;L;5.8b;17
@@ -367,9 +367,9 @@ r1
 31
 o+define+RANDSEED=3 -work __work
 vProcessor_Control
-I755baX]BiRFK0BgoMi01f0
-V6dhe2a=h:IRdMUdRHOQDc0
-w1457898844
+Id;zb99V6Fz7]lenCR0lGm3
+VfXhe>cFNF@K7LH673CgQg1
+w1457909573
 FProcessor_Control.v
 L0 49
 OE;L;5.8b;17

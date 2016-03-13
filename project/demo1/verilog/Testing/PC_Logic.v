@@ -47,7 +47,7 @@ PC_inc pc2(.Curr_PC(Curr_PC), .Inc_PC(PC2));
 
 assign Nxt_PC = case_out;
 
-always @ (PC_Code, PC2, Im8, Dis, Rs) begin
+always @ (*) begin
 	case(PC_Code)
 		3'h0: begin
 			case_out = PC2;
@@ -86,8 +86,8 @@ always @ (PC_Code, PC2, Im8, Dis, Rs) begin
 		end
 		
 		default: begin
-			$display("%b", PC_Code);
-			$display("Entered a bad PC_Code");
+			//$display("%b", PC_Code);
+			//$display("Entered a bad PC_Code");
 			//$stop;
 		end
 	endcase

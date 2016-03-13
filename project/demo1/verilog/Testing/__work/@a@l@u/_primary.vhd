@@ -8,6 +8,7 @@ entity alu is
         pc2             : in     vl_logic_vector(15 downto 0);
         result          : out    vl_logic_vector(15 downto 0);
         lt              : out    vl_logic;
-        eq              : out    vl_logic
+        eq              : out    vl_logic;
+        pass_thr_sel    : in     vl_logic
     );
 end alu;
