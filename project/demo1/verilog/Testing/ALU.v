@@ -126,8 +126,8 @@ module ALU (A, B, OP_Code, PC2, Result, LT, EQ, Pass_Thr_Sel);
 			4'b1010: begin //Less Than Equal
 				c_i = 1'b1;
 				a_i = A;
-				b_i = B;
-				case_out = A == B ? 16'h0001 : (A[15] == B[15] ? {15'h000, cla_out[15]} : (A[15] == 1 ? 16'h0001 : 16'h0000));
+				b_i = ~B;
+				case_out = A == B ? 16'h0001 : (A[15] == B[15] ? {15'h000, cla_out[15]} : (A[15] == 1'b1 ? 16'h0001 : 16'h0000));
 				lt = A[15] == B[15] ? cla_out[15] : (A[15] == 1'b1 ? 1'b1 : 1'b0);
 			end
 			

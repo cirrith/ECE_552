@@ -130,11 +130,11 @@
 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/slbi_0.asm SUCCESS CPI:2.0 CYCLES:6 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/slbi_1.asm SUCCESS CPI:2.0 CYCLES:6 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/slbi_2.asm SUCCESS CPI:2.0 CYCLES:6 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
-/u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/sle_0.asm FAILED
-/u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/sle_1.asm FAILED
+/u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/sle_0.asm SUCCESS CPI:1.1 CYCLES:40 ICOUNT:37 IHITRATE: 0 DHITRATE: 0
+/u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/sle_1.asm SUCCESS CPI:1.6 CYCLES:8 ICOUNT:5 IHITRATE: 0 DHITRATE: 0
 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/sle_2.asm SUCCESS CPI:1.6 CYCLES:8 ICOUNT:5 IHITRATE: 0 DHITRATE: 0
 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/sle_3.asm SUCCESS CPI:1.6 CYCLES:8 ICOUNT:5 IHITRATE: 0 DHITRATE: 0
-/u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/sle_4.asm FAILED
+/u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/sle_4.asm SUCCESS CPI:1.6 CYCLES:8 ICOUNT:5 IHITRATE: 0 DHITRATE: 0
 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/sle_5.asm SUCCESS CPI:1.6 CYCLES:8 ICOUNT:5 IHITRATE: 0 DHITRATE: 0
 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/sle_6.asm SUCCESS CPI:1.6 CYCLES:8 ICOUNT:5 IHITRATE: 0 DHITRATE: 0
 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/sll_0.asm SUCCESS CPI:1.7 CYCLES:7 ICOUNT:4 IHITRATE: 0 DHITRATE: 0
