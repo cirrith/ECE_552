@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# vsim -lib __work -c proc_hier_bench 
+>>>>>>> 2e640e2555e217a06b6c352cc5c5f6091e568d2d
 # //  ModelSim SE 5.8b Jan 01 2004 Linux 2.6.32-573.7.1.el6.x86_64
 # //
 # //  Copyright Model Technology, a Mentor Graphics Corporation company, 2004
@@ -6,5 +10,55 @@
 # //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
 # //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
 # //
+<<<<<<< HEAD
 # vsim -view dataset=dump.wlf 
 # dump.wlf opened as dataset "dataset"
+=======
+# Loading __work.proc_hier_bench
+# Loading __work.proc_hier
+# Loading __work.clkrst
+# Loading __work.proc
+# Loading __work.Processor_Control
+# Loading __work.PC_Logic
+# Loading __work.CLA
+# Loading __work.Bit4_CLA
+# Loading __work.CLA_FA
+# Loading __work.xor2
+# Loading __work.nand2
+# Loading __work.not1
+# Loading __work.nor2
+# Loading __work.PC_inc
+# Loading __work.PC
+# Loading __work.dff
+# Loading __work.Extender
+# Loading __work.Bits5_SExt
+# Loading __work.Bits5_ZExt
+# Loading __work.Bits8_SExt
+# Loading __work.Bits11_SExt
+# Loading __work.memory2c
+# Loading __work.Register_File_Input
+# Loading __work.Register_File
+# Loading __work.Register
+# Loading __work.ALU
+# Loading __work.ALU_XOR
+# Loading __work.ALU_ANDN
+# Loading __work.ALU_Shifter
+# Loading __work.ALU_Shifter_1
+# Loading __work.Bit1_Mux4_1
+# Loading __work.Bit1Mux2_1
+# Loading __work.ALU_Shifter_2
+# Loading __work.ALU_Shifter_4
+# Loading __work.ALU_Shifter_8
+# Loading __work.ALU_CLA
+# Loading __work.ALU_Bit4_CLA
+# Loading __work.ALU_CLA_FA
+run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.trace for output
+# xxx
+# Entered a bad PC_Code
+# Break at PC_Logic.v line 91
+# Stopped at PC_Logic.v line 91 
+# 
+# <EOF> 
+>>>>>>> 2e640e2555e217a06b6c352cc5c5f6091e568d2d

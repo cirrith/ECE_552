@@ -14,7 +14,11 @@ output [15:0] out;
 
 wire [15:0] trans; 
 
+<<<<<<< HEAD
 Bit1_Mux4_1 up_sel0  (.in0(in[15]), .in1(1'b0),   .in2(in[1]),  .in3(in[1]),  .s(op), .out(trans[0])); //Corner Case
+=======
+Bit1_Mux4_1 up_sel0  (.in0(in[15]), .in1(1'b0),      .in2(in[1]),  .in3(in[1]),  .s(op), .out(trans[0])); //Corner Case
+>>>>>>> 2e640e2555e217a06b6c352cc5c5f6091e568d2d
 Bit1_Mux4_1 up_sel1  (.in0(in[0]),  .in1(in[0]),  .in2(in[2]),  .in3(in[2]),  .s(op), .out(trans[1]));
 Bit1_Mux4_1 up_sel2  (.in0(in[1]),  .in1(in[1]),  .in2(in[3]),  .in3(in[3]),  .s(op), .out(trans[2]));
 Bit1_Mux4_1 up_sel3  (.in0(in[2]),  .in1(in[2]),  .in2(in[4]),  .in3(in[4]),  .s(op), .out(trans[3]));
@@ -31,6 +35,10 @@ Bit1_Mux4_1 up_sel13 (.in0(in[12]), .in1(in[12]), .in2(in[14]), .in3(in[14]), .s
 Bit1_Mux4_1 up_sel14 (.in0(in[13]), .in1(in[13]), .in2(in[15]), .in3(in[15]), .s(op), .out(trans[14]));
 Bit1_Mux4_1 up_sel15 (.in0(in[14]), .in1(in[14]), .in2(in[0]),  .in3(1'b0),   .s(op), .out(trans[15])); //Corner Case
 
+<<<<<<< HEAD
 Bit1_Mux2_1 low_sel[15:0] (.in0(in), .in1(trans), .s(sh), .out(out)); //To shift or not to shift, that is the question
+=======
+Bit1Mux2_1 low_sel[15:0] (.in0(in), .in1(trans), .s(sh), .out(out)); //To shift or not to shift, that is the question
+>>>>>>> 2e640e2555e217a06b6c352cc5c5f6091e568d2d
 
 endmodule 

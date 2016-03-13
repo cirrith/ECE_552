@@ -18,8 +18,16 @@ module Extender (Extend, Imm5S, Imm5Z, Imm8S, Dis11);
 	output [15:0] Imm8S;
 	output [15:0] Dis11;
 	
+<<<<<<< HEAD
 	Bits5_SExt  Sign5_Ext(.In(Extend[4:0]), .Out(Imm5S));
 	Bits5_ZExt  Zero5_Ext(.In(Extend[4:0]), .Out(Imm5Z));
 	Bits8_SExt  Sign8_Ext(.In(Extend[7:0]), .Out(Imm8S));
 	Bits11_SExt Sign11_Ext(.In(Extend[10:0]), .Out(Dis11));
+=======
+	Bits5_SExt choiceA(.In(Extend[4:0]), .Out(Imm5S));
+	Bits5_ZExt choiceB(.In(Extend[4:0]), .Out(Imm5Z));
+	Bits8_SExt choiceC(.In(Extend[7:0]), .Out(Imm8S));
+	Bits11_SExt choiceD(.In(Extend[10:0]), .Out(Dis11));
+
+>>>>>>> 2e640e2555e217a06b6c352cc5c5f6091e568d2d
 endmodule 

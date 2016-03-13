@@ -31,5 +31,9 @@ Bit1_Mux4_1 up_sel13 (.in0(in[11]), .in1(in[11]), .in2(in[15]), .in3(in[15]), .s
 Bit1_Mux4_1 up_sel14 (.in0(in[12]), .in1(in[12]), .in2(in[0]),  .in3(1'b0),   .s(op), .out(trans[14])); //Corner Case
 Bit1_Mux4_1 up_sel15 (.in0(in[13]), .in1(in[13]), .in2(in[1]),  .in3(1'b0),   .s(op), .out(trans[15])); //Corner Case
 
+<<<<<<< HEAD
 Bit1_Mux2_1 low_sel[15:0] (.in0(in), .in1(trans), .s(sh), .out(out)); //To shift or not to shift, that is the question
+=======
+Bit1Mux2_1 low_sel[15:0] (.in0(in), .in1(trans), .s(sh), .out(out)); //To shift or not to shift, that is the question
+>>>>>>> 2e640e2555e217a06b6c352cc5c5f6091e568d2d
 endmodule 

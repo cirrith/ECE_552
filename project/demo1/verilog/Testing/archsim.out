@@ -5,6 +5,7 @@ Type "help" for more information
 
 Loading program...
 Executing...
+<<<<<<< HEAD
 lbi r1, 100
 INUM:        0 PC: 0x0000 REG: 1 VALUE: 0x0064
 lbi r2, 99
@@ -24,4 +25,13 @@ INUM:        7 PC: 0x000e REG: 4 VALUE: 0x0257
 halt
 program halted
 INUM:        8 PC: 0x0010
+=======
+lbi r1, 0
+INUM:        0 PC: 0x0000 REG: 1 VALUE: 0x0000
+andni r2, r1, 0
+INUM:        1 PC: 0x0002 REG: 2 VALUE: 0x0000
+halt
+program halted
+INUM:        2 PC: 0x0004
+>>>>>>> 2e640e2555e217a06b6c352cc5c5f6091e568d2d
 Program Finished
