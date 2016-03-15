@@ -1,0 +1,50 @@
+I:/College/ECE_552/hw4/hw4_1/rf_bypass.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw4/hw4_1/rf_bypass.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module rf_bypass
+
+Top level modules:
+	rf_bypass
+
+} {} {}} I:/College/ECE_552/hw4/hw4_1/register.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw4/hw4_1/register.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} I:/College/ECE_552/hw4/hw4_1/clkrst.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw4/hw4_1/clkrst.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} I:/College/ECE_552/hw4/hw4_1/rf_bypass_hier_bench.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw4/hw4_1/rf_bypass_hier_bench.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module rf_bypass_hier_bench
+
+Top level modules:
+	rf_bypass_hier_bench
+
+} {} {}} I:/College/ECE_552/hw4/hw4_1/rf_bypass_hier.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw4/hw4_1/rf_bypass_hier.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module rf_bypass_hier
+
+Top level modules:
+	rf_bypass_hier
+
+} {} {}} I:/College/ECE_552/hw4/hw4_1/rf.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw4/hw4_1/rf.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module rf
+
+Top level modules:
+	rf
+
+} {} {}} I:/College/ECE_552/hw4/hw4_1/dff.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/hw4/hw4_1/dff.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}}

@@ -1,0 +1,7 @@
+//JALR Test 3
+
+LBI r1, 0x00
+SLBI r1, 0x04 //R1 = 0x0004
+jalr r1, 0x04
+halt
+jr r7, 0x00

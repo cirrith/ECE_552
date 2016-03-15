@@ -1,0 +1,143 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ProgramData/App-V/2191B702-5279-4048-91BA-BCF8F2A20B49/21710E5E-1DEB-4C76-9578-9609978C17F5/Root/examples
+vclkrst
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
+!i10b 1
+!s100 No[XWID:QhgHKS8<I68UH0
+Iil?PbW@g5zz]aQJN9im`53
+Z1 dI:/College/ECE_552/hw4/hw4_1
+w1456169259
+8I:/College/ECE_552/hw4/hw4_1/clkrst.v
+FI:/College/ECE_552/hw4/hw4_1/clkrst.v
+L0 12
+Z2 OE;L;10.3c;59
+!s108 1458005431.742000
+!s107 I:/College/ECE_552/hw4/hw4_1/clkrst.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw4/hw4_1/clkrst.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vdff
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 :P9B=6RNJiggGnSQ@zSPl0
+IK;[EUPCgYD`PeY0F4f=6N0
+R1
+w1455473824
+8I:/College/ECE_552/hw4/hw4_1/dff.v
+FI:/College/ECE_552/hw4/hw4_1/dff.v
+L0 6
+R2
+!s108 1458005432.084000
+!s107 I:/College/ECE_552/hw4/hw4_1/dff.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw4/hw4_1/dff.v|
+!i113 0
+R3
+vregister
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 jDe]T=:dcH^F@4hJQ^Lo`1
+IniGNl4hHRLL9zR[F8?XJ72
+R1
+w1455840304
+8I:/College/ECE_552/hw4/hw4_1/register.v
+FI:/College/ECE_552/hw4/hw4_1/register.v
+L0 14
+R2
+!s108 1458005432.334000
+!s107 I:/College/ECE_552/hw4/hw4_1/register.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw4/hw4_1/register.v|
+!i113 0
+R3
+vrf
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 7;X3`GbDczTf0F;Q`;XVn0
+IV=Gz[[Ib5b4;KDdHJ5LDU1
+R1
+w1455840965
+8I:/College/ECE_552/hw4/hw4_1/rf.v
+FI:/College/ECE_552/hw4/hw4_1/rf.v
+L0 4
+R2
+!s108 1458005432.616000
+!s107 I:/College/ECE_552/hw4/hw4_1/rf.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw4/hw4_1/rf.v|
+!i113 0
+R3
+vrf_bypass
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 fzKkR3LF?m[J5>n:khV]h0
+IP6^n4e6:l1PbGE>SFZ7CZ1
+R1
+w1457207427
+8I:/College/ECE_552/hw4/hw4_1/rf_bypass.v
+FI:/College/ECE_552/hw4/hw4_1/rf_bypass.v
+L0 4
+R2
+!s108 1458005432.886000
+!s107 I:/College/ECE_552/hw4/hw4_1/rf_bypass.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw4/hw4_1/rf_bypass.v|
+!i113 0
+R3
+vrf_bypass_hier
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 KTLUeQ86Ha]kYD3b8>Oez3
+I:YoD;k9KD`Y`Emz6@aWP90
+R1
+w1455989827
+8I:/College/ECE_552/hw4/hw4_1/rf_bypass_hier.v
+FI:/College/ECE_552/hw4/hw4_1/rf_bypass_hier.v
+L0 7
+R2
+!s108 1458005433.206000
+!s107 I:/College/ECE_552/hw4/hw4_1/rf_bypass_hier.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw4/hw4_1/rf_bypass_hier.v|
+!i113 0
+R3
+vrf_bypass_hier_bench
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 Y?_N?Ug4g9l8lo4N[ffeH1
+IWRaL398UGkdlg23^X[_;F2
+R1
+w1456818961
+8I:/College/ECE_552/hw4/hw4_1/rf_bypass_hier_bench.v
+FI:/College/ECE_552/hw4/hw4_1/rf_bypass_hier_bench.v
+L0 5
+R2
+!s108 1458005431.002000
+!s107 I:/College/ECE_552/hw4/hw4_1/rf_bypass_hier_bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/hw4/hw4_1/rf_bypass_hier_bench.v|
+!i113 0
+R3

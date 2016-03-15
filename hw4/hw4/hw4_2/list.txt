@@ -1,0 +1,4 @@
+fifo.v
+register.v
+counter.v
+dff.v
