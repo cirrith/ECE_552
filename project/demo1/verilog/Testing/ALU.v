@@ -27,18 +27,19 @@
 /
 /		OUTPUTS: Result[15:0] - Result of Operation
 /				 LT - Less Than
-/				 ZF - Zero Flag
+/				 EQ - Zero Flag
 ********************************************************************************************************/
-module ALU (A, B, OP_Code, PC2, Result, LT, ZF);
+module ALU (A, B, OP_Code, PC2, Result, LT, EQ, Pass_Thr_Sel);
 
 	input [15:0] A;
 	input [15:0] B;
 	input [3:0] OP_Code;
 	input [15:0] PC2;
+	input Pass_Thr_Sel;
 
 	output [15:0] Result;
 	output LT;
-	output ZF;
+	output EQ;
 
 	reg [15:0] case_out;
 	reg [15:0] a_i;	//Be able to switch what A is ==
@@ -58,20 +59,18 @@ module ALU (A, B, OP_Code, PC2, Result, LT, ZF);
 
 	ALU_Shifter Shifter(.In(A), .Cnt(B[3:0]), .Op(OP_Code[1:0]), .Out(shift_out));
 
-	ALU_CLA CLA(.A(a_i), .B(b_i), .Ci(c_i), .S(cla_out), .Co(c_o));
+	ALU_CLA CLA(.A(a_i), .B(b_i), .Ci(c_i), .S(cla_out), .Cout(c_o));
 
-	assign ZF = Result == 0;
+	assign EQ = Result == 16'h0000;
 	assign LT = lt;
 
 	assign Result = case_out;
 
-	always @ (OP_Code, A, B) begin
+	always @ (*) begin
 		c_i = 1'b0;
-		a_i = 1'b0;
-		b_i = 1'b0;
+		a_i = 15'h0000;
+		b_i = 15'h0000;
 		case_out = 16'h0000;
-		
-		lt = 1'b0;
 		
 		case(OP_Code)
 			4'b0000: begin //Add
@@ -120,16 +119,16 @@ module ALU (A, B, OP_Code, PC2, Result, LT, ZF);
 				c_i = 1'b1;
 				a_i = A;
 				b_i = ~B;
-				case_out = A[15] == B[15] ? {15'h000, Result[15]} : (A[15] == 1 ? 16'h0001 : 16'h0000);
-				lt = 1;
+				case_out = A[15] == B[15] ? {15'h000, cla_out[15]} : (A[15] == 1'b1 ? 16'h0001 : 16'h0000);
+				lt = A[15] == B[15] ? cla_out[15] : (A[15] == 1'b1 ? 1'b1 : 1'b0);
 			end
 			
 			4'b1010: begin //Less Than Equal
 				c_i = 1'b1;
 				a_i = A;
-				b_i = B;
-				case_out = A == B ? 16'h0001 : (A[15] == B[15] ? {15'h000, Result[15]} : (A[15] == 1 ? 16'h0001 : 16'h0000));
-				lt = A[15] == B[15] ? Result[15] : (A[15] == 1 ? 1 : 0);
+				b_i = ~B;
+				case_out = A == B ? 16'h0001 : (A[15] == B[15] ? {15'h000, cla_out[15]} : (A[15] == 1'b1 ? 16'h0001 : 16'h0000));
+				lt = A[15] == B[15] ? cla_out[15] : (A[15] == 1'b1 ? 1'b1 : 1'b0);
 			end
 			
 			4'b1011: begin //Carry Out
@@ -144,7 +143,8 @@ module ALU (A, B, OP_Code, PC2, Result, LT, ZF);
 			end
 			
 			4'b1101: begin //B pass through
-				case_out = B;
+				case_out = Pass_Thr_Sel ? B : A;
+				lt = A[15];
 			end
 			
 			4'b1110: begin //Move Bottom
@@ -155,7 +155,5 @@ module ALU (A, B, OP_Code, PC2, Result, LT, ZF);
 				case_out = PC2;
 			end
 		endcase
-		
 	end
-
 endmodule

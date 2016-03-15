@@ -42,17 +42,17 @@ wire [15:0] result;
 
 reg [15:0] case_out;
 
-CLA adder(.A(A_in), .B(B_in), .Ci(1'b0), .S(result), .Co());
+CLA adder(.A(A_in), .B(B_in), .Ci(1'b0), .S(result), .Cout());
 PC_inc pc2(.Curr_PC(Curr_PC), .Inc_PC(PC2));
 
 assign Nxt_PC = case_out;
 
-always @ (PC_Code, PC2, Im8, Dis, Rs) begin
+always @ (*) begin
 	case(PC_Code)
-		3'b000: begin
+		3'h0: begin
 			case_out = PC2;
 		end
-		3'b001: begin
+		3'h1: begin
 			case(Comp_Code) //Compare the conditnal codes
 				2'b00: begin //Equal
 					branch = EQ ? 1'b1 : 1'b0;
@@ -64,30 +64,31 @@ always @ (PC_Code, PC2, Im8, Dis, Rs) begin
 					branch = LT ? 1'b1 : 1'b0;
 				end
 				2'b11: begin //Greater than or equal
-					branch = LT ? 1'b0 : 1'b1;
+					branch = ~LT ? 1'b1 : 1'b0;
 				end
 			endcase
 			A_in = PC2;
 			B_in = branch ? Im8 : 16'h0000; //If condital code is meet then branch
 			case_out = result;
 		end
-		3'b010: begin
+		3'h2: begin
 			A_in = Rs;
 			B_in = Im8;
 			case_out = result;
 		end
-		3'b011: begin
+		3'h3: begin
 			A_in = PC2;
 			B_in = Dis;
 			case_out = result;
 		end
-		3'b100: begin
+		3'h4: begin
 			//case_out = EPC !!!!!!!!!!!!!!
 		end
 		
 		default: begin
-			$display("Entered a bad PC_Code");
-			$stop;
+			//$display("%b", PC_Code);
+			//$display("Entered a bad PC_Code");
+			//$stop;
 		end
 	endcase
 end

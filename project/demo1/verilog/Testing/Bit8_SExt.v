@@ -14,5 +14,4 @@ module Bits8_SExt(In, Out);
 		
 	assign Out = {{8{In[7]}}, In[7:0]};
 
-	
 endmodule

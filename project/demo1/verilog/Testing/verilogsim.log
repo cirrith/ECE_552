@@ -1,0 +1,11 @@
+SIMLOG:: Cycle           4 PC:     0000 I:     c100 R: 1   1     0000 M: 0 0     0000     0000
+SIMLOG:: Cycle           5 PC:     0002 I:     910c R: 1   1     000c M: 0 0     000c     0000
+SIMLOG:: Cycle           6 PC:     0004 I:     2006 R: 0   0     0000 M: 0 0     0000     0000
+SIMLOG:: Cycle           7 PC:     000c I:     39fc R: 1   7     000e M: 0 0     000e     0000
+SIMLOG:: Cycle           8 PC:     0008 I:     0000 R: 0   0     0000 M: 0 0     0000     0000
+SIMLOG:: Processor halted
+
+SIMLOG:: sim_cycles           8
+
+SIMLOG:: inst_count           5
+

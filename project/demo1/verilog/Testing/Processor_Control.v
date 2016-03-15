@@ -46,7 +46,7 @@
 /
 /		OUTPUTS: Write_Reg - Register to be written to
 ********************************************************************************************************/
-module Processor_Control (OP_Code, OP_Min, PC_Write, PC_Code, Comp_Code, Write_Back_Sel, Mem_Write, Mem_Read, ALU_OP_Code, ALU_B_Src, Reg_Write, Write_Reg_Sel, Imm_Sign, createDump, halted);
+module Processor_Control (OP_Code, OP_Min, PC_Write, PC_Code, Comp_Code, Write_Back_Sel, Mem_Write, Mem_Read, ALU_OP_Code, ALU_B_Src, Reg_Write, Write_Reg_Sel, Pass_Thr_Sel, createDump, halted);
 
 input [4:0] OP_Code;
 input [1:0] OP_Min;
@@ -58,27 +58,27 @@ output reg Write_Back_Sel;
 output reg Mem_Write;
 output reg Mem_Read;
 output reg [3:0] ALU_OP_Code;
-output reg ALU_B_Src;
+output reg [1:0] ALU_B_Src;
 output reg Reg_Write;
 output reg [1:0] Write_Reg_Sel;
+output reg Pass_Thr_Sel;
 output reg createDump;
-output reg Imm_Sign;
 output reg halted;
 
-always @ (OP_Code) begin
-	PC_Write = 0;
-	PC_Code = 0;
-	Comp_Code = 0;
-	Write_Back_Sel = 0;
-	Mem_Write = 0;
-	Mem_Read = 0;
-	ALU_OP_Code = 0;
-	ALU_B_Src = 0;
-	Reg_Write = 0;
-	Write_Reg_Sel = 0;
-	Imm_Sign = 0;
-	createDump = 0;
-	halted = 0;
+always @ (OP_Code, OP_Min) begin
+	PC_Write = 1'h0;
+	PC_Code = 3'h0;
+	Comp_Code = 2'h0;
+	Write_Back_Sel = 1'h0;
+	Mem_Write = 1'h0;
+	Mem_Read = 1'h0;
+	ALU_OP_Code = 4'h0;
+	Pass_Thr_Sel = 1'h0;
+	ALU_B_Src = 2'h0;
+	Reg_Write = 1'h0;
+	Write_Reg_Sel = 2'h0;
+	createDump = 1'h0;
+	halted = 1'h0;
 	
 	/*
 	PC_Code = 0; //PC + 2
@@ -108,529 +108,498 @@ always @ (OP_Code) begin
 	ALU_OP_Code = 7 // Shift Right Logical
 	ALU_OP_Code = 8 // Equal
 	ALU_OP_Code = 9 // Less Than
-	ALU_OP_Code = 10 // Less Than or Equal
-	ALU_OP_Code = 11 // Carry Out
-	ALU_OP_Code = 12 // Flip
-	ALU_OP_Code = 13 // Pass Through
-	ALU_OP_Code = 14 // SLBI
-	ALU_OP_Code = 15 // PC + 2
+	ALU_OP_Code = 10 A // Less Than or Equal
+	ALU_OP_Code = 11 B // Carry Out
+	ALU_OP_Code = 12 C // Flip
+	ALU_OP_Code = 13 D // Pass Through
+	ALU_OP_Code = 14 E // SLBI
+	ALU_OP_Code = 15 F // PC + 2
+	
+	Pass_Thr_Sel = 0; //Pass Through A & update flags
+	Pass_Thr_Sel = 1; //Pass Through B & update flags
 	
 	ALU_B_Src = 0; // Register
-	ALU_B_Src = 1; // Immediate
+	ALU_B_Src = 1; // 5 Bit Zero Extended
+	ALU_B_Src = 2; // 5 Bit Sign Extended
+	ALU_B_Src = 3; // 8 Bit Sign Extended
 	
 	Write_Reg_Sel = 0; //Rd (Immediate)
 	Write_Reg_Sel = 1; //Rd (Register)
 	Write_Reg_Sel = 2; //Rs (LBI)
 	Write_Reg_Sel = 3; //R7
-	
-	Imm_Sign = 0; //Sign Extend
-	Imm_Sign = 1; //Zero Extend
 	*/
 	
 	case(OP_Code)
 		5'b00000: begin //HALT !!!!!!!
 			//PC_Write = 0;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			//ALU_OP_Code = 0;
-			//ALU_B_Src = 0;
-			//Reg_Write = 0;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
-			createDump =1;
-			halted = 1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			//ALU_OP_Code = 4'h0;
+			//ALU_B_Src = 2'h0;
+			//Reg_Write = 1'h0;
+			//Write_Reg_Sel = 2'h0;
+			createDump = 1'h1;
+			halted = 1'h1;
 		end
         5'b00001: begin //NOP
-			//PC_Write = 0;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			//ALU_OP_Code = 0;
-			//ALU_B_Src = 0;
-			//Reg_Write = 0;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			//ALU_OP_Code = 4'h0;
+			//ALU_B_Src = 2'h0;
+			//Reg_Write = 1'h0;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b01000: begin //ADDI
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 0;
-			ALU_B_Src = 1;
-			Reg_Write = 1;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'h0;
+			ALU_B_Src = 2'h2;
+			Reg_Write = 1'h1;
+			//Write_Reg_Sel = 2'h0;
 		end
         5'b01001: begin //SUBI
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 1;
-			ALU_B_Src = 1;
-			Reg_Write = 1;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'h1;
+			ALU_B_Src = 2'h2;
+			Reg_Write = 1'h1;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b01010: begin //XORI
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 2;
-			ALU_B_Src = 1;
-			Reg_Write = 1;
-			//Write_Reg_Sel = 0;
-			Imm_Sign = 1;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'h2;
+			ALU_B_Src = 2'h1;
+			Reg_Write = 1'h1;
+			//Write_Reg_Sel = 2'h0;
 		end
         5'b01011: begin //ANDNI
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 3;
-			ALU_B_Src = 1;
-			Reg_Write = 1;
-			//Write_Reg_Sel = 0;
-			Imm_Sign = 1;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'h3;
+			ALU_B_Src = 2'h1;
+			Reg_Write = 1'h1;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b10100: begin //ROLI
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 4;
-			ALU_B_Src = 1;
-			Reg_Write = 1;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'h4;
+			ALU_B_Src = 2'h1;
+			Reg_Write = 1'h1;
+			//Write_Reg_Sel = 2'h0;
 		end
         5'b10101: begin //SLLI
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 5;
-			ALU_B_Src = 1;
-			Reg_Write = 1;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'h5;
+			ALU_B_Src = 2'h1;
+			Reg_Write = 1'h1;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b10110: begin //RORI
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 6;
-			ALU_B_Src = 1;
-			Reg_Write = 1;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'h6;
+			ALU_B_Src = 2'h1;
+			Reg_Write = 1'h1;
+			//Write_Reg_Sel = 2'h0;
 		end
         5'b10111: begin //SRLI
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 7;
-			ALU_B_Src = 1;
-			Reg_Write = 1;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'h7;
+			ALU_B_Src = 2'h1;
+			Reg_Write = 1'h1;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b10000: begin //ST !
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			Mem_Write = 1;
-			//Mem_Read = 0;
-			ALU_OP_Code = 0;
-			ALU_B_Src = 1;
-			//Reg_Write = 0;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			Mem_Write = 1'h1;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'h0;
+			ALU_B_Src = 2'h2;
+			//Reg_Write = 1'h0;
+			//Write_Reg_Sel = 2'h0;
 		end
         5'b10001: begin //LD
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			Write_Back_Sel = 1;
-			//Mem_Write = 0;
-			Mem_Read = 1;
-			ALU_OP_Code = 0;
-			ALU_B_Src = 1;
-			Reg_Write = 1;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			Write_Back_Sel = 1'h1;
+			//Mem_Write = 1'h0;
+			Mem_Read = 1'h1;
+			ALU_OP_Code = 4'h0;
+			ALU_B_Src = 2'h2;
+			Reg_Write = 1'h1;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b10011: begin //STU
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			Mem_Write = 1;
-			//Mem_Read = 0;
-			ALU_OP_Code = 0;
-			ALU_B_Src = 1;
-			Reg_Write = 1;
-			Write_Reg_Sel = 2;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			Mem_Write = 1'h1;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'h0;
+			ALU_B_Src = 2'h2;
+			Reg_Write = 1'h1;
+			Write_Reg_Sel = 2'h2;
 		end
         5'b11001: begin //BTR
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 12;
-			//ALU_B_Src = 0;
-			Reg_Write = 1;
-			Write_Reg_Sel = 1;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'hC;
+			//ALU_B_Src = 2'h0;
+			Reg_Write = 1'h1;
+			Write_Reg_Sel = 2'h1;
 		end
 		5'b11011: begin //ADD|SUB|XOR|ANDN
 			case(OP_Min)
 				2'b00: begin //ADD
-					PC_Write = 1;
-					//PC_Code = 0;
-					//Comp_Code = 0;
-					Write_Back_Sel = 0;
-					//Mem_Write = 0;
-					//Mem_Read = 0;
-					ALU_OP_Code = 0;
-					//ALU_B_Src = 0;
-					Reg_Write = 1;
-					Write_Reg_Sel = 1;
-					//Imm_Sign = 0;
+					PC_Write = 1'h1;
+					//PC_Code = 3'h0;
+					//Comp_Code = 2'h0;
+					Write_Back_Sel = 1'h0;
+					//Mem_Write = 1'h0;
+					//Mem_Read = 1'h0;
+					ALU_OP_Code = 4'h0;
+					//ALU_B_Src = 2'h0;
+					Reg_Write = 1'h1;
+					Write_Reg_Sel = 2'h1;
 				end
 				2'b01: begin //SUB
-					PC_Write = 1;
-					//PC_Code = 0;
-					//Comp_Code = 0;
-					Write_Back_Sel = 0;
-					//Mem_Write = 0;
-					//Mem_Read = 0;
-					ALU_OP_Code = 1;
-					//ALU_B_Src = 0;
-					Reg_Write = 1;
-					Write_Reg_Sel = 1;
-					//Imm_Sign = 0;
+					PC_Write = 1'h1;
+					//PC_Code = 3'h0;
+					//Comp_Code = 2'h0;
+					Write_Back_Sel = 1'h0;
+					//Mem_Write = 1'h0;
+					//Mem_Read = 1'h0;
+					ALU_OP_Code = 4'h1;
+					//ALU_B_Src = 2'h0;
+					Reg_Write = 1'h1;
+					Write_Reg_Sel = 2'h1;
 				end
 				2'b10: begin //XOR
-					PC_Write = 1;
-					//PC_Code = 0;
-					//Comp_Code = 0;
-					Write_Back_Sel = 0;
-					//Mem_Write = 0;
-					//Mem_Read = 0;
-					ALU_OP_Code = 2;
-					//ALU_B_Src = 0;
-					Reg_Write = 1;
-					Write_Reg_Sel = 1;
-					//Imm_Sign = 0;
+					PC_Write = 1'h1;
+					//PC_Code = 3'h0;
+					//Comp_Code = 2'h0;
+					Write_Back_Sel = 1'h0;
+					//Mem_Write = 1'h0;
+					//Mem_Read = 1'h0;
+					ALU_OP_Code = 4'h2;
+					//ALU_B_Src = 2'h0;
+					Reg_Write = 1'h1;
+					Write_Reg_Sel = 2'h1;
 				end
 				2'b11: begin //ANDN
-					PC_Write = 1;
-					//PC_Code = 0;
-					//Comp_Code = 0;
-					Write_Back_Sel = 0;
-					//Mem_Write = 0;
-					//Mem_Read = 0;
-					ALU_OP_Code = 3;
-					//ALU_B_Src = 0;
-					Reg_Write = 1;
-					Write_Reg_Sel = 1;
-					//Imm_Sign = 0;
+					PC_Write = 1'h1;
+					//PC_Code = 3'h0;
+					//Comp_Code = 2'h0;
+					Write_Back_Sel = 1'h0;
+					//Mem_Write = 1'h0;
+					//Mem_Read = 1'h0;
+					ALU_OP_Code = 4'h3;
+					//ALU_B_Src = 2'h0;
+					Reg_Write = 1'h1;
+					Write_Reg_Sel = 2'h1;
 				end
 			endcase
 		end
 		5'b11010: begin //ROL|SLL|ROR|SRL
 			case(OP_Min)
 				2'b00: begin //ROL
-					PC_Write = 1;
-					//PC_Code = 0;
-					//Comp_Code = 0;
-					Write_Back_Sel = 0;
-					//Mem_Write = 0;
-					//Mem_Read = 0;
-					ALU_OP_Code = 4;
-					//ALU_B_Src = 0;
-					Reg_Write = 1;
-					Write_Reg_Sel = 1;
-					//Imm_Sign = 0;
+					PC_Write = 1'h1;
+					//PC_Code = 3'h0;
+					//Comp_Code = 2'h0;
+					Write_Back_Sel = 1'h0;
+					//Mem_Write = 1'h0;
+					//Mem_Read = 1'h0;
+					ALU_OP_Code = 4'h4;
+					//ALU_B_Src = 2'h0;
+					Reg_Write = 1'h1;
+					Write_Reg_Sel = 2'h1;
 				end
 				2'b01: begin //SLL
-					PC_Write = 1;
-					//PC_Code = 0;
-					//Comp_Code = 0;
-					Write_Back_Sel = 0;
-					//Mem_Write = 0;
-					//Mem_Read = 0;
-					ALU_OP_Code = 5;
-					//ALU_B_Src = 0;
-					Reg_Write = 1;
-					Write_Reg_Sel = 1;
-					//Imm_Sign = 0;
+					PC_Write = 1'h1;
+					//PC_Code = 3'h0;
+					//Comp_Code = 2'h0;
+					Write_Back_Sel = 1'h0;
+					//Mem_Write = 1'h0;
+					//Mem_Read = 1'h0;
+					ALU_OP_Code = 4'h5;
+					//ALU_B_Src = 2'h0;
+					Reg_Write = 1'h1;
+					Write_Reg_Sel = 2'h1;
 				end
 				2'b10: begin //ROR
-					PC_Write = 1;
-					//PC_Code = 0;
-					//Comp_Code = 0;
-					Write_Back_Sel = 0;
-					//Mem_Write = 0;
-					//Mem_Read = 0;
-					ALU_OP_Code = 6;
-					//ALU_B_Src = 0;
-					Reg_Write = 1;
-					Write_Reg_Sel = 1;
-					//Imm_Sign = 0;
+					PC_Write = 1'h1;
+					//PC_Code = 3'h0;
+					//Comp_Code = 2'h0;
+					Write_Back_Sel = 1'h0;
+					//Mem_Write = 1'h0;
+					//Mem_Read = 1'h0;
+					ALU_OP_Code = 4'h6;
+					//ALU_B_Src = 2'h0;
+					Reg_Write = 1'h1;
+					Write_Reg_Sel = 2'h1;
 				end
 				2'b11: begin //SRL
-					PC_Write = 1;
-					//PC_Code = 0;
-					//Comp_Code = 0;
-					Write_Back_Sel = 0;
-					//Mem_Write = 0;
-					//Mem_Read = 0;
-					ALU_OP_Code = 7;
-					//ALU_B_Src = 0;
-					Reg_Write = 1;
-					Write_Reg_Sel = 1;
-					//Imm_Sign = 0;
+					PC_Write = 1'h1;
+					//PC_Code = 3'h0;
+					//Comp_Code = 2'h0;
+					Write_Back_Sel = 1'h0;
+					//Mem_Write = 1'h0;
+					//Mem_Read = 1'h0;
+					ALU_OP_Code = 4'h7;
+					//ALU_B_Src = 2'h0;
+					Reg_Write = 1'h1;
+					Write_Reg_Sel = 2'h1;
 				end
 			endcase
 		end
 		5'b11100: begin //SEQ
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 8;
-			//ALU_B_Src = 0;
-			Reg_Write = 1;
-			Write_Reg_Sel = 1;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'h8;
+			//ALU_B_Src = 2'h0;
+			Reg_Write = 1'h1;
+			Write_Reg_Sel = 2'h1;
 		end
 		5'b11101: begin //SLT
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 9;
-			//ALU_B_Src = 0;
-			Reg_Write = 1;
-			Write_Reg_Sel = 1;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'h9;
+			//ALU_B_Src = 2'h0;
+			Reg_Write = 1'h1;
+			Write_Reg_Sel = 2'h1;
 		end
 		5'b11110: begin //SLE
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 10;
-			//ALU_B_Src = 0;
-			Reg_Write = 1;
-			Write_Reg_Sel = 1;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'hA;
+			//ALU_B_Src = 2'h0;
+			Reg_Write = 1'h1;
+			Write_Reg_Sel = 2'h1;
 		end
 		5'b11111: begin //SCO
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code =11;
-			//ALU_B_Src = 0;
-			Reg_Write = 1;
-			Write_Reg_Sel = 1;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'hB;
+			//ALU_B_Src = 2'h0;
+			Reg_Write = 1'h1;
+			Write_Reg_Sel = 2'h1;
 		end
 		5'b01100: begin //BEQZ
-			PC_Write = 1;
-			PC_Code = 1;
-			Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			//ALU_OP_Code = 0;
-			//ALU_B_Src = 0;
-			//Reg_Write = 0;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			PC_Code = 3'h1;
+			Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'hD;
+			Pass_Thr_Sel = 1'h0;
+			ALU_B_Src = 2'h0;
+			//Reg_Write = 1'h0;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b01101: begin //BNEZ
-			PC_Write = 1;
-			PC_Code = 1;
-			Comp_Code = 1;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			//ALU_OP_Code = 0;
-			//ALU_B_Src = 0;
-			//Reg_Write = 0;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			PC_Code = 3'h1;
+			Comp_Code = 2'h1;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'hD;
+			Pass_Thr_Sel = 1'h0;
+			ALU_B_Src = 2'h0;
+			//Reg_Write = 1'h0;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b01110: begin //BLTZ
-			PC_Write = 1;
-			PC_Code = 1;
-			Comp_Code = 2;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			//ALU_OP_Code = 0;
-			//ALU_B_Src = 0;
-			//Reg_Write = 0;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			PC_Code = 3'h1;
+			Comp_Code = 2'h2;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'hD;
+			Pass_Thr_Sel = 1'h0;
+			ALU_B_Src = 2'h0;
+			//Reg_Write = 1'h0;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b01111: begin //BGEZ
-			PC_Write = 1;
-			PC_Code = 1;
-			Comp_Code =3;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			//ALU_OP_Code = 0;
-			//ALU_B_Src = 0;
-			//Reg_Write = 0;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			PC_Code = 3'h1;
+			Comp_Code = 2'h3;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'hD;
+			Pass_Thr_Sel = 1'h0;
+			ALU_B_Src = 2'h0;
+			//Reg_Write = 1'h0;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b11000: begin //LBI
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 13;
-			ALU_B_Src = 1;
-			Reg_Write = 1;
-			Write_Reg_Sel = 2;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'hD;
+			Pass_Thr_Sel = 1'h1;
+			ALU_B_Src = 2'h3;
+			Reg_Write = 1'h1;
+			Write_Reg_Sel = 2'h2;
 		end
 		5'b10010: begin //SLBI
-			PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 14;
-			ALU_B_Src = 1;
-			Reg_Write = 1;
-			Write_Reg_Sel = 2;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'hE;
+			ALU_B_Src = 2'h3;
+			Reg_Write = 1'h1;
+			Write_Reg_Sel = 2'h2;
 		end
 		5'b00100: begin //J
-			PC_Write = 1;
-			PC_Code = 3;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			//ALU_OP_Code = 0;
-			//ALU_B_Src = 0;
-			//Reg_Write = 0;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			PC_Code = 3'h3;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			//ALU_OP_Code = 4'h0;
+			//ALU_B_Src = 2'h0;
+			//Reg_Write = 1'h0;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b00101: begin //JR
-			PC_Write = 1;
-			PC_Code = 2;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			//ALU_OP_Code = 0;
-			//ALU_B_Src = 0;
-			//Reg_Write = 0;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			PC_Code = 3'h2;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			//ALU_OP_Code = 4'h0;
+			//ALU_B_Src = 2'h0;
+			//Reg_Write = 1'h0;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b00110: begin //JAL
-			PC_Write = 1;
-			PC_Code = 3;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 15;
-			//ALU_B_Src = 0;
-			Reg_Write = 1;
-			Write_Reg_Sel = 3;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			PC_Code = 3'h3;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'hF;
+			//ALU_B_Src = 2'h0;
+			Reg_Write = 1'h1;
+			Write_Reg_Sel = 2'h3;
 		end
 		5'b00111: begin //JALR
-			PC_Write = 1;
-			PC_Code = 2;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			ALU_OP_Code = 15;
-			//ALU_B_Src = 0;
-			Reg_Write = 1;
-			Write_Reg_Sel = 3;
-			//Imm_Sign = 0;
+			PC_Write = 1'h1;
+			PC_Code = 3'h2;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			ALU_OP_Code = 4'hF;
+			//ALU_B_Src = 2'h0;
+			Reg_Write = 1'h1;
+			Write_Reg_Sel = 2'h3;
 		end
 		5'b00010: begin //siic FIGURE OUT
 			//PC_Write = 1;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			//ALU_OP_Code = 0;
-			//ALU_B_Src = 0;
-			//Reg_Write = 0;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			//ALU_OP_Code = 4'h0;
+			//ALU_B_Src = 2'h0;
+			//Reg_Write = 1'h0;
+			//Write_Reg_Sel = 2'h0;
 		end
 		5'b00011: begin //NOP / RTI FIGURE OUT
 			//PC_Write = 0;
-			//PC_Code = 0;
-			//Comp_Code = 0;
-			//Write_Back_Sel = 0;
-			//Mem_Write = 0;
-			//Mem_Read = 0;
-			//ALU_OP_Code = 0;
-			//ALU_B_Src = 0;
-			//Reg_Write = 0;
-			//Write_Reg_Sel = 0;
-			//Imm_Sign = 0;
+			//PC_Code = 3'h0;
+			//Comp_Code = 2'h0;
+			//Write_Back_Sel = 1'h0;
+			//Mem_Write = 1'h0;
+			//Mem_Read = 1'h0;
+			//ALU_OP_Code = 4'h0;
+			//ALU_B_Src = 2'h0;
+			//Reg_Write = 1'h0;
+			//Write_Reg_Sel = 2'h0;
 		end
 	endcase
 end
