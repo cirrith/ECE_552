@@ -104,7 +104,7 @@ report_hierarchy
 Report : hierarchy
 Design : rf_bypass
 Version: B-2008.09-SP3
-Date   : Sat Mar  5 13:53:22 2016
+Date   : Mon Mar 14 20:43:46 2016
 ****************************************
 
 Information: This design contains unmapped logic. (RPT-7)
@@ -259,9 +259,9 @@ Information: Updating design information... (UID-85)
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
     0:00:01    3384.6      0.00       0.0       1.1                          
-    0:00:02    4442.9      0.00       0.0       0.7 RF/reggi1/bit[14]/N3     
-    0:00:03    4984.9      0.00       0.0       0.5 RF/n12                   
-    0:00:05    5132.3      0.00       0.0       0.4                          
+    0:00:01    4442.9      0.00       0.0       0.7 RF/reggi1/bit[14]/N3     
+    0:00:02    4984.9      0.00       0.0       0.5 RF/n12                   
+    0:00:04    5132.3      0.00       0.0       0.4                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -270,22 +270,22 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:05    5132.3      0.00       0.0       0.4                          
-    0:00:05    5132.3      0.00       0.0       0.4                          
-    0:00:05    4472.4      0.00       0.0       0.4                          
-    0:00:05    4278.1      0.00       0.0       0.4                          
-    0:00:05    4185.2      0.00       0.0       0.4                          
-    0:00:05    4179.6      0.00       0.0       0.4                          
-    0:00:05    4179.6      0.00       0.0       0.4                          
-    0:00:05    4179.6      0.00       0.0       0.4                          
-    0:00:05    4179.6      0.00       0.0       0.4                          
-    0:00:05    4079.6      0.00       0.0       0.4                          
-    0:00:05    4079.6      0.00       0.0       0.4                          
-    0:00:05    4079.6      0.00       0.0       0.4                          
-    0:00:05    4079.6      0.00       0.0       0.4                          
-    0:00:05    4079.6      0.00       0.0       0.4                          
-    0:00:05    4079.6      0.00       0.0       0.4                          
-    0:00:05    4079.6      0.00       0.0       0.4                          
+    0:00:04    5132.3      0.00       0.0       0.4                          
+    0:00:04    5132.3      0.00       0.0       0.4                          
+    0:00:04    4472.4      0.00       0.0       0.4                          
+    0:00:04    4278.1      0.00       0.0       0.4                          
+    0:00:04    4185.2      0.00       0.0       0.4                          
+    0:00:04    4179.6      0.00       0.0       0.4                          
+    0:00:04    4179.6      0.00       0.0       0.4                          
+    0:00:04    4179.6      0.00       0.0       0.4                          
+    0:00:04    4179.6      0.00       0.0       0.4                          
+    0:00:04    4079.6      0.00       0.0       0.4                          
+    0:00:04    4079.6      0.00       0.0       0.4                          
+    0:00:04    4079.6      0.00       0.0       0.4                          
+    0:00:04    4079.6      0.00       0.0       0.4                          
+    0:00:04    4079.6      0.00       0.0       0.4                          
+    0:00:04    4079.6      0.00       0.0       0.4                          
+    0:00:04    4079.6      0.00       0.0       0.4                          
 Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
 
   Optimization Complete
@@ -308,7 +308,7 @@ Report : constraint
         -all_violators
 Design : rf_bypass
 Version: B-2008.09-SP3
-Date   : Sat Mar  5 13:53:28 2016
+Date   : Mon Mar 14 20:43:51 2016
 ****************************************
 
 
@@ -628,5 +628,15 @@ report_cell > synth/cell_report.txt
 report_timing -max_paths 20 > synth/timing_report.txt
 report_power > synth/power_report.txt
 quit
+Information: Defining new variable 'filename'. (CMD-041)
+Information: Defining new variable 'my_clk_freq_MHz'. (CMD-041)
+Information: Defining new variable 'my_toplevel'. (CMD-041)
+Information: Defining new variable 'clk_name'. (CMD-041)
+Information: Defining new variable 'find_clock'. (CMD-041)
+Information: Defining new variable 'my_output_delay_ns'. (CMD-041)
+Information: Defining new variable 'my_period'. (CMD-041)
+Information: Defining new variable 'my_verilog_files'. (CMD-041)
+Information: Defining new variable 'my_clock_pin'. (CMD-041)
+Information: Defining new variable 'my_input_delay_ns'. (CMD-041)
 
 Thank you...

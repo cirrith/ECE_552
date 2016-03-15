@@ -1,9 +1,8 @@
-          //JALR Test 4
+          // Original test: ./shojaei/hw4/problem6/xori_2.asm
+          // Author: shojaei
+          // Test source code follows
           
-0000 c100 LBI r1, 0x00
-0002 910c SLBI r1, 0x0C //R1 = 0x000A
-0004 2006 j 0x06
-0006 0800 nop
-0008 0000 halt
-000a 0800 nop
-000c 39fc jalr r1, -4
+          
+0000 c118 lbi r1, 24
+0002 5147 xori r2, r1, 7
+0004 0000 halt
