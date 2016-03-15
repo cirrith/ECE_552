@@ -1,5 +1,9 @@
-          //Jal Test 0
+          //JALR Test 4
           
-0000 3000 JAL 0 //Test no jump
-0002 0800 nop //Should move onto here
-0004 0000 halt
+0000 c100 LBI r1, 0x00
+0002 910c SLBI r1, 0x0C //R1 = 0x000A
+0004 2006 j 0x06
+0006 0800 nop
+0008 0000 halt
+000a 0800 nop
+000c 39fc jalr r1, -4
