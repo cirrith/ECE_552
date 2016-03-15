@@ -1,0 +1,695 @@
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version B-2008.09-SP3 for amd64 -- Jan 19, 2009
+              Copyright (c) 1988-2008 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+echo "********** CS552 Reading files begin ********************"
+********** CS552 Reading files begin ********************
+set my_verilog_files [list fifo.v register.v counter.v dff.v  ]
+fifo.v register.v counter.v dff.v
+set my_toplevel fifo
+fifo
+define_design_lib WORK -path ./WORK
+1
+analyze -f verilog $my_verilog_files
+Running PRESTO HDLC
+Searching for ./fifo.v
+Searching for ./register.v
+Searching for ./counter.v
+Searching for ./dff.v
+Compiling source file ./fifo.v
+Compiling source file ./register.v
+Compiling source file ./counter.v
+Compiling source file ./dff.v
+Warning:  ./dff.v:15: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+1
+elaborate $my_toplevel -architecture verilog
+Loading db file '/s/synopsys-2009_03_09/@sys/B-2008.09-SP3/libraries/syn/gtech.db'
+Loading db file '/s/synopsys-2009_03_09/@sys/B-2008.09-SP3/libraries/syn/standard.sldb'
+  Loading link library 'gscl45nm'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'fifo'.
+Information: Building the design 'register' instantiated from design 'fifo' with
+	the parameters "64". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'counter'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dff'. (HDL-193)
+
+Inferred memory devices in process
+	in routine dff line 17 in file
+		'./dff.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+echo "********** CS552 Reading files end ********************"
+********** CS552 Reading files end ********************
+current_design $my_toplevel
+Current design is 'fifo'.
+{fifo}
+#/* The name of the clock pin. If no clock-pin     */
+#/* exists, pick anything                          */
+set my_clock_pin clk
+clk
+#/* Target frequency in MHz for optimization       */
+set my_clk_freq_MHz 1000
+1000
+#/* Delay of input signals (Clock-to-Q, Package etc.)  */
+set my_input_delay_ns 0.1
+0.1
+#/* Reserved time for output signals (Holdtime etc.)   */
+set my_output_delay_ns 0.1
+0.1
+#/**************************************************/
+#/* No modifications needed below                  */
+#/**************************************************/
+set verilogout_show_unconnected_pins "true"
+true
+# analyze -f verilog $my_verilog_files
+# elaborate $my_toplevel -architecture verilog
+# current_design $my_toplevel
+report_hierarchy 
+ 
+****************************************
+Report : hierarchy
+Design : fifo
+Version: B-2008.09-SP3
+Date   : Mon Mar 14 21:00:15 2016
+****************************************
+
+Information: This design contains unmapped logic. (RPT-7)
+
+fifo
+    GTECH_BUF                            gtech
+    GTECH_NOT                            gtech
+    counter
+        GTECH_AND2                       gtech
+        GTECH_NOT                        gtech
+        GTECH_OR2                        gtech
+        dff
+            GTECH_BUF                    gtech
+            GTECH_NOT                    gtech
+    register_Data_Width64
+        GTECH_BUF                        gtech
+        GTECH_NOT                        gtech
+        dff
+            ...
+1
+link
+
+  Linking design 'fifo'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  gscl45nm (library)          /u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db
+
+1
+uniquify
+Removing uniquified design 'register_Data_Width64'.
+Removing uniquified design 'dff'.
+  Uniquified 4 instances of design 'register_Data_Width64'.
+  Uniquified 261 instances of design 'dff'.
+1
+set my_period [expr 1000 / $my_clk_freq_MHz]
+1
+set find_clock [ find port [list $my_clock_pin] ]
+{clk}
+if {  $find_clock != [list] } {
+   set clk_name $my_clock_pin
+   create_clock -period $my_period $clk_name
+} else {
+   set clk_name vclk
+   create_clock -period $my_period -name $clk_name
+} 
+1
+set_driving_cell  -lib_cell INVX1  [all_inputs]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all_inputs] $my_clock_pin]
+1
+set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
+1
+compile -map_effort low  -area_effort low
+Warning: The compile -map_effort low is obsolete. Setting this variable now defaults to compile -map_effort medium. Please update your script accordingly. (OPT-1303)
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'fifo'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | B-2008.09-DWBB_0901
+                                                               |     *     |
+| Licensed DW Building Blocks             |                    |           |
+============================================================================
+
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'dff_0'
+  Processing 'counter'
+  Processing 'register_Data_Width64_0'
+  Processing 'fifo'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01    6337.9      0.00       0.0       1.8                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01    6337.9      0.00       0.0       1.8                          
+    0:00:02    7123.0      0.00       0.0       1.3 FIFO0/bit[49]/N3         
+    0:00:02    7987.5      0.00       0.0       1.0 FIFO3/n67                
+    0:00:05    9149.5      0.00       0.0       0.4                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05    9149.5      0.00       0.0       0.4                          
+    0:00:05    9149.5      0.00       0.0       0.4                          
+    0:00:05    7631.8      0.00       0.0       0.4                          
+    0:00:05    7537.4      0.00       0.0       0.4                          
+    0:00:05    7478.8      0.00       0.0       0.4                          
+    0:00:05    7419.6      0.00       0.0       0.4                          
+    0:00:05    7396.2      0.00       0.0       0.4                          
+    0:00:05    7360.0      0.03       0.3       0.4                          
+    0:00:05    7321.5      0.03       0.3       0.4                          
+    0:00:05    7321.5      0.03       0.3       0.4                          
+    0:00:05    7322.0      0.00       0.0       0.4                          
+    0:00:05    7122.6      0.01       0.2       0.4                          
+    0:00:05    7106.6      0.01       0.2       0.4                          
+    0:00:05    7106.6      0.01       0.2       0.4                          
+    0:00:05    7106.6      0.01       0.2       0.4                          
+    0:00:05    7106.6      0.01       0.2       0.4                          
+    0:00:05    7106.6      0.01       0.2       0.4                          
+    0:00:05    7106.6      0.01       0.2       0.4                          
+    0:00:05    7107.1      0.00       0.0       0.4                          
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+
+  Optimization Complete
+  ---------------------
+1
+check_design -summary
+Warning: In design 'fifo', there is 1 port not connected to any nets. (LINT-30)
+Warning: In design 'counter', there is 1 submodule connected to power or ground. (LINT-30)
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-98)
+
+1
+report_constraint -all_violators
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : fifo
+Version: B-2008.09-SP3
+Date   : Mon Mar 14 21:00:21 2016
+****************************************
+
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   FIFO0/n67                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n68                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n69                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n70                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n71                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n72                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n73                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n74                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n75                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n76                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n77                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n78                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n79                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n80                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n81                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n82                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n83                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n84                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n85                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n86                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n87                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n88                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n89                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n90                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n91                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n92                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n93                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n94                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n95                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n96                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n97                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n98                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n99                    0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n100                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n101                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n102                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n103                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n104                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n105                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n106                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n107                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n108                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n109                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n110                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n111                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n112                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n113                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n114                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n115                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n116                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n117                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n118                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n119                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n120                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n121                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n122                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n123                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n124                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n125                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n126                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n127                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n128                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n129                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO0/n130                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n210                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n211                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n212                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n213                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n214                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n215                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n216                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n217                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n218                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n219                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n220                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n221                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n222                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n223                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n224                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n225                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n226                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n227                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n228                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n229                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n230                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n231                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n232                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n233                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n234                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n235                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n236                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n237                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n238                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n239                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n240                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n241                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n242                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n243                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n244                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n245                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n246                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n247                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n248                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n249                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n250                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n251                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n252                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n253                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n254                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n255                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n256                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n257                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n258                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n259                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n260                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n261                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n262                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n263                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n264                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n265                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n266                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n267                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n268                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n269                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n270                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n271                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n272                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO1/n273                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n210                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n211                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n212                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n213                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n214                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n215                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n216                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n217                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n218                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n219                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n220                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n221                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n222                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n223                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n224                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n225                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n226                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n227                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n228                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n229                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n230                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n231                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n232                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n233                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n234                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n235                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n236                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n237                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n238                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n239                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n240                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n241                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n242                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n243                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n244                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n245                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n246                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n247                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n248                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n249                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n250                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n251                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n252                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n253                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n254                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n255                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n256                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n257                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n258                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n259                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n260                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n261                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n262                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n263                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n264                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n265                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n266                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n267                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n268                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n269                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n270                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n271                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n272                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO2/n273                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n210                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n211                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n212                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n213                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n214                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n215                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n216                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n217                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n218                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n219                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n220                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n221                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n222                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n223                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n224                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n225                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n226                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n227                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n228                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n229                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n230                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n231                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n232                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n233                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n234                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n235                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n236                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n237                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n238                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n239                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n240                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n241                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n242                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n243                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n244                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n245                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n246                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n247                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n248                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n249                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n250                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n251                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n252                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n253                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n254                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n255                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n256                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n257                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n258                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n259                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n260                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n261                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n262                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n263                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n264                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n265                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n266                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n267                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n268                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n269                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n270                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n271                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n272                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   FIFO3/n273                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   control/n17                  0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   control/n23                  0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   control/n27                  0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   control/n30                  0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+
+
+1
+set filename [format "%s%s"  $my_toplevel ".syn.v"]
+fifo.syn.v
+write -hierarchy -f verilog $my_toplevel -output synth/$filename
+Writing verilog file '/afs/cs.wisc.edu/u/b/a/bambrough/private/ECE_552/hw4/hw4/hw4_2/synth/fifo.syn.v'.
+Warning: Bus naming style currently specified as %s<%d>, verilog syntax requires bus naming style to be "[]".  (VO-13)
+1
+set filename [format "%s%s"  $my_toplevel ".ddc"]
+fifo.ddc
+write -hierarchy -format ddc -output synth/$filename
+Writing ddc file 'synth/fifo.ddc'.
+1
+report_reference > synth/reference_report.txt
+report_area > synth/area_report.txt
+report_cell > synth/cell_report.txt
+report_timing -max_paths 20 > synth/timing_report.txt
+report_power > synth/power_report.txt
+quit
+Information: Defining new variable 'filename'. (CMD-041)
+Information: Defining new variable 'my_clk_freq_MHz'. (CMD-041)
+Information: Defining new variable 'my_toplevel'. (CMD-041)
+Information: Defining new variable 'clk_name'. (CMD-041)
+Information: Defining new variable 'find_clock'. (CMD-041)
+Information: Defining new variable 'my_output_delay_ns'. (CMD-041)
+Information: Defining new variable 'my_period'. (CMD-041)
+Information: Defining new variable 'my_verilog_files'. (CMD-041)
+Information: Defining new variable 'my_clock_pin'. (CMD-041)
+Information: Defining new variable 'my_input_delay_ns'. (CMD-041)
+
+Thank you...

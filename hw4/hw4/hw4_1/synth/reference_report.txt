@@ -1,0 +1,34 @@
+ 
+****************************************
+Report : reference
+Design : rf_bypass
+Version: B-2008.09-SP3
+Date   : Mon Mar 14 20:59:37 2016
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             gscl45nm       2.346500      32     75.087997  
+BUFX2              gscl45nm       2.346500      20     46.929998  
+INVX1              gscl45nm       1.407900      52     73.210799  
+INVX2              gscl45nm       1.877200       1      1.877200  
+NAND3X1            gscl45nm       2.346500       2      4.693000  
+OAI21X1            gscl45nm       2.815800      32     90.105598  
+OR2X1              gscl45nm       2.346500       2      4.693000  
+XNOR2X1            gscl45nm       4.693000       4     18.771999  
+XOR2X1             gscl45nm       4.693000       2      9.386000  
+rf                             3754.869218       1   3754.869218  h, n
+-----------------------------------------------------------------------------
+Total 10 references                                  4079.624810
+1
