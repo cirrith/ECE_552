@@ -23,9 +23,6 @@ clkrst.v
 dff.v
 Extender.v
 memory2c.syn.v
-nand2.v
-nor2.v
-not1.v
 PC_inc.v
 PC_Logic.v
 PC.v
@@ -36,4 +33,3 @@ proc.v
 Register_File_Input.v
 Register_File.v
 Register.v
-xor2.v
