@@ -19,7 +19,6 @@ Bits5_SExt.v
 Bits5_ZExt.v
 CLA_FA.v
 CLA.v
-clkrst.v
 dff.v
 Extender.v
 memory2c.syn.v
@@ -27,8 +26,6 @@ PC_inc.v
 PC_Logic.v
 PC.v
 Processor_Control.v
-proc_hier_bench.v
-proc_hier.v
 proc.v
 Register_File_Input.v
 Register_File.v

@@ -1,0 +1,126 @@
+ 
+****************************************
+Report : hierarchy
+Design : proc
+Version: B-2008.09-SP3
+Date   : Tue Mar 15 19:36:41 2016
+****************************************
+
+Information: This design contains unmapped logic. (RPT-7)
+
+proc
+    ALU
+        ALU_ANDN
+            GTECH_AND2                           gtech
+            GTECH_NOT                            gtech
+        ALU_CLA
+            ALU_Bit4_CLA
+                ALU_CLA_FA
+                    GTECH_AND2                   gtech
+                    GTECH_XOR2                   gtech
+                GTECH_AND2                       gtech
+                GTECH_OR2                        gtech
+            GTECH_AND2                           gtech
+            GTECH_OR2                            gtech
+        ALU_Shifter
+            ALU_Shifter_1
+                Bit1_Mux2_1
+                    GTECH_BUF                    gtech
+                    GTECH_NOT                    gtech
+                Bit1_Mux4_1
+                    GTECH_AND2                   gtech
+                    GTECH_BUF                    gtech
+                    GTECH_NOT                    gtech
+                    GTECH_OR2                    gtech
+            ALU_Shifter_2
+                Bit1_Mux2_1
+                    ...
+                Bit1_Mux4_1
+                    ...
+            ALU_Shifter_4
+                Bit1_Mux2_1
+                    ...
+                Bit1_Mux4_1
+                    ...
+            ALU_Shifter_8
+                Bit1_Mux2_1
+                    ...
+                Bit1_Mux4_1
+                    ...
+        ALU_XOR
+            GTECH_XOR2                           gtech
+        GTECH_AND2                               gtech
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        GTECH_OR2                                gtech
+        GTECH_OR3                                gtech
+        GTECH_OR4                                gtech
+        GTECH_OR5                                gtech
+        GTECH_XOR2                               gtech
+    Bit16_Mux4_1
+        GTECH_AND2                               gtech
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        GTECH_OR2                                gtech
+    Extender
+        Bits5_SExt
+        Bits5_ZExt
+        Bits8_SExt
+        Bits11_SExt
+    GTECH_BUF                                    gtech
+    GTECH_NOT                                    gtech
+    GTECH_OR2                                    gtech
+    PC
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        dff
+            GTECH_BUF                            gtech
+            GTECH_NOT                            gtech
+    PC_Logic
+        CLA
+            Bit4_CLA
+                CLA_FA
+                    GTECH_AND2                   gtech
+                    GTECH_XOR2                   gtech
+                GTECH_AND2                       gtech
+                GTECH_OR2                        gtech
+            GTECH_AND2                           gtech
+            GTECH_OR2                            gtech
+        GTECH_AND2                               gtech
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        GTECH_OR2                                gtech
+        GTECH_OR3                                gtech
+        GTECH_OR4                                gtech
+        PC_inc
+            CLA
+                ...
+    Processor_Control
+        GTECH_AND2                               gtech
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        GTECH_OR2                                gtech
+        GTECH_OR3                                gtech
+        GTECH_OR4                                gtech
+        GTECH_OR5                                gtech
+    Register_File
+        GTECH_AND2                               gtech
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        GTECH_OR2                                gtech
+        Register
+            GTECH_BUF                            gtech
+            GTECH_NOT                            gtech
+            dff
+                ...
+    Register_File_Input
+        GTECH_AND2                               gtech
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        GTECH_OR2                                gtech
+    memory2c
+        GTECH_AND2                               gtech
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        GTECH_OR2                                gtech
+1
