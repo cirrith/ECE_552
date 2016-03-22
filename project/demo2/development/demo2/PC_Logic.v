@@ -3,95 +3,30 @@
 /		PURPOSE: Given the a PC code from the processor controller determine what signals to output to get
 /			the correct next PC
 /
-/		INPUTS: PC_Code[2:0] - Control code from the processor controller
-					000 - PC = Pc + 2
-					001 - PC = If compare PC + 2 + Imm8
-					010 - PC = Rs + Imm8
-					011 - PC = PC + 2 + Diplacement
-/				Comp_Code[1:0] - Compare code for which conditions signify a branch
-/				Curr_PC[15:0] - Current PC
-/				EQ - Equal flag from ALU
-/				LT - Less than flag from ALU
-/				GTE - Greater than or equal from ALU
-/				Rs[2:0] - For LBI & SLBI instructions (NEED TO SIGN EXTEND)
-/				Im8[15:0] - Extended Immediate
-/				Dis[15:0] - Displacement for Jump instructions
+/		INPUTS:	PC_Code - Determine how the jump/branch PC is calculated
+/					0 - Jump/Branch (PC + 2 + Immediate)
+/					1 - Jump (RS + Immediate)
+/				Reg_1_Data[15:0] - Reg_1_Data
+/				Immediate[15:0] - Immediate for calculations
+/				PC2[15:0] - PC + 2
 /
-/		OUTPUTS: PC2[15:0] - Increment PC for ALU
-/				 Nxt_PC[15:0] - Current PC for Instruction Memory
+/		OUTPUTS: PC_Ex[15:0] - External PC to write back to Fetch Stage
 /				 
 ********************************************************************************************************/
-module PC_Logic (PC_Code, Comp_Code, Curr_PC, EQ, LT, Rs, Im8, Dis, PC2, Nxt_PC);
+module PC_Logic (PC_Code, Reg_1_Data, Immediate, PC2, PC_Ex);
 
-input [15:0] Curr_PC;
-input [15:0] Im8;
-input [15:0] Dis;
-input [15:0] Rs;
-input [2:0] PC_Code;
-input [1:0] Comp_Code;
-input EQ;
-input LT;
+	input PC_Code;
+	input [15:0] Reg_1_Data;
+	input [15:0] Immediate;
+	input [15:0] PC2;
 
-output [15:0] PC2;
-output [15:0] Nxt_PC;
+	output [15:0] PC_Ex;
 
-reg [15:0] A_in;
-reg [15:0] B_in;
-reg branch;
-wire [15:0] result;
+	wire [15:0] A_in;
 
-reg [15:0] case_out;
-
-CLA adder(.A(A_in), .B(B_in), .Ci(1'b0), .S(result), .Cout());
-PC_inc pc2(.Curr_PC(Curr_PC), .Inc_PC(PC2));
-
-assign Nxt_PC = case_out;
-
-always @ (*) begin
-	case(PC_Code)
-		3'h0: begin
-			case_out = PC2;
-		end
-		3'h1: begin
-			case(Comp_Code) //Compare the conditnal codes
-				2'b00: begin //Equal
-					branch = EQ ? 1'b1 : 1'b0;
-				end
-				2'b01: begin //!Equal
-					branch = ~EQ ? 1'b1 : 1'b0;
-				end
-				2'b10: begin //Less Than
-					branch = LT ? 1'b1 : 1'b0;
-				end
-				2'b11: begin //Greater than or equal
-					branch = ~LT ? 1'b1 : 1'b0;
-				end
-			endcase
-			A_in = PC2;
-			B_in = branch ? Im8 : 16'h0000; //If condital code is meet then branch
-			case_out = result;
-		end
-		3'h2: begin
-			A_in = Rs;
-			B_in = Im8;
-			case_out = result;
-		end
-		3'h3: begin
-			A_in = PC2;
-			B_in = Dis;
-			case_out = result;
-		end
-		3'h4: begin
-			//case_out = EPC !!!!!!!!!!!!!!
-		end
-		
-		default: begin
-			//$display("%b", PC_Code);
-			//$display("Entered a bad PC_Code");
-			//$stop;
-		end
-	endcase
-end
+	assign A_in = PC_Code ? Reg_1_Data : PC2;
+	
+	CLA adder(.A(A_in), .B(Immediate), .Ci(1'b0), .S(PC_Ex), .Cout());
 
 endmodule
 

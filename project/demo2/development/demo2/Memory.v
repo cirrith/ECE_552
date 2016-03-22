@@ -15,16 +15,18 @@
 ********************************************************************************************************/
 module Memory();
 
-input clk;
-input rst;
-input createdump;
+	input clk;
+	input rst;
+	input createdump;
 
-input Mem_Write;
-input Mem_Read;
+	input Mem_Write;
+	input Mem_Read;
 
-input [15:0] Address;
-input [15:0] Data;
+	input [15:0] Address;
+	input [15:0] Data;
 
-memory2c Data_Memory(.data_out(Mem_Read), .data_in(Data), .addr(Address), .enable(Mem_Read ^ Mem_Write), .wr(Mem_Write), .createdump(createdump), .clk(clk), .rst(rst));
+	output [15:0] Mem_Read;
+
+	memory2c Data_Memory(.data_out(Mem_Read), .data_in(Data), .addr(Address), .enable(Mem_Read ^ Mem_Write), .wr(Mem_Write), .createdump(createdump), .clk(clk), .rst(rst));
 
 endmodule

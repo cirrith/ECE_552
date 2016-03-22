@@ -11,14 +11,15 @@
 /		OUTPUTS: out[15:0] - output of mux
 ********************************************************************************************************/
 module Bit16_Mux4_1 (in0, in1, in2, in3, s, out);
-input [15:0] in0;
-input [15:0] in1;
-input [15:0] in2;
-input [15:0] in3;
-input [1:0] s;
 
-output [15:0] out;
+	input [15:0] in0;
+	input [15:0] in1;
+	input [15:0] in2;
+	input [15:0] in3;
+	input [1:0] s;
 
-assign out = s[1] ? (s[0] ? in3 : in2) : (s[0] ? in1 : in0);
+	output [15:0] out;
+
+	assign out = s[1] ? (s[0] ? in3 : in2) : (s[0] ? in1 : in0);
 
 endmodule 

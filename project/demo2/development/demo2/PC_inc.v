@@ -2,17 +2,16 @@
 /		MODULE: PC_inc
 /		PURPOSE: Increment the PC by 2
 /
+/		INPUTS: PC - Current Program Counter
 /
-/		INPUTS: Curr_PC - Current Program Counter
-/
-/		OUTPUTS: Inc_PC - Program Counter + 2
+/		OUTPUTS: PC2 - Program Counter + 2
 ********************************************************************************************************/
-module PC_inc (Curr_PC, Inc_PC);
+module PC_inc (PC, PC2);
 
-	input [15:0] Curr_PC;
+	input [15:0] PC;
 
-	output [15:0] Inc_PC;
+	output [15:0] PC2;
 
-	CLA Adder(.A(Curr_PC), .B(16'h0002), .Ci(1'b0), .S(Inc_PC), .Cout());
+	CLA Adder(.A(PC), .B(16'h0002), .Ci(1'b0), .S(PC2), .Cout());
 
 endmodule

@@ -29,12 +29,11 @@
 /				 LT - Less Than
 /				 EQ - Zero Flag
 ********************************************************************************************************/
-module ALU (A, B, OP_Code, PC2, Result, LT, EQ, Pass_Thr_Sel);
+module ALU (A, B, OP_Code, Result, LT, EQ, Pass_Thr_Sel);
 
 	input [15:0] A;
 	input [15:0] B;
 	input [3:0] OP_Code;
-	input [15:0] PC2;
 	input Pass_Thr_Sel;
 
 	output [15:0] Result;
@@ -152,7 +151,7 @@ module ALU (A, B, OP_Code, PC2, Result, LT, EQ, Pass_Thr_Sel);
 			end
 			
 			4'b1111: begin //PC + 2
-				case_out = PC2;
+				case_out = B;
 			end
 		endcase
 	end

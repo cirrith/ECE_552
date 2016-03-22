@@ -48,22 +48,22 @@
 ********************************************************************************************************/
 module Processor_Control (OP_Code, OP_Min, PC_Write, PC_Code, Comp_Code, Write_Back_Sel, Mem_Write, Mem_Read, ALU_OP_Code, ALU_B_Src, Reg_Write, Write_Reg_Sel, Pass_Thr_Sel, createDump, halted);
 
-input [4:0] OP_Code;
-input [1:0] OP_Min;
+	input [4:0] OP_Code;
+	input [1:0] OP_Min;
 
-output reg PC_Write;
-output reg [2:0] PC_Code;
-output reg [1:0] Comp_Code;
-output reg Write_Back_Sel;
-output reg Mem_Write;
-output reg Mem_Read;
-output reg [3:0] ALU_OP_Code;
-output reg [1:0] ALU_B_Src;
-output reg Reg_Write;
-output reg [1:0] Write_Reg_Sel;
-output reg Pass_Thr_Sel;
-output reg createDump;
-output reg halted;
+	output reg PC_Write;
+	output reg [2:0] PC_Code;
+	output reg [1:0] Comp_Code;
+	output reg Write_Back_Sel;
+	output reg Mem_Write;
+	output reg Mem_Read;
+	output reg [3:0] ALU_OP_Code;
+	output reg [1:0] ALU_B_Src;
+	output reg Reg_Write;
+	output reg [1:0] Write_Reg_Sel;
+	output reg Pass_Thr_Sel;
+	output reg createDump;
+	output reg halted;
 
 always @ (OP_Code, OP_Min) begin
 	PC_Write = 1'h0;
@@ -605,8 +605,3 @@ always @ (OP_Code, OP_Min) begin
 end
 
 endmodule
-		
-		
-		
-		
-		

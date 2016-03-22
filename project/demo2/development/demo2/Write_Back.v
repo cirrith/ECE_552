@@ -11,12 +11,12 @@
 ********************************************************************************************************/
 module Write_Back(ALU_Result_WB, Mem_Read_WB, Sel, WB);
 
-input [15:0] ALU_Result;
-input [15:0] Mem_Read;
-input Sel;
+	input [15:0] ALU_Result;
+	input [15:0] Mem_Read;
+	input Sel;
 
-output [15:0] WB;
+	output [15:0] WB;
 
-assign WB = Sel ? ALU_Result : Mem_Read;
+	assign WB = Sel ? ALU_Result : Mem_Read;
 
 endmodule
