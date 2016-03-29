@@ -44,60 +44,64 @@
 /					00010 siic Rs			produce IllegalOp exception. Must provide one source register.
 /					00011 xxxxxxxxxxx		NOP / RTI	PC <- EPC
 /
-/		OUTPUTS: Write_Reg - Register to be written to
+/		OUTPUTS: 
 ********************************************************************************************************/
-module Processor_Control (OP_Code, OP_Min, PC_Write, PC_Code, Comp_Code, Write_Back_Sel, Mem_Write, Mem_Read, ALU_OP_Code, ALU_B_Src, Reg_Write, Write_Reg_Sel, Pass_Thr_Sel, createDump, halted);
+module Processor_Control (OP_Code, OP_Min, Write_Reg_Sel, Reg_Write, PC_Code, Comp_Code, ALU_OP_Code, ALU_B_Src, Pass_Thr_Sel, Imm_Sel, Mem_Read, Mem_Write, WB_Sel, createdump, halt);
 
 	input [4:0] OP_Code;
 	input [1:0] OP_Min;
 
-	output reg PC_Write;
-	output reg [2:0] PC_Code;
-	output reg [1:0] Comp_Code;
-	output reg Write_Back_Sel;
-	output reg Mem_Write;
-	output reg Mem_Read;
-	output reg [3:0] ALU_OP_Code;
-	output reg [1:0] ALU_B_Src;
-	output reg Reg_Write;
-	output reg [1:0] Write_Reg_Sel;
-	output reg Pass_Thr_Sel;
-	output reg createDump;
-	output reg halted;
+	output reg [1:0]	Write_Reg_Sel;
+	output reg 			Reg_Write;
+	output reg [1:0]	PC_Code;
+	output reg [1:0]	Comp_Code;
+	output reg [3:0]	ALU_OP_Code;
+	output reg 			ALU_B_Src;
+	output reg 			Pass_Thr_Sel;
+	output reg [1:0]	Imm_Sel;
+	output reg 			Mem_Read;
+	output reg 			Mem_Write;
+	output reg 			WB_Sel;
+	output reg 			createdump;
+	output reg 			halt;
 
 always @ (OP_Code, OP_Min) begin
-	PC_Write = 1'h0;
-	PC_Code = 3'h0;
-	Comp_Code = 2'h0;
-	Write_Back_Sel = 1'h0;
-	Mem_Write = 1'h0;
-	Mem_Read = 1'h0;
-	ALU_OP_Code = 4'h0;
-	Pass_Thr_Sel = 1'h0;
-	ALU_B_Src = 2'h0;
-	Reg_Write = 1'h0;
 	Write_Reg_Sel = 2'h0;
-	createDump = 1'h0;
-	halted = 1'h0;
+	Reg_Write = 1'h0;
+	PC_Code = 2'h0;
+	Comp_Code = 2'h0;
+	ALU_OP_Code = 4'h0;
+	ALU_B_Src = 1'h0;
+	Pass_Thr_Sel = 1'h0;
+	Imm_Sel = 2'h0;
+	Mem_Read = 1'h0;
+	Mem_Write = 1'h0;
+	WB_Sel = 1'h0;
+	createdump = 1'h0;
+	halt = 1'h0;
+/*	
+	Write_Reg_Sel [1:0]
+		00 - Rd (Immediate) [7:5]
+		01 - Rd (Register) [4:2]
+		10 - Rs [10:8]
+		11 - R7	
+		
+	Reg_Write - Write to Register
+		0 - No Write
+		1 - Write
 	
-	/*
-	PC_Code = 0; //PC + 2
-	PC_Code = 1; //Branch (PC + 2 + I)
-	PC_Code = 2; //JumpI (RS + I)
-	PC_Code = 3; //JumpD (PC + 2 + D)
-	PC_Code = 4; //EPC
-	PC_Code = 5; //Nothing
-	PC_Code = 6; //Nothing
-	PC_Code = 7; //Nothing
-	
-	Comp_Code = 0; //Equal
-	Comp_Code = 1; //!Equal
-	Comp_Code = 2; //Less Than
-	Comp_Code = 3; //Greater Than or Equal
-	
-	Write_Back_Sel = 0; //ALU
-	Write_Back_Sel = 1; //Memory
-	
+	PC_Code[1:0] - Determine how the jump/branch PC is calculated
+		00 - Standard Operation
+		01 - Jump (Rs + Immediate)
+		10 - Branch (PC + 2 + Immediate)
+		11 - Jump (PC + 2 + Immediate)
+		
+	Comp_Code [1:0] - Comparison Codes
+		00 - Equal
+		01 - Not Equal
+		10 - Less Than
+		11 - Greater Than or Equal
+		
 	ALU_OP_Code = 0 // Add
 	ALU_OP_Code = 1 // Subtract
 	ALU_OP_Code = 2 // XOR
@@ -113,493 +117,660 @@ always @ (OP_Code, OP_Min) begin
 	ALU_OP_Code = 12 C // Flip
 	ALU_OP_Code = 13 D // Pass Through
 	ALU_OP_Code = 14 E // SLBI
-	ALU_OP_Code = 15 F // PC + 2
+	ALU_OP_Code = 15 F // PC + 2 Possibly Unused
 	
-	Pass_Thr_Sel = 0; //Pass Through A & update flags
-	Pass_Thr_Sel = 1; //Pass Through B & update flags
+	ALU_B_Src -
+		0 = Register Source (Forwarding will determine from where)
+		1 = Immediate Source (Already determined in Decode Stage)
+
+	Pass_Thr_Sel - Which Src to pass through when pass through is selected
+		0 = Pass through A
+		1 = Pass through B
 	
-	ALU_B_Src = 0; // Register
-	ALU_B_Src = 1; // 5 Bit Zero Extended
-	ALU_B_Src = 2; // 5 Bit Sign Extended
-	ALU_B_Src = 3; // 8 Bit Sign Extended
+	Imm_Sel[1:0] - Select bits for output
+		00 - 5 Bit Sign Extended
+		01 - 5 Bit Zero Extended
+		10 - 8 Bit Sign Extended
+		11 - 11 Bit Sign Extended
+		
+	Mem_Read - Well
+		0 - No Read
+		1 - Read
+		
+	Mem_Write - Duh
+		0 - No Write
+		1 - Write
 	
-	Write_Reg_Sel = 0; //Rd (Immediate)
-	Write_Reg_Sel = 1; //Rd (Register)
-	Write_Reg_Sel = 2; //Rs (LBI)
-	Write_Reg_Sel = 3; //R7
+	WB_Sel
+		0 - ALU
+		1 - Memory
+		
+	createdump - Dump memory to things
+		0 - No dump
+		1 - Yes dump
+		
+	halt - If the processor is halted
+		0 - Not halt
+		1 - halt (This is complex because we have to let the other stages finish) Put halt signal at end of pipeline
+			
 	*/
 	
 	case(OP_Code)
 		5'b00000: begin //HALT !!!!!!!
-			//PC_Write = 0;
-			//PC_Code = 3'h0;
-			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
-			//ALU_OP_Code = 4'h0;
-			//ALU_B_Src = 2'h0;
-			//Reg_Write = 1'h0;
 			//Write_Reg_Sel = 2'h0;
-			createDump = 1'h1;
-			halted = 1'h1;
+			//Reg_Write = 1'h0;
+			//PC_Code = 2'h0; ****Make sure to Stall****
+			//Comp_Code = 2'h0;
+			//ALU_OP_Code = 4'h0;
+			//ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			//WB_Sel = 1'h0;
+			createdump = 1'h1;
+			halt = 1'h1;
 		end
+		
         5'b00001: begin //NOP
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			//Write_Reg_Sel = 2'h0;
+			//Reg_Write = 1'h0;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			//ALU_OP_Code = 4'h0;
-			//ALU_B_Src = 2'h0;
-			//Reg_Write = 1'h0;
-			//Write_Reg_Sel = 2'h0;
+			//ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			//WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b01000: begin //ADDI
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
-			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
-			ALU_OP_Code = 4'h0;
-			ALU_B_Src = 2'h2;
+			Write_Reg_Sel = 2'h0;
 			Reg_Write = 1'h1;
-			//Write_Reg_Sel = 2'h0;
-		end
-        5'b01001: begin //SUBI
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
+			ALU_OP_Code = 4'h0;
+			ALU_B_Src = 1'h1;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h0;
 			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
+		end
+		
+        5'b01001: begin //SUBI			
+			Write_Reg_Sel = 2'h0;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
+			//Comp_Code = 2'h0;
 			ALU_OP_Code = 4'h1;
-			ALU_B_Src = 2'h2;
-			Reg_Write = 1'h1;
-			//Write_Reg_Sel = 2'h0;
+			ALU_B_Src = 1'h1;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b01010: begin //XORI
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			Write_Reg_Sel = 2'h0;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'h2;
-			ALU_B_Src = 2'h1;
-			Reg_Write = 1'h1;
-			//Write_Reg_Sel = 2'h0;
+			ALU_B_Src = 1'h1;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h1;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
         5'b01011: begin //ANDNI
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			Write_Reg_Sel = 2'h0;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'h3;
-			ALU_B_Src = 2'h1;
-			Reg_Write = 1'h1;
-			//Write_Reg_Sel = 2'h0;
+			ALU_B_Src = 1'h1;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h1;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b10100: begin //ROLI
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			Write_Reg_Sel = 2'h0;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'h4;
-			ALU_B_Src = 2'h1;
-			Reg_Write = 1'h1;
-			//Write_Reg_Sel = 2'h0;
+			ALU_B_Src = 1'h1;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
         5'b10101: begin //SLLI
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			Write_Reg_Sel = 2'h0;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'h5;
-			ALU_B_Src = 2'h1;
-			Reg_Write = 1'h1;
-			//Write_Reg_Sel = 2'h0;
+			ALU_B_Src = 1'h1;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b10110: begin //RORI
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			Write_Reg_Sel = 2'h0;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'h6;
-			ALU_B_Src = 2'h1;
-			Reg_Write = 1'h1;
-			//Write_Reg_Sel = 2'h0;
+			ALU_B_Src = 1'h1;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
         5'b10111: begin //SRLI
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			Write_Reg_Sel = 2'h0;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'h7;
-			ALU_B_Src = 2'h1;
-			Reg_Write = 1'h1;
-			//Write_Reg_Sel = 2'h0;
-		end
-		5'b10000: begin //ST !
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
-			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			Mem_Write = 1'h1;
+			ALU_B_Src = 1'h1;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h0;
 			//Mem_Read = 1'h0;
-			ALU_OP_Code = 4'h0;
-			ALU_B_Src = 2'h2;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
+		end
+		
+		5'b10000: begin //ST TODO: Check
+			//Write_Reg_Sel = 2'h0;
 			//Reg_Write = 1'h0;
-			//Write_Reg_Sel = 2'h0;
-		end
-        5'b10001: begin //LD
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			Write_Back_Sel = 1'h1;
-			//Mem_Write = 1'h0;
-			Mem_Read = 1'h1;
 			ALU_OP_Code = 4'h0;
-			ALU_B_Src = 2'h2;
-			Reg_Write = 1'h1;
-			//Write_Reg_Sel = 2'h0;
-		end
-		5'b10011: begin //STU
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
-			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
+			ALU_B_Src = 1'h1;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
 			Mem_Write = 1'h1;
-			//Mem_Read = 1'h0;
-			ALU_OP_Code = 4'h0;
-			ALU_B_Src = 2'h2;
-			Reg_Write = 1'h1;
-			Write_Reg_Sel = 2'h2;
+			//WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
-        5'b11001: begin //BTR
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+		
+        5'b10001: begin //LD
+			Write_Reg_Sel = 2'h0;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
+			ALU_OP_Code = 4'h0;
+			ALU_B_Src = 1'h1;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h0;
+			Mem_Read = 1'h1;
 			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
-			ALU_OP_Code = 4'hC;
-			//ALU_B_Src = 2'h0;
-			Reg_Write = 1'h1;
-			Write_Reg_Sel = 2'h1;
+			WB_Sel = 1'h1;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
+		5'b10011: begin //STU
+			Write_Reg_Sel = 2'h2;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
+			//Comp_Code = 2'h0;
+			ALU_OP_Code = 4'h0;
+			ALU_B_Src = 1'h1;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			Mem_Write = 1'h1;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
+		end
+		
+        5'b11001: begin //BTR
+			Write_Reg_Sel = 2'h1;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
+			//Comp_Code = 2'h0;
+			ALU_OP_Code = 4'hC;
+			//ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
+		end
+		
 		5'b11011: begin //ADD|SUB|XOR|ANDN
 			case(OP_Min)
 				2'b00: begin //ADD
-					PC_Write = 1'h1;
-					//PC_Code = 3'h0;
+					Write_Reg_Sel = 2'h1;
+					Reg_Write = 1'h1;
+					//PC_Code = 2'h0;
 					//Comp_Code = 2'h0;
-					Write_Back_Sel = 1'h0;
-					//Mem_Write = 1'h0;
-					//Mem_Read = 1'h0;
 					ALU_OP_Code = 4'h0;
-					//ALU_B_Src = 2'h0;
-					Reg_Write = 1'h1;
-					Write_Reg_Sel = 2'h1;
+					ALU_B_Src = 1'h0;
+					//Pass_Thr_Sel = 1'h0;
+					//Imm_Sel = 2'h0;
+					//Mem_Read = 1'h0;
+					//Mem_Write = 1'h0;
+					WB_Sel = 1'h0;
+					//createdump = 1'h0;
+					//halt = 1'h0;
 				end
+				
 				2'b01: begin //SUB
-					PC_Write = 1'h1;
-					//PC_Code = 3'h0;
+					Write_Reg_Sel = 2'h1;
+					Reg_Write = 1'h1;
+					//PC_Code = 2'h0;
 					//Comp_Code = 2'h0;
-					Write_Back_Sel = 1'h0;
-					//Mem_Write = 1'h0;
-					//Mem_Read = 1'h0;
 					ALU_OP_Code = 4'h1;
-					//ALU_B_Src = 2'h0;
-					Reg_Write = 1'h1;
-					Write_Reg_Sel = 2'h1;
+					ALU_B_Src = 1'h0;
+					//Pass_Thr_Sel = 1'h0;
+					//Imm_Sel = 2'h0;
+					//Mem_Read = 1'h0;
+					//Mem_Write = 1'h0;
+					WB_Sel = 1'h0;
+					//createdump = 1'h0;
+					//halt = 1'h0;
 				end
+				
 				2'b10: begin //XOR
-					PC_Write = 1'h1;
-					//PC_Code = 3'h0;
+					Write_Reg_Sel = 2'h1;
+					Reg_Write = 1'h1;
+					//PC_Code = 2'h0;
 					//Comp_Code = 2'h0;
-					Write_Back_Sel = 1'h0;
-					//Mem_Write = 1'h0;
-					//Mem_Read = 1'h0;
 					ALU_OP_Code = 4'h2;
-					//ALU_B_Src = 2'h0;
-					Reg_Write = 1'h1;
-					Write_Reg_Sel = 2'h1;
-				end
-				2'b11: begin //ANDN
-					PC_Write = 1'h1;
-					//PC_Code = 3'h0;
-					//Comp_Code = 2'h0;
-					Write_Back_Sel = 1'h0;
-					//Mem_Write = 1'h0;
+					ALU_B_Src = 1'h0;
+					//Pass_Thr_Sel = 1'h0;
+					//Imm_Sel = 2'h0;
 					//Mem_Read = 1'h0;
-					ALU_OP_Code = 4'h3;
-					//ALU_B_Src = 2'h0;
-					Reg_Write = 1'h1;
+					//Mem_Write = 1'h0;
+					WB_Sel = 1'h0;
+					//createdump = 1'h0;
+					//halt = 1'h0;
+				end
+				
+				2'b11: begin //ANDN
 					Write_Reg_Sel = 2'h1;
+					Reg_Write = 1'h1;
+					//PC_Code = 2'h0;
+					//Comp_Code = 2'h0;
+					ALU_OP_Code = 4'h3;
+					ALU_B_Src = 1'h0;
+					//Pass_Thr_Sel = 1'h0;
+					//Imm_Sel = 2'h0;
+					//Mem_Read = 1'h0;
+					//Mem_Write = 1'h0;
+					WB_Sel = 1'h0;
+					//createdump = 1'h0;
+					//halt = 1'h0;
 				end
 			endcase
 		end
+		
 		5'b11010: begin //ROL|SLL|ROR|SRL
 			case(OP_Min)
 				2'b00: begin //ROL
-					PC_Write = 1'h1;
-					//PC_Code = 3'h0;
+					Write_Reg_Sel = 2'h1;
+					Reg_Write = 1'h1;
+					//PC_Code = 2'h0;
 					//Comp_Code = 2'h0;
-					Write_Back_Sel = 1'h0;
-					//Mem_Write = 1'h0;
-					//Mem_Read = 1'h0;
 					ALU_OP_Code = 4'h4;
-					//ALU_B_Src = 2'h0;
-					Reg_Write = 1'h1;
-					Write_Reg_Sel = 2'h1;
+					ALU_B_Src = 1'h0;
+					//Pass_Thr_Sel = 1'h0;
+					//Imm_Sel = 2'h0;
+					//Mem_Read = 1'h0;
+					//Mem_Write = 1'h0;
+					WB_Sel = 1'h0;
+					//createdump = 1'h0;
+					//halt = 1'h0;
 				end
+				
 				2'b01: begin //SLL
-					PC_Write = 1'h1;
-					//PC_Code = 3'h0;
+					Write_Reg_Sel = 2'h1;
+					Reg_Write = 1'h1;
+					//PC_Code = 2'h0;
 					//Comp_Code = 2'h0;
-					Write_Back_Sel = 1'h0;
-					//Mem_Write = 1'h0;
-					//Mem_Read = 1'h0;
 					ALU_OP_Code = 4'h5;
-					//ALU_B_Src = 2'h0;
-					Reg_Write = 1'h1;
-					Write_Reg_Sel = 2'h1;
+					ALU_B_Src = 1'h0;
+					//Pass_Thr_Sel = 1'h0;
+					//Imm_Sel = 2'h0;
+					//Mem_Read = 1'h0;
+					//Mem_Write = 1'h0;
+					WB_Sel = 1'h0;
+					//createdump = 1'h0;
+					//halt = 1'h0;
 				end
+				
 				2'b10: begin //ROR
-					PC_Write = 1'h1;
-					//PC_Code = 3'h0;
+					Write_Reg_Sel = 2'h1;
+					Reg_Write = 1'h1;
+					//PC_Code = 2'h0;
 					//Comp_Code = 2'h0;
-					Write_Back_Sel = 1'h0;
-					//Mem_Write = 1'h0;
-					//Mem_Read = 1'h0;
 					ALU_OP_Code = 4'h6;
-					//ALU_B_Src = 2'h0;
-					Reg_Write = 1'h1;
-					Write_Reg_Sel = 2'h1;
-				end
-				2'b11: begin //SRL
-					PC_Write = 1'h1;
-					//PC_Code = 3'h0;
-					//Comp_Code = 2'h0;
-					Write_Back_Sel = 1'h0;
-					//Mem_Write = 1'h0;
+					ALU_B_Src = 1'h0;
+					//Pass_Thr_Sel = 1'h0;
+					//Imm_Sel = 2'h0;
 					//Mem_Read = 1'h0;
-					ALU_OP_Code = 4'h7;
-					//ALU_B_Src = 2'h0;
-					Reg_Write = 1'h1;
-					Write_Reg_Sel = 2'h1;
+					//Mem_Write = 1'h0;
+					WB_Sel = 1'h0;
+					//createdump = 1'h0;
+					//halt = 1'h0;
 				end
+				
+				2'b11: begin //SRL
+					Write_Reg_Sel = 2'h1;
+					Reg_Write = 1'h1;
+					//PC_Code = 2'h0;
+					//Comp_Code = 2'h0;
+					ALU_OP_Code = 4'h7;
+					ALU_B_Src = 1'h0;
+					//Pass_Thr_Sel = 1'h0;
+					//Imm_Sel = 2'h0;
+					//Mem_Read = 1'h0;
+					//Mem_Write = 1'h0;
+					WB_Sel = 1'h0;
+					//createdump = 1'h0;
+					//halt = 1'h0;
+				end
+				
 			endcase
 		end
+		
 		5'b11100: begin //SEQ
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			Write_Reg_Sel = 2'h1;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'h8;
-			//ALU_B_Src = 2'h0;
-			Reg_Write = 1'h1;
-			Write_Reg_Sel = 2'h1;
+			ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b11101: begin //SLT
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			Write_Reg_Sel = 2'h1;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'h9;
-			//ALU_B_Src = 2'h0;
-			Reg_Write = 1'h1;
-			Write_Reg_Sel = 2'h1;
+			ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b11110: begin //SLE
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			Write_Reg_Sel = 2'h1;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'hA;
-			//ALU_B_Src = 2'h0;
-			Reg_Write = 1'h1;
-			Write_Reg_Sel = 2'h1;
+			ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b11111: begin //SCO
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
-			//Comp_Code = 2'h0;
-			Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
-			ALU_OP_Code = 4'hB;
-			//ALU_B_Src = 2'h0;
-			Reg_Write = 1'h1;
 			Write_Reg_Sel = 2'h1;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
+			//Comp_Code = 2'h0;
+			ALU_OP_Code = 4'hB;
+			ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b01100: begin //BEQZ
-			PC_Write = 1'h1;
-			PC_Code = 3'h1;
+			//Write_Reg_Sel = 2'h0;
+			//Reg_Write = 1'h0;
+			PC_Code = 2'h2;
 			Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'hD;
+			ALU_B_Src = 1'h0;
 			Pass_Thr_Sel = 1'h0;
-			ALU_B_Src = 2'h0;
-			//Reg_Write = 1'h0;
-			//Write_Reg_Sel = 2'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			//WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b01101: begin //BNEZ
-			PC_Write = 1'h1;
-			PC_Code = 3'h1;
+			//Write_Reg_Sel = 2'h0;
+			//Reg_Write = 1'h0;
+			PC_Code = 2'h2;
 			Comp_Code = 2'h1;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'hD;
+			ALU_B_Src = 1'h0;
 			Pass_Thr_Sel = 1'h0;
-			ALU_B_Src = 2'h0;
-			//Reg_Write = 1'h0;
-			//Write_Reg_Sel = 2'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			//WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b01110: begin //BLTZ
-			PC_Write = 1'h1;
-			PC_Code = 3'h1;
+			//Write_Reg_Sel = 2'h0;
+			//Reg_Write = 1'h0;
+			PC_Code = 2'h2;
 			Comp_Code = 2'h2;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'hD;
+			ALU_B_Src = 1'h0;
 			Pass_Thr_Sel = 1'h0;
-			ALU_B_Src = 2'h0;
-			//Reg_Write = 1'h0;
-			//Write_Reg_Sel = 2'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			//WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b01111: begin //BGEZ
-			PC_Write = 1'h1;
-			PC_Code = 3'h1;
+			//Write_Reg_Sel = 2'h0;
+			//Reg_Write = 1'h0;
+			PC_Code = 2'h2;
 			Comp_Code = 2'h3;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'hD;
+			ALU_B_Src = 1'h0;
 			Pass_Thr_Sel = 1'h0;
-			ALU_B_Src = 2'h0;
-			//Reg_Write = 1'h0;
-			//Write_Reg_Sel = 2'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			//WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b11000: begin //LBI
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
+			Write_Reg_Sel = 2'h2;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
 			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
 			ALU_OP_Code = 4'hD;
+			ALU_B_Src = 1'h1;
 			Pass_Thr_Sel = 1'h1;
-			ALU_B_Src = 2'h3;
-			Reg_Write = 1'h1;
-			Write_Reg_Sel = 2'h2;
+			Imm_Sel = 2'h2;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b10010: begin //SLBI
-			PC_Write = 1'h1;
-			//PC_Code = 3'h0;
-			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
-			ALU_OP_Code = 4'hE;
-			ALU_B_Src = 2'h3;
-			Reg_Write = 1'h1;
 			Write_Reg_Sel = 2'h2;
+			Reg_Write = 1'h1;
+			//PC_Code = 2'h0;
+			//Comp_Code = 2'h0;
+			ALU_OP_Code = 4'hE;
+			ALU_B_Src = 1'h1;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h2;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b00100: begin //J
-			PC_Write = 1'h1;
-			PC_Code = 3'h3;
-			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
-			//ALU_OP_Code = 4'h0;
-			//ALU_B_Src = 2'h0;
-			//Reg_Write = 1'h0;
 			//Write_Reg_Sel = 2'h0;
+			//Reg_Write = 1'h0;
+			PC_Code = 2'h3;
+			//Comp_Code = 2'h0;
+			//ALU_OP_Code = 4'h0;
+			//ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h3;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			//WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b00101: begin //JR
-			PC_Write = 1'h1;
-			PC_Code = 3'h2;
-			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
-			//ALU_OP_Code = 4'h0;
-			//ALU_B_Src = 2'h0;
-			//Reg_Write = 1'h0;
 			//Write_Reg_Sel = 2'h0;
+			//Reg_Write = 1'h0;
+			PC_Code = 2'h1;
+			//Comp_Code = 2'h0;
+			//ALU_OP_Code = 4'h0;
+			//ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h2;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			//WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b00110: begin //JAL
-			PC_Write = 1'h1;
-			PC_Code = 3'h3;
-			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
-			ALU_OP_Code = 4'hF;
-			//ALU_B_Src = 2'h0;
-			Reg_Write = 1'h1;
 			Write_Reg_Sel = 2'h3;
+			Reg_Write = 1'h1;
+			PC_Code = 2'h3;
+			//Comp_Code = 2'h0;
+			ALU_OP_Code = 4'hF;
+			//ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h3;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b00111: begin //JALR
-			PC_Write = 1'h1;
-			PC_Code = 3'h2;
-			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
-			ALU_OP_Code = 4'hF;
-			//ALU_B_Src = 2'h0;
-			Reg_Write = 1'h1;
 			Write_Reg_Sel = 2'h3;
+			Reg_Write = 1'h1;
+			PC_Code = 2'h1;
+			//Comp_Code = 2'h0;
+			ALU_OP_Code = 4'hF;
+			//ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			Imm_Sel = 2'h2;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b00010: begin //siic FIGURE OUT
-			//PC_Write = 1;
-			//PC_Code = 3'h0;
-			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
-			//ALU_OP_Code = 4'h0;
-			//ALU_B_Src = 2'h0;
-			//Reg_Write = 1'h0;
 			//Write_Reg_Sel = 2'h0;
+			//Reg_Write = 1'h0;
+			//PC_Code = 2'h0;
+			//Comp_Code = 2'h0;
+			//ALU_OP_Code = 4'h0;
+			//ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			//WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
+		
 		5'b00011: begin //NOP / RTI FIGURE OUT
-			//PC_Write = 0;
-			//PC_Code = 3'h0;
-			//Comp_Code = 2'h0;
-			//Write_Back_Sel = 1'h0;
-			//Mem_Write = 1'h0;
-			//Mem_Read = 1'h0;
-			//ALU_OP_Code = 4'h0;
-			//ALU_B_Src = 2'h0;
-			//Reg_Write = 1'h0;
 			//Write_Reg_Sel = 2'h0;
+			//Reg_Write = 1'h0;
+			//PC_Code = 2'h0;
+			//Comp_Code = 2'h0;
+			//ALU_OP_Code = 4'h0;
+			//ALU_B_Src = 1'h0;
+			//Pass_Thr_Sel = 1'h0;
+			//Imm_Sel = 2'h0;
+			//Mem_Read = 1'h0;
+			//Mem_Write = 1'h0;
+			//WB_Sel = 1'h0;
+			//createdump = 1'h0;
+			//halt = 1'h0;
 		end
 	endcase
 end

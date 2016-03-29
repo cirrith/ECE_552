@@ -601,7 +601,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -112 488 88 616)
+	(rect 464 624 664 752)
 	(text "PC_Logic" (rect 5 0 58 14)(font "Arial" (font_size 8)))
 	(text "inst13" (rect 8 112 37 124)(font "Arial" ))
 	(port

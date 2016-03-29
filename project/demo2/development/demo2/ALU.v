@@ -21,24 +21,26 @@
 /				1110: SLBI | Move Bottom	| (A << 8) | B
 /				1111: PC + 2 CHECK
 /
-/		INPUTS: A[15:0] - First Operand
-/				B[15:0] - Second Operand
-/				OP_Code[2:0] - Denotes which operation
+/		INPUTS: A [15:0] - First Operand
+/				B [15:0] - Second Operand
+/				OP_Code [2:0] - Denotes which operation
+/				PC2 [15:0] - PC + 2
 /
-/		OUTPUTS: Result[15:0] - Result of Operation
+/		OUTPUTS: Result [15:0] - Result of Operation
 /				 LT - Less Than
 /				 EQ - Zero Flag
 ********************************************************************************************************/
-module ALU (A, B, OP_Code, Result, LT, EQ, Pass_Thr_Sel);
+module ALU (A, B, OP_Code, PC2, Result, LT, EQ, Pass_Thr_Sel);
 
-	input [15:0] A;
-	input [15:0] B;
-	input [3:0] OP_Code;
-	input Pass_Thr_Sel;
+	input [15:0] 	A;
+	input [15:0] 	B;
+	input [3:0] 	OP_Code;
+	input 			Pass_Thr_Sel;
+	input [15:0] 	PC2;
 
-	output [15:0] Result;
-	output LT;
-	output EQ;
+	output [15:0] 	Result;
+	output 			LT;
+	output 			EQ;
 
 	reg [15:0] case_out;
 	reg [15:0] a_i;	//Be able to switch what A is ==
@@ -151,7 +153,7 @@ module ALU (A, B, OP_Code, Result, LT, EQ, Pass_Thr_Sel);
 			end
 			
 			4'b1111: begin //PC + 2
-				case_out = B;
+				case_out = PC2;
 			end
 		endcase
 	end

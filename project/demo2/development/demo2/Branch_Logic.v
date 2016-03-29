@@ -14,11 +14,11 @@
 ********************************************************************************************************/
 module Branch_Logic(Comp_Code, ZF, LT, Branch);
 
-	input [1:0] Comp_Code;
-	input ZF;
-	input LT;
+	input [1:0] 	Comp_Code;
+	input 			ZF;
+	input 			LT;
 	
-	output reg Branch;
+	output reg 		Branch;
 	
 	always @ (*) begin
 		case(Comp_Code)
@@ -41,3 +41,5 @@ module Branch_Logic(Comp_Code, ZF, LT, Branch);
 	end 
 
 endmodule 
+
+//Checked 3/22

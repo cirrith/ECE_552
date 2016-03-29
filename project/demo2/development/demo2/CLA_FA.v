@@ -12,13 +12,13 @@
 ********************************************************************************************************/
 module CLA_FA (A, B, Ci, S, P, G);
 
-input A;
-input B;
-input Ci;
+input 	A;
+input 	B;
+input 	Ci;
 
-output P;
-output G;
-output S;
+output 	P;
+output 	G;
+output 	S;
 
 xor Prop (P, A, B);
 and Gen (G, A, B);
@@ -26,3 +26,5 @@ and Gen (G, A, B);
 xor Sum (S, A, B, Ci);
 
 endmodule
+
+//Checked 3/22/16

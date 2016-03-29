@@ -1,25 +1,25 @@
 /********************************************************************************************************
 /		MODULE: Bit4_CLA - 4 bit Carry Look-ahead Adder
 /		PURPOSE: Given two four bit inputs and a carry in, creates four bit sum and propagate and generate signals
-			for the block of four bits
+/			for the block of four bits
 /
-/		INPUTS: A - First Operand
-/				B - Second Operand
+/		INPUTS: A [3:0] - First Operand
+/				B [3:0] - Second Operand
 /				Ci - Carry in
 /
-/		OUTPUTS: S - Sum of Adddition
+/		OUTPUTS: S [3:0] - Sum of Adddition
 /				 P - Propagate 
 /				 G - Generate
 ********************************************************************************************************/
 module Bit4_CLA (A, B, Ci, S, P, G);
 
-input [3:0] A;
-input [3:0] B;
-input Ci;
+input [3:0] 	A;
+input [3:0]		B;
+input 			Ci;
 
-output [3:0] S;
-output P;
-output G;
+output [3:0] 	S;
+output 			P;
+output 			G;
 
 wire [3:0] prop;
 wire [3:0] gen;
@@ -42,3 +42,4 @@ assign G = gen[3] | prop[3]&gen[2] | prop[3]&prop[2]&gen[1] | prop[3]&prop[2]&pr
 
 endmodule 
 
+//Checked 3/22/16
