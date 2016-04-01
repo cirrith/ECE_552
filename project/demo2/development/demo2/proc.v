@@ -69,6 +69,12 @@ module proc (err, clk, rst);
 	wire 			Mem_Read_Exe;
 	wire 			Mem_Read_Mem;
 				
+	wire			A_Forward;
+	wire			B_Forward;
+	
+	wire [15:0]		A_Forward_Data;
+	wire [15:0]		B_Forward_Data;
+				
 	wire 			WB_Sel_Dec;
 	wire 			WB_Sel_Exe;
 	wire 			WB_Sel_Mem;
