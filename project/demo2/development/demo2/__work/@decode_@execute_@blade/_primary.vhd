@@ -1,0 +1,46 @@
+library verilog;
+use verilog.vl_types.all;
+entity decode_execute_blade is
+    port(
+        clk             : in     vl_logic;
+        rst             : in     vl_logic;
+        flush           : in     vl_logic;
+        stall           : in     vl_logic;
+        alu_b_src_dec   : in     vl_logic;
+        alu_op_code_dec : in     vl_logic_vector(3 downto 0);
+        comp_code_dec   : in     vl_logic_vector(1 downto 0);
+        immediate_dec   : in     vl_logic_vector(15 downto 0);
+        pass_thr_sel_dec: in     vl_logic;
+        pc_code_dec     : in     vl_logic_vector(1 downto 0);
+        pc2_dec         : in     vl_logic_vector(15 downto 0);
+        reg_1_data_dec  : in     vl_logic_vector(15 downto 0);
+        reg_2_data_dec  : in     vl_logic_vector(15 downto 0);
+        reg_1_src_dec   : in     vl_logic_vector(2 downto 0);
+        reg_2_src_dec   : in     vl_logic_vector(2 downto 0);
+        mem_write_dec   : in     vl_logic;
+        mem_read_dec    : in     vl_logic;
+        createdump_dec  : in     vl_logic;
+        reg_write_dec   : in     vl_logic;
+        wb_sel_dec      : in     vl_logic;
+        write_reg_dec   : in     vl_logic_vector(2 downto 0);
+        halt_dec        : in     vl_logic;
+        alu_b_src_exe   : out    vl_logic;
+        alu_op_code_exe : out    vl_logic_vector(3 downto 0);
+        comp_code_exe   : out    vl_logic_vector(1 downto 0);
+        immediate_exe   : out    vl_logic_vector(15 downto 0);
+        pass_thr_sel_exe: out    vl_logic;
+        pc_code_exe     : out    vl_logic_vector(1 downto 0);
+        pc2_exe         : out    vl_logic_vector(15 downto 0);
+        reg_1_data_exe  : out    vl_logic_vector(15 downto 0);
+        reg_2_data_exe  : out    vl_logic_vector(15 downto 0);
+        reg_1_src_exe   : out    vl_logic_vector(2 downto 0);
+        reg_2_src_exe   : out    vl_logic_vector(2 downto 0);
+        mem_write_exe   : out    vl_logic;
+        mem_read_exe    : out    vl_logic;
+        createdump_exe  : out    vl_logic;
+        reg_write_exe   : out    vl_logic;
+        wb_sel_exe      : out    vl_logic;
+        write_reg_exe   : out    vl_logic_vector(2 downto 0);
+        halt_exe        : out    vl_logic
+    );
+end decode_execute_blade;

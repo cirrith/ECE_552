@@ -1,0 +1,8 @@
+INST:    1100 0001 0000 0000 lbi r1, 0
+ARCH:    REG: 1 VALUE: 0x0000 ***DIFF***
+VERILOG: 
+INST:    0101 1001 0100 0000 andni r2, r1, 0
+ARCH:    REG: 2 VALUE: 0x0000 ***DIFF***
+VERILOG: 
+INST:    0000 0000 0000 0000 halt
+FAIL: 2 differences
