@@ -52,6 +52,6 @@ module Stall_Logic(Forward_Mem, halt_Dec, halt_Exe, halt_Mem, halt_WB, Mem_Read_
 	assign Stall_EXME = 1'b0;
 	assign Stall_MEWB = 1'b0;
 	
-	assign Flush_EXME = Stall_Load	
+	assign Flush_EXME = Stall_Load;
 	
 endmodule

@@ -1,5 +1,5 @@
 /********************************************************************************************************
-/		MODULE: Memory-Writeback_Blade
+/		MODULE: Memory_Writeback_Blade
 /		PURPOSE: Pipeline blade between Memory and Writeback stages 
 /
 /		INPUTS: Sorted by stage of final consume		
@@ -26,7 +26,7 @@
 /					0 - No halt
 /					1 - Yes halt
 ********************************************************************************************************/
-module Memory-Writeback_Blade (clk, rst, Flush, Stall, ALU_Result_Mem, Reg_Write_Mem, Mem_Data_Mem, WB_Sel_Mem, Write_Reg_Mem, halt_Mem, ALU_Result_WB, Reg_Write_WB, Mem_Data_WB, WB_Sel_WB, Write_Reg_WB, halt_WB);
+module Memory_Writeback_Blade (clk, rst, Flush, Stall, ALU_Result_Mem, Reg_Write_Mem, Mem_Data_Mem, WB_Sel_Mem, Write_Reg_Mem, halt_Mem, ALU_Result_WB, Reg_Write_WB, Mem_Data_WB, WB_Sel_WB, Write_Reg_WB, halt_WB);
 
 	input clk;
 	input rst;

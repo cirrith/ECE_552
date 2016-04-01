@@ -33,6 +33,6 @@ module Imm_Selecter (Extend, Imm_Sel, PC2, Immediate);
 	Bits8_SExt choice2(.In(Extend[7:0]), .Out(Imm8S));
 	Bits11_SExt choice3(.In(Extend[10:0]), .Out(Imm11S));
 	
-	Bit16_Mux8_1 Mux(.in0(Imm5S), .in1(Imm5Z), .in2(Imm8S), .in3(Imm11S), .in4(PC2), .in5(16'h0000), .in6(16'h0000), .in7(16'h0000), .s(Imm_Sel), .out(Immediate))
+	Bit16_Mux8_1 Mux(.in0(Imm5S), .in1(Imm5Z), .in2(Imm8S), .in3(Imm11S), .in4(PC2), .in5(16'h0000), .in6(16'h0000), .in7(16'h0000), .s(Imm_Sel), .out(Immediate));
 
 endmodule 

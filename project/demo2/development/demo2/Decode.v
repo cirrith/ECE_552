@@ -104,7 +104,7 @@ module Decode (clk, rst, Instruction, PC2, Write_Reg_In, Write_Data, Reg_Write_I
 			.Mem_Write(Mem_Write), 
 			.WB_Sel(WB_Sel), 
 			.createdump(createdump), 
-			,halt(halt), 
+			.halt(halt), 
 			.Write_Reg_Sel(Write_Reg_Sel), 
 			.Imm_Sel(Imm_Sel));
 	

@@ -30,11 +30,11 @@ module Fetch (clk, rst, Stall, PC_Ex, PC_Sel, Instruction, PC2);
 	input 			PC_Sel;
 	
 	output [15:0] 	Instruction;
-	output [15:0] 	PC2
+	output [15:0] 	PC2;
 
 	wire [15:0] PC;
 
-	memory2c Instruction Memory(.data_out(Instruction), .data_in(), .addr(PC), .enable(1'b1), .wr(1'b0), .createdump(1'b0), .clk(clk), .rst(rst));
+	memory2c Instruction_Memory(.data_out(Instruction), .data_in(), .addr(PC), .enable(1'b1), .wr(1'b0), .createdump(1'b0), .clk(clk), .rst(rst));
 
 	PC_inc pc_inc(.PC(PC), .PC2(PC2));
 	

@@ -22,8 +22,8 @@ module PC (clk, rst, PC, PC2, PC_Ex, PC_Sel, Stall);
 	
 	input [15:0] 	PC2;
 	input [15:0] 	PC_Ex;
-	input 			Write;
-
+	input			PC_Sel;
+	
 	output [15:0] 	PC;
 
 	wire [15:0] PC_in;

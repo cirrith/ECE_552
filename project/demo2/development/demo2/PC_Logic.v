@@ -30,7 +30,7 @@
 ********************************************************************************************************/
 module PC_Logic (PC_Code, Reg_1_Data, Immediate, PC2, PC_Ex, PC_Sel);
 
-	input 			PC_Code;
+	input [1:0]		PC_Code;
 	input [15:0] 	Reg_1_Data;
 	input [15:0] 	Immediate;
 	input [15:0] 	PC2;

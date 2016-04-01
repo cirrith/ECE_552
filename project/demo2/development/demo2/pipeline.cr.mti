@@ -1,0 +1,397 @@
+/userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Flush_Logic.v {0 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Flush_Logic.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Flush_Logic
+** Error: (vlog-13069) /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Flush_Logic.v(42): near "assign": syntax error, unexpected assign, expecting ';' or ','.
+
+} {4.0 5.0} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/CLA.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/CLA.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module CLA
+
+Top level modules:
+	CLA
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/dff.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/dff.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_Shifter_4.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_Shifter_4.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module ALU_Shifter_4
+
+Top level modules:
+	ALU_Shifter_4
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Register_File_Input.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Register_File_Input.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Register_File_Input
+
+Top level modules:
+	Register_File_Input
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_Bit4_CLA.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_Bit4_CLA.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module ALU_Bit4_CLA
+
+Top level modules:
+	ALU_Bit4_CLA
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/clkrst.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/clkrst.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_Shifter_8.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_Shifter_8.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module ALU_Shifter_8
+
+Top level modules:
+	ALU_Shifter_8
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/memory2c.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/memory2c.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module memory2c
+
+Top level modules:
+	memory2c
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bits11_SExt.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bits11_SExt.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Bits11_SExt
+
+Top level modules:
+	Bits11_SExt
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_CLA.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_CLA.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module ALU_CLA
+
+Top level modules:
+	ALU_CLA
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bit16_Mux4_1.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bit16_Mux4_1.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Bit16_Mux4_1
+
+Top level modules:
+	Bit16_Mux4_1
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Execute.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Execute.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Execute
+
+Top level modules:
+	Execute
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_Shifter_1.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_Shifter_1.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module ALU_Shifter_1
+
+Top level modules:
+	ALU_Shifter_1
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/CLA_FA.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/CLA_FA.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module CLA_FA
+
+Top level modules:
+	CLA_FA
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bit16_Mux8_1.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bit16_Mux8_1.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Bit16_Mux8_1
+
+Top level modules:
+	Bit16_Mux8_1
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bits5_ZExt.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bits5_ZExt.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Bits5_ZExt
+
+Top level modules:
+	Bits5_ZExt
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bit4_CLA.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bit4_CLA.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Bit4_CLA
+
+Top level modules:
+	Bit4_CLA
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Register.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Register.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Register
+
+Top level modules:
+	Register
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/proc_hier_pbench.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/proc_hier_pbench.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module proc_hier_pbench
+
+Top level modules:
+	proc_hier_pbench
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Branch_Logic.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Branch_Logic.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Branch_Logic
+
+Top level modules:
+	Branch_Logic
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/dff_pipe_p.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/dff_pipe_p.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module dff_pipe_p
+
+Top level modules:
+	dff_pipe_p
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_Shifter_2.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_Shifter_2.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module ALU_Shifter_2
+
+Top level modules:
+	ALU_Shifter_2
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Processor_Control.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Processor_Control.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Processor_Control
+
+Top level modules:
+	Processor_Control
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/PC_Logic.v {0 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/PC_Logic.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module PC_Logic
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/PC_Logic.v(44): Too many indices into "PC_Code"
+** Warning: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/PC_Logic.v(44): (vlog-2576) [BSOB] - Bit-select into 'PC_Code' is out of bounds.
+
+} {4.0 5.0} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Write_Back.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Write_Back.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Write_Back
+
+Top level modules:
+	Write_Back
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Register_File.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Register_File.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Register_File
+
+Top level modules:
+	Register_File
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Decode.v {0 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Decode.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Decode
+** Error: (vlog-13069) /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Decode.v(107): near ",": syntax error, unexpected ',', expecting .* or '.'.
+
+} {4.0 5.0} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/proc.v {0 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/proc.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module proc
+** Error: (vlog-13069) /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/proc.v(140): near "-": syntax error, unexpected '-', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+** Error: (vlog-13069) /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/proc.v(176): near "-": syntax error, unexpected '-', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+** Error: (vlog-13069) /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/proc.v(238): near "-": syntax error, unexpected '-', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+** Error: (vlog-13069) /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/proc.v(273): near "-": syntax error, unexpected '-', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+
+} {4.0 8.0} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Stall_Logic.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Stall_Logic.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Stall_Logic
+
+Top level modules:
+	Stall_Logic
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/dff_pipe.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/dff_pipe.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module dff_pipe
+
+Top level modules:
+	dff_pipe
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v {0 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Extra_Logic
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(139): 'Stall_MEWB' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(139): Component name 'Stall_MEWB' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(138): 'Stall_EXME' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(138): Component name 'Stall_EXME' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(137): 'Stall_DEEX' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(137): Component name 'Stall_DEEX' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(136): 'Stall_IFDE' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(136): Component name 'Stall_IFDE' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(135): 'Stall_Fetch' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(135): Component name 'Stall_Fetch' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(134): 'Flush_MEWB' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(134): Component name 'Flush_MEWB' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(133): 'Flush_EXME' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(133): Component name 'Flush_EXME' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(132): 'Flush_DEEX' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(132): Component name 'Flush_DEEX' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(131): 'Flush_IFDE' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(131): Component name 'Flush_IFDE' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(130): 'Mem_Read_Mem' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(130): Component name 'Mem_Read_Mem' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(129): 'Forward_Mem' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(119): Component name 'Forward_Mem' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(128): 'halt_WB' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(128): Component name 'halt_WB' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(127): 'halt_Mem' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(127): Component name 'halt_Mem' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(126): 'halt_Exe' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(126): Component name 'halt_Exe' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(125): 'halt_Dec' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(125): Component name 'halt_Dec' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(124): 'PC_Sel' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(124): Component name 'PC_Sel' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(121): 'B_Forward_Data' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(121): Field/method name ($$) not in 'B_Forward_Data'
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(120): 'A_Forward_Data' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(120): Field/method name ($$) not in 'A_Forward_Data'
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(119): 'Forward_Mem' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(118): 'B_Forward' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(118): Component name 'B_Forward' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(117): 'A_Forward' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(117): Component name 'A_Forward' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(116): 'WB' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(116): Field/method name ($$) not in 'WB'
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(115): 'ALU_Result_Mem' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(115): Field/method name ($$) not in 'ALU_Result_Mem'
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(114): 'Reg_Write_WB' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(114): Component name 'Reg_Write_WB' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(113): 'Reg_Write_Mem' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(113): Component name 'Reg_Write_Mem' does not refer to a scope.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(112): 'Write_Reg_WB' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(112): Field/method name ($$) not in 'Write_Reg_WB'
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(111): 'Write_Reg_Mem' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(111): Field/method name ($$) not in 'Write_Reg_Mem'
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(110): 'Reg_2_Src' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(110): Field/method name ($$) not in 'Reg_2_Src'
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(109): 'Reg_1_Src' is not a function name.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extra_Logic.v(109): Field/method name ($$) not in 'Reg_1_Src'
+
+} {4.0 61.0} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_XOR.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_XOR.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module ALU_XOR
+
+Top level modules:
+	ALU_XOR
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Fetch.v {0 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Fetch.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Fetch
+** Error: (vlog-13069) /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Fetch.v(35): near "wire": syntax error, unexpected wire, expecting ';'.
+** Error: (vlog-13032) /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Fetch.v(37): near "Memory": Syntax error.
+
+} {4.0 6.0} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bit1_Mux2_1.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bit1_Mux2_1.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Bit1_Mux2_1
+
+Top level modules:
+	Bit1_Mux2_1
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/PC.v {0 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/PC.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module PC
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/PC.v(31): (vlog-2730) Undefined variable: 'PC_Sel'.
+** Error: /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/PC.v(17): Identifier must be declared with a port mode: PC_Sel.
+
+} {4.0 6.0} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/proc_hier.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/proc_hier.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module proc_hier
+
+Top level modules:
+	proc_hier
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bit1_Mux4_1.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bit1_Mux4_1.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Bit1_Mux4_1
+
+Top level modules:
+	Bit1_Mux4_1
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_CLA_FA.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_CLA_FA.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module ALU_CLA_FA
+
+Top level modules:
+	ALU_CLA_FA
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Memory.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Memory.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Memory
+
+Top level modules:
+	Memory
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_ANDN.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_ANDN.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module ALU_ANDN
+
+Top level modules:
+	ALU_ANDN
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bits5_SExt.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bits5_SExt.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Bits5_SExt
+
+Top level modules:
+	Bits5_SExt
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Stall_Flush_Logic.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Stall_Flush_Logic.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Stall_Flush_Logic
+
+Top level modules:
+	Stall_Flush_Logic
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_Shifter.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/ALU_Shifter.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module ALU_Shifter
+
+Top level modules:
+	ALU_Shifter
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extender.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Extender.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Extender
+
+Top level modules:
+	Extender
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Imm_Selecter.v {0 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Imm_Selecter.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Imm_Selecter
+** Error: (vlog-13069) /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Imm_Selecter.v(38): near "endmodule": syntax error, unexpected endmodule, expecting ';' or ','.
+
+} {4.0 5.0} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bit8_SExt.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Bit8_SExt.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Bits8_SExt
+
+Top level modules:
+	Bits8_SExt
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Forward_Logic.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/Forward_Logic.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module Forward_Logic
+
+Top level modules:
+	Forward_Logic
+
+} {} {}} /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/PC_inc.v {1 {vlog -work work -vopt -stats=none /userspace/r/rbambrough/College/ECE_552/project/demo2/development/demo2/PC_inc.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module PC_inc
+
+Top level modules:
+	PC_inc
+
+} {} {}}

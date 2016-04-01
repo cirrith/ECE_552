@@ -1,5 +1,5 @@
 /********************************************************************************************************
-/		MODULE: Execute-Memory_Blade
+/		MODULE: Execute_Memory_Blade
 /		PURPOSE: Pipeline blade between Execute and Memory stages
 /
 /		INPUTS: Sorted by stage of final consume
@@ -43,7 +43,7 @@
 /					0 - No halt
 /					1 - Yes halt			
 ********************************************************************************************************/
-module Execute-Memory_Blade (clk, rst, Flush, Stall, Mem_Write_Exe, Mem_Read_Exe, Reg_2_Data_Exe, createdump_Exe, ALU_Result_Exe, Reg_Write_Exe, WB_Sel_Exe, Write_Reg_Exe, halt_Exe, Mem_Write_Mem, Mem_Read_Mem, Reg_2_Data_Mem, createdump_Mem, ALU_Result_Mem, Reg_Write_Mem, WB_Sel_Mem, Write_Reg_Mem, halt_Mem);
+module Execute_Memory_Blade (clk, rst, Flush, Stall, Mem_Write_Exe, Mem_Read_Exe, Reg_2_Data_Exe, createdump_Exe, ALU_Result_Exe, Reg_Write_Exe, WB_Sel_Exe, Write_Reg_Exe, halt_Exe, Mem_Write_Mem, Mem_Read_Mem, Reg_2_Data_Mem, createdump_Mem, ALU_Result_Mem, Reg_Write_Mem, WB_Sel_Mem, Write_Reg_Mem, halt_Mem);
 
 	input 			clk;
 	input 			rst;

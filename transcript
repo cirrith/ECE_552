@@ -1,0 +1,99 @@
+# //  ModelSim SE-64 10.4 Dec  2 2014 Linux 3.16.0-0.bpo.4-amd64
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading project pipeline
+# Compile of ALU.v was successful.
+# Compile of ALU_ANDN.v was successful.
+# Compile of ALU_Bit4_CLA.v was successful.
+# Compile of ALU_CLA.v was successful.
+# Compile of ALU_CLA_FA.v was successful.
+# Compile of ALU_Shifter.v was successful.
+# Compile of ALU_Shifter_1.v was successful.
+# Compile of ALU_Shifter_2.v was successful.
+# Compile of ALU_Shifter_4.v was successful.
+# Compile of ALU_Shifter_8.v was successful.
+# Compile of ALU_XOR.v was successful.
+# Compile of Bit1_Mux2_1.v was successful.
+# Compile of Bit1_Mux4_1.v was successful.
+# Compile of Bit4_CLA.v was successful.
+# Compile of Bit8_SExt.v was successful.
+# Compile of Bit16_Mux4_1.v was successful.
+# Compile of Bit16_Mux8_1.v was successful.
+# Compile of Bits5_SExt.v was successful.
+# Compile of Bits5_ZExt.v was successful.
+# Compile of Bits11_SExt.v was successful.
+# Compile of Branch_Logic.v was successful.
+# Compile of CLA.v was successful.
+# Compile of CLA_FA.v was successful.
+# Compile of clkrst.v was successful.
+# Compile of Data_Hazard.v failed with 1 errors.
+# Compile of Decode-Execute_Blade.v failed with 1 errors.
+# Compile of Decode.v failed with 1 errors.
+# Compile of dff.v was successful.
+# Compile of dff_pipe.v was successful.
+# Compile of dff_pipe_p.v was successful.
+# Compile of Execute-Memory_Blade.v failed with 1 errors.
+# Compile of Execute.v was successful.
+# Compile of Extender.v was successful.
+# Compile of Extra_Logic.v failed with 1 errors.
+# Compile of Fetch-Decode_Blade.v failed with 1 errors.
+# Compile of Fetch.v failed with 1 errors.
+# Compile of Flush_Logic.v failed with 1 errors.
+# Compile of Forward_Logic.v was successful.
+# Compile of Imm_Selecter.v failed with 1 errors.
+# Compile of Memory-Writeback_Blade.v failed with 1 errors.
+# Compile of Memory.v was successful.
+# Compile of memory2c.v was successful.
+# Compile of PC.v failed with 1 errors.
+# Compile of PC_inc.v was successful.
+# Compile of PC_Logic.v failed with 1 errors.
+# Compile of proc.v failed with 1 errors.
+# Compile of proc_hier.v was successful.
+# Compile of proc_hier_pbench.v was successful.
+# Compile of Processor_Control.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Register_File_Input.v was successful.
+# Compile of Stall_Flush_Logic.v was successful.
+# Compile of Stall_Logic.v failed with 1 errors.
+# Compile of Write_Back.v was successful.
+# 55 compiles, 14 failed with 14 errors.
+# Compile of Data_Hazard.v failed with 1 errors.
+# Compile of Decode-Execute_Blade.v failed with 1 errors.
+# Compile of Decode.v failed with 1 errors.
+# Compile of Execute-Memory_Blade.v failed with 1 errors.
+# Compile of Extra_Logic.v failed with 1 errors.
+# Compile of Fetch-Decode_Blade.v failed with 1 errors.
+# Compile of Fetch.v failed with 1 errors.
+# Compile of Flush_Logic.v failed with 1 errors.
+# Compile of Imm_Selecter.v failed with 1 errors.
+# Compile of Memory-Writeback_Blade.v failed with 1 errors.
+# Compile of PC.v failed with 1 errors.
+# Compile of PC_Logic.v failed with 1 errors.
+# Compile of proc.v failed with 1 errors.
+# Compile of Stall_Logic.v was successful.
+# 14 compiles, 13 failed with 13 errors.
+# Compile of Decode.v failed with 1 errors.
+# Compile of Extra_Logic.v failed with 1 errors.
+# Compile of Fetch.v failed with 1 errors.
+# Compile of Flush_Logic.v failed with 1 errors.
+# Compile of Imm_Selecter.v failed with 1 errors.
+# Compile of PC.v failed with 1 errors.
+# Compile of PC_Logic.v failed with 1 errors.
+# Compile of proc.v failed with 1 errors.
+# Compile of Decode_Execute_Blade.v was successful.
+# Compile of Execute_Memory_Blade.v failed with 1 errors.
+# Compile of Fetch_Decode_Blade.v failed with 1 errors.
+# Compile of Memory_Writeback_Blade.v failed with 1 errors.
+# 12 compiles, 11 failed with 11 errors.

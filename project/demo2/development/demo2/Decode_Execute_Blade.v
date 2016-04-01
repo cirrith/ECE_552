@@ -1,5 +1,5 @@
 /********************************************************************************************************
-/		MODULE: Decode-Execute_Blade
+/		MODULE: Decode_Execute_Blade
 /		PURPOSE: Pipeline blade between Decode and Execute stages
 /
 /		INPUTS: Sorted by stage consumed
@@ -93,7 +93,7 @@
 /
 /		Yea this complex
 ********************************************************************************************************/
-module Decode-Execute_Blade (clk, rst, Flush, Stall, ALU_B_Src_Dec, ALU_OP_Code_Dec, Comp_Code_Dec, Immediate_Dec, Pass_Thr_Sel_Dec, PC_Code_Dec, PC2_Dec, Reg_1_Data_Dec, Reg_2_Data_Dec, Reg_1_Src_Dec, Reg_2_Src_Dec, Mem_Write_Dec, Mem_Read_Dec, createdump_Dec, Reg_Write_Dec, WB_Sel_Dec, Write_Reg_Dec, halt_Dec, ALU_B_Src_Exe, ALU_OP_Code_Exe, Comp_Code_Exe, Immediate_Exe, Pass_Thr_Sel_Exe, PC_Code_Exe, PC2_Exe, Reg_1_Data_Exe, Reg_2_Data_Exe, Reg_1_Src_Exe, Reg_2_Src_Exe, Mem_Write_Exe, Mem_Read_Exe, createdump_Exe, Reg_Write_Exe, WB_Sel_Exe, Write_Reg_Exe, halt_Exe);
+module Decode_Execute_Blade (clk, rst, Flush, Stall, ALU_B_Src_Dec, ALU_OP_Code_Dec, Comp_Code_Dec, Immediate_Dec, Pass_Thr_Sel_Dec, PC_Code_Dec, PC2_Dec, Reg_1_Data_Dec, Reg_2_Data_Dec, Reg_1_Src_Dec, Reg_2_Src_Dec, Mem_Write_Dec, Mem_Read_Dec, createdump_Dec, Reg_Write_Dec, WB_Sel_Dec, Write_Reg_Dec, halt_Dec, ALU_B_Src_Exe, ALU_OP_Code_Exe, Comp_Code_Exe, Immediate_Exe, Pass_Thr_Sel_Exe, PC_Code_Exe, PC2_Exe, Reg_1_Data_Exe, Reg_2_Data_Exe, Reg_1_Src_Exe, Reg_2_Src_Exe, Mem_Write_Exe, Mem_Read_Exe, createdump_Exe, Reg_Write_Exe, WB_Sel_Exe, Write_Reg_Exe, halt_Exe);
 
 	input clk;
 	input rst;
