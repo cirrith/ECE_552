@@ -5,13 +5,6 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	Register
 
-} {} {}} I:/College/ECE_552/project/demo2/development/demo2/proc_hier_pbench.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo2/development/demo2/proc_hier_pbench.v
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module proc_hier_pbench
-
-Top level modules:
-	proc_hier_pbench
-
 } {} {}} I:/College/ECE_552/project/demo2/development/demo2/Branch_Logic.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/demo2/development/demo2/Branch_Logic.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module Branch_Logic
