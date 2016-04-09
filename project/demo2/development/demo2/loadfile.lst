@@ -1,8 +1,10 @@
-          // Original test: ./benson/hw4/problem6/andni_0.asm
-          // Author: benson
+          // Original test: ./jmeyer/hw4/problem6/jalr_0.asm
+          // Author: jmeyer
           // Test source code follows
           
           
-0000 c100 lbi r1, 0
-0002 5940 andni r2, r1, 0
-0004 0000 halt
+0000 c008 lbi 	r0, 8
+0002 3800 jalr    r0, 0	//Tests jalr with 0 offset
+0004 0800 nop
+0006 0000 halt
+0008 3f00 jalr    r7, 0   //Tests r7 link functionality

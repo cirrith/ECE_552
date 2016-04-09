@@ -1,0 +1,63 @@
+# vsim -lib __work -c proc_hier_pbench 
+# //  ModelSim SE 5.8b Jan 01 2004 Linux 2.6.32-573.7.1.el6.x86_64
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2004
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading __work.proc_hier_pbench
+# Loading __work.proc_hier
+# Loading __work.clkrst
+# Loading __work.proc
+# Loading __work.Extra_Logic2
+# Loading __work.Fetch
+# Loading __work.memory2c
+# Loading __work.PC_inc
+# Loading __work.CLA
+# Loading __work.Bit4_CLA
+# Loading __work.CLA_FA
+# Loading __work.PC
+# Loading __work.dff
+# Loading __work.Fetch_Decode_Blade
+# Loading __work.dff_pipe
+# Loading __work.dff_pipe_p
+# Loading __work.Decode
+# Loading __work.Processor_Control
+# Loading __work.Register_File_Input
+# Loading __work.Imm_Selecter
+# Loading __work.Bits5_SExt
+# Loading __work.Bits5_ZExt
+# Loading __work.Bits8_SExt
+# Loading __work.Bits11_SExt
+# Loading __work.Bit16_Mux4_1
+# Loading __work.Register_File_Bypass
+# Loading __work.Register_File
+# Loading __work.Register
+# Loading __work.PC_Logic
+# Loading __work.Branch_Logic
+# Loading __work.Decode_Execute_Blade
+# Loading __work.Execute
+# Loading __work.ALU
+# Loading __work.ALU_XOR
+# Loading __work.ALU_ANDN
+# Loading __work.ALU_Shifter
+# Loading __work.ALU_Shifter_1
+# Loading __work.Bit1_Mux4_1
+# Loading __work.Bit1_Mux2_1
+# Loading __work.ALU_Shifter_2
+# Loading __work.ALU_Shifter_4
+# Loading __work.ALU_Shifter_8
+# Loading __work.ALU_CLA
+# Loading __work.ALU_Bit4_CLA
+# Loading __work.ALU_CLA_FA
+# Loading __work.Execute_Memory_Blade
+# Loading __work.Memory
+# Loading __work.Memory_Writeback_Blade
+# Loading __work.Write_Back
+run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 216705 ns  Iteration: 0  Instance: /proc_hier_pbench

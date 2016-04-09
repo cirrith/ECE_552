@@ -61,30 +61,35 @@ module Execute (ALU_B_Src, Comp_Code, ALU_OP_Code, Pass_Thr_Sel, Reg_1_Data, Reg
 
 	output [15:0] 	ALU_Result;
 	output [15:0] 	PC_Ex;
-	output 				PC_Sel;
+	output 			PC_Sel;
 
 	wire [15:0] A_in;
 	wire [15:0] B_in;
+	wire		LT;
+	wire		ZF;
 	
 	assign A_in = A_Forward ? A_Forward_Data : Reg_1_Data; //TODO: Create Mux for this?
 	assign B_in = ALU_B_Src ? Immediate : (B_Forward ? B_Forward_Data : Reg_2_Data);
 	
 	ALU alu (
-			.A					(A_in), 
-			.B					(B_in), 
+			.A				(A_in), 
+			.B				(B_in), 
 			.OP_Code		(ALU_OP_Code), 
-			.PC2				(PC2), 
+			.PC2			(PC2), 
 			.Result			(ALU_Result), 
 			.LT				(LT), 
-			.EQ				(EQ), 
-			.Pass_Thr_Sel (Pass_Thr_Sel));
+			.EQ				(ZF), 
+			.Pass_Thr_Sel 	(Pass_Thr_Sel));
 	
 	PC_Logic pc_logic (
 			.PC_Code		(PC_Code), 
-			.Reg_1_Data	(Reg_1_Data), 
-			.Immediate	(Immediate), 
-			.PC2				(PC2), 
+			.Reg_1_Data		(Reg_1_Data), 
+			.Immediate		(Immediate), 
+			.PC2			(PC2),
+			.Comp_Code		(Comp_Code),
+			.LT				(LT),
+			.ZF				(ZF),
 			.PC_Ex			(PC_Ex), 
 			.PC_Sel			(PC_Sel));
-
+			
 endmodule

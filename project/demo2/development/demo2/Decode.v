@@ -92,44 +92,44 @@ module Decode (clk, rst, Instruction, PC2, Write_Reg_In, Write_Data, Reg_Write_I
 	assign Reg_2_Src = Instruction[7:5];
 	
 	Processor_Control Control(
-			.OP_Code(Instruction[15:11]), 
-			.OP_Min(Instruction[1:0]), 
-			.Reg_Write(Reg_Write_Out), 
-			.PC_Code(PC_Code), 
-			.Comp_Code(Comp_Code), 
-			.ALU_OP_Code(ALU_OP_Code), 
-			.ALU_B_Src(ALU_B_Src), 
-			.Pass_Thr_Sel(Pass_Thr_Sel), 
-			.Mem_Read(Mem_Read), 
-			.Mem_Write(Mem_Write), 
-			.WB_Sel(WB_Sel), 
-			.createdump(createdump), 
-			.halt(halt), 
-			.Write_Reg_Sel(Write_Reg_Sel), 
-			.Imm_Sel(Imm_Sel));
+			.OP_Code		(Instruction[15:11]), 
+			.OP_Min			(Instruction[1:0]), 
+			.Reg_Write		(Reg_Write_Out), 
+			.PC_Code		(PC_Code), 
+			.Comp_Code		(Comp_Code), 
+			.ALU_OP_Code	(ALU_OP_Code), 
+			.ALU_B_Src		(ALU_B_Src), 
+			.Pass_Thr_Sel	(Pass_Thr_Sel), 
+			.Mem_Read		(Mem_Read), 
+			.Mem_Write		(Mem_Write), 
+			.WB_Sel			(WB_Sel), 
+			.createdump		(createdump), 
+			.halt			(halt), 
+			.Write_Reg_Sel	(Write_Reg_Sel), 
+			.Imm_Sel		(Imm_Sel));
 	
 	Register_File_Input Write_Determine(
-			.Poss_Des(Instruction[10:2]), 
-			.Write_Reg_Sel(Write_Reg_Sel), 
-			.Write_Reg(Write_Reg_Out));
+			.Poss_Des		(Instruction[10:2]), 
+			.Write_Reg_Sel	(Write_Reg_Sel), 
+			.Write_Reg		(Write_Reg_Out));
 	
 	Imm_Selecter Imm (
-			.Extend(Instruction[10:0]), 
-			.Imm_Sel(Imm_Sel), 
-			.PC2(PC2), 
-			.Immediate(Immediate));
+			.Extend			(Instruction[10:0]), 
+			.Imm_Sel		(Imm_Sel), 
+			.PC2			(PC2), 
+			.Immediate		(Immediate));
 	
-	Register_File RF (
-			.clk(clk), 
-			.rst(rst), 
-			.Reg_1_Src(Reg_1_Src), 
-			.Reg_2_Src(Reg_2_Src), 
-			.Write_Reg(Write_Reg_In), 
-			.Write_Data(Write_Data), 
-			.Write(Reg_Write_In), 
-			.Reg_1_Data(Reg_1_Data), 
-			.Reg_2_Data(Reg_2_Data), 
-			.err());
+	Register_File_Bypass RFB (
+			.clk			(clk), 
+			.rst			(rst), 
+			.Reg_1_Src		(Reg_1_Src), 
+			.Reg_2_Src		(Reg_2_Src), 
+			.Write_Reg		(Write_Reg_In), 
+			.Write_Data		(Write_Data), 
+			.Write			(Reg_Write_In), 
+			.Reg_1_Data		(Reg_1_Data), 
+			.Reg_2_Data		(Reg_2_Data), 
+			.err			());
 endmodule
 
 //Waiting for rest check before check

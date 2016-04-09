@@ -1,14 +1,25 @@
 SIMLOG:: Cycle           4 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 0     0000     0000
 SIMLOG:: Cycle           5 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 0     0000     0000
 SIMLOG:: Cycle           6 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 0     0000     0000
-SIMLOG:: Cycle           7 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 0     0000     0000
-SIMLOG:: Cycle           8 PC:     zzzz I:     zzzz R: 0   2     0000 M: 0 0     0000     0000
-SIMLOG:: Cycle           9 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 0     0000     0000
+SIMLOG:: Cycle           7 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 0     0008     0000
+SIMLOG:: Cycle           8 PC:     zzzz I:     zzzz R: 1   0     0008 M: 0 0     0004     0000
+SIMLOG:: Cycle           9 PC:     zzzz I:     zzzz R: 1   7     0004 M: 0 0     0010     0000
+SIMLOG:: Cycle          10 PC:     zzzz I:     zzzz R: 0   0     0010 M: 0 0     0010     0008
+SIMLOG:: Cycle          11 PC:     zzzz I:     zzzz R: 0   0     0010 M: 0 0     0008     0008
+SIMLOG:: Cycle          12 PC:     zzzz I:     zzzz R: 1   0     0008 M: 0 0     0004     0008
+SIMLOG:: Cycle          13 PC:     zzzz I:     zzzz R: 1   7     0004 M: 0 0     0010     0000
+SIMLOG:: Cycle          14 PC:     zzzz I:     zzzz R: 0   0     0010 M: 0 0     0010     0008
+SIMLOG:: Cycle          15 PC:     zzzz I:     zzzz R: 0   0     0010 M: 0 0     000a     0008
+SIMLOG:: Cycle          16 PC:     zzzz I:     zzzz R: 1   7     000a M: 0 0     0000     0000
+SIMLOG:: Cycle          17 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 0     0010     0008
+SIMLOG:: Cycle          18 PC:     zzzz I:     zzzz R: 0   0     0010 M: 0 0     0010     0008
+SIMLOG:: Cycle          19 PC:     zzzz I:     zzzz R: 0   0     0010 M: 0 0     0010     0008
+SIMLOG:: Cycle          20 PC:     zzzz I:     zzzz R: 0   0     0010 M: 0 0     0000     0000
 SIMLOG:: Processor halted
 
-SIMLOG:: sim_cycles           9
+SIMLOG:: sim_cycles          20
 
-SIMLOG:: inst_count           1
+SIMLOG:: inst_count           6
 
 SIMLOG:: dcachehit_count           0
 

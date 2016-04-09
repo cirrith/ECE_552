@@ -28,12 +28,15 @@
 /				A_in [15:0] - Which mode of PC determining we are in
 /				Branch - Output from Branch determining logic
 ********************************************************************************************************/
-module PC_Logic (PC_Code, Reg_1_Data, Immediate, PC2, PC_Ex, PC_Sel);
+module PC_Logic (PC_Code, Reg_1_Data, Immediate, PC2, Comp_Code, ZF, LT, PC_Ex, PC_Sel);
 
 	input [1:0]		PC_Code;
 	input [15:0] 	Reg_1_Data;
 	input [15:0] 	Immediate;
 	input [15:0] 	PC2;
+	input [1:0]		Comp_Code;
+	input			ZF;
+	input			LT;
 
 	output [15:0] 	PC_Ex;
 	output 			PC_Sel;

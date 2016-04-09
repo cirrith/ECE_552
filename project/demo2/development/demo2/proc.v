@@ -61,6 +61,9 @@ module proc (err, clk, rst);
 	wire [1:0] 		PC_Code_Dec;
 	wire [1:0] 		PC_Code_Exe;
 	
+	wire [15:0]		Mem_Data_Mem;
+	wire [15:0]		Mem_Data_WB;
+	
 	wire 			Mem_Write_Dec;
 	wire 			Mem_Write_Exe;
 	wire 			Mem_Write_Mem;
@@ -68,7 +71,7 @@ module proc (err, clk, rst);
 	wire 			Mem_Read_Dec;
 	wire 			Mem_Read_Exe;
 	wire 			Mem_Read_Mem;
-				
+			
 	wire			A_Forward;
 	wire			B_Forward;
 	
@@ -94,7 +97,6 @@ module proc (err, clk, rst);
 	wire 			PC_Sel;
 	
 	wire 			Stall_Fetch;
-	wire			Stall_Exe;
 	wire 			Stall_IFDE;
 	wire 			Stall_DEEX;
 	wire 			Stall_EXME;
@@ -140,7 +142,7 @@ module proc (err, clk, rst);
 		.Stall				(Stall_Fetch),
 		.PC_Ex				(PC_Ex),
 		.PC_Sel				(PC_Sel),
-		.Instruction		(Instruction_Dec),
+		.Instruction		(Instruction_Fet),
 		.PC2				(PC2_Fet));
 	
 	Fetch_Decode_Blade if_de_blade (

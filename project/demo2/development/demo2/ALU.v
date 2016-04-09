@@ -17,7 +17,7 @@
 /				1010: Less Than or Equal	| (A <= B) then 1 else 0
 /				1011: Carry Out				| (A + B) generates carry out then Rd <- 1 else Rd <- 0
 /				1100: Flip					| A[bit 15-i] for i=0..15
-/				1101: Pass Through			| B
+/				1101: Pass Through			| Pass_Thr_Sel ? B : A
 /				1110: SLBI | Move Bottom	| (A << 8) | B
 /				1111: PC + 2 CHECK
 /
@@ -143,9 +143,9 @@ module ALU (A, B, OP_Code, PC2, Result, LT, EQ, Pass_Thr_Sel);
 				case_out = {A[0], A[1], A[2], A[3], A[4], A[5], A[6], A[7], A[8], A[9], A[10], A[11], A[12], A[13], A[14], A[15]};
 			end
 			
-			4'b1101: begin //B pass through
+			4'b1101: begin //Pass through
 				case_out = Pass_Thr_Sel ? B : A;
-				lt = A[15];
+				lt = Pass_Thr_Sel ? B[15] : A[15]; //Change to Select B or A
 			end
 			
 			4'b1110: begin //Move Bottom
@@ -158,3 +158,10 @@ module ALU (A, B, OP_Code, PC2, Result, LT, EQ, Pass_Thr_Sel);
 		endcase
 	end
 endmodule
+
+/*
+CHANGE LOG
+1: Changed Pass through to choose LT equal to B[15] or A[15]
+
+
+*/

@@ -28,10 +28,14 @@ module PC (clk, rst, PC, PC2, PC_Ex, PC_Sel, Stall);
 
 	wire [15:0] PC_in;
 
-	assign PC_in = Stall ? PC : (PC_Sel ? PC_Ex : PC2); //If stall: hold PC, else if Jump/Branch mode: PC = PC_Ex, else: PC = PC + 2
+	assign PC_in = PC_Sel ? PC_Ex : (Stall ? PC : PC2); //If stall: hold PC, else if Jump/Branch mode: PC = PC_Ex, else: PC = PC + 2
 	
 	dff program_counter [15:0] (.q(PC), .d(PC_in), .clk(clk), .rst(rst));
 
 endmodule
+/*
+CHANGELOG
 
-//Checked 3/22/16
+Changed PC_Sel have priority over Stall for Branch -> Halt combinations
+
+*/

@@ -3,22 +3,18 @@
 /		PURPOSE: Given Inputs to extend and a select code produce the correct extened output
 /
 /		INPUTS: Extend[10:0] - Input to sign extend
-/				Imm_Sel[2:0] - Select bits for output
-/					000 - 5 Bit Sign Extended
-/					001 - 5 Bit Zero Extended
-/					010 - 8 Bit Sign Extended
-/					011 - 11 Bit Sign Extended
-/					100 - PC + 2
-/					101 - UNUSED
-/					110 - UNUSED
-/					111 - UNUSED
+/				Imm_Sel[1:0] - Select bits for output
+/					00 - 5 Bit Sign Extended
+/					01 - 5 Bit Zero Extended
+/					10 - 8 Bit Sign Extended
+/					11 - 11 Bit Sign Extended
 /
 /		OUTPUTS: Immediate[15:0] - To be passed into one of the possible slot for ALU B Source
 ********************************************************************************************************/
 module Imm_Selecter (Extend, Imm_Sel, PC2, Immediate);
 	
 	input [10:0] Extend;
-	input [2:0] Imm_Sel;
+	input [1:0] Imm_Sel;
 	input [15:0] PC2;
 	
 	output [15:0] Immediate;
@@ -33,6 +29,6 @@ module Imm_Selecter (Extend, Imm_Sel, PC2, Immediate);
 	Bits8_SExt choice2(.In(Extend[7:0]), .Out(Imm8S));
 	Bits11_SExt choice3(.In(Extend[10:0]), .Out(Imm11S));
 	
-	Bit16_Mux8_1 Mux(.in0(Imm5S), .in1(Imm5Z), .in2(Imm8S), .in3(Imm11S), .in4(PC2), .in5(16'h0000), .in6(16'h0000), .in7(16'h0000), .s(Imm_Sel), .out(Immediate));
+	Bit16_Mux4_1 Mux(.in0(Imm5S), .in1(Imm5Z), .in2(Imm8S), .in3(Imm11S), .s(Imm_Sel), .out(Immediate));
 
 endmodule 
