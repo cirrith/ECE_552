@@ -1,0 +1,2521 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : proc
+Version: B-2008.09-SP3
+Date   : Sat Apr  9 18:50:06 2016
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: de_ex_blade/reg_1_src[0]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[12]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  de_ex_blade/reg_1_src[0]/pipe/q (dff_230)               0.00       0.11 f
+  de_ex_blade/reg_1_src[0]/q (dff_pipe_102)               0.00       0.11 f
+  de_ex_blade/Reg_1_Src_Exe<0> (Decode_Execute_Blade)     0.00       0.11 f
+  extra_logic/Reg_1_Src_Exe<0> (Extra_Logic2)             0.00       0.11 f
+  extra_logic/U183/Y (XOR2X1)                             0.05       0.16 r
+  extra_logic/U110/Y (OR2X2)                              0.05       0.21 r
+  extra_logic/U111/Y (INVX1)                              0.02       0.23 f
+  extra_logic/U95/Y (AND2X2)                              0.04       0.26 f
+  extra_logic/U12/Y (MUX2X1)                              0.03       0.30 f
+  extra_logic/A_Forward_Data<11> (Extra_Logic2)           0.00       0.30 f
+  execute/A_Forward_Data<11> (Execute)                    0.00       0.30 f
+  execute/U270/Y (AOI22X1)                                0.04       0.33 r
+  execute/U158/Y (INVX1)                                  0.04       0.37 f
+  execute/alu/A<11> (ALU)                                 0.00       0.37 f
+  execute/alu/Shifter/In<11> (ALU_Shifter)                0.00       0.37 f
+  execute/alu/Shifter/sBlade1/in<11> (ALU_Shifter_1)      0.00       0.37 f
+  execute/alu/Shifter/sBlade1/up_sel10/in2 (Bit1_Mux4_1_53)
+                                                          0.00       0.37 f
+  execute/alu/Shifter/sBlade1/up_sel10/U17/Y (AOI22X1)
+                                                          0.04       0.41 r
+  execute/alu/Shifter/sBlade1/up_sel10/U6/Y (BUFX2)       0.04       0.45 r
+  execute/alu/Shifter/sBlade1/up_sel10/U4/Y (AND2X2)      0.03       0.48 r
+  execute/alu/Shifter/sBlade1/up_sel10/U5/Y (INVX1)       0.01       0.49 f
+  execute/alu/Shifter/sBlade1/up_sel10/out (Bit1_Mux4_1_53)
+                                                          0.00       0.49 f
+  execute/alu/Shifter/sBlade1/low_sel[10]/in1 (Bit1_Mux2_1_58)
+                                                          0.00       0.49 f
+  execute/alu/Shifter/sBlade1/low_sel[10]/U2/Y (INVX1)
+                                                          0.00       0.50 r
+  execute/alu/Shifter/sBlade1/low_sel[10]/U5/Y (AOI22X1)
+                                                          0.01       0.51 f
+  execute/alu/Shifter/sBlade1/low_sel[10]/out (Bit1_Mux2_1_58)
+                                                          0.00       0.51 f
+  execute/alu/Shifter/sBlade1/out<10> (ALU_Shifter_1)     0.00       0.51 f
+  execute/alu/Shifter/sBlade2/in<10> (ALU_Shifter_2)      0.00       0.51 f
+  execute/alu/Shifter/sBlade2/U12/Y (BUFX2)               0.04       0.55 f
+  execute/alu/Shifter/sBlade2/up_sel8/in2 (Bit1_Mux4_1_39)
+                                                          0.00       0.55 f
+  execute/alu/Shifter/sBlade2/up_sel8/U6/Y (OR2X2)        0.04       0.58 f
+  execute/alu/Shifter/sBlade2/up_sel8/U7/Y (INVX1)        0.00       0.59 r
+  execute/alu/Shifter/sBlade2/up_sel8/U17/Y (AOI21X1)     0.01       0.59 f
+  execute/alu/Shifter/sBlade2/up_sel8/U3/Y (BUFX2)        0.03       0.63 f
+  execute/alu/Shifter/sBlade2/up_sel8/U4/Y (AND2X2)       0.03       0.66 f
+  execute/alu/Shifter/sBlade2/up_sel8/U5/Y (INVX1)        0.00       0.66 r
+  execute/alu/Shifter/sBlade2/up_sel8/U18/Y (NAND3X1)     0.01       0.66 f
+  execute/alu/Shifter/sBlade2/up_sel8/out (Bit1_Mux4_1_39)
+                                                          0.00       0.66 f
+  execute/alu/Shifter/sBlade2/low_sel[8]/in1 (Bit1_Mux2_1_40)
+                                                          0.00       0.66 f
+  execute/alu/Shifter/sBlade2/low_sel[8]/U4/Y (INVX1)     0.01       0.67 r
+  execute/alu/Shifter/sBlade2/low_sel[8]/U5/Y (AOI22X1)
+                                                          0.01       0.68 f
+  execute/alu/Shifter/sBlade2/low_sel[8]/out (Bit1_Mux2_1_40)
+                                                          0.00       0.68 f
+  execute/alu/Shifter/sBlade2/out<8> (ALU_Shifter_2)      0.00       0.68 f
+  execute/alu/Shifter/sBlade4/in<8> (ALU_Shifter_4)       0.00       0.68 f
+  execute/alu/Shifter/sBlade4/U24/Y (BUFX2)               0.04       0.72 f
+  execute/alu/Shifter/sBlade4/up_sel4/in2 (Bit1_Mux4_1_27)
+                                                          0.00       0.72 f
+  execute/alu/Shifter/sBlade4/up_sel4/U19/Y (AOI22X1)     0.04       0.76 r
+  execute/alu/Shifter/sBlade4/up_sel4/U8/Y (BUFX2)        0.04       0.79 r
+  execute/alu/Shifter/sBlade4/up_sel4/U6/Y (AND2X2)       0.03       0.83 r
+  execute/alu/Shifter/sBlade4/up_sel4/U7/Y (INVX1)        0.01       0.84 f
+  execute/alu/Shifter/sBlade4/up_sel4/out (Bit1_Mux4_1_27)
+                                                          0.00       0.84 f
+  execute/alu/Shifter/sBlade4/low_sel[4]/in1 (Bit1_Mux2_1_20)
+                                                          0.00       0.84 f
+  execute/alu/Shifter/sBlade4/low_sel[4]/U4/Y (INVX1)     0.00       0.84 r
+  execute/alu/Shifter/sBlade4/low_sel[4]/U5/Y (AOI22X1)
+                                                          0.01       0.85 f
+  execute/alu/Shifter/sBlade4/low_sel[4]/out (Bit1_Mux2_1_20)
+                                                          0.00       0.85 f
+  execute/alu/Shifter/sBlade4/out<4> (ALU_Shifter_4)      0.00       0.85 f
+  execute/alu/Shifter/sBlade8/in<4> (ALU_Shifter_8)       0.00       0.85 f
+  execute/alu/Shifter/sBlade8/U36/Y (BUFX2)               0.04       0.90 f
+  execute/alu/Shifter/sBlade8/up_sel12/in2 (Bit1_Mux4_1_3)
+                                                          0.00       0.90 f
+  execute/alu/Shifter/sBlade8/up_sel12/U14/Y (AOI22X1)
+                                                          0.04       0.93 r
+  execute/alu/Shifter/sBlade8/up_sel12/U6/Y (BUFX2)       0.04       0.97 r
+  execute/alu/Shifter/sBlade8/up_sel12/U4/Y (AND2X2)      0.03       1.00 r
+  execute/alu/Shifter/sBlade8/up_sel12/U5/Y (INVX1)       0.01       1.01 f
+  execute/alu/Shifter/sBlade8/up_sel12/out (Bit1_Mux4_1_3)
+                                                          0.00       1.01 f
+  execute/alu/Shifter/sBlade8/low_sel[12]/in1 (Bit1_Mux2_1_12)
+                                                          0.00       1.01 f
+  execute/alu/Shifter/sBlade8/low_sel[12]/U6/Y (INVX1)
+                                                          0.00       1.02 r
+  execute/alu/Shifter/sBlade8/low_sel[12]/U7/Y (AOI21X1)
+                                                          0.01       1.03 f
+  execute/alu/Shifter/sBlade8/low_sel[12]/out (Bit1_Mux2_1_12)
+                                                          0.00       1.03 f
+  execute/alu/Shifter/sBlade8/U28/Y (BUFX2)               0.03       1.06 f
+  execute/alu/Shifter/sBlade8/out<12> (ALU_Shifter_8)     0.00       1.06 f
+  execute/alu/Shifter/Out<12> (ALU_Shifter)               0.00       1.06 f
+  execute/alu/U268/Y (OR2X2)                              0.04       1.10 f
+  execute/alu/U269/Y (INVX1)                              0.00       1.10 r
+  execute/alu/U203/Y (OR2X2)                              0.03       1.13 r
+  execute/alu/U204/Y (INVX1)                              0.01       1.14 f
+  execute/alu/Result<12> (ALU)                            0.00       1.14 f
+  execute/ALU_Result<12> (Execute)                        0.00       1.14 f
+  ex_me_blade/ALU_Result_Exe<12> (Execute_Memory_Blade)
+                                                          0.00       1.14 f
+  ex_me_blade/alu_result[12]/d (dff_pipe_54)              0.00       1.14 f
+  ex_me_blade/alu_result[12]/U5/Y (INVX1)                 0.00       1.15 r
+  ex_me_blade/alu_result[12]/U6/Y (AOI21X1)               0.01       1.16 f
+  ex_me_blade/alu_result[12]/pipe/d (dff_182)             0.00       1.16 f
+  ex_me_blade/alu_result[12]/pipe/U5/Y (BUFX2)            0.03       1.19 f
+  ex_me_blade/alu_result[12]/pipe/U3/Y (AND2X2)           0.03       1.22 f
+  ex_me_blade/alu_result[12]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.22 f
+  data arrival time                                                  1.22
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[12]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.22
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.28
+
+
+  Startpoint: de_ex_blade/reg_1_src[0]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[14]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  de_ex_blade/reg_1_src[0]/pipe/q (dff_230)               0.00       0.11 f
+  de_ex_blade/reg_1_src[0]/q (dff_pipe_102)               0.00       0.11 f
+  de_ex_blade/Reg_1_Src_Exe<0> (Decode_Execute_Blade)     0.00       0.11 f
+  extra_logic/Reg_1_Src_Exe<0> (Extra_Logic2)             0.00       0.11 f
+  extra_logic/U183/Y (XOR2X1)                             0.05       0.16 r
+  extra_logic/U110/Y (OR2X2)                              0.05       0.21 r
+  extra_logic/U111/Y (INVX1)                              0.02       0.23 f
+  extra_logic/U95/Y (AND2X2)                              0.04       0.26 f
+  extra_logic/U12/Y (MUX2X1)                              0.03       0.30 f
+  extra_logic/A_Forward_Data<11> (Extra_Logic2)           0.00       0.30 f
+  execute/A_Forward_Data<11> (Execute)                    0.00       0.30 f
+  execute/U270/Y (AOI22X1)                                0.04       0.33 r
+  execute/U158/Y (INVX1)                                  0.04       0.37 f
+  execute/alu/A<11> (ALU)                                 0.00       0.37 f
+  execute/alu/Shifter/In<11> (ALU_Shifter)                0.00       0.37 f
+  execute/alu/Shifter/sBlade1/in<11> (ALU_Shifter_1)      0.00       0.37 f
+  execute/alu/Shifter/sBlade1/U2/Y (BUFX2)                0.04       0.41 f
+  execute/alu/Shifter/sBlade1/U5/Y (INVX1)                0.00       0.41 r
+  execute/alu/Shifter/sBlade1/U3/Y (INVX2)                0.03       0.43 f
+  execute/alu/Shifter/sBlade1/up_sel12/in0 (Bit1_Mux4_1_51)
+                                                          0.00       0.43 f
+  execute/alu/Shifter/sBlade1/up_sel12/U19/Y (AOI22X1)
+                                                          0.04       0.47 r
+  execute/alu/Shifter/sBlade1/up_sel12/U8/Y (INVX1)       0.02       0.49 f
+  execute/alu/Shifter/sBlade1/up_sel12/U9/Y (INVX1)       0.00       0.49 r
+  execute/alu/Shifter/sBlade1/up_sel12/U4/Y (AND2X2)      0.03       0.52 r
+  execute/alu/Shifter/sBlade1/up_sel12/U5/Y (INVX1)       0.01       0.54 f
+  execute/alu/Shifter/sBlade1/up_sel12/out (Bit1_Mux4_1_51)
+                                                          0.00       0.54 f
+  execute/alu/Shifter/sBlade1/low_sel[12]/in1 (Bit1_Mux2_1_60)
+                                                          0.00       0.54 f
+  execute/alu/Shifter/sBlade1/low_sel[12]/U1/Y (INVX1)
+                                                          0.00       0.54 r
+  execute/alu/Shifter/sBlade1/low_sel[12]/U5/Y (AOI22X1)
+                                                          0.01       0.55 f
+  execute/alu/Shifter/sBlade1/low_sel[12]/out (Bit1_Mux2_1_60)
+                                                          0.00       0.55 f
+  execute/alu/Shifter/sBlade1/out<12> (ALU_Shifter_1)     0.00       0.55 f
+  execute/alu/Shifter/sBlade2/in<12> (ALU_Shifter_2)      0.00       0.55 f
+  execute/alu/Shifter/sBlade2/U13/Y (BUFX2)               0.04       0.59 f
+  execute/alu/Shifter/sBlade2/up_sel10/in2 (Bit1_Mux4_1_37)
+                                                          0.00       0.59 f
+  execute/alu/Shifter/sBlade2/up_sel10/U9/Y (OR2X2)       0.04       0.63 f
+  execute/alu/Shifter/sBlade2/up_sel10/U10/Y (INVX1)      0.00       0.63 r
+  execute/alu/Shifter/sBlade2/up_sel10/U17/Y (AOI21X1)
+                                                          0.01       0.63 f
+  execute/alu/Shifter/sBlade2/up_sel10/U8/Y (BUFX2)       0.03       0.67 f
+  execute/alu/Shifter/sBlade2/up_sel10/U1/Y (AND2X2)      0.03       0.70 f
+  execute/alu/Shifter/sBlade2/up_sel10/U11/Y (INVX1)      0.00       0.70 r
+  execute/alu/Shifter/sBlade2/up_sel10/U18/Y (NAND3X1)
+                                                          0.01       0.70 f
+  execute/alu/Shifter/sBlade2/up_sel10/out (Bit1_Mux4_1_37)
+                                                          0.00       0.70 f
+  execute/alu/Shifter/sBlade2/low_sel[10]/in1 (Bit1_Mux2_1_42)
+                                                          0.00       0.70 f
+  execute/alu/Shifter/sBlade2/low_sel[10]/U4/Y (INVX1)
+                                                          0.01       0.71 r
+  execute/alu/Shifter/sBlade2/low_sel[10]/U5/Y (AOI22X1)
+                                                          0.01       0.72 f
+  execute/alu/Shifter/sBlade2/low_sel[10]/out (Bit1_Mux2_1_42)
+                                                          0.00       0.72 f
+  execute/alu/Shifter/sBlade2/out<10> (ALU_Shifter_2)     0.00       0.72 f
+  execute/alu/Shifter/sBlade4/in<10> (ALU_Shifter_4)      0.00       0.72 f
+  execute/alu/Shifter/sBlade4/U22/Y (BUFX2)               0.04       0.76 f
+  execute/alu/Shifter/sBlade4/up_sel6/in3 (Bit1_Mux4_1_25)
+                                                          0.00       0.76 f
+  execute/alu/Shifter/sBlade4/up_sel6/U4/Y (AND2X2)       0.03       0.79 f
+  execute/alu/Shifter/sBlade4/up_sel6/U5/Y (OR2X2)        0.04       0.84 f
+  execute/alu/Shifter/sBlade4/up_sel6/U6/Y (INVX1)        0.00       0.84 r
+  execute/alu/Shifter/sBlade4/up_sel6/U13/Y (OAI21X1)     0.01       0.85 f
+  execute/alu/Shifter/sBlade4/up_sel6/out (Bit1_Mux4_1_25)
+                                                          0.00       0.85 f
+  execute/alu/Shifter/sBlade4/low_sel[6]/in1 (Bit1_Mux2_1_22)
+                                                          0.00       0.85 f
+  execute/alu/Shifter/sBlade4/low_sel[6]/U4/Y (INVX1)     0.00       0.85 r
+  execute/alu/Shifter/sBlade4/low_sel[6]/U5/Y (AOI22X1)
+                                                          0.01       0.86 f
+  execute/alu/Shifter/sBlade4/low_sel[6]/out (Bit1_Mux2_1_22)
+                                                          0.00       0.86 f
+  execute/alu/Shifter/sBlade4/out<6> (ALU_Shifter_4)      0.00       0.86 f
+  execute/alu/Shifter/sBlade8/in<6> (ALU_Shifter_8)       0.00       0.86 f
+  execute/alu/Shifter/sBlade8/U31/Y (BUFX2)               0.04       0.90 f
+  execute/alu/Shifter/sBlade8/up_sel14/in2 (Bit1_Mux4_1_1)
+                                                          0.00       0.90 f
+  execute/alu/Shifter/sBlade8/up_sel14/U14/Y (AOI22X1)
+                                                          0.04       0.94 r
+  execute/alu/Shifter/sBlade8/up_sel14/U6/Y (BUFX2)       0.04       0.97 r
+  execute/alu/Shifter/sBlade8/up_sel14/U4/Y (AND2X2)      0.03       1.00 r
+  execute/alu/Shifter/sBlade8/up_sel14/U5/Y (INVX1)       0.01       1.02 f
+  execute/alu/Shifter/sBlade8/up_sel14/out (Bit1_Mux4_1_1)
+                                                          0.00       1.02 f
+  execute/alu/Shifter/sBlade8/low_sel[14]/in1 (Bit1_Mux2_1_14)
+                                                          0.00       1.02 f
+  execute/alu/Shifter/sBlade8/low_sel[14]/U4/Y (INVX1)
+                                                          0.00       1.02 r
+  execute/alu/Shifter/sBlade8/low_sel[14]/U5/Y (AOI22X1)
+                                                          0.01       1.03 f
+  execute/alu/Shifter/sBlade8/low_sel[14]/out (Bit1_Mux2_1_14)
+                                                          0.00       1.03 f
+  execute/alu/Shifter/sBlade8/U20/Y (BUFX2)               0.04       1.07 f
+  execute/alu/Shifter/sBlade8/out<14> (ALU_Shifter_8)     0.00       1.07 f
+  execute/alu/Shifter/Out<14> (ALU_Shifter)               0.00       1.07 f
+  execute/alu/U15/Y (AND2X2)                              0.03       1.10 f
+  execute/alu/U261/Y (INVX1)                              0.00       1.10 r
+  execute/alu/U207/Y (AND2X2)                             0.03       1.13 r
+  execute/alu/U208/Y (INVX1)                              0.01       1.14 f
+  execute/alu/Result<14> (ALU)                            0.00       1.14 f
+  execute/ALU_Result<14> (Execute)                        0.00       1.14 f
+  ex_me_blade/ALU_Result_Exe<14> (Execute_Memory_Blade)
+                                                          0.00       1.14 f
+  ex_me_blade/alu_result[14]/d (dff_pipe_56)              0.00       1.14 f
+  ex_me_blade/alu_result[14]/U5/Y (INVX1)                 0.00       1.15 r
+  ex_me_blade/alu_result[14]/U6/Y (AOI21X1)               0.01       1.16 f
+  ex_me_blade/alu_result[14]/pipe/d (dff_184)             0.00       1.16 f
+  ex_me_blade/alu_result[14]/pipe/U5/Y (BUFX2)            0.03       1.19 f
+  ex_me_blade/alu_result[14]/pipe/U3/Y (AND2X2)           0.03       1.22 f
+  ex_me_blade/alu_result[14]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.22 f
+  data arrival time                                                  1.22
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[14]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.22
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.28
+
+
+  Startpoint: de_ex_blade/reg_1_src[0]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[6]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  de_ex_blade/reg_1_src[0]/pipe/q (dff_230)               0.00       0.11 f
+  de_ex_blade/reg_1_src[0]/q (dff_pipe_102)               0.00       0.11 f
+  de_ex_blade/Reg_1_Src_Exe<0> (Decode_Execute_Blade)     0.00       0.11 f
+  extra_logic/Reg_1_Src_Exe<0> (Extra_Logic2)             0.00       0.11 f
+  extra_logic/U183/Y (XOR2X1)                             0.05       0.16 r
+  extra_logic/U110/Y (OR2X2)                              0.05       0.21 r
+  extra_logic/U111/Y (INVX1)                              0.02       0.23 f
+  extra_logic/U95/Y (AND2X2)                              0.04       0.26 f
+  extra_logic/U12/Y (MUX2X1)                              0.03       0.30 f
+  extra_logic/A_Forward_Data<11> (Extra_Logic2)           0.00       0.30 f
+  execute/A_Forward_Data<11> (Execute)                    0.00       0.30 f
+  execute/U270/Y (AOI22X1)                                0.04       0.33 r
+  execute/U158/Y (INVX1)                                  0.04       0.37 f
+  execute/alu/A<11> (ALU)                                 0.00       0.37 f
+  execute/alu/Shifter/In<11> (ALU_Shifter)                0.00       0.37 f
+  execute/alu/Shifter/sBlade1/in<11> (ALU_Shifter_1)      0.00       0.37 f
+  execute/alu/Shifter/sBlade1/U2/Y (BUFX2)                0.04       0.41 f
+  execute/alu/Shifter/sBlade1/U5/Y (INVX1)                0.00       0.41 r
+  execute/alu/Shifter/sBlade1/U3/Y (INVX2)                0.03       0.43 f
+  execute/alu/Shifter/sBlade1/up_sel12/in0 (Bit1_Mux4_1_51)
+                                                          0.00       0.43 f
+  execute/alu/Shifter/sBlade1/up_sel12/U19/Y (AOI22X1)
+                                                          0.04       0.47 r
+  execute/alu/Shifter/sBlade1/up_sel12/U8/Y (INVX1)       0.02       0.49 f
+  execute/alu/Shifter/sBlade1/up_sel12/U9/Y (INVX1)       0.00       0.49 r
+  execute/alu/Shifter/sBlade1/up_sel12/U4/Y (AND2X2)      0.03       0.52 r
+  execute/alu/Shifter/sBlade1/up_sel12/U5/Y (INVX1)       0.01       0.54 f
+  execute/alu/Shifter/sBlade1/up_sel12/out (Bit1_Mux4_1_51)
+                                                          0.00       0.54 f
+  execute/alu/Shifter/sBlade1/low_sel[12]/in1 (Bit1_Mux2_1_60)
+                                                          0.00       0.54 f
+  execute/alu/Shifter/sBlade1/low_sel[12]/U1/Y (INVX1)
+                                                          0.00       0.54 r
+  execute/alu/Shifter/sBlade1/low_sel[12]/U5/Y (AOI22X1)
+                                                          0.01       0.55 f
+  execute/alu/Shifter/sBlade1/low_sel[12]/out (Bit1_Mux2_1_60)
+                                                          0.00       0.55 f
+  execute/alu/Shifter/sBlade1/out<12> (ALU_Shifter_1)     0.00       0.55 f
+  execute/alu/Shifter/sBlade2/in<12> (ALU_Shifter_2)      0.00       0.55 f
+  execute/alu/Shifter/sBlade2/U13/Y (BUFX2)               0.04       0.59 f
+  execute/alu/Shifter/sBlade2/up_sel10/in2 (Bit1_Mux4_1_37)
+                                                          0.00       0.59 f
+  execute/alu/Shifter/sBlade2/up_sel10/U9/Y (OR2X2)       0.04       0.63 f
+  execute/alu/Shifter/sBlade2/up_sel10/U10/Y (INVX1)      0.00       0.63 r
+  execute/alu/Shifter/sBlade2/up_sel10/U17/Y (AOI21X1)
+                                                          0.01       0.63 f
+  execute/alu/Shifter/sBlade2/up_sel10/U8/Y (BUFX2)       0.03       0.67 f
+  execute/alu/Shifter/sBlade2/up_sel10/U1/Y (AND2X2)      0.03       0.70 f
+  execute/alu/Shifter/sBlade2/up_sel10/U11/Y (INVX1)      0.00       0.70 r
+  execute/alu/Shifter/sBlade2/up_sel10/U18/Y (NAND3X1)
+                                                          0.01       0.70 f
+  execute/alu/Shifter/sBlade2/up_sel10/out (Bit1_Mux4_1_37)
+                                                          0.00       0.70 f
+  execute/alu/Shifter/sBlade2/low_sel[10]/in1 (Bit1_Mux2_1_42)
+                                                          0.00       0.70 f
+  execute/alu/Shifter/sBlade2/low_sel[10]/U4/Y (INVX1)
+                                                          0.01       0.71 r
+  execute/alu/Shifter/sBlade2/low_sel[10]/U5/Y (AOI22X1)
+                                                          0.01       0.72 f
+  execute/alu/Shifter/sBlade2/low_sel[10]/out (Bit1_Mux2_1_42)
+                                                          0.00       0.72 f
+  execute/alu/Shifter/sBlade2/out<10> (ALU_Shifter_2)     0.00       0.72 f
+  execute/alu/Shifter/sBlade4/in<10> (ALU_Shifter_4)      0.00       0.72 f
+  execute/alu/Shifter/sBlade4/U22/Y (BUFX2)               0.04       0.76 f
+  execute/alu/Shifter/sBlade4/U48/Y (INVX1)               0.00       0.77 r
+  execute/alu/Shifter/sBlade4/U49/Y (INVX1)               0.02       0.78 f
+  execute/alu/Shifter/sBlade4/up_sel14/in1 (Bit1_Mux4_1_17)
+                                                          0.00       0.78 f
+  execute/alu/Shifter/sBlade4/up_sel14/U2/Y (AND2X2)      0.03       0.82 f
+  execute/alu/Shifter/sBlade4/up_sel14/U6/Y (INVX1)       0.00       0.81 r
+  execute/alu/Shifter/sBlade4/up_sel14/U13/Y (NAND3X1)
+                                                          0.01       0.82 f
+  execute/alu/Shifter/sBlade4/up_sel14/out (Bit1_Mux4_1_17)
+                                                          0.00       0.82 f
+  execute/alu/Shifter/sBlade4/low_sel[14]/in1 (Bit1_Mux2_1_30)
+                                                          0.00       0.82 f
+  execute/alu/Shifter/sBlade4/low_sel[14]/U4/Y (INVX1)
+                                                          0.01       0.83 r
+  execute/alu/Shifter/sBlade4/low_sel[14]/U5/Y (AOI22X1)
+                                                          0.01       0.84 f
+  execute/alu/Shifter/sBlade4/low_sel[14]/out (Bit1_Mux2_1_30)
+                                                          0.00       0.84 f
+  execute/alu/Shifter/sBlade4/out<14> (ALU_Shifter_4)     0.00       0.84 f
+  execute/alu/Shifter/sBlade8/in<14> (ALU_Shifter_8)      0.00       0.84 f
+  execute/alu/Shifter/sBlade8/U40/Y (BUFX2)               0.04       0.88 f
+  execute/alu/Shifter/sBlade8/up_sel6/in0 (Bit1_Mux4_1_9)
+                                                          0.00       0.88 f
+  execute/alu/Shifter/sBlade8/up_sel6/U14/Y (INVX1)       0.00       0.88 r
+  execute/alu/Shifter/sBlade8/up_sel6/U5/Y (OR2X2)        0.03       0.91 r
+  execute/alu/Shifter/sBlade8/up_sel6/U12/Y (INVX1)       0.01       0.93 f
+  execute/alu/Shifter/sBlade8/up_sel6/U8/Y (OR2X2)        0.05       0.97 f
+  execute/alu/Shifter/sBlade8/up_sel6/U9/Y (INVX1)        0.00       0.97 r
+  execute/alu/Shifter/sBlade8/up_sel6/U6/Y (AND2X2)       0.03       1.00 r
+  execute/alu/Shifter/sBlade8/up_sel6/U7/Y (INVX1)        0.01       1.02 f
+  execute/alu/Shifter/sBlade8/up_sel6/out (Bit1_Mux4_1_9)
+                                                          0.00       1.02 f
+  execute/alu/Shifter/sBlade8/low_sel[6]/in1 (Bit1_Mux2_1_6)
+                                                          0.00       1.02 f
+  execute/alu/Shifter/sBlade8/low_sel[6]/U4/Y (INVX1)     0.00       1.02 r
+  execute/alu/Shifter/sBlade8/low_sel[6]/U5/Y (AOI22X1)
+                                                          0.01       1.03 f
+  execute/alu/Shifter/sBlade8/low_sel[6]/out (Bit1_Mux2_1_6)
+                                                          0.00       1.03 f
+  execute/alu/Shifter/sBlade8/U23/Y (BUFX2)               0.04       1.07 f
+  execute/alu/Shifter/sBlade8/out<6> (ALU_Shifter_8)      0.00       1.07 f
+  execute/alu/Shifter/Out<6> (ALU_Shifter)                0.00       1.07 f
+  execute/alu/U13/Y (AND2X2)                              0.03       1.10 f
+  execute/alu/U256/Y (INVX1)                              0.00       1.10 r
+  execute/alu/U192/Y (AND2X2)                             0.03       1.13 r
+  execute/alu/U193/Y (INVX1)                              0.01       1.14 f
+  execute/alu/Result<6> (ALU)                             0.00       1.14 f
+  execute/ALU_Result<6> (Execute)                         0.00       1.14 f
+  ex_me_blade/ALU_Result_Exe<6> (Execute_Memory_Blade)
+                                                          0.00       1.14 f
+  ex_me_blade/alu_result[6]/d (dff_pipe_48)               0.00       1.14 f
+  ex_me_blade/alu_result[6]/U5/Y (INVX1)                  0.00       1.14 r
+  ex_me_blade/alu_result[6]/U6/Y (AOI21X1)                0.01       1.16 f
+  ex_me_blade/alu_result[6]/pipe/d (dff_176)              0.00       1.16 f
+  ex_me_blade/alu_result[6]/pipe/U5/Y (BUFX2)             0.03       1.19 f
+  ex_me_blade/alu_result[6]/pipe/U3/Y (AND2X2)            0.03       1.22 f
+  ex_me_blade/alu_result[6]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.22 f
+  data arrival time                                                  1.22
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[6]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.22
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.28
+
+
+  Startpoint: de_ex_blade/reg_1_src[0]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[1]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  de_ex_blade/reg_1_src[0]/pipe/q (dff_230)               0.00       0.11 f
+  de_ex_blade/reg_1_src[0]/q (dff_pipe_102)               0.00       0.11 f
+  de_ex_blade/Reg_1_Src_Exe<0> (Decode_Execute_Blade)     0.00       0.11 f
+  extra_logic/Reg_1_Src_Exe<0> (Extra_Logic2)             0.00       0.11 f
+  extra_logic/U183/Y (XOR2X1)                             0.05       0.16 r
+  extra_logic/U110/Y (OR2X2)                              0.05       0.21 r
+  extra_logic/U94/Y (OR2X2)                               0.04       0.25 r
+  extra_logic/U198/Y (OAI21X1)                            0.02       0.27 f
+  extra_logic/A_Forward (Extra_Logic2)                    0.00       0.27 f
+  execute/A_Forward (Execute)                             0.00       0.27 f
+  execute/U87/Y (INVX1)                                   0.00       0.27 r
+  execute/U3/Y (INVX1)                                    0.02       0.29 f
+  execute/U1/Y (INVX1)                                    0.00       0.29 r
+  execute/U2/Y (INVX1)                                    0.02       0.32 f
+  execute/U160/Y (AND2X2)                                 0.04       0.36 f
+  execute/U161/Y (INVX1)                                  0.00       0.36 r
+  execute/U107/Y (AND2X2)                                 0.03       0.39 r
+  execute/U108/Y (INVX1)                                  0.02       0.41 f
+  execute/alu/A<2> (ALU)                                  0.00       0.41 f
+  execute/alu/Shifter/In<2> (ALU_Shifter)                 0.00       0.41 f
+  execute/alu/Shifter/sBlade1/in<2> (ALU_Shifter_1)       0.00       0.41 f
+  execute/alu/Shifter/sBlade1/up_sel3/in0 (Bit1_Mux4_1_60)
+                                                          0.00       0.41 f
+  execute/alu/Shifter/sBlade1/up_sel3/U14/Y (INVX1)       0.00       0.41 r
+  execute/alu/Shifter/sBlade1/up_sel3/U1/Y (AND2X2)       0.03       0.45 r
+  execute/alu/Shifter/sBlade1/up_sel3/U4/Y (INVX1)        0.01       0.46 f
+  execute/alu/Shifter/sBlade1/up_sel3/U7/Y (AND2X2)       0.04       0.50 f
+  execute/alu/Shifter/sBlade1/up_sel3/U8/Y (INVX1)        0.00       0.49 r
+  execute/alu/Shifter/sBlade1/up_sel3/U17/Y (OAI21X1)     0.01       0.51 f
+  execute/alu/Shifter/sBlade1/up_sel3/out (Bit1_Mux4_1_60)
+                                                          0.00       0.51 f
+  execute/alu/Shifter/sBlade1/low_sel[3]/in1 (Bit1_Mux2_1_51)
+                                                          0.00       0.51 f
+  execute/alu/Shifter/sBlade1/low_sel[3]/U6/Y (INVX1)     0.00       0.50 r
+  execute/alu/Shifter/sBlade1/low_sel[3]/U1/Y (AND2X2)
+                                                          0.03       0.53 r
+  execute/alu/Shifter/sBlade1/low_sel[3]/U4/Y (INVX1)     0.01       0.55 f
+  execute/alu/Shifter/sBlade1/low_sel[3]/U5/Y (AND2X2)
+                                                          0.04       0.59 f
+  execute/alu/Shifter/sBlade1/low_sel[3]/out (Bit1_Mux2_1_51)
+                                                          0.00       0.59 f
+  execute/alu/Shifter/sBlade1/out<3> (ALU_Shifter_1)      0.00       0.59 f
+  execute/alu/Shifter/sBlade2/in<3> (ALU_Shifter_2)       0.00       0.59 f
+  execute/alu/Shifter/sBlade2/up_sel5/in0 (Bit1_Mux4_1_42)
+                                                          0.00       0.59 f
+  execute/alu/Shifter/sBlade2/up_sel5/U13/Y (AOI22X1)     0.04       0.62 r
+  execute/alu/Shifter/sBlade2/up_sel5/U6/Y (BUFX2)        0.03       0.66 r
+  execute/alu/Shifter/sBlade2/up_sel5/U3/Y (AND2X2)       0.03       0.69 r
+  execute/alu/Shifter/sBlade2/up_sel5/U4/Y (INVX1)        0.01       0.70 f
+  execute/alu/Shifter/sBlade2/up_sel5/out (Bit1_Mux4_1_42)
+                                                          0.00       0.70 f
+  execute/alu/Shifter/sBlade2/low_sel[5]/in1 (Bit1_Mux2_1_37)
+                                                          0.00       0.70 f
+  execute/alu/Shifter/sBlade2/low_sel[5]/U4/Y (INVX1)     0.00       0.70 r
+  execute/alu/Shifter/sBlade2/low_sel[5]/U5/Y (AOI22X1)
+                                                          0.01       0.72 f
+  execute/alu/Shifter/sBlade2/low_sel[5]/out (Bit1_Mux2_1_37)
+                                                          0.00       0.72 f
+  execute/alu/Shifter/sBlade2/out<5> (ALU_Shifter_2)      0.00       0.72 f
+  execute/alu/Shifter/sBlade4/in<5> (ALU_Shifter_4)       0.00       0.72 f
+  execute/alu/Shifter/sBlade4/U21/Y (BUFX2)               0.04       0.76 f
+  execute/alu/Shifter/sBlade4/up_sel9/in1 (Bit1_Mux4_1_22)
+                                                          0.00       0.76 f
+  execute/alu/Shifter/sBlade4/up_sel9/U3/Y (AND2X2)       0.03       0.79 f
+  execute/alu/Shifter/sBlade4/up_sel9/U4/Y (OR2X2)        0.04       0.83 f
+  execute/alu/Shifter/sBlade4/up_sel9/U5/Y (INVX1)        0.00       0.83 r
+  execute/alu/Shifter/sBlade4/up_sel9/U13/Y (OAI21X1)     0.01       0.84 f
+  execute/alu/Shifter/sBlade4/up_sel9/out (Bit1_Mux4_1_22)
+                                                          0.00       0.84 f
+  execute/alu/Shifter/sBlade4/low_sel[9]/in1 (Bit1_Mux2_1_25)
+                                                          0.00       0.84 f
+  execute/alu/Shifter/sBlade4/low_sel[9]/U2/Y (INVX1)     0.00       0.84 r
+  execute/alu/Shifter/sBlade4/low_sel[9]/U5/Y (AOI22X1)
+                                                          0.01       0.85 f
+  execute/alu/Shifter/sBlade4/low_sel[9]/out (Bit1_Mux2_1_25)
+                                                          0.00       0.85 f
+  execute/alu/Shifter/sBlade4/out<9> (ALU_Shifter_4)      0.00       0.85 f
+  execute/alu/Shifter/sBlade8/in<9> (ALU_Shifter_8)       0.00       0.85 f
+  execute/alu/Shifter/sBlade8/U32/Y (BUFX2)               0.04       0.90 f
+  execute/alu/Shifter/sBlade8/up_sel1/in0 (Bit1_Mux4_1_14)
+                                                          0.00       0.90 f
+  execute/alu/Shifter/sBlade8/up_sel1/U11/Y (INVX1)       0.00       0.90 r
+  execute/alu/Shifter/sBlade8/up_sel1/U6/Y (OR2X2)        0.04       0.93 r
+  execute/alu/Shifter/sBlade8/up_sel1/U3/Y (AND2X2)       0.03       0.96 r
+  execute/alu/Shifter/sBlade8/up_sel1/U7/Y (AND2X2)       0.03       1.00 r
+  execute/alu/Shifter/sBlade8/up_sel1/U8/Y (INVX1)        0.01       1.01 f
+  execute/alu/Shifter/sBlade8/up_sel1/out (Bit1_Mux4_1_14)
+                                                          0.00       1.01 f
+  execute/alu/Shifter/sBlade8/low_sel[1]/in1 (Bit1_Mux2_1_1)
+                                                          0.00       1.01 f
+  execute/alu/Shifter/sBlade8/low_sel[1]/U4/Y (INVX1)     0.00       1.01 r
+  execute/alu/Shifter/sBlade8/low_sel[1]/U7/Y (AOI21X1)
+                                                          0.01       1.02 f
+  execute/alu/Shifter/sBlade8/low_sel[1]/out (Bit1_Mux2_1_1)
+                                                          0.00       1.02 f
+  execute/alu/Shifter/sBlade8/U27/Y (BUFX2)               0.03       1.06 f
+  execute/alu/Shifter/sBlade8/out<1> (ALU_Shifter_8)      0.00       1.06 f
+  execute/alu/Shifter/Out<1> (ALU_Shifter)                0.00       1.06 f
+  execute/alu/U328/Y (OR2X2)                              0.04       1.09 f
+  execute/alu/U329/Y (INVX1)                              0.00       1.09 r
+  execute/alu/U182/Y (OR2X2)                              0.03       1.13 r
+  execute/alu/U183/Y (INVX1)                              0.01       1.14 f
+  execute/alu/Result<1> (ALU)                             0.00       1.14 f
+  execute/ALU_Result<1> (Execute)                         0.00       1.14 f
+  ex_me_blade/ALU_Result_Exe<1> (Execute_Memory_Blade)
+                                                          0.00       1.14 f
+  ex_me_blade/alu_result[1]/d (dff_pipe_43)               0.00       1.14 f
+  ex_me_blade/alu_result[1]/U5/Y (INVX1)                  0.00       1.14 r
+  ex_me_blade/alu_result[1]/U6/Y (AOI21X1)                0.01       1.16 f
+  ex_me_blade/alu_result[1]/pipe/d (dff_171)              0.00       1.16 f
+  ex_me_blade/alu_result[1]/pipe/U5/Y (BUFX2)             0.03       1.19 f
+  ex_me_blade/alu_result[1]/pipe/U3/Y (AND2X2)            0.03       1.22 f
+  ex_me_blade/alu_result[1]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.22 f
+  data arrival time                                                  1.22
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[1]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.22
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.27
+
+
+  Startpoint: de_ex_blade/reg_1_src[0]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[2]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  de_ex_blade/reg_1_src[0]/pipe/q (dff_230)               0.00       0.11 f
+  de_ex_blade/reg_1_src[0]/q (dff_pipe_102)               0.00       0.11 f
+  de_ex_blade/Reg_1_Src_Exe<0> (Decode_Execute_Blade)     0.00       0.11 f
+  extra_logic/Reg_1_Src_Exe<0> (Extra_Logic2)             0.00       0.11 f
+  extra_logic/U183/Y (XOR2X1)                             0.05       0.16 r
+  extra_logic/U110/Y (OR2X2)                              0.05       0.21 r
+  extra_logic/U111/Y (INVX1)                              0.02       0.23 f
+  extra_logic/U95/Y (AND2X2)                              0.04       0.26 f
+  extra_logic/U12/Y (MUX2X1)                              0.03       0.30 f
+  extra_logic/A_Forward_Data<11> (Extra_Logic2)           0.00       0.30 f
+  execute/A_Forward_Data<11> (Execute)                    0.00       0.30 f
+  execute/U270/Y (AOI22X1)                                0.04       0.33 r
+  execute/U158/Y (INVX1)                                  0.04       0.37 f
+  execute/alu/A<11> (ALU)                                 0.00       0.37 f
+  execute/alu/Shifter/In<11> (ALU_Shifter)                0.00       0.37 f
+  execute/alu/Shifter/sBlade1/in<11> (ALU_Shifter_1)      0.00       0.37 f
+  execute/alu/Shifter/sBlade1/U2/Y (BUFX2)                0.04       0.41 f
+  execute/alu/Shifter/sBlade1/U5/Y (INVX1)                0.00       0.41 r
+  execute/alu/Shifter/sBlade1/U3/Y (INVX2)                0.03       0.43 f
+  execute/alu/Shifter/sBlade1/up_sel12/in0 (Bit1_Mux4_1_51)
+                                                          0.00       0.43 f
+  execute/alu/Shifter/sBlade1/up_sel12/U19/Y (AOI22X1)
+                                                          0.04       0.47 r
+  execute/alu/Shifter/sBlade1/up_sel12/U8/Y (INVX1)       0.02       0.49 f
+  execute/alu/Shifter/sBlade1/up_sel12/U9/Y (INVX1)       0.00       0.49 r
+  execute/alu/Shifter/sBlade1/up_sel12/U4/Y (AND2X2)      0.03       0.52 r
+  execute/alu/Shifter/sBlade1/up_sel12/U5/Y (INVX1)       0.01       0.54 f
+  execute/alu/Shifter/sBlade1/up_sel12/out (Bit1_Mux4_1_51)
+                                                          0.00       0.54 f
+  execute/alu/Shifter/sBlade1/low_sel[12]/in1 (Bit1_Mux2_1_60)
+                                                          0.00       0.54 f
+  execute/alu/Shifter/sBlade1/low_sel[12]/U1/Y (INVX1)
+                                                          0.00       0.54 r
+  execute/alu/Shifter/sBlade1/low_sel[12]/U5/Y (AOI22X1)
+                                                          0.01       0.55 f
+  execute/alu/Shifter/sBlade1/low_sel[12]/out (Bit1_Mux2_1_60)
+                                                          0.00       0.55 f
+  execute/alu/Shifter/sBlade1/out<12> (ALU_Shifter_1)     0.00       0.55 f
+  execute/alu/Shifter/sBlade2/in<12> (ALU_Shifter_2)      0.00       0.55 f
+  execute/alu/Shifter/sBlade2/U13/Y (BUFX2)               0.04       0.59 f
+  execute/alu/Shifter/sBlade2/up_sel10/in2 (Bit1_Mux4_1_37)
+                                                          0.00       0.59 f
+  execute/alu/Shifter/sBlade2/up_sel10/U9/Y (OR2X2)       0.04       0.63 f
+  execute/alu/Shifter/sBlade2/up_sel10/U10/Y (INVX1)      0.00       0.63 r
+  execute/alu/Shifter/sBlade2/up_sel10/U17/Y (AOI21X1)
+                                                          0.01       0.63 f
+  execute/alu/Shifter/sBlade2/up_sel10/U8/Y (BUFX2)       0.03       0.67 f
+  execute/alu/Shifter/sBlade2/up_sel10/U1/Y (AND2X2)      0.03       0.70 f
+  execute/alu/Shifter/sBlade2/up_sel10/U11/Y (INVX1)      0.00       0.70 r
+  execute/alu/Shifter/sBlade2/up_sel10/U18/Y (NAND3X1)
+                                                          0.01       0.70 f
+  execute/alu/Shifter/sBlade2/up_sel10/out (Bit1_Mux4_1_37)
+                                                          0.00       0.70 f
+  execute/alu/Shifter/sBlade2/low_sel[10]/in1 (Bit1_Mux2_1_42)
+                                                          0.00       0.70 f
+  execute/alu/Shifter/sBlade2/low_sel[10]/U4/Y (INVX1)
+                                                          0.01       0.71 r
+  execute/alu/Shifter/sBlade2/low_sel[10]/U5/Y (AOI22X1)
+                                                          0.01       0.72 f
+  execute/alu/Shifter/sBlade2/low_sel[10]/out (Bit1_Mux2_1_42)
+                                                          0.00       0.72 f
+  execute/alu/Shifter/sBlade2/out<10> (ALU_Shifter_2)     0.00       0.72 f
+  execute/alu/Shifter/sBlade4/in<10> (ALU_Shifter_4)      0.00       0.72 f
+  execute/alu/Shifter/sBlade4/U22/Y (BUFX2)               0.04       0.76 f
+  execute/alu/Shifter/sBlade4/U48/Y (INVX1)               0.00       0.77 r
+  execute/alu/Shifter/sBlade4/U49/Y (INVX1)               0.02       0.78 f
+  execute/alu/Shifter/sBlade4/low_sel[10]/in0 (Bit1_Mux2_1_26)
+                                                          0.00       0.78 f
+  execute/alu/Shifter/sBlade4/low_sel[10]/U3/Y (AND2X2)
+                                                          0.04       0.82 f
+  execute/alu/Shifter/sBlade4/low_sel[10]/U2/Y (INVX1)
+                                                          0.00       0.82 r
+  execute/alu/Shifter/sBlade4/low_sel[10]/U6/Y (AOI22X1)
+                                                          0.02       0.84 f
+  execute/alu/Shifter/sBlade4/low_sel[10]/out (Bit1_Mux2_1_26)
+                                                          0.00       0.84 f
+  execute/alu/Shifter/sBlade4/out<10> (ALU_Shifter_4)     0.00       0.84 f
+  execute/alu/Shifter/sBlade8/in<10> (ALU_Shifter_8)      0.00       0.84 f
+  execute/alu/Shifter/sBlade8/U35/Y (BUFX2)               0.04       0.88 f
+  execute/alu/Shifter/sBlade8/up_sel2/in2 (Bit1_Mux4_1_13)
+                                                          0.00       0.88 f
+  execute/alu/Shifter/sBlade8/up_sel2/U15/Y (AOI22X1)     0.04       0.92 r
+  execute/alu/Shifter/sBlade8/up_sel2/U5/Y (BUFX2)        0.04       0.96 r
+  execute/alu/Shifter/sBlade8/up_sel2/U3/Y (AND2X2)       0.03       0.99 r
+  execute/alu/Shifter/sBlade8/up_sel2/U4/Y (INVX1)        0.01       1.00 f
+  execute/alu/Shifter/sBlade8/up_sel2/out (Bit1_Mux4_1_13)
+                                                          0.00       1.00 f
+  execute/alu/Shifter/sBlade8/low_sel[2]/in1 (Bit1_Mux2_1_2)
+                                                          0.00       1.00 f
+  execute/alu/Shifter/sBlade8/low_sel[2]/U5/Y (INVX1)     0.00       1.00 r
+  execute/alu/Shifter/sBlade8/low_sel[2]/U6/Y (AOI21X1)
+                                                          0.01       1.01 f
+  execute/alu/Shifter/sBlade8/low_sel[2]/out (Bit1_Mux2_1_2)
+                                                          0.00       1.01 f
+  execute/alu/Shifter/sBlade8/U30/Y (BUFX2)               0.03       1.05 f
+  execute/alu/Shifter/sBlade8/out<2> (ALU_Shifter_8)      0.00       1.05 f
+  execute/alu/Shifter/Out<2> (ALU_Shifter)                0.00       1.05 f
+  execute/alu/U262/Y (OR2X2)                              0.04       1.08 f
+  execute/alu/U263/Y (INVX1)                              0.00       1.08 r
+  execute/alu/U184/Y (OR2X2)                              0.03       1.12 r
+  execute/alu/U185/Y (INVX1)                              0.01       1.13 f
+  execute/alu/Result<2> (ALU)                             0.00       1.13 f
+  execute/ALU_Result<2> (Execute)                         0.00       1.13 f
+  ex_me_blade/ALU_Result_Exe<2> (Execute_Memory_Blade)
+                                                          0.00       1.13 f
+  ex_me_blade/alu_result[2]/d (dff_pipe_44)               0.00       1.13 f
+  ex_me_blade/alu_result[2]/U5/Y (INVX1)                  0.00       1.13 r
+  ex_me_blade/alu_result[2]/U6/Y (AOI21X1)                0.01       1.15 f
+  ex_me_blade/alu_result[2]/pipe/d (dff_172)              0.00       1.15 f
+  ex_me_blade/alu_result[2]/pipe/U5/Y (BUFX2)             0.03       1.18 f
+  ex_me_blade/alu_result[2]/pipe/U3/Y (AND2X1)            0.03       1.21 f
+  ex_me_blade/alu_result[2]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.21 f
+  data arrival time                                                  1.21
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[2]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.21
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.27
+
+
+  Startpoint: de_ex_blade/reg_1_src[0]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[4]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  de_ex_blade/reg_1_src[0]/pipe/q (dff_230)               0.00       0.11 f
+  de_ex_blade/reg_1_src[0]/q (dff_pipe_102)               0.00       0.11 f
+  de_ex_blade/Reg_1_Src_Exe<0> (Decode_Execute_Blade)     0.00       0.11 f
+  extra_logic/Reg_1_Src_Exe<0> (Extra_Logic2)             0.00       0.11 f
+  extra_logic/U183/Y (XOR2X1)                             0.05       0.16 r
+  extra_logic/U110/Y (OR2X2)                              0.05       0.21 r
+  extra_logic/U111/Y (INVX1)                              0.02       0.23 f
+  extra_logic/U95/Y (AND2X2)                              0.04       0.26 f
+  extra_logic/U12/Y (MUX2X1)                              0.03       0.30 f
+  extra_logic/A_Forward_Data<11> (Extra_Logic2)           0.00       0.30 f
+  execute/A_Forward_Data<11> (Execute)                    0.00       0.30 f
+  execute/U270/Y (AOI22X1)                                0.04       0.33 r
+  execute/U158/Y (INVX1)                                  0.04       0.37 f
+  execute/alu/A<11> (ALU)                                 0.00       0.37 f
+  execute/alu/Shifter/In<11> (ALU_Shifter)                0.00       0.37 f
+  execute/alu/Shifter/sBlade1/in<11> (ALU_Shifter_1)      0.00       0.37 f
+  execute/alu/Shifter/sBlade1/up_sel10/in2 (Bit1_Mux4_1_53)
+                                                          0.00       0.37 f
+  execute/alu/Shifter/sBlade1/up_sel10/U17/Y (AOI22X1)
+                                                          0.04       0.41 r
+  execute/alu/Shifter/sBlade1/up_sel10/U6/Y (BUFX2)       0.04       0.45 r
+  execute/alu/Shifter/sBlade1/up_sel10/U4/Y (AND2X2)      0.03       0.48 r
+  execute/alu/Shifter/sBlade1/up_sel10/U5/Y (INVX1)       0.01       0.49 f
+  execute/alu/Shifter/sBlade1/up_sel10/out (Bit1_Mux4_1_53)
+                                                          0.00       0.49 f
+  execute/alu/Shifter/sBlade1/low_sel[10]/in1 (Bit1_Mux2_1_58)
+                                                          0.00       0.49 f
+  execute/alu/Shifter/sBlade1/low_sel[10]/U2/Y (INVX1)
+                                                          0.00       0.50 r
+  execute/alu/Shifter/sBlade1/low_sel[10]/U5/Y (AOI22X1)
+                                                          0.01       0.51 f
+  execute/alu/Shifter/sBlade1/low_sel[10]/out (Bit1_Mux2_1_58)
+                                                          0.00       0.51 f
+  execute/alu/Shifter/sBlade1/out<10> (ALU_Shifter_1)     0.00       0.51 f
+  execute/alu/Shifter/sBlade2/in<10> (ALU_Shifter_2)      0.00       0.51 f
+  execute/alu/Shifter/sBlade2/U12/Y (BUFX2)               0.04       0.55 f
+  execute/alu/Shifter/sBlade2/up_sel8/in2 (Bit1_Mux4_1_39)
+                                                          0.00       0.55 f
+  execute/alu/Shifter/sBlade2/up_sel8/U6/Y (OR2X2)        0.04       0.58 f
+  execute/alu/Shifter/sBlade2/up_sel8/U7/Y (INVX1)        0.00       0.59 r
+  execute/alu/Shifter/sBlade2/up_sel8/U17/Y (AOI21X1)     0.01       0.59 f
+  execute/alu/Shifter/sBlade2/up_sel8/U3/Y (BUFX2)        0.03       0.63 f
+  execute/alu/Shifter/sBlade2/up_sel8/U4/Y (AND2X2)       0.03       0.66 f
+  execute/alu/Shifter/sBlade2/up_sel8/U5/Y (INVX1)        0.00       0.66 r
+  execute/alu/Shifter/sBlade2/up_sel8/U18/Y (NAND3X1)     0.01       0.66 f
+  execute/alu/Shifter/sBlade2/up_sel8/out (Bit1_Mux4_1_39)
+                                                          0.00       0.66 f
+  execute/alu/Shifter/sBlade2/low_sel[8]/in1 (Bit1_Mux2_1_40)
+                                                          0.00       0.66 f
+  execute/alu/Shifter/sBlade2/low_sel[8]/U4/Y (INVX1)     0.01       0.67 r
+  execute/alu/Shifter/sBlade2/low_sel[8]/U5/Y (AOI22X1)
+                                                          0.01       0.68 f
+  execute/alu/Shifter/sBlade2/low_sel[8]/out (Bit1_Mux2_1_40)
+                                                          0.00       0.68 f
+  execute/alu/Shifter/sBlade2/out<8> (ALU_Shifter_2)      0.00       0.68 f
+  execute/alu/Shifter/sBlade4/in<8> (ALU_Shifter_4)       0.00       0.68 f
+  execute/alu/Shifter/sBlade4/U24/Y (BUFX2)               0.04       0.72 f
+  execute/alu/Shifter/sBlade4/U2/Y (BUFX2)                0.04       0.76 f
+  execute/alu/Shifter/sBlade4/up_sel12/in0 (Bit1_Mux4_1_19)
+                                                          0.00       0.76 f
+  execute/alu/Shifter/sBlade4/up_sel12/U11/Y (AND2X2)     0.03       0.79 f
+  execute/alu/Shifter/sBlade4/up_sel12/U12/Y (INVX1)      0.00       0.79 r
+  execute/alu/Shifter/sBlade4/up_sel12/U15/Y (NAND3X1)
+                                                          0.01       0.80 f
+  execute/alu/Shifter/sBlade4/up_sel12/out (Bit1_Mux4_1_19)
+                                                          0.00       0.80 f
+  execute/alu/Shifter/sBlade4/low_sel[12]/in1 (Bit1_Mux2_1_28)
+                                                          0.00       0.80 f
+  execute/alu/Shifter/sBlade4/low_sel[12]/U9/Y (INVX1)
+                                                          0.00       0.80 r
+  execute/alu/Shifter/sBlade4/low_sel[12]/U5/Y (AND2X2)
+                                                          0.03       0.83 r
+  execute/alu/Shifter/sBlade4/low_sel[12]/U6/Y (INVX1)
+                                                          0.01       0.85 f
+  execute/alu/Shifter/sBlade4/low_sel[12]/U8/Y (AND2X2)
+                                                          0.04       0.88 f
+  execute/alu/Shifter/sBlade4/low_sel[12]/out (Bit1_Mux2_1_28)
+                                                          0.00       0.88 f
+  execute/alu/Shifter/sBlade4/out<12> (ALU_Shifter_4)     0.00       0.88 f
+  execute/alu/Shifter/sBlade8/in<12> (ALU_Shifter_8)      0.00       0.88 f
+  execute/alu/Shifter/sBlade8/U17/Y (BUFX2)               0.03       0.92 f
+  execute/alu/Shifter/sBlade8/up_sel4/in3 (Bit1_Mux4_1_11)
+                                                          0.00       0.92 f
+  execute/alu/Shifter/sBlade8/up_sel4/U15/Y (OAI21X1)     0.04       0.95 r
+  execute/alu/Shifter/sBlade8/up_sel4/U4/Y (AND2X2)       0.03       0.99 r
+  execute/alu/Shifter/sBlade8/up_sel4/U5/Y (INVX1)        0.01       1.00 f
+  execute/alu/Shifter/sBlade8/up_sel4/out (Bit1_Mux4_1_11)
+                                                          0.00       1.00 f
+  execute/alu/Shifter/sBlade8/low_sel[4]/in1 (Bit1_Mux2_1_4)
+                                                          0.00       1.00 f
+  execute/alu/Shifter/sBlade8/low_sel[4]/U4/Y (INVX1)     0.00       1.00 r
+  execute/alu/Shifter/sBlade8/low_sel[4]/U7/Y (AOI21X1)
+                                                          0.01       1.01 f
+  execute/alu/Shifter/sBlade8/low_sel[4]/out (Bit1_Mux2_1_4)
+                                                          0.00       1.01 f
+  execute/alu/Shifter/sBlade8/U29/Y (BUFX2)               0.03       1.05 f
+  execute/alu/Shifter/sBlade8/out<4> (ALU_Shifter_8)      0.00       1.05 f
+  execute/alu/Shifter/Out<4> (ALU_Shifter)                0.00       1.05 f
+  execute/alu/U266/Y (OR2X2)                              0.04       1.08 f
+  execute/alu/U267/Y (INVX1)                              0.00       1.08 r
+  execute/alu/U188/Y (OR2X2)                              0.03       1.12 r
+  execute/alu/U189/Y (INVX1)                              0.01       1.13 f
+  execute/alu/Result<4> (ALU)                             0.00       1.13 f
+  execute/ALU_Result<4> (Execute)                         0.00       1.13 f
+  ex_me_blade/ALU_Result_Exe<4> (Execute_Memory_Blade)
+                                                          0.00       1.13 f
+  ex_me_blade/alu_result[4]/d (dff_pipe_46)               0.00       1.13 f
+  ex_me_blade/alu_result[4]/U5/Y (INVX1)                  0.00       1.13 r
+  ex_me_blade/alu_result[4]/U6/Y (AOI21X1)                0.01       1.15 f
+  ex_me_blade/alu_result[4]/pipe/d (dff_174)              0.00       1.15 f
+  ex_me_blade/alu_result[4]/pipe/U5/Y (BUFX2)             0.03       1.18 f
+  ex_me_blade/alu_result[4]/pipe/U3/Y (AND2X2)            0.03       1.21 f
+  ex_me_blade/alu_result[4]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.21 f
+  data arrival time                                                  1.21
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[4]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.21
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.26
+
+
+  Startpoint: me_wb_blade/write_reg[2]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[0]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  me_wb_blade/write_reg[2]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  me_wb_blade/write_reg[2]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  me_wb_blade/write_reg[2]/pipe/q (dff_130)               0.00       0.11 f
+  me_wb_blade/write_reg[2]/q (dff_pipe_2)                 0.00       0.11 f
+  me_wb_blade/Write_Reg_WB<2> (Memory_Writeback_Blade)
+                                                          0.00       0.11 f
+  extra_logic/Write_Reg_WB<2> (Extra_Logic2)              0.00       0.11 f
+  extra_logic/U7/Y (INVX1)                                0.01       0.12 r
+  extra_logic/U8/Y (INVX1)                                0.02       0.14 f
+  extra_logic/U178/Y (XNOR2X1)                            0.05       0.19 r
+  extra_logic/U116/Y (AND2X2)                             0.03       0.22 r
+  extra_logic/U117/Y (INVX1)                              0.02       0.23 f
+  extra_logic/U181/Y (OAI21X1)                            0.05       0.28 r
+  extra_logic/B_Forward (Extra_Logic2)                    0.00       0.28 r
+  execute/B_Forward (Execute)                             0.00       0.28 r
+  execute/U55/Y (INVX1)                                   0.03       0.31 f
+  execute/U221/Y (INVX1)                                  0.02       0.33 r
+  execute/U159/Y (AND2X2)                                 0.03       0.36 r
+  execute/U74/Y (OR2X2)                                   0.04       0.40 r
+  execute/alu/B<0> (ALU)                                  0.00       0.40 r
+  execute/alu/Shifter/Cnt<0> (ALU_Shifter)                0.00       0.40 r
+  execute/alu/Shifter/sBlade1/sh (ALU_Shifter_1)          0.00       0.40 r
+  execute/alu/Shifter/sBlade1/U7/Y (INVX1)                0.02       0.42 f
+  execute/alu/Shifter/sBlade1/U20/Y (INVX2)               0.05       0.48 r
+  execute/alu/Shifter/sBlade1/low_sel[2]/s (Bit1_Mux2_1_50)
+                                                          0.00       0.48 r
+  execute/alu/Shifter/sBlade1/low_sel[2]/U1/Y (OR2X2)     0.05       0.52 r
+  execute/alu/Shifter/sBlade1/low_sel[2]/U5/Y (AOI22X1)
+                                                          0.03       0.55 f
+  execute/alu/Shifter/sBlade1/low_sel[2]/out (Bit1_Mux2_1_50)
+                                                          0.00       0.55 f
+  execute/alu/Shifter/sBlade1/out<2> (ALU_Shifter_1)      0.00       0.55 f
+  execute/alu/Shifter/sBlade2/in<2> (ALU_Shifter_2)       0.00       0.55 f
+  execute/alu/Shifter/sBlade2/U11/Y (BUFX2)               0.04       0.59 f
+  execute/alu/Shifter/sBlade2/U39/Y (INVX1)               0.00       0.60 r
+  execute/alu/Shifter/sBlade2/U40/Y (INVX1)               0.02       0.61 f
+  execute/alu/Shifter/sBlade2/up_sel4/in0 (Bit1_Mux4_1_43)
+                                                          0.00       0.61 f
+  execute/alu/Shifter/sBlade2/up_sel4/U21/Y (AOI22X1)     0.04       0.65 r
+  execute/alu/Shifter/sBlade2/up_sel4/U11/Y (BUFX2)       0.03       0.69 r
+  execute/alu/Shifter/sBlade2/up_sel4/U7/Y (AND2X2)       0.03       0.72 r
+  execute/alu/Shifter/sBlade2/up_sel4/U8/Y (INVX1)        0.01       0.73 f
+  execute/alu/Shifter/sBlade2/up_sel4/out (Bit1_Mux4_1_43)
+                                                          0.00       0.73 f
+  execute/alu/Shifter/sBlade2/low_sel[4]/in1 (Bit1_Mux2_1_36)
+                                                          0.00       0.73 f
+  execute/alu/Shifter/sBlade2/low_sel[4]/U4/Y (INVX1)     0.00       0.74 r
+  execute/alu/Shifter/sBlade2/low_sel[4]/U5/Y (AOI22X1)
+                                                          0.01       0.75 f
+  execute/alu/Shifter/sBlade2/low_sel[4]/out (Bit1_Mux2_1_36)
+                                                          0.00       0.75 f
+  execute/alu/Shifter/sBlade2/out<4> (ALU_Shifter_2)      0.00       0.75 f
+  execute/alu/Shifter/sBlade4/in<4> (ALU_Shifter_4)       0.00       0.75 f
+  execute/alu/Shifter/sBlade4/U43/Y (INVX1)               0.01       0.76 r
+  execute/alu/Shifter/sBlade4/U44/Y (INVX1)               0.02       0.78 f
+  execute/alu/Shifter/sBlade4/up_sel8/in0 (Bit1_Mux4_1_23)
+                                                          0.00       0.78 f
+  execute/alu/Shifter/sBlade4/up_sel8/U10/Y (AOI22X1)     0.04       0.83 r
+  execute/alu/Shifter/sBlade4/up_sel8/U2/Y (BUFX2)        0.04       0.86 r
+  execute/alu/Shifter/sBlade4/up_sel8/U11/Y (OAI21X1)     0.01       0.87 f
+  execute/alu/Shifter/sBlade4/up_sel8/out (Bit1_Mux4_1_23)
+                                                          0.00       0.87 f
+  execute/alu/Shifter/sBlade4/low_sel[8]/in1 (Bit1_Mux2_1_24)
+                                                          0.00       0.87 f
+  execute/alu/Shifter/sBlade4/low_sel[8]/U4/Y (INVX1)     0.00       0.87 r
+  execute/alu/Shifter/sBlade4/low_sel[8]/U5/Y (AOI22X1)
+                                                          0.01       0.89 f
+  execute/alu/Shifter/sBlade4/low_sel[8]/out (Bit1_Mux2_1_24)
+                                                          0.00       0.89 f
+  execute/alu/Shifter/sBlade4/out<8> (ALU_Shifter_4)      0.00       0.89 f
+  execute/alu/Shifter/sBlade8/in<8> (ALU_Shifter_8)       0.00       0.89 f
+  execute/alu/Shifter/sBlade8/U41/Y (BUFX2)               0.04       0.93 f
+  execute/alu/Shifter/sBlade8/up_sel0/in3 (Bit1_Mux4_1_15)
+                                                          0.00       0.93 f
+  execute/alu/Shifter/sBlade8/up_sel0/U15/Y (OAI21X1)     0.04       0.97 r
+  execute/alu/Shifter/sBlade8/up_sel0/U16/Y (NAND3X1)     0.02       0.99 f
+  execute/alu/Shifter/sBlade8/up_sel0/out (Bit1_Mux4_1_15)
+                                                          0.00       0.99 f
+  execute/alu/Shifter/sBlade8/low_sel[0]/in1 (Bit1_Mux2_1_0)
+                                                          0.00       0.99 f
+  execute/alu/Shifter/sBlade8/low_sel[0]/U4/Y (INVX1)     0.01       1.00 r
+  execute/alu/Shifter/sBlade8/low_sel[0]/U5/Y (AOI22X1)
+                                                          0.01       1.01 f
+  execute/alu/Shifter/sBlade8/low_sel[0]/out (Bit1_Mux2_1_0)
+                                                          0.00       1.01 f
+  execute/alu/Shifter/sBlade8/U26/Y (BUFX2)               0.04       1.04 f
+  execute/alu/Shifter/sBlade8/out<0> (ALU_Shifter_8)      0.00       1.04 f
+  execute/alu/Shifter/Out<0> (ALU_Shifter)                0.00       1.04 f
+  execute/alu/U176/Y (AND2X2)                             0.03       1.07 f
+  execute/alu/U177/Y (INVX1)                              0.00       1.07 r
+  execute/alu/U178/Y (AND2X2)                             0.03       1.10 r
+  execute/alu/U179/Y (INVX1)                              0.01       1.12 f
+  execute/alu/Result<0> (ALU)                             0.00       1.12 f
+  execute/ALU_Result<0> (Execute)                         0.00       1.12 f
+  ex_me_blade/ALU_Result_Exe<0> (Execute_Memory_Blade)
+                                                          0.00       1.12 f
+  ex_me_blade/alu_result[0]/d (dff_pipe_42)               0.00       1.12 f
+  ex_me_blade/alu_result[0]/U5/Y (INVX1)                  0.00       1.12 r
+  ex_me_blade/alu_result[0]/U6/Y (AOI21X1)                0.01       1.13 f
+  ex_me_blade/alu_result[0]/pipe/d (dff_170)              0.00       1.13 f
+  ex_me_blade/alu_result[0]/pipe/U5/Y (BUFX2)             0.03       1.17 f
+  ex_me_blade/alu_result[0]/pipe/U3/Y (AND2X2)            0.03       1.20 f
+  ex_me_blade/alu_result[0]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.20 f
+  data arrival time                                                  1.20
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[0]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.20
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.25
+
+
+  Startpoint: me_wb_blade/write_reg[2]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[15]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  me_wb_blade/write_reg[2]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  me_wb_blade/write_reg[2]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  me_wb_blade/write_reg[2]/pipe/q (dff_130)               0.00       0.11 f
+  me_wb_blade/write_reg[2]/q (dff_pipe_2)                 0.00       0.11 f
+  me_wb_blade/Write_Reg_WB<2> (Memory_Writeback_Blade)
+                                                          0.00       0.11 f
+  extra_logic/Write_Reg_WB<2> (Extra_Logic2)              0.00       0.11 f
+  extra_logic/U7/Y (INVX1)                                0.01       0.12 r
+  extra_logic/U8/Y (INVX1)                                0.02       0.14 f
+  extra_logic/U178/Y (XNOR2X1)                            0.05       0.19 r
+  extra_logic/U116/Y (AND2X2)                             0.03       0.22 r
+  extra_logic/U117/Y (INVX1)                              0.02       0.23 f
+  extra_logic/U181/Y (OAI21X1)                            0.05       0.28 r
+  extra_logic/B_Forward (Extra_Logic2)                    0.00       0.28 r
+  execute/B_Forward (Execute)                             0.00       0.28 r
+  execute/U53/Y (INVX1)                                   0.03       0.31 f
+  execute/U86/Y (INVX1)                                   0.03       0.33 r
+  execute/U173/Y (OR2X2)                                  0.04       0.38 r
+  execute/U174/Y (INVX1)                                  0.02       0.39 f
+  execute/U237/Y (AOI21X1)                                0.02       0.41 r
+  execute/U126/Y (AND2X2)                                 0.03       0.44 r
+  execute/U127/Y (INVX1)                                  0.01       0.46 f
+  execute/alu/B<2> (ALU)                                  0.00       0.46 f
+  execute/alu/U354/Y (INVX1)                              0.01       0.47 r
+  execute/alu/U79/Y (INVX1)                               0.02       0.49 f
+  execute/alu/U417/Y (OAI21X1)                            0.06       0.55 r
+  execute/alu/CLA/B<2> (ALU_CLA)                          0.00       0.55 r
+  execute/alu/CLA/claMod1/B<2> (ALU_Bit4_CLA_3)           0.00       0.55 r
+  execute/alu/CLA/claMod1/FA_mod2/B (ALU_CLA_FA_13)       0.00       0.55 r
+  execute/alu/CLA/claMod1/FA_mod2/U5/Y (AND2X2)           0.03       0.58 r
+  execute/alu/CLA/claMod1/FA_mod2/U6/Y (INVX1)            0.02       0.60 f
+  execute/alu/CLA/claMod1/FA_mod2/U3/Y (AND2X2)           0.03       0.63 f
+  execute/alu/CLA/claMod1/FA_mod2/U4/Y (INVX1)            0.00       0.63 r
+  execute/alu/CLA/claMod1/FA_mod2/P (ALU_CLA_FA_13)       0.00       0.63 r
+  execute/alu/CLA/claMod1/U21/Y (AND2X2)                  0.03       0.66 r
+  execute/alu/CLA/claMod1/U22/Y (INVX1)                   0.02       0.68 f
+  execute/alu/CLA/claMod1/U10/Y (OR2X2)                   0.05       0.73 f
+  execute/alu/CLA/claMod1/U11/Y (INVX1)                   0.00       0.73 r
+  execute/alu/CLA/claMod1/P (ALU_Bit4_CLA_3)              0.00       0.73 r
+  execute/alu/CLA/U21/Y (AND2X2)                          0.03       0.76 r
+  execute/alu/CLA/U16/Y (OR2X2)                           0.04       0.80 r
+  execute/alu/CLA/U17/Y (INVX1)                           0.02       0.82 f
+  execute/alu/CLA/U27/Y (OAI21X1)                         0.05       0.87 r
+  execute/alu/CLA/claMod4/Ci (ALU_Bit4_CLA_0)             0.00       0.87 r
+  execute/alu/CLA/claMod4/U7/Y (OR2X1)                    0.04       0.91 r
+  execute/alu/CLA/claMod4/U23/Y (INVX1)                   0.02       0.93 f
+  execute/alu/CLA/claMod4/U41/Y (AOI21X1)                 0.02       0.94 r
+  execute/alu/CLA/claMod4/FA_mod3/Ci (ALU_CLA_FA_0)       0.00       0.94 r
+  execute/alu/CLA/claMod4/FA_mod3/U3/Y (INVX1)            0.03       0.97 f
+  execute/alu/CLA/claMod4/FA_mod3/U2/Y (XNOR2X1)          0.03       1.00 f
+  execute/alu/CLA/claMod4/FA_mod3/S (ALU_CLA_FA_0)        0.00       1.00 f
+  execute/alu/CLA/claMod4/S<3> (ALU_Bit4_CLA_0)           0.00       1.00 f
+  execute/alu/CLA/S<15> (ALU_CLA)                         0.00       1.00 f
+  execute/alu/U606/Y (AOI21X1)                            0.03       1.03 r
+  execute/alu/U255/Y (BUFX2)                              0.03       1.07 r
+  execute/alu/U209/Y (AND2X2)                             0.03       1.10 r
+  execute/alu/U210/Y (INVX1)                              0.01       1.11 f
+  execute/alu/Result<15> (ALU)                            0.00       1.11 f
+  execute/ALU_Result<15> (Execute)                        0.00       1.11 f
+  ex_me_blade/ALU_Result_Exe<15> (Execute_Memory_Blade)
+                                                          0.00       1.11 f
+  ex_me_blade/alu_result[15]/d (dff_pipe_57)              0.00       1.11 f
+  ex_me_blade/alu_result[15]/U5/Y (INVX1)                 0.00       1.11 r
+  ex_me_blade/alu_result[15]/U6/Y (AOI21X1)               0.01       1.13 f
+  ex_me_blade/alu_result[15]/pipe/d (dff_185)             0.00       1.13 f
+  ex_me_blade/alu_result[15]/pipe/U5/Y (BUFX2)            0.03       1.16 f
+  ex_me_blade/alu_result[15]/pipe/U3/Y (AND2X2)           0.03       1.19 f
+  ex_me_blade/alu_result[15]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.19 f
+  data arrival time                                                  1.19
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[15]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.24
+
+
+  Startpoint: de_ex_blade/reg_1_src[0]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[9]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  de_ex_blade/reg_1_src[0]/pipe/q (dff_230)               0.00       0.11 f
+  de_ex_blade/reg_1_src[0]/q (dff_pipe_102)               0.00       0.11 f
+  de_ex_blade/Reg_1_Src_Exe<0> (Decode_Execute_Blade)     0.00       0.11 f
+  extra_logic/Reg_1_Src_Exe<0> (Extra_Logic2)             0.00       0.11 f
+  extra_logic/U183/Y (XOR2X1)                             0.05       0.16 r
+  extra_logic/U110/Y (OR2X2)                              0.05       0.21 r
+  extra_logic/U11/Y (INVX1)                               0.02       0.23 f
+  extra_logic/U71/Y (AND2X2)                              0.04       0.27 f
+  extra_logic/U96/Y (INVX1)                               0.00       0.27 r
+  extra_logic/U78/Y (INVX1)                               0.03       0.30 f
+  extra_logic/U185/Y (MUX2X1)                             0.03       0.33 f
+  extra_logic/A_Forward_Data<0> (Extra_Logic2)            0.00       0.33 f
+  execute/A_Forward_Data<0> (Execute)                     0.00       0.33 f
+  execute/U228/Y (AND2X2)                                 0.03       0.37 f
+  execute/U227/Y (AOI21X1)                                0.01       0.38 r
+  execute/U157/Y (INVX1)                                  0.03       0.41 f
+  execute/alu/A<0> (ALU)                                  0.00       0.41 f
+  execute/alu/Shifter/In<0> (ALU_Shifter)                 0.00       0.41 f
+  execute/alu/Shifter/sBlade1/in<0> (ALU_Shifter_1)       0.00       0.41 f
+  execute/alu/Shifter/sBlade1/up_sel15/in2 (Bit1_Mux4_1_48)
+                                                          0.00       0.41 f
+  execute/alu/Shifter/sBlade1/up_sel15/U16/Y (AOI22X1)
+                                                          0.04       0.45 r
+  execute/alu/Shifter/sBlade1/up_sel15/U6/Y (BUFX2)       0.04       0.48 r
+  execute/alu/Shifter/sBlade1/up_sel15/U4/Y (AND2X2)      0.03       0.51 r
+  execute/alu/Shifter/sBlade1/up_sel15/U5/Y (INVX1)       0.01       0.53 f
+  execute/alu/Shifter/sBlade1/up_sel15/out (Bit1_Mux4_1_48)
+                                                          0.00       0.53 f
+  execute/alu/Shifter/sBlade1/low_sel[15]/in1 (Bit1_Mux2_1_63)
+                                                          0.00       0.53 f
+  execute/alu/Shifter/sBlade1/low_sel[15]/U3/Y (INVX1)
+                                                          0.00       0.53 r
+  execute/alu/Shifter/sBlade1/low_sel[15]/U4/Y (AOI21X1)
+                                                          0.01       0.54 f
+  execute/alu/Shifter/sBlade1/low_sel[15]/out (Bit1_Mux2_1_63)
+                                                          0.00       0.54 f
+  execute/alu/Shifter/sBlade1/out<15> (ALU_Shifter_1)     0.00       0.54 f
+  execute/alu/Shifter/sBlade2/in<15> (ALU_Shifter_2)      0.00       0.54 f
+  execute/alu/Shifter/sBlade2/U14/Y (BUFX2)               0.04       0.58 f
+  execute/alu/Shifter/sBlade2/up_sel13/in2 (Bit1_Mux4_1_34)
+                                                          0.00       0.58 f
+  execute/alu/Shifter/sBlade2/up_sel13/U7/Y (OR2X2)       0.04       0.61 f
+  execute/alu/Shifter/sBlade2/up_sel13/U8/Y (INVX1)       0.00       0.61 r
+  execute/alu/Shifter/sBlade2/up_sel13/U18/Y (AOI21X1)
+                                                          0.01       0.62 f
+  execute/alu/Shifter/sBlade2/up_sel13/U4/Y (BUFX2)       0.03       0.65 f
+  execute/alu/Shifter/sBlade2/up_sel13/U5/Y (AND2X2)      0.03       0.69 f
+  execute/alu/Shifter/sBlade2/up_sel13/U6/Y (INVX1)       0.00       0.68 r
+  execute/alu/Shifter/sBlade2/up_sel13/U19/Y (NAND3X1)
+                                                          0.01       0.69 f
+  execute/alu/Shifter/sBlade2/up_sel13/out (Bit1_Mux4_1_34)
+                                                          0.00       0.69 f
+  execute/alu/Shifter/sBlade2/low_sel[13]/in1 (Bit1_Mux2_1_45)
+                                                          0.00       0.69 f
+  execute/alu/Shifter/sBlade2/low_sel[13]/U4/Y (INVX1)
+                                                          0.01       0.70 r
+  execute/alu/Shifter/sBlade2/low_sel[13]/U5/Y (AOI22X1)
+                                                          0.01       0.71 f
+  execute/alu/Shifter/sBlade2/low_sel[13]/out (Bit1_Mux2_1_45)
+                                                          0.00       0.71 f
+  execute/alu/Shifter/sBlade2/out<13> (ALU_Shifter_2)     0.00       0.71 f
+  execute/alu/Shifter/sBlade4/in<13> (ALU_Shifter_4)      0.00       0.71 f
+  execute/alu/Shifter/sBlade4/U26/Y (BUFX2)               0.04       0.75 f
+  execute/alu/Shifter/sBlade4/U11/Y (BUFX2)               0.04       0.79 f
+  execute/alu/Shifter/sBlade4/up_sel1/in0 (Bit1_Mux4_1_30)
+                                                          0.00       0.79 f
+  execute/alu/Shifter/sBlade4/up_sel1/U12/Y (OAI21X1)     0.04       0.83 r
+  execute/alu/Shifter/sBlade4/up_sel1/U13/Y (NAND3X1)     0.01       0.84 f
+  execute/alu/Shifter/sBlade4/up_sel1/out (Bit1_Mux4_1_30)
+                                                          0.00       0.84 f
+  execute/alu/Shifter/sBlade4/low_sel[1]/in1 (Bit1_Mux2_1_17)
+                                                          0.00       0.84 f
+  execute/alu/Shifter/sBlade4/low_sel[1]/U4/Y (INVX1)     0.01       0.85 r
+  execute/alu/Shifter/sBlade4/low_sel[1]/U5/Y (AOI22X1)
+                                                          0.01       0.86 f
+  execute/alu/Shifter/sBlade4/low_sel[1]/out (Bit1_Mux2_1_17)
+                                                          0.00       0.86 f
+  execute/alu/Shifter/sBlade4/out<1> (ALU_Shifter_4)      0.00       0.86 f
+  execute/alu/Shifter/sBlade8/in<1> (ALU_Shifter_8)       0.00       0.86 f
+  execute/alu/Shifter/sBlade8/U38/Y (BUFX2)               0.04       0.90 f
+  execute/alu/Shifter/sBlade8/up_sel9/in0 (Bit1_Mux4_1_6)
+                                                          0.00       0.90 f
+  execute/alu/Shifter/sBlade8/up_sel9/U14/Y (INVX1)       0.00       0.90 r
+  execute/alu/Shifter/sBlade8/up_sel9/U6/Y (OR2X2)        0.03       0.94 r
+  execute/alu/Shifter/sBlade8/up_sel9/U7/Y (INVX1)        0.01       0.95 f
+  execute/alu/Shifter/sBlade8/up_sel9/U10/Y (OR2X2)       0.05       1.00 f
+  execute/alu/Shifter/sBlade8/up_sel9/U11/Y (INVX1)       0.00       1.00 r
+  execute/alu/Shifter/sBlade8/up_sel9/U8/Y (AND2X2)       0.03       1.03 r
+  execute/alu/Shifter/sBlade8/up_sel9/U9/Y (INVX1)        0.01       1.04 f
+  execute/alu/Shifter/sBlade8/up_sel9/out (Bit1_Mux4_1_6)
+                                                          0.00       1.04 f
+  execute/alu/Shifter/sBlade8/low_sel[9]/in1 (Bit1_Mux2_1_9)
+                                                          0.00       1.04 f
+  execute/alu/Shifter/sBlade8/low_sel[9]/U3/Y (INVX1)     0.00       1.04 r
+  execute/alu/Shifter/sBlade8/low_sel[9]/U2/Y (MUX2X1)
+                                                          0.02       1.06 f
+  execute/alu/Shifter/sBlade8/low_sel[9]/out (Bit1_Mux2_1_9)
+                                                          0.00       1.06 f
+  execute/alu/Shifter/sBlade8/out<9> (ALU_Shifter_8)      0.00       1.06 f
+  execute/alu/Shifter/Out<9> (ALU_Shifter)                0.00       1.06 f
+  execute/alu/U216/Y (OR2X2)                              0.04       1.10 f
+  execute/alu/U217/Y (INVX1)                              0.00       1.09 r
+  execute/alu/U389/Y (AND2X2)                             0.03       1.13 r
+  execute/alu/U560/Y (AOI21X1)                            0.01       1.13 f
+  execute/alu/Result<9> (ALU)                             0.00       1.13 f
+  execute/ALU_Result<9> (Execute)                         0.00       1.13 f
+  ex_me_blade/ALU_Result_Exe<9> (Execute_Memory_Blade)
+                                                          0.00       1.13 f
+  ex_me_blade/alu_result[9]/d (dff_pipe_51)               0.00       1.13 f
+  ex_me_blade/alu_result[9]/U3/Y (INVX1)                  0.00       1.14 r
+  ex_me_blade/alu_result[9]/U4/Y (MUX2X1)                 0.02       1.15 f
+  ex_me_blade/alu_result[9]/pipe/d (dff_179)              0.00       1.15 f
+  ex_me_blade/alu_result[9]/pipe/U3/Y (AND2X2)            0.03       1.19 f
+  ex_me_blade/alu_result[9]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.19 f
+  data arrival time                                                  1.19
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[9]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.24
+
+
+  Startpoint: me_wb_blade/write_reg[2]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[8]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  me_wb_blade/write_reg[2]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  me_wb_blade/write_reg[2]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  me_wb_blade/write_reg[2]/pipe/q (dff_130)               0.00       0.11 f
+  me_wb_blade/write_reg[2]/q (dff_pipe_2)                 0.00       0.11 f
+  me_wb_blade/Write_Reg_WB<2> (Memory_Writeback_Blade)
+                                                          0.00       0.11 f
+  extra_logic/Write_Reg_WB<2> (Extra_Logic2)              0.00       0.11 f
+  extra_logic/U7/Y (INVX1)                                0.01       0.12 r
+  extra_logic/U8/Y (INVX1)                                0.02       0.14 f
+  extra_logic/U178/Y (XNOR2X1)                            0.05       0.19 r
+  extra_logic/U116/Y (AND2X2)                             0.03       0.22 r
+  extra_logic/U117/Y (INVX1)                              0.02       0.23 f
+  extra_logic/U181/Y (OAI21X1)                            0.05       0.28 r
+  extra_logic/B_Forward (Extra_Logic2)                    0.00       0.28 r
+  execute/B_Forward (Execute)                             0.00       0.28 r
+  execute/U55/Y (INVX1)                                   0.03       0.31 f
+  execute/U221/Y (INVX1)                                  0.02       0.33 r
+  execute/U159/Y (AND2X2)                                 0.03       0.36 r
+  execute/U74/Y (OR2X2)                                   0.04       0.40 r
+  execute/alu/B<0> (ALU)                                  0.00       0.40 r
+  execute/alu/Shifter/Cnt<0> (ALU_Shifter)                0.00       0.40 r
+  execute/alu/Shifter/sBlade1/sh (ALU_Shifter_1)          0.00       0.40 r
+  execute/alu/Shifter/sBlade1/U7/Y (INVX1)                0.02       0.42 f
+  execute/alu/Shifter/sBlade1/U31/Y (INVX1)               0.03       0.46 r
+  execute/alu/Shifter/sBlade1/low_sel[14]/s (Bit1_Mux2_1_62)
+                                                          0.00       0.46 r
+  execute/alu/Shifter/sBlade1/low_sel[14]/U4/Y (OR2X2)
+                                                          0.04       0.50 r
+  execute/alu/Shifter/sBlade1/low_sel[14]/U5/Y (AOI22X1)
+                                                          0.03       0.53 f
+  execute/alu/Shifter/sBlade1/low_sel[14]/out (Bit1_Mux2_1_62)
+                                                          0.00       0.53 f
+  execute/alu/Shifter/sBlade1/out<14> (ALU_Shifter_1)     0.00       0.53 f
+  execute/alu/Shifter/sBlade2/in<14> (ALU_Shifter_2)      0.00       0.53 f
+  execute/alu/Shifter/sBlade2/U18/Y (BUFX2)               0.04       0.57 f
+  execute/alu/Shifter/sBlade2/U5/Y (BUFX2)                0.03       0.61 f
+  execute/alu/Shifter/sBlade2/up_sel12/in3 (Bit1_Mux4_1_35)
+                                                          0.00       0.61 f
+  execute/alu/Shifter/sBlade2/up_sel12/U13/Y (INVX1)      0.00       0.61 r
+  execute/alu/Shifter/sBlade2/up_sel12/U15/Y (AOI21X1)
+                                                          0.01       0.62 f
+  execute/alu/Shifter/sBlade2/up_sel12/U2/Y (BUFX2)       0.03       0.65 f
+  execute/alu/Shifter/sBlade2/up_sel12/U5/Y (AND2X2)      0.03       0.69 f
+  execute/alu/Shifter/sBlade2/up_sel12/U6/Y (INVX1)       0.00       0.69 r
+  execute/alu/Shifter/sBlade2/up_sel12/U16/Y (NAND3X1)
+                                                          0.02       0.70 f
+  execute/alu/Shifter/sBlade2/up_sel12/out (Bit1_Mux4_1_35)
+                                                          0.00       0.70 f
+  execute/alu/Shifter/sBlade2/low_sel[12]/in1 (Bit1_Mux2_1_44)
+                                                          0.00       0.70 f
+  execute/alu/Shifter/sBlade2/low_sel[12]/U4/Y (INVX1)
+                                                          0.01       0.71 r
+  execute/alu/Shifter/sBlade2/low_sel[12]/U5/Y (AOI22X1)
+                                                          0.01       0.72 f
+  execute/alu/Shifter/sBlade2/low_sel[12]/out (Bit1_Mux2_1_44)
+                                                          0.00       0.72 f
+  execute/alu/Shifter/sBlade2/out<12> (ALU_Shifter_2)     0.00       0.72 f
+  execute/alu/Shifter/sBlade4/in<12> (ALU_Shifter_4)      0.00       0.72 f
+  execute/alu/Shifter/sBlade4/U27/Y (BUFX2)               0.04       0.76 f
+  execute/alu/Shifter/sBlade4/U6/Y (BUFX2)                0.03       0.80 f
+  execute/alu/Shifter/sBlade4/up_sel0/in0 (Bit1_Mux4_1_31)
+                                                          0.00       0.80 f
+  execute/alu/Shifter/sBlade4/up_sel0/U12/Y (OAI21X1)     0.04       0.84 r
+  execute/alu/Shifter/sBlade4/up_sel0/U13/Y (NAND3X1)     0.01       0.85 f
+  execute/alu/Shifter/sBlade4/up_sel0/out (Bit1_Mux4_1_31)
+                                                          0.00       0.85 f
+  execute/alu/Shifter/sBlade4/low_sel[0]/in1 (Bit1_Mux2_1_16)
+                                                          0.00       0.85 f
+  execute/alu/Shifter/sBlade4/low_sel[0]/U4/Y (INVX1)     0.01       0.86 r
+  execute/alu/Shifter/sBlade4/low_sel[0]/U5/Y (AOI22X1)
+                                                          0.01       0.87 f
+  execute/alu/Shifter/sBlade4/low_sel[0]/out (Bit1_Mux2_1_16)
+                                                          0.00       0.87 f
+  execute/alu/Shifter/sBlade4/out<0> (ALU_Shifter_4)      0.00       0.87 f
+  execute/alu/Shifter/sBlade8/in<0> (ALU_Shifter_8)       0.00       0.87 f
+  execute/alu/Shifter/sBlade8/U37/Y (BUFX2)               0.04       0.91 f
+  execute/alu/Shifter/sBlade8/up_sel8/in0 (Bit1_Mux4_1_7)
+                                                          0.00       0.91 f
+  execute/alu/Shifter/sBlade8/up_sel8/U11/Y (INVX1)       0.00       0.91 r
+  execute/alu/Shifter/sBlade8/up_sel8/U6/Y (OR2X2)        0.04       0.96 r
+  execute/alu/Shifter/sBlade8/up_sel8/U7/Y (INVX1)        0.02       0.97 f
+  execute/alu/Shifter/sBlade8/up_sel8/U8/Y (OR2X2)        0.05       1.02 f
+  execute/alu/Shifter/sBlade8/up_sel8/U9/Y (INVX1)        0.00       1.01 r
+  execute/alu/Shifter/sBlade8/up_sel8/U13/Y (AND2X2)      0.03       1.05 r
+  execute/alu/Shifter/sBlade8/up_sel8/U14/Y (INVX1)       0.01       1.06 f
+  execute/alu/Shifter/sBlade8/up_sel8/out (Bit1_Mux4_1_7)
+                                                          0.00       1.06 f
+  execute/alu/Shifter/sBlade8/low_sel[8]/in1 (Bit1_Mux2_1_8)
+                                                          0.00       1.06 f
+  execute/alu/Shifter/sBlade8/low_sel[8]/U4/Y (INVX1)     0.00       1.06 r
+  execute/alu/Shifter/sBlade8/low_sel[8]/U7/Y (AOI21X1)
+                                                          0.01       1.07 f
+  execute/alu/Shifter/sBlade8/low_sel[8]/out (Bit1_Mux2_1_8)
+                                                          0.00       1.07 f
+  execute/alu/Shifter/sBlade8/out<8> (ALU_Shifter_8)      0.00       1.07 f
+  execute/alu/Shifter/Out<8> (ALU_Shifter)                0.00       1.07 f
+  execute/alu/U392/Y (INVX1)                              0.00       1.08 r
+  execute/alu/U552/Y (AOI21X1)                            0.02       1.10 f
+  execute/alu/Result<8> (ALU)                             0.00       1.10 f
+  execute/ALU_Result<8> (Execute)                         0.00       1.10 f
+  ex_me_blade/ALU_Result_Exe<8> (Execute_Memory_Blade)
+                                                          0.00       1.10 f
+  ex_me_blade/alu_result[8]/d (dff_pipe_50)               0.00       1.10 f
+  ex_me_blade/alu_result[8]/U5/Y (INVX1)                  0.00       1.10 r
+  ex_me_blade/alu_result[8]/U6/Y (AOI21X1)                0.01       1.12 f
+  ex_me_blade/alu_result[8]/pipe/d (dff_178)              0.00       1.12 f
+  ex_me_blade/alu_result[8]/pipe/U5/Y (BUFX2)             0.03       1.15 f
+  ex_me_blade/alu_result[8]/pipe/U3/Y (AND2X2)            0.03       1.18 f
+  ex_me_blade/alu_result[8]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.18 f
+  data arrival time                                                  1.18
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[8]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.18
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.23
+
+
+  Startpoint: me_wb_blade/write_reg[2]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[10]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  me_wb_blade/write_reg[2]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  me_wb_blade/write_reg[2]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  me_wb_blade/write_reg[2]/pipe/q (dff_130)               0.00       0.11 f
+  me_wb_blade/write_reg[2]/q (dff_pipe_2)                 0.00       0.11 f
+  me_wb_blade/Write_Reg_WB<2> (Memory_Writeback_Blade)
+                                                          0.00       0.11 f
+  extra_logic/Write_Reg_WB<2> (Extra_Logic2)              0.00       0.11 f
+  extra_logic/U7/Y (INVX1)                                0.01       0.12 r
+  extra_logic/U8/Y (INVX1)                                0.02       0.14 f
+  extra_logic/U178/Y (XNOR2X1)                            0.05       0.19 r
+  extra_logic/U116/Y (AND2X2)                             0.03       0.22 r
+  extra_logic/U117/Y (INVX1)                              0.02       0.23 f
+  extra_logic/U181/Y (OAI21X1)                            0.05       0.28 r
+  extra_logic/B_Forward (Extra_Logic2)                    0.00       0.28 r
+  execute/B_Forward (Execute)                             0.00       0.28 r
+  execute/U55/Y (INVX1)                                   0.03       0.31 f
+  execute/U221/Y (INVX1)                                  0.02       0.33 r
+  execute/U159/Y (AND2X2)                                 0.03       0.36 r
+  execute/U74/Y (OR2X2)                                   0.04       0.40 r
+  execute/alu/B<0> (ALU)                                  0.00       0.40 r
+  execute/alu/Shifter/Cnt<0> (ALU_Shifter)                0.00       0.40 r
+  execute/alu/Shifter/sBlade1/sh (ALU_Shifter_1)          0.00       0.40 r
+  execute/alu/Shifter/sBlade1/U7/Y (INVX1)                0.02       0.42 f
+  execute/alu/Shifter/sBlade1/U20/Y (INVX2)               0.05       0.48 r
+  execute/alu/Shifter/sBlade1/low_sel[4]/s (Bit1_Mux2_1_52)
+                                                          0.00       0.48 r
+  execute/alu/Shifter/sBlade1/low_sel[4]/U6/Y (OR2X2)     0.05       0.52 r
+  execute/alu/Shifter/sBlade1/low_sel[4]/U7/Y (AOI22X1)
+                                                          0.03       0.56 f
+  execute/alu/Shifter/sBlade1/low_sel[4]/U3/Y (INVX1)     0.01       0.57 r
+  execute/alu/Shifter/sBlade1/low_sel[4]/U4/Y (INVX2)     0.03       0.60 f
+  execute/alu/Shifter/sBlade1/low_sel[4]/out (Bit1_Mux2_1_52)
+                                                          0.00       0.60 f
+  execute/alu/Shifter/sBlade1/out<4> (ALU_Shifter_1)      0.00       0.60 f
+  execute/alu/Shifter/sBlade2/in<4> (ALU_Shifter_2)       0.00       0.60 f
+  execute/alu/Shifter/sBlade2/up_sel2/in2 (Bit1_Mux4_1_45)
+                                                          0.00       0.60 f
+  execute/alu/Shifter/sBlade2/up_sel2/U10/Y (AOI22X1)     0.04       0.64 r
+  execute/alu/Shifter/sBlade2/up_sel2/U3/Y (BUFX2)        0.04       0.68 r
+  execute/alu/Shifter/sBlade2/up_sel2/U11/Y (OAI21X1)     0.01       0.69 f
+  execute/alu/Shifter/sBlade2/up_sel2/out (Bit1_Mux4_1_45)
+                                                          0.00       0.69 f
+  execute/alu/Shifter/sBlade2/low_sel[2]/in1 (Bit1_Mux2_1_34)
+                                                          0.00       0.69 f
+  execute/alu/Shifter/sBlade2/low_sel[2]/U4/Y (INVX1)     0.00       0.69 r
+  execute/alu/Shifter/sBlade2/low_sel[2]/U5/Y (AOI22X1)
+                                                          0.01       0.70 f
+  execute/alu/Shifter/sBlade2/low_sel[2]/out (Bit1_Mux2_1_34)
+                                                          0.00       0.70 f
+  execute/alu/Shifter/sBlade2/out<2> (ALU_Shifter_2)      0.00       0.70 f
+  execute/alu/Shifter/sBlade4/in<2> (ALU_Shifter_4)       0.00       0.70 f
+  execute/alu/Shifter/sBlade4/U35/Y (INVX1)               0.01       0.72 r
+  execute/alu/Shifter/sBlade4/U36/Y (INVX1)               0.02       0.74 f
+  execute/alu/Shifter/sBlade4/low_sel[2]/in0 (Bit1_Mux2_1_18)
+                                                          0.00       0.74 f
+  execute/alu/Shifter/sBlade4/low_sel[2]/U3/Y (AND2X2)
+                                                          0.04       0.78 f
+  execute/alu/Shifter/sBlade4/low_sel[2]/U4/Y (INVX1)     0.00       0.78 r
+  execute/alu/Shifter/sBlade4/low_sel[2]/U6/Y (AOI22X1)
+                                                          0.03       0.81 f
+  execute/alu/Shifter/sBlade4/low_sel[2]/out (Bit1_Mux2_1_18)
+                                                          0.00       0.81 f
+  execute/alu/Shifter/sBlade4/out<2> (ALU_Shifter_4)      0.00       0.81 f
+  execute/alu/Shifter/sBlade8/in<2> (ALU_Shifter_8)       0.00       0.81 f
+  execute/alu/Shifter/sBlade8/U39/Y (BUFX2)               0.04       0.85 f
+  execute/alu/Shifter/sBlade8/up_sel10/in0 (Bit1_Mux4_1_5)
+                                                          0.00       0.85 f
+  execute/alu/Shifter/sBlade8/up_sel10/U14/Y (INVX1)      0.00       0.85 r
+  execute/alu/Shifter/sBlade8/up_sel10/U6/Y (OR2X2)       0.04       0.89 r
+  execute/alu/Shifter/sBlade8/up_sel10/U7/Y (INVX1)       0.02       0.91 f
+  execute/alu/Shifter/sBlade8/up_sel10/U10/Y (OR2X2)      0.05       0.96 f
+  execute/alu/Shifter/sBlade8/up_sel10/U11/Y (INVX1)      0.00       0.95 r
+  execute/alu/Shifter/sBlade8/up_sel10/U8/Y (AND2X2)      0.03       0.98 r
+  execute/alu/Shifter/sBlade8/up_sel10/U9/Y (INVX1)       0.01       1.00 f
+  execute/alu/Shifter/sBlade8/up_sel10/out (Bit1_Mux4_1_5)
+                                                          0.00       1.00 f
+  execute/alu/Shifter/sBlade8/low_sel[10]/in1 (Bit1_Mux2_1_10)
+                                                          0.00       1.00 f
+  execute/alu/Shifter/sBlade8/low_sel[10]/U4/Y (INVX1)
+                                                          0.00       1.00 r
+  execute/alu/Shifter/sBlade8/low_sel[10]/U5/Y (AOI22X1)
+                                                          0.01       1.01 f
+  execute/alu/Shifter/sBlade8/low_sel[10]/out (Bit1_Mux2_1_10)
+                                                          0.00       1.01 f
+  execute/alu/Shifter/sBlade8/U25/Y (BUFX2)               0.04       1.05 f
+  execute/alu/Shifter/sBlade8/out<10> (ALU_Shifter_8)     0.00       1.05 f
+  execute/alu/Shifter/Out<10> (ALU_Shifter)               0.00       1.05 f
+  execute/alu/U250/Y (AND2X2)                             0.04       1.08 f
+  execute/alu/U251/Y (INVX1)                              0.00       1.08 r
+  execute/alu/U197/Y (AND2X2)                             0.03       1.11 r
+  execute/alu/U198/Y (INVX1)                              0.01       1.13 f
+  execute/alu/Result<10> (ALU)                            0.00       1.13 f
+  execute/ALU_Result<10> (Execute)                        0.00       1.13 f
+  ex_me_blade/ALU_Result_Exe<10> (Execute_Memory_Blade)
+                                                          0.00       1.13 f
+  ex_me_blade/alu_result[10]/d (dff_pipe_52)              0.00       1.13 f
+  ex_me_blade/alu_result[10]/U3/Y (INVX1)                 0.00       1.13 r
+  ex_me_blade/alu_result[10]/U4/Y (MUX2X1)                0.02       1.15 f
+  ex_me_blade/alu_result[10]/pipe/d (dff_180)             0.00       1.15 f
+  ex_me_blade/alu_result[10]/pipe/U3/Y (AND2X1)           0.03       1.18 f
+  ex_me_blade/alu_result[10]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.18 f
+  data arrival time                                                  1.18
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[10]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.18
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.23
+
+
+  Startpoint: me_wb_blade/write_reg[2]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[7]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  me_wb_blade/write_reg[2]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  me_wb_blade/write_reg[2]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  me_wb_blade/write_reg[2]/pipe/q (dff_130)               0.00       0.11 f
+  me_wb_blade/write_reg[2]/q (dff_pipe_2)                 0.00       0.11 f
+  me_wb_blade/Write_Reg_WB<2> (Memory_Writeback_Blade)
+                                                          0.00       0.11 f
+  extra_logic/Write_Reg_WB<2> (Extra_Logic2)              0.00       0.11 f
+  extra_logic/U7/Y (INVX1)                                0.01       0.12 r
+  extra_logic/U8/Y (INVX1)                                0.02       0.14 f
+  extra_logic/U178/Y (XNOR2X1)                            0.05       0.19 r
+  extra_logic/U116/Y (AND2X2)                             0.03       0.22 r
+  extra_logic/U117/Y (INVX1)                              0.02       0.23 f
+  extra_logic/U181/Y (OAI21X1)                            0.05       0.28 r
+  extra_logic/B_Forward (Extra_Logic2)                    0.00       0.28 r
+  execute/B_Forward (Execute)                             0.00       0.28 r
+  execute/U53/Y (INVX1)                                   0.03       0.31 f
+  execute/U86/Y (INVX1)                                   0.03       0.33 r
+  execute/U173/Y (OR2X2)                                  0.04       0.38 r
+  execute/U174/Y (INVX1)                                  0.02       0.39 f
+  execute/U237/Y (AOI21X1)                                0.02       0.41 r
+  execute/U126/Y (AND2X2)                                 0.03       0.44 r
+  execute/U127/Y (INVX1)                                  0.01       0.46 f
+  execute/alu/B<2> (ALU)                                  0.00       0.46 f
+  execute/alu/U354/Y (INVX1)                              0.01       0.47 r
+  execute/alu/U79/Y (INVX1)                               0.02       0.49 f
+  execute/alu/U417/Y (OAI21X1)                            0.06       0.55 r
+  execute/alu/CLA/B<2> (ALU_CLA)                          0.00       0.55 r
+  execute/alu/CLA/claMod1/B<2> (ALU_Bit4_CLA_3)           0.00       0.55 r
+  execute/alu/CLA/claMod1/FA_mod2/B (ALU_CLA_FA_13)       0.00       0.55 r
+  execute/alu/CLA/claMod1/FA_mod2/U2/Y (INVX2)            0.02       0.57 f
+  execute/alu/CLA/claMod1/FA_mod2/U7/Y (AND2X2)           0.04       0.61 f
+  execute/alu/CLA/claMod1/FA_mod2/U8/Y (INVX1)            0.00       0.60 r
+  execute/alu/CLA/claMod1/FA_mod2/U3/Y (AND2X2)           0.03       0.63 r
+  execute/alu/CLA/claMod1/FA_mod2/U4/Y (INVX1)            0.02       0.65 f
+  execute/alu/CLA/claMod1/FA_mod2/P (ALU_CLA_FA_13)       0.00       0.65 f
+  execute/alu/CLA/claMod1/U21/Y (AND2X2)                  0.03       0.68 f
+  execute/alu/CLA/claMod1/U22/Y (INVX1)                   0.00       0.68 r
+  execute/alu/CLA/claMod1/U10/Y (OR2X2)                   0.04       0.72 r
+  execute/alu/CLA/claMod1/U11/Y (INVX1)                   0.02       0.74 f
+  execute/alu/CLA/claMod1/P (ALU_Bit4_CLA_3)              0.00       0.74 f
+  execute/alu/CLA/U21/Y (AND2X2)                          0.04       0.78 f
+  execute/alu/CLA/U4/Y (BUFX2)                            0.03       0.81 f
+  execute/alu/CLA/U30/Y (OR2X2)                           0.05       0.86 f
+  execute/alu/CLA/claMod2/Ci (ALU_Bit4_CLA_2)             0.00       0.86 f
+  execute/alu/CLA/claMod2/U21/Y (AND2X2)                  0.03       0.89 f
+  execute/alu/CLA/claMod2/U5/Y (OR2X2)                    0.05       0.94 f
+  execute/alu/CLA/claMod2/U22/Y (AND2X2)                  0.03       0.97 f
+  execute/alu/CLA/claMod2/U23/Y (INVX1)                   0.00       0.96 r
+  execute/alu/CLA/claMod2/U2/Y (AND2X2)                   0.03       1.00 r
+  execute/alu/CLA/claMod2/U1/Y (INVX1)                    0.02       1.02 f
+  execute/alu/CLA/claMod2/FA_mod3/Ci (ALU_CLA_FA_8)       0.00       1.02 f
+  execute/alu/CLA/claMod2/FA_mod3/U6/Y (XNOR2X1)          0.03       1.04 f
+  execute/alu/CLA/claMod2/FA_mod3/S (ALU_CLA_FA_8)        0.00       1.04 f
+  execute/alu/CLA/claMod2/S<3> (ALU_Bit4_CLA_2)           0.00       1.04 f
+  execute/alu/CLA/S<7> (ALU_CLA)                          0.00       1.04 f
+  execute/alu/U87/Y (INVX1)                               0.00       1.05 r
+  execute/alu/U106/Y (OAI21X1)                            0.01       1.06 f
+  execute/alu/U107/Y (INVX1)                              0.00       1.06 r
+  execute/alu/U194/Y (AND2X2)                             0.03       1.09 r
+  execute/alu/U195/Y (INVX1)                              0.01       1.10 f
+  execute/alu/Result<7> (ALU)                             0.00       1.10 f
+  execute/ALU_Result<7> (Execute)                         0.00       1.10 f
+  ex_me_blade/ALU_Result_Exe<7> (Execute_Memory_Blade)
+                                                          0.00       1.10 f
+  ex_me_blade/alu_result[7]/d (dff_pipe_49)               0.00       1.10 f
+  ex_me_blade/alu_result[7]/U5/Y (INVX1)                  0.00       1.10 r
+  ex_me_blade/alu_result[7]/U6/Y (AOI21X1)                0.01       1.11 f
+  ex_me_blade/alu_result[7]/pipe/d (dff_177)              0.00       1.11 f
+  ex_me_blade/alu_result[7]/pipe/U5/Y (BUFX2)             0.03       1.15 f
+  ex_me_blade/alu_result[7]/pipe/U3/Y (AND2X2)            0.03       1.18 f
+  ex_me_blade/alu_result[7]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.18 f
+  data arrival time                                                  1.18
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[7]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.18
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.23
+
+
+  Startpoint: me_wb_blade/write_reg[2]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[3]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  me_wb_blade/write_reg[2]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  me_wb_blade/write_reg[2]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  me_wb_blade/write_reg[2]/pipe/q (dff_130)               0.00       0.11 f
+  me_wb_blade/write_reg[2]/q (dff_pipe_2)                 0.00       0.11 f
+  me_wb_blade/Write_Reg_WB<2> (Memory_Writeback_Blade)
+                                                          0.00       0.11 f
+  extra_logic/Write_Reg_WB<2> (Extra_Logic2)              0.00       0.11 f
+  extra_logic/U7/Y (INVX1)                                0.01       0.12 r
+  extra_logic/U8/Y (INVX1)                                0.02       0.14 f
+  extra_logic/U178/Y (XNOR2X1)                            0.05       0.19 r
+  extra_logic/U116/Y (AND2X2)                             0.03       0.22 r
+  extra_logic/U117/Y (INVX1)                              0.02       0.23 f
+  extra_logic/U181/Y (OAI21X1)                            0.05       0.28 r
+  extra_logic/B_Forward (Extra_Logic2)                    0.00       0.28 r
+  execute/B_Forward (Execute)                             0.00       0.28 r
+  execute/U55/Y (INVX1)                                   0.03       0.31 f
+  execute/U221/Y (INVX1)                                  0.02       0.33 r
+  execute/U159/Y (AND2X2)                                 0.03       0.36 r
+  execute/U74/Y (OR2X2)                                   0.04       0.40 r
+  execute/alu/B<0> (ALU)                                  0.00       0.40 r
+  execute/alu/Shifter/Cnt<0> (ALU_Shifter)                0.00       0.40 r
+  execute/alu/Shifter/sBlade1/sh (ALU_Shifter_1)          0.00       0.40 r
+  execute/alu/Shifter/sBlade1/U7/Y (INVX1)                0.02       0.42 f
+  execute/alu/Shifter/sBlade1/U20/Y (INVX2)               0.05       0.48 r
+  execute/alu/Shifter/sBlade1/low_sel[5]/s (Bit1_Mux2_1_53)
+                                                          0.00       0.48 r
+  execute/alu/Shifter/sBlade1/low_sel[5]/U4/Y (OR2X2)     0.05       0.52 r
+  execute/alu/Shifter/sBlade1/low_sel[5]/U5/Y (AOI22X1)
+                                                          0.03       0.56 f
+  execute/alu/Shifter/sBlade1/low_sel[5]/out (Bit1_Mux2_1_53)
+                                                          0.00       0.56 f
+  execute/alu/Shifter/sBlade1/out<5> (ALU_Shifter_1)      0.00       0.56 f
+  execute/alu/Shifter/sBlade2/in<5> (ALU_Shifter_2)       0.00       0.56 f
+  execute/alu/Shifter/sBlade2/U15/Y (BUFX2)               0.04       0.60 f
+  execute/alu/Shifter/sBlade2/U43/Y (INVX1)               0.00       0.60 r
+  execute/alu/Shifter/sBlade2/U44/Y (INVX1)               0.02       0.62 f
+  execute/alu/Shifter/sBlade2/up_sel7/in1 (Bit1_Mux4_1_40)
+                                                          0.00       0.62 f
+  execute/alu/Shifter/sBlade2/up_sel7/U11/Y (AOI22X1)     0.04       0.66 r
+  execute/alu/Shifter/sBlade2/up_sel7/U2/Y (INVX1)        0.02       0.68 f
+  execute/alu/Shifter/sBlade2/up_sel7/U3/Y (INVX1)        0.00       0.68 r
+  execute/alu/Shifter/sBlade2/up_sel7/U12/Y (OAI21X1)     0.01       0.69 f
+  execute/alu/Shifter/sBlade2/up_sel7/out (Bit1_Mux4_1_40)
+                                                          0.00       0.69 f
+  execute/alu/Shifter/sBlade2/low_sel[7]/in1 (Bit1_Mux2_1_39)
+                                                          0.00       0.69 f
+  execute/alu/Shifter/sBlade2/low_sel[7]/U4/Y (INVX1)     0.00       0.69 r
+  execute/alu/Shifter/sBlade2/low_sel[7]/U5/Y (AOI22X1)
+                                                          0.01       0.70 f
+  execute/alu/Shifter/sBlade2/low_sel[7]/out (Bit1_Mux2_1_39)
+                                                          0.00       0.70 f
+  execute/alu/Shifter/sBlade2/out<7> (ALU_Shifter_2)      0.00       0.70 f
+  execute/alu/Shifter/sBlade4/in<7> (ALU_Shifter_4)       0.00       0.70 f
+  execute/alu/Shifter/sBlade4/U32/Y (INVX1)               0.01       0.72 r
+  execute/alu/Shifter/sBlade4/U33/Y (INVX1)               0.01       0.73 f
+  execute/alu/Shifter/sBlade4/up_sel11/in1 (Bit1_Mux4_1_20)
+                                                          0.00       0.73 f
+  execute/alu/Shifter/sBlade4/up_sel11/U11/Y (INVX1)      0.00       0.73 r
+  execute/alu/Shifter/sBlade4/up_sel11/U4/Y (OR2X2)       0.04       0.78 r
+  execute/alu/Shifter/sBlade4/up_sel11/U5/Y (INVX1)       0.02       0.79 f
+  execute/alu/Shifter/sBlade4/up_sel11/U6/Y (OR2X2)       0.05       0.84 f
+  execute/alu/Shifter/sBlade4/up_sel11/U7/Y (INVX1)       0.00       0.83 r
+  execute/alu/Shifter/sBlade4/up_sel11/U15/Y (OAI21X1)
+                                                          0.01       0.84 f
+  execute/alu/Shifter/sBlade4/up_sel11/out (Bit1_Mux4_1_20)
+                                                          0.00       0.84 f
+  execute/alu/Shifter/sBlade4/low_sel[11]/in1 (Bit1_Mux2_1_27)
+                                                          0.00       0.84 f
+  execute/alu/Shifter/sBlade4/low_sel[11]/U4/Y (INVX1)
+                                                          0.00       0.84 r
+  execute/alu/Shifter/sBlade4/low_sel[11]/U5/Y (AOI22X1)
+                                                          0.01       0.86 f
+  execute/alu/Shifter/sBlade4/low_sel[11]/out (Bit1_Mux2_1_27)
+                                                          0.00       0.86 f
+  execute/alu/Shifter/sBlade4/out<11> (ALU_Shifter_4)     0.00       0.86 f
+  execute/alu/Shifter/sBlade8/in<11> (ALU_Shifter_8)      0.00       0.86 f
+  execute/alu/Shifter/sBlade8/U42/Y (BUFX2)               0.04       0.90 f
+  execute/alu/Shifter/sBlade8/up_sel3/in3 (Bit1_Mux4_1_12)
+                                                          0.00       0.90 f
+  execute/alu/Shifter/sBlade8/up_sel3/U15/Y (OAI21X1)     0.04       0.95 r
+  execute/alu/Shifter/sBlade8/up_sel3/U16/Y (NAND3X1)     0.02       0.96 f
+  execute/alu/Shifter/sBlade8/up_sel3/out (Bit1_Mux4_1_12)
+                                                          0.00       0.96 f
+  execute/alu/Shifter/sBlade8/low_sel[3]/in1 (Bit1_Mux2_1_3)
+                                                          0.00       0.96 f
+  execute/alu/Shifter/sBlade8/low_sel[3]/U4/Y (INVX1)     0.01       0.97 r
+  execute/alu/Shifter/sBlade8/low_sel[3]/U5/Y (AOI22X1)
+                                                          0.01       0.98 f
+  execute/alu/Shifter/sBlade8/low_sel[3]/out (Bit1_Mux2_1_3)
+                                                          0.00       0.98 f
+  execute/alu/Shifter/sBlade8/U19/Y (BUFX2)               0.04       1.02 f
+  execute/alu/Shifter/sBlade8/out<3> (ALU_Shifter_8)      0.00       1.02 f
+  execute/alu/Shifter/Out<3> (ALU_Shifter)                0.00       1.02 f
+  execute/alu/U49/Y (AND2X1)                              0.03       1.05 f
+  execute/alu/U316/Y (INVX1)                              0.00       1.05 r
+  execute/alu/U186/Y (AND2X2)                             0.03       1.08 r
+  execute/alu/U187/Y (INVX1)                              0.01       1.09 f
+  execute/alu/Result<3> (ALU)                             0.00       1.09 f
+  execute/ALU_Result<3> (Execute)                         0.00       1.09 f
+  ex_me_blade/ALU_Result_Exe<3> (Execute_Memory_Blade)
+                                                          0.00       1.09 f
+  ex_me_blade/alu_result[3]/d (dff_pipe_45)               0.00       1.09 f
+  ex_me_blade/alu_result[3]/U5/Y (INVX1)                  0.00       1.10 r
+  ex_me_blade/alu_result[3]/U6/Y (AOI21X1)                0.01       1.11 f
+  ex_me_blade/alu_result[3]/pipe/d (dff_173)              0.00       1.11 f
+  ex_me_blade/alu_result[3]/pipe/U5/Y (BUFX2)             0.03       1.14 f
+  ex_me_blade/alu_result[3]/pipe/U3/Y (AND2X1)            0.03       1.17 f
+  ex_me_blade/alu_result[3]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.17 f
+  data arrival time                                                  1.17
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[3]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.17
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.23
+
+
+  Startpoint: me_wb_blade/write_reg[2]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[11]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  me_wb_blade/write_reg[2]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  me_wb_blade/write_reg[2]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  me_wb_blade/write_reg[2]/pipe/q (dff_130)               0.00       0.11 f
+  me_wb_blade/write_reg[2]/q (dff_pipe_2)                 0.00       0.11 f
+  me_wb_blade/Write_Reg_WB<2> (Memory_Writeback_Blade)
+                                                          0.00       0.11 f
+  extra_logic/Write_Reg_WB<2> (Extra_Logic2)              0.00       0.11 f
+  extra_logic/U7/Y (INVX1)                                0.01       0.12 r
+  extra_logic/U8/Y (INVX1)                                0.02       0.14 f
+  extra_logic/U178/Y (XNOR2X1)                            0.05       0.19 r
+  extra_logic/U116/Y (AND2X2)                             0.03       0.22 r
+  extra_logic/U117/Y (INVX1)                              0.02       0.23 f
+  extra_logic/U181/Y (OAI21X1)                            0.05       0.28 r
+  extra_logic/B_Forward (Extra_Logic2)                    0.00       0.28 r
+  execute/B_Forward (Execute)                             0.00       0.28 r
+  execute/U53/Y (INVX1)                                   0.03       0.31 f
+  execute/U49/Y (INVX1)                                   0.01       0.32 r
+  execute/U242/Y (NAND2X1)                                0.01       0.33 f
+  execute/U188/Y (INVX1)                                  0.03       0.37 r
+  execute/U182/Y (AND2X2)                                 0.03       0.40 r
+  execute/U183/Y (INVX1)                                  0.02       0.42 f
+  execute/U243/Y (NAND3X1)                                0.03       0.44 r
+  execute/alu/B<4> (ALU)                                  0.00       0.44 r
+  execute/alu/U275/Y (BUFX2)                              0.04       0.48 r
+  execute/alu/U379/Y (INVX1)                              0.02       0.50 f
+  execute/alu/U380/Y (MUX2X1)                             0.04       0.54 r
+  execute/alu/U143/Y (AND2X2)                             0.04       0.58 r
+  execute/alu/U3/Y (INVX4)                                0.03       0.61 f
+  execute/alu/CLA/B<4> (ALU_CLA)                          0.00       0.61 f
+  execute/alu/CLA/claMod2/B<0> (ALU_Bit4_CLA_2)           0.00       0.61 f
+  execute/alu/CLA/claMod2/FA_mod0/B (ALU_CLA_FA_11)       0.00       0.61 f
+  execute/alu/CLA/claMod2/FA_mod0/U2/Y (XOR2X1)           0.05       0.66 r
+  execute/alu/CLA/claMod2/FA_mod0/P (ALU_CLA_FA_11)       0.00       0.66 r
+  execute/alu/CLA/claMod2/U26/Y (AND2X2)                  0.03       0.69 r
+  execute/alu/CLA/claMod2/U27/Y (INVX1)                   0.02       0.71 f
+  execute/alu/CLA/claMod2/U15/Y (OR2X2)                   0.04       0.75 f
+  execute/alu/CLA/claMod2/U16/Y (INVX1)                   0.00       0.75 r
+  execute/alu/CLA/claMod2/P (ALU_Bit4_CLA_2)              0.00       0.75 r
+  execute/alu/CLA/U1/Y (INVX1)                            0.01       0.76 f
+  execute/alu/CLA/U2/Y (INVX1)                            0.01       0.77 r
+  execute/alu/CLA/U28/Y (NAND3X1)                         0.01       0.78 f
+  execute/alu/CLA/U13/Y (BUFX2)                           0.03       0.82 f
+  execute/alu/CLA/U29/Y (NAND3X1)                         0.03       0.85 r
+  execute/alu/CLA/claMod3/Ci (ALU_Bit4_CLA_1)             0.00       0.85 r
+  execute/alu/CLA/claMod3/U26/Y (BUFX2)                   0.05       0.90 r
+  execute/alu/CLA/claMod3/U16/Y (AND2X2)                  0.03       0.93 r
+  execute/alu/CLA/claMod3/U17/Y (INVX1)                   0.01       0.94 f
+  execute/alu/CLA/claMod3/U12/Y (AND2X2)                  0.04       0.98 f
+  execute/alu/CLA/claMod3/U13/Y (INVX1)                   0.01       0.99 r
+  execute/alu/CLA/claMod3/FA_mod3/Ci (ALU_CLA_FA_4)       0.00       0.99 r
+  execute/alu/CLA/claMod3/FA_mod3/U9/Y (XNOR2X1)          0.03       1.01 f
+  execute/alu/CLA/claMod3/FA_mod3/S (ALU_CLA_FA_4)        0.00       1.01 f
+  execute/alu/CLA/claMod3/S<3> (ALU_Bit4_CLA_1)           0.00       1.01 f
+  execute/alu/CLA/S<11> (ALU_CLA)                         0.00       1.01 f
+  execute/alu/U575/Y (AOI21X1)                            0.03       1.04 r
+  execute/alu/U254/Y (BUFX2)                              0.03       1.07 r
+  execute/alu/U201/Y (AND2X2)                             0.03       1.11 r
+  execute/alu/U202/Y (INVX1)                              0.01       1.12 f
+  execute/alu/Result<11> (ALU)                            0.00       1.12 f
+  execute/ALU_Result<11> (Execute)                        0.00       1.12 f
+  ex_me_blade/ALU_Result_Exe<11> (Execute_Memory_Blade)
+                                                          0.00       1.12 f
+  ex_me_blade/alu_result[11]/d (dff_pipe_53)              0.00       1.12 f
+  ex_me_blade/alu_result[11]/U3/Y (INVX1)                 0.00       1.12 r
+  ex_me_blade/alu_result[11]/U4/Y (MUX2X1)                0.02       1.14 f
+  ex_me_blade/alu_result[11]/pipe/d (dff_181)             0.00       1.14 f
+  ex_me_blade/alu_result[11]/pipe/U3/Y (AND2X1)           0.03       1.17 f
+  ex_me_blade/alu_result[11]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.17 f
+  data arrival time                                                  1.17
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[11]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.17
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.23
+
+
+  Startpoint: if_de_blade/Instruc_L[8]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[15]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  if_de_blade/Instruc_L[8]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  if_de_blade/Instruc_L[8]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.12       0.12 f
+  if_de_blade/Instruc_L[8]/pipe/q (dff_319)               0.00       0.12 f
+  if_de_blade/Instruc_L[8]/q (dff_pipe_191)               0.00       0.12 f
+  if_de_blade/Instruction_Dec<8> (Fetch_Decode_Blade)     0.00       0.12 f
+  decode/Instruction<8> (Decode)                          0.00       0.12 f
+  decode/RFB/Reg_1_Src<0> (Register_File_Bypass)          0.00       0.12 f
+  decode/RFB/RF/Reg_1_Src<0> (Register_File)              0.00       0.12 f
+  decode/RFB/RF/U185/Y (INVX1)                            0.04       0.15 r
+  decode/RFB/RF/U421/Y (NAND3X1)                          0.02       0.17 f
+  decode/RFB/RF/U279/Y (BUFX2)                            0.04       0.21 f
+  decode/RFB/RF/U280/Y (INVX1)                            0.05       0.26 r
+  decode/RFB/RF/U454/Y (AOI22X1)                          0.04       0.29 f
+  decode/RFB/RF/U222/Y (AND2X2)                           0.04       0.33 f
+  decode/RFB/RF/U203/Y (AND2X2)                           0.03       0.37 f
+  decode/RFB/RF/U204/Y (INVX1)                            0.00       0.36 r
+  decode/RFB/RF/Reg_1_Data<5> (Register_File)             0.00       0.36 r
+  decode/RFB/U23/Y (INVX1)                                0.01       0.38 f
+  decode/RFB/U21/Y (MUX2X1)                               0.05       0.43 r
+  decode/RFB/Reg_1_Data<5> (Register_File_Bypass)         0.00       0.43 r
+  decode/pc_logic/Reg_1_Data<5> (PC_Logic)                0.00       0.43 r
+  decode/pc_logic/U30/Y (AND2X2)                          0.03       0.46 r
+  decode/pc_logic/U31/Y (INVX1)                           0.02       0.48 f
+  decode/pc_logic/U136/Y (NAND3X1)                        0.03       0.51 r
+  decode/pc_logic/adder/A<5> (CLA_0)                      0.00       0.51 r
+  decode/pc_logic/adder/claMod2/A<1> (Bit4_CLA_2)         0.00       0.51 r
+  decode/pc_logic/adder/claMod2/FA_mod1/A (CLA_FA_10)     0.00       0.51 r
+  decode/pc_logic/adder/claMod2/FA_mod1/U3/Y (BUFX2)      0.04       0.55 r
+  decode/pc_logic/adder/claMod2/FA_mod1/U5/Y (XNOR2X1)
+                                                          0.03       0.58 f
+  decode/pc_logic/adder/claMod2/FA_mod1/U2/Y (INVX1)      0.01       0.59 r
+  decode/pc_logic/adder/claMod2/FA_mod1/P (CLA_FA_10)     0.00       0.59 r
+  decode/pc_logic/adder/claMod2/U33/Y (AOI21X1)           0.01       0.61 f
+  decode/pc_logic/adder/claMod2/U27/Y (BUFX2)             0.03       0.64 f
+  decode/pc_logic/adder/claMod2/U34/Y (OAI21X1)           0.04       0.68 r
+  decode/pc_logic/adder/claMod2/U23/Y (AND2X2)            0.03       0.71 r
+  decode/pc_logic/adder/claMod2/U24/Y (INVX1)             0.01       0.73 f
+  decode/pc_logic/adder/claMod2/U13/Y (AND2X2)            0.03       0.76 f
+  decode/pc_logic/adder/claMod2/U14/Y (INVX1)             0.00       0.76 r
+  decode/pc_logic/adder/claMod2/G (Bit4_CLA_2)            0.00       0.76 r
+  decode/pc_logic/adder/U13/Y (AND2X2)                    0.03       0.79 r
+  decode/pc_logic/adder/U14/Y (INVX1)                     0.02       0.81 f
+  decode/pc_logic/adder/U25/Y (NAND3X1)                   0.03       0.84 r
+  decode/pc_logic/adder/U15/Y (BUFX2)                     0.04       0.88 r
+  decode/pc_logic/adder/claMod4/Ci (Bit4_CLA_0)           0.00       0.88 r
+  decode/pc_logic/adder/claMod4/U14/Y (AND2X2)            0.03       0.91 r
+  decode/pc_logic/adder/claMod4/U15/Y (INVX1)             0.01       0.92 f
+  decode/pc_logic/adder/claMod4/U24/Y (AND2X2)            0.04       0.96 f
+  decode/pc_logic/adder/claMod4/U5/Y (NOR3X1)             0.02       0.98 r
+  decode/pc_logic/adder/claMod4/U13/Y (OR2X2)             0.05       1.03 r
+  decode/pc_logic/adder/claMod4/FA_mod3/Ci (CLA_FA_0)     0.00       1.03 r
+  decode/pc_logic/adder/claMod4/FA_mod3/U2/Y (XNOR2X1)
+                                                          0.03       1.06 f
+  decode/pc_logic/adder/claMod4/FA_mod3/S (CLA_FA_0)      0.00       1.06 f
+  decode/pc_logic/adder/claMod4/S<3> (Bit4_CLA_0)         0.00       1.06 f
+  decode/pc_logic/adder/S<15> (CLA_0)                     0.00       1.06 f
+  decode/pc_logic/PC_Ex<15> (PC_Logic)                    0.00       1.06 f
+  decode/PC_Ex<15> (Decode)                               0.00       1.06 f
+  fetch/PC_Ex<15> (Fetch)                                 0.00       1.06 f
+  fetch/program_counter/PC_Ex<15> (PC)                    0.00       1.06 f
+  fetch/program_counter/U21/Y (AND2X2)                    0.03       1.09 f
+  fetch/program_counter/U75/Y (INVX1)                     0.00       1.09 r
+  fetch/program_counter/U41/Y (AND2X2)                    0.03       1.12 r
+  fetch/program_counter/U42/Y (INVX1)                     0.02       1.13 f
+  fetch/program_counter/program_counter[15]/d (dff_342)
+                                                          0.00       1.13 f
+  fetch/program_counter/program_counter[15]/U3/Y (AND2X1)
+                                                          0.03       1.16 f
+  fetch/program_counter/program_counter[15]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.16 f
+  data arrival time                                                  1.16
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[15]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: if_de_blade/Instruc_H[3]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[7]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  if_de_blade/Instruc_H[3]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  if_de_blade/Instruc_H[3]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  if_de_blade/Instruc_H[3]/pipe/q (dff_325)               0.00       0.11 f
+  if_de_blade/Instruc_H[3]/q (dff_pipe_197)               0.00       0.11 f
+  if_de_blade/Instruction_Dec<15> (Fetch_Decode_Blade)
+                                                          0.00       0.11 f
+  decode/Instruction<15> (Decode)                         0.00       0.11 f
+  decode/Control/OP_Code<4> (Processor_Control)           0.00       0.11 f
+  decode/Control/U126/Y (NAND3X1)                         0.04       0.15 r
+  decode/Control/U94/Y (INVX1)                            0.03       0.19 f
+  decode/Control/U38/Y (AND2X2)                           0.04       0.23 f
+  decode/Control/U37/Y (INVX1)                            0.00       0.23 r
+  decode/Control/U111/Y (AND2X2)                          0.03       0.26 r
+  decode/Control/U28/Y (AND2X2)                           0.03       0.29 r
+  decode/Control/U29/Y (INVX1)                            0.03       0.31 f
+  decode/Control/Imm_Sel<1> (Processor_Control)           0.00       0.31 f
+  decode/Imm/Imm_Sel<1> (Imm_Selecter)                    0.00       0.31 f
+  decode/Imm/Mux/s<1> (Bit16_Mux4_1)                      0.00       0.31 f
+  decode/Imm/Mux/U124/Y (OR2X2)                           0.05       0.36 f
+  decode/Imm/Mux/U123/Y (INVX8)                           0.02       0.39 r
+  decode/Imm/Mux/U128/Y (AOI22X1)                         0.03       0.41 f
+  decode/Imm/Mux/U65/Y (BUFX2)                            0.04       0.45 f
+  decode/Imm/Mux/U129/Y (NAND3X1)                         0.03       0.49 r
+  decode/Imm/Mux/out<2> (Bit16_Mux4_1)                    0.00       0.49 r
+  decode/Imm/Immediate<2> (Imm_Selecter)                  0.00       0.49 r
+  decode/U12/Y (BUFX2)                                    0.04       0.52 r
+  decode/pc_logic/Immediate<2> (PC_Logic)                 0.00       0.52 r
+  decode/pc_logic/adder/B<2> (CLA_0)                      0.00       0.52 r
+  decode/pc_logic/adder/claMod1/B<2> (Bit4_CLA_3)         0.00       0.52 r
+  decode/pc_logic/adder/claMod1/FA_mod2/B (CLA_FA_13)     0.00       0.52 r
+  decode/pc_logic/adder/claMod1/FA_mod2/U3/Y (BUFX2)      0.04       0.56 r
+  decode/pc_logic/adder/claMod1/FA_mod2/U6/Y (XNOR2X1)
+                                                          0.03       0.59 f
+  decode/pc_logic/adder/claMod1/FA_mod2/U2/Y (INVX1)      0.01       0.61 r
+  decode/pc_logic/adder/claMod1/FA_mod2/P (CLA_FA_13)     0.00       0.61 r
+  decode/pc_logic/adder/claMod1/U8/Y (INVX1)              0.02       0.63 f
+  decode/pc_logic/adder/claMod1/U25/Y (OAI21X1)           0.04       0.67 r
+  decode/pc_logic/adder/claMod1/U11/Y (AND2X2)            0.03       0.70 r
+  decode/pc_logic/adder/claMod1/U3/Y (OR2X2)              0.04       0.74 r
+  decode/pc_logic/adder/claMod1/G (Bit4_CLA_3)            0.00       0.74 r
+  decode/pc_logic/adder/U7/Y (INVX1)                      0.01       0.75 f
+  decode/pc_logic/adder/U8/Y (AND2X2)                     0.03       0.79 f
+  decode/pc_logic/adder/U22/Y (INVX1)                     0.00       0.79 r
+  decode/pc_logic/adder/claMod2/Ci (Bit4_CLA_2)           0.00       0.79 r
+  decode/pc_logic/adder/claMod2/U19/Y (AND2X2)            0.03       0.82 r
+  decode/pc_logic/adder/claMod2/U20/Y (INVX1)             0.01       0.83 f
+  decode/pc_logic/adder/claMod2/U28/Y (AND2X2)            0.04       0.87 f
+  decode/pc_logic/adder/claMod2/U31/Y (OAI21X1)           0.04       0.91 r
+  decode/pc_logic/adder/claMod2/U21/Y (AND2X2)            0.03       0.94 r
+  decode/pc_logic/adder/claMod2/U22/Y (INVX1)             0.01       0.96 f
+  decode/pc_logic/adder/claMod2/U11/Y (AND2X2)            0.04       0.99 f
+  decode/pc_logic/adder/claMod2/U12/Y (INVX1)             0.01       1.00 r
+  decode/pc_logic/adder/claMod2/FA_mod3/Ci (CLA_FA_8)     0.00       1.00 r
+  decode/pc_logic/adder/claMod2/FA_mod3/U2/Y (XNOR2X1)
+                                                          0.03       1.03 f
+  decode/pc_logic/adder/claMod2/FA_mod3/S (CLA_FA_8)      0.00       1.03 f
+  decode/pc_logic/adder/claMod2/S<3> (Bit4_CLA_2)         0.00       1.03 f
+  decode/pc_logic/adder/S<7> (CLA_0)                      0.00       1.03 f
+  decode/pc_logic/PC_Ex<7> (PC_Logic)                     0.00       1.03 f
+  decode/PC_Ex<7> (Decode)                                0.00       1.03 f
+  fetch/PC_Ex<7> (Fetch)                                  0.00       1.03 f
+  fetch/program_counter/PC_Ex<7> (PC)                     0.00       1.03 f
+  fetch/program_counter/U114/Y (AOI22X1)                  0.03       1.05 r
+  fetch/program_counter/U73/Y (BUFX2)                     0.04       1.09 r
+  fetch/program_counter/U49/Y (AND2X2)                    0.03       1.12 r
+  fetch/program_counter/U51/Y (INVX1)                     0.01       1.13 f
+  fetch/program_counter/program_counter[7]/d (dff_334)
+                                                          0.00       1.13 f
+  fetch/program_counter/program_counter[7]/U3/Y (AND2X2)
+                                                          0.03       1.17 f
+  fetch/program_counter/program_counter[7]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.17 f
+  data arrival time                                                  1.17
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[7]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.17
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: de_ex_blade/reg_1_src[0]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[13]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  de_ex_blade/reg_1_src[0]/pipe/q (dff_230)               0.00       0.11 f
+  de_ex_blade/reg_1_src[0]/q (dff_pipe_102)               0.00       0.11 f
+  de_ex_blade/Reg_1_Src_Exe<0> (Decode_Execute_Blade)     0.00       0.11 f
+  extra_logic/Reg_1_Src_Exe<0> (Extra_Logic2)             0.00       0.11 f
+  extra_logic/U183/Y (XOR2X1)                             0.05       0.16 r
+  extra_logic/U110/Y (OR2X2)                              0.05       0.21 r
+  extra_logic/U94/Y (OR2X2)                               0.04       0.25 r
+  extra_logic/U198/Y (OAI21X1)                            0.02       0.27 f
+  extra_logic/A_Forward (Extra_Logic2)                    0.00       0.27 f
+  execute/A_Forward (Execute)                             0.00       0.27 f
+  execute/U87/Y (INVX1)                                   0.00       0.27 r
+  execute/U3/Y (INVX1)                                    0.02       0.29 f
+  execute/U1/Y (INVX1)                                    0.00       0.29 r
+  execute/U2/Y (INVX1)                                    0.02       0.32 f
+  execute/U267/Y (AOI22X1)                                0.05       0.37 r
+  execute/U111/Y (INVX1)                                  0.02       0.39 f
+  execute/alu/A<8> (ALU)                                  0.00       0.39 f
+  execute/alu/U125/Y (INVX1)                              0.00       0.39 r
+  execute/alu/U71/Y (INVX1)                               0.02       0.41 f
+  execute/alu/Shifter/In<8> (ALU_Shifter)                 0.00       0.41 f
+  execute/alu/Shifter/sBlade1/in<8> (ALU_Shifter_1)       0.00       0.41 f
+  execute/alu/Shifter/sBlade1/U11/Y (INVX1)               0.01       0.41 r
+  execute/alu/Shifter/sBlade1/U4/Y (INVX2)                0.03       0.44 f
+  execute/alu/Shifter/sBlade1/up_sel7/in2 (Bit1_Mux4_1_56)
+                                                          0.00       0.44 f
+  execute/alu/Shifter/sBlade1/up_sel7/U13/Y (OAI21X1)     0.04       0.48 r
+  execute/alu/Shifter/sBlade1/up_sel7/U15/Y (OAI21X1)     0.02       0.50 f
+  execute/alu/Shifter/sBlade1/up_sel7/out (Bit1_Mux4_1_56)
+                                                          0.00       0.50 f
+  execute/alu/Shifter/sBlade1/low_sel[7]/in1 (Bit1_Mux2_1_55)
+                                                          0.00       0.50 f
+  execute/alu/Shifter/sBlade1/low_sel[7]/U7/Y (INVX1)     0.00       0.50 r
+  execute/alu/Shifter/sBlade1/low_sel[7]/U1/Y (AND2X2)
+                                                          0.03       0.53 r
+  execute/alu/Shifter/sBlade1/low_sel[7]/U3/Y (INVX1)     0.01       0.54 f
+  execute/alu/Shifter/sBlade1/low_sel[7]/U6/Y (AND2X2)
+                                                          0.04       0.58 f
+  execute/alu/Shifter/sBlade1/low_sel[7]/out (Bit1_Mux2_1_55)
+                                                          0.00       0.58 f
+  execute/alu/Shifter/sBlade1/out<7> (ALU_Shifter_1)      0.00       0.58 f
+  execute/alu/Shifter/sBlade2/in<7> (ALU_Shifter_2)       0.00       0.58 f
+  execute/alu/Shifter/sBlade2/U47/Y (INVX1)               0.00       0.58 r
+  execute/alu/Shifter/sBlade2/U10/Y (INVX1)               0.01       0.60 f
+  execute/alu/Shifter/sBlade2/up_sel9/in0 (Bit1_Mux4_1_38)
+                                                          0.00       0.60 f
+  execute/alu/Shifter/sBlade2/up_sel9/U11/Y (AOI22X1)     0.04       0.64 r
+  execute/alu/Shifter/sBlade2/up_sel9/U2/Y (INVX1)        0.02       0.66 f
+  execute/alu/Shifter/sBlade2/up_sel9/U3/Y (INVX1)        0.00       0.66 r
+  execute/alu/Shifter/sBlade2/up_sel9/U12/Y (OAI21X1)     0.01       0.67 f
+  execute/alu/Shifter/sBlade2/up_sel9/out (Bit1_Mux4_1_38)
+                                                          0.00       0.67 f
+  execute/alu/Shifter/sBlade2/low_sel[9]/in1 (Bit1_Mux2_1_41)
+                                                          0.00       0.67 f
+  execute/alu/Shifter/sBlade2/low_sel[9]/U4/Y (INVX1)     0.00       0.67 r
+  execute/alu/Shifter/sBlade2/low_sel[9]/U5/Y (AOI22X1)
+                                                          0.01       0.68 f
+  execute/alu/Shifter/sBlade2/low_sel[9]/out (Bit1_Mux2_1_41)
+                                                          0.00       0.68 f
+  execute/alu/Shifter/sBlade2/out<9> (ALU_Shifter_2)      0.00       0.68 f
+  execute/alu/Shifter/sBlade4/in<9> (ALU_Shifter_4)       0.00       0.68 f
+  execute/alu/Shifter/sBlade4/U25/Y (BUFX2)               0.04       0.73 f
+  execute/alu/Shifter/sBlade4/up_sel5/in3 (Bit1_Mux4_1_26)
+                                                          0.00       0.73 f
+  execute/alu/Shifter/sBlade4/up_sel5/U11/Y (INVX1)       0.00       0.73 r
+  execute/alu/Shifter/sBlade4/up_sel5/U7/Y (OR2X2)        0.04       0.77 r
+  execute/alu/Shifter/sBlade4/up_sel5/U8/Y (INVX1)        0.01       0.78 f
+  execute/alu/Shifter/sBlade4/up_sel5/U3/Y (OR2X2)        0.05       0.83 f
+  execute/alu/Shifter/sBlade4/up_sel5/U4/Y (INVX1)        0.00       0.83 r
+  execute/alu/Shifter/sBlade4/up_sel5/U17/Y (OAI21X1)     0.01       0.84 f
+  execute/alu/Shifter/sBlade4/up_sel5/out (Bit1_Mux4_1_26)
+                                                          0.00       0.84 f
+  execute/alu/Shifter/sBlade4/low_sel[5]/in1 (Bit1_Mux2_1_21)
+                                                          0.00       0.84 f
+  execute/alu/Shifter/sBlade4/low_sel[5]/U6/Y (INVX1)     0.00       0.84 r
+  execute/alu/Shifter/sBlade4/low_sel[5]/U7/Y (AOI22X1)
+                                                          0.01       0.85 f
+  execute/alu/Shifter/sBlade4/low_sel[5]/U5/Y (BUFX2)     0.04       0.89 f
+  execute/alu/Shifter/sBlade4/low_sel[5]/out (Bit1_Mux2_1_21)
+                                                          0.00       0.89 f
+  execute/alu/Shifter/sBlade4/out<5> (ALU_Shifter_4)      0.00       0.89 f
+  execute/alu/Shifter/sBlade8/in<5> (ALU_Shifter_8)       0.00       0.89 f
+  execute/alu/Shifter/sBlade8/up_sel13/in1 (Bit1_Mux4_1_2)
+                                                          0.00       0.89 f
+  execute/alu/Shifter/sBlade8/up_sel13/U14/Y (OAI21X1)
+                                                          0.04       0.94 r
+  execute/alu/Shifter/sBlade8/up_sel13/U15/Y (NAND3X1)
+                                                          0.01       0.95 f
+  execute/alu/Shifter/sBlade8/up_sel13/out (Bit1_Mux4_1_2)
+                                                          0.00       0.95 f
+  execute/alu/Shifter/sBlade8/low_sel[13]/in1 (Bit1_Mux2_1_13)
+                                                          0.00       0.95 f
+  execute/alu/Shifter/sBlade8/low_sel[13]/U4/Y (INVX1)
+                                                          0.01       0.96 r
+  execute/alu/Shifter/sBlade8/low_sel[13]/U5/Y (AOI22X1)
+                                                          0.01       0.97 f
+  execute/alu/Shifter/sBlade8/low_sel[13]/out (Bit1_Mux2_1_13)
+                                                          0.00       0.97 f
+  execute/alu/Shifter/sBlade8/U21/Y (BUFX2)               0.04       1.01 f
+  execute/alu/Shifter/sBlade8/out<13> (ALU_Shifter_8)     0.00       1.01 f
+  execute/alu/Shifter/Out<13> (ALU_Shifter)               0.00       1.01 f
+  execute/alu/U259/Y (AND2X2)                             0.04       1.04 f
+  execute/alu/U260/Y (INVX1)                              0.00       1.04 r
+  execute/alu/U205/Y (AND2X2)                             0.03       1.07 r
+  execute/alu/U206/Y (INVX1)                              0.01       1.08 f
+  execute/alu/Result<13> (ALU)                            0.00       1.08 f
+  execute/ALU_Result<13> (Execute)                        0.00       1.08 f
+  ex_me_blade/ALU_Result_Exe<13> (Execute_Memory_Blade)
+                                                          0.00       1.08 f
+  ex_me_blade/alu_result[13]/d (dff_pipe_55)              0.00       1.08 f
+  ex_me_blade/alu_result[13]/U5/Y (INVX1)                 0.00       1.09 r
+  ex_me_blade/alu_result[13]/U6/Y (AOI21X1)               0.01       1.10 f
+  ex_me_blade/alu_result[13]/pipe/d (dff_183)             0.00       1.10 f
+  ex_me_blade/alu_result[13]/pipe/U5/Y (BUFX2)            0.03       1.13 f
+  ex_me_blade/alu_result[13]/pipe/U3/Y (AND2X1)           0.03       1.16 f
+  ex_me_blade/alu_result[13]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.16 f
+  data arrival time                                                  1.16
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[13]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: if_de_blade/Instruc_L[8]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[5]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  if_de_blade/Instruc_L[8]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  if_de_blade/Instruc_L[8]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.12       0.12 f
+  if_de_blade/Instruc_L[8]/pipe/q (dff_319)               0.00       0.12 f
+  if_de_blade/Instruc_L[8]/q (dff_pipe_191)               0.00       0.12 f
+  if_de_blade/Instruction_Dec<8> (Fetch_Decode_Blade)     0.00       0.12 f
+  decode/Instruction<8> (Decode)                          0.00       0.12 f
+  decode/RFB/Reg_1_Src<0> (Register_File_Bypass)          0.00       0.12 f
+  decode/RFB/RF/Reg_1_Src<0> (Register_File)              0.00       0.12 f
+  decode/RFB/RF/U185/Y (INVX1)                            0.04       0.15 r
+  decode/RFB/RF/U421/Y (NAND3X1)                          0.02       0.17 f
+  decode/RFB/RF/U279/Y (BUFX2)                            0.04       0.21 f
+  decode/RFB/RF/U280/Y (INVX1)                            0.05       0.26 r
+  decode/RFB/RF/U463/Y (AOI22X1)                          0.04       0.29 f
+  decode/RFB/RF/U229/Y (AND2X2)                           0.04       0.33 f
+  decode/RFB/RF/U227/Y (AND2X2)                           0.03       0.37 f
+  decode/RFB/RF/U228/Y (INVX1)                            0.00       0.36 r
+  decode/RFB/RF/Reg_1_Data<7> (Register_File)             0.00       0.36 r
+  decode/RFB/U82/Y (INVX1)                                0.01       0.38 f
+  decode/RFB/U116/Y (MUX2X1)                              0.07       0.45 r
+  decode/RFB/Reg_1_Data<7> (Register_File_Bypass)         0.00       0.45 r
+  decode/pc_logic/Reg_1_Data<7> (PC_Logic)                0.00       0.45 r
+  decode/pc_logic/U14/Y (BUFX4)                           0.02       0.46 r
+  decode/pc_logic/BL/Reg_1_Data<7> (Branch_Logic)         0.00       0.46 r
+  decode/pc_logic/BL/U7/Y (OR2X2)                         0.04       0.51 r
+  decode/pc_logic/BL/U10/Y (OR2X2)                        0.04       0.55 r
+  decode/pc_logic/BL/U12/Y (INVX1)                        0.01       0.56 f
+  decode/pc_logic/BL/U32/Y (AND2X2)                       0.03       0.60 f
+  decode/pc_logic/BL/U23/Y (NAND3X1)                      0.03       0.62 r
+  decode/pc_logic/BL/U15/Y (BUFX2)                        0.04       0.66 r
+  decode/pc_logic/BL/U17/Y (AOI22X1)                      0.03       0.69 f
+  decode/pc_logic/BL/U14/Y (BUFX2)                        0.04       0.72 f
+  decode/pc_logic/BL/U34/Y (AND2X2)                       0.04       0.76 f
+  decode/pc_logic/BL/U33/Y (XNOR2X1)                      0.03       0.78 f
+  decode/pc_logic/BL/U11/Y (OAI21X1)                      0.04       0.83 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       0.83 r
+  decode/pc_logic/U18/Y (OR2X1)                           0.04       0.86 r
+  decode/pc_logic/U40/Y (INVX1)                           0.02       0.88 f
+  decode/pc_logic/U144/Y (AOI21X1)                        0.02       0.90 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       0.90 r
+  decode/U13/Y (BUFX2)                                    0.04       0.94 r
+  decode/PC_Sel (Decode)                                  0.00       0.94 r
+  fetch/PC_Sel (Fetch)                                    0.00       0.94 r
+  fetch/program_counter/PC_Sel (PC)                       0.00       0.94 r
+  fetch/program_counter/U105/Y (OR2X2)                    0.04       0.98 r
+  fetch/program_counter/U36/Y (INVX2)                     0.03       1.01 f
+  fetch/program_counter/U115/Y (AOI22X1)                  0.04       1.05 r
+  fetch/program_counter/U74/Y (BUFX2)                     0.04       1.08 r
+  fetch/program_counter/U54/Y (AND2X2)                    0.03       1.11 r
+  fetch/program_counter/U55/Y (INVX1)                     0.02       1.13 f
+  fetch/program_counter/program_counter[5]/d (dff_332)
+                                                          0.00       1.13 f
+  fetch/program_counter/program_counter[5]/U3/Y (AND2X1)
+                                                          0.03       1.16 f
+  fetch/program_counter/program_counter[5]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.16 f
+  data arrival time                                                  1.16
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[5]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: if_de_blade/Instruc_L[8]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[9]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  if_de_blade/Instruc_L[8]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  if_de_blade/Instruc_L[8]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.12       0.12 f
+  if_de_blade/Instruc_L[8]/pipe/q (dff_319)               0.00       0.12 f
+  if_de_blade/Instruc_L[8]/q (dff_pipe_191)               0.00       0.12 f
+  if_de_blade/Instruction_Dec<8> (Fetch_Decode_Blade)     0.00       0.12 f
+  decode/Instruction<8> (Decode)                          0.00       0.12 f
+  decode/RFB/Reg_1_Src<0> (Register_File_Bypass)          0.00       0.12 f
+  decode/RFB/RF/Reg_1_Src<0> (Register_File)              0.00       0.12 f
+  decode/RFB/RF/U185/Y (INVX1)                            0.04       0.15 r
+  decode/RFB/RF/U421/Y (NAND3X1)                          0.02       0.17 f
+  decode/RFB/RF/U279/Y (BUFX2)                            0.04       0.21 f
+  decode/RFB/RF/U280/Y (INVX1)                            0.05       0.26 r
+  decode/RFB/RF/U463/Y (AOI22X1)                          0.04       0.29 f
+  decode/RFB/RF/U229/Y (AND2X2)                           0.04       0.33 f
+  decode/RFB/RF/U227/Y (AND2X2)                           0.03       0.37 f
+  decode/RFB/RF/U228/Y (INVX1)                            0.00       0.36 r
+  decode/RFB/RF/Reg_1_Data<7> (Register_File)             0.00       0.36 r
+  decode/RFB/U82/Y (INVX1)                                0.01       0.38 f
+  decode/RFB/U116/Y (MUX2X1)                              0.07       0.45 r
+  decode/RFB/Reg_1_Data<7> (Register_File_Bypass)         0.00       0.45 r
+  decode/pc_logic/Reg_1_Data<7> (PC_Logic)                0.00       0.45 r
+  decode/pc_logic/U14/Y (BUFX4)                           0.02       0.46 r
+  decode/pc_logic/BL/Reg_1_Data<7> (Branch_Logic)         0.00       0.46 r
+  decode/pc_logic/BL/U7/Y (OR2X2)                         0.04       0.51 r
+  decode/pc_logic/BL/U10/Y (OR2X2)                        0.04       0.55 r
+  decode/pc_logic/BL/U12/Y (INVX1)                        0.01       0.56 f
+  decode/pc_logic/BL/U32/Y (AND2X2)                       0.03       0.60 f
+  decode/pc_logic/BL/U23/Y (NAND3X1)                      0.03       0.62 r
+  decode/pc_logic/BL/U15/Y (BUFX2)                        0.04       0.66 r
+  decode/pc_logic/BL/U17/Y (AOI22X1)                      0.03       0.69 f
+  decode/pc_logic/BL/U14/Y (BUFX2)                        0.04       0.72 f
+  decode/pc_logic/BL/U34/Y (AND2X2)                       0.04       0.76 f
+  decode/pc_logic/BL/U33/Y (XNOR2X1)                      0.03       0.78 f
+  decode/pc_logic/BL/U11/Y (OAI21X1)                      0.04       0.83 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       0.83 r
+  decode/pc_logic/U18/Y (OR2X1)                           0.04       0.86 r
+  decode/pc_logic/U40/Y (INVX1)                           0.02       0.88 f
+  decode/pc_logic/U144/Y (AOI21X1)                        0.02       0.90 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       0.90 r
+  decode/U13/Y (BUFX2)                                    0.04       0.94 r
+  decode/PC_Sel (Decode)                                  0.00       0.94 r
+  fetch/PC_Sel (Fetch)                                    0.00       0.94 r
+  fetch/program_counter/PC_Sel (PC)                       0.00       0.94 r
+  fetch/program_counter/U105/Y (OR2X2)                    0.04       0.98 r
+  fetch/program_counter/U36/Y (INVX2)                     0.03       1.01 f
+  fetch/program_counter/U112/Y (AOI22X1)                  0.04       1.05 r
+  fetch/program_counter/U72/Y (BUFX2)                     0.04       1.08 r
+  fetch/program_counter/U47/Y (AND2X2)                    0.03       1.11 r
+  fetch/program_counter/U48/Y (INVX1)                     0.02       1.13 f
+  fetch/program_counter/program_counter[9]/d (dff_336)
+                                                          0.00       1.13 f
+  fetch/program_counter/program_counter[9]/U3/Y (AND2X1)
+                                                          0.03       1.16 f
+  fetch/program_counter/program_counter[9]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.16 f
+  data arrival time                                                  1.16
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[9]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: de_ex_blade/reg_1_src[0]/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ex_me_blade/alu_result[5]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00 #     0.00 r
+  de_ex_blade/reg_1_src[0]/pipe/state_reg/Q (DFFPOSX1)
+                                                          0.11       0.11 f
+  de_ex_blade/reg_1_src[0]/pipe/q (dff_230)               0.00       0.11 f
+  de_ex_blade/reg_1_src[0]/q (dff_pipe_102)               0.00       0.11 f
+  de_ex_blade/Reg_1_Src_Exe<0> (Decode_Execute_Blade)     0.00       0.11 f
+  extra_logic/Reg_1_Src_Exe<0> (Extra_Logic2)             0.00       0.11 f
+  extra_logic/U183/Y (XOR2X1)                             0.05       0.16 r
+  extra_logic/U110/Y (OR2X2)                              0.05       0.21 r
+  extra_logic/U11/Y (INVX1)                               0.02       0.23 f
+  extra_logic/U71/Y (AND2X2)                              0.04       0.27 f
+  extra_logic/U96/Y (INVX1)                               0.00       0.27 r
+  extra_logic/U78/Y (INVX1)                               0.03       0.30 f
+  extra_logic/U185/Y (MUX2X1)                             0.03       0.33 f
+  extra_logic/A_Forward_Data<0> (Extra_Logic2)            0.00       0.33 f
+  execute/A_Forward_Data<0> (Execute)                     0.00       0.33 f
+  execute/U228/Y (AND2X2)                                 0.03       0.37 f
+  execute/U227/Y (AOI21X1)                                0.01       0.38 r
+  execute/U157/Y (INVX1)                                  0.03       0.41 f
+  execute/alu/A<0> (ALU)                                  0.00       0.41 f
+  execute/alu/Shifter/In<0> (ALU_Shifter)                 0.00       0.41 f
+  execute/alu/Shifter/sBlade1/in<0> (ALU_Shifter_1)       0.00       0.41 f
+  execute/alu/Shifter/sBlade1/up_sel15/in2 (Bit1_Mux4_1_48)
+                                                          0.00       0.41 f
+  execute/alu/Shifter/sBlade1/up_sel15/U16/Y (AOI22X1)
+                                                          0.04       0.45 r
+  execute/alu/Shifter/sBlade1/up_sel15/U6/Y (BUFX2)       0.04       0.48 r
+  execute/alu/Shifter/sBlade1/up_sel15/U4/Y (AND2X2)      0.03       0.51 r
+  execute/alu/Shifter/sBlade1/up_sel15/U5/Y (INVX1)       0.01       0.53 f
+  execute/alu/Shifter/sBlade1/up_sel15/out (Bit1_Mux4_1_48)
+                                                          0.00       0.53 f
+  execute/alu/Shifter/sBlade1/low_sel[15]/in1 (Bit1_Mux2_1_63)
+                                                          0.00       0.53 f
+  execute/alu/Shifter/sBlade1/low_sel[15]/U3/Y (INVX1)
+                                                          0.00       0.53 r
+  execute/alu/Shifter/sBlade1/low_sel[15]/U4/Y (AOI21X1)
+                                                          0.01       0.54 f
+  execute/alu/Shifter/sBlade1/low_sel[15]/out (Bit1_Mux2_1_63)
+                                                          0.00       0.54 f
+  execute/alu/Shifter/sBlade1/out<15> (ALU_Shifter_1)     0.00       0.54 f
+  execute/alu/Shifter/sBlade2/in<15> (ALU_Shifter_2)      0.00       0.54 f
+  execute/alu/Shifter/sBlade2/U14/Y (BUFX2)               0.04       0.58 f
+  execute/alu/Shifter/sBlade2/up_sel13/in2 (Bit1_Mux4_1_34)
+                                                          0.00       0.58 f
+  execute/alu/Shifter/sBlade2/up_sel13/U7/Y (OR2X2)       0.04       0.61 f
+  execute/alu/Shifter/sBlade2/up_sel13/U8/Y (INVX1)       0.00       0.61 r
+  execute/alu/Shifter/sBlade2/up_sel13/U18/Y (AOI21X1)
+                                                          0.01       0.62 f
+  execute/alu/Shifter/sBlade2/up_sel13/U4/Y (BUFX2)       0.03       0.65 f
+  execute/alu/Shifter/sBlade2/up_sel13/U5/Y (AND2X2)      0.03       0.69 f
+  execute/alu/Shifter/sBlade2/up_sel13/U6/Y (INVX1)       0.00       0.68 r
+  execute/alu/Shifter/sBlade2/up_sel13/U19/Y (NAND3X1)
+                                                          0.01       0.69 f
+  execute/alu/Shifter/sBlade2/up_sel13/out (Bit1_Mux4_1_34)
+                                                          0.00       0.69 f
+  execute/alu/Shifter/sBlade2/low_sel[13]/in1 (Bit1_Mux2_1_45)
+                                                          0.00       0.69 f
+  execute/alu/Shifter/sBlade2/low_sel[13]/U4/Y (INVX1)
+                                                          0.01       0.70 r
+  execute/alu/Shifter/sBlade2/low_sel[13]/U5/Y (AOI22X1)
+                                                          0.01       0.71 f
+  execute/alu/Shifter/sBlade2/low_sel[13]/out (Bit1_Mux2_1_45)
+                                                          0.00       0.71 f
+  execute/alu/Shifter/sBlade2/out<13> (ALU_Shifter_2)     0.00       0.71 f
+  execute/alu/Shifter/sBlade4/in<13> (ALU_Shifter_4)      0.00       0.71 f
+  execute/alu/Shifter/sBlade4/U26/Y (BUFX2)               0.04       0.75 f
+  execute/alu/Shifter/sBlade4/U11/Y (BUFX2)               0.04       0.79 f
+  execute/alu/Shifter/sBlade4/U13/Y (INVX1)               0.00       0.78 r
+  execute/alu/Shifter/sBlade4/U14/Y (INVX1)               0.01       0.80 f
+  execute/alu/Shifter/sBlade4/low_sel[13]/in0 (Bit1_Mux2_1_29)
+                                                          0.00       0.80 f
+  execute/alu/Shifter/sBlade4/low_sel[13]/U3/Y (AND2X2)
+                                                          0.03       0.83 f
+  execute/alu/Shifter/sBlade4/low_sel[13]/U2/Y (INVX1)
+                                                          0.00       0.83 r
+  execute/alu/Shifter/sBlade4/low_sel[13]/U8/Y (AOI22X1)
+                                                          0.03       0.86 f
+  execute/alu/Shifter/sBlade4/low_sel[13]/U5/Y (INVX1)
+                                                          0.01       0.87 r
+  execute/alu/Shifter/sBlade4/low_sel[13]/U6/Y (INVX1)
+                                                          0.02       0.89 f
+  execute/alu/Shifter/sBlade4/low_sel[13]/out (Bit1_Mux2_1_29)
+                                                          0.00       0.89 f
+  execute/alu/Shifter/sBlade4/out<13> (ALU_Shifter_4)     0.00       0.89 f
+  execute/alu/Shifter/sBlade8/in<13> (ALU_Shifter_8)      0.00       0.89 f
+  execute/alu/Shifter/sBlade8/U50/Y (INVX1)               0.01       0.90 r
+  execute/alu/Shifter/sBlade8/U51/Y (INVX1)               0.01       0.91 f
+  execute/alu/Shifter/sBlade8/up_sel5/in0 (Bit1_Mux4_1_10)
+                                                          0.00       0.91 f
+  execute/alu/Shifter/sBlade8/up_sel5/U15/Y (AOI22X1)     0.03       0.94 r
+  execute/alu/Shifter/sBlade8/up_sel5/U5/Y (BUFX2)        0.04       0.97 r
+  execute/alu/Shifter/sBlade8/up_sel5/U3/Y (AND2X2)       0.03       1.00 r
+  execute/alu/Shifter/sBlade8/up_sel5/U4/Y (INVX1)        0.01       1.02 f
+  execute/alu/Shifter/sBlade8/up_sel5/out (Bit1_Mux4_1_10)
+                                                          0.00       1.02 f
+  execute/alu/Shifter/sBlade8/low_sel[5]/in1 (Bit1_Mux2_1_5)
+                                                          0.00       1.02 f
+  execute/alu/Shifter/sBlade8/low_sel[5]/U3/Y (INVX1)     0.00       1.02 r
+  execute/alu/Shifter/sBlade8/low_sel[5]/U1/Y (MUX2X1)
+                                                          0.02       1.03 f
+  execute/alu/Shifter/sBlade8/low_sel[5]/out (Bit1_Mux2_1_5)
+                                                          0.00       1.03 f
+  execute/alu/Shifter/sBlade8/out<5> (ALU_Shifter_8)      0.00       1.03 f
+  execute/alu/Shifter/Out<5> (ALU_Shifter)                0.00       1.03 f
+  execute/alu/U81/Y (AND2X1)                              0.03       1.07 f
+  execute/alu/U317/Y (INVX1)                              0.00       1.07 r
+  execute/alu/U190/Y (AND2X2)                             0.03       1.10 r
+  execute/alu/U191/Y (INVX1)                              0.01       1.11 f
+  execute/alu/Result<5> (ALU)                             0.00       1.11 f
+  execute/ALU_Result<5> (Execute)                         0.00       1.11 f
+  ex_me_blade/ALU_Result_Exe<5> (Execute_Memory_Blade)
+                                                          0.00       1.11 f
+  ex_me_blade/alu_result[5]/d (dff_pipe_47)               0.00       1.11 f
+  ex_me_blade/alu_result[5]/U3/Y (INVX1)                  0.00       1.11 r
+  ex_me_blade/alu_result[5]/U4/Y (MUX2X1)                 0.02       1.13 f
+  ex_me_blade/alu_result[5]/pipe/d (dff_175)              0.00       1.13 f
+  ex_me_blade/alu_result[5]/pipe/U3/Y (AND2X1)            0.03       1.16 f
+  ex_me_blade/alu_result[5]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.16 f
+  data arrival time                                                  1.16
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  ex_me_blade/alu_result[5]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -1.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+1

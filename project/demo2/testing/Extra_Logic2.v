@@ -179,7 +179,7 @@ module Extra_Logic2 (halt_Dec, halt_Exe, halt_Mem, halt_WB, PC_Sel, Reg_Write_Ex
 	assign Stall_EXME = 1'b0;
 	assign Stall_MEWB = 1'b0;
 	
-	assign Flush_IFDE = PC_Sel & ~Decode_Stall; 
+	assign Flush_IFDE = (PC_Sel | No_Write_PC) & ~(Decode_Stall | Load_Stall); 
 	assign Flush_DEEX = Load_Stall | Decode_Stall;
 	assign Flush_EXME = 1'b0;
 	assign Flush_MEWB = 1'b0;

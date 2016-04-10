@@ -86,6 +86,7 @@ module proc (err, clk, rst);
 	wire 				createdump_Dec;
 	wire 				createdump_Exe;
 	wire 				createdump_Mem;
+	wire				createdump_WB;
 
 	wire 				halt_Dec;
 	wire 				halt_Exe;
@@ -289,7 +290,7 @@ Extra_Logic2 extra_logic (
 	Memory memory (
 		.clk					(clk),
 		.rst					(rst),
-		.createdump				(createdump_Mem),
+		.createdump				(createdump_WB),
 		.Mem_Write				(Mem_Write_Mem),
 		.Mem_Read				(Mem_Read_Mem),
 		.Address				(ALU_Result_Mem),
@@ -301,12 +302,14 @@ Extra_Logic2 extra_logic (
 		.rst					(rst),
 		.Flush					(Flush_MEWB),
 		.Stall					(Stall_MEWB),
+		.createdump_Mem			(createdump_Mem),
 		.ALU_Result_Mem			(ALU_Result_Mem), 
 		.Reg_Write_Mem			(Reg_Write_Mem),
 		.Mem_Data_Mem			(Mem_Data_Mem), 
 		.WB_Sel_Mem				(WB_Sel_Mem), 
 		.Write_Reg_Mem			(Write_Reg_Mem), 
-		.halt_Mem				(halt_Mem), 
+		.halt_Mem				(halt_Mem),
+		.createdump_WB			(createdump_WB),
 		.ALU_Result_WB			(ALU_Result_WB), 
 		.Reg_Write_WB			(Reg_Write_WB), 
 		.Mem_Data_WB			(Mem_Data_WB), 

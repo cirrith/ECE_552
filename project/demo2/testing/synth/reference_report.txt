@@ -1,0 +1,39 @@
+ 
+****************************************
+Report : reference
+Design : proc
+Version: B-2008.09-SP3
+Date   : Sat Apr  9 18:50:06 2016
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFX2              gscl45nm       2.346500       9     21.118499  
+Decode                         5407.274496       1   5407.274496  h, n
+Decode_Execute_Blade           1781.462762       1   1781.462762  h, n
+Execute                        5966.210792       1   5966.210792  h
+Execute_Memory_Blade            929.683280       1    929.683280  h, n
+Extra_Logic2                    482.440393       1    482.440393  h
+Fetch                         14620.571955       1  14620.571955  h, n
+Fetch_Decode_Blade              703.949986       1    703.949986  h, n
+INVX1              gscl45nm       1.407900      15     21.118500  
+INVX2              gscl45nm       1.877200       6     11.263200  
+INVX4              gscl45nm       3.285100       1      3.285100  
+INVX8              gscl45nm       3.285100       4     13.140400  
+Memory                        12681.424414       1  12681.424414  h, n
+Memory_Writeback_Blade          795.932783       1    795.932783  h, n
+Write_Back                      113.570600       1    113.570600  h
+-----------------------------------------------------------------------------
+Total 15 references                                 43552.447159
+1

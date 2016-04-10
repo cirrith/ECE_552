@@ -26,13 +26,14 @@
 /					0 - No halt
 /					1 - Yes halt
 ********************************************************************************************************/
-module Memory_Writeback_Blade (clk, rst, Flush, Stall, ALU_Result_Mem, Reg_Write_Mem, Mem_Data_Mem, WB_Sel_Mem, Write_Reg_Mem, halt_Mem, ALU_Result_WB, Reg_Write_WB, Mem_Data_WB, WB_Sel_WB, Write_Reg_WB, halt_WB);
+module Memory_Writeback_Blade (clk, rst, Flush, Stall, createdump_Mem, ALU_Result_Mem, Reg_Write_Mem, Mem_Data_Mem, WB_Sel_Mem, Write_Reg_Mem, halt_Mem, createdump_WB, ALU_Result_WB, Reg_Write_WB, Mem_Data_WB, WB_Sel_WB, Write_Reg_WB, halt_WB);
 
 	input clk;
 	input rst;
 	input Flush;
 	input Stall;
-
+	
+	input createdump_Mem;
 	input [15:0] ALU_Result_Mem;
 	input Reg_Write_Mem;
 	input [15:0] Mem_Data_Mem;
@@ -40,6 +41,7 @@ module Memory_Writeback_Blade (clk, rst, Flush, Stall, ALU_Result_Mem, Reg_Write
 	input [2:0] Write_Reg_Mem;
 	input halt_Mem;
 
+	output createdump_WB;
 	output [15:0] ALU_Result_WB;
 	output Reg_Write_WB;
 	output [15:0] Mem_Data_WB;
@@ -47,6 +49,7 @@ module Memory_Writeback_Blade (clk, rst, Flush, Stall, ALU_Result_Mem, Reg_Write
 	output [2:0] Write_Reg_WB;
 	output halt_WB;
 
+	dff_pipe createdump				(.clk(clk), .rst(rst), .Flush(Flush), .Stall(Stall), .d(createdump_Mem), 	.q(createdump_WB));
 	dff_pipe alu_result [15:0] 		(.clk(clk), .rst(rst), .Flush(Flush), .Stall(Stall), .d(ALU_Result_Mem), 	.q(ALU_Result_WB));
 	dff_pipe reg_write 				(.clk(clk), .rst(rst), .Flush(Flush), .Stall(Stall), .d(Reg_Write_Mem), 	.q(Reg_Write_WB));
 	dff_pipe mem_data [15:0] 		(.clk(clk), .rst(rst), .Flush(Flush), .Stall(Stall), .d(Mem_Data_Mem), 		.q(Mem_Data_WB));

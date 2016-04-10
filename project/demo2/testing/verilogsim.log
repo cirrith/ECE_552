@@ -1,0 +1,32 @@
+SIMLOG:: Cycle           4 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 0     0000     0000
+SIMLOG:: Cycle           5 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 0     0000     0000
+SIMLOG:: Cycle           6 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 0     0000     0000
+SIMLOG:: Cycle           7 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 0     0000     0000
+SIMLOG:: Cycle           8 PC:     zzzz I:     zzzz R: 1   0     0000 M: 0 0     002b     0000
+SIMLOG:: Cycle           9 PC:     zzzz I:     zzzz R: 1   5     002b M: 0 0     002b     0000
+SIMLOG:: Cycle          10 PC:     zzzz I:     zzzz R: 1   6     002b M: 0 0     002b     0000
+SIMLOG:: Cycle          11 PC:     zzzz I:     zzzz R: 1   7     002b M: 1 0     0000     0000
+SIMLOG:: Cycle          12 PC:     zzzz I:     zzzz R: 1   1     c000 M: 0 0     0000     0000
+SIMLOG:: Cycle          13 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 1     c000     002b
+SIMLOG:: Cycle          14 PC:     zzzz I:     zzzz R: 0   5     c000 M: 1 0     0002     c000
+SIMLOG:: Cycle          15 PC:     zzzz I:     zzzz R: 1   1     c52b M: 0 0     0000     0000
+SIMLOG:: Cycle          16 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 1     c52c     002b
+SIMLOG:: Cycle          17 PC:     zzzz I:     zzzz R: 0   6     c52c M: 1 0     0004     c52b
+SIMLOG:: Cycle          18 PC:     zzzz I:     zzzz R: 1   1     c62b M: 0 0     0000     0000
+SIMLOG:: Cycle          19 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 1     c62c     002b
+SIMLOG:: Cycle          20 PC:     zzzz I:     zzzz R: 0   7     c62c M: 0 0     0000     0000
+SIMLOG:: Cycle          21 PC:     zzzz I:     zzzz R: 0   0     0000 M: 0 0     0000     0000
+SIMLOG:: Processor halted
+
+SIMLOG:: sim_cycles          21
+
+SIMLOG:: inst_count          11
+
+SIMLOG:: dcachehit_count           0
+
+SIMLOG:: icachehit_count           0
+
+SIMLOG:: dcachereq_count           0
+
+SIMLOG:: icachereq_count           0
+
