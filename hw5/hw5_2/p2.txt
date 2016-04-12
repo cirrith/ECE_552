@@ -1,0 +1,13 @@
+// Write your answer to Problem 2 (b) and (c) here
+
+B.) Examining the program we can see that if a 'real' branch predictor, i.e. not a simple predict not taken, had been used
+it might have been able to identify the pattern that was present, that is branch every other. A more sophisticated
+branch predictor is able to help reduce the loss of cycles due to branching. The program that we wrote executed on our
+processor will get every other branch wrong because it always continues on until if finds out it was wrong. This is 
+very different when compared to a more progressive branch predictor which might have been able to get the pattern and thus
+reduce branch mis-predicts.
+
+C.) The act of predicting a branch should always take one cycle. Otherwise you will end up delaying your processor whenever
+a branch is encountered, which at that point the predictor useless because it will be causing more harm then good. If we examine
+the result of a branch predictor the penalaty of a miss-predict is always a looming threat because it can be quite severe depending 
+on how you implemented your branch logic and branch predictor. 

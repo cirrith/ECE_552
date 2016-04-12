@@ -1,6 +1,13 @@
-Warning: Arch trace has a PC not defined in binary image. Assuming it is a halt. Bad binary "/u/k/a/karu/courses/cs552/spring2013/handouts/testprograms/public/rand_simple/t_2_rori.asm". Panic.
-0000 INUM:        0 PC: 0x0000
-INST:                        
-ARCH:     ***DIFF***
-VERILOG: REG: 0 VALUE: 0x0043
-FAIL: 1 differences
+INST:    1100 0000 0000 0000 lbi r0, 0
+ARCH:    REG: 0 VALUE: 0x0000  
+VERILOG: REG: 0 VALUE: 0x0000
+INST:    0110 0000 0000 0010 beqz r0, 2
+INST:    0110 1000 0000 0010 bnez r0, 2
+INST:    0000 1000 0000 0000 nop
+INST:    0110 0000 0000 0010 beqz r0, 2
+INST:    0110 1000 0000 0010 bnez r0, 2
+INST:    0000 1000 0000 0000 nop
+INST:    0110 0000 0000 0010 beqz r0, 2
+INST:    0110 1000 0000 0010 bnez r0, 2
+INST:    0000 0000 0000 0000 halt
+SUCCESS: No differences
