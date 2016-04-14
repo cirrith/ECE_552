@@ -8,6 +8,7 @@ very different when compared to a more progressive branch predictor which might 
 reduce branch mis-predicts.
 
 C.) The act of predicting a branch should always take one cycle. Otherwise you will end up delaying your processor whenever
-a branch is encountered, which at that point the predictor useless because it will be causing more harm then good. If we examine
-the result of a branch predictor the penalaty of a miss-predict is always a looming threat because it can be quite severe depending 
-on how you implemented your branch logic and branch predictor. 
+a branch is encountered, which at that point the predictor is useless because it will be causing more harm than good. If we examine
+the result of a branch predictor the penalty of a miss-predict is always a looming threat because it can be quite severe depending 
+on how you implemented your branch logic and branch predictor and the depth of the pipeline. Branch misses can be a wide ranch of cycle
+costs.

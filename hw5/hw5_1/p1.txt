@@ -1,17 +1,17 @@
 // Write your answer to Problem 2 (b) here
 Forwarding 1: The first instance of fowarding occurs at the add r2, r1, r0 instruction
 	This is because before the instruction there are two lbi instructions for r0 and r1, so
-	in order to have the most update versions of those registers the processor will need to foward
-	from the WriteBack and Memory stages, respectiviley. This demonstartes a double forwarding instance
+	in order to have the most update versions of those registers the processor will need to forward
+	from the WriteBack and Memory stages, respectively. This demonstrates a double forwarding instance
 	
 Forwarding 2: The second instance of forwarding occurs at the jalr r0, 2 instruction
-	A foward case occurs because before this instruction there is a lbi instruction that writes to register
+	A forward case occurs because before this instruction there is a lbi instruction that writes to register
 	r0. In this case the processor will also stall one cycle because the lbi with the data dependency has yet
 	to clear the execute stage so it will wait till lbi gets into memory at which point it will forward from
 	memory into decode, assuming that the pipe processor does its branch and jump logic in the decode stage and
 	not any where else. This is a case of single forwarding to the decode stage, for my processor at least.
 	
-Forwarding 3: The final instance of fowarding occurs at the addi r3, r1, 0 instruction
+Forwarding 3: The final instance of forwarding occurs at the addi r3, r1, 0 instruction
 	It occurs because before this instruction there is a ld that will write into r1 which will create a data
 	dependency in the addi instruction. Because the previous instruction is a ld it will need to stall a cycle
 	because the data that will be loaded from memory isn't known until after the memory stages completes meaning
