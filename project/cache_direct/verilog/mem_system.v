@@ -1,40 +1,3 @@
-/**************************************************************************************************
-	STATE:
-		000 : IDLE
-			No Request
-			Read
-			Write
-			Error
-			
-		001 : Cache_Money
-			Hit
-			Write_Miss
-			Clean_Miss
-			Dirty_Miss
-			Mem_Stall
-			
-		010 : R1
-			Read1
-			
-		011 : Read2_Cache0
-			Read2_Cache0
-			
-		100 : Read3_Cache1
-			Read3_Cache1
-			
-		101 : Cache2
-			Cache2
-			
-		110 : Cache3
-			Cache3
-			
-		111 : Dirty
-			Dwrite1
-			Dwrite2
-			Dwrite3
-			
-**************************************************************************************************/
-
 module mem_system(/*AUTOARG*/
    // Outputs
    DataOut, Done, Stall, CacheHit, err,
@@ -51,9 +14,9 @@ module mem_system(/*AUTOARG*/
 	input        rst;
    
 	output [15:0] DataOut;
-	output Done;
+	output reg Done;
 	output Stall;
-	output CacheHit;
+	output reg CacheHit;
 	output err;
 
 	wire [15:0] memout;
@@ -62,13 +25,11 @@ module mem_system(/*AUTOARG*/
 	
 	wire [15:0] mAddr;
 	
-	wire [15:0] cout
 	wire [3:0] busy;
 	
 	wire [4:0] tag_out;
-
-	wire [1:0] moffset;
-	wire [1:0] coffset;
+	
+	wire [3:0] state;
 	
 	wire memstall;
 	
@@ -87,39 +48,37 @@ module mem_system(/*AUTOARG*/
 	
 	reg mwrite;
 	reg mread;
-	reg moffset;
-	reg coffset;
+	reg [1:0] moffset;
+	reg [1:0] coffset;
 	reg mover;
 	reg ccomp;
 	reg cwrite;
 	reg cdata;	
 
 	reg valid_in;
-	
-	reg done;
-	reg cachehit;
 
 	reg error;
-	reg nxtstate;
+	reg [3:0] nxtstate;
    
-	dff state [3:0] (.q(state), .d(nxtstate), .clk(clk), .rst(rst));
+	dff State [3:0] (.q(state), .d(nxtstate), .clk(clk), .rst(rst));
 
 	assign cData = cdata ? memout : DataIn;
 	assign mAddr = mover ? {tag_out, Addr[10:3], moffset, 1'b0} : {Addr[15:3], moffset, 1'b0};
-	assign mData = cout;
+	assign mData = DataOut;
 	
 	assign cacheOffset = awrite ? {coffset, 1'b0} : mwrite ? {moffset, 1'b0} : Addr[2:0]; //Check conditions
 	
 	assign enable = 1'b1;
 	assign err = error | merr | cerr;
 	assign awrite = !ccomp & cwrite;
-   
+	
+	assign Stall = memstall | (state != 4'b0000 & !Done);
    /* data_mem = 1, inst_mem = 0 *
     * needed for cache parameter */
    parameter mem_type = 0;
-   cache (0 + mem_type) c0(// Outputs
+   cache #(0 + mem_type) c0(// Outputs
                           .tag_out              (tag_out),
-                          .data_out             (cout),
+                          .data_out             (DataOut),
                           .hit                  (hit),
                           .dirty                (dirty),
                           .valid                (valid),
@@ -150,10 +109,7 @@ module mem_system(/*AUTOARG*/
                      .data_in           (mData),
                      .wr                (mwrite),
                      .rd                (mread));
-   
-	
-   
-   
+
 	always @ (*) begin
 		mwrite = 1'b0;
 		mread = 1'b0;
@@ -166,45 +122,45 @@ module mem_system(/*AUTOARG*/
 		
 		valid_in = 1'b0;
 		
-		done = 1'b0;
-		cachehit = 1'b0;
+		Done = 1'b0;
+		CacheHit = 1'b0;
 		
 		error = 1'b0;
 		nxtstate = 4'b0000;
 		
-		casex(state, Wr, Rd, hit, valid, dirty, busy, offset, addr[0])		
-			16'bXXXX_X_X_X_X_X_XXXX_XX_1 : begin error = 1'b1 nxtstate = 4'b0000; end //Error
+		casex({state, Wr, Rd, hit, valid, dirty, busy, Addr[2:1], Addr[0]})		
+			16'bXXXX_X_X_X_X_X_XXXX_XX_1 : begin error = 1'b1; nxtstate = 4'b0000; end //Error
 			
-			16'b0000_X_X_1_1_X_XXXX_XX_X : begin done = 1'b1; cachehit = 1'b1; nxtstate = 4'b0000; end //Don't know if needed, 1 cycle hit
+			16'b0000_X_X_1_1_X_XXXX_XX_X : begin Done = 1'b1; CacheHit = 1'b1; nxtstate = 4'b0000; end //Don't know if needed, 1 cycle hit
 			16'b0000_1_0_X_X_X_XXXX_XX_X : begin ccomp = 1'b1; cwrite = 1'b1; nxtstate = 4'b0001; end //Write
 			16'b0000_0_1_X_X_X_XXXX_XX_X : begin ccomp = 1'b1; cwrite = 1'b0; nxtstate = 4'b0001; end //Read
 			16'b0000_X_X_X_X_X_XXXX_XX_X : begin nxtstate = 4'b0000; end //No Request (00 or 11)
 			
-			16'b0001_X_X_1_1_X_XXXX_XX_X : begin done = 1'b1; cachehit = 1'b1; nxtstate = 4'b0000; end //Hit
-			16'b0001_X_X_X_1_1_XXXX_XX_X : begin ccomp = 1'b0; cwrite = 1'b0; coffest = 2'b00; mwrite = 1'b1; moffset = 2'b00; mover = 1'b1; nxtstate = 4'b0111; end //Dirty 0
+			16'b0001_X_X_1_1_X_XXXX_XX_X : begin Done = 1'b1; CacheHit = 1'b1; nxtstate = 4'b0000; end //Hit
+			16'b0001_X_X_X_1_1_XXXX_XX_X : begin ccomp = 1'b0; cwrite = 1'b0; coffset = 2'b00; mwrite = 1'b1; moffset = 2'b00; mover = 1'b1; nxtstate = 4'b0111; end //Dirty 0
 			16'b0001_X_X_X_X_X_XXXX_XX_X : begin mread = 1'b1; moffset = 2'b00; nxtstate = 4'b0010; end //Miss
 			
 			16'b0010_X_X_X_X_X_XXXX_XX_X : begin mread = 1'b1; moffset = 2'b01; nxtstate = 4'b0011; end //Start Read 1
 			
-			16'b0011_1_0_X_X_X_XXXX_00_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; mread = 1'b1; moffset = 2'b10; coffest = 2'b00; cdata = 1'b0; nxtstate = 4'b0100; end //Start Read 2 / Write Cache 0 w/ override
-			16'b0011_X_X_X_X_X_XXXX_XX_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; mread = 1'b1; moffset = 2'b10; coffest = 2'b00; cdata = 1'b1; nxtstate = 4'b0100; end //Start Read 2 / Write Cahce 0
+			16'b0011_1_0_X_X_X_XXXX_00_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; mread = 1'b1; moffset = 2'b10; coffset = 2'b00; cdata = 1'b0; nxtstate = 4'b0100; end //Start Read 2 / Write Cache 0 w/ override
+			16'b0011_X_X_X_X_X_XXXX_XX_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; mread = 1'b1; moffset = 2'b10; coffset = 2'b00; cdata = 1'b1; nxtstate = 4'b0100; end //Start Read 2 / Write Cahce 0
 			
-			16'b0100_1_0_X_X_X_XXXX_01_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; mread = 1'b1; moffset = 2'b11; coffest = 2'b01; cdata = 1'b0; nxtstate = 4'b0101; end //Start Read 3 / Write Cache 1 w/ override
-			16'b0100_X_X_X_X_X_XXXX_XX_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; mread = 1'b1; moffset = 2'b11; coffest = 2'b01; cdata = 1'b1; nxtstate = 4'b0101; end //Start Read 3 / Write Cache 1 w/ override
+			16'b0100_1_0_X_X_X_XXXX_01_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; mread = 1'b1; moffset = 2'b11; coffset = 2'b01; cdata = 1'b0; nxtstate = 4'b0101; end //Start Read 3 / Write Cache 1 w/ override
+			16'b0100_X_X_X_X_X_XXXX_XX_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; mread = 1'b1; moffset = 2'b11; coffset = 2'b01; cdata = 1'b1; nxtstate = 4'b0101; end //Start Read 3 / Write Cache 1 w/ override
 			
-			16'b0101_1_0_X_X_X_XXXX_10_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; coffest = 2'b10; cdata = 1'b0; nxtstate = 4'b0110; end //Cache 2 w/ override
-			16'b0101_X_X_X_X_X_XXXX_XX_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; coffest = 2'b10; cdata = 1'b1; nxtstate = 4'b0110; end //Cache 2		
+			16'b0101_1_0_X_X_X_XXXX_10_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; coffset = 2'b10; cdata = 1'b0; nxtstate = 4'b0110; end //Cache 2 w/ override
+			16'b0101_X_X_X_X_X_XXXX_XX_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; coffset = 2'b10; cdata = 1'b1; nxtstate = 4'b0110; end //Cache 2		
 		
-			16'b0110_1_0_X_X_X_XXXX_11_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; coffest = 2'b11; cdata = 1'b0; nxtstate = 4'b0111; end //Cache 3 w/ override
-			16'b0110_X_X_X_X_X_XXXX_XX_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; coffest = 2'b11; cdata = 1'b1; nxtstate = 4'b0111; end //Cache 3
+			16'b0110_1_0_X_X_X_XXXX_11_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; coffset = 2'b11; cdata = 1'b0; nxtstate = 4'b0111; end //Cache 3 w/ override
+			16'b0110_X_X_X_X_X_XXXX_XX_X : begin ccomp = 1'b0; cwrite = 1'b1; valid_in = 1'b1; coffset = 2'b11; cdata = 1'b1; nxtstate = 4'b0111; end //Cache 3
 		
-			16'b0111_1_0_X_X_X_XXXX_XX_X : begin done = 1'b1; ccomp = 1'b1; cwrite = 1'b1; nxtstate = 4'b0001; end //Write on Done
-			16'b0111_0_1_X_X_X_XXXX_XX_X : begin done = 1'b1; ccomp = 1'b0; cwrite = 1'b0; nxtstate = 4'b0001; end //Read on Done
-			16'b0111_X_X_X_X_X_XXXX_XX_X : begin done = 1'b1; ccomp = 1'b0; cwrite = 1'b0; nxtstate = 4'b0000; end //Done
+			16'b0111_1_0_X_X_X_XXXX_XX_X : begin Done = 1'b1; ccomp = 1'b1; cwrite = 1'b1; nxtstate = 4'b0001; end //Write on Done
+			16'b0111_0_1_X_X_X_XXXX_XX_X : begin Done = 1'b1; ccomp = 1'b0; cwrite = 1'b0; nxtstate = 4'b0001; end //Read on Done
+			16'b0111_X_X_X_X_X_XXXX_XX_X : begin Done = 1'b1; ccomp = 1'b0; cwrite = 1'b0; nxtstate = 4'b0000; end //Done
 			
-			16'b1000_X_X_X_X_X_1000_XX_X : begin mwrite = 1'b1; mover = 1'b1; moffset = 2'b01; nxtstate 4'b1000; end //Dirty 1
-			16'b1000_X_X_X_X_X_1000_XX_X : begin mwrite = 1'b1; mover = 1'b1; moffset = 2'b10; nxtstate 4'b1000; end //Dirty 2
-			16'b1000_X_X_X_X_X_1000_XX_X : begin mwrite = 1'b1; mover = 1'b1; moffset = 2'b11; nxtstate 4'b1000; end //Dirty 3
+			16'b1000_X_X_X_X_X_1000_XX_X : begin mwrite = 1'b1; mover = 1'b1; moffset = 2'b01; nxtstate = 4'b1000; end //Dirty 1
+			16'b1000_X_X_X_X_X_1000_XX_X : begin mwrite = 1'b1; mover = 1'b1; moffset = 2'b10; nxtstate = 4'b1000; end //Dirty 2
+			16'b1000_X_X_X_X_X_1000_XX_X : begin mwrite = 1'b1; mover = 1'b1; moffset = 2'b11; nxtstate = 4'b1000; end //Dirty 3
 			16'b1000_X_X_X_X_X_1000_XX_X : begin mread = 1'b1; moffset = 2'b00; nxtstate = 4'b0010; end //Read 0
 		endcase
 	end
