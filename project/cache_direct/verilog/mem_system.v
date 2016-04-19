@@ -72,7 +72,7 @@ module mem_system(/*AUTOARG*/
 	assign err = error | merr | cerr;
 	assign awrite = !ccomp & cwrite;
 	
-	assign Stall = memstall | (state != 4'b0000 & !Done);
+	assign Stall = memstall | !Done & (Wr | Rd);
    /* data_mem = 1, inst_mem = 0 *
     * needed for cache parameter */
    parameter mem_type = 0;
@@ -131,7 +131,8 @@ module mem_system(/*AUTOARG*/
 		casex({state, Wr, Rd, hit, valid, dirty, busy, Addr[2:1], Addr[0]})		
 			16'bXXXX_X_X_X_X_X_XXXX_XX_1 : begin error = 1'b1; nxtstate = 4'b0000; end //Error
 			
-			16'b0000_X_X_1_1_X_XXXX_XX_X : begin Done = 1'b1; CacheHit = 1'b1; nxtstate = 4'b0000; end //Don't know if needed, 1 cycle hit
+			16'b0000_1_0_1_1_X_XXXX_XX_X : begin Done = 1'b1; CacheHit = 1'b1; nxtstate = 4'b0000; end //Write, in cycle
+			16'b0000_0_1_1_1_X_XXXX_XX_X : begin Done = 1'b1; CacheHit = 1'b1; nxtstate = 4'b0000; end //Read, in cycle
 			16'b0000_1_0_X_X_X_XXXX_XX_X : begin ccomp = 1'b1; cwrite = 1'b1; nxtstate = 4'b0001; end //Write
 			16'b0000_0_1_X_X_X_XXXX_XX_X : begin ccomp = 1'b1; cwrite = 1'b0; nxtstate = 4'b0001; end //Read
 			16'b0000_X_X_X_X_X_XXXX_XX_X : begin nxtstate = 4'b0000; end //No Request (00 or 11)
