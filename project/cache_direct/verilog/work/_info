@@ -1,0 +1,190 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ProgramData/App-V/2191B702-5279-4048-91BA-BCF8F2A20B49/21710E5E-1DEB-4C76-9578-9609978C17F5/Root/examples
+vcache
+!s110 1460934519
+!i10b 1
+!s100 W_PXLV=SljHgf@G;jY>5Z0
+I9GN;Ab5A=NKl@cMhTLe;03
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+Z1 dI:/College/ECE_552/project/cache_direct/verilog
+Z2 w1455607538
+8I:/College/ECE_552/project/cache_direct/verilog/cache.v
+FI:/College/ECE_552/project/cache_direct/verilog/cache.v
+L0 17
+Z3 OE;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1460934519.875000
+!s107 I:/College/ECE_552/project/cache_direct/verilog/cache.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/cache_direct/verilog/cache.v|
+!i113 0
+Z4 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vclkrst
+Z5 !s110 1460934520
+!i10b 1
+!s100 R;@?GMgoUFcL3?`Z^d8UF1
+IMBzM7`mf`bJfOeEYiUWb@1
+R0
+R1
+Z6 w1240583293
+8I:/College/ECE_552/project/cache_direct/verilog/clkrst.v
+FI:/College/ECE_552/project/cache_direct/verilog/clkrst.v
+L0 13
+R3
+r1
+!s85 0
+31
+!s108 1460934520.197000
+!s107 I:/College/ECE_552/project/cache_direct/verilog/clkrst.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/cache_direct/verilog/clkrst.v|
+!i113 0
+R4
+vfinal_memory
+R5
+!i10b 1
+!s100 bW2ZJ093[@cX;@kbnMDKW3
+IDPI@ENfE7X<;WEfBB4R_K3
+R0
+R1
+R2
+8I:/College/ECE_552/project/cache_direct/verilog/final_memory.v
+FI:/College/ECE_552/project/cache_direct/verilog/final_memory.v
+L0 54
+R3
+r1
+!s85 0
+31
+!s108 1460934520.831000
+!s107 I:/College/ECE_552/project/cache_direct/verilog/final_memory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/cache_direct/verilog/final_memory.v|
+!i113 0
+R4
+vfour_bank_mem
+Z7 !s110 1460934521
+!i10b 1
+!s100 fFjCM1aIGh`TZz:`^Id=i1
+IzLADXMPUkIKTh`81?EoT[3
+R0
+R1
+R2
+8I:/College/ECE_552/project/cache_direct/verilog/four_bank_mem.v
+FI:/College/ECE_552/project/cache_direct/verilog/four_bank_mem.v
+L0 65
+R3
+r1
+!s85 0
+31
+!s108 1460934521.163000
+!s107 I:/College/ECE_552/project/cache_direct/verilog/four_bank_mem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/cache_direct/verilog/four_bank_mem.v|
+!i113 0
+R4
+vmem_system_hier
+R7
+!i10b 1
+!s100 SV]J3`f:TzOChGc>mObJS0
+IZ^JV0LW@ggE4K4BdMZ_DF0
+R0
+R1
+R6
+8I:/College/ECE_552/project/cache_direct/verilog/mem_system_hier.v
+FI:/College/ECE_552/project/cache_direct/verilog/mem_system_hier.v
+L0 5
+R3
+r1
+!s85 0
+31
+!s108 1460934521.755000
+!s107 I:/College/ECE_552/project/cache_direct/verilog/mem_system_hier.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/cache_direct/verilog/mem_system_hier.v|
+!i113 0
+R4
+vmem_system_perfbench
+Z8 !s110 1460934522
+!i10b 1
+!s100 WhW^C=L0^87T:VI_oIh1B1
+IoSMZMg]<TU;f]d3IOJYDa3
+R0
+R1
+R6
+8I:/College/ECE_552/project/cache_direct/verilog/mem_system_perfbench.v
+FI:/College/ECE_552/project/cache_direct/verilog/mem_system_perfbench.v
+L0 7
+R3
+r1
+!s85 0
+31
+!s108 1460934522.117000
+!s107 I:/College/ECE_552/project/cache_direct/verilog/mem_system_perfbench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/cache_direct/verilog/mem_system_perfbench.v|
+!i113 0
+R4
+vmem_system_ref
+R8
+!i10b 1
+!s100 ]59zjM:LF`0oP3B?oodbK2
+IaCTB?H84FWi38FG@5]<7g2
+R0
+R1
+R6
+8I:/College/ECE_552/project/cache_direct/verilog/mem_system_ref.v
+FI:/College/ECE_552/project/cache_direct/verilog/mem_system_ref.v
+L0 5
+R3
+r1
+!s85 0
+31
+!s108 1460934522.741000
+!s107 I:/College/ECE_552/project/cache_direct/verilog/mem_system_ref.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/cache_direct/verilog/mem_system_ref.v|
+!i113 0
+R4
+vmemc
+Z9 !s110 1460934523
+!i10b 1
+!s100 _=TDZRk[3og6jclRoeVTe0
+IW]K[8eGz8`a4FgAM6dLVS2
+R0
+R1
+Z10 w1455607539
+8I:/College/ECE_552/project/cache_direct/verilog/memc.v
+FI:/College/ECE_552/project/cache_direct/verilog/memc.v
+L0 6
+R3
+r1
+!s85 0
+31
+!s108 1460934523.420000
+!s107 I:/College/ECE_552/project/cache_direct/verilog/memc.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/cache_direct/verilog/memc.v|
+!i113 0
+R4
+vmemv
+R9
+!i10b 1
+!s100 :;_Io:GD8E@l1eN_W;@[T2
+IU>k5:`UCYE7;5>z76V9AF1
+R0
+R1
+R10
+8I:/College/ECE_552/project/cache_direct/verilog/memv.syn.v
+FI:/College/ECE_552/project/cache_direct/verilog/memv.syn.v
+L0 7
+R3
+r1
+!s85 0
+31
+!s108 1460934523.750000
+!s107 I:/College/ECE_552/project/cache_direct/verilog/memv.syn.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_552/project/cache_direct/verilog/memv.syn.v|
+!i113 0
+R4

@@ -1,0 +1,98 @@
+I:/College/ECE_552/project/cache_direct/verilog/mem_system_randbench.v {0 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/mem_system_randbench.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module mem_system_randbench
+** Error: I:/College/ECE_552/project/cache_direct/verilog/mem_system_randbench.v(217): Variable declaration assignments are only allowed at the module level or if the variables are automatic.
+** Error: I:/College/ECE_552/project/cache_direct/verilog/mem_system_randbench.v(240): Variable declaration assignments are only allowed at the module level or if the variables are automatic.
+** Error: I:/College/ECE_552/project/cache_direct/verilog/mem_system_randbench.v(241): Variable declaration assignments are only allowed at the module level or if the variables are automatic.
+** Error: I:/College/ECE_552/project/cache_direct/verilog/mem_system_randbench.v(242): Variable declaration assignments are only allowed at the module level or if the variables are automatic.
+
+} {4.0 8.0} {}} I:/College/ECE_552/project/cache_direct/verilog/memc.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/memc.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module memc
+
+Top level modules:
+	memc
+
+} {} {}} I:/College/ECE_552/project/cache_direct/verilog/final_memory.syn.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/final_memory.syn.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module final_memory
+
+Top level modules:
+	final_memory
+
+} {} {}} I:/College/ECE_552/project/cache_direct/verilog/final_memory.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/final_memory.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module final_memory
+
+Top level modules:
+	final_memory
+
+} {} {}} I:/College/ECE_552/project/cache_direct/verilog/memc.syn.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/memc.syn.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module memc
+
+Top level modules:
+	memc
+
+} {} {}} I:/College/ECE_552/project/cache_direct/verilog/cache.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/cache.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module cache
+
+Top level modules:
+	cache
+
+} {} {}} I:/College/ECE_552/project/cache_direct/verilog/memv.syn.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/memv.syn.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module memv
+
+Top level modules:
+	memv
+
+} {} {}} I:/College/ECE_552/project/cache_direct/verilog/memv.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/memv.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module memv
+
+Top level modules:
+	memv
+
+} {} {}} I:/College/ECE_552/project/cache_direct/verilog/four_bank_mem.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/four_bank_mem.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module four_bank_mem
+
+Top level modules:
+	four_bank_mem
+
+} {} {}} I:/College/ECE_552/project/cache_direct/verilog/mem_system_perfbench.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/mem_system_perfbench.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module mem_system_perfbench
+
+Top level modules:
+	mem_system_perfbench
+
+} {} {}} I:/College/ECE_552/project/cache_direct/verilog/mem_system_ref.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/mem_system_ref.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module mem_system_ref
+
+Top level modules:
+	mem_system_ref
+
+} {} {}} I:/College/ECE_552/project/cache_direct/verilog/mem_system_hier.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/mem_system_hier.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module mem_system_hier
+
+Top level modules:
+	mem_system_hier
+
+} {} {}} I:/College/ECE_552/project/cache_direct/verilog/clkrst.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/clkrst.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} I:/College/ECE_552/project/cache_direct/verilog/mem_system.v {0 {vlog -work work -vopt -stats=none I:/College/ECE_552/project/cache_direct/verilog/mem_system.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module mem_system
+** Error: I:/College/ECE_552/project/cache_direct/verilog/mem_system.v(47): near "c0": syntax error, unexpected IDENTIFIER, expecting ';' or ','
+
+} {4.0 5.0} {}}
