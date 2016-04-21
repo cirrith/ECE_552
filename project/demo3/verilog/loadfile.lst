@@ -1,0 +1,15 @@
+          // Write your assembly program for Problem 2 (a) here.
+          
+0000 c000 lbi r0, 0
+0002 6002 beqz r0, 2
+0004 0800 nop
+0006 6802 bnez r0, 2
+0008 0800 nop
+000a 6002 beqz r0, 2
+000c 0800 nop
+000e 6802 bnez r0, 2
+0010 0800 nop
+0012 6002 beqz r0, 2
+0014 0800 nop
+0016 6802 bnez r0, 2
+0018 0000 halt
