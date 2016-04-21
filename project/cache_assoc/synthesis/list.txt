@@ -4,3 +4,4 @@ final_memory.syn.v
 mem_system.v
 memc.syn.v
 memv.syn.v
+four_bank_mem.v
