@@ -80,7 +80,7 @@
 /				*Branch_Stall_EXME - Need to stall for Branch, data needed is in execute currently and needs to go to memory
 /				*Branch_Stall_Mem_Read - Need to stall for Branch, data needed is not available as it is being read
 ********************************************************************************************************/
-module Extra_Logic2 (halt_Dec, halt_Exe, halt_Mem, halt_WB, PC_Sel, Reg_Write_Exe, Reg_Write_Mem, Reg_Write_WB, Reg_1_Src_Dec, Reg_1_Src_Exe, Reg_2_Src_Dec, Reg_2_Src_Exe, Write_Reg_Exe, Write_Reg_Mem, Write_Reg_WB, ALU_Result_Mem, WB, Mem_Read_Exe, PC_Code, Check_A_Dec, Check_B_Dec, Check_A_Exe, Check_B_Exe, A_Forward, A_Forward_Data, B_Forward, B_Forward_Data, PC_Det_Forward, PC_Det_Forward_Data, Stall_Fetch, Stall_IFDE, Stall_DEEX, Stall_EXME, Stall_MEWB, Flush_IFDE, Flush_DEEX, Flush_EXME, Flush_MEWB);
+module Extra_Logic2 (halt_Dec, halt_Exe, halt_Mem, halt_WB, PC_Sel, Reg_Write_Exe, Reg_Write_Mem, Reg_Write_WB, Reg_1_Src_Dec, Reg_1_Src_Exe, Reg_2_Src_Dec, Reg_2_Src_Exe, Write_Reg_Exe, Write_Reg_Mem, Write_Reg_WB, ALU_Result_Mem, WB, Mem_Read_Exe, PC_Code, Check_A_Dec, Check_B_Dec, Check_A_Exe, Check_B_Exe, Mem_Stall, A_Forward, A_Forward_Data, B_Forward, B_Forward_Data, PC_Det_Forward, PC_Det_Forward_Data, Stall_Fetch, Stall_IFDE, Stall_DEEX, Stall_EXME, Stall_MEWB, Flush_IFDE, Flush_DEEX, Flush_EXME, Flush_MEWB);
 	
 	input 			halt_Dec;
 	input 			halt_Exe;

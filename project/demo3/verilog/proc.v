@@ -145,6 +145,7 @@ Extra_Logic2 extra_logic (
 	.Check_B_Dec		(Check_B_Dec),
 	.Check_A_Exe		(Check_A_Exe),
 	.Check_B_Exe		(Check_B_Exe),
+	.Mem_Stall			(Mem_Stall),
 	.A_Forward			(A_Forward),
 	.A_Forward_Data		(A_Forward_Data),
 	.B_Forward			(B_Forward),
