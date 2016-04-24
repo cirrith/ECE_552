@@ -13,8 +13,10 @@
 /
 /		OUTPUTS: 
 /				Mem_Data[15:0] - Data read from Memory on memory read
+/				Mem_Stall - Memory needs to stall because reasons
+/				err - Their is an error that occured
 ********************************************************************************************************/
-module Memory (clk, rst, createdump, Mem_Write, Mem_Read, Address, Data, Mem_Data);
+module Memory (clk, rst, createdump, Mem_Write, Mem_Read, Address, Data, Mem_Data, Mem_Stall, err);
 
 	input 			clk;
 	input 			rst;
@@ -27,8 +29,27 @@ module Memory (clk, rst, createdump, Mem_Write, Mem_Read, Address, Data, Mem_Dat
 	input [15:0] 	Data;
 
 	output [15:0] 	Mem_Data;
-
-	memory2c Data_Memory(.data_out(Mem_Data), .data_in(Data), .addr(Address), .enable(Mem_Read ^ Mem_Write), .wr(Mem_Write), .createdump(createdump), .clk(clk), .rst(rst));
+	output 			Mem_Stall;
+	output			err;
+	
+	wire Done;
+	wire Hit;
+	
+	mem_system Data_Memory(
+		.DataOut(Mem_Data),
+		.Done(Done),
+		.Stall(Mem_Stall),
+		.CacheHit(Hit),
+		.err(err),
+		.Addr(Address),
+		.DataIn(Data),
+		.Rd(Mem_Read & !Done),
+		.Wr(Mem_Write & !Done),
+		.createdump(createdump),
+		.clk(clk),
+		.rst(rst));
+	
+	//memory2c Data_Memory(.data_out(Mem_Data), .data_in(Data), .addr(Address), .enable(Mem_Read ^ Mem_Write), .wr(Mem_Write), .createdump(createdump), .clk(clk), .rst(rst));
 
 endmodule
 

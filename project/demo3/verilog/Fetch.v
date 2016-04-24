@@ -20,7 +20,7 @@
 /		INTERNAL:
 /				PC [15:0] - Current PC
 ********************************************************************************************************/
-module Fetch (clk, rst, Stall, PC_Ex, PC_Sel, Instruction, PC2);
+module Fetch (clk, rst, Stall, PC_Ex, PC_Sel, Instruction, PC2, Fet_Stall, err);
 
 	input 			clk;
 	input 			rst;
@@ -31,10 +31,29 @@ module Fetch (clk, rst, Stall, PC_Ex, PC_Sel, Instruction, PC2);
 	
 	output [15:0] 	Instruction;
 	output [15:0] 	PC2;
+	output				Fet_Stall;
+	output				err;
 
 	wire [15:0] PC;
+	wire 			Done;
+	wire				Hit;
+	
 
-	memory2c Instruction_Memory(.data_out(Instruction), .data_in(), .addr(PC), .enable(1'b1), .wr(1'b0), .createdump(1'b0), .clk(clk), .rst(rst));
+	mem_system Instruction_Memory(
+		.DataOut(Instruction),
+		.Done(Done),
+		.Stall(Fet_Stall),
+		.CacheHit(Hit),
+		.err(err),
+		.Addr(PC),
+		.DataIn(),
+		.Rd(!Done),
+		.Wr(),
+		.createdump(),
+		.clk(clk),
+		.rst(rst));
+		
+	//memory2c Instruction_Memory(.data_out(Instruction), .data_in(), .addr(PC), .enable(1'b1), .wr(1'b0), .createdump(1'b0), .clk(clk), .rst(rst));
 
 	PC_inc pc_inc(.PC(PC), .PC2(PC2));
 	
