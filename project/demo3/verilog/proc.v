@@ -79,6 +79,7 @@ module proc (err, clk, rst);
 	wire [15:0]			PC_Det_Forward_Data;
 
 	wire					Mem_Stall;
+	wire					Fet_Stall;
 	
 	wire 				WB_Sel_Dec;
 	wire 				WB_Sel_Exe;
@@ -138,14 +139,17 @@ Extra_Logic2 extra_logic (
 	.Write_Reg_Mem		(Write_Reg_Mem),
 	.Write_Reg_WB		(Write_Reg_WB),
 	.ALU_Result_Mem		(ALU_Result_Mem),
+	.Mem_Data_Mem		(Mem_Data_Mem),
 	.WB					(WB),
 	.Mem_Read_Exe		(Mem_Read_Exe),
+	.Mem_Read_Mem		(Mem_Read_Mem),
 	.PC_Code			(PC_Code),
 	.Check_A_Dec		(Check_A_Dec),
 	.Check_B_Dec		(Check_B_Dec),
 	.Check_A_Exe		(Check_A_Exe),
 	.Check_B_Exe		(Check_B_Exe),
 	.Mem_Stall			(Mem_Stall),
+	.Fet_Stall				(Fet_Stall),
 	.A_Forward			(A_Forward),
 	.A_Forward_Data		(A_Forward_Data),
 	.B_Forward			(B_Forward),
@@ -169,8 +173,8 @@ Extra_Logic2 extra_logic (
 		.PC_Ex					(PC_Ex),
 		.PC_Sel					(PC_Sel),
 		.Instruction			(Instruction_Fet),
-		.PC2					(PC2_Fet)
-		.Fet_Stall			(Fet_Stall)
+		.PC2					(PC2_Fet),
+		.Fet_Stall			(Fet_Stall),
 		.err					(Fet_err));
 	
 	Fetch_Decode_Blade if_de_blade (
@@ -305,8 +309,8 @@ Extra_Logic2 extra_logic (
 		.Mem_Read				(Mem_Read_Mem),
 		.Address				(ALU_Result_Mem),
 		.Data					(Reg_2_Data_Mem),
-		.Mem_Data				(Mem_Data_Mem)
-		.Mem_Stall				(Mem_Stall)
+		.Mem_Data				(Mem_Data_Mem),
+		.Mem_Stall				(Mem_Stall),
 		.err							(Mem_err));
 	
 	Memory_Writeback_Blade me_wb_blade (

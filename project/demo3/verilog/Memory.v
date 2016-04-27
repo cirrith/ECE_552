@@ -41,7 +41,7 @@ module Memory (clk, rst, createdump, Mem_Write, Mem_Read, Address, Data, Mem_Dat
 		.Stall(Mem_Stall),
 		.CacheHit(Hit),
 		.err(err),
-		.Addr(Address),
+		.Addr(Address & {16{(Mem_Read | Mem_Write)}}),
 		.DataIn(Data),
 		.Rd(Mem_Read & !Done),
 		.Wr(Mem_Write & !Done),

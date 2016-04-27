@@ -39,22 +39,26 @@ module Fetch (clk, rst, Stall, PC_Ex, PC_Sel, Instruction, PC2, Fet_Stall, err);
 	wire				Hit;
 	
 
-	mem_system Instruction_Memory(
+	imem_system Instruction_Memory(
 		.DataOut(Instruction),
 		.Done(Done),
 		.Stall(Fet_Stall),
 		.CacheHit(Hit),
 		.err(err),
 		.Addr(PC),
-		.DataIn(),
+		.DataIn(16'h0000),
 		.Rd(!Done),
-		.Wr(),
-		.createdump(),
+		.Wr(1'b0),
+		.createdump(1'b0),
 		.clk(clk),
 		.rst(rst));
-		
-	//memory2c Instruction_Memory(.data_out(Instruction), .data_in(), .addr(PC), .enable(1'b1), .wr(1'b0), .createdump(1'b0), .clk(clk), .rst(rst));
 
+/*
+	memory2c Instruction_Memory(.data_out(Instruction), .data_in(), .addr(PC), .enable(1'b1), .wr(1'b0), .createdump(1'b0), .clk(clk), .rst(rst));
+	
+	assign Fet_Stall = 1'b0;
+	assign Hit = 1'b0;
+*/
 	PC_inc pc_inc(.PC(PC), .PC2(PC2));
 	
 	PC program_counter (.clk(clk), .rst(rst), .PC(PC), .PC2(PC2), .PC_Ex(PC_Ex), .PC_Sel(PC_Sel), .Stall(Stall));

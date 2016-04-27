@@ -130,7 +130,7 @@ module proc_hier_pbench();
    //assign PC = DUT.PC_Out;
    //assign Inst = DUT.Instruction_f;
    
-   assign RegWrite = DUT.p0.Reg_Write_WB;
+   assign RegWrite = (DUT.p0.Reg_Write_WB & !(DUT.p0.Mem_Stall | DUT.p0.Fet_Stall));
    // Is register file being written to, one bit signal (1 means yes, 0 means no)
    //    
    assign WriteRegister = DUT.p0.Write_Reg_WB;
@@ -139,10 +139,10 @@ module proc_hier_pbench();
    assign WriteData = DUT.p0.WB;
    // Data being written to the register. (16 bits)
    
-   assign MemRead =  DUT.p0.Mem_Read_Mem;
+   assign MemRead =  DUT.p0.Mem_Read_Mem & !(DUT.p0.Mem_Stall | DUT.p0.Fet_Stall);
    // Is memory being read, one bit signal (1 means yes, 0 means no)
    
-   assign MemWrite = DUT.p0.Mem_Write_Mem;
+   assign MemWrite = DUT.p0.Mem_Write_Mem & !(DUT.p0.Mem_Stall | DUT.p0.Fet_Stall);
    // Is memory being written to (1 bit signal)
    
    assign MemAddress = DUT.p0.ALU_Result_Mem;
@@ -155,7 +155,7 @@ module proc_hier_pbench();
    // Data read from memory for memory reads (16 bits)
 
    // new added 05/03
-   assign ICacheReq = !DUT.p0.Stall_Fetch;
+   assign ICacheReq = (!DUT.p0.Stall_Fetch);
    // Signal indicating a valid instruction read request to cache
    // Above assignment is a dummy example
    

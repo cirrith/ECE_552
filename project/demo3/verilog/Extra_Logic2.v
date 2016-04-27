@@ -55,6 +55,7 @@
 /				Write_Reg_WB [2:0] - Register currently being written to if Reg_Write is true
 /
 /				Mem_Stall - Memory is requesting a stall
+/				Fet_Stall - Fetch is requesting a stall
 /				
 /		OUTPUTS: 
 /				Stall_Fetch - Dont' Write back to PC, should be the same as Stall_IFDE
@@ -80,7 +81,7 @@
 /				*Branch_Stall_EXME - Need to stall for Branch, data needed is in execute currently and needs to go to memory
 /				*Branch_Stall_Mem_Read - Need to stall for Branch, data needed is not available as it is being read
 ********************************************************************************************************/
-module Extra_Logic2 (halt_Dec, halt_Exe, halt_Mem, halt_WB, PC_Sel, Reg_Write_Exe, Reg_Write_Mem, Reg_Write_WB, Reg_1_Src_Dec, Reg_1_Src_Exe, Reg_2_Src_Dec, Reg_2_Src_Exe, Write_Reg_Exe, Write_Reg_Mem, Write_Reg_WB, ALU_Result_Mem, WB, Mem_Read_Exe, PC_Code, Check_A_Dec, Check_B_Dec, Check_A_Exe, Check_B_Exe, Mem_Stall, A_Forward, A_Forward_Data, B_Forward, B_Forward_Data, PC_Det_Forward, PC_Det_Forward_Data, Stall_Fetch, Stall_IFDE, Stall_DEEX, Stall_EXME, Stall_MEWB, Flush_IFDE, Flush_DEEX, Flush_EXME, Flush_MEWB);
+module Extra_Logic2 (halt_Dec, halt_Exe, halt_Mem, halt_WB, PC_Sel, Reg_Write_Exe, Reg_Write_Mem, Reg_Write_WB, Reg_1_Src_Dec, Reg_1_Src_Exe, Reg_2_Src_Dec, Reg_2_Src_Exe, Write_Reg_Exe, Write_Reg_Mem, Write_Reg_WB, ALU_Result_Mem, Mem_Data_Mem, WB, Mem_Read_Exe, Mem_Read_Mem, PC_Code, Check_A_Dec, Check_B_Dec, Check_A_Exe, Check_B_Exe, Mem_Stall, Fet_Stall, A_Forward, A_Forward_Data, B_Forward, B_Forward_Data, PC_Det_Forward, PC_Det_Forward_Data, Stall_Fetch, Stall_IFDE, Stall_DEEX, Stall_EXME, Stall_MEWB, Flush_IFDE, Flush_DEEX, Flush_EXME, Flush_MEWB);
 	
 	input 			halt_Dec;
 	input 			halt_Exe;
@@ -103,9 +104,11 @@ module Extra_Logic2 (halt_Dec, halt_Exe, halt_Mem, halt_WB, PC_Sel, Reg_Write_Ex
 	input [2:0]		Write_Reg_WB;
 	
 	input [15:0]	ALU_Result_Mem;
+	input [15:0]	Mem_Data_Mem;
 	input [15:0]	WB;
 	
 	input			Mem_Read_Exe;
+	input			Mem_Read_Mem;
 	
 	input [1:0]		PC_Code;
 	
@@ -116,6 +119,7 @@ module Extra_Logic2 (halt_Dec, halt_Exe, halt_Mem, halt_WB, PC_Sel, Reg_Write_Ex
 	input			Check_B_Exe;
 	
 	input			Mem_Stall;
+	input			Fet_Stall;
 	
 	output 			A_Forward;
 	output [15:0]	A_Forward_Data;
@@ -149,11 +153,13 @@ module Extra_Logic2 (halt_Dec, halt_Exe, halt_Mem, halt_WB, PC_Sel, Reg_Write_Ex
 	
 	wire 			Load_Stall;
 	wire			Decode_Stall;
+	wire			Decode_StallM;
 	
 	wire 			No_Write_PC;
 	
 	
 	assign Decode_Stall = ((Reg_1_Src_Dec == Write_Reg_Exe) & (PC_Code != 2'h0) & Reg_Write_Exe);
+	//assign Decode_StallM = ((Reg_1_Src_Dec == Write_Reg_Mem) & (PC_Code != 2'h0) & Reg_Write_Mem);
 	
 	assign Load_Stall =  Mem_Read_Exe & ((A_Forward_DEEX & Check_A_Dec) | (B_Forward_DEEX & Check_B_Dec));
 	
@@ -172,19 +178,19 @@ module Extra_Logic2 (halt_Dec, halt_Exe, halt_Mem, halt_WB, PC_Sel, Reg_Write_Ex
 	assign A_Forward_Data = A_Forward_EXME ? ALU_Result_Mem : WB; //Memory has priority
 	assign B_Forward_Data = B_Forward_EXME ? ALU_Result_Mem : WB; //Memory has priority
 	
-	assign PC_Det_Forward = (Reg_1_Src_Dec == Write_Reg_Mem) & (PC_Code == 2'h1 | PC_Code == 2'h2);
-	assign PC_Det_Forward_Data = ALU_Result_Mem;
+	assign PC_Det_Forward = (Reg_1_Src_Dec == Write_Reg_Mem) & (PC_Code == 2'h1 | PC_Code == 2'h2) & Reg_Write_Mem;
+	assign PC_Det_Forward_Data = ((Reg_1_Src_Dec == Write_Reg_Mem) & Mem_Read_Mem) ? Mem_Data_Mem : ALU_Result_Mem;
 	
 	assign No_Write_PC = halt_Dec | halt_Exe | halt_Mem | halt_WB;
 	
-	assign Stall_Fetch = Load_Stall | No_Write_PC | Decode_Stall | Mem_Stall;
-	assign Stall_IFDE = Load_Stall | Decode_Stall | Mem_Stall;
-	assign Stall_DEEX = Mem_Stall;
-	assign Stall_EXME = Mem_Stall;
-	assign Stall_MEWB = Mem_Stall;
+	assign Stall_Fetch = Load_Stall | No_Write_PC | Decode_Stall | Mem_Stall | Fet_Stall;
+	assign Stall_IFDE = Load_Stall | Decode_Stall | Mem_Stall | Fet_Stall;
+	assign Stall_DEEX = Mem_Stall | Fet_Stall;
+	assign Stall_EXME = Mem_Stall | Fet_Stall;
+	assign Stall_MEWB = Mem_Stall | Fet_Stall;
 	
-	assign Flush_IFDE = (PC_Sel | No_Write_PC) & ~(Decode_Stall | Load_Stall); 
-	assign Flush_DEEX = Load_Stall | Decode_Stall;
+	assign Flush_IFDE = (PC_Sel | No_Write_PC) & ~(Decode_Stall | Load_Stall) & !(Mem_Stall | Fet_Stall); 
+	assign Flush_DEEX = (Load_Stall | Decode_Stall) & !(Mem_Stall | Fet_Stall);
 	assign Flush_EXME = 1'b0;
 	assign Flush_MEWB = 1'b0;
 	
