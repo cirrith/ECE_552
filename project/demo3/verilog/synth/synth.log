@@ -1,0 +1,2042 @@
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version B-2008.09-SP3 for amd64 -- Jan 19, 2009
+              Copyright (c) 1988-2008 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+echo "********** CS552 Reading files begin ********************"
+********** CS552 Reading files begin ********************
+set my_verilog_files [list ALU.v ALU_ANDN.v ALU_Bit4_CLA.v ALU_CLA.v ALU_CLA_FA.v ALU_Shifter.v ALU_Shifter_1.v ALU_Shifter_2.v ALU_Shifter_4.v ALU_Shifter_8.v ALU_XOR.v Bit1_Mux2_1.v Bit1_Mux4_1.v Bit4_CLA.v Bits8_SExt.v Bit16_Mux4_1.v Bit16_Mux8_1.v Bits5_SExt.v Bits5_ZExt.v Bits11_SExt.v Branch_Logic.v cache.v CLA.v CLA_FA.v Decode.v Decode_Execute_Blade.v dff.v dff_pipe.v dff_pipe_p.v Execute.v Execute_Memory_Blade.v Extender.v Extra_Logic2.v Fetch.v Fetch_Decode_Blade.v final_memory.syn.v four_bank_mem.v Forward_Logic.v Imm_Selecter.v Memory.v Memory_Writeback_Blade.v memory2c.syn.v memory2c_align.syn.v PC.v PC_inc.v PC_Logic.v proc.v Processor_Control.v Register.v Register_File.v Register_File_Bypass.v Register_File_Input.v stallmem.syn.v Write_Back.v  ]
+ALU.v ALU_ANDN.v ALU_Bit4_CLA.v ALU_CLA.v ALU_CLA_FA.v ALU_Shifter.v ALU_Shifter_1.v ALU_Shifter_2.v ALU_Shifter_4.v ALU_Shifter_8.v ALU_XOR.v Bit1_Mux2_1.v Bit1_Mux4_1.v Bit4_CLA.v Bits8_SExt.v Bit16_Mux4_1.v Bit16_Mux8_1.v Bits5_SExt.v Bits5_ZExt.v Bits11_SExt.v Branch_Logic.v cache.v CLA.v CLA_FA.v Decode.v Decode_Execute_Blade.v dff.v dff_pipe.v dff_pipe_p.v Execute.v Execute_Memory_Blade.v Extender.v Extra_Logic2.v Fetch.v Fetch_Decode_Blade.v final_memory.syn.v four_bank_mem.v Forward_Logic.v Imm_Selecter.v Memory.v Memory_Writeback_Blade.v memory2c.syn.v memory2c_align.syn.v PC.v PC_inc.v PC_Logic.v proc.v Processor_Control.v Register.v Register_File.v Register_File_Bypass.v Register_File_Input.v stallmem.syn.v Write_Back.v
+set my_toplevel proc
+proc
+define_design_lib WORK -path ./WORK
+1
+analyze -f verilog $my_verilog_files
+Running PRESTO HDLC
+Searching for ./ALU.v
+Searching for ./ALU_ANDN.v
+Searching for ./ALU_Bit4_CLA.v
+Searching for ./ALU_CLA.v
+Searching for ./ALU_CLA_FA.v
+Searching for ./ALU_Shifter.v
+Searching for ./ALU_Shifter_1.v
+Searching for ./ALU_Shifter_2.v
+Searching for ./ALU_Shifter_4.v
+Searching for ./ALU_Shifter_8.v
+Searching for ./ALU_XOR.v
+Searching for ./Bit1_Mux2_1.v
+Searching for ./Bit1_Mux4_1.v
+Searching for ./Bit4_CLA.v
+Searching for ./Bits8_SExt.v
+Searching for ./Bit16_Mux4_1.v
+Searching for ./Bit16_Mux8_1.v
+Searching for ./Bits5_SExt.v
+Searching for ./Bits5_ZExt.v
+Searching for ./Bits11_SExt.v
+Searching for ./Branch_Logic.v
+Searching for ./cache.v
+Searching for ./CLA.v
+Searching for ./CLA_FA.v
+Searching for ./Decode.v
+Searching for ./Decode_Execute_Blade.v
+Searching for ./dff.v
+Searching for ./dff_pipe.v
+Searching for ./dff_pipe_p.v
+Searching for ./Execute.v
+Searching for ./Execute_Memory_Blade.v
+Searching for ./Extender.v
+Searching for ./Extra_Logic2.v
+Searching for ./Fetch.v
+Searching for ./Fetch_Decode_Blade.v
+Searching for ./final_memory.syn.v
+Searching for ./four_bank_mem.v
+Searching for ./Forward_Logic.v
+Searching for ./Imm_Selecter.v
+Searching for ./Memory.v
+Searching for ./Memory_Writeback_Blade.v
+Searching for ./memory2c.syn.v
+Searching for ./memory2c_align.syn.v
+Searching for ./PC.v
+Searching for ./PC_inc.v
+Searching for ./PC_Logic.v
+Searching for ./proc.v
+Searching for ./Processor_Control.v
+Searching for ./Register.v
+Searching for ./Register_File.v
+Searching for ./Register_File_Bypass.v
+Searching for ./Register_File_Input.v
+Searching for ./stallmem.syn.v
+Searching for ./Write_Back.v
+Compiling source file ./ALU.v
+Compiling source file ./ALU_ANDN.v
+Compiling source file ./ALU_Bit4_CLA.v
+Compiling source file ./ALU_CLA.v
+Compiling source file ./ALU_CLA_FA.v
+Compiling source file ./ALU_Shifter.v
+Compiling source file ./ALU_Shifter_1.v
+Compiling source file ./ALU_Shifter_2.v
+Compiling source file ./ALU_Shifter_4.v
+Compiling source file ./ALU_Shifter_8.v
+Compiling source file ./ALU_XOR.v
+Compiling source file ./Bit1_Mux2_1.v
+Compiling source file ./Bit1_Mux4_1.v
+Compiling source file ./Bit4_CLA.v
+Compiling source file ./Bits8_SExt.v
+Compiling source file ./Bit16_Mux4_1.v
+Compiling source file ./Bit16_Mux8_1.v
+Compiling source file ./Bits5_SExt.v
+Compiling source file ./Bits5_ZExt.v
+Compiling source file ./Bits11_SExt.v
+Compiling source file ./Branch_Logic.v
+Compiling source file ./cache.v
+Warning:  ./cache.v:47: the undeclared symbol 'go' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:48: the undeclared symbol 'match' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:52: the undeclared symbol 'wr_word0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:53: the undeclared symbol 'wr_word1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:54: the undeclared symbol 'wr_word2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:55: the undeclared symbol 'wr_word3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:57: the undeclared symbol 'wr_dirty' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:58: the undeclared symbol 'wr_tag' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:59: the undeclared symbol 'wr_valid' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:60: the undeclared symbol 'dirty_in' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:68: the undeclared symbol 'dirtybit' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:69: the undeclared symbol 'validbit' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./CLA.v
+Warning:  ./CLA.v:23: the undeclared symbol 'c1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./CLA.v:24: the undeclared symbol 'c2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./CLA.v:25: the undeclared symbol 'c3' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./CLA_FA.v
+Compiling source file ./Decode.v
+Compiling source file ./Decode_Execute_Blade.v
+Compiling source file ./dff.v
+Warning:  ./dff.v:15: delays for continuous assignment are ignored. (VER-173)
+Compiling source file ./dff_pipe.v
+Compiling source file ./dff_pipe_p.v
+Compiling source file ./Execute.v
+Compiling source file ./Execute_Memory_Blade.v
+Compiling source file ./Extender.v
+Compiling source file ./Extra_Logic2.v
+Compiling source file ./Fetch.v
+Compiling source file ./Fetch_Decode_Blade.v
+Compiling source file ./final_memory.syn.v
+Warning:  ./final_memory.syn.v:80: the undeclared symbol 'rd0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:81: the undeclared symbol 'wr0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:86: the undeclared symbol 'rd1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:87: the undeclared symbol 'wr1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:96: the undeclared symbol 'rd2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:97: the undeclared symbol 'wr2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:98: the undeclared symbol 'rd3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:99: the undeclared symbol 'wr3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:101: the undeclared symbol 'busy' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./four_bank_mem.v
+Warning:  ./final_memory.syn.v:110: The statements in initial blocks are ignored. (VER-281)
+Warning:  ./four_bank_mem.v:81: the undeclared symbol 'sel0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:82: the undeclared symbol 'sel1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:83: the undeclared symbol 'sel2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:84: the undeclared symbol 'sel3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:98: the undeclared symbol 'err0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:100: the undeclared symbol 'err1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:102: the undeclared symbol 'err2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:104: the undeclared symbol 'err3' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./Forward_Logic.v
+Compiling source file ./Imm_Selecter.v
+Compiling source file ./Memory.v
+Compiling source file ./Memory_Writeback_Blade.v
+Compiling source file ./memory2c.syn.v
+Compiling source file ./memory2c_align.syn.v
+Warning:  ./memory2c.syn.v:71: The statements in initial blocks are ignored. (VER-281)
+Compiling source file ./PC.v
+Warning:  ./memory2c_align.syn.v:77: The statements in initial blocks are ignored. (VER-281)
+Compiling source file ./PC_inc.v
+Compiling source file ./PC_Logic.v
+Compiling source file ./proc.v
+Compiling source file ./Processor_Control.v
+Compiling source file ./Register.v
+Compiling source file ./Register_File.v
+Compiling source file ./Register_File_Bypass.v
+Compiling source file ./Register_File_Input.v
+Compiling source file ./stallmem.syn.v
+Compiling source file ./Write_Back.v
+Warning:  ./stallmem.syn.v:98: The statements in initial blocks are ignored. (VER-281)
+Warning:  ./stallmem.syn.v:109: delay controls are ignored for synthesis. (VER-176)
+Presto compilation completed successfully.
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+1
+elaborate $my_toplevel -architecture verilog
+Loading db file '/s/synopsys-2009_03_09/@sys/B-2008.09-SP3/libraries/syn/gtech.db'
+Loading db file '/s/synopsys-2009_03_09/@sys/B-2008.09-SP3/libraries/syn/standard.sldb'
+  Loading link library 'gscl45nm'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'proc'.
+Information: Building the design 'Extra_Logic2'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Fetch'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Fetch_Decode_Blade'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Decode'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Decode_Execute_Blade'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Execute'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Execute_Memory_Blade'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Memory'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Memory_Writeback_Blade'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Write_Back'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'imem_system'. (HDL-193)
+Warning: Can't find the design 'imem_system'
+	in the library 'WORK'. (LBR-1)
+Information: Building the design 'PC_inc'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'PC'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dff_pipe'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dff_pipe_p'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Processor_Control'. (HDL-193)
+
+Statistics for case statements in always block at line 70 in file
+	'./Processor_Control.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           170            |    auto/auto     |
+|           424            |    auto/auto     |
+|           500            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'Register_File_Input'. (HDL-193)
+
+Statistics for case statements in always block at line 28 in file
+	'./Register_File_Input.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            29            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'Imm_Selecter'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Register_File_Bypass'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'PC_Logic'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU'. (HDL-193)
+
+Statistics for case statements in always block at line 65 in file
+	'./ALU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            71            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'mem_system'. (HDL-193)
+Warning: Can't find the design 'mem_system'
+	in the library 'WORK'. (LBR-1)
+Information: Building the design 'CLA'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dff'. (HDL-193)
+
+Inferred memory devices in process
+	in routine dff line 17 in file
+		'./dff.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Bits5_SExt'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Bits5_ZExt'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Bits8_SExt'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Bits11_SExt'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Bit16_Mux4_1'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Register_File'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Branch_Logic'. (HDL-193)
+
+Statistics for case statements in always block at line 40 in file
+	'./Branch_Logic.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            41            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'ALU_XOR'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU_ANDN'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU_Shifter'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU_CLA'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Bit4_CLA'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Register'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU_Shifter_1'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU_Shifter_2'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU_Shifter_4'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU_Shifter_8'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU_Bit4_CLA'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'CLA_FA'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Bit1_Mux4_1'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Bit1_Mux2_1'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU_CLA_FA'. (HDL-193)
+Presto compilation completed successfully.
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+echo "********** CS552 Reading files end ********************"
+********** CS552 Reading files end ********************
+current_design proc
+Current design is 'proc'.
+{proc}
+#/* The name of the clock pin. If no clock-pin     */
+#/* exists, pick anything                          */
+set my_clock_pin clk
+clk
+#/* Target frequency in MHz for optimization       */
+set my_clk_freq_MHz 1000
+1000
+#/* Delay of input signals (Clock-to-Q, Package etc.)  */
+set my_input_delay_ns 0.1
+0.1
+#/* Reserved time for output signals (Holdtime etc.)   */
+set my_output_delay_ns 0.1
+0.1
+#/**************************************************/
+#/* No modifications needed below                  */
+#/**************************************************/
+set verilogout_show_unconnected_pins "true"
+true
+# analyze -f verilog $my_verilog_files
+# elaborate $my_toplevel -architecture verilog
+# current_design $my_toplevel
+report_hierarchy 
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : hierarchy
+Design : proc
+Version: B-2008.09-SP3
+Date   : Thu Apr 28 13:29:02 2016
+****************************************
+
+Information: This design contains unmapped logic. (RPT-7)
+Warning: 2 unresolved references are not included in this report. (RPT-2)
+
+proc
+    Decode
+        Imm_Selecter
+            Bit16_Mux4_1
+                GTECH_AND2                           gtech
+                GTECH_BUF                            gtech
+                GTECH_NOT                            gtech
+                GTECH_OR2                            gtech
+            Bits5_SExt
+            Bits5_ZExt
+            Bits8_SExt
+            Bits11_SExt
+        PC_Logic
+            Branch_Logic
+                GTECH_AND2                           gtech
+                GTECH_BUF                            gtech
+                GTECH_NOT                            gtech
+                GTECH_OR2                            gtech
+            CLA
+                Bit4_CLA
+                    CLA_FA
+                        GTECH_AND2                   gtech
+                        GTECH_XOR2                   gtech
+                    GTECH_AND2                       gtech
+                    GTECH_OR2                        gtech
+                GTECH_AND2                           gtech
+                GTECH_OR2                            gtech
+            GTECH_AND2                               gtech
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            GTECH_OR2                                gtech
+        Processor_Control
+            GTECH_AND2                               gtech
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            GTECH_OR2                                gtech
+            GTECH_OR3                                gtech
+            GTECH_OR4                                gtech
+            GTECH_OR5                                gtech
+        Register_File_Bypass
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            Register_File
+                GTECH_AND2                           gtech
+                GTECH_BUF                            gtech
+                GTECH_NOT                            gtech
+                GTECH_OR2                            gtech
+                Register
+                    GTECH_BUF                        gtech
+                    GTECH_NOT                        gtech
+                    dff
+                        GTECH_BUF                    gtech
+                        GTECH_NOT                    gtech
+        Register_File_Input
+            GTECH_AND2                               gtech
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            GTECH_OR2                                gtech
+    Decode_Execute_Blade
+        dff_pipe
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            GTECH_OR2                                gtech
+            dff
+                ...
+    Execute
+        ALU
+            ALU_ANDN
+                GTECH_AND2                           gtech
+                GTECH_NOT                            gtech
+            ALU_CLA
+                ALU_Bit4_CLA
+                    ALU_CLA_FA
+                        GTECH_AND2                   gtech
+                        GTECH_XOR2                   gtech
+                    GTECH_AND2                       gtech
+                    GTECH_OR2                        gtech
+                GTECH_AND2                           gtech
+                GTECH_OR2                            gtech
+            ALU_Shifter
+                ALU_Shifter_1
+                    Bit1_Mux2_1
+                        GTECH_BUF                    gtech
+                        GTECH_NOT                    gtech
+                    Bit1_Mux4_1
+                        GTECH_AND2                   gtech
+                        GTECH_BUF                    gtech
+                        GTECH_NOT                    gtech
+                        GTECH_OR2                    gtech
+                ALU_Shifter_2
+                    Bit1_Mux2_1
+                        ...
+                    Bit1_Mux4_1
+                        ...
+                ALU_Shifter_4
+                    Bit1_Mux2_1
+                        ...
+                    Bit1_Mux4_1
+                        ...
+                ALU_Shifter_8
+                    Bit1_Mux2_1
+                        ...
+                    Bit1_Mux4_1
+                        ...
+            ALU_XOR
+                GTECH_XOR2                           gtech
+            GTECH_AND2                               gtech
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            GTECH_OR2                                gtech
+            GTECH_OR3                                gtech
+            GTECH_OR4                                gtech
+            GTECH_OR5                                gtech
+            GTECH_XOR2                               gtech
+        GTECH_AND2                                   gtech
+        GTECH_BUF                                    gtech
+        GTECH_NOT                                    gtech
+        GTECH_OR2                                    gtech
+    Execute_Memory_Blade
+        dff_pipe
+            ...
+    Extra_Logic2
+        GTECH_AND2                                   gtech
+        GTECH_BUF                                    gtech
+        GTECH_NOT                                    gtech
+        GTECH_OR2                                    gtech
+    Fetch
+        GTECH_NOT                                    gtech
+        PC
+            GTECH_AND2                               gtech
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            GTECH_OR2                                gtech
+            dff
+                ...
+        PC_inc
+            CLA
+                ...
+    Fetch_Decode_Blade
+        dff_pipe
+            ...
+        dff_pipe_p
+            GTECH_BUF                                gtech
+            GTECH_NOT                                gtech
+            GTECH_OR2                                gtech
+            dff
+                ...
+    GTECH_OR2                                        gtech
+    Memory
+        GTECH_AND2                                   gtech
+        GTECH_NOT                                    gtech
+        GTECH_OR2                                    gtech
+    Memory_Writeback_Blade
+        dff_pipe
+            ...
+    Write_Back
+        GTECH_BUF                                    gtech
+        GTECH_NOT                                    gtech
+1
+link
+
+  Linking design 'proc'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  gscl45nm (library)          /u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db
+
+Information: Building the design 'imem_system'. (HDL-193)
+Warning: Can't find the design 'imem_system'
+	in the library 'WORK'. (LBR-1)
+Information: Building the design 'mem_system'. (HDL-193)
+Warning: Can't find the design 'mem_system'
+	in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'imem_system' in 'Fetch'. (LINK-5)
+Warning: Unable to resolve reference 'mem_system' in 'Memory'. (LINK-5)
+0
+uniquify
+Information: Building the design 'imem_system'. (HDL-193)
+Warning: Can't find the design 'imem_system'
+	in the library 'WORK'. (LBR-1)
+Information: Building the design 'mem_system'. (HDL-193)
+Warning: Can't find the design 'mem_system'
+	in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'imem_system' in 'Fetch'. (LINK-5)
+Warning: Unable to resolve reference 'mem_system' in 'Memory'. (LINK-5)
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Removing uniquified design 'dff_pipe'.
+Removing uniquified design 'CLA'.
+Removing uniquified design 'dff'.
+Removing uniquified design 'Bit4_CLA'.
+Removing uniquified design 'Register'.
+Removing uniquified design 'ALU_Bit4_CLA'.
+Removing uniquified design 'CLA_FA'.
+Removing uniquified design 'Bit1_Mux4_1'.
+Removing uniquified design 'Bit1_Mux2_1'.
+Removing uniquified design 'ALU_CLA_FA'.
+  Uniquified 198 instances of design 'dff_pipe'.
+  Uniquified 2 instances of design 'CLA'.
+  Uniquified 343 instances of design 'dff'.
+  Uniquified 8 instances of design 'Bit4_CLA'.
+  Uniquified 8 instances of design 'Register'.
+  Uniquified 4 instances of design 'ALU_Bit4_CLA'.
+  Uniquified 32 instances of design 'CLA_FA'.
+  Uniquified 64 instances of design 'Bit1_Mux4_1'.
+  Uniquified 64 instances of design 'Bit1_Mux2_1'.
+  Uniquified 16 instances of design 'ALU_CLA_FA'.
+Information: Building the design 'imem_system'. (HDL-193)
+Warning: Can't find the design 'imem_system'
+	in the library 'WORK'. (LBR-1)
+Information: Building the design 'mem_system'. (HDL-193)
+Warning: Can't find the design 'mem_system'
+	in the library 'WORK'. (LBR-1)
+1
+set my_period [expr 1000 / $my_clk_freq_MHz]
+1
+set find_clock [ find port [list $my_clock_pin] ]
+{clk}
+if {  $find_clock != [list] } {
+   set clk_name $my_clock_pin
+   create_clock -period $my_period $clk_name
+} else {
+   set clk_name vclk
+   create_clock -period $my_period -name $clk_name
+} 
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_driving_cell  -lib_cell INVX1  [all_inputs]
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all_inputs] $my_clock_pin]
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+compile -map_effort low  -area_effort low
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: The compile -map_effort low is obsolete. Setting this variable now defaults to compile -map_effort medium. Please update your script accordingly. (OPT-1303)
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'proc'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | B-2008.09-DWBB_0901
+                                                               |     *     |
+| Licensed DW Building Blocks             |                    |           |
+============================================================================
+
+
+Information: There are 290 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Write_Back'
+  Processing 'dff_163'
+  Processing 'dff_pipe_35'
+  Processing 'Memory_Writeback_Blade'
+  Processing 'Memory'
+Warning: design 'Memory' has 18 out of 36 cells marked size-only which may limit optimization. (OPT-301)
+  Processing 'Execute_Memory_Blade'
+  Processing 'ALU_CLA_FA_0'
+  Processing 'ALU_Bit4_CLA_0'
+  Processing 'ALU_CLA'
+  Processing 'Bit1_Mux2_1_15'
+  Processing 'Bit1_Mux4_1_0'
+  Processing 'ALU_Shifter_8'
+  Processing 'ALU_Shifter_4'
+  Processing 'ALU_Shifter_2'
+  Processing 'ALU_Shifter_1'
+  Processing 'ALU_Shifter'
+  Processing 'ALU_ANDN'
+  Processing 'ALU_XOR'
+  Processing 'ALU'
+  Processing 'Execute'
+  Processing 'Decode_Execute_Blade'
+  Processing 'Branch_Logic'
+  Processing 'CLA_FA_0'
+  Processing 'Bit4_CLA_0'
+  Processing 'CLA_0'
+  Processing 'PC_Logic'
+  Processing 'Register_0'
+  Processing 'Register_File'
+  Processing 'Register_File_Bypass'
+  Processing 'Bit16_Mux4_1'
+  Processing 'Bits11_SExt'
+  Processing 'Bits8_SExt'
+  Processing 'Bits5_ZExt'
+  Processing 'Bits5_SExt'
+  Processing 'Imm_Selecter'
+  Processing 'Register_File_Input'
+  Processing 'Processor_Control'
+  Processing 'Decode'
+  Processing 'dff_pipe_p'
+  Processing 'Fetch_Decode_Blade'
+  Processing 'PC'
+  Processing 'PC_inc'
+  Processing 'Fetch'
+  Processing 'Extra_Logic2'
+  Processing 'proc'
+Information: Building the design 'imem_system'. (HDL-193)
+Warning: Can't find the design 'imem_system'
+	in the library 'WORK'. (LBR-1)
+Information: Building the design 'mem_system'. (HDL-193)
+Warning: Can't find the design 'mem_system'
+	in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'imem_system' in 'Fetch'. (LINK-5)
+Warning: Unable to resolve reference 'mem_system' in 'Memory'. (LINK-5)
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'ALU_DW01_cmp6_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 7)
+  Mapping Optimization (Phase 8)
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15   16570.0      0.01       0.2       5.7                          
+    0:00:15   16570.0      0.01       0.2       5.7                          
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15   16570.0      0.01       0.2       5.7                          
+    0:00:15   16820.2      0.00       0.0       5.8                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15   16820.2      0.00       0.0       5.8                          
+    0:00:16   17472.5      0.00       0.0       4.8 execute/alu/CLA/claMod1/net58707
+    0:00:16   18474.9      0.00       0.0       4.1 decode/RFB/RF/net56381   
+    0:00:17   19013.7      0.00       0.0       3.8 execute/alu/Shifter/sBlade1/up_sel0/net55817
+    0:00:17   19822.8      0.00       0.0       3.5 execute/alu/net56119     
+    0:00:17   20800.3      0.00       0.0       3.2 decode/RFB/RF/n48        
+    0:00:18   22208.2      0.00       0.0       2.7 decode/RFB/RF/n67        
+    0:00:18   22281.4      0.00       0.0       2.6 decode/pc_logic/BL/n10   
+    0:00:19   22164.6      0.00       0.0       2.6 de_ex_blade/reg_2_src[0]/n4
+    0:00:19   22138.3      0.00       0.0       2.6 decode/Control/net56756  
+    0:00:20   22159.4      0.00       0.0       2.6 decode/RFB/RF/net56515   
+    0:00:20   22171.6      0.00       0.0       2.6 fetch/program_counter/n16
+    0:00:21   22178.2      0.00       0.0       2.6 decode/PC_Code<1>        
+    0:00:21   22244.3      0.00       0.0       2.5 execute/alu/Shifter/sBlade4/in<7>
+    0:00:22   22310.1      0.00       0.0       2.5 execute/alu/Shifter/sBlade2/net69814
+    0:00:22   22310.1      0.00       0.0       2.5 fetch/program_counter/n22
+    0:00:23   22328.4      0.00       0.0       2.5 fetch/program_counter/program_counter[7]/d
+    0:00:23   22333.0      0.00       0.0       2.5 fetch/program_counter/program_counter[7]/state_reg/D
+    0:00:24   22337.7      0.02       0.1       2.5 execute/alu/Shifter/sBlade4/in<14>
+    0:00:24   23124.3      0.34      14.9       1.6 decode/RFB/RF/net56453   
+    0:00:25   23758.3      0.43      30.8       1.2 decode/pc_logic/A_in<7>  
+    0:00:25   23880.8      0.51      32.0       1.1 decode/RFB/RF/net56392   
+    0:00:26   23880.8      0.50      31.9       1.1 decode/Imm/Mux/net56690  
+    0:00:27   23838.6      0.38      26.9       1.1 ex_me_blade/alu_result[12]/pipe/state_reg/D
+    0:00:27   23845.1      0.34      25.5       1.1 fetch/program_counter/program_counter[11]/state_reg/D
+    0:00:28   23775.2      0.32      24.6       1.1 ex_me_blade/alu_result[14]/pipe/state_reg/D
+    0:00:28   23710.0      0.30      23.8       1.1 fetch/program_counter/program_counter[0]/state_reg/D
+    0:00:28   23721.2      0.29      23.3       1.1 fetch/program_counter/program_counter[0]/state_reg/D
+    0:00:29   23731.1      0.34      23.8       1.1 execute/alu/CLA/claMod1/net55087
+    0:00:30   23728.7      0.32      23.5       1.1 ex_me_blade/alu_result[2]/pipe/state_reg/D
+    0:00:30   23730.2      0.29      23.0       1.1 ex_me_blade/alu_result[15]/pipe/state_reg/D
+    0:00:31   23731.1      0.29      23.0       1.1 fetch/program_counter/program_counter[0]/state_reg/D
+    0:00:31   23768.6      0.28      22.1       1.1 fetch/program_counter/program_counter[9]/state_reg/D
+    0:00:31   23805.7      0.27      22.7       1.1 ex_me_blade/alu_result[14]/pipe/state_reg/D
+    0:00:32   23821.7      0.26      22.0       1.1 fetch/program_counter/program_counter[7]/state_reg/D
+    0:00:32   23844.2      0.26      21.9       1.1 ex_me_blade/alu_result[8]/pipe/state_reg/D
+    0:00:33   23875.2      0.25      21.7       1.1 fetch/program_counter/program_counter[9]/state_reg/D
+    0:00:33   23878.9      0.25      21.7       1.1                          
+    0:00:33   23873.3      0.25      21.5       1.1                          
+    0:00:33   23860.6      0.25      21.1       1.1                          
+    0:00:34   23878.5      0.25      21.0       1.1                          
+    0:00:34   23850.8      0.25      20.8       1.1                          
+    0:00:34   23824.0      0.25      20.6       1.1                          
+    0:00:34   23785.1      0.25      20.4       1.1                          
+    0:00:34   23782.2      0.25      20.4       1.1                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:34   23782.2      0.25      20.4       1.1                          
+    0:00:37   23782.2      0.25      20.4       1.1                          
+    0:00:37   21333.9      0.25      17.7       1.1                          
+    0:00:37   20541.3      0.26      13.8       1.1                          
+    0:00:37   20165.4      0.26      13.8       1.1                          
+    0:00:37   20010.0      0.26      13.8       1.1                          
+    0:00:38   19897.4      0.26      13.8       1.1                          
+    0:00:38   19799.8      0.26      13.8       1.1                          
+    0:00:38   19715.8      0.29      13.9       1.1                          
+    0:00:38   19631.8      0.29      13.9       1.1                          
+    0:00:38   19554.8      0.29      13.9       1.1                          
+    0:00:38   19480.2      0.29      13.9       1.1                          
+    0:00:38   19406.5      0.29      13.9       1.1                          
+    0:00:38   19331.9      0.29      13.9       1.1                          
+    0:00:38   19309.3      0.29      13.9       1.1                          
+    0:00:38   19292.0      0.29      14.0       1.1                          
+    0:00:38   19292.0      0.29      14.0       1.1                          
+    0:00:38   19287.3      0.25      14.0       1.1                          
+    0:00:39   18763.1      0.26      14.1       1.1                          
+    0:00:39   18645.3      0.26      14.1       1.1                          
+    0:00:39   18638.2      0.26      14.1       1.1                          
+    0:00:39   18638.2      0.26      14.1       1.1                          
+    0:00:39   18638.2      0.26      14.1       1.1                          
+    0:00:39   18638.2      0.26      14.1       1.1                          
+    0:00:39   18638.2      0.26      14.1       1.1                          
+    0:00:39   18638.2      0.26      14.1       1.1                          
+    0:00:39   18663.1      0.24      13.7       1.1 ex_me_blade/alu_result[15]/pipe/state_reg/D
+    0:00:39   18670.6      0.24      13.7       1.1                          
+    0:00:40   18585.2      0.23      13.7       1.1                          
+    0:00:40   18617.6      0.23      13.6       1.1                          
+    0:00:40   18636.4      0.23      13.5       1.1                          
+    0:00:41   18647.6      0.23      13.5       1.1                          
+    0:00:41   18700.2      0.23      13.4       1.1                          
+    0:00:41   18717.6      0.23      13.2       1.1 ex_me_blade/alu_result[15]/pipe/state_reg/D
+    0:00:42   18728.8      0.23      13.0       1.1 fetch/program_counter/program_counter[4]/state_reg/D
+    0:00:42   18758.4      0.22      12.7       1.1 ex_me_blade/alu_result[9]/pipe/state_reg/D
+    0:00:42   18768.7      0.22      12.6       1.0                          
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+
+  Optimization Complete
+  ---------------------
+1
+check_design -summary
+Information: Building the design 'imem_system'. (HDL-193)
+Warning: Can't find the design 'imem_system'
+	in the library 'WORK'. (LBR-1)
+Information: Building the design 'mem_system'. (HDL-193)
+Warning: Can't find the design 'mem_system'
+	in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'imem_system' in 'Fetch'. (LINK-5)
+Warning: Unable to resolve reference 'mem_system' in 'Memory'. (LINK-5)
+Warning: In design 'proc', there are 2 submodules connected to power or ground. (LINT-30)
+Warning: In design 'proc', there are 17 three-state busses with non three-state drivers. (LINT-30)
+Warning: In design 'Extra_Logic2', there are 2 output ports connected directly to power or ground. (LINT-30)
+Warning: In design 'Fetch', there is 1 unconnected leaf cell input pin. Logic 0 assumed. (LINT-30)
+Warning: In design 'Fetch', there are 2 input ports that are connected to multiple-driver nets. (LINT-30)
+Warning: In design 'Fetch', there are 18 three-state busses with non three-state drivers. (LINT-30)
+Warning: In design 'Execute', there are 6 ports not connected to any nets. (LINT-30)
+Warning: In design 'Memory', there is 1 unconnected leaf cell input pin. Logic 0 assumed. (LINT-30)
+Warning: In design 'Memory', there are 19 input ports that are connected to multiple-driver nets. (LINT-30)
+Warning: In design 'Memory', there are 18 three-state busses with non three-state drivers. (LINT-30)
+Warning: In design 'PC_inc', there is 1 submodule connected to power or ground. (LINT-30)
+Warning: In design 'PC_inc', there is 1 submodule with pins connected to the same net. (LINT-30)
+Warning: In design 'dff_pipe_p', there is 1 submodule connected to power or ground. (LINT-30)
+Warning: In design 'Imm_Selecter', there is 1 submodule connected to power or ground. (LINT-30)
+Warning: In design 'Register_File_Bypass', there is 1 output port connected directly to power or ground. (LINT-30)
+Warning: In design 'PC_Logic', there is 1 submodule connected to power or ground. (LINT-30)
+Warning: In design 'Bits5_ZExt', there are 11 output ports connected directly to power or ground. (LINT-30)
+Warning: In design 'Register_File', there is 1 output port connected directly to power or ground. (LINT-30)
+Warning: In design 'ALU_Shifter_1', there are 2 submodules connected to power or ground. (LINT-30)
+Warning: In design 'ALU_Shifter_1', there are 13 submodules with pins connected to the same net. (LINT-30)
+Warning: In design 'ALU_Shifter_2', there are 4 submodules connected to power or ground. (LINT-30)
+Warning: In design 'ALU_Shifter_2', there are 13 submodules with pins connected to the same net. (LINT-30)
+Warning: In design 'ALU_Shifter_4', there are 8 submodules connected to power or ground. (LINT-30)
+Warning: In design 'ALU_Shifter_4', there are 9 submodules with pins connected to the same net. (LINT-30)
+Warning: In design 'ALU_Shifter_8', there are 16 submodules connected to power or ground. (LINT-30)
+Warning: In design 'ALU_Shifter_8', there are 14 submodules with pins connected to the same net. (LINT-30)
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-98)
+
+1
+report_constraint -all_violators
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : proc
+Version: B-2008.09-SP3
+Date   : Thu Apr 28 13:29:46 2016
+****************************************
+
+
+   max_delay/setup ('clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   ex_me_blade/alu_result[15]/pipe/state_reg/D
+                                0.95           1.16 f        -0.22  (VIOLATED)
+   ex_me_blade/alu_result[0]/pipe/state_reg/D
+                                0.95           1.16 f        -0.22  (VIOLATED)
+   ex_me_blade/alu_result[5]/pipe/state_reg/D
+                                0.95           1.16 f        -0.22  (VIOLATED)
+   ex_me_blade/alu_result[12]/pipe/state_reg/D
+                                0.95           1.16 f        -0.22  (VIOLATED)
+   ex_me_blade/alu_result[2]/pipe/state_reg/D
+                                0.95           1.16 f        -0.22  (VIOLATED)
+   fetch/program_counter/program_counter[4]/state_reg/D
+                                0.94           1.16 f        -0.22  (VIOLATED)
+   fetch/program_counter/program_counter[3]/state_reg/D
+                                0.94           1.16 f        -0.22  (VIOLATED)
+   ex_me_blade/alu_result[14]/pipe/state_reg/D
+                                0.95           1.16 f        -0.22  (VIOLATED)
+   fetch/program_counter/program_counter[1]/state_reg/D
+                                0.94           1.16 f        -0.22  (VIOLATED)
+   if_de_blade/NOP/pipe/state_reg/D
+                                0.94           1.16 f        -0.22  (VIOLATED)
+   fetch/program_counter/program_counter[0]/state_reg/D
+                                0.94           1.16 f        -0.22  (VIOLATED)
+   ex_me_blade/alu_result[9]/pipe/state_reg/D
+                                0.95           1.16 f        -0.22  (VIOLATED)
+   fetch/program_counter/program_counter[7]/state_reg/D
+                                0.94           1.16 f        -0.22  (VIOLATED)
+   fetch/program_counter/program_counter[2]/state_reg/D
+                                0.94           1.16 f        -0.22  (VIOLATED)
+   ex_me_blade/alu_result[8]/pipe/state_reg/D
+                                0.95           1.16 f        -0.22  (VIOLATED)
+   ex_me_blade/alu_result[1]/pipe/state_reg/D
+                                0.95           1.16 f        -0.21  (VIOLATED)
+   if_de_blade/Instruc_L[3]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/Instruc_L[4]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/Instruc_L[5]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/Instruc_L[6]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/Instruc_L[7]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/Instruc_L[8]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/PC2[8]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/PC2[9]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/PC2[10]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/PC2[11]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/PC2[12]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/PC2[13]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/PC2[14]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   if_de_blade/PC2[15]/pipe/state_reg/D
+                                0.94           1.15 f        -0.21  (VIOLATED)
+   ex_me_blade/alu_result[13]/pipe/state_reg/D
+                                0.95           1.16 f        -0.21  (VIOLATED)
+   fetch/program_counter/program_counter[13]/state_reg/D
+                                0.95           1.15 f        -0.21  (VIOLATED)
+   ex_me_blade/alu_result[4]/pipe/state_reg/D
+                                0.95           1.15 f        -0.21  (VIOLATED)
+   fetch/program_counter/program_counter[10]/state_reg/D
+                                0.95           1.15 f        -0.21  (VIOLATED)
+   fetch/program_counter/program_counter[5]/state_reg/D
+                                0.95           1.15 f        -0.21  (VIOLATED)
+   fetch/program_counter/program_counter[9]/state_reg/D
+                                0.95           1.15 f        -0.21  (VIOLATED)
+   ex_me_blade/alu_result[6]/pipe/state_reg/D
+                                0.95           1.15 f        -0.20  (VIOLATED)
+   fetch/program_counter/program_counter[11]/state_reg/D
+                                0.95           1.15 f        -0.20  (VIOLATED)
+   fetch/program_counter/program_counter[15]/state_reg/D
+                                0.95           1.14 f        -0.19  (VIOLATED)
+   fetch/program_counter/program_counter[8]/state_reg/D
+                                0.95           1.14 f        -0.19  (VIOLATED)
+   fetch/program_counter/program_counter[6]/state_reg/D
+                                0.95           1.14 f        -0.19  (VIOLATED)
+   fetch/program_counter/program_counter[12]/state_reg/D
+                                0.95           1.14 f        -0.19  (VIOLATED)
+   fetch/program_counter/program_counter[14]/state_reg/D
+                                0.95           1.14 f        -0.19  (VIOLATED)
+   ex_me_blade/alu_result[10]/pipe/state_reg/D
+                                0.95           1.14 f        -0.19  (VIOLATED)
+   ex_me_blade/alu_result[11]/pipe/state_reg/D
+                                0.95           1.13 f        -0.19  (VIOLATED)
+   ex_me_blade/alu_result[3]/pipe/state_reg/D
+                                0.95           1.13 f        -0.18  (VIOLATED)
+   if_de_blade/Instruc_H[0]/pipe/state_reg/D
+                                0.94           1.12 f        -0.17  (VIOLATED)
+   if_de_blade/Instruc_H[2]/pipe/state_reg/D
+                                0.94           1.12 f        -0.17  (VIOLATED)
+   if_de_blade/Instruc_H[3]/pipe/state_reg/D
+                                0.94           1.12 f        -0.17  (VIOLATED)
+   if_de_blade/Instruc_L[0]/pipe/state_reg/D
+                                0.94           1.12 f        -0.17  (VIOLATED)
+   if_de_blade/Instruc_L[1]/pipe/state_reg/D
+                                0.94           1.12 f        -0.17  (VIOLATED)
+   if_de_blade/Instruc_L[2]/pipe/state_reg/D
+                                0.94           1.12 f        -0.17  (VIOLATED)
+   ex_me_blade/alu_result[7]/pipe/state_reg/D
+                                0.94           1.11 f        -0.17  (VIOLATED)
+   if_de_blade/Instruc_H[1]/pipe/state_reg/D
+                                0.94           1.11 f        -0.17  (VIOLATED)
+   if_de_blade/Instruc_L[9]/pipe/state_reg/D
+                                0.94           1.11 f        -0.17  (VIOLATED)
+   if_de_blade/Instruc_L[10]/pipe/state_reg/D
+                                0.94           1.11 f        -0.17  (VIOLATED)
+   if_de_blade/PC2[0]/pipe/state_reg/D
+                                0.94           1.11 f        -0.17  (VIOLATED)
+   if_de_blade/PC2[1]/pipe/state_reg/D
+                                0.94           1.11 f        -0.17  (VIOLATED)
+   if_de_blade/PC2[2]/pipe/state_reg/D
+                                0.94           1.11 f        -0.17  (VIOLATED)
+   if_de_blade/PC2[3]/pipe/state_reg/D
+                                0.94           1.11 f        -0.17  (VIOLATED)
+   if_de_blade/PC2[4]/pipe/state_reg/D
+                                0.94           1.11 f        -0.17  (VIOLATED)
+   if_de_blade/PC2[5]/pipe/state_reg/D
+                                0.94           1.11 f        -0.17  (VIOLATED)
+   if_de_blade/PC2[6]/pipe/state_reg/D
+                                0.94           1.11 f        -0.17  (VIOLATED)
+   if_de_blade/PC2[7]/pipe/state_reg/D
+                                0.94           1.11 f        -0.17  (VIOLATED)
+
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   ALU_Result_Exe<7>            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Control/n110          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Control/n124          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Control/n132          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n123          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n126          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n127          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n128          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n130          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n131          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n132          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n133          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n134          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n135          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n136          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n137          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n141          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n143          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n145          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n146          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n492           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n494           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n499           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n512           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n514           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n517           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n518           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/Read_1_Out<1>     0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/A_in<5>      0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/A_in<6>      0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/A_in<10>     0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/BL/n10       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/adder/claMod3/n32
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/adder/n12
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/B_in<4>              0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/B_in<5>              0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/B_in<6>              0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/B_in<7>              0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/B_in<14>             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/claMod1/n23
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/claMod4/n35
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/low_sel[0]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/trans<0>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/trans<4>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/trans<5>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/trans<10>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/trans<14>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel1/n10
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel5/n16
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel6/n16
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel9/n17
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel10/n18
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel11/n17
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel12/n12
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel13/n11
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel14/n18
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel15/n16
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/trans<0>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/trans<1>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/trans<5>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/trans<10>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/trans<13>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/trans<14>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel3/n10
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/trans<0>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/trans<1>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/trans<2>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/trans<12>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/trans<14>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/up_sel5/n10
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/trans<0>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/trans<3>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/trans<7>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/trans<11>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/trans<13>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/trans<15>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran1_2<10>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran1_2<13>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<6>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n348             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n359             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n401             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n231                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n232                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n236                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n237                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n238                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n239                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n241                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n242                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n244                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/n6        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/n8        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/n15
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/n17
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/n19
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/n21
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/n35
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/n113
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/n117
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[14]/n3       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[15]/n3       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/alu_b_src/n5     0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/alu_op_code[0]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/alu_op_code[1]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/alu_op_code[2]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/alu_op_code[3]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/check_a/n5       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/check_b/n5       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/createdump/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/halt/n5          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[0]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[1]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[2]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[3]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[4]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[5]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[6]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[7]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[8]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[9]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[10]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[11]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[12]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[13]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[14]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/immediate[15]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/mem_read/n5      0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/mem_write/n5     0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pass_thr_sel/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[0]/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[1]/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[2]/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[3]/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[4]/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[5]/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[6]/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[7]/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[8]/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[9]/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[10]/n5       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[11]/n5       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[12]/n5       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[13]/n5       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[14]/n5       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/pc2[15]/n5       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[0]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[1]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[2]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[3]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[4]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[5]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[6]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[7]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[8]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[9]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[10]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[11]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[12]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[13]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[14]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_data[15]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_src[0]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_src[1]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_1_src[2]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[0]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[1]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[2]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[3]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[4]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[5]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[6]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[7]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[8]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[9]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[10]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[11]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[12]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[13]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[14]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_data[15]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_src[0]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_src[1]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_2_src[2]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/reg_write/n5     0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/wb_sel/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/write_reg[0]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/write_reg[1]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   de_ex_blade/write_reg[2]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Control/n114          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Control/n120          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Control/n123          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Control/n125          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Control/n140          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Control/n141          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Control/n142          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Control/n143          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Control/n144          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n124          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n125          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n129          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n142          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Imm/Mux/n144          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n19       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n20       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n21       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n22       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n23       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n24       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n25       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n26       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n27       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n28       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n29       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n30       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n31       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n32       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n33       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg0/n34       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n52       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n53       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n54       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n55       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n56       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n57       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n58       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n59       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n60       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n61       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n62       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n63       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n64       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n65       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n66       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg1/n67       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n52       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n53       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n54       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n55       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n56       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n57       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n58       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n59       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n60       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n61       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n62       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n63       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n64       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n65       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n66       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg2/n67       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n52       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n53       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n54       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n55       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n56       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n57       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n58       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n59       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n60       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n61       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n62       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n63       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n64       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n65       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n66       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg3/n67       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n52       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n53       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n54       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n55       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n56       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n57       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n58       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n59       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n60       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n61       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n62       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n63       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n64       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n65       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n66       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg4/n67       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n52       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n53       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n54       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n55       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n56       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n57       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n58       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n59       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n60       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n61       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n62       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n63       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n64       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n65       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n66       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg5/n67       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n52       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n53       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n54       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n55       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n56       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n57       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n58       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n59       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n60       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n61       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n62       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n63       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n64       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n65       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n66       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg6/n67       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n52       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n53       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n54       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n55       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n56       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n57       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n58       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n59       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n60       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n61       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n62       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n63       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n64       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n65       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n66       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/Reg7/n67       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n11            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n12            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n14            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n15            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n24            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n25            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n27            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n28            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n29            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n30            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n32            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n33            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n34            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n35            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n37            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n38            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n39            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n40            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n42            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n43            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n44            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n45            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n47            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n48            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n49            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n50            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n52            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n53            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n54            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n55            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n57            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n58            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n59            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n60            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n62            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n63            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n64            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n65            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n67            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n68            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n69            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n70            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n72            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n73            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n74            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n75            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n77            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n78            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n79            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n80            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n82            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n83            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n84            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n85            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n87            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n88            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n89            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n90            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n92            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n93            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n94            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n95            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n97            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n98            0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n621           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n628           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n638           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n639           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n640           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n641           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n642           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n643           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n644           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n645           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n646           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n647           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n648           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n649           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n650           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n651           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n652           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/RFB/RF/n653           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Write_Determine/n4
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Write_Determine/n7
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Write_Determine/n9
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Write_Determine/n20
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Write_Determine/n21
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/Write_Determine/n22
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/n34                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/n35                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/n47                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/n48                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/n49                   0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/A_in<0>      0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/A_in<1>      0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/A_in<2>      0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/A_in<3>      0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/BL/n6        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/BL/n8        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/BL/n9        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/adder/claMod1/n22
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/adder/claMod1/n26
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/adder/claMod2/n28
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/adder/claMod3/n28
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/adder/claMod4/n17
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/adder/claMod4/n20
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/adder/claMod4/n27
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   decode/pc_logic/adder/claMod4/n29
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/alu_result[0]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/alu_result[15]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/createdump/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/halt/n5          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/mem_read/n5      0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/mem_write/n5     0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[0]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[1]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[2]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[3]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[4]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[5]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[6]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[7]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[8]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[9]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[10]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[11]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[12]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[13]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[14]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_2_data[15]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/reg_write/n6     0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/wb_sel/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/write_reg[0]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/write_reg[1]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   ex_me_blade/write_reg[2]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/B_in<10>             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/claMod1/n30
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/claMod1/n31
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/claMod2/n41
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/claMod2/n42
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/claMod3/n21
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/claMod3/n22
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/claMod4/n28
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/claMod4/n32
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/g2           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/n24          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/CLA/n26          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel0/n12
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel2/n9
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel4/n15
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel6/n15
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel7/n12
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel9/n16
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel11/n16
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade1/up_sel15/n15
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/trans<15>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel0/n11
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel1/n10
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel2/n11
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel4/n16
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel5/n15
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel6/n13
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel7/n9
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel8/n12
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel9/n9
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel10/n13
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel10/n14
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel11/n9
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel13/n15
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel14/n13
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade2/up_sel15/n13
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/trans<3>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/trans<15>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/up_sel0/n10
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/up_sel1/n10
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/up_sel2/n10
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/up_sel3/n11
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/up_sel6/n9
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/up_sel12/n13
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/up_sel13/n13
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/up_sel14/n13
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade4/up_sel15/n13
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/n56
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/n57
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/n58
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/n59
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/up_sel5/n19
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/up_sel6/n19
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/up_sel8/n17
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/up_sel9/n17
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/up_sel10/n17
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/up_sel11/n13
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/up_sel12/n17
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/up_sel13/n13
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/up_sel14/n14
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/sBlade8/up_sel15/n13
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran1_2<1>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran1_2<4>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran1_2<5>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran1_2<6>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran1_2<11>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran1_2<12>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran1_2<14>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran1_2<15>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<0>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<1>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<2>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<3>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<4>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<5>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<6>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<7>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<8>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<9>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<10>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<11>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<12>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<13>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran2_4<14>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<0>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<1>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<2>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<4>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<5>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<7>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<8>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<9>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<10>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<11>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<12>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/Shifter/tran4_8<14>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n384             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n400             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n409             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n411             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n416             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n425             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n426             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n440             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n441             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n442             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n472             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n489             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n506             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n524             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n575             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/alu/n587             0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n213                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n227                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n228                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n233                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n235                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n243                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n250                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n252                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n253                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n255                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   execute/n260                 0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   extra_logic/n72              0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   extra_logic/n74              0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   extra_logic/n80              0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/claMod1/n8
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/claMod1/n10
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/claMod1/n11
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/claMod2/n20
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/claMod2/n21
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/claMod2/n23
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/claMod3/n20
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/claMod3/n21
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/claMod3/n23
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/claMod4/n20
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/claMod4/n21
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/claMod4/n23
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/pc_inc/Adder/n7        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/PC_in<14>
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/n114
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/n118
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/n119
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/n121
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   fetch/program_counter/n123
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_H[0]/n4
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_H[1]/n7
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_H[2]/n7
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_H[3]/n7
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_L[0]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_L[1]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_L[2]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_L[3]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_L[4]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_L[5]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_L[6]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_L[7]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_L[8]/n7
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_L[9]/n7
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/Instruc_L[10]/n7
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/NOP/n3           0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[0]/n6        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[1]/n6        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[2]/n6        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[3]/n6        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[4]/n6        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[5]/n6        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[6]/n6        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[7]/n6        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[8]/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[9]/n6        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[10]/n6       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[11]/n6       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[12]/n6       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   if_de_blade/PC2[13]/n6       0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[0]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[1]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[2]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[3]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[4]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[5]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[6]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[7]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[8]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[9]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[10]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[11]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[12]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[13]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[14]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/alu_result[15]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/createdump/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/halt/n5          0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[0]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[1]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[2]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[3]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[4]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[5]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[6]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[7]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[8]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[9]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[10]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[11]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[12]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[13]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[14]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/mem_data[15]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/reg_write/n5     0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/wb_sel/n5        0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/write_reg[0]/n5
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/write_reg[1]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+   me_wb_blade/write_reg[2]/n6
+                                0.00           0.00           0.00  (VIOLATED: increase signficant digits)
+
+
+1
+set filename [format "%s%s"  $my_toplevel ".syn.v"]
+proc.syn.v
+write -hierarchy -f verilog $my_toplevel -output synth/$filename
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing verilog file '/afs/cs.wisc.edu/u/b/a/bambrough/private/ECE_552/project/demo3/verilog/synth/proc.syn.v'.
+Warning: Bus naming style currently specified as %s<%d>, verilog syntax requires bus naming style to be "[]".  (VO-13)
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 11 nets to module Imm_Selecter using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+set filename [format "%s%s"  $my_toplevel ".ddc"]
+proc.ddc
+write -hierarchy -format ddc -output synth/$filename
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing ddc file 'synth/proc.ddc'.
+1
+report_reference > synth/reference_report.txt
+report_area > synth/area_report.txt
+report_cell > synth/cell_report.txt
+report_timing -max_paths 20 > synth/timing_report.txt
+report_power > synth/power_report.txt
+quit
+Information: Defining new variable 'filename'. (CMD-041)
+Information: Defining new variable 'my_clk_freq_MHz'. (CMD-041)
+Information: Defining new variable 'my_toplevel'. (CMD-041)
+Information: Defining new variable 'clk_name'. (CMD-041)
+Information: Defining new variable 'find_clock'. (CMD-041)
+Information: Defining new variable 'my_output_delay_ns'. (CMD-041)
+Information: Defining new variable 'my_period'. (CMD-041)
+Information: Defining new variable 'my_verilog_files'. (CMD-041)
+Information: Defining new variable 'my_clock_pin'. (CMD-041)
+Information: Defining new variable 'my_input_delay_ns'. (CMD-041)
+
+Thank you...

@@ -1,0 +1,57 @@
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : cell
+Design : proc
+Version: B-2008.09-SP3
+Date   : Thu Apr 28 13:29:47 2016
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U2                        BUFX2           gscl45nm        2.346500  
+U3                        INVX2           gscl45nm        1.877200  
+U4                        OR2X1           gscl45nm        2.346500  
+U5                        INVX1           gscl45nm        1.407900  
+U6                        BUFX2           gscl45nm        2.346500  
+U7                        INVX1           gscl45nm        1.407900  
+U8                        BUFX2           gscl45nm        2.346500  
+U9                        BUFX2           gscl45nm        2.346500  
+U10                       INVX8           gscl45nm        3.285100  
+U11                       BUFX2           gscl45nm        2.346500  
+U12                       BUFX2           gscl45nm        2.346500  
+U13                       BUFX2           gscl45nm        2.346500  
+U14                       INVX1           gscl45nm        1.407900  
+U15                       INVX2           gscl45nm        1.877200  
+U16                       BUFX2           gscl45nm        2.346500  
+U17                       BUFX2           gscl45nm        2.346500  
+U18                       BUFX2           gscl45nm        2.346500  
+de_ex_blade               Decode_Execute_Blade            2132.968453
+                                                                    h, n
+decode                    Decode                          6186.781772
+                                                                    h, n
+ex_me_blade               Execute_Memory_Blade            1045.600379
+                                                                    h, n
+execute                   Execute                         5958.232691
+                                                                    h
+extra_logic               Extra_Logic2                    596.480292
+                                                                    h
+fetch                     Fetch                           859.288280
+                                                                    b, h, n
+if_de_blade               Fetch_Decode_Blade              844.739983
+                                                                    h, n
+me_wb_blade               Memory_Writeback_Blade          942.354379
+                                                                    h, n
+memory                    Memory                          54.438799 b, h
+writeback                 Write_Back                      110.754800
+                                                                    h
+--------------------------------------------------------------------------------
+Total 27 cells                                            18768.714528
+1

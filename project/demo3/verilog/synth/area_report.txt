@@ -1,0 +1,27 @@
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : proc
+Version: B-2008.09-SP3
+Date   : Thu Apr 28 13:29:47 2016
+****************************************
+
+Library(s) Used:
+
+    gscl45nm (File: /u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db)
+
+Number of ports:                3
+Number of nets:               468
+Number of cells:               27
+Number of references:          15
+
+Combinational area:       16032.226288
+Noncombinational area:    2736.488239
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          18768.714528
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1

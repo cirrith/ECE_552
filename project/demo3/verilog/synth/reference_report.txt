@@ -1,0 +1,40 @@
+Warning: Design 'proc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : reference
+Design : proc
+Version: B-2008.09-SP3
+Date   : Thu Apr 28 13:29:47 2016
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFX2              gscl45nm       2.346500      10     23.464999  
+Decode                         6186.781772       1   6186.781772  h, n
+Decode_Execute_Blade           2132.968453       1   2132.968453  h, n
+Execute                        5958.232691       1   5958.232691  h
+Execute_Memory_Blade           1045.600379       1   1045.600379  h, n
+Extra_Logic2                    596.480292       1    596.480292  h
+Fetch                           859.288280       1    859.288280  b, h, n
+Fetch_Decode_Blade              844.739983       1    844.739983  h, n
+INVX1              gscl45nm       1.407900       3      4.223700  
+INVX2              gscl45nm       1.877200       2      3.754400  
+INVX8              gscl45nm       3.285100       1      3.285100  
+Memory                           54.438799       1     54.438799  b, h
+Memory_Writeback_Blade          942.354379       1    942.354379  h, n
+OR2X1              gscl45nm       2.346500       1      2.346500  
+Write_Back                      110.754800       1    110.754800  h
+-----------------------------------------------------------------------------
+Total 15 references                                 18768.714528
+1

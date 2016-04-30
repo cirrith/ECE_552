@@ -1,0 +1,59 @@
+ 
+****************************************
+Report : cell
+Design : proc
+Version: B-2008.09-SP3
+Date   : Thu Apr 28 16:45:19 2016
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U2                        OR2X1           gscl45nm        2.346500  
+U3                        INVX1           gscl45nm        1.407900  
+U4                        INVX2           gscl45nm        1.877200  
+U5                        BUFX2           gscl45nm        2.346500  
+U6                        INVX1           gscl45nm        1.407900  
+U7                        BUFX2           gscl45nm        2.346500  
+U8                        BUFX2           gscl45nm        2.346500  
+U9                        BUFX2           gscl45nm        2.346500  
+U10                       BUFX2           gscl45nm        2.346500  
+U11                       BUFX2           gscl45nm        2.346500  
+U12                       BUFX2           gscl45nm        2.346500  
+U13                       BUFX2           gscl45nm        2.346500  
+U14                       BUFX2           gscl45nm        2.346500  
+U15                       INVX1           gscl45nm        1.407900  
+U16                       BUFX2           gscl45nm        2.346500  
+U17                       BUFX2           gscl45nm        2.346500  
+U18                       BUFX2           gscl45nm        2.346500  
+U19                       BUFX2           gscl45nm        2.346500  
+U20                       BUFX2           gscl45nm        2.346500  
+de_ex_blade               Decode_Execute_Blade            1790.379462
+                                                                    h, n
+decode                    Decode                          5584.669897
+                                                                    h, n
+ex_me_blade               Execute_Memory_Blade            851.779483
+                                                                    h, n
+execute                   Execute                         3537.114068
+                                                                    h
+extra_logic               Extra_Logic2                    535.471293
+                                                                    h
+fetch                     Fetch                           122906.852279
+                                                                    h, n
+if_de_blade               Fetch_Decode_Blade              832.538185
+                                                                    h, n
+me_wb_blade               Memory_Writeback_Blade          803.441584
+                                                                    h, n
+memory                    Memory                          128031.608132
+                                                                    h, n
+writeback                 Write_Back                      115.917099
+                                                                    h
+--------------------------------------------------------------------------------
+Total 29 cells                                            265031.069881
+1
