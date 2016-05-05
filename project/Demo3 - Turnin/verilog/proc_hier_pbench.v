@@ -27,6 +27,7 @@ module proc_hier_pbench();
    wire        DCacheReq;
    wire        ICacheReq;
    
+
    wire        Halt;         /* Halt executed and in Memory or writeback stage */
         
    integer     inst_count;

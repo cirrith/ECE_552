@@ -1,0 +1,2506 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : proc
+Version: B-2008.09-SP3
+Date   : Thu Apr 28 16:45:19 2016
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[14]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U33/Y (OR2X2)                     0.04       0.72 r
+  memory/Data_Memory/c1/U53/Y (OR2X2)                     0.04       0.76 r
+  memory/Data_Memory/c1/U54/Y (INVX1)                     0.02       0.77 f
+  memory/Data_Memory/c1/mem_w3/write (memc_Size16_0)      0.00       0.77 f
+  memory/Data_Memory/c1/mem_w3/U1125/Y (INVX1)            0.00       0.78 r
+  memory/Data_Memory/c1/mem_w3/U2/Y (AND2X2)              0.03       0.81 r
+  memory/Data_Memory/c1/mem_w3/data_out<1> (memc_Size16_0)
+                                                          0.00       0.81 r
+  memory/Data_Memory/c1/U211/Y (AND2X2)                   0.03       0.84 r
+  memory/Data_Memory/c1/U113/Y (OR2X2)                    0.04       0.88 r
+  memory/Data_Memory/c1/U114/Y (INVX1)                    0.01       0.90 f
+  memory/Data_Memory/c1/U61/Y (AND2X2)                    0.03       0.93 f
+  memory/Data_Memory/c1/U62/Y (INVX1)                     0.00       0.92 r
+  memory/Data_Memory/c1/data_out<1> (cache_cache_id2_0)
+                                                          0.00       0.92 r
+  memory/Data_Memory/U105/Y (INVX1)                       0.01       0.94 f
+  memory/Data_Memory/U65/Y (OR2X2)                        0.04       0.98 f
+  memory/Data_Memory/U166/Y (AND2X2)                      0.04       1.01 f
+  memory/Data_Memory/U168/Y (INVX1)                       0.00       1.01 r
+  memory/Data_Memory/DataOut<1> (mem_system)              0.00       1.01 r
+  memory/Mem_Data<1> (Memory)                             0.00       1.01 r
+  extra_logic/Mem_Data_Mem<1> (Extra_Logic2)              0.00       1.01 r
+  extra_logic/U104/Y (INVX1)                              0.01       1.03 f
+  extra_logic/U119/Y (AOI22X1)                            0.03       1.05 r
+  extra_logic/PC_Det_Forward_Data<1> (Extra_Logic2)       0.00       1.05 r
+  decode/PC_Det_Forward_Data<1> (Decode)                  0.00       1.05 r
+  decode/pc_logic/PC_Det_Forward_Data<1> (PC_Logic)       0.00       1.05 r
+  decode/pc_logic/U75/Y (BUFX2)                           0.04       1.09 r
+  decode/pc_logic/U71/Y (OR2X2)                           0.04       1.13 r
+  decode/pc_logic/U72/Y (INVX1)                           0.02       1.14 f
+  decode/pc_logic/U98/Y (AOI21X1)                         0.02       1.16 r
+  decode/pc_logic/adder/A<1> (CLA_0)                      0.00       1.16 r
+  decode/pc_logic/adder/claMod1/A<1> (Bit4_CLA_3)         0.00       1.16 r
+  decode/pc_logic/adder/claMod1/FA_mod1/A (CLA_FA_14)     0.00       1.16 r
+  decode/pc_logic/adder/claMod1/FA_mod1/U5/Y (BUFX2)      0.04       1.20 r
+  decode/pc_logic/adder/claMod1/FA_mod1/U7/Y (AND2X2)     0.04       1.24 r
+  decode/pc_logic/adder/claMod1/FA_mod1/G (CLA_FA_14)     0.00       1.24 r
+  decode/pc_logic/adder/claMod1/U24/Y (OR2X2)             0.04       1.28 r
+  decode/pc_logic/adder/claMod1/U6/Y (NOR3X1)             0.02       1.30 f
+  decode/pc_logic/adder/claMod1/U5/Y (INVX1)              0.00       1.30 r
+  decode/pc_logic/adder/claMod1/U21/Y (AND2X2)            0.03       1.33 r
+  decode/pc_logic/adder/claMod1/U22/Y (INVX1)             0.02       1.35 f
+  decode/pc_logic/adder/claMod1/U37/Y (AOI21X1)           0.02       1.37 r
+  decode/pc_logic/adder/claMod1/G (Bit4_CLA_3)            0.00       1.37 r
+  decode/pc_logic/adder/U16/Y (BUFX2)                     0.04       1.40 r
+  decode/pc_logic/adder/U17/Y (AND2X2)                    0.03       1.44 r
+  decode/pc_logic/adder/U18/Y (INVX1)                     0.01       1.45 f
+  decode/pc_logic/adder/U29/Y (AND2X2)                    0.03       1.48 f
+  decode/pc_logic/adder/U30/Y (AOI22X1)                   0.03       1.51 r
+  decode/pc_logic/adder/claMod4/Ci (Bit4_CLA_0)           0.00       1.51 r
+  decode/pc_logic/adder/claMod4/U20/Y (BUFX2)             0.04       1.55 r
+  decode/pc_logic/adder/claMod4/U18/Y (OR2X2)             0.04       1.59 r
+  decode/pc_logic/adder/claMod4/U19/Y (INVX1)             0.02       1.61 f
+  decode/pc_logic/adder/claMod4/U35/Y (AOI21X1)           0.02       1.62 r
+  decode/pc_logic/adder/claMod4/FA_mod2/Ci (CLA_FA_1)     0.00       1.62 r
+  decode/pc_logic/adder/claMod4/FA_mod2/U2/Y (INVX1)      0.03       1.65 f
+  decode/pc_logic/adder/claMod4/FA_mod2/U1/Y (XNOR2X1)
+                                                          0.03       1.68 f
+  decode/pc_logic/adder/claMod4/FA_mod2/S (CLA_FA_1)      0.00       1.68 f
+  decode/pc_logic/adder/claMod4/S<2> (Bit4_CLA_0)         0.00       1.68 f
+  decode/pc_logic/adder/S<14> (CLA_0)                     0.00       1.68 f
+  decode/pc_logic/PC_Ex<14> (PC_Logic)                    0.00       1.68 f
+  decode/PC_Ex<14> (Decode)                               0.00       1.68 f
+  fetch/PC_Ex<14> (Fetch)                                 0.00       1.68 f
+  fetch/program_counter/PC_Ex<14> (PC)                    0.00       1.68 f
+  fetch/program_counter/U67/Y (INVX1)                     0.01       1.68 r
+  fetch/program_counter/U72/Y (AOI22X1)                   0.01       1.69 f
+  fetch/program_counter/program_counter[14]/d (dff_779)
+                                                          0.00       1.69 f
+  fetch/program_counter/program_counter[14]/U4/Y (INVX1)
+                                                          0.01       1.70 r
+  fetch/program_counter/program_counter[14]/U3/Y (NOR2X1)
+                                                          0.01       1.71 f
+  fetch/program_counter/program_counter[14]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.71 f
+  data arrival time                                                  1.71
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[14]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.71
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.77
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[15]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U33/Y (OR2X2)                     0.04       0.72 r
+  memory/Data_Memory/c1/U53/Y (OR2X2)                     0.04       0.76 r
+  memory/Data_Memory/c1/U54/Y (INVX1)                     0.02       0.77 f
+  memory/Data_Memory/c1/mem_w3/write (memc_Size16_0)      0.00       0.77 f
+  memory/Data_Memory/c1/mem_w3/U1125/Y (INVX1)            0.00       0.78 r
+  memory/Data_Memory/c1/mem_w3/U2/Y (AND2X2)              0.03       0.81 r
+  memory/Data_Memory/c1/mem_w3/data_out<1> (memc_Size16_0)
+                                                          0.00       0.81 r
+  memory/Data_Memory/c1/U211/Y (AND2X2)                   0.03       0.84 r
+  memory/Data_Memory/c1/U113/Y (OR2X2)                    0.04       0.88 r
+  memory/Data_Memory/c1/U114/Y (INVX1)                    0.01       0.90 f
+  memory/Data_Memory/c1/U61/Y (AND2X2)                    0.03       0.93 f
+  memory/Data_Memory/c1/U62/Y (INVX1)                     0.00       0.92 r
+  memory/Data_Memory/c1/data_out<1> (cache_cache_id2_0)
+                                                          0.00       0.92 r
+  memory/Data_Memory/U105/Y (INVX1)                       0.01       0.94 f
+  memory/Data_Memory/U65/Y (OR2X2)                        0.04       0.98 f
+  memory/Data_Memory/U166/Y (AND2X2)                      0.04       1.01 f
+  memory/Data_Memory/U168/Y (INVX1)                       0.00       1.01 r
+  memory/Data_Memory/DataOut<1> (mem_system)              0.00       1.01 r
+  memory/Mem_Data<1> (Memory)                             0.00       1.01 r
+  extra_logic/Mem_Data_Mem<1> (Extra_Logic2)              0.00       1.01 r
+  extra_logic/U104/Y (INVX1)                              0.01       1.03 f
+  extra_logic/U119/Y (AOI22X1)                            0.03       1.05 r
+  extra_logic/PC_Det_Forward_Data<1> (Extra_Logic2)       0.00       1.05 r
+  decode/PC_Det_Forward_Data<1> (Decode)                  0.00       1.05 r
+  decode/pc_logic/PC_Det_Forward_Data<1> (PC_Logic)       0.00       1.05 r
+  decode/pc_logic/U75/Y (BUFX2)                           0.04       1.09 r
+  decode/pc_logic/U71/Y (OR2X2)                           0.04       1.13 r
+  decode/pc_logic/U72/Y (INVX1)                           0.02       1.14 f
+  decode/pc_logic/U98/Y (AOI21X1)                         0.02       1.16 r
+  decode/pc_logic/adder/A<1> (CLA_0)                      0.00       1.16 r
+  decode/pc_logic/adder/claMod1/A<1> (Bit4_CLA_3)         0.00       1.16 r
+  decode/pc_logic/adder/claMod1/FA_mod1/A (CLA_FA_14)     0.00       1.16 r
+  decode/pc_logic/adder/claMod1/FA_mod1/U5/Y (BUFX2)      0.04       1.20 r
+  decode/pc_logic/adder/claMod1/FA_mod1/U7/Y (AND2X2)     0.04       1.24 r
+  decode/pc_logic/adder/claMod1/FA_mod1/G (CLA_FA_14)     0.00       1.24 r
+  decode/pc_logic/adder/claMod1/U24/Y (OR2X2)             0.04       1.28 r
+  decode/pc_logic/adder/claMod1/U6/Y (NOR3X1)             0.02       1.30 f
+  decode/pc_logic/adder/claMod1/U5/Y (INVX1)              0.00       1.30 r
+  decode/pc_logic/adder/claMod1/U21/Y (AND2X2)            0.03       1.33 r
+  decode/pc_logic/adder/claMod1/U22/Y (INVX1)             0.02       1.35 f
+  decode/pc_logic/adder/claMod1/U37/Y (AOI21X1)           0.02       1.37 r
+  decode/pc_logic/adder/claMod1/G (Bit4_CLA_3)            0.00       1.37 r
+  decode/pc_logic/adder/U16/Y (BUFX2)                     0.04       1.40 r
+  decode/pc_logic/adder/U17/Y (AND2X2)                    0.03       1.44 r
+  decode/pc_logic/adder/U18/Y (INVX1)                     0.01       1.45 f
+  decode/pc_logic/adder/U29/Y (AND2X2)                    0.03       1.48 f
+  decode/pc_logic/adder/U30/Y (AOI22X1)                   0.03       1.51 r
+  decode/pc_logic/adder/claMod4/Ci (Bit4_CLA_0)           0.00       1.51 r
+  decode/pc_logic/adder/claMod4/U20/Y (BUFX2)             0.04       1.55 r
+  decode/pc_logic/adder/claMod4/U16/Y (OR2X2)             0.04       1.59 r
+  decode/pc_logic/adder/claMod4/U17/Y (INVX1)             0.02       1.61 f
+  decode/pc_logic/adder/claMod4/U34/Y (AOI21X1)           0.02       1.62 r
+  decode/pc_logic/adder/claMod4/FA_mod3/Ci (CLA_FA_0)     0.00       1.62 r
+  decode/pc_logic/adder/claMod4/FA_mod3/U4/Y (INVX1)      0.03       1.65 f
+  decode/pc_logic/adder/claMod4/FA_mod3/U3/Y (XNOR2X1)
+                                                          0.03       1.68 f
+  decode/pc_logic/adder/claMod4/FA_mod3/S (CLA_FA_0)      0.00       1.68 f
+  decode/pc_logic/adder/claMod4/S<3> (Bit4_CLA_0)         0.00       1.68 f
+  decode/pc_logic/adder/S<15> (CLA_0)                     0.00       1.68 f
+  decode/pc_logic/PC_Ex<15> (PC_Logic)                    0.00       1.68 f
+  decode/PC_Ex<15> (Decode)                               0.00       1.68 f
+  fetch/PC_Ex<15> (Fetch)                                 0.00       1.68 f
+  fetch/program_counter/PC_Ex<15> (PC)                    0.00       1.68 f
+  fetch/program_counter/U66/Y (INVX1)                     0.01       1.68 r
+  fetch/program_counter/U70/Y (AOI22X1)                   0.01       1.69 f
+  fetch/program_counter/program_counter[15]/d (dff_780)
+                                                          0.00       1.69 f
+  fetch/program_counter/program_counter[15]/U4/Y (INVX1)
+                                                          0.01       1.70 r
+  fetch/program_counter/program_counter[15]/U3/Y (NOR2X1)
+                                                          0.01       1.71 f
+  fetch/program_counter/program_counter[15]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.71 f
+  data arrival time                                                  1.71
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[15]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.71
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.77
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[13]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U33/Y (OR2X2)                     0.04       0.72 r
+  memory/Data_Memory/c1/U53/Y (OR2X2)                     0.04       0.76 r
+  memory/Data_Memory/c1/U54/Y (INVX1)                     0.02       0.77 f
+  memory/Data_Memory/c1/mem_w3/write (memc_Size16_0)      0.00       0.77 f
+  memory/Data_Memory/c1/mem_w3/U1125/Y (INVX1)            0.00       0.78 r
+  memory/Data_Memory/c1/mem_w3/U2/Y (AND2X2)              0.03       0.81 r
+  memory/Data_Memory/c1/mem_w3/data_out<1> (memc_Size16_0)
+                                                          0.00       0.81 r
+  memory/Data_Memory/c1/U211/Y (AND2X2)                   0.03       0.84 r
+  memory/Data_Memory/c1/U113/Y (OR2X2)                    0.04       0.88 r
+  memory/Data_Memory/c1/U114/Y (INVX1)                    0.01       0.90 f
+  memory/Data_Memory/c1/U61/Y (AND2X2)                    0.03       0.93 f
+  memory/Data_Memory/c1/U62/Y (INVX1)                     0.00       0.92 r
+  memory/Data_Memory/c1/data_out<1> (cache_cache_id2_0)
+                                                          0.00       0.92 r
+  memory/Data_Memory/U105/Y (INVX1)                       0.01       0.94 f
+  memory/Data_Memory/U65/Y (OR2X2)                        0.04       0.98 f
+  memory/Data_Memory/U166/Y (AND2X2)                      0.04       1.01 f
+  memory/Data_Memory/U168/Y (INVX1)                       0.00       1.01 r
+  memory/Data_Memory/DataOut<1> (mem_system)              0.00       1.01 r
+  memory/Mem_Data<1> (Memory)                             0.00       1.01 r
+  extra_logic/Mem_Data_Mem<1> (Extra_Logic2)              0.00       1.01 r
+  extra_logic/U104/Y (INVX1)                              0.01       1.03 f
+  extra_logic/U119/Y (AOI22X1)                            0.03       1.05 r
+  extra_logic/PC_Det_Forward_Data<1> (Extra_Logic2)       0.00       1.05 r
+  decode/PC_Det_Forward_Data<1> (Decode)                  0.00       1.05 r
+  decode/pc_logic/PC_Det_Forward_Data<1> (PC_Logic)       0.00       1.05 r
+  decode/pc_logic/U75/Y (BUFX2)                           0.04       1.09 r
+  decode/pc_logic/U71/Y (OR2X2)                           0.04       1.13 r
+  decode/pc_logic/U72/Y (INVX1)                           0.02       1.14 f
+  decode/pc_logic/U98/Y (AOI21X1)                         0.02       1.16 r
+  decode/pc_logic/adder/A<1> (CLA_0)                      0.00       1.16 r
+  decode/pc_logic/adder/claMod1/A<1> (Bit4_CLA_3)         0.00       1.16 r
+  decode/pc_logic/adder/claMod1/FA_mod1/A (CLA_FA_14)     0.00       1.16 r
+  decode/pc_logic/adder/claMod1/FA_mod1/U5/Y (BUFX2)      0.04       1.20 r
+  decode/pc_logic/adder/claMod1/FA_mod1/U7/Y (AND2X2)     0.04       1.24 r
+  decode/pc_logic/adder/claMod1/FA_mod1/G (CLA_FA_14)     0.00       1.24 r
+  decode/pc_logic/adder/claMod1/U24/Y (OR2X2)             0.04       1.28 r
+  decode/pc_logic/adder/claMod1/U6/Y (NOR3X1)             0.02       1.30 f
+  decode/pc_logic/adder/claMod1/U5/Y (INVX1)              0.00       1.30 r
+  decode/pc_logic/adder/claMod1/U21/Y (AND2X2)            0.03       1.33 r
+  decode/pc_logic/adder/claMod1/U22/Y (INVX1)             0.02       1.35 f
+  decode/pc_logic/adder/claMod1/U37/Y (AOI21X1)           0.02       1.37 r
+  decode/pc_logic/adder/claMod1/G (Bit4_CLA_3)            0.00       1.37 r
+  decode/pc_logic/adder/U16/Y (BUFX2)                     0.04       1.40 r
+  decode/pc_logic/adder/U17/Y (AND2X2)                    0.03       1.44 r
+  decode/pc_logic/adder/U18/Y (INVX1)                     0.01       1.45 f
+  decode/pc_logic/adder/U29/Y (AND2X2)                    0.03       1.48 f
+  decode/pc_logic/adder/U30/Y (AOI22X1)                   0.03       1.51 r
+  decode/pc_logic/adder/claMod4/Ci (Bit4_CLA_0)           0.00       1.51 r
+  decode/pc_logic/adder/claMod4/U20/Y (BUFX2)             0.04       1.55 r
+  decode/pc_logic/adder/claMod4/U8/Y (INVX1)              0.02       1.57 f
+  decode/pc_logic/adder/claMod4/U9/Y (INVX1)              0.00       1.58 r
+  decode/pc_logic/adder/claMod4/U15/Y (AND2X2)            0.03       1.61 r
+  decode/pc_logic/adder/claMod4/U10/Y (OR2X2)             0.04       1.65 r
+  decode/pc_logic/adder/claMod4/FA_mod1/Ci (CLA_FA_2)     0.00       1.65 r
+  decode/pc_logic/adder/claMod4/FA_mod1/U2/Y (XNOR2X1)
+                                                          0.03       1.67 f
+  decode/pc_logic/adder/claMod4/FA_mod1/S (CLA_FA_2)      0.00       1.67 f
+  decode/pc_logic/adder/claMod4/S<1> (Bit4_CLA_0)         0.00       1.67 f
+  decode/pc_logic/adder/S<13> (CLA_0)                     0.00       1.67 f
+  decode/pc_logic/PC_Ex<13> (PC_Logic)                    0.00       1.67 f
+  decode/PC_Ex<13> (Decode)                               0.00       1.67 f
+  fetch/PC_Ex<13> (Fetch)                                 0.00       1.67 f
+  fetch/program_counter/PC_Ex<13> (PC)                    0.00       1.67 f
+  fetch/program_counter/U65/Y (INVX1)                     0.00       1.68 r
+  fetch/program_counter/U74/Y (AOI22X1)                   0.01       1.69 f
+  fetch/program_counter/program_counter[13]/d (dff_778)
+                                                          0.00       1.69 f
+  fetch/program_counter/program_counter[13]/U4/Y (INVX1)
+                                                          0.01       1.70 r
+  fetch/program_counter/program_counter[13]/U3/Y (NOR2X1)
+                                                          0.01       1.71 f
+  fetch/program_counter/program_counter[13]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.71 f
+  data arrival time                                                  1.71
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[13]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.71
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.76
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[9]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U429/Y (INVX8)             0.02       0.25 r
+  memory/Data_Memory/c1/mem_tg/U283/Y (INVX8)             0.04       0.28 f
+  memory/Data_Memory/c1/mem_tg/U263/Y (MUX2X1)            0.04       0.32 f
+  memory/Data_Memory/c1/mem_tg/U1119/Y (AOI22X1)          0.04       0.36 r
+  memory/Data_Memory/c1/mem_tg/U495/Y (BUFX2)             0.04       0.39 r
+  memory/Data_Memory/c1/mem_tg/U482/Y (AND2X2)            0.03       0.42 r
+  memory/Data_Memory/c1/mem_tg/U483/Y (INVX1)             0.01       0.44 f
+  memory/Data_Memory/c1/mem_tg/U1120/Y (OAI21X1)          0.02       0.46 r
+  memory/Data_Memory/c1/mem_tg/U1126/Y (OAI21X1)          0.02       0.48 f
+  memory/Data_Memory/c1/mem_tg/U1127/Y (NAND3X1)          0.03       0.51 r
+  memory/Data_Memory/c1/mem_tg/U499/Y (BUFX2)             0.03       0.54 r
+  memory/Data_Memory/c1/mem_tg/U436/Y (AND2X2)            0.03       0.57 r
+  memory/Data_Memory/c1/mem_tg/U278/Y (INVX1)             0.02       0.60 f
+  memory/Data_Memory/c1/mem_tg/data_out<3> (memc_Size5_0)
+                                                          0.00       0.60 f
+  memory/Data_Memory/c1/U27/Y (XNOR2X1)                   0.03       0.63 f
+  memory/Data_Memory/c1/U139/Y (AND2X2)                   0.04       0.67 f
+  memory/Data_Memory/c1/U41/Y (NOR3X1)                    0.03       0.70 r
+  memory/Data_Memory/c1/U42/Y (INVX1)                     0.03       0.73 f
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.05       0.78 f
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.02       0.80 r
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.80 r
+  memory/Data_Memory/c1/mem_w1/U737/Y (OR2X2)             0.04       0.84 r
+  memory/Data_Memory/c1/mem_w1/U738/Y (INVX1)             0.02       0.85 f
+  memory/Data_Memory/c1/mem_w1/data_out<1> (memc_Size16_2)
+                                                          0.00       0.85 f
+  memory/Data_Memory/c1/U241/Y (AOI22X1)                  0.04       0.89 r
+  memory/Data_Memory/c1/U116/Y (BUFX2)                    0.03       0.92 r
+  memory/Data_Memory/c1/U61/Y (AND2X2)                    0.03       0.96 r
+  memory/Data_Memory/c1/U62/Y (INVX1)                     0.01       0.97 f
+  memory/Data_Memory/c1/data_out<1> (cache_cache_id2_0)
+                                                          0.00       0.97 f
+  memory/Data_Memory/U105/Y (INVX1)                       0.00       0.97 r
+  memory/Data_Memory/U65/Y (OR2X2)                        0.04       1.00 r
+  memory/Data_Memory/U166/Y (AND2X2)                      0.03       1.04 r
+  memory/Data_Memory/U168/Y (INVX1)                       0.02       1.06 f
+  memory/Data_Memory/DataOut<1> (mem_system)              0.00       1.06 f
+  memory/Mem_Data<1> (Memory)                             0.00       1.06 f
+  extra_logic/Mem_Data_Mem<1> (Extra_Logic2)              0.00       1.06 f
+  extra_logic/U104/Y (INVX1)                              0.00       1.06 r
+  extra_logic/U119/Y (AOI22X1)                            0.01       1.07 f
+  extra_logic/PC_Det_Forward_Data<1> (Extra_Logic2)       0.00       1.07 f
+  decode/PC_Det_Forward_Data<1> (Decode)                  0.00       1.07 f
+  decode/pc_logic/PC_Det_Forward_Data<1> (PC_Logic)       0.00       1.07 f
+  decode/pc_logic/U75/Y (BUFX2)                           0.04       1.11 f
+  decode/pc_logic/U71/Y (OR2X2)                           0.04       1.15 f
+  decode/pc_logic/U72/Y (INVX1)                           0.00       1.15 r
+  decode/pc_logic/U98/Y (AOI21X1)                         0.01       1.16 f
+  decode/pc_logic/adder/A<1> (CLA_0)                      0.00       1.16 f
+  decode/pc_logic/adder/claMod1/A<1> (Bit4_CLA_3)         0.00       1.16 f
+  decode/pc_logic/adder/claMod1/FA_mod1/A (CLA_FA_14)     0.00       1.16 f
+  decode/pc_logic/adder/claMod1/FA_mod1/U5/Y (BUFX2)      0.04       1.20 f
+  decode/pc_logic/adder/claMod1/FA_mod1/U7/Y (AND2X2)     0.04       1.24 f
+  decode/pc_logic/adder/claMod1/FA_mod1/G (CLA_FA_14)     0.00       1.24 f
+  decode/pc_logic/adder/claMod1/U24/Y (OR2X2)             0.04       1.27 f
+  decode/pc_logic/adder/claMod1/U6/Y (NOR3X1)             0.03       1.31 r
+  decode/pc_logic/adder/claMod1/U5/Y (INVX1)              0.03       1.33 f
+  decode/pc_logic/adder/claMod1/U21/Y (AND2X2)            0.04       1.37 f
+  decode/pc_logic/adder/claMod1/U22/Y (INVX1)             0.00       1.37 r
+  decode/pc_logic/adder/claMod1/U37/Y (AOI21X1)           0.01       1.37 f
+  decode/pc_logic/adder/claMod1/G (Bit4_CLA_3)            0.00       1.37 f
+  decode/pc_logic/adder/U16/Y (BUFX2)                     0.04       1.41 f
+  decode/pc_logic/adder/U1/Y (AND2X2)                     0.03       1.44 f
+  decode/pc_logic/adder/U7/Y (NOR3X1)                     0.05       1.49 r
+  decode/pc_logic/adder/U8/Y (INVX2)                      0.03       1.52 f
+  decode/pc_logic/adder/claMod3/Ci (Bit4_CLA_1)           0.00       1.52 f
+  decode/pc_logic/adder/claMod3/U1/Y (AND2X2)             0.04       1.56 f
+  decode/pc_logic/adder/claMod3/U9/Y (OR2X2)              0.04       1.60 f
+  decode/pc_logic/adder/claMod3/FA_mod1/Ci (CLA_FA_6)     0.00       1.60 f
+  decode/pc_logic/adder/claMod3/FA_mod1/U1/Y (XNOR2X1)
+                                                          0.03       1.62 f
+  decode/pc_logic/adder/claMod3/FA_mod1/S (CLA_FA_6)      0.00       1.62 f
+  decode/pc_logic/adder/claMod3/S<1> (Bit4_CLA_1)         0.00       1.62 f
+  decode/pc_logic/adder/S<9> (CLA_0)                      0.00       1.62 f
+  decode/pc_logic/PC_Ex<9> (PC_Logic)                     0.00       1.62 f
+  decode/PC_Ex<9> (Decode)                                0.00       1.62 f
+  fetch/PC_Ex<9> (Fetch)                                  0.00       1.62 f
+  fetch/program_counter/PC_Ex<9> (PC)                     0.00       1.62 f
+  fetch/program_counter/U24/Y (AND2X2)                    0.03       1.66 f
+  fetch/program_counter/U25/Y (INVX1)                     0.00       1.65 r
+  fetch/program_counter/U14/Y (AND2X2)                    0.03       1.68 r
+  fetch/program_counter/U15/Y (INVX1)                     0.01       1.70 f
+  fetch/program_counter/program_counter[9]/d (dff_774)
+                                                          0.00       1.70 f
+  fetch/program_counter/program_counter[9]/U4/Y (INVX1)
+                                                          0.00       1.70 r
+  fetch/program_counter/program_counter[9]/U3/Y (NOR2X1)
+                                                          0.01       1.71 f
+  fetch/program_counter/program_counter[9]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.71 f
+  data arrival time                                                  1.71
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[9]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.71
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.76
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[5]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U429/Y (INVX8)             0.02       0.25 r
+  memory/Data_Memory/c1/mem_tg/U283/Y (INVX8)             0.04       0.28 f
+  memory/Data_Memory/c1/mem_tg/U263/Y (MUX2X1)            0.04       0.32 f
+  memory/Data_Memory/c1/mem_tg/U1119/Y (AOI22X1)          0.04       0.36 r
+  memory/Data_Memory/c1/mem_tg/U495/Y (BUFX2)             0.04       0.39 r
+  memory/Data_Memory/c1/mem_tg/U482/Y (AND2X2)            0.03       0.42 r
+  memory/Data_Memory/c1/mem_tg/U483/Y (INVX1)             0.01       0.44 f
+  memory/Data_Memory/c1/mem_tg/U1120/Y (OAI21X1)          0.02       0.46 r
+  memory/Data_Memory/c1/mem_tg/U1126/Y (OAI21X1)          0.02       0.48 f
+  memory/Data_Memory/c1/mem_tg/U1127/Y (NAND3X1)          0.03       0.51 r
+  memory/Data_Memory/c1/mem_tg/U499/Y (BUFX2)             0.03       0.54 r
+  memory/Data_Memory/c1/mem_tg/U436/Y (AND2X2)            0.03       0.57 r
+  memory/Data_Memory/c1/mem_tg/U278/Y (INVX1)             0.02       0.60 f
+  memory/Data_Memory/c1/mem_tg/data_out<3> (memc_Size5_0)
+                                                          0.00       0.60 f
+  memory/Data_Memory/c1/U27/Y (XNOR2X1)                   0.03       0.63 f
+  memory/Data_Memory/c1/U139/Y (AND2X2)                   0.04       0.67 f
+  memory/Data_Memory/c1/U41/Y (NOR3X1)                    0.03       0.70 r
+  memory/Data_Memory/c1/U42/Y (INVX1)                     0.03       0.73 f
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.05       0.78 f
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.02       0.80 r
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.80 r
+  memory/Data_Memory/c1/mem_w1/U737/Y (OR2X2)             0.04       0.84 r
+  memory/Data_Memory/c1/mem_w1/U738/Y (INVX1)             0.02       0.85 f
+  memory/Data_Memory/c1/mem_w1/data_out<1> (memc_Size16_2)
+                                                          0.00       0.85 f
+  memory/Data_Memory/c1/U241/Y (AOI22X1)                  0.04       0.89 r
+  memory/Data_Memory/c1/U116/Y (BUFX2)                    0.03       0.92 r
+  memory/Data_Memory/c1/U61/Y (AND2X2)                    0.03       0.96 r
+  memory/Data_Memory/c1/U62/Y (INVX1)                     0.01       0.97 f
+  memory/Data_Memory/c1/data_out<1> (cache_cache_id2_0)
+                                                          0.00       0.97 f
+  memory/Data_Memory/U105/Y (INVX1)                       0.00       0.97 r
+  memory/Data_Memory/U65/Y (OR2X2)                        0.04       1.00 r
+  memory/Data_Memory/U166/Y (AND2X2)                      0.03       1.04 r
+  memory/Data_Memory/U168/Y (INVX1)                       0.02       1.06 f
+  memory/Data_Memory/DataOut<1> (mem_system)              0.00       1.06 f
+  memory/Mem_Data<1> (Memory)                             0.00       1.06 f
+  extra_logic/Mem_Data_Mem<1> (Extra_Logic2)              0.00       1.06 f
+  extra_logic/U104/Y (INVX1)                              0.00       1.06 r
+  extra_logic/U119/Y (AOI22X1)                            0.01       1.07 f
+  extra_logic/PC_Det_Forward_Data<1> (Extra_Logic2)       0.00       1.07 f
+  decode/PC_Det_Forward_Data<1> (Decode)                  0.00       1.07 f
+  decode/pc_logic/PC_Det_Forward_Data<1> (PC_Logic)       0.00       1.07 f
+  decode/pc_logic/U75/Y (BUFX2)                           0.04       1.11 f
+  decode/pc_logic/U71/Y (OR2X2)                           0.04       1.15 f
+  decode/pc_logic/U72/Y (INVX1)                           0.00       1.15 r
+  decode/pc_logic/U98/Y (AOI21X1)                         0.01       1.16 f
+  decode/pc_logic/adder/A<1> (CLA_0)                      0.00       1.16 f
+  decode/pc_logic/adder/claMod1/A<1> (Bit4_CLA_3)         0.00       1.16 f
+  decode/pc_logic/adder/claMod1/FA_mod1/A (CLA_FA_14)     0.00       1.16 f
+  decode/pc_logic/adder/claMod1/FA_mod1/U5/Y (BUFX2)      0.04       1.20 f
+  decode/pc_logic/adder/claMod1/FA_mod1/U7/Y (AND2X2)     0.04       1.24 f
+  decode/pc_logic/adder/claMod1/FA_mod1/G (CLA_FA_14)     0.00       1.24 f
+  decode/pc_logic/adder/claMod1/U24/Y (OR2X2)             0.04       1.27 f
+  decode/pc_logic/adder/claMod1/U6/Y (NOR3X1)             0.03       1.31 r
+  decode/pc_logic/adder/claMod1/U5/Y (INVX1)              0.03       1.33 f
+  decode/pc_logic/adder/claMod1/U21/Y (AND2X2)            0.04       1.37 f
+  decode/pc_logic/adder/claMod1/U22/Y (INVX1)             0.00       1.37 r
+  decode/pc_logic/adder/claMod1/U37/Y (AOI21X1)           0.01       1.37 f
+  decode/pc_logic/adder/claMod1/G (Bit4_CLA_3)            0.00       1.37 f
+  decode/pc_logic/adder/U16/Y (BUFX2)                     0.04       1.41 f
+  decode/pc_logic/adder/U5/Y (BUFX2)                      0.03       1.44 f
+  decode/pc_logic/adder/U28/Y (AOI21X1)                   0.01       1.46 r
+  decode/pc_logic/adder/U19/Y (BUFX2)                     0.03       1.49 r
+  decode/pc_logic/adder/U4/Y (INVX1)                      0.02       1.51 f
+  decode/pc_logic/adder/claMod2/Ci (Bit4_CLA_2)           0.00       1.51 f
+  decode/pc_logic/adder/claMod2/U25/Y (AND2X2)            0.04       1.54 f
+  decode/pc_logic/adder/claMod2/U26/Y (INVX1)             0.00       1.54 r
+  decode/pc_logic/adder/claMod2/U9/Y (AND2X2)             0.03       1.57 r
+  decode/pc_logic/adder/claMod2/U10/Y (INVX1)             0.01       1.58 f
+  decode/pc_logic/adder/claMod2/FA_mod1/Ci (CLA_FA_10)
+                                                          0.00       1.58 f
+  decode/pc_logic/adder/claMod2/FA_mod1/U2/Y (INVX1)      0.01       1.59 r
+  decode/pc_logic/adder/claMod2/FA_mod1/U1/Y (XNOR2X1)
+                                                          0.03       1.62 f
+  decode/pc_logic/adder/claMod2/FA_mod1/S (CLA_FA_10)     0.00       1.62 f
+  decode/pc_logic/adder/claMod2/S<1> (Bit4_CLA_2)         0.00       1.62 f
+  decode/pc_logic/adder/S<5> (CLA_0)                      0.00       1.62 f
+  decode/pc_logic/PC_Ex<5> (PC_Logic)                     0.00       1.62 f
+  decode/PC_Ex<5> (Decode)                                0.00       1.62 f
+  fetch/PC_Ex<5> (Fetch)                                  0.00       1.62 f
+  fetch/program_counter/PC_Ex<5> (PC)                     0.00       1.62 f
+  fetch/program_counter/U81/Y (AOI22X1)                   0.03       1.65 r
+  fetch/program_counter/U22/Y (BUFX2)                     0.04       1.68 r
+  fetch/program_counter/U51/Y (OAI21X1)                   0.01       1.69 f
+  fetch/program_counter/program_counter[5]/d (dff_770)
+                                                          0.00       1.69 f
+  fetch/program_counter/program_counter[5]/U4/Y (INVX1)
+                                                          0.00       1.69 r
+  fetch/program_counter/program_counter[5]/U3/Y (NOR2X1)
+                                                          0.01       1.70 f
+  fetch/program_counter/program_counter[5]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.70 f
+  data arrival time                                                  1.70
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[5]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.70
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.76
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[8]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U429/Y (INVX8)             0.02       0.25 r
+  memory/Data_Memory/c1/mem_tg/U283/Y (INVX8)             0.04       0.28 f
+  memory/Data_Memory/c1/mem_tg/U263/Y (MUX2X1)            0.04       0.32 f
+  memory/Data_Memory/c1/mem_tg/U1119/Y (AOI22X1)          0.04       0.36 r
+  memory/Data_Memory/c1/mem_tg/U495/Y (BUFX2)             0.04       0.39 r
+  memory/Data_Memory/c1/mem_tg/U482/Y (AND2X2)            0.03       0.42 r
+  memory/Data_Memory/c1/mem_tg/U483/Y (INVX1)             0.01       0.44 f
+  memory/Data_Memory/c1/mem_tg/U1120/Y (OAI21X1)          0.02       0.46 r
+  memory/Data_Memory/c1/mem_tg/U1126/Y (OAI21X1)          0.02       0.48 f
+  memory/Data_Memory/c1/mem_tg/U1127/Y (NAND3X1)          0.03       0.51 r
+  memory/Data_Memory/c1/mem_tg/U499/Y (BUFX2)             0.03       0.54 r
+  memory/Data_Memory/c1/mem_tg/U436/Y (AND2X2)            0.03       0.57 r
+  memory/Data_Memory/c1/mem_tg/U278/Y (INVX1)             0.02       0.60 f
+  memory/Data_Memory/c1/mem_tg/data_out<3> (memc_Size5_0)
+                                                          0.00       0.60 f
+  memory/Data_Memory/c1/U27/Y (XNOR2X1)                   0.03       0.63 f
+  memory/Data_Memory/c1/U139/Y (AND2X2)                   0.04       0.67 f
+  memory/Data_Memory/c1/U41/Y (NOR3X1)                    0.03       0.70 r
+  memory/Data_Memory/c1/U42/Y (INVX1)                     0.03       0.73 f
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.05       0.78 f
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.02       0.80 r
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.80 r
+  memory/Data_Memory/c1/mem_w1/U737/Y (OR2X2)             0.04       0.84 r
+  memory/Data_Memory/c1/mem_w1/U738/Y (INVX1)             0.02       0.85 f
+  memory/Data_Memory/c1/mem_w1/data_out<1> (memc_Size16_2)
+                                                          0.00       0.85 f
+  memory/Data_Memory/c1/U241/Y (AOI22X1)                  0.04       0.89 r
+  memory/Data_Memory/c1/U116/Y (BUFX2)                    0.03       0.92 r
+  memory/Data_Memory/c1/U61/Y (AND2X2)                    0.03       0.96 r
+  memory/Data_Memory/c1/U62/Y (INVX1)                     0.01       0.97 f
+  memory/Data_Memory/c1/data_out<1> (cache_cache_id2_0)
+                                                          0.00       0.97 f
+  memory/Data_Memory/U105/Y (INVX1)                       0.00       0.97 r
+  memory/Data_Memory/U65/Y (OR2X2)                        0.04       1.00 r
+  memory/Data_Memory/U166/Y (AND2X2)                      0.03       1.04 r
+  memory/Data_Memory/U168/Y (INVX1)                       0.02       1.06 f
+  memory/Data_Memory/DataOut<1> (mem_system)              0.00       1.06 f
+  memory/Mem_Data<1> (Memory)                             0.00       1.06 f
+  extra_logic/Mem_Data_Mem<1> (Extra_Logic2)              0.00       1.06 f
+  extra_logic/U104/Y (INVX1)                              0.00       1.06 r
+  extra_logic/U119/Y (AOI22X1)                            0.01       1.07 f
+  extra_logic/PC_Det_Forward_Data<1> (Extra_Logic2)       0.00       1.07 f
+  decode/PC_Det_Forward_Data<1> (Decode)                  0.00       1.07 f
+  decode/pc_logic/PC_Det_Forward_Data<1> (PC_Logic)       0.00       1.07 f
+  decode/pc_logic/U75/Y (BUFX2)                           0.04       1.11 f
+  decode/pc_logic/U71/Y (OR2X2)                           0.04       1.15 f
+  decode/pc_logic/U72/Y (INVX1)                           0.00       1.15 r
+  decode/pc_logic/U98/Y (AOI21X1)                         0.01       1.16 f
+  decode/pc_logic/adder/A<1> (CLA_0)                      0.00       1.16 f
+  decode/pc_logic/adder/claMod1/A<1> (Bit4_CLA_3)         0.00       1.16 f
+  decode/pc_logic/adder/claMod1/FA_mod1/A (CLA_FA_14)     0.00       1.16 f
+  decode/pc_logic/adder/claMod1/FA_mod1/U5/Y (BUFX2)      0.04       1.20 f
+  decode/pc_logic/adder/claMod1/FA_mod1/U7/Y (AND2X2)     0.04       1.24 f
+  decode/pc_logic/adder/claMod1/FA_mod1/G (CLA_FA_14)     0.00       1.24 f
+  decode/pc_logic/adder/claMod1/U24/Y (OR2X2)             0.04       1.27 f
+  decode/pc_logic/adder/claMod1/U6/Y (NOR3X1)             0.03       1.31 r
+  decode/pc_logic/adder/claMod1/U5/Y (INVX1)              0.03       1.33 f
+  decode/pc_logic/adder/claMod1/U21/Y (AND2X2)            0.04       1.37 f
+  decode/pc_logic/adder/claMod1/U22/Y (INVX1)             0.00       1.37 r
+  decode/pc_logic/adder/claMod1/U37/Y (AOI21X1)           0.01       1.37 f
+  decode/pc_logic/adder/claMod1/G (Bit4_CLA_3)            0.00       1.37 f
+  decode/pc_logic/adder/U16/Y (BUFX2)                     0.04       1.41 f
+  decode/pc_logic/adder/U1/Y (AND2X2)                     0.03       1.44 f
+  decode/pc_logic/adder/U7/Y (NOR3X1)                     0.05       1.49 r
+  decode/pc_logic/adder/U8/Y (INVX2)                      0.03       1.52 f
+  decode/pc_logic/adder/claMod3/Ci (Bit4_CLA_1)           0.00       1.52 f
+  decode/pc_logic/adder/claMod3/U5/Y (BUFX2)              0.04       1.56 f
+  decode/pc_logic/adder/claMod3/FA_mod0/Ci (CLA_FA_7)     0.00       1.56 f
+  decode/pc_logic/adder/claMod3/FA_mod0/U3/Y (XOR2X1)     0.03       1.59 f
+  decode/pc_logic/adder/claMod3/FA_mod0/S (CLA_FA_7)      0.00       1.59 f
+  decode/pc_logic/adder/claMod3/S<0> (Bit4_CLA_1)         0.00       1.59 f
+  decode/pc_logic/adder/S<8> (CLA_0)                      0.00       1.59 f
+  decode/pc_logic/PC_Ex<8> (PC_Logic)                     0.00       1.59 f
+  decode/PC_Ex<8> (Decode)                                0.00       1.59 f
+  fetch/PC_Ex<8> (Fetch)                                  0.00       1.59 f
+  fetch/program_counter/PC_Ex<8> (PC)                     0.00       1.59 f
+  fetch/program_counter/U79/Y (AOI22X1)                   0.03       1.62 r
+  fetch/program_counter/U21/Y (BUFX2)                     0.04       1.65 r
+  fetch/program_counter/U42/Y (OAI21X1)                   0.01       1.66 f
+  fetch/program_counter/program_counter[8]/d (dff_773)
+                                                          0.00       1.66 f
+  fetch/program_counter/program_counter[8]/U3/Y (AND2X2)
+                                                          0.03       1.69 f
+  fetch/program_counter/program_counter[8]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.69 f
+  data arrival time                                                  1.69
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[8]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.69
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.75
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[12]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U33/Y (OR2X2)                     0.04       0.72 r
+  memory/Data_Memory/c1/U53/Y (OR2X2)                     0.04       0.76 r
+  memory/Data_Memory/c1/U54/Y (INVX1)                     0.02       0.77 f
+  memory/Data_Memory/c1/mem_w3/write (memc_Size16_0)      0.00       0.77 f
+  memory/Data_Memory/c1/mem_w3/U1125/Y (INVX1)            0.00       0.78 r
+  memory/Data_Memory/c1/mem_w3/U2/Y (AND2X2)              0.03       0.81 r
+  memory/Data_Memory/c1/mem_w3/data_out<1> (memc_Size16_0)
+                                                          0.00       0.81 r
+  memory/Data_Memory/c1/U211/Y (AND2X2)                   0.03       0.84 r
+  memory/Data_Memory/c1/U113/Y (OR2X2)                    0.04       0.88 r
+  memory/Data_Memory/c1/U114/Y (INVX1)                    0.01       0.90 f
+  memory/Data_Memory/c1/U61/Y (AND2X2)                    0.03       0.93 f
+  memory/Data_Memory/c1/U62/Y (INVX1)                     0.00       0.92 r
+  memory/Data_Memory/c1/data_out<1> (cache_cache_id2_0)
+                                                          0.00       0.92 r
+  memory/Data_Memory/U105/Y (INVX1)                       0.01       0.94 f
+  memory/Data_Memory/U65/Y (OR2X2)                        0.04       0.98 f
+  memory/Data_Memory/U166/Y (AND2X2)                      0.04       1.01 f
+  memory/Data_Memory/U168/Y (INVX1)                       0.00       1.01 r
+  memory/Data_Memory/DataOut<1> (mem_system)              0.00       1.01 r
+  memory/Mem_Data<1> (Memory)                             0.00       1.01 r
+  extra_logic/Mem_Data_Mem<1> (Extra_Logic2)              0.00       1.01 r
+  extra_logic/U104/Y (INVX1)                              0.01       1.03 f
+  extra_logic/U119/Y (AOI22X1)                            0.03       1.05 r
+  extra_logic/PC_Det_Forward_Data<1> (Extra_Logic2)       0.00       1.05 r
+  decode/PC_Det_Forward_Data<1> (Decode)                  0.00       1.05 r
+  decode/pc_logic/PC_Det_Forward_Data<1> (PC_Logic)       0.00       1.05 r
+  decode/pc_logic/U75/Y (BUFX2)                           0.04       1.09 r
+  decode/pc_logic/U71/Y (OR2X2)                           0.04       1.13 r
+  decode/pc_logic/U72/Y (INVX1)                           0.02       1.14 f
+  decode/pc_logic/U98/Y (AOI21X1)                         0.02       1.16 r
+  decode/pc_logic/adder/A<1> (CLA_0)                      0.00       1.16 r
+  decode/pc_logic/adder/claMod1/A<1> (Bit4_CLA_3)         0.00       1.16 r
+  decode/pc_logic/adder/claMod1/FA_mod1/A (CLA_FA_14)     0.00       1.16 r
+  decode/pc_logic/adder/claMod1/FA_mod1/U5/Y (BUFX2)      0.04       1.20 r
+  decode/pc_logic/adder/claMod1/FA_mod1/U7/Y (AND2X2)     0.04       1.24 r
+  decode/pc_logic/adder/claMod1/FA_mod1/G (CLA_FA_14)     0.00       1.24 r
+  decode/pc_logic/adder/claMod1/U24/Y (OR2X2)             0.04       1.28 r
+  decode/pc_logic/adder/claMod1/U6/Y (NOR3X1)             0.02       1.30 f
+  decode/pc_logic/adder/claMod1/U5/Y (INVX1)              0.00       1.30 r
+  decode/pc_logic/adder/claMod1/U21/Y (AND2X2)            0.03       1.33 r
+  decode/pc_logic/adder/claMod1/U22/Y (INVX1)             0.02       1.35 f
+  decode/pc_logic/adder/claMod1/U37/Y (AOI21X1)           0.02       1.37 r
+  decode/pc_logic/adder/claMod1/G (Bit4_CLA_3)            0.00       1.37 r
+  decode/pc_logic/adder/U16/Y (BUFX2)                     0.04       1.40 r
+  decode/pc_logic/adder/U17/Y (AND2X2)                    0.03       1.44 r
+  decode/pc_logic/adder/U18/Y (INVX1)                     0.01       1.45 f
+  decode/pc_logic/adder/U29/Y (AND2X2)                    0.03       1.48 f
+  decode/pc_logic/adder/U30/Y (AOI22X1)                   0.03       1.51 r
+  decode/pc_logic/adder/claMod4/Ci (Bit4_CLA_0)           0.00       1.51 r
+  decode/pc_logic/adder/claMod4/U20/Y (BUFX2)             0.04       1.55 r
+  decode/pc_logic/adder/claMod4/U8/Y (INVX1)              0.02       1.57 f
+  decode/pc_logic/adder/claMod4/U7/Y (INVX1)              0.01       1.59 r
+  decode/pc_logic/adder/claMod4/FA_mod0/Ci (CLA_FA_3)     0.00       1.59 r
+  decode/pc_logic/adder/claMod4/FA_mod0/U4/Y (XNOR2X1)
+                                                          0.03       1.61 f
+  decode/pc_logic/adder/claMod4/FA_mod0/S (CLA_FA_3)      0.00       1.61 f
+  decode/pc_logic/adder/claMod4/S<0> (Bit4_CLA_0)         0.00       1.61 f
+  decode/pc_logic/adder/S<12> (CLA_0)                     0.00       1.61 f
+  decode/pc_logic/PC_Ex<12> (PC_Logic)                    0.00       1.61 f
+  decode/PC_Ex<12> (Decode)                               0.00       1.61 f
+  fetch/PC_Ex<12> (Fetch)                                 0.00       1.61 f
+  fetch/program_counter/PC_Ex<12> (PC)                    0.00       1.61 f
+  fetch/program_counter/U75/Y (AOI22X1)                   0.03       1.64 r
+  fetch/program_counter/U20/Y (BUFX2)                     0.04       1.67 r
+  fetch/program_counter/U46/Y (OAI21X1)                   0.01       1.69 f
+  fetch/program_counter/program_counter[12]/d (dff_777)
+                                                          0.00       1.69 f
+  fetch/program_counter/program_counter[12]/U4/Y (INVX1)
+                                                          0.00       1.69 r
+  fetch/program_counter/program_counter[12]/U3/Y (NOR2X1)
+                                                          0.01       1.69 f
+  fetch/program_counter/program_counter[12]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.69 f
+  data arrival time                                                  1.69
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[12]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.69
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.75
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[7]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U429/Y (INVX8)             0.02       0.25 r
+  memory/Data_Memory/c1/mem_tg/U283/Y (INVX8)             0.04       0.28 f
+  memory/Data_Memory/c1/mem_tg/U263/Y (MUX2X1)            0.04       0.32 f
+  memory/Data_Memory/c1/mem_tg/U1119/Y (AOI22X1)          0.04       0.36 r
+  memory/Data_Memory/c1/mem_tg/U495/Y (BUFX2)             0.04       0.39 r
+  memory/Data_Memory/c1/mem_tg/U482/Y (AND2X2)            0.03       0.42 r
+  memory/Data_Memory/c1/mem_tg/U483/Y (INVX1)             0.01       0.44 f
+  memory/Data_Memory/c1/mem_tg/U1120/Y (OAI21X1)          0.02       0.46 r
+  memory/Data_Memory/c1/mem_tg/U1126/Y (OAI21X1)          0.02       0.48 f
+  memory/Data_Memory/c1/mem_tg/U1127/Y (NAND3X1)          0.03       0.51 r
+  memory/Data_Memory/c1/mem_tg/U499/Y (BUFX2)             0.03       0.54 r
+  memory/Data_Memory/c1/mem_tg/U436/Y (AND2X2)            0.03       0.57 r
+  memory/Data_Memory/c1/mem_tg/U278/Y (INVX1)             0.02       0.60 f
+  memory/Data_Memory/c1/mem_tg/data_out<3> (memc_Size5_0)
+                                                          0.00       0.60 f
+  memory/Data_Memory/c1/U27/Y (XNOR2X1)                   0.03       0.63 f
+  memory/Data_Memory/c1/U139/Y (AND2X2)                   0.04       0.67 f
+  memory/Data_Memory/c1/U41/Y (NOR3X1)                    0.03       0.70 r
+  memory/Data_Memory/c1/U42/Y (INVX1)                     0.03       0.73 f
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.05       0.78 f
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.02       0.80 r
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.80 r
+  memory/Data_Memory/c1/mem_w1/U737/Y (OR2X2)             0.04       0.84 r
+  memory/Data_Memory/c1/mem_w1/U738/Y (INVX1)             0.02       0.85 f
+  memory/Data_Memory/c1/mem_w1/data_out<1> (memc_Size16_2)
+                                                          0.00       0.85 f
+  memory/Data_Memory/c1/U241/Y (AOI22X1)                  0.04       0.89 r
+  memory/Data_Memory/c1/U116/Y (BUFX2)                    0.03       0.92 r
+  memory/Data_Memory/c1/U61/Y (AND2X2)                    0.03       0.96 r
+  memory/Data_Memory/c1/U62/Y (INVX1)                     0.01       0.97 f
+  memory/Data_Memory/c1/data_out<1> (cache_cache_id2_0)
+                                                          0.00       0.97 f
+  memory/Data_Memory/U105/Y (INVX1)                       0.00       0.97 r
+  memory/Data_Memory/U65/Y (OR2X2)                        0.04       1.00 r
+  memory/Data_Memory/U166/Y (AND2X2)                      0.03       1.04 r
+  memory/Data_Memory/U168/Y (INVX1)                       0.02       1.06 f
+  memory/Data_Memory/DataOut<1> (mem_system)              0.00       1.06 f
+  memory/Mem_Data<1> (Memory)                             0.00       1.06 f
+  extra_logic/Mem_Data_Mem<1> (Extra_Logic2)              0.00       1.06 f
+  extra_logic/U104/Y (INVX1)                              0.00       1.06 r
+  extra_logic/U119/Y (AOI22X1)                            0.01       1.07 f
+  extra_logic/PC_Det_Forward_Data<1> (Extra_Logic2)       0.00       1.07 f
+  decode/PC_Det_Forward_Data<1> (Decode)                  0.00       1.07 f
+  decode/pc_logic/PC_Det_Forward_Data<1> (PC_Logic)       0.00       1.07 f
+  decode/pc_logic/U75/Y (BUFX2)                           0.04       1.11 f
+  decode/pc_logic/U71/Y (OR2X2)                           0.04       1.15 f
+  decode/pc_logic/U72/Y (INVX1)                           0.00       1.15 r
+  decode/pc_logic/U98/Y (AOI21X1)                         0.01       1.16 f
+  decode/pc_logic/adder/A<1> (CLA_0)                      0.00       1.16 f
+  decode/pc_logic/adder/claMod1/A<1> (Bit4_CLA_3)         0.00       1.16 f
+  decode/pc_logic/adder/claMod1/FA_mod1/A (CLA_FA_14)     0.00       1.16 f
+  decode/pc_logic/adder/claMod1/FA_mod1/U5/Y (BUFX2)      0.04       1.20 f
+  decode/pc_logic/adder/claMod1/FA_mod1/U7/Y (AND2X2)     0.04       1.24 f
+  decode/pc_logic/adder/claMod1/FA_mod1/G (CLA_FA_14)     0.00       1.24 f
+  decode/pc_logic/adder/claMod1/U24/Y (OR2X2)             0.04       1.27 f
+  decode/pc_logic/adder/claMod1/U6/Y (NOR3X1)             0.03       1.31 r
+  decode/pc_logic/adder/claMod1/U5/Y (INVX1)              0.03       1.33 f
+  decode/pc_logic/adder/claMod1/U21/Y (AND2X2)            0.04       1.37 f
+  decode/pc_logic/adder/claMod1/U22/Y (INVX1)             0.00       1.37 r
+  decode/pc_logic/adder/claMod1/U37/Y (AOI21X1)           0.01       1.37 f
+  decode/pc_logic/adder/claMod1/G (Bit4_CLA_3)            0.00       1.37 f
+  decode/pc_logic/adder/U16/Y (BUFX2)                     0.04       1.41 f
+  decode/pc_logic/adder/U5/Y (BUFX2)                      0.03       1.44 f
+  decode/pc_logic/adder/U28/Y (AOI21X1)                   0.01       1.46 r
+  decode/pc_logic/adder/U19/Y (BUFX2)                     0.03       1.49 r
+  decode/pc_logic/adder/U4/Y (INVX1)                      0.02       1.51 f
+  decode/pc_logic/adder/claMod2/Ci (Bit4_CLA_2)           0.00       1.51 f
+  decode/pc_logic/adder/claMod2/U25/Y (AND2X2)            0.04       1.54 f
+  decode/pc_logic/adder/claMod2/U4/Y (INVX1)              0.00       1.54 r
+  decode/pc_logic/adder/claMod2/U17/Y (AND2X2)            0.03       1.57 r
+  decode/pc_logic/adder/claMod2/U18/Y (INVX1)             0.01       1.58 f
+  decode/pc_logic/adder/claMod2/U54/Y (AND2X2)            0.04       1.62 f
+  decode/pc_logic/adder/claMod2/FA_mod3/Ci (CLA_FA_8)     0.00       1.62 f
+  decode/pc_logic/adder/claMod2/FA_mod3/U2/Y (XNOR2X1)
+                                                          0.02       1.64 f
+  decode/pc_logic/adder/claMod2/FA_mod3/S (CLA_FA_8)      0.00       1.64 f
+  decode/pc_logic/adder/claMod2/S<3> (Bit4_CLA_2)         0.00       1.64 f
+  decode/pc_logic/adder/S<7> (CLA_0)                      0.00       1.64 f
+  decode/pc_logic/PC_Ex<7> (PC_Logic)                     0.00       1.64 f
+  decode/PC_Ex<7> (Decode)                                0.00       1.64 f
+  fetch/PC_Ex<7> (Fetch)                                  0.00       1.64 f
+  fetch/program_counter/PC_Ex<7> (PC)                     0.00       1.64 f
+  fetch/program_counter/U68/Y (INVX1)                     0.00       1.65 r
+  fetch/program_counter/U55/Y (OAI21X1)                   0.01       1.66 f
+  fetch/program_counter/program_counter[7]/d (dff_772)
+                                                          0.00       1.66 f
+  fetch/program_counter/program_counter[7]/U3/Y (AND2X2)
+                                                          0.03       1.69 f
+  fetch/program_counter/program_counter[7]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.69 f
+  data arrival time                                                  1.69
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[7]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.69
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.75
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[4]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U82/Y (OR2X2)                     0.05       0.73 r
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.04       0.77 r
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.03       0.79 f
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.79 f
+  memory/Data_Memory/c1/mem_w1/U300/Y (INVX1)             0.01       0.80 r
+  memory/Data_Memory/c1/mem_w1/U301/Y (INVX1)             0.02       0.83 f
+  memory/Data_Memory/c1/mem_w1/U755/Y (OR2X2)             0.04       0.86 f
+  memory/Data_Memory/c1/mem_w1/U756/Y (INVX1)             0.00       0.86 r
+  memory/Data_Memory/c1/mem_w1/data_out<10> (memc_Size16_2)
+                                                          0.00       0.86 r
+  memory/Data_Memory/c1/U200/Y (AND2X2)                   0.03       0.90 r
+  memory/Data_Memory/c1/U111/Y (OR2X2)                    0.04       0.93 r
+  memory/Data_Memory/c1/U112/Y (INVX1)                    0.01       0.95 f
+  memory/Data_Memory/c1/U71/Y (AND2X2)                    0.03       0.98 f
+  memory/Data_Memory/c1/U72/Y (INVX1)                     0.00       0.97 r
+  memory/Data_Memory/c1/data_out<10> (cache_cache_id2_0)
+                                                          0.00       0.97 r
+  memory/Data_Memory/U96/Y (INVX1)                        0.01       0.99 f
+  memory/Data_Memory/U4/Y (OR2X2)                         0.04       1.02 f
+  memory/Data_Memory/U123/Y (AND2X2)                      0.03       1.06 f
+  memory/Data_Memory/U124/Y (INVX1)                       0.00       1.06 r
+  memory/Data_Memory/DataOut<10> (mem_system)             0.00       1.06 r
+  memory/Mem_Data<10> (Memory)                            0.00       1.06 r
+  extra_logic/Mem_Data_Mem<10> (Extra_Logic2)             0.00       1.06 r
+  extra_logic/U96/Y (INVX1)                               0.01       1.07 f
+  extra_logic/U133/Y (MUX2X1)                             0.04       1.12 r
+  extra_logic/PC_Det_Forward_Data<10> (Extra_Logic2)      0.00       1.12 r
+  decode/PC_Det_Forward_Data<10> (Decode)                 0.00       1.12 r
+  decode/pc_logic/PC_Det_Forward_Data<10> (PC_Logic)      0.00       1.12 r
+  decode/pc_logic/BL/PC_Det_Forward_Data<10> (Branch_Logic)
+                                                          0.00       1.12 r
+  decode/pc_logic/BL/U28/Y (OR2X2)                        0.05       1.16 r
+  decode/pc_logic/BL/U29/Y (INVX1)                        0.01       1.18 f
+  decode/pc_logic/BL/U56/Y (AND2X2)                       0.04       1.22 f
+  decode/pc_logic/BL/U2/Y (AND2X2)                        0.03       1.25 f
+  decode/pc_logic/BL/U11/Y (AND2X2)                       0.03       1.28 f
+  decode/pc_logic/BL/U39/Y (AND2X2)                       0.04       1.31 f
+  decode/pc_logic/BL/U15/Y (NOR3X1)                       0.02       1.33 r
+  decode/pc_logic/BL/U14/Y (INVX1)                        0.03       1.36 f
+  decode/pc_logic/BL/U68/Y (NAND3X1)                      0.03       1.39 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       1.39 r
+  decode/pc_logic/U68/Y (BUFX2)                           0.03       1.42 r
+  decode/pc_logic/U67/Y (AND2X2)                          0.03       1.46 r
+  decode/pc_logic/U7/Y (OR2X2)                            0.04       1.50 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       1.50 r
+  decode/PC_Sel (Decode)                                  0.00       1.50 r
+  fetch/PC_Sel (Fetch)                                    0.00       1.50 r
+  fetch/program_counter/PC_Sel (PC)                       0.00       1.50 r
+  fetch/program_counter/U13/Y (OR2X2)                     0.04       1.54 r
+  fetch/program_counter/U8/Y (INVX2)                      0.04       1.58 f
+  fetch/program_counter/U82/Y (AOI22X1)                   0.04       1.63 r
+  fetch/program_counter/U23/Y (BUFX2)                     0.04       1.66 r
+  fetch/program_counter/U44/Y (OAI21X1)                   0.01       1.68 f
+  fetch/program_counter/program_counter[4]/d (dff_769)
+                                                          0.00       1.68 f
+  fetch/program_counter/program_counter[4]/U4/Y (INVX1)
+                                                          0.00       1.68 r
+  fetch/program_counter/program_counter[4]/U3/Y (NOR2X1)
+                                                          0.01       1.68 f
+  fetch/program_counter/program_counter[4]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.68 f
+  data arrival time                                                  1.68
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[4]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.68
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.74
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[0]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U82/Y (OR2X2)                     0.05       0.73 r
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.04       0.77 r
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.03       0.79 f
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.79 f
+  memory/Data_Memory/c1/mem_w1/U300/Y (INVX1)             0.01       0.80 r
+  memory/Data_Memory/c1/mem_w1/U301/Y (INVX1)             0.02       0.83 f
+  memory/Data_Memory/c1/mem_w1/U755/Y (OR2X2)             0.04       0.86 f
+  memory/Data_Memory/c1/mem_w1/U756/Y (INVX1)             0.00       0.86 r
+  memory/Data_Memory/c1/mem_w1/data_out<10> (memc_Size16_2)
+                                                          0.00       0.86 r
+  memory/Data_Memory/c1/U200/Y (AND2X2)                   0.03       0.90 r
+  memory/Data_Memory/c1/U111/Y (OR2X2)                    0.04       0.93 r
+  memory/Data_Memory/c1/U112/Y (INVX1)                    0.01       0.95 f
+  memory/Data_Memory/c1/U71/Y (AND2X2)                    0.03       0.98 f
+  memory/Data_Memory/c1/U72/Y (INVX1)                     0.00       0.97 r
+  memory/Data_Memory/c1/data_out<10> (cache_cache_id2_0)
+                                                          0.00       0.97 r
+  memory/Data_Memory/U96/Y (INVX1)                        0.01       0.99 f
+  memory/Data_Memory/U4/Y (OR2X2)                         0.04       1.02 f
+  memory/Data_Memory/U123/Y (AND2X2)                      0.03       1.06 f
+  memory/Data_Memory/U124/Y (INVX1)                       0.00       1.06 r
+  memory/Data_Memory/DataOut<10> (mem_system)             0.00       1.06 r
+  memory/Mem_Data<10> (Memory)                            0.00       1.06 r
+  extra_logic/Mem_Data_Mem<10> (Extra_Logic2)             0.00       1.06 r
+  extra_logic/U96/Y (INVX1)                               0.01       1.07 f
+  extra_logic/U133/Y (MUX2X1)                             0.04       1.12 r
+  extra_logic/PC_Det_Forward_Data<10> (Extra_Logic2)      0.00       1.12 r
+  decode/PC_Det_Forward_Data<10> (Decode)                 0.00       1.12 r
+  decode/pc_logic/PC_Det_Forward_Data<10> (PC_Logic)      0.00       1.12 r
+  decode/pc_logic/BL/PC_Det_Forward_Data<10> (Branch_Logic)
+                                                          0.00       1.12 r
+  decode/pc_logic/BL/U28/Y (OR2X2)                        0.05       1.16 r
+  decode/pc_logic/BL/U29/Y (INVX1)                        0.01       1.18 f
+  decode/pc_logic/BL/U56/Y (AND2X2)                       0.04       1.22 f
+  decode/pc_logic/BL/U2/Y (AND2X2)                        0.03       1.25 f
+  decode/pc_logic/BL/U11/Y (AND2X2)                       0.03       1.28 f
+  decode/pc_logic/BL/U39/Y (AND2X2)                       0.04       1.31 f
+  decode/pc_logic/BL/U15/Y (NOR3X1)                       0.02       1.33 r
+  decode/pc_logic/BL/U14/Y (INVX1)                        0.03       1.36 f
+  decode/pc_logic/BL/U68/Y (NAND3X1)                      0.03       1.39 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       1.39 r
+  decode/pc_logic/U68/Y (BUFX2)                           0.03       1.42 r
+  decode/pc_logic/U67/Y (AND2X2)                          0.03       1.46 r
+  decode/pc_logic/U7/Y (OR2X2)                            0.04       1.50 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       1.50 r
+  decode/PC_Sel (Decode)                                  0.00       1.50 r
+  fetch/PC_Sel (Fetch)                                    0.00       1.50 r
+  fetch/program_counter/PC_Sel (PC)                       0.00       1.50 r
+  fetch/program_counter/U13/Y (OR2X2)                     0.04       1.54 r
+  fetch/program_counter/U2/Y (INVX2)                      0.03       1.57 f
+  fetch/program_counter/U35/Y (AND2X2)                    0.04       1.61 f
+  fetch/program_counter/U36/Y (INVX1)                     0.00       1.60 r
+  fetch/program_counter/U86/Y (NAND3X1)                   0.01       1.62 f
+  fetch/program_counter/program_counter[0]/d (dff_765)
+                                                          0.00       1.62 f
+  fetch/program_counter/program_counter[0]/U5/Y (BUFX2)
+                                                          0.03       1.65 f
+  fetch/program_counter/program_counter[0]/U3/Y (AND2X2)
+                                                          0.03       1.68 f
+  fetch/program_counter/program_counter[0]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.68 f
+  data arrival time                                                  1.68
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[0]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.68
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.73
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fetch/program_counter/program_counter[6]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U33/Y (OR2X2)                     0.04       0.72 r
+  memory/Data_Memory/c1/U53/Y (OR2X2)                     0.04       0.76 r
+  memory/Data_Memory/c1/U54/Y (INVX1)                     0.02       0.77 f
+  memory/Data_Memory/c1/mem_w3/write (memc_Size16_0)      0.00       0.77 f
+  memory/Data_Memory/c1/mem_w3/U1125/Y (INVX1)            0.00       0.78 r
+  memory/Data_Memory/c1/mem_w3/U2/Y (AND2X2)              0.03       0.81 r
+  memory/Data_Memory/c1/mem_w3/data_out<1> (memc_Size16_0)
+                                                          0.00       0.81 r
+  memory/Data_Memory/c1/U211/Y (AND2X2)                   0.03       0.84 r
+  memory/Data_Memory/c1/U113/Y (OR2X2)                    0.04       0.88 r
+  memory/Data_Memory/c1/U114/Y (INVX1)                    0.01       0.90 f
+  memory/Data_Memory/c1/U61/Y (AND2X2)                    0.03       0.93 f
+  memory/Data_Memory/c1/U62/Y (INVX1)                     0.00       0.92 r
+  memory/Data_Memory/c1/data_out<1> (cache_cache_id2_0)
+                                                          0.00       0.92 r
+  memory/Data_Memory/U105/Y (INVX1)                       0.01       0.94 f
+  memory/Data_Memory/U65/Y (OR2X2)                        0.04       0.98 f
+  memory/Data_Memory/U166/Y (AND2X2)                      0.04       1.01 f
+  memory/Data_Memory/U168/Y (INVX1)                       0.00       1.01 r
+  memory/Data_Memory/DataOut<1> (mem_system)              0.00       1.01 r
+  memory/Mem_Data<1> (Memory)                             0.00       1.01 r
+  extra_logic/Mem_Data_Mem<1> (Extra_Logic2)              0.00       1.01 r
+  extra_logic/U104/Y (INVX1)                              0.01       1.03 f
+  extra_logic/U119/Y (AOI22X1)                            0.03       1.05 r
+  extra_logic/PC_Det_Forward_Data<1> (Extra_Logic2)       0.00       1.05 r
+  decode/PC_Det_Forward_Data<1> (Decode)                  0.00       1.05 r
+  decode/pc_logic/PC_Det_Forward_Data<1> (PC_Logic)       0.00       1.05 r
+  decode/pc_logic/U75/Y (BUFX2)                           0.04       1.09 r
+  decode/pc_logic/U71/Y (OR2X2)                           0.04       1.13 r
+  decode/pc_logic/U72/Y (INVX1)                           0.02       1.14 f
+  decode/pc_logic/U98/Y (AOI21X1)                         0.02       1.16 r
+  decode/pc_logic/adder/A<1> (CLA_0)                      0.00       1.16 r
+  decode/pc_logic/adder/claMod1/A<1> (Bit4_CLA_3)         0.00       1.16 r
+  decode/pc_logic/adder/claMod1/FA_mod1/A (CLA_FA_14)     0.00       1.16 r
+  decode/pc_logic/adder/claMod1/FA_mod1/U5/Y (BUFX2)      0.04       1.20 r
+  decode/pc_logic/adder/claMod1/FA_mod1/U7/Y (AND2X2)     0.04       1.24 r
+  decode/pc_logic/adder/claMod1/FA_mod1/G (CLA_FA_14)     0.00       1.24 r
+  decode/pc_logic/adder/claMod1/U24/Y (OR2X2)             0.04       1.28 r
+  decode/pc_logic/adder/claMod1/U6/Y (NOR3X1)             0.02       1.30 f
+  decode/pc_logic/adder/claMod1/U5/Y (INVX1)              0.00       1.30 r
+  decode/pc_logic/adder/claMod1/U21/Y (AND2X2)            0.03       1.33 r
+  decode/pc_logic/adder/claMod1/U22/Y (INVX1)             0.02       1.35 f
+  decode/pc_logic/adder/claMod1/U37/Y (AOI21X1)           0.02       1.37 r
+  decode/pc_logic/adder/claMod1/G (Bit4_CLA_3)            0.00       1.37 r
+  decode/pc_logic/adder/U16/Y (BUFX2)                     0.04       1.40 r
+  decode/pc_logic/adder/U5/Y (BUFX2)                      0.03       1.44 r
+  decode/pc_logic/adder/U28/Y (AOI21X1)                   0.01       1.45 f
+  decode/pc_logic/adder/U19/Y (BUFX2)                     0.03       1.48 f
+  decode/pc_logic/adder/U4/Y (INVX1)                      0.00       1.48 r
+  decode/pc_logic/adder/claMod2/Ci (Bit4_CLA_2)           0.00       1.48 r
+  decode/pc_logic/adder/claMod2/U25/Y (AND2X2)            0.04       1.52 r
+  decode/pc_logic/adder/claMod2/U30/Y (INVX1)             0.02       1.54 f
+  decode/pc_logic/adder/claMod2/U55/Y (AOI21X1)           0.03       1.56 r
+  decode/pc_logic/adder/claMod2/FA_mod2/Ci (CLA_FA_9)     0.00       1.56 r
+  decode/pc_logic/adder/claMod2/FA_mod2/U1/Y (BUFX2)      0.04       1.60 r
+  decode/pc_logic/adder/claMod2/FA_mod2/U9/Y (XOR2X1)     0.03       1.63 f
+  decode/pc_logic/adder/claMod2/FA_mod2/S (CLA_FA_9)      0.00       1.63 f
+  decode/pc_logic/adder/claMod2/S<2> (Bit4_CLA_2)         0.00       1.63 f
+  decode/pc_logic/adder/S<6> (CLA_0)                      0.00       1.63 f
+  decode/pc_logic/PC_Ex<6> (PC_Logic)                     0.00       1.63 f
+  decode/PC_Ex<6> (Decode)                                0.00       1.63 f
+  fetch/PC_Ex<6> (Fetch)                                  0.00       1.63 f
+  fetch/program_counter/PC_Ex<6> (PC)                     0.00       1.63 f
+  fetch/program_counter/U49/Y (INVX1)                     0.01       1.64 r
+  fetch/program_counter/U48/Y (OAI21X1)                   0.01       1.65 f
+  fetch/program_counter/program_counter[6]/d (dff_771)
+                                                          0.00       1.65 f
+  fetch/program_counter/program_counter[6]/U3/Y (AND2X2)
+                                                          0.03       1.68 f
+  fetch/program_counter/program_counter[6]/state_reg/D (DFFPOSX1)
+                                                          0.00       1.68 f
+  data arrival time                                                  1.68
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  fetch/program_counter/program_counter[6]/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.68
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.73
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: if_de_blade/PC2[4]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U82/Y (OR2X2)                     0.05       0.73 r
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.04       0.77 r
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.03       0.79 f
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.79 f
+  memory/Data_Memory/c1/mem_w1/U300/Y (INVX1)             0.01       0.80 r
+  memory/Data_Memory/c1/mem_w1/U301/Y (INVX1)             0.02       0.83 f
+  memory/Data_Memory/c1/mem_w1/U755/Y (OR2X2)             0.04       0.86 f
+  memory/Data_Memory/c1/mem_w1/U756/Y (INVX1)             0.00       0.86 r
+  memory/Data_Memory/c1/mem_w1/data_out<10> (memc_Size16_2)
+                                                          0.00       0.86 r
+  memory/Data_Memory/c1/U200/Y (AND2X2)                   0.03       0.90 r
+  memory/Data_Memory/c1/U111/Y (OR2X2)                    0.04       0.93 r
+  memory/Data_Memory/c1/U112/Y (INVX1)                    0.01       0.95 f
+  memory/Data_Memory/c1/U71/Y (AND2X2)                    0.03       0.98 f
+  memory/Data_Memory/c1/U72/Y (INVX1)                     0.00       0.97 r
+  memory/Data_Memory/c1/data_out<10> (cache_cache_id2_0)
+                                                          0.00       0.97 r
+  memory/Data_Memory/U96/Y (INVX1)                        0.01       0.99 f
+  memory/Data_Memory/U4/Y (OR2X2)                         0.04       1.02 f
+  memory/Data_Memory/U123/Y (AND2X2)                      0.03       1.06 f
+  memory/Data_Memory/U124/Y (INVX1)                       0.00       1.06 r
+  memory/Data_Memory/DataOut<10> (mem_system)             0.00       1.06 r
+  memory/Mem_Data<10> (Memory)                            0.00       1.06 r
+  extra_logic/Mem_Data_Mem<10> (Extra_Logic2)             0.00       1.06 r
+  extra_logic/U96/Y (INVX1)                               0.01       1.07 f
+  extra_logic/U133/Y (MUX2X1)                             0.04       1.12 r
+  extra_logic/PC_Det_Forward_Data<10> (Extra_Logic2)      0.00       1.12 r
+  decode/PC_Det_Forward_Data<10> (Decode)                 0.00       1.12 r
+  decode/pc_logic/PC_Det_Forward_Data<10> (PC_Logic)      0.00       1.12 r
+  decode/pc_logic/BL/PC_Det_Forward_Data<10> (Branch_Logic)
+                                                          0.00       1.12 r
+  decode/pc_logic/BL/U28/Y (OR2X2)                        0.05       1.16 r
+  decode/pc_logic/BL/U29/Y (INVX1)                        0.01       1.18 f
+  decode/pc_logic/BL/U56/Y (AND2X2)                       0.04       1.22 f
+  decode/pc_logic/BL/U2/Y (AND2X2)                        0.03       1.25 f
+  decode/pc_logic/BL/U11/Y (AND2X2)                       0.03       1.28 f
+  decode/pc_logic/BL/U39/Y (AND2X2)                       0.04       1.31 f
+  decode/pc_logic/BL/U15/Y (NOR3X1)                       0.02       1.33 r
+  decode/pc_logic/BL/U14/Y (INVX1)                        0.03       1.36 f
+  decode/pc_logic/BL/U68/Y (NAND3X1)                      0.03       1.39 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       1.39 r
+  decode/pc_logic/U68/Y (BUFX2)                           0.03       1.42 r
+  decode/pc_logic/U67/Y (AND2X2)                          0.03       1.46 r
+  decode/pc_logic/U7/Y (OR2X2)                            0.04       1.50 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       1.50 r
+  decode/PC_Sel (Decode)                                  0.00       1.50 r
+  extra_logic/PC_Sel (Extra_Logic2)                       0.00       1.50 r
+  extra_logic/U98/Y (INVX1)                               0.02       1.52 f
+  extra_logic/U112/Y (AOI21X1)                            0.03       1.54 r
+  extra_logic/Flush_IFDE (Extra_Logic2)                   0.00       1.54 r
+  if_de_blade/Flush (Fetch_Decode_Blade)                  0.00       1.54 r
+  if_de_blade/U16/Y (BUFX2)                               0.04       1.58 r
+  if_de_blade/U10/Y (INVX1)                               0.02       1.61 f
+  if_de_blade/U11/Y (INVX1)                               0.02       1.62 r
+  if_de_blade/PC2[4]/Flush (dff_pipe_171)                 0.00       1.62 r
+  if_de_blade/PC2[4]/U7/Y (INVX1)                         0.01       1.64 f
+  if_de_blade/PC2[4]/U1/Y (AND2X2)                        0.03       1.67 f
+  if_de_blade/PC2[4]/U6/Y (INVX1)                         0.00       1.67 r
+  if_de_blade/PC2[4]/pipe/rst (dff_737)                   0.00       1.67 r
+  if_de_blade/PC2[4]/pipe/U4/Y (NOR2X1)                   0.01       1.68 f
+  if_de_blade/PC2[4]/pipe/state_reg/D (DFFPOSX1)          0.00       1.68 f
+  data arrival time                                                  1.68
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  if_de_blade/PC2[4]/pipe/state_reg/CLK (DFFPOSX1)        0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.68
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.73
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: if_de_blade/PC2[15]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U82/Y (OR2X2)                     0.05       0.73 r
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.04       0.77 r
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.03       0.79 f
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.79 f
+  memory/Data_Memory/c1/mem_w1/U300/Y (INVX1)             0.01       0.80 r
+  memory/Data_Memory/c1/mem_w1/U301/Y (INVX1)             0.02       0.83 f
+  memory/Data_Memory/c1/mem_w1/U755/Y (OR2X2)             0.04       0.86 f
+  memory/Data_Memory/c1/mem_w1/U756/Y (INVX1)             0.00       0.86 r
+  memory/Data_Memory/c1/mem_w1/data_out<10> (memc_Size16_2)
+                                                          0.00       0.86 r
+  memory/Data_Memory/c1/U200/Y (AND2X2)                   0.03       0.90 r
+  memory/Data_Memory/c1/U111/Y (OR2X2)                    0.04       0.93 r
+  memory/Data_Memory/c1/U112/Y (INVX1)                    0.01       0.95 f
+  memory/Data_Memory/c1/U71/Y (AND2X2)                    0.03       0.98 f
+  memory/Data_Memory/c1/U72/Y (INVX1)                     0.00       0.97 r
+  memory/Data_Memory/c1/data_out<10> (cache_cache_id2_0)
+                                                          0.00       0.97 r
+  memory/Data_Memory/U96/Y (INVX1)                        0.01       0.99 f
+  memory/Data_Memory/U4/Y (OR2X2)                         0.04       1.02 f
+  memory/Data_Memory/U123/Y (AND2X2)                      0.03       1.06 f
+  memory/Data_Memory/U124/Y (INVX1)                       0.00       1.06 r
+  memory/Data_Memory/DataOut<10> (mem_system)             0.00       1.06 r
+  memory/Mem_Data<10> (Memory)                            0.00       1.06 r
+  extra_logic/Mem_Data_Mem<10> (Extra_Logic2)             0.00       1.06 r
+  extra_logic/U96/Y (INVX1)                               0.01       1.07 f
+  extra_logic/U133/Y (MUX2X1)                             0.04       1.12 r
+  extra_logic/PC_Det_Forward_Data<10> (Extra_Logic2)      0.00       1.12 r
+  decode/PC_Det_Forward_Data<10> (Decode)                 0.00       1.12 r
+  decode/pc_logic/PC_Det_Forward_Data<10> (PC_Logic)      0.00       1.12 r
+  decode/pc_logic/BL/PC_Det_Forward_Data<10> (Branch_Logic)
+                                                          0.00       1.12 r
+  decode/pc_logic/BL/U28/Y (OR2X2)                        0.05       1.16 r
+  decode/pc_logic/BL/U29/Y (INVX1)                        0.01       1.18 f
+  decode/pc_logic/BL/U56/Y (AND2X2)                       0.04       1.22 f
+  decode/pc_logic/BL/U2/Y (AND2X2)                        0.03       1.25 f
+  decode/pc_logic/BL/U11/Y (AND2X2)                       0.03       1.28 f
+  decode/pc_logic/BL/U39/Y (AND2X2)                       0.04       1.31 f
+  decode/pc_logic/BL/U15/Y (NOR3X1)                       0.02       1.33 r
+  decode/pc_logic/BL/U14/Y (INVX1)                        0.03       1.36 f
+  decode/pc_logic/BL/U68/Y (NAND3X1)                      0.03       1.39 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       1.39 r
+  decode/pc_logic/U68/Y (BUFX2)                           0.03       1.42 r
+  decode/pc_logic/U67/Y (AND2X2)                          0.03       1.46 r
+  decode/pc_logic/U7/Y (OR2X2)                            0.04       1.50 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       1.50 r
+  decode/PC_Sel (Decode)                                  0.00       1.50 r
+  extra_logic/PC_Sel (Extra_Logic2)                       0.00       1.50 r
+  extra_logic/U98/Y (INVX1)                               0.02       1.52 f
+  extra_logic/U112/Y (AOI21X1)                            0.03       1.54 r
+  extra_logic/Flush_IFDE (Extra_Logic2)                   0.00       1.54 r
+  if_de_blade/Flush (Fetch_Decode_Blade)                  0.00       1.54 r
+  if_de_blade/U16/Y (BUFX2)                               0.04       1.58 r
+  if_de_blade/U10/Y (INVX1)                               0.02       1.61 f
+  if_de_blade/U3/Y (INVX1)                                0.02       1.62 r
+  if_de_blade/PC2[15]/Flush (dff_pipe_182)                0.00       1.62 r
+  if_de_blade/PC2[15]/U7/Y (INVX1)                        0.01       1.64 f
+  if_de_blade/PC2[15]/U1/Y (AND2X2)                       0.03       1.67 f
+  if_de_blade/PC2[15]/U5/Y (INVX1)                        0.00       1.67 r
+  if_de_blade/PC2[15]/pipe/rst (dff_748)                  0.00       1.67 r
+  if_de_blade/PC2[15]/pipe/U4/Y (NOR2X1)                  0.01       1.68 f
+  if_de_blade/PC2[15]/pipe/state_reg/D (DFFPOSX1)         0.00       1.68 f
+  data arrival time                                                  1.68
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  if_de_blade/PC2[15]/pipe/state_reg/CLK (DFFPOSX1)       0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.68
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.73
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: if_de_blade/Instruc_H[2]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U82/Y (OR2X2)                     0.05       0.73 r
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.04       0.77 r
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.03       0.79 f
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.79 f
+  memory/Data_Memory/c1/mem_w1/U300/Y (INVX1)             0.01       0.80 r
+  memory/Data_Memory/c1/mem_w1/U301/Y (INVX1)             0.02       0.83 f
+  memory/Data_Memory/c1/mem_w1/U755/Y (OR2X2)             0.04       0.86 f
+  memory/Data_Memory/c1/mem_w1/U756/Y (INVX1)             0.00       0.86 r
+  memory/Data_Memory/c1/mem_w1/data_out<10> (memc_Size16_2)
+                                                          0.00       0.86 r
+  memory/Data_Memory/c1/U200/Y (AND2X2)                   0.03       0.90 r
+  memory/Data_Memory/c1/U111/Y (OR2X2)                    0.04       0.93 r
+  memory/Data_Memory/c1/U112/Y (INVX1)                    0.01       0.95 f
+  memory/Data_Memory/c1/U71/Y (AND2X2)                    0.03       0.98 f
+  memory/Data_Memory/c1/U72/Y (INVX1)                     0.00       0.97 r
+  memory/Data_Memory/c1/data_out<10> (cache_cache_id2_0)
+                                                          0.00       0.97 r
+  memory/Data_Memory/U96/Y (INVX1)                        0.01       0.99 f
+  memory/Data_Memory/U4/Y (OR2X2)                         0.04       1.02 f
+  memory/Data_Memory/U123/Y (AND2X2)                      0.03       1.06 f
+  memory/Data_Memory/U124/Y (INVX1)                       0.00       1.06 r
+  memory/Data_Memory/DataOut<10> (mem_system)             0.00       1.06 r
+  memory/Mem_Data<10> (Memory)                            0.00       1.06 r
+  extra_logic/Mem_Data_Mem<10> (Extra_Logic2)             0.00       1.06 r
+  extra_logic/U96/Y (INVX1)                               0.01       1.07 f
+  extra_logic/U133/Y (MUX2X1)                             0.04       1.12 r
+  extra_logic/PC_Det_Forward_Data<10> (Extra_Logic2)      0.00       1.12 r
+  decode/PC_Det_Forward_Data<10> (Decode)                 0.00       1.12 r
+  decode/pc_logic/PC_Det_Forward_Data<10> (PC_Logic)      0.00       1.12 r
+  decode/pc_logic/BL/PC_Det_Forward_Data<10> (Branch_Logic)
+                                                          0.00       1.12 r
+  decode/pc_logic/BL/U28/Y (OR2X2)                        0.05       1.16 r
+  decode/pc_logic/BL/U29/Y (INVX1)                        0.01       1.18 f
+  decode/pc_logic/BL/U56/Y (AND2X2)                       0.04       1.22 f
+  decode/pc_logic/BL/U2/Y (AND2X2)                        0.03       1.25 f
+  decode/pc_logic/BL/U11/Y (AND2X2)                       0.03       1.28 f
+  decode/pc_logic/BL/U39/Y (AND2X2)                       0.04       1.31 f
+  decode/pc_logic/BL/U15/Y (NOR3X1)                       0.02       1.33 r
+  decode/pc_logic/BL/U14/Y (INVX1)                        0.03       1.36 f
+  decode/pc_logic/BL/U68/Y (NAND3X1)                      0.03       1.39 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       1.39 r
+  decode/pc_logic/U68/Y (BUFX2)                           0.03       1.42 r
+  decode/pc_logic/U67/Y (AND2X2)                          0.03       1.46 r
+  decode/pc_logic/U7/Y (OR2X2)                            0.04       1.50 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       1.50 r
+  decode/PC_Sel (Decode)                                  0.00       1.50 r
+  extra_logic/PC_Sel (Extra_Logic2)                       0.00       1.50 r
+  extra_logic/U98/Y (INVX1)                               0.02       1.52 f
+  extra_logic/U112/Y (AOI21X1)                            0.03       1.54 r
+  extra_logic/Flush_IFDE (Extra_Logic2)                   0.00       1.54 r
+  if_de_blade/Flush (Fetch_Decode_Blade)                  0.00       1.54 r
+  if_de_blade/U16/Y (BUFX2)                               0.04       1.58 r
+  if_de_blade/U10/Y (INVX1)                               0.02       1.61 f
+  if_de_blade/U13/Y (INVX1)                               0.02       1.62 r
+  if_de_blade/Instruc_H[2]/Flush (dff_pipe_196)           0.00       1.62 r
+  if_de_blade/Instruc_H[2]/U6/Y (INVX1)                   0.01       1.64 f
+  if_de_blade/Instruc_H[2]/U1/Y (AND2X2)                  0.03       1.67 f
+  if_de_blade/Instruc_H[2]/U4/Y (INVX1)                   0.00       1.67 r
+  if_de_blade/Instruc_H[2]/pipe/rst (dff_762)             0.00       1.67 r
+  if_de_blade/Instruc_H[2]/pipe/U4/Y (NOR2X1)             0.01       1.68 f
+  if_de_blade/Instruc_H[2]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.68 f
+  data arrival time                                                  1.68
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  if_de_blade/Instruc_H[2]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.68
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.73
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: if_de_blade/Instruc_H[3]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U82/Y (OR2X2)                     0.05       0.73 r
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.04       0.77 r
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.03       0.79 f
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.79 f
+  memory/Data_Memory/c1/mem_w1/U300/Y (INVX1)             0.01       0.80 r
+  memory/Data_Memory/c1/mem_w1/U301/Y (INVX1)             0.02       0.83 f
+  memory/Data_Memory/c1/mem_w1/U755/Y (OR2X2)             0.04       0.86 f
+  memory/Data_Memory/c1/mem_w1/U756/Y (INVX1)             0.00       0.86 r
+  memory/Data_Memory/c1/mem_w1/data_out<10> (memc_Size16_2)
+                                                          0.00       0.86 r
+  memory/Data_Memory/c1/U200/Y (AND2X2)                   0.03       0.90 r
+  memory/Data_Memory/c1/U111/Y (OR2X2)                    0.04       0.93 r
+  memory/Data_Memory/c1/U112/Y (INVX1)                    0.01       0.95 f
+  memory/Data_Memory/c1/U71/Y (AND2X2)                    0.03       0.98 f
+  memory/Data_Memory/c1/U72/Y (INVX1)                     0.00       0.97 r
+  memory/Data_Memory/c1/data_out<10> (cache_cache_id2_0)
+                                                          0.00       0.97 r
+  memory/Data_Memory/U96/Y (INVX1)                        0.01       0.99 f
+  memory/Data_Memory/U4/Y (OR2X2)                         0.04       1.02 f
+  memory/Data_Memory/U123/Y (AND2X2)                      0.03       1.06 f
+  memory/Data_Memory/U124/Y (INVX1)                       0.00       1.06 r
+  memory/Data_Memory/DataOut<10> (mem_system)             0.00       1.06 r
+  memory/Mem_Data<10> (Memory)                            0.00       1.06 r
+  extra_logic/Mem_Data_Mem<10> (Extra_Logic2)             0.00       1.06 r
+  extra_logic/U96/Y (INVX1)                               0.01       1.07 f
+  extra_logic/U133/Y (MUX2X1)                             0.04       1.12 r
+  extra_logic/PC_Det_Forward_Data<10> (Extra_Logic2)      0.00       1.12 r
+  decode/PC_Det_Forward_Data<10> (Decode)                 0.00       1.12 r
+  decode/pc_logic/PC_Det_Forward_Data<10> (PC_Logic)      0.00       1.12 r
+  decode/pc_logic/BL/PC_Det_Forward_Data<10> (Branch_Logic)
+                                                          0.00       1.12 r
+  decode/pc_logic/BL/U28/Y (OR2X2)                        0.05       1.16 r
+  decode/pc_logic/BL/U29/Y (INVX1)                        0.01       1.18 f
+  decode/pc_logic/BL/U56/Y (AND2X2)                       0.04       1.22 f
+  decode/pc_logic/BL/U2/Y (AND2X2)                        0.03       1.25 f
+  decode/pc_logic/BL/U11/Y (AND2X2)                       0.03       1.28 f
+  decode/pc_logic/BL/U39/Y (AND2X2)                       0.04       1.31 f
+  decode/pc_logic/BL/U15/Y (NOR3X1)                       0.02       1.33 r
+  decode/pc_logic/BL/U14/Y (INVX1)                        0.03       1.36 f
+  decode/pc_logic/BL/U68/Y (NAND3X1)                      0.03       1.39 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       1.39 r
+  decode/pc_logic/U68/Y (BUFX2)                           0.03       1.42 r
+  decode/pc_logic/U67/Y (AND2X2)                          0.03       1.46 r
+  decode/pc_logic/U7/Y (OR2X2)                            0.04       1.50 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       1.50 r
+  decode/PC_Sel (Decode)                                  0.00       1.50 r
+  extra_logic/PC_Sel (Extra_Logic2)                       0.00       1.50 r
+  extra_logic/U98/Y (INVX1)                               0.02       1.52 f
+  extra_logic/U112/Y (AOI21X1)                            0.03       1.54 r
+  extra_logic/Flush_IFDE (Extra_Logic2)                   0.00       1.54 r
+  if_de_blade/Flush (Fetch_Decode_Blade)                  0.00       1.54 r
+  if_de_blade/U16/Y (BUFX2)                               0.04       1.58 r
+  if_de_blade/U10/Y (INVX1)                               0.02       1.61 f
+  if_de_blade/U11/Y (INVX1)                               0.02       1.62 r
+  if_de_blade/Instruc_H[3]/Flush (dff_pipe_197)           0.00       1.62 r
+  if_de_blade/Instruc_H[3]/U6/Y (INVX1)                   0.01       1.64 f
+  if_de_blade/Instruc_H[3]/U1/Y (AND2X2)                  0.03       1.67 f
+  if_de_blade/Instruc_H[3]/U4/Y (INVX1)                   0.00       1.67 r
+  if_de_blade/Instruc_H[3]/pipe/rst (dff_763)             0.00       1.67 r
+  if_de_blade/Instruc_H[3]/pipe/U4/Y (NOR2X1)             0.01       1.68 f
+  if_de_blade/Instruc_H[3]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.68 f
+  data arrival time                                                  1.68
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  if_de_blade/Instruc_H[3]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.68
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.73
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: if_de_blade/Instruc_L[0]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U82/Y (OR2X2)                     0.05       0.73 r
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.04       0.77 r
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.03       0.79 f
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.79 f
+  memory/Data_Memory/c1/mem_w1/U300/Y (INVX1)             0.01       0.80 r
+  memory/Data_Memory/c1/mem_w1/U301/Y (INVX1)             0.02       0.83 f
+  memory/Data_Memory/c1/mem_w1/U755/Y (OR2X2)             0.04       0.86 f
+  memory/Data_Memory/c1/mem_w1/U756/Y (INVX1)             0.00       0.86 r
+  memory/Data_Memory/c1/mem_w1/data_out<10> (memc_Size16_2)
+                                                          0.00       0.86 r
+  memory/Data_Memory/c1/U200/Y (AND2X2)                   0.03       0.90 r
+  memory/Data_Memory/c1/U111/Y (OR2X2)                    0.04       0.93 r
+  memory/Data_Memory/c1/U112/Y (INVX1)                    0.01       0.95 f
+  memory/Data_Memory/c1/U71/Y (AND2X2)                    0.03       0.98 f
+  memory/Data_Memory/c1/U72/Y (INVX1)                     0.00       0.97 r
+  memory/Data_Memory/c1/data_out<10> (cache_cache_id2_0)
+                                                          0.00       0.97 r
+  memory/Data_Memory/U96/Y (INVX1)                        0.01       0.99 f
+  memory/Data_Memory/U4/Y (OR2X2)                         0.04       1.02 f
+  memory/Data_Memory/U123/Y (AND2X2)                      0.03       1.06 f
+  memory/Data_Memory/U124/Y (INVX1)                       0.00       1.06 r
+  memory/Data_Memory/DataOut<10> (mem_system)             0.00       1.06 r
+  memory/Mem_Data<10> (Memory)                            0.00       1.06 r
+  extra_logic/Mem_Data_Mem<10> (Extra_Logic2)             0.00       1.06 r
+  extra_logic/U96/Y (INVX1)                               0.01       1.07 f
+  extra_logic/U133/Y (MUX2X1)                             0.04       1.12 r
+  extra_logic/PC_Det_Forward_Data<10> (Extra_Logic2)      0.00       1.12 r
+  decode/PC_Det_Forward_Data<10> (Decode)                 0.00       1.12 r
+  decode/pc_logic/PC_Det_Forward_Data<10> (PC_Logic)      0.00       1.12 r
+  decode/pc_logic/BL/PC_Det_Forward_Data<10> (Branch_Logic)
+                                                          0.00       1.12 r
+  decode/pc_logic/BL/U28/Y (OR2X2)                        0.05       1.16 r
+  decode/pc_logic/BL/U29/Y (INVX1)                        0.01       1.18 f
+  decode/pc_logic/BL/U56/Y (AND2X2)                       0.04       1.22 f
+  decode/pc_logic/BL/U2/Y (AND2X2)                        0.03       1.25 f
+  decode/pc_logic/BL/U11/Y (AND2X2)                       0.03       1.28 f
+  decode/pc_logic/BL/U39/Y (AND2X2)                       0.04       1.31 f
+  decode/pc_logic/BL/U15/Y (NOR3X1)                       0.02       1.33 r
+  decode/pc_logic/BL/U14/Y (INVX1)                        0.03       1.36 f
+  decode/pc_logic/BL/U68/Y (NAND3X1)                      0.03       1.39 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       1.39 r
+  decode/pc_logic/U68/Y (BUFX2)                           0.03       1.42 r
+  decode/pc_logic/U67/Y (AND2X2)                          0.03       1.46 r
+  decode/pc_logic/U7/Y (OR2X2)                            0.04       1.50 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       1.50 r
+  decode/PC_Sel (Decode)                                  0.00       1.50 r
+  extra_logic/PC_Sel (Extra_Logic2)                       0.00       1.50 r
+  extra_logic/U98/Y (INVX1)                               0.02       1.52 f
+  extra_logic/U112/Y (AOI21X1)                            0.03       1.54 r
+  extra_logic/Flush_IFDE (Extra_Logic2)                   0.00       1.54 r
+  if_de_blade/Flush (Fetch_Decode_Blade)                  0.00       1.54 r
+  if_de_blade/U16/Y (BUFX2)                               0.04       1.58 r
+  if_de_blade/U10/Y (INVX1)                               0.02       1.61 f
+  if_de_blade/U13/Y (INVX1)                               0.02       1.62 r
+  if_de_blade/Instruc_L[0]/Flush (dff_pipe_183)           0.00       1.62 r
+  if_de_blade/Instruc_L[0]/U6/Y (INVX1)                   0.01       1.64 f
+  if_de_blade/Instruc_L[0]/U1/Y (AND2X2)                  0.03       1.67 f
+  if_de_blade/Instruc_L[0]/U4/Y (INVX1)                   0.00       1.67 r
+  if_de_blade/Instruc_L[0]/pipe/rst (dff_749)             0.00       1.67 r
+  if_de_blade/Instruc_L[0]/pipe/U4/Y (NOR2X1)             0.01       1.68 f
+  if_de_blade/Instruc_L[0]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.68 f
+  data arrival time                                                  1.68
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  if_de_blade/Instruc_L[0]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.68
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.73
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: if_de_blade/Instruc_L[4]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U82/Y (OR2X2)                     0.05       0.73 r
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.04       0.77 r
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.03       0.79 f
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.79 f
+  memory/Data_Memory/c1/mem_w1/U300/Y (INVX1)             0.01       0.80 r
+  memory/Data_Memory/c1/mem_w1/U301/Y (INVX1)             0.02       0.83 f
+  memory/Data_Memory/c1/mem_w1/U755/Y (OR2X2)             0.04       0.86 f
+  memory/Data_Memory/c1/mem_w1/U756/Y (INVX1)             0.00       0.86 r
+  memory/Data_Memory/c1/mem_w1/data_out<10> (memc_Size16_2)
+                                                          0.00       0.86 r
+  memory/Data_Memory/c1/U200/Y (AND2X2)                   0.03       0.90 r
+  memory/Data_Memory/c1/U111/Y (OR2X2)                    0.04       0.93 r
+  memory/Data_Memory/c1/U112/Y (INVX1)                    0.01       0.95 f
+  memory/Data_Memory/c1/U71/Y (AND2X2)                    0.03       0.98 f
+  memory/Data_Memory/c1/U72/Y (INVX1)                     0.00       0.97 r
+  memory/Data_Memory/c1/data_out<10> (cache_cache_id2_0)
+                                                          0.00       0.97 r
+  memory/Data_Memory/U96/Y (INVX1)                        0.01       0.99 f
+  memory/Data_Memory/U4/Y (OR2X2)                         0.04       1.02 f
+  memory/Data_Memory/U123/Y (AND2X2)                      0.03       1.06 f
+  memory/Data_Memory/U124/Y (INVX1)                       0.00       1.06 r
+  memory/Data_Memory/DataOut<10> (mem_system)             0.00       1.06 r
+  memory/Mem_Data<10> (Memory)                            0.00       1.06 r
+  extra_logic/Mem_Data_Mem<10> (Extra_Logic2)             0.00       1.06 r
+  extra_logic/U96/Y (INVX1)                               0.01       1.07 f
+  extra_logic/U133/Y (MUX2X1)                             0.04       1.12 r
+  extra_logic/PC_Det_Forward_Data<10> (Extra_Logic2)      0.00       1.12 r
+  decode/PC_Det_Forward_Data<10> (Decode)                 0.00       1.12 r
+  decode/pc_logic/PC_Det_Forward_Data<10> (PC_Logic)      0.00       1.12 r
+  decode/pc_logic/BL/PC_Det_Forward_Data<10> (Branch_Logic)
+                                                          0.00       1.12 r
+  decode/pc_logic/BL/U28/Y (OR2X2)                        0.05       1.16 r
+  decode/pc_logic/BL/U29/Y (INVX1)                        0.01       1.18 f
+  decode/pc_logic/BL/U56/Y (AND2X2)                       0.04       1.22 f
+  decode/pc_logic/BL/U2/Y (AND2X2)                        0.03       1.25 f
+  decode/pc_logic/BL/U11/Y (AND2X2)                       0.03       1.28 f
+  decode/pc_logic/BL/U39/Y (AND2X2)                       0.04       1.31 f
+  decode/pc_logic/BL/U15/Y (NOR3X1)                       0.02       1.33 r
+  decode/pc_logic/BL/U14/Y (INVX1)                        0.03       1.36 f
+  decode/pc_logic/BL/U68/Y (NAND3X1)                      0.03       1.39 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       1.39 r
+  decode/pc_logic/U68/Y (BUFX2)                           0.03       1.42 r
+  decode/pc_logic/U67/Y (AND2X2)                          0.03       1.46 r
+  decode/pc_logic/U7/Y (OR2X2)                            0.04       1.50 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       1.50 r
+  decode/PC_Sel (Decode)                                  0.00       1.50 r
+  extra_logic/PC_Sel (Extra_Logic2)                       0.00       1.50 r
+  extra_logic/U98/Y (INVX1)                               0.02       1.52 f
+  extra_logic/U112/Y (AOI21X1)                            0.03       1.54 r
+  extra_logic/Flush_IFDE (Extra_Logic2)                   0.00       1.54 r
+  if_de_blade/Flush (Fetch_Decode_Blade)                  0.00       1.54 r
+  if_de_blade/U16/Y (BUFX2)                               0.04       1.58 r
+  if_de_blade/U10/Y (INVX1)                               0.02       1.61 f
+  if_de_blade/U11/Y (INVX1)                               0.02       1.62 r
+  if_de_blade/Instruc_L[4]/Flush (dff_pipe_187)           0.00       1.62 r
+  if_de_blade/Instruc_L[4]/U6/Y (INVX1)                   0.01       1.64 f
+  if_de_blade/Instruc_L[4]/U1/Y (AND2X2)                  0.03       1.67 f
+  if_de_blade/Instruc_L[4]/U4/Y (INVX1)                   0.00       1.67 r
+  if_de_blade/Instruc_L[4]/pipe/rst (dff_753)             0.00       1.67 r
+  if_de_blade/Instruc_L[4]/pipe/U4/Y (NOR2X1)             0.01       1.68 f
+  if_de_blade/Instruc_L[4]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.68 f
+  data arrival time                                                  1.68
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  if_de_blade/Instruc_L[4]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.68
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.73
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: if_de_blade/Instruc_L[6]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U82/Y (OR2X2)                     0.05       0.73 r
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.04       0.77 r
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.03       0.79 f
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.79 f
+  memory/Data_Memory/c1/mem_w1/U300/Y (INVX1)             0.01       0.80 r
+  memory/Data_Memory/c1/mem_w1/U301/Y (INVX1)             0.02       0.83 f
+  memory/Data_Memory/c1/mem_w1/U755/Y (OR2X2)             0.04       0.86 f
+  memory/Data_Memory/c1/mem_w1/U756/Y (INVX1)             0.00       0.86 r
+  memory/Data_Memory/c1/mem_w1/data_out<10> (memc_Size16_2)
+                                                          0.00       0.86 r
+  memory/Data_Memory/c1/U200/Y (AND2X2)                   0.03       0.90 r
+  memory/Data_Memory/c1/U111/Y (OR2X2)                    0.04       0.93 r
+  memory/Data_Memory/c1/U112/Y (INVX1)                    0.01       0.95 f
+  memory/Data_Memory/c1/U71/Y (AND2X2)                    0.03       0.98 f
+  memory/Data_Memory/c1/U72/Y (INVX1)                     0.00       0.97 r
+  memory/Data_Memory/c1/data_out<10> (cache_cache_id2_0)
+                                                          0.00       0.97 r
+  memory/Data_Memory/U96/Y (INVX1)                        0.01       0.99 f
+  memory/Data_Memory/U4/Y (OR2X2)                         0.04       1.02 f
+  memory/Data_Memory/U123/Y (AND2X2)                      0.03       1.06 f
+  memory/Data_Memory/U124/Y (INVX1)                       0.00       1.06 r
+  memory/Data_Memory/DataOut<10> (mem_system)             0.00       1.06 r
+  memory/Mem_Data<10> (Memory)                            0.00       1.06 r
+  extra_logic/Mem_Data_Mem<10> (Extra_Logic2)             0.00       1.06 r
+  extra_logic/U96/Y (INVX1)                               0.01       1.07 f
+  extra_logic/U133/Y (MUX2X1)                             0.04       1.12 r
+  extra_logic/PC_Det_Forward_Data<10> (Extra_Logic2)      0.00       1.12 r
+  decode/PC_Det_Forward_Data<10> (Decode)                 0.00       1.12 r
+  decode/pc_logic/PC_Det_Forward_Data<10> (PC_Logic)      0.00       1.12 r
+  decode/pc_logic/BL/PC_Det_Forward_Data<10> (Branch_Logic)
+                                                          0.00       1.12 r
+  decode/pc_logic/BL/U28/Y (OR2X2)                        0.05       1.16 r
+  decode/pc_logic/BL/U29/Y (INVX1)                        0.01       1.18 f
+  decode/pc_logic/BL/U56/Y (AND2X2)                       0.04       1.22 f
+  decode/pc_logic/BL/U2/Y (AND2X2)                        0.03       1.25 f
+  decode/pc_logic/BL/U11/Y (AND2X2)                       0.03       1.28 f
+  decode/pc_logic/BL/U39/Y (AND2X2)                       0.04       1.31 f
+  decode/pc_logic/BL/U15/Y (NOR3X1)                       0.02       1.33 r
+  decode/pc_logic/BL/U14/Y (INVX1)                        0.03       1.36 f
+  decode/pc_logic/BL/U68/Y (NAND3X1)                      0.03       1.39 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       1.39 r
+  decode/pc_logic/U68/Y (BUFX2)                           0.03       1.42 r
+  decode/pc_logic/U67/Y (AND2X2)                          0.03       1.46 r
+  decode/pc_logic/U7/Y (OR2X2)                            0.04       1.50 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       1.50 r
+  decode/PC_Sel (Decode)                                  0.00       1.50 r
+  extra_logic/PC_Sel (Extra_Logic2)                       0.00       1.50 r
+  extra_logic/U98/Y (INVX1)                               0.02       1.52 f
+  extra_logic/U112/Y (AOI21X1)                            0.03       1.54 r
+  extra_logic/Flush_IFDE (Extra_Logic2)                   0.00       1.54 r
+  if_de_blade/Flush (Fetch_Decode_Blade)                  0.00       1.54 r
+  if_de_blade/U16/Y (BUFX2)                               0.04       1.58 r
+  if_de_blade/U10/Y (INVX1)                               0.02       1.61 f
+  if_de_blade/U13/Y (INVX1)                               0.02       1.62 r
+  if_de_blade/Instruc_L[6]/Flush (dff_pipe_189)           0.00       1.62 r
+  if_de_blade/Instruc_L[6]/U6/Y (INVX1)                   0.01       1.64 f
+  if_de_blade/Instruc_L[6]/U1/Y (AND2X2)                  0.03       1.67 f
+  if_de_blade/Instruc_L[6]/U4/Y (INVX1)                   0.00       1.67 r
+  if_de_blade/Instruc_L[6]/pipe/rst (dff_755)             0.00       1.67 r
+  if_de_blade/Instruc_L[6]/pipe/U4/Y (NOR2X1)             0.01       1.68 f
+  if_de_blade/Instruc_L[6]/pipe/state_reg/D (DFFPOSX1)
+                                                          0.00       1.68 f
+  data arrival time                                                  1.68
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  if_de_blade/Instruc_L[6]/pipe/state_reg/CLK (DFFPOSX1)
+                                                          0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.68
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.73
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: if_de_blade/PC2[9]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U82/Y (OR2X2)                     0.05       0.73 r
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.04       0.77 r
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.03       0.79 f
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.79 f
+  memory/Data_Memory/c1/mem_w1/U300/Y (INVX1)             0.01       0.80 r
+  memory/Data_Memory/c1/mem_w1/U301/Y (INVX1)             0.02       0.83 f
+  memory/Data_Memory/c1/mem_w1/U755/Y (OR2X2)             0.04       0.86 f
+  memory/Data_Memory/c1/mem_w1/U756/Y (INVX1)             0.00       0.86 r
+  memory/Data_Memory/c1/mem_w1/data_out<10> (memc_Size16_2)
+                                                          0.00       0.86 r
+  memory/Data_Memory/c1/U200/Y (AND2X2)                   0.03       0.90 r
+  memory/Data_Memory/c1/U111/Y (OR2X2)                    0.04       0.93 r
+  memory/Data_Memory/c1/U112/Y (INVX1)                    0.01       0.95 f
+  memory/Data_Memory/c1/U71/Y (AND2X2)                    0.03       0.98 f
+  memory/Data_Memory/c1/U72/Y (INVX1)                     0.00       0.97 r
+  memory/Data_Memory/c1/data_out<10> (cache_cache_id2_0)
+                                                          0.00       0.97 r
+  memory/Data_Memory/U96/Y (INVX1)                        0.01       0.99 f
+  memory/Data_Memory/U4/Y (OR2X2)                         0.04       1.02 f
+  memory/Data_Memory/U123/Y (AND2X2)                      0.03       1.06 f
+  memory/Data_Memory/U124/Y (INVX1)                       0.00       1.06 r
+  memory/Data_Memory/DataOut<10> (mem_system)             0.00       1.06 r
+  memory/Mem_Data<10> (Memory)                            0.00       1.06 r
+  extra_logic/Mem_Data_Mem<10> (Extra_Logic2)             0.00       1.06 r
+  extra_logic/U96/Y (INVX1)                               0.01       1.07 f
+  extra_logic/U133/Y (MUX2X1)                             0.04       1.12 r
+  extra_logic/PC_Det_Forward_Data<10> (Extra_Logic2)      0.00       1.12 r
+  decode/PC_Det_Forward_Data<10> (Decode)                 0.00       1.12 r
+  decode/pc_logic/PC_Det_Forward_Data<10> (PC_Logic)      0.00       1.12 r
+  decode/pc_logic/BL/PC_Det_Forward_Data<10> (Branch_Logic)
+                                                          0.00       1.12 r
+  decode/pc_logic/BL/U28/Y (OR2X2)                        0.05       1.16 r
+  decode/pc_logic/BL/U29/Y (INVX1)                        0.01       1.18 f
+  decode/pc_logic/BL/U56/Y (AND2X2)                       0.04       1.22 f
+  decode/pc_logic/BL/U2/Y (AND2X2)                        0.03       1.25 f
+  decode/pc_logic/BL/U11/Y (AND2X2)                       0.03       1.28 f
+  decode/pc_logic/BL/U39/Y (AND2X2)                       0.04       1.31 f
+  decode/pc_logic/BL/U15/Y (NOR3X1)                       0.02       1.33 r
+  decode/pc_logic/BL/U14/Y (INVX1)                        0.03       1.36 f
+  decode/pc_logic/BL/U68/Y (NAND3X1)                      0.03       1.39 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       1.39 r
+  decode/pc_logic/U68/Y (BUFX2)                           0.03       1.42 r
+  decode/pc_logic/U67/Y (AND2X2)                          0.03       1.46 r
+  decode/pc_logic/U7/Y (OR2X2)                            0.04       1.50 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       1.50 r
+  decode/PC_Sel (Decode)                                  0.00       1.50 r
+  extra_logic/PC_Sel (Extra_Logic2)                       0.00       1.50 r
+  extra_logic/U98/Y (INVX1)                               0.02       1.52 f
+  extra_logic/U112/Y (AOI21X1)                            0.03       1.54 r
+  extra_logic/Flush_IFDE (Extra_Logic2)                   0.00       1.54 r
+  if_de_blade/Flush (Fetch_Decode_Blade)                  0.00       1.54 r
+  if_de_blade/U16/Y (BUFX2)                               0.04       1.58 r
+  if_de_blade/U10/Y (INVX1)                               0.02       1.61 f
+  if_de_blade/U3/Y (INVX1)                                0.02       1.62 r
+  if_de_blade/PC2[9]/Flush (dff_pipe_176)                 0.00       1.62 r
+  if_de_blade/PC2[9]/U7/Y (INVX1)                         0.01       1.64 f
+  if_de_blade/PC2[9]/U1/Y (AND2X2)                        0.03       1.67 f
+  if_de_blade/PC2[9]/U6/Y (INVX1)                         0.00       1.67 r
+  if_de_blade/PC2[9]/pipe/rst (dff_742)                   0.00       1.67 r
+  if_de_blade/PC2[9]/pipe/U4/Y (NOR2X1)                   0.01       1.68 f
+  if_de_blade/PC2[9]/pipe/state_reg/D (DFFPOSX1)          0.00       1.68 f
+  data arrival time                                                  1.68
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  if_de_blade/PC2[9]/pipe/state_reg/CLK (DFFPOSX1)        0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.68
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.73
+
+
+  Startpoint: ex_me_blade/mem_read/pipe/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: if_de_blade/PC2[10]/pipe/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_me_blade/mem_read/pipe/state_reg/CLK (DFFPOSX1)      0.00 #     0.00 r
+  ex_me_blade/mem_read/pipe/state_reg/Q (DFFPOSX1)        0.11       0.11 f
+  ex_me_blade/mem_read/pipe/q (dff_644)                   0.00       0.11 f
+  ex_me_blade/mem_read/q (dff_pipe_78)                    0.00       0.11 f
+  ex_me_blade/Mem_Read_Mem (Execute_Memory_Blade)         0.00       0.11 f
+  memory/Mem_Read (Memory)                                0.00       0.11 f
+  memory/U41/Y (NOR2X1)                                   0.03       0.14 r
+  memory/U42/Y (NOR2X1)                                   0.01       0.16 f
+  memory/Data_Memory/Addr<7> (mem_system)                 0.00       0.16 f
+  memory/Data_Memory/U156/Y (BUFX2)                       0.03       0.19 f
+  memory/Data_Memory/U390/Y (INVX1)                       0.01       0.20 r
+  memory/Data_Memory/U385/Y (INVX4)                       0.03       0.23 f
+  memory/Data_Memory/c1/index<4> (cache_cache_id2_0)      0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/addr<4> (memc_Size5_0)     0.00       0.23 f
+  memory/Data_Memory/c1/mem_tg/U232/Y (INVX1)             0.00       0.23 r
+  memory/Data_Memory/c1/mem_tg/U403/Y (AND2X2)            0.03       0.26 r
+  memory/Data_Memory/c1/mem_tg/U321/Y (OR2X2)             0.04       0.29 r
+  memory/Data_Memory/c1/mem_tg/U323/Y (INVX1)             0.02       0.31 f
+  memory/Data_Memory/c1/mem_tg/U1089/Y (AOI22X1)          0.03       0.34 r
+  memory/Data_Memory/c1/mem_tg/U357/Y (INVX1)             0.02       0.36 f
+  memory/Data_Memory/c1/mem_tg/U355/Y (OR2X2)             0.04       0.40 f
+  memory/Data_Memory/c1/mem_tg/U1090/Y (OAI21X1)          0.02       0.42 r
+  memory/Data_Memory/c1/mem_tg/U285/Y (OR2X1)             0.04       0.45 r
+  memory/Data_Memory/c1/mem_tg/U452/Y (AND2X2)            0.03       0.49 r
+  memory/Data_Memory/c1/mem_tg/U453/Y (INVX1)             0.01       0.50 f
+  memory/Data_Memory/c1/mem_tg/U505/Y (AND2X2)            0.03       0.53 f
+  memory/Data_Memory/c1/mem_tg/U387/Y (OR2X2)             0.04       0.57 f
+  memory/Data_Memory/c1/mem_tg/data_out<2> (memc_Size5_0)
+                                                          0.00       0.57 f
+  memory/Data_Memory/c1/U35/Y (XOR2X1)                    0.03       0.61 r
+  memory/Data_Memory/c1/U34/Y (AND2X2)                    0.03       0.64 r
+  memory/Data_Memory/c1/U83/Y (OR2X2)                     0.04       0.68 r
+  memory/Data_Memory/c1/U82/Y (OR2X2)                     0.05       0.73 r
+  memory/Data_Memory/c1/U56/Y (OR2X2)                     0.04       0.77 r
+  memory/Data_Memory/c1/U21/Y (INVX2)                     0.03       0.79 f
+  memory/Data_Memory/c1/mem_w1/write (memc_Size16_2)      0.00       0.79 f
+  memory/Data_Memory/c1/mem_w1/U300/Y (INVX1)             0.01       0.80 r
+  memory/Data_Memory/c1/mem_w1/U301/Y (INVX1)             0.02       0.83 f
+  memory/Data_Memory/c1/mem_w1/U755/Y (OR2X2)             0.04       0.86 f
+  memory/Data_Memory/c1/mem_w1/U756/Y (INVX1)             0.00       0.86 r
+  memory/Data_Memory/c1/mem_w1/data_out<10> (memc_Size16_2)
+                                                          0.00       0.86 r
+  memory/Data_Memory/c1/U200/Y (AND2X2)                   0.03       0.90 r
+  memory/Data_Memory/c1/U111/Y (OR2X2)                    0.04       0.93 r
+  memory/Data_Memory/c1/U112/Y (INVX1)                    0.01       0.95 f
+  memory/Data_Memory/c1/U71/Y (AND2X2)                    0.03       0.98 f
+  memory/Data_Memory/c1/U72/Y (INVX1)                     0.00       0.97 r
+  memory/Data_Memory/c1/data_out<10> (cache_cache_id2_0)
+                                                          0.00       0.97 r
+  memory/Data_Memory/U96/Y (INVX1)                        0.01       0.99 f
+  memory/Data_Memory/U4/Y (OR2X2)                         0.04       1.02 f
+  memory/Data_Memory/U123/Y (AND2X2)                      0.03       1.06 f
+  memory/Data_Memory/U124/Y (INVX1)                       0.00       1.06 r
+  memory/Data_Memory/DataOut<10> (mem_system)             0.00       1.06 r
+  memory/Mem_Data<10> (Memory)                            0.00       1.06 r
+  extra_logic/Mem_Data_Mem<10> (Extra_Logic2)             0.00       1.06 r
+  extra_logic/U96/Y (INVX1)                               0.01       1.07 f
+  extra_logic/U133/Y (MUX2X1)                             0.04       1.12 r
+  extra_logic/PC_Det_Forward_Data<10> (Extra_Logic2)      0.00       1.12 r
+  decode/PC_Det_Forward_Data<10> (Decode)                 0.00       1.12 r
+  decode/pc_logic/PC_Det_Forward_Data<10> (PC_Logic)      0.00       1.12 r
+  decode/pc_logic/BL/PC_Det_Forward_Data<10> (Branch_Logic)
+                                                          0.00       1.12 r
+  decode/pc_logic/BL/U28/Y (OR2X2)                        0.05       1.16 r
+  decode/pc_logic/BL/U29/Y (INVX1)                        0.01       1.18 f
+  decode/pc_logic/BL/U56/Y (AND2X2)                       0.04       1.22 f
+  decode/pc_logic/BL/U2/Y (AND2X2)                        0.03       1.25 f
+  decode/pc_logic/BL/U11/Y (AND2X2)                       0.03       1.28 f
+  decode/pc_logic/BL/U39/Y (AND2X2)                       0.04       1.31 f
+  decode/pc_logic/BL/U15/Y (NOR3X1)                       0.02       1.33 r
+  decode/pc_logic/BL/U14/Y (INVX1)                        0.03       1.36 f
+  decode/pc_logic/BL/U68/Y (NAND3X1)                      0.03       1.39 r
+  decode/pc_logic/BL/Branch (Branch_Logic)                0.00       1.39 r
+  decode/pc_logic/U68/Y (BUFX2)                           0.03       1.42 r
+  decode/pc_logic/U67/Y (AND2X2)                          0.03       1.46 r
+  decode/pc_logic/U7/Y (OR2X2)                            0.04       1.50 r
+  decode/pc_logic/PC_Sel (PC_Logic)                       0.00       1.50 r
+  decode/PC_Sel (Decode)                                  0.00       1.50 r
+  extra_logic/PC_Sel (Extra_Logic2)                       0.00       1.50 r
+  extra_logic/U98/Y (INVX1)                               0.02       1.52 f
+  extra_logic/U112/Y (AOI21X1)                            0.03       1.54 r
+  extra_logic/Flush_IFDE (Extra_Logic2)                   0.00       1.54 r
+  if_de_blade/Flush (Fetch_Decode_Blade)                  0.00       1.54 r
+  if_de_blade/U16/Y (BUFX2)                               0.04       1.58 r
+  if_de_blade/U10/Y (INVX1)                               0.02       1.61 f
+  if_de_blade/U13/Y (INVX1)                               0.02       1.62 r
+  if_de_blade/PC2[10]/Flush (dff_pipe_177)                0.00       1.62 r
+  if_de_blade/PC2[10]/U7/Y (INVX1)                        0.01       1.64 f
+  if_de_blade/PC2[10]/U1/Y (AND2X2)                       0.03       1.67 f
+  if_de_blade/PC2[10]/U6/Y (INVX1)                        0.00       1.67 r
+  if_de_blade/PC2[10]/pipe/rst (dff_743)                  0.00       1.67 r
+  if_de_blade/PC2[10]/pipe/U4/Y (NOR2X1)                  0.01       1.68 f
+  if_de_blade/PC2[10]/pipe/state_reg/D (DFFPOSX1)         0.00       1.68 f
+  data arrival time                                                  1.68
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  if_de_blade/PC2[10]/pipe/state_reg/CLK (DFFPOSX1)       0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -1.68
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.73
+
+
+1
