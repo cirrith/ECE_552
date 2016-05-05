@@ -37,10 +37,14 @@ final_memory.syn.v
 four_bank_mem.v
 Forward_Logic.v
 Imm_Selecter.v
+imem_system.v
 Memory.v
 Memory_Writeback_Blade.v
+mem_system.v
 memory2c.syn.v
 memory2c_align.syn.v
+memc.syn.v
+memv.syn.v
 PC.v
 PC_inc.v
 PC_Logic.v
